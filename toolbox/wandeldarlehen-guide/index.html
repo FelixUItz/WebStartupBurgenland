@@ -1,0 +1,1073 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Wandeldarlehen Guide | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Wandeldarlehen (Convertible Loan) für österreichische Startups erklärt: Konditionen, Formeln, Konvertierungsmechanik, Vergleich zu SAFE und Equity-Runde. Mit Checkliste.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/wandeldarlehen-guide/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/wandeldarlehen-guide/">
+ <meta property="og:title" content="Wandeldarlehen Guide | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Wandeldarlehen (Convertible Loan) für österreichische Startups erklärt: Konditionen, Formeln, Konvertierungsmechanik, Vergleich zu SAFE und Equity-Runde.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Wandeldarlehen Guide | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Wandeldarlehen Guide */
+
+ /* Section Colors */
+.tool-content.wdg-sec-basics { --sec-color: #E63946; --sec-bg: #FEF2F2; --sec-border: #FEE2E2; }
+.tool-content.wdg-sec-konditionen { --sec-color: #6B7280; --sec-bg: #F3F4F6; --sec-border: #D1D5DB; }
+.tool-content.wdg-sec-rechnung { --sec-color: #4B5563; --sec-bg: #F3F4F6; --sec-border: #D1D5DB; }
+.tool-content.wdg-sec-vergleich { --sec-color: #FF8C00; --sec-bg: #FFF7ED; --sec-border: #FDBA74; }
+.tool-content.wdg-sec-clauses { --sec-color: #28A745; --sec-bg: #DCFCE7; --sec-border: #A7F3D0; }
+.tool-content.wdg-sec-checklist { --sec-color: #DC3545; --sec-bg: #FEF2F2; --sec-border: #FECACA; }
+
+ /* Navigation bar */
+.tool-content.wdg-nav-bar {
+ background: white;
+ border-bottom: 1px solid #E2E8F0;
+ padding: 0;
+ display: flex;
+ gap: 4px;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ margin-bottom: 30px;
+ border-radius: 8px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ }
+.tool-content.wdg-nav-bar a {
+ display: inline-block;
+ padding: 12px 14px;
+ font-size: 13px;
+ font-weight: 600;
+ color: #6B7280;
+ text-decoration: none;
+ white-space: nowrap;
+ border-bottom: 2px solid transparent;
+ transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.wdg-nav-bar a:hover,
+.tool-content.wdg-nav-bar a.active {
+ color: #E63946;
+ border-bottom-color: #FF8C00;
+ }
+
+ /* Section headers */
+.tool-content.wdg-section { margin-top: 32px; }
+.tool-content.wdg-section:first-child { margin-top: 0; }
+.tool-content.wdg-section-header {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin-bottom: 20px;
+ }
+.tool-content.wdg-section-number {
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 800;
+ font-size: 16px;
+ color: white;
+ flex-shrink: 0;
+ }
+.tool-content.wdg-section-title {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ letter-spacing: -0.3px;
+ margin: 0;
+ }
+
+ /* Content cards */
+.tool-content.wdg-card {
+ background: white;
+ border-radius: 12px;
+ padding: 24px;
+ margin-bottom: 16px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.wdg-card h3 {
+ font-size: 17px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 12px;
+ margin-top: 20px;
+ }
+.tool-content.wdg-card h3:first-child { margin-top: 0; }
+.tool-content.wdg-card p {
+ margin-bottom: 10px;
+ line-height: 1.7;
+ }
+.tool-content.wdg-card p:last-child { margin-bottom: 0; }
+
+ /* Info boxes */
+.tool-content.wdg-info-box {
+ padding: 20px 24px;
+ border-radius: 8px;
+ margin-bottom: 16px;
+ border-left: 4px solid;
+ }
+.tool-content.wdg-info-box.basics { background: #FEF2F2; border-color: #E63946; }
+.tool-content.wdg-info-box.konditionen { background: #F3F4F6; border-color: #6B7280; }
+.tool-content.wdg-info-box.rechnung { background: #F3F4F6; border-color: #4B5563; }
+.tool-content.wdg-info-box.vergleich { background: #FFF7ED; border-color: #FF8C00; }
+.tool-content.wdg-info-box.clauses { background: #DCFCE7; border-color: #28A745; }
+.tool-content.wdg-info-box.warning { background: #FEF2F2; border-color: #DC3545; }
+.tool-content.wdg-info-box-title {
+ font-weight: 700;
+ font-size: 14px;
+ margin-bottom: 6px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.wdg-info-box.basics.wdg-info-box-title { color: #E63946; }
+.tool-content.wdg-info-box.konditionen.wdg-info-box-title { color: #6B7280; }
+.tool-content.wdg-info-box.rechnung.wdg-info-box-title { color: #4B5563; }
+.tool-content.wdg-info-box.vergleich.wdg-info-box-title { color: #FF8C00; }
+.tool-content.wdg-info-box.clauses.wdg-info-box-title { color: #28A745; }
+.tool-content.wdg-info-box.warning.wdg-info-box-title { color: #DC3545; }
+
+ /* Formula box */
+.tool-content.wdg-formula-box {
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 20px 24px;
+ margin-bottom: 16px;
+ font-family: 'Courier New', 'Fira Code', monospace;
+ font-size: 13px;
+ color: #E63946;
+ line-height: 1.8;
+ overflow-x: auto;
+ }
+.tool-content.wdg-formula-box.formula-label {
+ font-family: inherit;
+ font-weight: 700;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ color: #6B7280;
+ margin-bottom: 8px;
+ display: block;
+ }
+.tool-content.wdg-formula-box.highlight {
+ background: #FF8C00;
+ color: #fff;
+ padding: 1px 6px;
+ border-radius: 3px;
+ font-weight: 600;
+ }
+
+ /* Comparison table */
+.tool-content.wdg-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ margin-bottom: 16px;
+ }
+.tool-content.wdg-table th {
+ background: #E63946;
+ color: white;
+ padding: 10px 14px;
+ text-align: left;
+ font-weight: 600;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.wdg-table td {
+ padding: 10px 14px;
+ border-bottom: 1px solid #E2E8F0;
+ vertical-align: top;
+ }
+.tool-content.wdg-table tr:nth-child(even) { background: #F8FAFC; }
+.tool-content.wdg-table tr:hover { background: #FEF2F2; }
+.tool-content.wdg-table.pro { color: #28A745; font-weight: 600; }
+.tool-content.wdg-table.con { color: #DC3545; font-weight: 600; }
+
+ /* Term cards grid */
+.tool-content.wdg-term-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 12px;
+ margin-bottom: 16px;
+ }
+.tool-content.wdg-term-card {
+ background: white;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 16px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border-top: 3px solid #28A745;
+ }
+.tool-content.wdg-term-name {
+ font-size: 15px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 4px;
+ }
+.tool-content.wdg-term-en {
+ font-size: 12px;
+ color: #6B7280;
+ font-style: italic;
+ margin-bottom: 8px;
+ }
+.tool-content.wdg-term-desc {
+ font-size: 13px;
+ line-height: 1.6;
+ }
+
+ /* Checklist */
+.tool-content.wdg-checklist {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+.tool-content.wdg-checklist li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 14px;
+ }
+.tool-content.wdg-checklist li:last-child { border-bottom: none; }
+.tool-content.wdg-check-icon {
+ width: 22px;
+ height: 22px;
+ border-radius: 50%;
+ border: 2px solid #E2E8F0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ font-size: 12px;
+ margin-top: 1px;
+ color: transparent;
+ transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.wdg-checklist li:hover.wdg-check-icon {
+ border-color: #28A745;
+ color: #28A745;
+ }
+.tool-content.wdg-check-text strong { color: #E63946; }
+
+ /* Calculation steps */
+.tool-content.wdg-calc-step {
+ display: flex;
+ gap: 16px;
+ align-items: flex-start;
+ padding: 12px 0;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.wdg-calc-step:last-of-type { border-bottom: none; }
+.tool-content.wdg-calc-step-number {
+ width: 28px;
+ height: 28px;
+ background: #E63946;
+ color: white;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 700;
+ font-size: 13px;
+ flex-shrink: 0;
+ }
+.tool-content.wdg-calc-step-content { flex: 1; }
+.tool-content.wdg-calc-step-title {
+ font-weight: 700;
+ font-size: 14px;
+ color: #E63946;
+ margin-bottom: 4px;
+ }
+.tool-content.wdg-calc-step-detail {
+ font-size: 13px;
+ line-height: 1.6;
+ }
+.tool-content.wdg-calc-step-formula {
+ font-family: 'Courier New', 'Fira Code', monospace;
+ font-size: 12px;
+ background: #F8FAFC;
+ padding: 4px 8px;
+ border-radius: 4px;
+ border: 1px solid #E2E8F0;
+ color: #E63946;
+ display: inline-block;
+ margin-top: 4px;
+ }
+
+ /* Disclaimer */
+.tool-content.wdg-disclaimer {
+ background: #FEF2F2;
+ border: 2px solid #FECACA;
+ border-radius: 12px;
+ padding: 20px 24px;
+ margin-top: 32px;
+ margin-bottom: 16px;
+ }
+.tool-content.wdg-disclaimer h3 {
+ color: #DC3545;
+ font-size: 16px;
+ margin-bottom: 8px;
+ margin-top: 0;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+.tool-content.wdg-disclaimer p {
+ font-size: 14px;
+ line-height: 1.7;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+.tool-content.wdg-section-title { font-size: 18px; }
+.tool-content.wdg-term-grid { grid-template-columns: 1fr; }
+.tool-content.wdg-card { padding: 16px; }
+.tool-content.wdg-table { font-size: 12px; }
+.tool-content.wdg-table th,
+.tool-content.wdg-table td { padding: 8px; }
+ }
+
+ /* Print */
+ @media print {
+.tool-content.wdg-nav-bar { display: none; }
+.tool-content.wdg-table th,
+.tool-content.wdg-info-box,
+.tool-content.wdg-term-card,
+.tool-content.wdg-calc-step-number,
+.tool-content.wdg-section-number,
+.tool-content.wdg-formula-box {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Wandeldarlehen Guide Österreich</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Convertible Loan - alles was Gr&uuml;nder:innen wissen m&uuml;ssen</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/scaleup/">Phase 3: Scale-Up</a>
+ <span class="separator">/</span>
+ <span class="current">Wandeldarlehen Guide</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 960px;">
+
+ <!-- Navigation -->
+ <nav class="wdg-nav-bar">
+ <a href="#was-ist" class="active">Was ist ein Wandeldarlehen?</a>
+ <a href="#warum-at">Warum in AT?</a>
+ <a href="#konditionen">Konditionen</a>
+ <a href="#konvertierung">Konvertierung</a>
+ <a href="#safe-vergleich">SAFE vs. WD</a>
+ <a href="#clauses">Key Clauses</a>
+ <a href="#vergleich">WD vs. Equity</a>
+ <a href="#checkliste">Checkliste</a>
+ </nav>
+
+ <!-- ===== SECTION 1: Was ist ein Wandeldarlehen? ===== -->
+ <div class="wdg-section" id="was-ist">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #E63946;">1</div>
+ <h2 class="wdg-section-title">Was ist ein Wandeldarlehen?</h2>
+ </div>
+
+ <div class="wdg-card">
+ <h3>Definition: Wandeldarlehen (Convertible Loan / Convertible Note)</h3>
+ <p>Ein Wandeldarlehen ist ein <strong>Darlehen, das zu einem sp&auml;teren Zeitpunkt in Unternehmensanteile umgewandelt (konvertiert) wird</strong>, anstatt in bar zur&uuml;ckgezahlt zu werden. Es ist das meistgenutzte Fr&uuml;hphasen-Finanzierungsinstrument in Österreich.</p>
+
+ <div class="wdg-info-box basics">
+ <div class="wdg-info-box-title">So funktioniert es vereinfacht</div>
+ <p>
+ <strong>Jetzt:</strong> Investor gibt dir EUR 100.000 als Darlehen.<br>
+ <strong>Sp&auml;ter:</strong> Bei der n&auml;chsten Finanzierungsrunde (Qualified Financing) wird das Darlehen + Zinsen automatisch in Anteile umgewandelt - zu einem verg&uuml;nstigten Preis.<br>
+ <strong>Vorteil:</strong> Du musst dein Startup jetzt nicht bewerten. Die Bewertung wird auf die n&auml;chste Runde verschoben.
+ </p>
+ </div>
+
+ <p>In der Praxis hei&szlig;t das: Du bekommst Geld, ohne sofort Anteile abzugeben. Der Investor bekommt als Ausgleich f&uuml;r sein fr&uuml;hes Risiko einen Discount auf den Preis der n&auml;chsten Runde. Beide Seiten vermeiden die schwierige Diskussion &uuml;ber die Bewertung in einer Phase, in der es wenig Datenpunkte gibt.</p>
+
+ <div class="wdg-info-box basics">
+ <div class="wdg-info-box-title">Wann ist ein Wandeldarlehen sinnvoll?</div>
+ <p>
+ - In der Pre-Seed- oder Seed-Phase, wenn eine Bewertung schwer zu rechtfertigen ist<br>
+ - F&uuml;r Bridge-Finanzierungen zwischen zwei Runden<br>
+ - Wenn du schnell Geld brauchst (Abschluss in 2-4 Wochen m&ouml;glich)<br>
+ - Bei kleinen Ticketgr&ouml;&szlig;en unter EUR 500.000<br>
+ - Wenn du mehrere Angels einsammelst und nicht jedes Mal eine Kapitalerh&ouml;hung machen willst
+ </p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 2: Warum in Österreich beliebt? ===== -->
+ <div class="wdg-section" id="warum-at">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #E63946;">2</div>
+ <h2 class="wdg-section-title">Warum ist das Wandeldarlehen in Österreich so beliebt?</h2>
+ </div>
+
+ <div class="wdg-card">
+ <h3>Die &ouml;sterreichischen Vorteile</h3>
+
+ <div class="table-responsive">
+ <table class="wdg-table">
+ <thead>
+ <tr>
+ <th>Vorteil</th>
+ <th>Erkl&auml;rung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Schneller als Kapitalerh&ouml;hung</strong></td>
+ <td>Eine GmbH-Kapitalerh&ouml;hung erfordert Notarakt, Firmenbuch&auml;nderung, Gesellschafterbeschluss. Dauert 4-8 Wochen und kostet EUR 3.000-8.000. Ein Wandeldarlehen? 2-4 Wochen, unter EUR 2.000 Anwaltskosten.</td>
+ </tr>
+ <tr>
+ <td><strong>Keine sofortige Bewertung n&ouml;tig</strong></td>
+ <td>In der Pre-Seed-Phase gibt es kaum belastbare Daten f&uuml;r eine Bewertung. Das Wandeldarlehen verschiebt diese Frage elegant auf den Zeitpunkt, wo mehr Datenpunkte vorliegen.</td>
+ </tr>
+ <tr>
+ <td><strong>Steuerlich neutral</strong></td>
+ <td>Das Darlehen ist zun&auml;chst eine Verbindlichkeit, kein Eigenkapital. Keine Gesellschaftsteuer, keine Kapitalertragsteuer zum Zeitpunkt der Auszahlung. Erst bei Konvertierung wird es steuerlich relevant.</td>
+ </tr>
+ <tr>
+ <td><strong>Flexibel bei mehreren Investoren</strong></td>
+ <td>Du kannst 5 Angels mit je EUR 25.000 einsammeln, ohne 5 einzelne Kapitalerh&ouml;hungen durchf&uuml;hren zu m&uuml;ssen. Alle konvertieren dann gemeinsam bei der n&auml;chsten Runde.</td>
+ </tr>
+ <tr>
+ <td><strong>Gesellschafterstruktur bleibt sauber</strong></td>
+ <td>Bis zur Konvertierung sind die Darlehensgeber keine Gesellschafter. Keine Stimmrechte, keine Einladung zur Generalversammlung, kein Einfluss auf Gesch&auml;ftsf&uuml;hrung.</td>
+ </tr>
+ <tr>
+ <td><strong>Gr&uuml;nderservice / WKO-konform</strong></td>
+ <td>Das Wandeldarlehen ist ein etabliertes Instrument im &ouml;sterreichischen Startup-&Ouml;kosystem. AWS, FFG und die meisten &ouml;sterreichischen Angels kennen und akzeptieren es.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 3: Typische Konditionen ===== -->
+ <div class="wdg-section" id="konditionen">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #6B7280;">3</div>
+ <h2 class="wdg-section-title">Typische Konditionen in Österreich</h2>
+ </div>
+
+ <div class="wdg-card">
+ <div class="table-responsive">
+ <table class="wdg-table">
+ <thead>
+ <tr>
+ <th>Parameter</th>
+ <th>&Uuml;blich in AT</th>
+ <th>Erkl&auml;rung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Darlehenssumme</strong></td>
+ <td>EUR 25.000 - 500.000</td>
+ <td>Pro Investor. Bei Angels typisch EUR 25K-100K, bei institutionellen Investoren bis EUR 500K. Gesamtvolumen einer Wandeldarlehen-Runde: EUR 100K-1M.</td>
+ </tr>
+ <tr>
+ <td><strong>Zinssatz</strong></td>
+ <td>2-5% p.a.</td>
+ <td>Gesetzlich muss ein Darlehen in AT verzinst sein (sonst Schenkungsverdacht). Zinsen werden typisch nicht ausgezahlt, sondern zum Darlehensbetrag addiert und mitkonvertiert. Marktstandard: 3-4%.</td>
+ </tr>
+ <tr>
+ <td><strong>Laufzeit</strong></td>
+ <td>12-24 Monate</td>
+ <td>Zeitraum, bis das Darlehen konvertiert oder zur&uuml;ckgezahlt werden muss. 18 Monate ist der h&auml;ufigste Wert. Zu kurz (&lt;12M) setzt dich unter Druck, zu lang (&gt;24M) ist un&uuml;blich.</td>
+ </tr>
+ <tr>
+ <td><strong>Discount</strong></td>
+ <td>10-25%</td>
+ <td>Der Preisnachlass, den der Wandeldarlehen-Investor bei der Konvertierung bekommt. 15-20% ist der typische Korridor in AT. Belohnt das fr&uuml;he Risiko.</td>
+ </tr>
+ <tr>
+ <td><strong>Valuation Cap</strong></td>
+ <td>EUR 1M-5M (Pre-Seed/Seed)</td>
+ <td>Die maximale Bewertung, zu der konvertiert wird - egal wie hoch die n&auml;chste Runde bewertet ist. Sch&uuml;tzt den Investor vor &bdquo;zu guter&ldquo; Performance (und sichert ihm Mindestanteil).</td>
+ </tr>
+ <tr>
+ <td><strong>Qualified Financing</strong></td>
+ <td>EUR 200K-500K</td>
+ <td>Mindestbetrag der n&auml;chsten Runde, ab dem die automatische Konvertierung ausgel&ouml;st wird. Verhindert, dass ein kleines Follow-on die Konvertierung triggert.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="wdg-info-box konditionen">
+ <div class="wdg-info-box-title">Praxis-Tipp</div>
+ <p>Discount ODER Valuation Cap? Idealerweise verhandelst du &bdquo;Discount AND Cap&ldquo; - der Investor konvertiert zum g&uuml;nstigeren der beiden Werte. Das ist Marktstandard. &bdquo;Discount OR Cap&ldquo; (der Investor bekommt nur eines) ist gr&uuml;nderfreundlicher, aber selten bei erfahrenen Investoren akzeptiert.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 4: Konvertierungsmechanik ===== -->
+ <div class="wdg-section" id="konvertierung">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #4B5563;">4</div>
+ <h2 class="wdg-section-title">Konvertierungsmechanik - mit Beispielrechnung</h2>
+ </div>
+
+ <div class="wdg-card">
+ <h3>Die Formeln</h3>
+
+ <div class="wdg-formula-box">
+ <span class="formula-label">Konvertierungsbetrag</span>
+ Konvertierungsbetrag = Darlehenssumme + aufgelaufene Zinsen<br><br>
+ <span class="formula-label">Preis pro Anteil mit Discount</span>
+ Preis (Discount) = Preis_n&auml;chste_Runde x (1 - Discount)<br><br>
+ <span class="formula-label">Preis pro Anteil mit Cap</span>
+ Preis (Cap) = Valuation_Cap / voll verw&auml;sserte Anteile<br><br>
+ <span class="formula-label">Effektiver Konvertierungspreis</span>
+ Conversion Price = <span class="highlight">MIN(Preis_Discount, Preis_Cap)</span><br><br>
+ <span class="formula-label">Neue Anteile f&uuml;r den Investor</span>
+ Neue Anteile = Konvertierungsbetrag / Conversion Price
+ </div>
+
+ <h3>Beispielrechnung</h3>
+
+ <div class="wdg-info-box rechnung">
+ <div class="wdg-info-box-title">Ausgangssituation</div>
+ <p>
+ Wandeldarlehen: <strong>EUR 100.000</strong> | Zinssatz: <strong>4% p.a.</strong> | Laufzeit: <strong>18 Monate</strong><br>
+ Discount: <strong>20%</strong> | Valuation Cap: <strong>EUR 3.000.000</strong><br>
+ N&auml;chste Runde (Series Seed): Pre-Money <strong>EUR 5.000.000</strong>, Preis pro Anteil <strong>EUR 50</strong>
+ </p>
+ </div>
+
+ <div class="wdg-calc-step">
+ <div class="wdg-calc-step-number">1</div>
+ <div class="wdg-calc-step-content">
+ <div class="wdg-calc-step-title">Konvertierungsbetrag berechnen</div>
+ <div class="wdg-calc-step-detail">EUR 100.000 + (EUR 100.000 x 4% x 1,5 Jahre) = EUR 100.000 + EUR 6.000</div>
+ <div class="wdg-calc-step-formula">Konvertierungsbetrag = EUR 106.000</div>
+ </div>
+ </div>
+
+ <div class="wdg-calc-step">
+ <div class="wdg-calc-step-number">2</div>
+ <div class="wdg-calc-step-content">
+ <div class="wdg-calc-step-title">Preis mit Discount berechnen</div>
+ <div class="wdg-calc-step-detail">EUR 50 x (1 - 0,20) = EUR 50 x 0,80</div>
+ <div class="wdg-calc-step-formula">Preis (Discount) = EUR 40 pro Anteil</div>
+ </div>
+ </div>
+
+ <div class="wdg-calc-step">
+ <div class="wdg-calc-step-number">3</div>
+ <div class="wdg-calc-step-content">
+ <div class="wdg-calc-step-title">Preis mit Cap berechnen</div>
+ <div class="wdg-calc-step-detail">EUR 3.000.000 / 100.000 bestehende Anteile</div>
+ <div class="wdg-calc-step-formula">Preis (Cap) = EUR 30 pro Anteil</div>
+ </div>
+ </div>
+
+ <div class="wdg-calc-step">
+ <div class="wdg-calc-step-number">4</div>
+ <div class="wdg-calc-step-content">
+ <div class="wdg-calc-step-title">Effektiver Konvertierungspreis (der niedrigere gewinnt)</div>
+ <div class="wdg-calc-step-detail">MIN(EUR 40, EUR 30) = EUR 30. Der Cap greift, weil die Runde h&ouml;her bewertet ist als der Cap.</div>
+ <div class="wdg-calc-step-formula">Conversion Price = EUR 30 pro Anteil</div>
+ </div>
+ </div>
+
+ <div class="wdg-calc-step">
+ <div class="wdg-calc-step-number">5</div>
+ <div class="wdg-calc-step-content">
+ <div class="wdg-calc-step-title">Neue Anteile f&uuml;r den Investor</div>
+ <div class="wdg-calc-step-detail">EUR 106.000 / EUR 30 = 3.533 Anteile (statt 2.120 ohne Discount/Cap)</div>
+ <div class="wdg-calc-step-formula">Investor erh&auml;lt 3.533 Anteile (~3,4% statt ~2,1%)</div>
+ </div>
+ </div>
+
+ <div class="wdg-info-box rechnung" style="margin-top: 16px;">
+ <div class="wdg-info-box-title">Was bedeutet das?</div>
+ <p>Der Investor hat EUR 100.000 investiert und bekommt Anteile im Wert von EUR 176.650 (3.533 x EUR 50 Rundenbewertung). Das ist sein Return f&uuml;r das fr&uuml;he Risiko. Gleichzeitig h&auml;lt er &bdquo;nur&ldquo; 3,4% - ein fairer Deal f&uuml;r beide Seiten bei einer EUR 5M Pre-Money-Runde.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 5: SAFE vs. Wandeldarlehen ===== -->
+ <div class="wdg-section" id="safe-vergleich">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #FF8C00;">5</div>
+ <h2 class="wdg-section-title">Wandeldarlehen vs. SAFE - und warum SAFE in Österreich nicht funktioniert</h2>
+ </div>
+
+ <div class="wdg-card">
+ <h3>Was ist ein SAFE?</h3>
+ <p>Ein SAFE (Simple Agreement for Future Equity) ist ein von Y Combinator entwickeltes Instrument f&uuml;r Fr&uuml;hphasen-Investments in den USA. Es ist kein Darlehen, sondern ein Vertrag, der dem Investor das Recht auf zuk&uuml;nftige Anteile gibt - ohne Zinsen, ohne Laufzeit, ohne R&uuml;ckzahlungspflicht.</p>
+
+ <h3>Warum SAFE in Österreich problematisch ist</h3>
+
+ <div class="table-responsive">
+ <table class="wdg-table">
+ <thead>
+ <tr>
+ <th>Aspekt</th>
+ <th>SAFE (USA)</th>
+ <th>Wandeldarlehen (AT)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Rechtliche Grundlage</strong></td>
+ <td>US-Vertragsrecht (Delaware). Klar reguliert und gerichtlich erprobt.</td>
+ <td>Österreichisches Darlehensrecht (ABGB). Etablierte Rechtsprechung.</td>
+ </tr>
+ <tr>
+ <td><strong>Zinsen</strong></td>
+ <td>Keine Zinsen.</td>
+ <td>Zinsen erforderlich (sonst Schenkungsverdacht, verdeckte Einlage).</td>
+ </tr>
+ <tr>
+ <td><strong>Laufzeit / F&auml;lligkeit</strong></td>
+ <td>Keine Laufzeit. Kein R&uuml;ckzahlungsanspruch.</td>
+ <td>Feste Laufzeit (12-24M). R&uuml;ckzahlung oder Konvertierung bei F&auml;lligkeit.</td>
+ </tr>
+ <tr>
+ <td><strong>Bilanzierung</strong></td>
+ <td>Eigenkapital-&auml;hnlich (keine Verbindlichkeit).</td>
+ <td>Verbindlichkeit in der Bilanz (klare Handhabung).</td>
+ </tr>
+ <tr>
+ <td><strong>Steuerliche Behandlung</strong></td>
+ <td class="con">In AT unklar: Ist es Eigenkapital, Darlehen, atypisch stille Beteiligung? Finanzverwaltung hat keine klare Position.</td>
+ <td class="pro">Klar: Es ist ein Darlehen. Zinsen sind Betriebsausgabe. Konvertierung ist Sacheinlage.</td>
+ </tr>
+ <tr>
+ <td><strong>Investor-Schutz bei Insolvenz</strong></td>
+ <td class="con">SAFE-Investoren stehen in AT unklar da - weder Gl&auml;ubiger noch Gesellschafter.</td>
+ <td class="pro">Darlehensgeber sind Gl&auml;ubiger und haben Anspruch in der Insolvenz.</td>
+ </tr>
+ <tr>
+ <td><strong>Verbreitung in AT</strong></td>
+ <td class="con">Selten. Die meisten &ouml;sterreichischen Anw&auml;lte raten davon ab.</td>
+ <td class="pro">Standard. Alle Startup-Anw&auml;lte in AT kennen es.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="wdg-info-box warning">
+ <div class="wdg-info-box-title">Klare Empfehlung</div>
+ <p>Verwende in Österreich ein Wandeldarlehen, kein SAFE. Ein SAFE ist f&uuml;r das US-Rechtssystem gebaut und l&auml;sst sich nicht 1:1 auf das &ouml;sterreichische Recht &uuml;bertragen. Die steuerlichen und insolvenzrechtlichen Risiken sind unklar und im Ernstfall teuer. Einzige Ausnahme: Wenn ein US-Investor unbedingt SAFE will, lass es von einem AT-Anwalt adaptieren.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 6: Key Clauses ===== -->
+ <div class="wdg-section" id="clauses">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #28A745;">6</div>
+ <h2 class="wdg-section-title">Key Clauses im Wandeldarlehen erkl&auml;rt</h2>
+ </div>
+
+ <div class="wdg-term-grid">
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Qualified Financing</div>
+ <div class="wdg-term-en">Qualifizierte Finanzierungsrunde</div>
+ <div class="wdg-term-desc">Definiert, ab welchem Mindestbetrag die n&auml;chste Runde die automatische Konvertierung ausl&ouml;st. Typisch: EUR 200K-500K. Verhindert, dass ein kleines Friends-&amp;-Family-Investment die Konvertierung triggert. Achte darauf, dass AWS/FFG-F&ouml;rderungen NICHT als Qualified Financing z&auml;hlen.</div>
+ </div>
+
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Maturity Date</div>
+ <div class="wdg-term-en">F&auml;lligkeitsdatum</div>
+ <div class="wdg-term-desc">Deadline, bis zu der die Konvertierung oder R&uuml;ckzahlung erfolgen muss. Was passiert bei F&auml;lligkeit ohne Qualified Financing? Typische Optionen: (1) Konvertierung zum Cap, (2) R&uuml;ckzahlung, (3) Verl&auml;ngerung. Kl&auml;re das VORHER - sonst wird es unangenehm.</div>
+ </div>
+
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Discount</div>
+ <div class="wdg-term-en">Preisnachlass bei Konvertierung</div>
+ <div class="wdg-term-desc">Der Prozentsatz, um den der Wandeldarlehen-Investor g&uuml;nstiger konvertiert als Investoren der n&auml;chsten Runde. 15-20% ist Standard in AT. H&ouml;here Discounts (25%+) sind &uuml;blich bei sehr fr&uuml;hen Investments oder hohem Risiko.</div>
+ </div>
+
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Valuation Cap</div>
+ <div class="wdg-term-en">Bewertungsobergrenze</div>
+ <div class="wdg-term-desc">Die maximale Bewertung, zu der konvertiert wird. Wenn dein Startup bei der n&auml;chsten Runde EUR 10M wert ist, aber der Cap bei EUR 3M liegt, konvertiert der Investor zum EUR-3M-Preis. Extrem wichtig: Der Cap bestimmt den Mindestanteil des Investors.</div>
+ </div>
+
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Most Favoured Nation (MFN)</div>
+ <div class="wdg-term-en">Meistbeg&uuml;nstigungsklausel</div>
+ <div class="wdg-term-desc">Wenn du nach diesem Wandeldarlehen ein weiteres zu besseren Konditionen ausgibst (z.B. niedrigerer Cap), bekommt der MFN-Investor automatisch die besseren Konditionen. &Uuml;blich beim ersten Angel - sch&uuml;tzt vor Benachteiligung.</div>
+ </div>
+
+ <div class="wdg-term-card">
+ <div class="wdg-term-name">Konvertierung bei Exit</div>
+ <div class="wdg-term-en">Change of Control Conversion</div>
+ <div class="wdg-term-desc">Was passiert, wenn das Startup verkauft wird, BEVOR eine Qualified Financing stattfindet? Typisch: Konvertierung zum Cap (oder R&uuml;ckzahlung mit Multiplikator 1,5-2x). Kl&auml;re diesen Fall explizit im Vertrag.</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 7: Wandeldarlehen vs. Equity ===== -->
+ <div class="wdg-section" id="vergleich">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #FF8C00;">7</div>
+ <h2 class="wdg-section-title">Wandeldarlehen vs. Equity-Runde - wann was?</h2>
+ </div>
+
+ <div class="wdg-card">
+ <div class="table-responsive">
+ <table class="wdg-table">
+ <thead>
+ <tr>
+ <th>Kriterium</th>
+ <th>Wandeldarlehen</th>
+ <th>Equity-Runde (Kapitalerh&ouml;hung)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Geschwindigkeit</strong></td>
+ <td class="pro">2-4 Wochen</td>
+ <td class="con">4-8 Wochen (Notar, Firmenbuch)</td>
+ </tr>
+ <tr>
+ <td><strong>Kosten</strong></td>
+ <td class="pro">EUR 1.000-2.500 Anwaltskosten</td>
+ <td class="con">EUR 3.000-8.000 (Notar + Anwalt + Geb&uuml;hren)</td>
+ </tr>
+ <tr>
+ <td><strong>Bewertung n&ouml;tig?</strong></td>
+ <td class="pro">Nein (auf n&auml;chste Runde verschoben)</td>
+ <td class="con">Ja (muss jetzt verhandelt werden)</td>
+ </tr>
+ <tr>
+ <td><strong>Verw&auml;sserung</strong></td>
+ <td>Erst bei Konvertierung sichtbar</td>
+ <td>Sofort sichtbar und im Firmenbuch</td>
+ </tr>
+ <tr>
+ <td><strong>Investor wird Gesellschafter?</strong></td>
+ <td class="pro">Nein (erst bei Konvertierung)</td>
+ <td class="con">Ja, sofort (mit allen Rechten und Pflichten)</td>
+ </tr>
+ <tr>
+ <td><strong>Komplexit&auml;t</strong></td>
+ <td class="pro">Einfach (5-10 Seiten Vertrag)</td>
+ <td class="con">Komplex (SHA, Satzungs&auml;nderung, Notarakt)</td>
+ </tr>
+ <tr>
+ <td><strong>Geeignet f&uuml;r</strong></td>
+ <td>Pre-Seed, Seed, Bridge, kleine Tickets, mehrere Angels</td>
+ <td>Seed+, Series A+, gr&ouml;&szlig;ere Runden, Lead-Investor</td>
+ </tr>
+ <tr>
+ <td><strong>Risiko Gr&uuml;nder</strong></td>
+ <td class="con">R&uuml;ckzahlungspflicht bei F&auml;lligkeit, wenn keine Runde kommt</td>
+ <td class="pro">Kein R&uuml;ckzahlungsrisiko (Eigenkapital)</td>
+ </tr>
+ <tr>
+ <td><strong>Risiko Investor</strong></td>
+ <td class="con">Keine Gesellschafterrechte, keine Mitsprache bis Konvertierung</td>
+ <td class="pro">Volle Rechte ab Tag 1</td>
+ </tr>
+ <tr>
+ <td><strong>Steuerlich</strong></td>
+ <td>Verbindlichkeit, Zinsen sind Betriebsausgabe</td>
+ <td>Eigenkapital, kein Zinsaufwand</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="wdg-info-box vergleich">
+ <div class="wdg-info-box-title">Unsere Empfehlung</div>
+ <p><strong>Unter EUR 500K und Pre-Seed/Seed:</strong> Wandeldarlehen. Schnell, g&uuml;nstig, flexibel.<br>
+ <strong>Ab EUR 500K mit Lead-Investor:</strong> Equity-Runde. Der Lead will Mitsprache und einen sauberen SHA.<br>
+ <strong>Bridge zwischen Runden:</strong> Immer Wandeldarlehen. Kein Grund f&uuml;r den Aufwand einer Kapitalerh&ouml;hung.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== SECTION 8: Checkliste ===== -->
+ <div class="wdg-section" id="checkliste">
+ <div class="wdg-section-header">
+ <div class="wdg-section-number" style="background: #DC3545;">8</div>
+ <h2 class="wdg-section-title">Checkliste: Was muss ins Wandeldarlehen?</h2>
+ </div>
+
+ <div class="wdg-card">
+ <ul class="wdg-checklist">
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Darlehenssumme</strong> - Exakter Betrag in EUR, Auszahlungsmodalit&auml;ten (Einmalzahlung oder Tranchen?)</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Zinssatz und Zinsberechnung</strong> - p.a., Berechnungsmethode (30/360 oder act/365), Zinsen kapitalisiert oder separat?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Laufzeit / Maturity Date</strong> - Exaktes Datum oder Zeitraum ab Auszahlung</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Discount</strong> - Prozentsatz, bezogen auf welchen Preis (Pre-Money oder Preis pro Anteil)</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Valuation Cap</strong> - Betrag in EUR, auf Pre-Money- oder Post-Money-Basis (KLAR DEFINIEREN!)</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Definition Qualified Financing</strong> - Mindestbetrag, was z&auml;hlt dazu (nur Equity? Auch Wandeldarlehen?), welche Ausnahmen?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Konvertierungsmechanik</strong> - Formel, welcher Preis gilt (MIN aus Discount und Cap?), voll verw&auml;sserte Basis?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Regelung bei F&auml;lligkeit ohne Qualified Financing</strong> - R&uuml;ckzahlung? Konvertierung zum Cap? Verl&auml;ngerung? Automatisch oder auf Verlangen?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Regelung bei Exit (Change of Control)</strong> - Konvertierung? R&uuml;ckzahlung mit Multiplikator? Cap-basiert?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>MFN-Klausel</strong> - Gilt automatisch oder muss der Investor aktiv werden? Welche Parameter sind erfasst?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Informationsrechte</strong> - Quartalsberichte? Einsicht in Jahresabschluss? Ad-hoc-Mitteilungen?</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>K&uuml;ndigungsrechte</strong> - Wann darf der Investor k&uuml;ndigen? (Vertragsbruch, Insolvenz, Change of Control)</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Nachrangigkeit</strong> - Ist das Darlehen nachrangig (qualifizierter Rangr&uuml;cktritt)? Wichtig f&uuml;r &Uuml;berschuldungspr&uuml;fung!</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Gerichtsstand und anwendbares Recht</strong> - Österreichisches Recht, Gerichtsstand Wien/Eisenstadt/etc.</span>
+ </li>
+ <li>
+ <span class="wdg-check-icon">&#10003;</span>
+ <span class="wdg-check-text"><strong>Vertraulichkeitsklausel</strong> - Beide Seiten halten Konditionen vertraulich</span>
+ </li>
+ </ul>
+
+ <div class="wdg-info-box warning" style="margin-top: 20px;">
+ <div class="wdg-info-box-title">H&auml;ufige Fehler, die wir sehen</div>
+ <p>
+ <strong>1. Kein Cap definiert:</strong> Nur Discount ohne Cap kann dazu f&uuml;hren, dass der Investor bei einer hohen Runde fast nichts bekommt - und das Wandeldarlehen nie konvertiert.<br>
+ <strong>2. Maturity nicht geregelt:</strong> Was passiert am F&auml;lligkeitstag? Wenn das nicht im Vertrag steht, hast du ein Problem.<br>
+ <strong>3. Kein Rangr&uuml;cktritt:</strong> Ohne qualifizierten Rangr&uuml;cktritt z&auml;hlt das Wandeldarlehen als Verbindlichkeit und kann zur bilanziellen &Uuml;berschuldung f&uuml;hren.<br>
+ <strong>4. Cap auf Post-Money statt Pre-Money:</strong> Der Unterschied kann 10-20% Verw&auml;sserung ausmachen. Klar definieren!<br>
+ <strong>5. Zinsen vergessen:</strong> Ein zinsloses Darlehen kann in AT steuerlich als verdeckte Einlage oder Schenkung gewertet werden.
+ </p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== DISCLAIMER ===== -->
+ <div class="wdg-disclaimer">
+ <h3>Wichtiger Hinweis</h3>
+ <p>Dieses Template und dieser Guide ersetzen <strong>KEINE Rechtsberatung</strong>. Die Informationen dienen ausschlie&szlig;lich der Orientierung und Bildung. Jedes Wandeldarlehen muss individuell auf die Situation deines Startups angepasst werden. Bitte lass jeden Vertrag von einem auf Startup-Finanzierung spezialisierten Rechtsanwalt pr&uuml;fen, bevor du unterschreibst. In Österreich gibt es mehrere auf Venture spezialisierte Kanzleien, die Wandeldarlehen als Standard-Dokument haben.</p>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Wandeldarlehen richtig aufsetzen?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Wir bei StartUp Burgenland helfen dir, dein Wandeldarlehen zu strukturieren, die richtigen Konditionen zu verhandeln und vermitteln dich an spezialisierte Startup-Anw&auml;lte in Österreich.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespr&auml;ch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

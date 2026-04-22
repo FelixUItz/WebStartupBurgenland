@@ -1,0 +1,375 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>US-Tools und Datenschutz: Google, AWS und Co. DSGVO-konform nutzen - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="So nutzt du Google Analytics, AWS, Mailchimp und andere US-Dienste DSGVO-konform, EU-US Data Privacy Framework, SCCs, TIA und EU-Alternativen erklärt."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/182-datenschutz-tools-us-anbieter"><!-- Open Graph --><meta property="og:title" content="US-Tools und Datenschutz: Google, AWS und Co. DSGVO-konform nutzen - StartUp Burgenland Blog"><meta property="og:description" content="So nutzt du Google Analytics, AWS, Mailchimp und andere US-Dienste DSGVO-konform, EU-US Data Privacy Framework, SCCs, TIA und EU-Alternativen erklärt."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"US-Tools und Datenschutz: Google, AWS und Co. DSGVO-konform nutzen","description":"So nutzt du Google Analytics, AWS, Mailchimp und andere US-Dienste DSGVO-konform, EU-US Data Privacy Framework, SCCs, TIA und EU-Alternativen erklärt.","datePublished":"2022-02-03T00:00:00.000Z","dateModified":"2022-02-03T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/182-datenschutz-tools-us-anbieter","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/182-datenschutz-tools-us-anbieter"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/gruendung-und-recht/" class="blog-tag" style="text-decoration:none;"> Gründung &amp; Recht </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">US-Tools und Datenschutz: Google, AWS und Co. DSGVO-konform nutzen</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2022-02-03">3. Februar 2022</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h2 id="us-tools-sind-überall----und-genau-da-liegt-das-problem">US-Tools sind überall, und genau da liegt das Problem</h2>
+<p>Google Analytics, AWS, Mailchimp, Slack, HubSpot, Notion, Stripe, Zoom, die Liste der US-Tools, die Startups täglich nutzen, ist lang. Und sie alle haben eines gemeinsam: Sie übermitteln personenbezogene Daten in die USA. Das ist aus DSGVO-Sicht ein Drittlandtransfer und damit besonders reguliert. Wenn du es falsch machst, riskierst du Bußgelder und Unterlassungsanordnungen.</p>
+<p>Seit dem Schrems-II-Urteil des EuGH im Juli 2020 war die Nutzung von US-Tools eine echte rechtliche Grauzone. Das alte EU-US Privacy Shield wurde für ungültig erklärt, und Millionen von europäischen Unternehmen standen plötzlich ohne belastbare Rechtsgrundlage für ihre US-Datentransfers da. Im Juli 2023 kam mit dem EU-US Data Privacy Framework (DPF) ein neuer Angemessenheitsbeschluss, aber auch dieser steht unter Beobachtung und könnte wieder gekippt werden.</p>
+<p>Für dich als Startup-Gründer in Österreich bedeutet das: Du darfst US-Tools nutzen, aber du musst es richtig absichern. In diesem Post erkläre ich dir die aktuelle Rechtslage, die verschiedenen Absicherungsmechanismen und wann es sinnvoller ist, auf EU-Alternativen auszuweichen.</p>
+<h2 id="die-geschichte-warum-us-datentransfers-so-kompliziert-wurden">Die Geschichte: Warum US-Datentransfers so kompliziert wurden</h2>
+<p>Um die aktuelle Situation zu verstehen, hilft ein kurzer Rückblick. Die Geschichte der EU-US-Datentransfers ist eine Geschichte von Max Schrems, einem österreichischen Datenschutz-Aktivisten, der dreimal die rechtliche Grundlage für transatlantische Datentransfers ins Wanken gebracht hat.</p>
+<p><strong>2015, Schrems I:</strong> Max Schrems klagte gegen Facebook Ireland, weil seine Daten in die USA übermittelt wurden, wo die NSA massenhaft Zugriff darauf hatte. Der EuGH erklärte das Safe-Harbor-Abkommen zwischen EU und USA für ungültig (Rs. C-362/14). Ergebnis: Die damalige Rechtsgrundlage für Datentransfers an über 4.000 US-Unternehmen fiel über Nacht weg.</p>
+<p><strong>2016, EU-US Privacy Shield:</strong> Als Nachfolger von Safe Harbor trat das Privacy Shield in Kraft. US-Unternehmen konnten sich beim Department of Commerce zertifizieren lassen und damit einen angemessenen Datenschutz zusichern. Viele Datenschützer kritisierten das Framework von Anfang an als unzureichend.</p>
+<p><strong>2020, Schrems II:</strong> Wieder klagte Max Schrems, und wieder gewann er. Der EuGH erklärte auch das Privacy Shield für ungültig (Rs. C-311/18). Der Kern des Problems blieb: Die US-Überwachungsgesetze, insbesondere Section 702 FISA (Foreign Intelligence Surveillance Act) und Executive Order 12333, ermöglichten US-Geheimdiensten einen zu weitreichenden Zugriff auf Daten von EU-Bürgern ohne effektiven Rechtsschutz.</p>
+<p><strong>2022, Executive Order 14086:</strong> US-Präsident Biden unterzeichnete eine Executive Order, die den Zugriff der Geheimdienste auf EU-Daten auf das "notwendige und verhältnismäßige" Maß beschränkte und einen zweistufigen Rechtsbehelfsmechanismus schuf, den Data Protection Review Court (DPRC).</p>
+<p><strong>2023, EU-US Data Privacy Framework (DPF):</strong> Auf Basis der Executive Order erließ die EU-Kommission am 26. April 2019 einen neuen Angemessenheitsbeschluss. US-Unternehmen, die sich zertifizieren lassen, bieten wieder ein "angemessenes Datenschutzniveau" im Sinne der DSGVO.</p>
+<p><strong>Ausblick, Schrems III:</strong> Max Schrems und seine Organisation NOYB haben angekündigt, auch das DPF vor dem EuGH anzufechten. Ein Verfahren könnte 2-3 Jahre dauern. Der Ausgang ist offen. Es ist nicht auszuschließen, dass auch dieses Framework irgendwann für ungültig erklärt wird. Deshalb: Verlass dich nicht ausschließlich auf das DPF, sondern nutze zusätzliche Absicherungsmechanismen.</p>
+<h2 id="das-eu-us-data-privacy-framework----was-es-für-dein-startup-bedeutet">Das EU-US Data Privacy Framework, was es für dein Startup bedeutet</h2>
+<p>Das DPF ist aktuell die primäre Rechtsgrundlage für Datentransfers an US-Unternehmen, die auf der offiziellen DPF-Liste stehen. Aber es gibt Voraussetzungen, die du prüfen musst.</p>
+<p><strong>Schritt 1, Prüfen, ob der Anbieter zertifiziert ist:</strong> Nicht jedes US-Unternehmen ist automatisch unter dem DPF zertifiziert. Die Zertifizierung ist freiwillig und muss jährlich erneuert werden. Du kannst den Status auf der offiziellen Website dataprivacyframework.gov/list prüfen. Dort gibt es eine durchsuchbare Datenbank aller zertifizierten Unternehmen mit Details zum Scope (HR-Daten, Non-HR-Daten oder beides).</p>
+<p><strong>Schritt 2, DPF als Rechtsgrundlage im AVV festhalten:</strong> Wenn der Anbieter zertifiziert ist, reicht das DPF als Rechtsgrundlage für den Datentransfer. Du brauchst natürlich zusätzlich einen <a href="/blog/179-auftragsverarbeitung-avv-erstellen">Auftragsverarbeitungsvertrag</a>.</p>
+<p><strong>Schritt 3, Dokumentation:</strong> Halte im <a href="/blog/180-verarbeitungsverzeichnis-anlegen">Verarbeitungsverzeichnis</a> und in der <a href="/blog/177-datenschutzerklaerung-website">Datenschutzerklärung</a> fest, dass der Transfer auf dem DPF basiert, und verlinke auf den DPF-Eintrag des Anbieters.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Anbieter</th><th>DPF-zertifiziert?</th><th>Scope</th><th>AVV verfügbar?</th></tr></thead><tbody><tr><td>Google LLC (Analytics, Ads, Workspace)</td><td>Ja</td><td>HR + Non-HR</td><td>Ja (Admin-Konsole)</td></tr><tr><td>Amazon Web Services (AWS)</td><td>Ja</td><td>HR + Non-HR</td><td>Ja (AWS Artifact)</td></tr><tr><td>Microsoft (Azure, 365, Teams)</td><td>Ja</td><td>HR + Non-HR</td><td>Ja (Trust Center)</td></tr><tr><td>Mailchimp (Intuit)</td><td>Ja</td><td>Non-HR</td><td>Ja (Account > Legal)</td></tr><tr><td>HubSpot</td><td>Ja</td><td>Non-HR</td><td>Ja (Account Settings)</td></tr><tr><td>Stripe</td><td>Ja</td><td>Non-HR</td><td>Ja (Dashboard)</td></tr><tr><td>Slack (Salesforce)</td><td>Ja</td><td>HR + Non-HR</td><td>Ja (Admin-Bereich)</td></tr><tr><td>Notion</td><td>Ja</td><td>Non-HR</td><td>Ja (DPA im Hilfebereich)</td></tr><tr><td>Zoom</td><td>Ja</td><td>HR + Non-HR</td><td>Ja (Admin-Bereich)</td></tr><tr><td>Vercel</td><td>Ja</td><td>Non-HR</td><td>Ja (Legal-Bereich)</td></tr></tbody></table>
+<h2 id="standardvertragsklauseln-sccs----dein-sicherheitsnetz">Standardvertragsklauseln (SCCs), dein Sicherheitsnetz</h2>
+<p>Standard Contractual Clauses (SCCs) sind von der EU-Kommission vorgefertigte Vertragsklauseln, die den Datenexporteur (dich) und den Datenimporteur (den US-Anbieter) vertraglich verpflichten, ein angemessenes Datenschutzniveau sicherzustellen. Sie sind die wichtigste Alternative zum DPF, und du solltest sie parallel nutzen.</p>
+<p>Seit Juni 2021 gelten die neuen SCCs (Durchführungsbeschluss (EU) 2021/914) mit vier Modulen für unterschiedliche Konstellationen:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Modul</th><th>Konstellation</th><th>Relevanz für Startups</th></tr></thead><tbody><tr><td>Modul 1</td><td>Verantwortlicher an Verantwortlichen</td><td>Selten relevant</td></tr><tr><td>Modul 2</td><td>Verantwortlicher an Auftragsverarbeiter</td><td>Häufigster Fall, dein Cloud-Anbieter</td></tr><tr><td>Modul 3</td><td>Auftragsverarbeiter an Unter-Auftragsverarbeiter</td><td>Indirekt relevant (Sub-Prozessoren deines Anbieters)</td></tr><tr><td>Modul 4</td><td>Auftragsverarbeiter an Verantwortlichen</td><td>Selten relevant</td></tr></tbody></table>
+<p>Die gute Nachricht: Die meisten großen US-Anbieter haben die SCCs bereits in ihre Data Processing Agreements integriert. Wenn du den DPA von Google, AWS, Microsoft oder Mailchimp akzeptierst, schließt du damit automatisch auch die SCCs ab. Du musst also in der Regel nicht separat SCCs verhandeln.</p>
+<p><strong>Warum SCCs zusätzlich zum DPF?</strong> Falls das DPF durch ein Schrems-III-Urteil kippen sollte, hast du mit den SCCs eine Rückfallposition. Ohne SCCs stündest du nach einem solchen Urteil wieder ohne Rechtsgrundlage da, wie 2020 nach Schrems II.</p>
+<h2 id="transfer-impact-assessment-tia----die-pflicht-die-fast-niemand-kennt">Transfer Impact Assessment (TIA), die Pflicht, die fast niemand kennt</h2>
+<p>Seit dem Schrems-II-Urteil verlangt der EuGH für jeden Drittlandtransfer, der auf SCCs basiert, ein Transfer Impact Assessment (TIA). Das TIA ist eine dokumentierte Bewertung, ob das Recht des Ziellandes (hier: USA) den durch die SCCs gewährleisteten Schutz beeinträchtigen könnte.</p>
+<p>Für Startups muss das TIA nicht kompliziert sein. Im Wesentlichen dokumentierst du folgende Punkte:</p>
+<p><strong>1. Welche Daten werden übermittelt?</strong> Datenkategorien, Umfang, Sensibilität. Je sensibler die Daten, desto strenger die Bewertung.</p>
+<p><strong>2. An wen und wohin?</strong> Konkreter Empfänger, Land, DPF-Zertifizierung. Ist der Empfänger ein Telekommunikationsanbieter, der unter FISA Section 702 fällt? (Die meisten Cloud-Provider fallen darunter, weil sie "electronic communication service provider" sind.)</p>
+<p><strong>3. Rechtsrahmen im Zielland:</strong> Welche Zugriffsmöglichkeiten haben US-Behörden? Bei den USA: Section 702 FISA und Executive Order 12333 sind die relevanten Gesetze. Aber: Die Executive Order 14086 hat den Zugriff auf das "notwendige und verhältnismäßige" Maß beschränkt und den DPRC als Rechtsbehelfsmechanismus geschaffen. Das DPF basiert auf diesen Verbesserungen.</p>
+<p><strong>4. Zusätzliche Schutzmaßnahmen:</strong> Verschlüsselung (in transit und at rest), Pseudonymisierung, Zugriffsbeschränkungen, Datenlokalisierung (z. B. EU-Datenregion bei Google und AWS).</p>
+<p><strong>5. Ergebnis und Bewertung:</strong> Ist der Transfer unter den gegebenen Umständen zulässig? Für Standard-Tools (Google, AWS, Mailchimp) mit DPF-Zertifizierung und SCCs fällt das Ergebnis in der Regel positiv aus, insbesondere wenn keine besonderen Datenkategorien betroffen sind.</p>
+<p>Tipp: Google, Microsoft und AWS stellen selbst TIA-Vorlagen und Informationsmaterialien bereit. Google hat ein "Transfer Impact Assessment White Paper", Microsoft bietet eine "Supplemental Safeguards" Dokumentation, und AWS hat ein "Supplementary Addendum". Nutze diese als Grundlage für dein eigenes TIA.</p>
+<h2 id="eu-alternativen-wann-es-sich-lohnt-umzusteigen">EU-Alternativen: Wann es sich lohnt, umzusteigen</h2>
+<p>Manche Datenschutz-Risiken lassen sich am einfachsten vermeiden, indem du EU-basierte Alternativen nutzt. Kein Drittlandtransfer bedeutet kein DPF-Risiko, kein TIA, keine zusätzlichen Klauseln und deutlich weniger Dokumentationsaufwand.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>US-Tool</th><th>EU-Alternative</th><th>Server-Standort</th><th>Kosten (ca.)</th><th>Vergleichbarkeit</th></tr></thead><tbody><tr><td>Google Analytics</td><td>Matomo (self-hosted)</td><td>Dein Server (EU)</td><td>Kostenlos (Open Source)</td><td>Sehr gut</td></tr><tr><td>Google Analytics</td><td>Plausible Analytics</td><td>EU (Estland)</td><td>Ab EUR 9/Monat</td><td>Einfacher, datenschutzfreundlich</td></tr><tr><td>Google Analytics</td><td>Fathom</td><td>EU/Kanada</td><td>Ab USD 14/Monat</td><td>Einfach, datenschutzfreundlich</td></tr><tr><td>AWS</td><td>Hetzner Cloud</td><td>Deutschland</td><td>Ab EUR 4/Monat</td><td>Gut für kleine/mittlere Workloads</td></tr><tr><td>AWS</td><td>Exoscale</td><td>Schweiz/Österreich</td><td>Ab EUR 10/Monat</td><td>Cloud-native, DACH-fokussiert</td></tr><tr><td>Mailchimp</td><td>Brevo</td><td>Frankreich (EU)</td><td>Kostenlos bis 300 Mails/Tag</td><td>Sehr gut, günstiger</td></tr><tr><td>Mailchimp</td><td>CleverReach</td><td>Deutschland</td><td>Kostenlos bis 250 Empfänger</td><td>Gut, einfache Bedienung</td></tr><tr><td>Slack</td><td>Rocket.Chat (self-hosted)</td><td>Dein Server</td><td>Kostenlos (Open Source)</td><td>Gut, selbst gehostet</td></tr><tr><td>Slack</td><td>Element (Matrix)</td><td>EU-Server möglich</td><td>Kostenlos (Open Source)</td><td>Gut, dezentral</td></tr><tr><td>Google Workspace</td><td>Nextcloud</td><td>Dein Server (EU)</td><td>Kostenlos (Open Source)</td><td>Self-hosted Office-Suite</td></tr><tr><td>Notion</td><td>Outline</td><td>Dein Server</td><td>Kostenlos (Open Source)</td><td>Wiki/Dokumentation</td></tr><tr><td>Zoom</td><td>Jitsi Meet</td><td>Dein Server (EU)</td><td>Kostenlos (Open Source)</td><td>Videokonferenz</td></tr></tbody></table>
+<p><strong>Mein pragmatischer Rat:</strong> Du musst nicht alles ersetzen. Wenn du Google Workspace, AWS oder Stripe nutzt und die Absicherung (DPF + SCCs + AVV + TIA) sauber dokumentiert hast, ist das DSGVO-konform. Wechsle dort, wo es einfach ist und wo die EU-Alternative ohnehin besser zu deinem Startup passt.</p>
+<p>Der einfachste Quick Win: Google Analytics durch Matomo oder Plausible ersetzen. Das ist in wenigen Stunden erledigt und spart dir dauerhaft Datenschutz-Aufwand, kein Drittlandtransfer, kein Cookie-Consent bei bestimmten Konfigurationen, keine DPF-Abhängigkeit. Mehr zum Cookie-Thema im <a href="/blog/178-cookie-banner-consent-management">Cookie-Banner-Beitrag</a>.</p>
+<h2 id="sonderthema-google-analytics-und-die-österreichische-dsb">Sonderthema: Google Analytics und die österreichische DSB</h2>
+<p>Google Analytics verdient einen eigenen Abschnitt, weil es so verbreitet ist und die österreichische DSB hier eine Vorreiterrolle eingenommen hat.</p>
+<p>Im Dezember 2021 stellte die DSB in einem wegweisenden Bescheid fest, dass die Nutzung von Google Analytics auf einer österreichischen Website gegen die DSGVO verstößt, weil der Datentransfer in die USA nicht ausreichend abgesichert war (damals gab es noch kein DPF). Ähnliche Entscheidungen folgten in Frankreich, Italien und anderen EU-Ländern.</p>
+<p>Seit dem DPF im Juli 2023 hat sich die Lage geändert: Google LLC ist unter dem DPF zertifiziert, und der Datentransfer hat wieder eine Rechtsgrundlage. Google Analytics 4 (GA4) kann wieder DSGVO-konform genutzt werden, aber nur unter folgenden Bedingungen:</p>
+<ul>
+<li><a href="/blog/178-cookie-banner-consent-management">Cookie-Banner mit aktiver Einwilligung</a> vor dem Laden des Analytics-Scripts (TKG 2021, Paragraph 165)</li>
+<li>AVV/DPA mit Google abgeschlossen (in der Google-Admin-Konsole)</li>
+<li>IP-Anonymisierung aktiv (in GA4 standardmäßig der Fall, da IP-Adressen nicht mehr gespeichert werden)</li>
+<li>Datenaufbewahrungsdauer auf das Minimum reduziert (2 Monate in GA4)</li>
+<li>In der <a href="/blog/177-datenschutzerklaerung-website">Datenschutzerklärung</a> korrekt aufgeführt mit DPF-Verweis</li>
+<li>Google Consent Mode v2 implementiert (siehe <a href="/blog/178-cookie-banner-consent-management">Cookie-Banner-Beitrag</a>)</li>
+<li>EU-Datenregion in GA4 aktiviert (optional, aber empfohlen)</li>
+</ul>
+<h2 id="technische-schutzmaßnahmen----was-du-zusätzlich-tun-kannst">Technische Schutzmaßnahmen, was du zusätzlich tun kannst</h2>
+<p>Neben den rechtlichen Absicherungen (DPF, SCCs, TIA) gibt es technische Maßnahmen, die das Datenschutzrisiko bei US-Tools reduzieren. Diese "supplementary measures" hat der EDSA in seinen Empfehlungen nach Schrems II ausdrücklich empfohlen.</p>
+<p><strong>Verschlüsselung mit eigenen Schlüsseln (BYOK/BYOE):</strong> Manche Cloud-Anbieter (AWS, Google Cloud, Azure) erlauben es dir, deine eigenen Verschlüsselungsschlüssel zu verwenden (Bring Your Own Key). Der Anbieter kann die Daten dann nicht im Klartext lesen, auch nicht auf Anforderung einer US-Behörde. Für die meisten Startups ist das technisch zu aufwändig, aber wenn du besonders sensible Daten verarbeitest, kann es sinnvoll sein.</p>
+<p><strong>EU-Datenregionen:</strong> Viele US-Anbieter bieten mittlerweile EU-Datenregionen an. Google Workspace hat eine EU-Datenlokalisierungsoption, AWS hat Regionen in Frankfurt, Irland und Stockholm, Microsoft Azure hat Regionen in den Niederlanden und Deutschland. Wenn du eine EU-Datenregion wählst, werden die Daten physisch in der EU gespeichert. Das eliminiert den Drittlandtransfer aber nicht vollständig, weil US-Behörden theoretisch auch auf EU-Server zugreifen können, es reduziert aber das praktische Risiko.</p>
+<p><strong>Pseudonymisierung und Anonymisierung:</strong> Wo möglich, sende nur pseudonymisierte oder anonymisierte Daten an US-Tools. Beispiel: Statt echte Kundennamen in Analytics-Events zu tracken, verwende anonymisierte IDs. Anonymisierte Daten fallen nicht unter die DSGVO, die Anonymisierung muss aber wirksam und irreversibel sein.</p>
+<p><strong>Minimierung der übermittelten Daten:</strong> Übermittle nur die Daten, die das Tool tatsächlich braucht. Bei Google Analytics 4: Deaktiviere "Enhanced Measurement" für Features, die du nicht brauchst. Bei CRM-Tools: Synchronisiere nur die Felder, die du für den jeweiligen Zweck benötigst.</p>
+<p><strong>IP-Anonymisierung:</strong> Bei Analytics-Tools: Aktiviere die IP-Anonymisierung. In GA4 ist das standardmäßig aktiv, die IP-Adresse wird nicht gespeichert. Bei anderen Tools: Prüfe die Einstellungen.</p>
+<h2 id="was-passiert-wenn-schrems-iii-das-dpf-kippt">Was passiert, wenn Schrems III das DPF kippt?</h2>
+<p>Die Frage ist nicht ob, sondern wann ein Verfahren gegen das DPF eröffnet wird. NOYB hat Beschwerden angekündigt. Was passiert, wenn der EuGH das DPF tatsächlich für ungültig erklärt?</p>
+<p><strong>Kurzfristig:</strong> Die Situation wäre ähnlich wie nach Schrems II im Juli 2020. Datentransfers, die ausschließlich auf dem DPF basieren, wären sofort rechtswidrig. Unternehmen mit SCCs als Rückfallposition wären besser aufgestellt, müssten aber ihr TIA aktualisieren.</p>
+<p><strong>Was du jetzt tun kannst:</strong></p>
+<ul>
+<li>Stelle sicher, dass deine AVVs/DPAs mit US-Anbietern sowohl DPF als auch SCCs als Rechtsgrundlage enthalten (die meisten großen Anbieter tun das bereits)</li>
+<li>Halte dein TIA aktuell</li>
+<li>Identifiziere kritische US-Tools und prüfe EU-Alternativen als Backup</li>
+<li>Verfolge die Berichterstattung (NOYB, Datenschutz-Blogs, DSB-Pressemitteilungen)</li>
+</ul>
+<p><strong>Realistisch:</strong> Selbst wenn der EuGH das DPF kippen sollte, würde das nicht von heute auf morgen passieren. Ein EuGH-Verfahren dauert typischerweise 2-3 Jahre. Und es ist wahrscheinlich, dass die EU und die USA in der Zwischenzeit nachverhandeln würden. Aber vorbereitet sein schadet nie.</p>
+<h2 id="checkliste-us-tool-dsgvo-konform-nutzen">Checkliste: US-Tool DSGVO-konform nutzen</h2>
+<p>Für jedes US-Tool, das du einsetzt, arbeite diese Schritte systematisch ab:</p>
+<ol>
+<li><strong>DPF-Zertifizierung prüfen</strong> auf dataprivacyframework.gov, ist die Zertifizierung aktiv?</li>
+<li><strong>AVV/DPA abschließen</strong> im Account-Bereich des Anbieters (siehe <a href="/blog/179-auftragsverarbeitung-avv-erstellen">AVV-Leitfaden</a>)</li>
+<li><strong>SCCs prüfen</strong>, sind sie im DPA enthalten? Welches Modul?</li>
+<li><strong>Transfer Impact Assessment durchführen</strong> und als PDF ablegen</li>
+<li><strong>Sub-Prozessoren prüfen</strong>, wo sitzen die Sub-Prozessoren des Anbieters?</li>
+<li><strong>Datenschutzerklärung aktualisieren</strong>, Drittlandtransfer mit Rechtsgrundlage (DPF/SCCs) aufführen</li>
+<li><strong><a href="/blog/180-verarbeitungsverzeichnis-anlegen">Verarbeitungsverzeichnis</a> ergänzen</strong>, Drittlandtransfer-Spalte ausfüllen</li>
+<li><strong>Technische Maßnahmen konfigurieren</strong>, EU-Datenregion, Verschlüsselung, minimale Datenerhebung</li>
+<li><strong>Jährlich prüfen</strong>, DPF-Zertifizierung kann erlöschen, Rechtslage kann sich ändern</li>
+</ol>
+<h2 id="weitere-drittländer----nicht-nur-die-usa-sind-ein-thema">Weitere Drittländer, nicht nur die USA sind ein Thema</h2>
+<p>Die meiste Aufmerksamkeit liegt auf US-Datentransfers, aber die DSGVO reguliert Datentransfers in alle Länder außerhalb des EU/EWR-Raums gleichermaßen. Für Startups relevant:</p>
+<p><strong>Länder mit Angemessenheitsbeschluss:</strong> Für einige Drittländer hat die EU-Kommission Angemessenheitsbeschlüsse erlassen. Datentransfers in diese Länder sind ohne zusätzliche Schutzmaßnahmen zulässig. Dazu gehören unter anderem: Schweiz, UK (bis 2025 verlängert), Kanada (teilweise), Japan, Südkorea, Israel, Neuseeland und Uruguay.</p>
+<p><strong>UK nach dem Brexit:</strong> Das Vereinigte Königreich hat einen Angemessenheitsbeschluss, der aber befristet ist. Wenn du Tools von UK-Anbietern nutzt, prüfe regelmäßig den Status.</p>
+<p><strong>Indien und andere Entwicklungsländer:</strong> Für Indien gibt es keinen Angemessenheitsbeschluss. Wenn du Dienstleister in Indien nutzt (z. B. Outsourcing von Entwicklung oder Kundensupport), brauchst du SCCs und ein TIA. Das kann besonders bei Softwareentwicklung relevant werden, wenn Entwickler in Indien Zugriff auf Produktionsdaten haben.</p>
+<p><strong>China:</strong> Datentransfers nach China sind besonders heikel. Es gibt keinen Angemessenheitsbeschluss, und das chinesische Datenschutzrecht (PIPL) enthält weitreichende Befugnisse für staatlichen Datenzugriff. Für Startups ist das in der Regel nicht relevant, es sei denn, du nutzt Tools wie TikTok-Ads oder Alibaba Cloud.</p>
+<h2 id="dokumentation-alles-an-einem-ort">Dokumentation: Alles an einem Ort</h2>
+<p>Egal ob DPF, SCCs oder EU-Alternative: Dokumentiere deine Entscheidungen nachvollziehbar. Erstelle einen Ordner "Datenschutz/Drittlandtransfers" mit folgender Struktur:</p>
+<ul>
+<li>Für jeden US-Anbieter: Screenshot der DPF-Zertifizierung (mit Datum)</li>
+<li>PDF des DPA/AVV</li>
+<li>TIA-Dokumentation</li>
+<li>Sub-Prozessor-Liste</li>
+<li>Notiz mit der Begründung, warum du dieses Tool nutzt und keine EU-Alternative gewählt hast</li>
+</ul>
+<p>Bei einer Anfrage der DSB kannst du diese Unterlagen sofort vorlegen, das zeigt, dass du deine Pflichten ernst nimmst und erspart dir hektisches Zusammensuchen unter Zeitdruck.</p>
+<h2 id="praktische-umsetzung-tool-wechsel-dsgvo-konform-durchführen">Praktische Umsetzung: Tool-Wechsel DSGVO-konform durchführen</h2>
+<p>Wenn du von einem US-Tool auf eine EU-Alternative wechselst (oder umgekehrt), gibt es einige Datenschutz-Aspekte zu beachten:</p>
+<p><strong>Datenmigration:</strong> Beim Export personenbezogener Daten aus dem alten Tool und Import in das neue Tool musst du sicherstellen, dass die Daten sicher übertragen werden (verschlüsselt, nicht über unsichere Kanäle). Lösche die exportierte Datei nach dem erfolgreichen Import.</p>
+<p><strong>AVV mit dem alten Anbieter:</strong> Kläre, was mit deinen Daten beim alten Anbieter passiert. Die meisten AVVs regeln, dass Daten nach Vertragsende gelöscht oder zurückgegeben werden. Fordere eine Löschbestätigung an und dokumentiere sie.</p>
+<p><strong>AVV mit dem neuen Anbieter:</strong> Schließe den AVV/DPA mit dem neuen Anbieter ab, bevor du personenbezogene Daten importierst, nicht danach.</p>
+<p><strong>Datenschutzerklärung und Verarbeitungsverzeichnis aktualisieren:</strong> Ersetze den alten Anbieter durch den neuen. Prüfe, ob sich die Rechtsgrundlage für den Datentransfer ändert (z. B. Wegfall des Drittlandtransfers bei Wechsel von US- zu EU-Tool).</p>
+<p><strong>Einwilligungen prüfen:</strong> Wenn die Einwilligungstexte den alten Anbieter namentlich nennen, musst du prüfen, ob die Einwilligung auch den neuen Anbieter abdeckt. Bei generisch formulierten Einwilligungen ("Wir nutzen einen Newsletter-Dienst") ist das unproblematisch. Bei spezifischen Formulierungen ("Wir nutzen Mailchimp") musst du die Empfänger ggf. informieren.</p>
+<h2 id="open-source-alternativen-volle-kontrolle-für-technische-gründer">Open-Source-Alternativen: Volle Kontrolle für technische Gründer</h2>
+<p>Wenn du oder jemand in deinem Team technisch versiert ist, bieten Open-Source-Tools eine besonders datenschutzfreundliche Option. Du hostest die Software auf deinem eigenen Server (oder einem EU-Hoster) und hast volle Kontrolle über die Daten. Kein Drittlandtransfer, kein DPF-Risiko, keine Abhängigkeit von US-Anbietern.</p>
+<p><strong>Vorteile von Self-Hosted Open Source:</strong></p>
+<ul>
+<li>Keine Datenübermittlung an Dritte, die Daten bleiben auf deinem Server</li>
+<li>Kein AVV mit dem Software-Hersteller nötig (nur mit dem Hosting-Provider)</li>
+<li>Kein Drittlandtransfer, wenn der Server in der EU steht</li>
+<li>Volle Kontrolle über Datenverarbeitung, Speicherung und Löschung</li>
+<li>Oft kostenlos (Kosten nur für Hosting und Wartung)</li>
+</ul>
+<p><strong>Nachteile:</strong></p>
+<ul>
+<li>Wartungsaufwand: Updates, Sicherheitspatches, Backups liegen bei dir</li>
+<li>Technisches Know-how erforderlich</li>
+<li>Kein professioneller Support (außer du kaufst Enterprise-Support)</li>
+<li>Manche Features fehlen im Vergleich zu kommerziellen Alternativen</li>
+</ul>
+<p><strong>Die besten Open-Source-Tools für Startups:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Zweck</th><th>Tool</th><th>Besonderheit</th></tr></thead><tbody><tr><td>Web-Analytics</td><td>Matomo</td><td>Umfangreich, GA-Alternative, optional cookie-frei</td></tr><tr><td>Videokonferenz</td><td>Jitsi Meet</td><td>Einfach, kein Account nötig</td></tr><tr><td>Team-Chat</td><td>Rocket.Chat, Element (Matrix)</td><td>Slack-Alternative, verschlüsselt</td></tr><tr><td>Office/Wiki</td><td>Nextcloud, Outline</td><td>Google Workspace-Alternative</td></tr><tr><td>E-Mail-Marketing</td><td>Listmonk</td><td>Leichtgewichtig, schnell</td></tr><tr><td>CRM</td><td>EspoCRM, Twenty</td><td>Einfaches CRM, self-hosted</td></tr><tr><td>Projektmanagement</td><td>Leantime, Focalboard</td><td>Asana/Trello-Alternative</td></tr></tbody></table>
+<h2 id="jetzt-loslegen">Jetzt loslegen</h2>
+<p>Geh deine Tool-Liste durch und prüfe für jedes US-Tool die DPF-Zertifizierung, den AVV-Status und die Dokumentation. Wo es einfach möglich ist, wechsle auf EU-Alternativen. Im nächsten Post geht es um ein Thema, das direkt mit deinen Tools zusammenhängt: <a href="/blog/183-auskunftsrecht-loeschpflicht-umsetzen">Wie du Auskunfts- und Löschpflichten umsetzt</a>, wenn Betroffene ihre Rechte geltend machen, und zwar über alle deine Systeme hinweg. Bei Startup Burgenland helfen wir dir bei der Tool-Auswahl und der datenschutzrechtlichen Absicherung.</p>
+<hr>
+<p><em>Startup Burgenland macht Gründung leistbar: EUR 10.000 Gründungszuschuss (nicht rückzahlbar, keine Eigenkapitalabgabe), 1:1 Coaching und ein Netzwerk aus Steuerberatern, Notaren und Rechtsanwälten. Flexibler Einstieg jederzeit. Schreib uns ein formloses E-Mail.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/recht/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Recht </a><a href="/blog/tag/datenschutz/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> datenschutz </a><a href="/blog/tag/tools/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> tools </a><a href="/blog/tag/cloud/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> cloud </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2022-02-03" class="d-block fw-600 text-dark-gray">3. Februar 2022</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

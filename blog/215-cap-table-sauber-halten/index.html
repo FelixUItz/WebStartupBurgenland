@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Cap Table sauber halten: Warum es von Anfang an zählt - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Cap-Table-Management von Tag eins, Verwässerung verstehen, typische Fehler vermeiden und die richtigen Tools einsetzen. Praxis-Guide für österreichische Startups."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/215-cap-table-sauber-halten"><!-- Open Graph --><meta property="og:title" content="Cap Table sauber halten: Warum es von Anfang an zählt - StartUp Burgenland Blog"><meta property="og:description" content="Cap-Table-Management von Tag eins, Verwässerung verstehen, typische Fehler vermeiden und die richtigen Tools einsetzen. Praxis-Guide für österreichische Startups."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cap Table sauber halten: Warum es von Anfang an zählt","description":"Cap-Table-Management von Tag eins, Verwässerung verstehen, typische Fehler vermeiden und die richtigen Tools einsetzen. Praxis-Guide für österreichische Startups.","datePublished":"2022-03-23T00:00:00.000Z","dateModified":"2022-03-23T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/215-cap-table-sauber-halten","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/215-cap-table-sauber-halten"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/finanzierung/" class="blog-tag" style="text-decoration:none;"> finanzierung </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Cap Table sauber halten: Warum es von Anfang an zählt</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2022-03-23">23. März 2022</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h2 id="dein-cap-table-ist-die-dna-deines-unternehmens">Dein Cap Table ist die DNA deines Unternehmens</h2>
+<p>Der Cap Table, die Übersicht über alle Gesellschafter, deren Anteile und die Bedingungen dieser Anteile, ist das wichtigste strukturelle Dokument deines Startups. Und gleichzeitig das am meisten vernachlässigte. Viele Gründerinnen und Gründer denken erst über ihren Cap Table nach, wenn ein Investor danach fragt. Bis dahin sind oft Fehler passiert, die sich nur schwer oder gar nicht mehr korrigieren lassen.</p>
+<p>Ein sauberer Cap Table ist nicht nur eine administrative Pflicht. Er bestimmt, wer bei Entscheidungen mitreden darf, wer bei einem Exit wie viel bekommt und ob dein Startup überhaupt investierbar ist. Investoren prüfen den Cap Table in der Due Diligence (siehe <a href="/blog/211-due-diligence-vorbereitung">Post 211</a>) als eines der ersten Dokumente, und ein unaufgeräumter Cap Table ist einer der häufigsten Gründe, warum Deals platzen.</p>
+<p>Bei Startup Burgenland beginnen wir das Thema Cap Table im Coaching möglichst früh, idealerweise vor der ersten externen Kapitalaufnahme. Dieser Beitrag zeigt dir, worauf es ankommt.</p>
+<h2 id="was-ist-ein-cap-table">Was ist ein Cap Table?</h2>
+<p>Ein Cap Table (Capitalization Table) ist eine tabellarische Übersicht über die Eigentumsstruktur deines Unternehmens. In seiner einfachsten Form zeigt er, wer wie viele Anteile hält und welchen Prozentsatz des Unternehmens das repräsentiert.</p>
+<p>Ein einfacher Cap Table für eine GmbH sieht so aus:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Gesellschafter</th><th>Stammeinlage</th><th>Anteil</th></tr></thead><tbody><tr><td>Gründer A</td><td>EUR 17.500</td><td>50%</td></tr><tr><td>Gründer B</td><td>EUR 12.250</td><td>35%</td></tr><tr><td>Business Angel</td><td>EUR 5.250</td><td>15%</td></tr><tr><td><strong>Gesamt</strong></td><td><strong>EUR 35.000</strong></td><td><strong>100%</strong></td></tr></tbody></table>
+<p>In der Praxis wird der Cap Table schnell komplexer. Er muss auch abbilden:</p>
+<ul>
+<li><strong>Vesting-Schedules:</strong> Welche Anteile sind gevestet, welche nicht?</li>
+<li><strong>Options-Pool (ESOP/VSOP):</strong> Reservierte Anteile für Mitarbeiterbeteiligungen</li>
+<li><strong>Wandeldarlehen und SAFEs:</strong> Instrumente, die noch nicht gewandelt sind (siehe <a href="/blog/214-convertible-note-safe-erklaert">Post 214</a>)</li>
+<li><strong>Liquidation Preferences:</strong> Bevorzugte Rückzahlung bei Exit (siehe <a href="/blog/212-term-sheet-verhandeln">Post 212</a>)</li>
+<li><strong>Fully Diluted Basis:</strong> Alle Anteile inklusive Optionen und wandelbarer Instrumente</li>
+</ul>
+<h2 id="verwässerung-verstehen-die-mathematik-der-runden">Verwässerung verstehen: Die Mathematik der Runden</h2>
+<p>Verwässerung (Dilution) ist der Prozess, bei dem dein prozentualer Anteil sinkt, weil neue Anteile ausgegeben werden. Das klingt negativ, ist es aber nicht zwangsläufig. Dein Anteil wird kleiner, aber der Wert deines Anteils kann trotzdem steigen, weil das Unternehmen wertvoller wird.</p>
+<p>Hier ein Beispiel über drei Finanzierungsrunden:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Runde</th><th>Pre-Money</th><th>Investment</th><th>Post-Money</th><th>Gründer-Anteil</th><th>Wert Gründer-Anteil</th></tr></thead><tbody><tr><td>Gründung</td><td>--</td><td>EUR 35.000</td><td>EUR 35.000</td><td>100%</td><td>EUR 35.000</td></tr><tr><td>Angel</td><td>EUR 500.000</td><td>EUR 100.000</td><td>EUR 600.000</td><td>83,3%</td><td>EUR 500.000</td></tr><tr><td>Seed</td><td>EUR 2.000.000</td><td>EUR 500.000</td><td>EUR 2.500.000</td><td>66,7%</td><td>EUR 1.667.000</td></tr><tr><td>Series A</td><td>EUR 8.000.000</td><td>EUR 2.000.000</td><td>EUR 10.000.000</td><td>53,3%</td><td>EUR 5.333.000</td></tr></tbody></table>
+<p>Du siehst: Nach drei Runden hältst du nur noch 53,3 Prozent, aber der Wert deines Anteils ist von EUR 35.000 auf über EUR 5 Millionen gestiegen. Das ist die Magie der Verwässerung: Weniger Prozent von mehr Wert ist mehr wert als mehr Prozent von wenig Wert.</p>
+<p>Die kritische Frage ist: Wie viel Verwässerung pro Runde ist akzeptabel? Als Faustregel gilt: 15 bis 25 Prozent pro Runde. Mehr als 25 Prozent in einer einzelnen Runde ist ein Warnsignal. Wenn du über alle Runden hinweg unter 50 Prozent fällst, musst du sicherstellen, dass du mit deinen Stimmrechten und Vesting-Regelungen die Kontrolle behältst.</p>
+<h2 id="die-häufigsten-cap-table-fehler">Die häufigsten Cap-Table-Fehler</h2>
+<p>In meiner Arbeit sehe ich immer wieder dieselben Fehler. Hier die Top-7, damit du sie vermeiden kannst.</p>
+<p><strong>Fehler 1: Zu viele Anteile am Anfang vergeben.</strong> Ein klassisches Szenario: Du gibst deinem Webdesigner 5 Prozent, deinem Berater 5 Prozent, deinem Mentor 3 Prozent und einem Freund, der "hilft", 2 Prozent. Bevor der erste Investor kommt, hast du 15 Prozent verschenkt, an Leute, die langfristig keinen Wert beitragen.</p>
+<p><strong>Fehler 2: Gleiche Aufteilung ohne Vesting.</strong> 50/50 zwischen zwei Gründern klingt fair, bis einer nach sechs Monaten aussteigt und 50 Prozent des Unternehmens mitnimmt, ohne etwas dafür getan zu haben. Immer Vesting vereinbaren.</p>
+<p><strong>Fehler 3: Kein ESOP-Pool einplanen.</strong> Wenn du Schlüsselmitarbeiter beteiligen willst (und das solltest du), brauchst du einen Options-Pool. Planst du den nicht ein, musst du ihn später aus deinen eigenen Anteilen finanzieren, oder der Investor fordert ihn aus der Pre-Money-Bewertung (was dich noch stärker verwässert, wie in <a href="/blog/212-term-sheet-verhandeln">Post 212</a> erklärt).</p>
+<p><strong>Fehler 4: Informelle Vereinbarungen.</strong> Mündliche Zusagen über Anteile sind wertlos, schlimmer noch, sie können zu Rechtsstreitigkeiten führen. Jede Anteilsvereinbarung muss schriftlich und notariell beurkundet sein (bei einer österreichischen GmbH ist das ohnehin Pflicht für Anteilsübertragungen).</p>
+<p><strong>Fehler 5: Dead Equity.</strong> Anteile, die von inaktiven Gesellschaftern gehalten werden, die keinen Beitrag mehr leisten. Das ist toxisch für Investoren und demotivierend für das aktive Team.</p>
+<p><strong>Fehler 6: Zu viele Gesellschafter.</strong> Jeder Gesellschafter hat Rechte, Informationsrechte, Stimmrechte, manchmal Vetorechte. Ab fünf bis sechs Gesellschaftern wird die Governance komplex. Ab zehn wird sie zum Albtraum. Nutze stattdessen einen ESOP/VSOP für Mitarbeiter und bündle kleine Investoren (wenn möglich) über eine SPV (Special Purpose Vehicle).</p>
+<p><strong>Fehler 7: Cap Table nicht aktuell halten.</strong> Wenn du beim Investorengespräch nicht sofort einen aktuellen, vollständigen Cap Table zeigen kannst, ist das ein professionelles Versagen. Halte ihn permanent aktuell.</p>
+<h2 id="gründeraufteilung-so-machst-du-es-richtig">Gründeraufteilung: So machst du es richtig</h2>
+<p>Die Aufteilung zwischen den Gründern ist die erste und wichtigste Cap-Table-Entscheidung. Hier mein Framework.</p>
+<p><strong>Schritt 1: Beiträge bewerten.</strong> Bewertet ehrlich, was jeder Gründer einbringt:</p>
+<ul>
+<li>Idee und Konzept</li>
+<li>Technische Umsetzung</li>
+<li>Business Development und Sales</li>
+<li>Kapital</li>
+<li>Branchenexpertise und Netzwerk</li>
+<li>Zeitlicher Einsatz (Vollzeit vs. Teilzeit)</li>
+</ul>
+<p><strong>Schritt 2: Anteile zuweisen.</strong> Die Aufteilung muss die realen Beiträge widerspiegeln. 50/50 ist nur fair, wenn beide Gründer gleichwertig beitragen. Oft ist 60/40 oder 70/30 realistischer, und das ist okay.</p>
+<p><strong>Schritt 3: Vesting vereinbaren.</strong> Standard: Vier Jahre Vesting, ein Jahr Cliff. Das bedeutet:</p>
+<ul>
+<li>Im ersten Jahr vestet nichts (Cliff)</li>
+<li>Nach dem ersten Jahr vestet ein Viertel der Anteile</li>
+<li>Danach monatlich ein Achtundvierzigstel</li>
+<li>Nach vier Jahren sind alle Anteile gevestet</li>
+</ul>
+<p><strong>Schritt 4: Gründervereinbarung aufsetzen.</strong> Regelt:</p>
+<ul>
+<li>Anteilsaufteilung und Vesting</li>
+<li>Good Leaver / Bad Leaver</li>
+<li>IP-Übertragung ans Unternehmen</li>
+<li>Vollzeit-Commitment</li>
+<li>Wettbewerbsverbot</li>
+<li>Entscheidungsfindung bei Deadlocks (bei 50/50)</li>
+</ul>
+<p>Lass die Gründervereinbarung von einem Anwalt aufsetzen. Über das Netzwerk von Startup Burgenland bekommst du Zugang zu spezialisierten Rechtsanwälten, die Startup-Gründervereinbarungen kennen.</p>
+<h2 id="esop-und-vsop-mitarbeiterbeteiligung-richtig-planen">ESOP und VSOP: Mitarbeiterbeteiligung richtig planen</h2>
+<p>Mitarbeiterbeteiligungen sind ein wichtiges Instrument, um Talente zu gewinnen und zu halten, besonders wenn du als Startup keine marktüblichen Gehälter zahlen kannst.</p>
+<p><strong>ESOP (Employee Stock Option Plan):</strong> Echte Anteile (Optionen auf Anteile). In Österreich bei einer GmbH komplex, da jede Anteilsübertragung notariell beurkundet werden muss.</p>
+<p><strong>VSOP (Virtual Stock Option Plan):</strong> Virtuelle Anteile, keine echten Gesellschafteranteile, sondern ein vertraglicher Anspruch auf eine Zahlung bei einem Exit oder Liquidation Event. In Österreich die häufigere Variante, weil sie administrativ einfacher ist.</p>
+<p><strong>Typische ESOP/VSOP-Struktur:</strong></p>
+<ul>
+<li>Pool-Grösse: 10 bis 15 Prozent der Anteile (auf Fully-Diluted-Basis)</li>
+<li>Vesting: Vier Jahre mit einem Jahr Cliff</li>
+<li>Strike Price: Aktueller Marktwert zum Zeitpunkt der Zuteilung</li>
+<li>Exercise Window: Zeitraum, in dem die Option nach Vesting ausgeübt werden kann</li>
+</ul>
+<p><strong>Steuerliche Aspekte in Österreich:</strong> Die Besteuerung von Mitarbeiterbeteiligungen wurde mit der Startup-Steuerreform (FlexCo-Gesetz und Begleitgesetze) verbessert. Die Details sind komplex und ändern sich, lass dich unbedingt von einem Steuerberater beraten, der sich mit Startup-Beteiligungen auskennt.</p>
+<h2 id="szenarien-modellieren-der-pro-forma-cap-table">Szenarien modellieren: Der Pro-Forma Cap Table</h2>
+<p>Ein sauberer Cap Table ist nicht nur eine Ist-Aufnahme, er ist auch ein Planungsinstrument. Erstelle Pro-Forma-Versionen für verschiedene Szenarien:</p>
+<p><strong>Szenario 1: Nächste Finanzierungsrunde</strong></p>
+<ul>
+<li>Wie sieht der Cap Table nach der geplanten Runde aus?</li>
+<li>Wie stark werden die bestehenden Gesellschafter verwässert?</li>
+<li>Bleibt genug Anteil bei den Gründern, um motiviert zu bleiben?</li>
+</ul>
+<p><strong>Szenario 2: ESOP-Ausgabe</strong></p>
+<ul>
+<li>Wenn du 10 Prozent für einen ESOP reservierst, wie verändert sich die Verteilung?</li>
+<li>Kommt der Pool aus bestehenden Anteilen oder aus einer Kapitalerhöhung?</li>
+</ul>
+<p><strong>Szenario 3: Wandlung von Convertible Notes/SAFEs</strong></p>
+<ul>
+<li>Was passiert, wenn alle ausstehenden Wandeldarlehen und SAFEs gewandelt werden?</li>
+<li>Zu welchem Preis und mit welchen Caps? (siehe <a href="/blog/214-convertible-note-safe-erklaert">Post 214</a>)</li>
+</ul>
+<p><strong>Szenario 4: Exit</strong></p>
+<ul>
+<li>Bei verschiedenen Exit-Bewertungen: Wer bekommt wie viel?</li>
+<li>Berücksichtige Liquidation Preferences (siehe <a href="/blog/212-term-sheet-verhandeln">Post 212</a>)</li>
+<li>Wie viel bleibt bei den Gründern nach Steuern?</li>
+</ul>
+<p>Diese Szenarien helfen dir, informierte Entscheidungen zu treffen. Wenn du siehst, dass du nach drei Runden nur noch 20 Prozent hältst und eine 2x Participating Liquidation Preference bei einem EUR 5 Millionen Exit fast alles an die Investoren geht, solltest du die Verhandlungsstrategie ändern.</p>
+<h2 id="tools-für-cap-table-management">Tools für Cap-Table-Management</h2>
+<p>In der Frühphase reicht eine gut strukturierte Tabelle. Später lohnen sich spezialisierte Tools.</p>
+<p><strong>Einfache Lösungen:</strong></p>
+<ul>
+<li><strong>Google Sheets:</strong> Erstelle eine Tabelle mit allen Gesellschaftern, Anteilen, Vesting-Status und Pro-Forma-Szenarien. Kostenlos und flexibel.</li>
+<li><strong>Excel/Numbers:</strong> Offline-Variante mit denselben Möglichkeiten.</li>
+</ul>
+<p><strong>Spezialisierte Tools:</strong></p>
+<ul>
+<li><strong>Ledgy:</strong> Europäisches Cap-Table-Management-Tool, in der DACH-Region etabliert. Kostenlose Starter-Version verfügbar. Besonders gut für Equity-Management inklusive ESOP.</li>
+<li><strong>Carta:</strong> Der US-Marktführer. Sehr mächtig, aber primär auf US-Recht ausgelegt. Für österreichische Startups nur bedingt geeignet.</li>
+<li><strong>Capdesk:</strong> Europäische Alternative, unterstützt verschiedene europäische Rechtsformen.</li>
+<li><strong>Global Shares:</strong> Umfassende Plattform für Mitarbeiterbeteiligungen, in Österreich aktiv.</li>
+</ul>
+<p>Meine Empfehlung: Starte mit Google Sheets. Wenn du mehr als fünf Gesellschafter hast oder dein erster ESOP live geht, wechsle zu Ledgy oder einer vergleichbaren Plattform.</p>
+<p><strong>Minimale Tabellen-Struktur für Google Sheets:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Gesellschafter</th><th>Einlage</th><th>Anteil (%)</th><th>Anteil (FD%)</th><th>Vesting-Start</th><th>Vesting-Ende</th><th>Gevestet (%)</th><th>Klasse</th></tr></thead><tbody><tr><td>Gründer A</td><td>EUR 17.500</td><td>50%</td><td>42,5%</td><td>01.01.2025</td><td>01.01.2029</td><td>37,5%</td><td>Stammanteil</td></tr><tr><td>Gründer B</td><td>EUR 10.500</td><td>30%</td><td>25,5%</td><td>01.01.2025</td><td>01.01.2029</td><td>22,5%</td><td>Stammanteil</td></tr><tr><td>Angel 1</td><td>EUR 3.500</td><td>10%</td><td>8,5%</td><td>--</td><td>--</td><td>100%</td><td>Stammanteil</td></tr><tr><td>Angel 2</td><td>EUR 3.500</td><td>10%</td><td>8,5%</td><td>--</td><td>--</td><td>100%</td><td>Stammanteil</td></tr><tr><td>ESOP-Pool</td><td>--</td><td>0%</td><td>15%</td><td>--</td><td>--</td><td>--</td><td>Optionen</td></tr><tr><td><strong>Gesamt</strong></td><td><strong>EUR 35.000</strong></td><td><strong>100%</strong></td><td><strong>100%</strong></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p>FD% = Fully Diluted, also inklusive aller Optionen und wandelbaren Instrumente.</p>
+<h2 id="investoren-perspektive-was-angels-und-vcs-im-cap-table-sehen-wollen">Investoren-Perspektive: Was Angels und VCs im Cap Table sehen wollen</h2>
+<p>Wenn ein Investor deinen Cap Table prüft, achtet er auf diese Punkte:</p>
+<p><strong>Gründeranteil ausreichend:</strong> Die Gründer sollten nach der geplanten Runde noch mindestens 50 bis 60 Prozent (gemeinsam) halten. Wenn sie schon vor der ersten VC-Runde unter 50 Prozent liegen, ist das ein Warnsignal, die Motivation könnte fehlen.</p>
+<p><strong>Kein Dead Equity:</strong> Gibt es Gesellschafter, die inaktiv sind, aber grosse Anteile halten? Das ist toxisch. Investoren wollen sehen, dass jeder Anteil durch aktiven Beitrag gerechtfertigt ist.</p>
+<p><strong>Vesting vorhanden:</strong> Gründeranteile sollten einem Vesting unterliegen. Wenn nicht, wird der Investor es als Bedingung fordern, und dann verhandelst du aus einer schwächeren Position.</p>
+<p><strong>ESOP-Pool geplant:</strong> Investoren wissen, dass du Schlüsselmitarbeiter beteiligen musst. Wenn kein Pool vorhanden ist, wird er als Teil der Runde eingerichtet, typischerweise zu deinen Lasten (aus der Pre-Money-Bewertung, wie in <a href="/blog/209-startup-bewertung-pre-money-valuation">Post 209</a> erklärt).</p>
+<p><strong>Klare Strukturen:</strong> Keine informellen Abmachungen, keine mündlichen Zusagen, keine ungeklärten IP-Verhältnisse. Alles muss dokumentiert und rechtlich sauber sein.</p>
+<p><strong>Wenige Gesellschafter:</strong> Je weniger Gesellschafter, desto einfacher die Governance. Wenn du bereits zehn Gesellschafter in der Seed-Phase hast, wird das spätere Runden massiv erschweren.</p>
+<h2 id="cap-table-und-exit-die-endabrechnung">Cap Table und Exit: Die Endabrechnung</h2>
+<p>Der Cap Table bestimmt, wer bei einem Exit wie viel bekommt. Das klingt einfach (jeder bekommt seinen prozentualen Anteil), ist aber in der Praxis komplexer.</p>
+<p><strong>Liquidation Preferences:</strong> Investoren mit Liquidation Preference bekommen zuerst ihr Geld (1x, 2x oder mehr). Erst dann wird der Rest verteilt. Bei einem kleinen Exit kann das bedeuten, dass für die Gründer wenig übrig bleibt.</p>
+<p><strong>Participating vs. Non-Participating:</strong> Bei Participating Preferences bekommt der Investor sein Geld UND seinen prozentualen Anteil. Bei Non-Participating bekommt er das eine oder das andere.</p>
+<p><strong>ESOP-Auszahlung:</strong> Gevestete Optionen werden bei einem Exit ausgeübt. Die Auszahlung ist steuerpflichtig, plane das ein.</p>
+<p>Modelliere verschiedene Exit-Szenarien und zeige sie deinem Team. Jeder sollte verstehen, was bei einem Exit von EUR 5 Millionen, EUR 20 Millionen oder EUR 100 Millionen passiert. Das schafft Transparenz und Motivation.</p>
+<h2 id="regeln-für-einen-dauerhaft-sauberen-cap-table">Regeln für einen dauerhaft sauberen Cap Table</h2>
+<p>Zum Abschluss hier die goldenen Regeln, die ich jedem Startup mit auf den Weg gebe.</p>
+<ol>
+<li><strong>Vergib Anteile nur für substanziellen, langfristigen Beitrag.</strong> Berater bekommen maximal 0,5 bis 1 Prozent, und nur mit Vesting.</li>
+<li><strong>Immer mit Vesting.</strong> Vier Jahre, ein Jahr Cliff. Keine Ausnahmen.</li>
+<li><strong>Plane den ESOP-Pool früh ein.</strong> 10 bis 15 Prozent, bevor der erste Investor kommt.</li>
+<li><strong>Halte die Gesellschafterzahl niedrig.</strong> Unter fünf in der Seed-Phase. Bündle kleine Investments wenn möglich.</li>
+<li><strong>Dokumentiere alles.</strong> Jede Vereinbarung schriftlich und notariell (bei der GmbH Pflicht).</li>
+<li><strong>Modelliere vorwärts.</strong> Bevor du Anteile vergibst, modelliere zwei bis drei weitere Runden. Wie sieht der Cap Table dann aus?</li>
+<li><strong>Hol dir professionelle Hilfe.</strong> Ein Fehler im Cap Table ist teurer als jeder Anwalt.</li>
+<li><strong>Aktualisiere regelmässig.</strong> Nach jeder Änderung, Investment, Vesting, Optionsausgabe, sofort den Cap Table aktualisieren.</li>
+</ol>
+<h2 id="der-nächste-schritt">Der nächste Schritt</h2>
+<p>Erstelle heute deinen Cap Table, oder überprüfe den bestehenden. Erfasse alle Gesellschafter, Anteile, Vesting-Vereinbarungen und wandelbaren Instrumente. Modelliere deine nächste geplante Finanzierungsrunde und prüfe, ob die Verwässerung akzeptabel ist.</p>
+<p>Wenn du Unterstützung brauchst, melde dich bei Startup Burgenland. Im 1:1 Coaching gehen wir deinen Cap Table gemeinsam durch, identifizieren Probleme und entwickeln Lösungen, bevor ein Investor sie findet. Über unser Netzwerk bekommst du auch Zugang zu Steuerberatern und Rechtsanwälten, die sich mit österreichischem Gesellschaftsrecht und Startup-Beteiligungen auskennen.</p>
+<hr>
+<p><em>Startup Burgenland macht Gründung leistbar: EUR 10.000 Gründungszuschuss (nicht rückzahlbar, keine Eigenkapitalabgabe), 1:1 Coaching und ein Netzwerk aus Steuerberatern, Notaren und Rechtsanwälten. Flexibler Einstieg jederzeit. Schreib uns ein formloses E-Mail.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/finanzierung/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Finanzierung </a><a href="/blog/tag/investoren/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> investoren </a><a href="/blog/tag/anteile/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> anteile </a><a href="/blog/tag/praxis/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Praxis </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2022-03-23" class="d-block fw-600 text-dark-gray">23. März 2022</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>CI/CD Pipeline aufsetzen - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Eine CI/CD Pipeline automatisiert Tests und Deployments, und spart dir als Gründer wertvolle Zeit. Hier zeigen wir dir Schritt für Schritt, wie du deine erste Pipeline mit GitHub Actions aufsetzt."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/559-ci-cd-pipeline-aufsetzen"><!-- Open Graph --><meta property="og:title" content="CI/CD Pipeline aufsetzen - StartUp Burgenland Blog"><meta property="og:description" content="Eine CI/CD Pipeline automatisiert Tests und Deployments, und spart dir als Gründer wertvolle Zeit. Hier zeigen wir dir Schritt für Schritt, wie du deine erste Pipeline mit GitHub Actions aufsetzt."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CI/CD Pipeline aufsetzen","description":"Eine CI/CD Pipeline automatisiert Tests und Deployments, und spart dir als Gründer wertvolle Zeit. Hier zeigen wir dir Schritt für Schritt, wie du deine erste Pipeline mit GitHub Actions aufsetzt.","datePublished":"2024-11-09T00:00:00.000Z","dateModified":"2024-11-09T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/559-ci-cd-pipeline-aufsetzen","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/559-ci-cd-pipeline-aufsetzen"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/produkt-und-technologie/" class="blog-tag" style="text-decoration:none;"> produkt-und-technologie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">CI/CD Pipeline aufsetzen</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2024-11-09">23. Jänner 2029</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>14 min</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="cicd-pipeline-aufsetzen">CI/CD Pipeline aufsetzen</h1>
+<p>Du hast gerade ein Feature fertig programmiert. Jetzt musst du es deployen. Also verbindest du dich per SSH mit dem Server, ziehst den neuesten Code, installierst Dependencies, baust die Anwendung, startest den Server neu, und hoffst, dass alles funktioniert. Das dauert 30 Minuten, und du machst es dreimal die Woche.</p>
+<p>Oder: Du pushst deinen Code auf GitHub, und drei Minuten später ist alles automatisch getestet und deployed. Willkommen in der Welt von CI/CD.</p>
+<hr>
+<h2 id="was-ist-cicd">Was ist CI/CD?</h2>
+<h3 id="continuous-integration-ci">Continuous Integration (CI)</h3>
+<p>Continuous Integration bedeutet, dass Code regelmässig in ein gemeinsames Repository zusammengeführt wird, und dabei automatisch Tests laufen. Das Ziel: Fehler früh erkennen, bevor sie in Produktion landen.</p>
+<h3 id="continuous-delivery-cd">Continuous Delivery (CD)</h3>
+<p>Continuous Delivery geht einen Schritt weiter: Nach erfolgreichen Tests wird der Code automatisch für das Deployment vorbereitet. Der letzte Schritt, das tatsächliche Deployment in Produktion, kann automatisch oder manuell erfolgen.</p>
+<h3 id="continuous-deployment">Continuous Deployment</h3>
+<p>Continuous Deployment ist die Königsdisziplin: Jeder Commit, der die Tests besteht, wird automatisch in Produktion deployed. Kein manueller Eingriff nötig.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Continuous Integration: Code -> Tests -> Feedback</span></span>
+<span class="line"><span>Continuous Delivery: Code -> Tests -> Build -> Ready to Deploy</span></span>
+<span class="line"><span>Continuous Deployment: Code -> Tests -> Build -> Automatisch in Produktion</span></span></code></pre>
+<hr>
+<h2 id="warum-du-eine-cicd-pipeline-brauchst">Warum du eine CI/CD Pipeline brauchst</h2>
+<h3 id="zeit-sparen">Zeit sparen</h3>
+<p>Ein manuelles Deployment dauert 15-30 Minuten. Eine automatisierte Pipeline: 3-5 Minuten. Bei drei Deployments pro Woche sparst du über eine Stunde, jede Woche.</p>
+<h3 id="fehler-vermeiden">Fehler vermeiden</h3>
+<p>Menschen machen Fehler. Besonders um 22 Uhr, wenn der Kunde auf ein Feature wartet. Eine Pipeline macht immer dasselbe, immer in der gleichen Reihenfolge, immer zuverlässig.</p>
+<h3 id="qualität-sichern">Qualität sichern</h3>
+<p>Automatisierte Tests stellen sicher, dass neuer Code keine bestehenden Features kaputt macht. Kein "Ich teste das schnell auf meinem Laptop" mehr.</p>
+<h3 id="vertrauen-aufbauen">Vertrauen aufbauen</h3>
+<p>Wenn du weisst, dass jeder Commit automatisch getestet wird, traust du dich, öfter zu deployen. Und öftere Deployments bedeuten schnelleres Feedback und schnellere Iteration.</p>
+<hr>
+<h2 id="github-actions----deine-erste-pipeline">GitHub Actions, Deine erste Pipeline</h2>
+<p>GitHub Actions ist die einfachste Möglichkeit, eine CI/CD Pipeline aufzusetzen. Es ist direkt in GitHub integriert, kostenlos für Open-Source-Projekte und bietet 2000 Minuten pro Monat für private Repositories.</p>
+<h3 id="schritt-1-workflow-datei-erstellen">Schritt 1: Workflow-Datei erstellen</h3>
+<p>Erstelle die Datei <code>.github/workflows/ci.yml</code> in deinem Repository:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">CI/CD Pipeline</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">on</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> push</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> branches</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">main</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">develop</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#85E89D"> pull_request</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> branches</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">main</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">env</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> NODE_VERSION</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'20'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">jobs</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"> # Job 1: Lint und Formatierung pruefen</span></span>
+<span class="line"><span style="color:#85E89D"> lint</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Lint &#x26; Format Check</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Checkout Code</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Setup Node.js</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-node@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> node-version</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ env.NODE_VERSION }}</span></span>
+<span class="line"><span style="color:#85E89D"> cache</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'npm'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Install Dependencies</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm ci</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Run Linter</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm run lint</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Check Formatting</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm run format:check</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"> # Job 2: Tests ausfuehren</span></span>
+<span class="line"><span style="color:#85E89D"> test</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Run Tests</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> needs</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">lint</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Checkout Code</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Setup Node.js</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-node@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> node-version</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ env.NODE_VERSION }}</span></span>
+<span class="line"><span style="color:#85E89D"> cache</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'npm'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Install Dependencies</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm ci</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Run Unit Tests</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm test, --coverage</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Upload Coverage Report</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/upload-artifact@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">coverage-report</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">coverage/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"> # Job 3: Build erstellen</span></span>
+<span class="line"><span style="color:#85E89D"> build</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Build Application</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> needs</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">test</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Checkout Code</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Setup Node.js</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-node@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> node-version</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ env.NODE_VERSION }}</span></span>
+<span class="line"><span style="color:#85E89D"> cache</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'npm'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Install Dependencies</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm ci</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Build</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm run build</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Upload Build Artifacts</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/upload-artifact@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">build</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">dist/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"> # Job 4: Deployment (nur auf main)</span></span>
+<span class="line"><span style="color:#85E89D"> deploy</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Deploy to Production</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> needs</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">build</span></span>
+<span class="line"><span style="color:#85E89D"> if</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">github.ref == 'refs/heads/main' &#x26;&#x26; github.event_name == 'push'</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Download Build Artifacts</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/download-artifact@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">build</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">dist/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Deploy to Server</span></span>
+<span class="line"><span style="color:#85E89D"> env</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> SSH_KEY</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.DEPLOY_SSH_KEY }}</span></span>
+<span class="line"><span style="color:#85E89D"> SERVER_HOST</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.SERVER_HOST }}</span></span>
+<span class="line"><span style="color:#85E89D"> SERVER_USER</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.SERVER_USER }}</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">|</span></span>
+<span class="line"><span style="color:#9ECBFF"> mkdir -p ~/.ssh</span></span>
+<span class="line"><span style="color:#9ECBFF"> echo "$SSH_KEY" > ~/.ssh/deploy_key</span></span>
+<span class="line"><span style="color:#9ECBFF"> chmod 600 ~/.ssh/deploy_key</span></span>
+<span class="line"><span style="color:#9ECBFF"> rsync -avz -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \</span></span>
+<span class="line"><span style="color:#9ECBFF"> dist/ $SERVER_USER@$SERVER_HOST:/var/www/app/</span></span></code></pre>
+<h3 id="schritt-2-secrets-konfigurieren">Schritt 2: Secrets konfigurieren</h3>
+<p>Gehe in deinem GitHub-Repository zu <strong>Settings > Secrets and variables > Actions</strong> und füge hinzu:</p>
+<ul>
+<li><code>DEPLOY_SSH_KEY</code>: Dein SSH Private Key für den Server</li>
+<li><code>SERVER_HOST</code>: Die IP-Adresse oder Domain deines Servers</li>
+<li><code>SERVER_USER</code>: Der SSH-Benutzername</li>
+</ul>
+<p><strong>Wichtig</strong>: Speichere niemals Secrets im Code! GitHub Secrets werden verschlüsselt gespeichert und sind in Logs nicht sichtbar.</p>
+<h3 id="schritt-3-pipeline-testen">Schritt 3: Pipeline testen</h3>
+<p>Committe die Workflow-Datei und pushe sie:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF">.github/workflows/ci.yml</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "CI/CD Pipeline hinzufuegen"</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> push</span><span style="color:#9ECBFF"> origin</span><span style="color:#9ECBFF"> main</span></span></code></pre>
+<p>Gehe auf GitHub zu <strong>Actions</strong>, du solltest sehen, wie deine Pipeline läuft.</p>
+<hr>
+<h2 id="pipeline-für-verschiedene-technologien">Pipeline für verschiedene Technologien</h2>
+<h3 id="python-djangoflask">Python (Django/Flask)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">jobs</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> test</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> services</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> postgres</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> image</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">postgres:15</span></span>
+<span class="line"><span style="color:#85E89D"> env</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> POSTGRES_PASSWORD</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">testpassword</span></span>
+<span class="line"><span style="color:#85E89D"> POSTGRES_DB</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">testdb</span></span>
+<span class="line"><span style="color:#85E89D"> ports</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#9ECBFF">5432:5432</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Setup Python</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-python@v5</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> python-version</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'3.12'</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Install Dependencies</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">|</span></span>
+<span class="line"><span style="color:#9ECBFF"> pip install -r requirements.txt</span></span>
+<span class="line"><span style="color:#9ECBFF"> pip install pytest pytest-cov</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Run Tests</span></span>
+<span class="line"><span style="color:#85E89D"> env</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> DATABASE_URL</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">postgresql://postgres:testpassword@localhost:5432/testdb</span></span>
+<span class="line"><span style="color:#85E89D"> run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">pytest --cov=app tests/</span></span></code></pre>
+<h3 id="docker-basiertes-deployment">Docker-basiertes Deployment</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">jobs</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> build-and-push</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Login to Container Registry</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">docker/login-action@v3</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> registry</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ghcr.io</span></span>
+<span class="line"><span style="color:#85E89D"> username</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ github.actor }}</span></span>
+<span class="line"><span style="color:#85E89D"> password</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Build and Push Docker Image</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">docker/build-push-action@v5</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> push</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#85E89D"> tags</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">|</span></span>
+<span class="line"><span style="color:#9ECBFF"> ghcr.io/${{ github.repository }}:latest</span></span>
+<span class="line"><span style="color:#9ECBFF"> ghcr.io/${{ github.repository }}:${{ github.sha }}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D"> deploy</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> needs</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">build-and-push</span></span>
+<span class="line"><span style="color:#85E89D"> runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D"> if</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">github.ref == 'refs/heads/main'</span></span>
+<span class="line"><span style="color:#85E89D"> steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Deploy to Server</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">appleboy/ssh-action@v1</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> host</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.SERVER_HOST }}</span></span>
+<span class="line"><span style="color:#85E89D"> username</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.SERVER_USER }}</span></span>
+<span class="line"><span style="color:#85E89D"> key</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.DEPLOY_SSH_KEY }}</span></span>
+<span class="line"><span style="color:#85E89D"> script</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">|</span></span>
+<span class="line"><span style="color:#9ECBFF"> docker pull ghcr.io/${{ github.repository }}:latest</span></span>
+<span class="line"><span style="color:#9ECBFF"> docker compose up -d --force-recreate</span></span></code></pre>
+<hr>
+<h2 id="erweiterte-pipeline-features">Erweiterte Pipeline-Features</h2>
+<h3 id="matrix-builds">Matrix Builds</h3>
+<p>Teste auf mehreren Node.js-Versionen gleichzeitig:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">strategy</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> matrix</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> node-version</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">18</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">22</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#85E89D">steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-node@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> node-version</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ matrix.node-version }}</span></span></code></pre>
+<h3 id="caching-für-schnellere-builds">Caching für schnellere Builds</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#E1E4E8">- </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Cache node_modules</span></span>
+<span class="line"><span style="color:#85E89D"> uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/cache@v4</span></span>
+<span class="line"><span style="color:#85E89D"> with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">node_modules</span></span>
+<span class="line"><span style="color:#85E89D"> key</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}</span></span>
+<span class="line"><span style="color:#85E89D"> restore-keys</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">|</span></span>
+<span class="line"><span style="color:#9ECBFF"> ${{ runner.os }}-node-</span></span></code></pre>
+<h3 id="staging-und-production-environments">Staging und Production Environments</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">deploy-staging</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> if</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">github.ref == 'refs/heads/develop'</span></span>
+<span class="line"><span style="color:#85E89D"> environment</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">staging</span></span>
+<span class="line"><span style="color:#6A737D"> #.. Deploy zu Staging</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">deploy-production</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> if</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">github.ref == 'refs/heads/main'</span></span>
+<span class="line"><span style="color:#85E89D"> environment</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">production</span></span>
+<span class="line"><span style="color:#6A737D"> #.. Deploy zu Produktion</span></span></code></pre>
+<h3 id="manuelle-approvals">Manuelle Approvals</h3>
+<p>Für Production-Deployments kannst du in GitHub ein Environment mit Required Reviewers konfigurieren. So muss jemand das Deployment manuell bestätigen, bevor es losgeht.</p>
+<hr>
+<h2 id="typische-pipeline-stages-für-ein-startup">Typische Pipeline-Stages für ein Startup</h2>
+<p>Hier ist eine vollständige Pipeline, wie sie für ein typisches österreichisches Startup aussehen könnte:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>1. Lint &#x26; Format Check (30 Sekunden)</span></span>
+<span class="line"><span>2. Unit Tests (1-2 Minuten)</span></span>
+<span class="line"><span>3. Integration Tests (2-3 Minuten)</span></span>
+<span class="line"><span>4. Build (1-2 Minuten)</span></span>
+<span class="line"><span>5. Security Scan (1 Minute)</span></span>
+<span class="line"><span>6. Deploy to Staging (1-2 Minuten)</span></span>
+<span class="line"><span>7. Smoke Tests on Staging (30 Sekunden)</span></span>
+<span class="line"><span>8. Deploy to Production (1-2 Minuten)</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span>Gesamtdauer: 8-13 Minuten</span></span></code></pre>
+<p>Am Anfang brauchst du nicht alle Stages. Starte mit Lint, Tests und Build. Den Rest kannst du später hinzufügen.</p>
+<hr>
+<h2 id="secrets-und-umgebungsvariablen-richtig-verwalten">Secrets und Umgebungsvariablen richtig verwalten</h2>
+<h3 id="github-secrets">GitHub Secrets</h3>
+<p>Für einfache Projekte reichen GitHub Secrets:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">env</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> DATABASE_URL</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.DATABASE_URL }}</span></span>
+<span class="line"><span style="color:#85E89D"> API_KEY</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ secrets.API_KEY }}</span></span></code></pre>
+<h3 id="environment-spezifische-secrets">Environment-spezifische Secrets</h3>
+<p>GitHub Environments erlauben unterschiedliche Secrets für Staging und Production:</p>
+<ul>
+<li><strong>Staging</strong>: <code>DATABASE_URL</code> zeigt auf Staging-Datenbank</li>
+<li><strong>Production</strong>: <code>DATABASE_URL</code> zeigt auf Production-Datenbank</li>
+</ul>
+<h3 id="für-komplexere-setups">Für komplexere Setups</h3>
+<p>Wenn du viele Secrets hast, schau dir <strong>Doppler</strong> oder <strong>HashiCorp Vault</strong> an. Beide haben kostenlose Tiers für kleine Teams.</p>
+<hr>
+<h2 id="häufige-probleme-und-lösungen">Häufige Probleme und Lösungen</h2>
+<h3 id="problem-tests-schlagen-nur-in-der-pipeline-fehl">Problem: Tests schlagen nur in der Pipeline fehl</h3>
+<p><strong>Ursache</strong>: Unterschiede zwischen deiner lokalen Umgebung und der CI-Umgebung (Betriebssystem, Versionen, Umgebungsvariablen).</p>
+<p><strong>Lösung</strong>: Nutze Docker für deine lokale Entwicklung. So ist die Umgebung identisch.</p>
+<h3 id="problem-pipeline-ist-zu-langsam">Problem: Pipeline ist zu langsam</h3>
+<p><strong>Ursache</strong>: Keine Caches, zu viele sequenzielle Steps, grosse Docker Images.</p>
+<p><strong>Lösung</strong>:</p>
+<ul>
+<li>Nutze Caching (npm, Docker Layer Cache)</li>
+<li>Führe unabhängige Jobs parallel aus</li>
+<li>Nutze kleinere Base Images (Alpine statt Ubuntu)</li>
+</ul>
+<h3 id="problem-deployment-schlägt-fehl">Problem: Deployment schlägt fehl</h3>
+<p><strong>Ursache</strong>: Oft SSH-Verbindungsprobleme oder falsche Secrets.</p>
+<p><strong>Lösung</strong>:</p>
+<ul>
+<li>Teste die SSH-Verbindung manuell</li>
+<li>Überprüfe die Secrets in GitHub (sie werden nach dem Speichern nicht mehr angezeigt)</li>
+<li>Füge Debug-Output hinzu: <code>run: ssh -v...</code></li>
+</ul>
+<h3 id="problem-kosten-übersteigen-das-free-tier">Problem: Kosten übersteigen das Free Tier</h3>
+<p><strong>Ursache</strong>: Zu viele Builds, zu lange Build-Zeiten.</p>
+<p><strong>Lösung</strong>:</p>
+<ul>
+<li>Nutze <code>paths</code> Filter, um nur bei relevanten Änderungen zu bauen</li>
+<li>Cancle vorherige Runs bei neuen Pushes:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">concurrency</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> group</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">${{ github.workflow }}-${{ github.ref }}</span></span>
+<span class="line"><span style="color:#85E89D"> cancel-in-progress</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span></code></pre>
+<hr>
+<h2 id="alternativen-zu-github-actions">Alternativen zu GitHub Actions</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Tool</th><th>Vorteile</th><th>Kosten</th></tr></thead><tbody><tr><td><strong>GitLab CI</strong></td><td>Integriert in GitLab, gute Docker-Unterstützung</td><td>Free Tier: 400 Min/Monat</td></tr><tr><td><strong>CircleCI</strong></td><td>Schnell, gutes Caching</td><td>Free Tier: 6000 Min/Monat</td></tr><tr><td><strong>Buildkite</strong></td><td>Self-hosted Runners möglich</td><td>Free für kleine Teams</td></tr><tr><td><strong>Woodpecker CI</strong></td><td>Open Source, selbst gehostet</td><td>Kostenlos</td></tr></tbody></table>
+<p>Für die meisten Startups ist GitHub Actions die beste Wahl, weil du wahrscheinlich schon auf GitHub bist.</p>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Pipeline als Code</strong>: Deine CI/CD-Konfiguration gehört ins Repository, nicht in eine Web-Oberfläche</li>
+<li><strong>Schnelle Feedback-Loops</strong>: Die Pipeline sollte in unter 10 Minuten durchlaufen</li>
+<li><strong>Fail Fast</strong>: Setze die schnellsten Checks (Lint, Format) an den Anfang</li>
+<li><strong>Trunk-Based Development</strong>: Halte Feature-Branches kurz (maximal 1-2 Tage)</li>
+<li><strong>Keine Ausnahmen</strong>: Jeder Code durchläuft die Pipeline, keine Abkürzungen</li>
+<li><strong>Rollback-Fähigkeit</strong>: Behalte alte Versionen (Docker Tags, Build Artifacts) für Rollbacks</li>
+<li><strong>Notifications</strong>: Richte Benachrichtigungen ein (Slack, E-Mail), wenn die Pipeline fehlschlägt</li>
+</ol>
+<hr>
+
+<p>Eine CI/CD Pipeline ist eine der besten Investitionen, die du als Startup-Gründer machen kannst. Sie spart dir Zeit, reduziert Fehler und gibt dir das Vertrauen, jederzeit deployen zu können.</p>
+<p>Du brauchst dafür kein grosses Budget und kein DevOps-Team. Mit GitHub Actions und den Beispielen aus diesem Beitrag kannst du heute noch deine erste Pipeline aufsetzen. Starte einfach: Lint, Tests, Build. Den Rest baust du Stück für Stück aus.</p>
+<p>Denk dran: Eine Pipeline, die 80 Prozent automatisiert, ist unendlich besser als keine Pipeline.</p>
+<hr>
+<h2 id="startup-burgenland-unterstützt-dich">Startup Burgenland unterstützt dich</h2>
+<p>Du brauchst Hilfe beim Aufsetzen deiner CI/CD Pipeline? Bei <strong>Startup Burgenland</strong> stehen dir technische Mentoren zur Seite, die dir helfen, die richtige Pipeline für dein Projekt aufzubauen, von der ersten Konfiguration bis zum automatisierten Production Deployment.</p>
+<p><strong><a href="https://www.startup-burgenland.at/kontakt/">Jetzt Beratung anfragen</a></strong></p>
+<h2 id="weiterführende-artikel">Weiterführende Artikel</h2>
+<ul>
+<li><a href="/blog/558-devops-grundlagen-gruender">DevOps Grundlagen für Gründer</a></li>
+<li><a href="/blog/560-docker-container-einsteiger">Docker und Container für Einsteiger</a></li>
+<li><a href="/blog/556-cloud-hosting-aws-azure-hetzner">Cloud-Hosting für Startups, AWS Azure oder Hetzner</a></li>
+<li><a href="/blog/564-api-design-dokumentation">API-Design und Dokumentation</a></li>
+<li><a href="/blog/557-serverless-architecture-startups">Serverless Architecture für Startups</a></li>
+</ul>
+<hr>
+<p><em>Dieser Beitrag ist Teil der Serie "Cloud und Infrastruktur" im Startup Burgenland Blog. In dieser Serie behandeln wir alle technischen Themen rund um Hosting, Deployment und Skalierung, speziell für österreichische Startups und Gründer.</em></p>
+<hr>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/CI-CD/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> CI-CD </a><a href="/blog/tag/GitHub Actions/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> GitHub Actions </a><a href="/blog/tag/Pipeline/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Pipeline </a><a href="/blog/tag/Deployment/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Deployment </a><a href="/blog/tag/Automatisierung/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Automatisierung </a><a href="/blog/tag/Testing/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Testing </a><a href="/blog/tag/Startups/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Startups </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2024-11-09" class="d-block fw-600 text-dark-gray">23. Jänner 2029</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

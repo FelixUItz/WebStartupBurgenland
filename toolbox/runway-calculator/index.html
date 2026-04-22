@@ -1,0 +1,1335 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Runway Calculator | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Berechne deine finanzielle Runway, Burn Rate und Cash-Zero-Datum. Mit What-If-Szenarien und interaktiver Chart-Prognose für österreichische Startups.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/runway-calculator/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/runway-calculator/">
+ <meta property="og:title" content="Runway Calculator | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Berechne deine finanzielle Runway, Burn Rate und Cash-Zero-Datum. Mit What-If-Szenarien und interaktiver Chart-Prognose.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Runway Calculator | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Runway Calculator */
+
+ /* ── Main Layout ── */
+.tool-content.calc-grid {
+ display: grid;
+ grid-template-columns: 380px 1fr;
+ gap: 24px;
+ align-items: start;
+ }
+ @media (max-width: 900px) {
+.tool-content.calc-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ /* ── Card Base ── */
+.tool-content.calc-card {
+ background: #fff;
+ border-radius: 12px;
+ border: 1px solid var(--tb-border);
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+ overflow: hidden;
+ }
+.tool-content.calc-card-header {
+ padding: 12px 20px;
+ background: var(--tb-primary);
+ color: #fff;
+ font-weight: 700;
+ font-size: 14px;
+ letter-spacing: 0.3px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+.tool-content.calc-card-header.icon { font-size: 16px; }
+.tool-content.calc-card-header.accent-header {
+ background: var(--tb-accent);
+ color: #1C1D1F;
+ }
+.tool-content.calc-card-body { padding: 20px; }
+
+ /* ── Input Group ── */
+.tool-content.calc-input-group { margin-bottom: 18px; }
+.tool-content.calc-input-group:last-child { margin-bottom: 0; }
+.tool-content.calc-input-group label {
+ display: block;
+ font-weight: 600;
+ font-size: 13px;
+ color: #1C1D1F;
+ margin-bottom: 4px;
+ }
+.tool-content.calc-input-group.helper {
+ font-size: 11px;
+ color: #6B7280;
+ margin-bottom: 6px;
+ line-height: 1.4;
+ }
+.tool-content.input-wrap {
+ position: relative;
+ display: flex;
+ align-items: center;
+ }
+.tool-content.input-prefix {
+ position: absolute;
+ left: 12px;
+ font-size: 14px;
+ font-weight: 600;
+ color: #6B7280;
+ pointer-events: none;
+ z-index: 1;
+ }
+.tool-content.input-suffix {
+ position: absolute;
+ right: 12px;
+ font-size: 14px;
+ font-weight: 600;
+ color: #6B7280;
+ pointer-events: none;
+ z-index: 1;
+ }
+.tool-content.input-wrap input[type="number"] {
+ width: 100%;
+ padding: 10px 12px 10px 28px;
+ border: 1.5px solid var(--tb-border);
+ border-radius: 8px;
+ font-size: 15px;
+ font-weight: 600;
+ color: #1C1D1F;
+ background: #F8FAFC;
+ transition: border-color 0.2s, box-shadow 0.2s;
+ -moz-appearance: textfield;
+ }
+.tool-content.input-wrap input[type="number"]::-webkit-outer-spin-button,
+.tool-content.input-wrap input[type="number"]::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+ }
+.tool-content.input-wrap input[type="number"]:focus {
+ outline: none;
+ border-color: var(--tb-accent);
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+ background: #fff;
+ }
+.tool-content.input-wrap.has-suffix input[type="number"] {
+ padding-right: 36px;
+ }
+
+ /* ── Divider & Section Label ── */
+.tool-content.section-divider {
+ border: none;
+ border-top: 1px dashed var(--tb-border);
+ margin: 20px 0;
+ }
+.tool-content.calc-section-label {
+ font-size: 12px;
+ font-weight: 700;
+ color: var(--tb-accent);
+ text-transform: uppercase;
+ letter-spacing: 0.8px;
+ margin-bottom: 14px;
+ }
+
+ /* ── Slider ── */
+.tool-content.slider-group { margin-bottom: 16px; }
+.tool-content.slider-group:last-child { margin-bottom: 0; }
+.tool-content.slider-label {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 6px;
+ }
+.tool-content.slider-label span:first-child {
+ font-weight: 600;
+ font-size: 13px;
+ color: #1C1D1F;
+ }
+.tool-content.slider-value {
+ font-size: 13px;
+ font-weight: 700;
+ color: var(--tb-accent);
+ background: rgba(230, 57, 70, 0.08);
+ padding: 2px 8px;
+ border-radius: 4px;
+ min-width: 90px;
+ text-align: center;
+ }
+.tool-content input[type="range"] {
+ -webkit-appearance: none;
+ appearance: none;
+ width: 100%;
+ height: 6px;
+ border-radius: 3px;
+ background: var(--tb-border);
+ outline: none;
+ cursor: pointer;
+ }
+.tool-content input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ appearance: none;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ background: var(--tb-accent);
+ border: 3px solid #fff;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+ cursor: pointer;
+ transition: transform 0.15s;
+ }
+.tool-content input[type="range"]::-webkit-slider-thumb:hover {
+ transform: scale(1.15);
+ }
+.tool-content input[type="range"]::-moz-range-thumb {
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ background: var(--tb-accent);
+ border: 3px solid #fff;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+ cursor: pointer;
+ }
+.tool-content.slider-bounds {
+ display: flex;
+ justify-content: space-between;
+ font-size: 10px;
+ color: #6B7280;
+ margin-top: 2px;
+ }
+
+ /* ── Metric Cards Grid ── */
+.tool-content.metrics-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 12px;
+ margin-bottom: 20px;
+ }
+.tool-content.metric-card {
+ background: #fff;
+ border: 1.5px solid var(--tb-border);
+ border-radius: 10px;
+ padding: 14px 16px;
+ text-align: center;
+ transition: border-color 0.3s, box-shadow 0.3s;
+ }
+.tool-content.metric-card.green {
+ border-color: var(--tb-success);
+ background: rgba(40, 167, 69, 0.04);
+ }
+.tool-content.metric-card.yellow {
+ border-color: var(--tb-accent);
+ background: rgba(245, 158, 11, 0.04);
+ }
+.tool-content.metric-card.red {
+ border-color: var(--tb-danger);
+ background: rgba(220, 53, 69, 0.04);
+ }
+.tool-content.metric-card.metric-label {
+ font-size: 11px;
+ font-weight: 600;
+ color: #6B7280;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 4px;
+ }
+.tool-content.metric-card.metric-value {
+ font-size: 22px;
+ font-weight: 800;
+ letter-spacing: -0.5px;
+ line-height: 1.2;
+ }
+.tool-content.metric-card.metric-unit {
+ font-size: 12px;
+ font-weight: 500;
+ color: #6B7280;
+ margin-top: 2px;
+ }
+.tool-content.metric-card.green.metric-value { color: var(--tb-success); }
+.tool-content.metric-card.yellow.metric-value { color: var(--tb-accent); }
+.tool-content.metric-card.red.metric-value { color: var(--tb-danger); }
+.tool-content.metric-card.hidden { display: none; }
+
+ /* ── Chart Container ── */
+.tool-content.chart-container {
+ position: relative;
+ width: 100%;
+ height: 340px;
+ margin-bottom: 20px;
+ }
+.tool-content.chart-container canvas {
+ width: 100%!important;
+ height: 100%!important;
+ }
+
+ /* ── Benchmark Box ── */
+.tool-content.benchmark-box {
+ background: linear-gradient(135deg, rgba(230, 57, 70, 0.06), rgba(255, 140, 0, 0.06));
+ border: 1px solid var(--tb-border);
+ border-left: 4px solid var(--tb-accent);
+ border-radius: 8px;
+ padding: 16px 18px;
+ margin-bottom: 20px;
+ }
+.tool-content.benchmark-box h3 {
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--tb-primary);
+ margin-bottom: 8px;
+ }
+.tool-content.benchmark-box ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+.tool-content.benchmark-box li {
+ font-size: 13px;
+ color: #1C1D1F;
+ padding: 4px 0;
+ padding-left: 20px;
+ position: relative;
+ line-height: 1.5;
+ }
+.tool-content.benchmark-box li::before {
+ content: "\2022";
+ position: absolute;
+ left: 6px;
+ color: var(--tb-accent);
+ font-weight: 700;
+ }
+
+ /* ── CTA Buttons (inline) ── */
+.tool-content.calc-cta-section {
+ display: flex;
+ gap: 12px;
+ flex-wrap: wrap;
+ }
+.tool-content.calc-cta-btn {
+ flex: 1;
+ min-width: 200px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 8px;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ text-decoration: none;
+ transition: transform 0.15s, box-shadow 0.15s;
+ }
+.tool-content.calc-cta-btn:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+ text-decoration: none;
+ }
+.tool-content.calc-cta-btn:active { transform: translateY(0); }
+.tool-content.calc-cta-btn-primary { background: var(--tb-primary); color: #fff; }
+.tool-content.calc-cta-btn-accent { background: var(--tb-accent); color: #1C1D1F; }
+.tool-content.calc-cta-btn.btn-icon { font-size: 16px; }
+
+ /* ── Modal Overlay ── */
+.modal-overlay {
+ display: none;
+ position: fixed;
+ inset: 0;
+ background: rgba(0,0,0,0.5);
+ z-index: 1000;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+ }
+.modal-overlay.active { display: flex; }
+.modal-overlay.modal-box {
+ background: #fff;
+ border-radius: 16px;
+ max-width: 440px;
+ width: 100%;
+ padding: 32px;
+ position: relative;
+ box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+ }
+.modal-overlay.modal-close {
+ position: absolute;
+ top: 12px;
+ right: 16px;
+ background: none;
+ border: none;
+ font-size: 22px;
+ color: #6B7280;
+ cursor: pointer;
+ padding: 4px;
+ line-height: 1;
+ }
+.modal-overlay.modal-close:hover { color: #1C1D1F; }
+.modal-overlay.modal-box h2 {
+ font-size: 20px;
+ font-weight: 800;
+ color: var(--tb-primary);
+ margin-bottom: 6px;
+ }
+.modal-overlay.modal-box p {
+ font-size: 13px;
+ color: #6B7280;
+ margin-bottom: 20px;
+ line-height: 1.5;
+ }
+.modal-overlay.modal-input {
+ width: 100%;
+ padding: 12px 14px;
+ border: 1.5px solid var(--tb-border);
+ border-radius: 8px;
+ font-size: 14px;
+ margin-bottom: 12px;
+ transition: border-color 0.2s;
+ }
+.modal-overlay.modal-input:focus {
+ outline: none;
+ border-color: var(--tb-accent);
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+ }
+.modal-overlay.modal-submit {
+ width: 100%;
+ padding: 12px;
+ background: var(--tb-primary);
+ color: #fff;
+ border: none;
+ border-radius: 8px;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background 0.2s;
+ }
+.modal-overlay.modal-submit:hover { background: var(--tb-accent); }
+.modal-overlay.modal-privacy {
+ font-size: 11px;
+ color: #6B7280;
+ text-align: center;
+ margin-top: 10px;
+ line-height: 1.4;
+ }
+.modal-overlay.modal-success {
+ display: none;
+ text-align: center;
+ padding: 20px 0;
+ }
+.modal-overlay.modal-success.checkmark {
+ font-size: 48px;
+ margin-bottom: 12px;
+ }
+.modal-overlay.modal-success h3 {
+ font-size: 18px;
+ font-weight: 700;
+ color: var(--tb-primary);
+ margin-bottom: 6px;
+ }
+.modal-overlay.modal-success p { margin-bottom: 0; }
+
+ /* ── Responsive ── */
+ @media (max-width: 900px) {
+.tool-content.metrics-grid {
+ grid-template-columns: 1fr 1fr;
+ }
+.tool-content.chart-container { height: 280px; }
+.tool-content.calc-cta-section { flex-direction: column; }
+.tool-content.calc-cta-btn { min-width: unset; }
+ }
+ @media (max-width: 500px) {
+.tool-content.metrics-grid { grid-template-columns: 1fr; }
+.tool-content.chart-container { height: 240px; }
+.tool-content.calc-card-body { padding: 16px; }
+.tool-content.metric-card.metric-value { font-size: 18px; }
+ }
+ /* Print */
+ @media print {
+.tool-content.calc-card,
+.tool-content.metric-card,
+.tool-content.benchmark-box {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+.tool-content.calc-cta-section { display: none; }
+.modal-overlay { display: none!important; }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Runway &amp; Burn Rate Calculator</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Berechne deine finanzielle Reichweite und plane voraus</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Runway Calculator</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 1100px;">
+
+ <div class="calc-grid">
+
+ <!-- ── LEFT: Inputs ── -->
+ <div class="left-column">
+
+ <!-- Basis-Eingaben -->
+ <div class="calc-card">
+ <div class="calc-card-header">
+ <span class="icon">&#128200;</span> Finanzdaten eingeben
+ </div>
+ <div class="calc-card-body">
+
+ <div class="calc-input-group">
+ <label for="cash">Aktueller Kontostand</label>
+ <div class="helper">Wie viel Geld ist aktuell auf deinem Geschäftskonto?</div>
+ <div class="input-wrap">
+ <span class="input-prefix">&euro;</span>
+ <input type="number" id="cash" value="100000" min="0" step="1000">
+ </div>
+ </div>
+
+ <div class="calc-input-group">
+ <label for="expenses">Monatliche Ausgaben</label>
+ <div class="helper">Alle laufenden Kosten: Gehälter, Miete, Tools, Marketing, etc.</div>
+ <div class="input-wrap">
+ <span class="input-prefix">&euro;</span>
+ <input type="number" id="expenses" value="15000" min="0" step="500">
+ </div>
+ </div>
+
+ <div class="calc-input-group">
+ <label for="revenue">Monatlicher Revenue</label>
+ <div class="helper">Aktueller monatlicher Umsatz (wiederkehrend + einmalig)</div>
+ <div class="input-wrap">
+ <span class="input-prefix">&euro;</span>
+ <input type="number" id="revenue" value="5000" min="0" step="500">
+ </div>
+ </div>
+
+ <div class="calc-input-group">
+ <label for="growth">Revenue-Wachstum / Monat</label>
+ <div class="helper">Erwartetes monatliches Umsatzwachstum in Prozent</div>
+ <div class="input-wrap has-suffix">
+ <input type="number" id="growth" value="5" min="0" max="30" step="1">
+ <span class="input-suffix">%</span>
+ </div>
+ </div>
+
+ <div class="calc-input-group">
+ <label for="fundraising">Geplante Fundraising-Runde</label>
+ <div class="helper">Erwartetes Investment (wird in Monat 3 eingerechnet). Leer lassen wenn nicht zutreffend.</div>
+ <div class="input-wrap">
+ <span class="input-prefix">&euro;</span>
+ <input type="number" id="fundraising" value="0" min="0" step="10000">
+ </div>
+ </div>
+
+ </div>
+ </div>
+
+ <!-- What-If Szenarien -->
+ <div class="calc-card" style="margin-top: 16px;">
+ <div class="calc-card-header accent-header">
+ <span class="icon">&#9881;&#65039;</span> What-If Szenarien
+ </div>
+ <div class="calc-card-body">
+
+ <div class="calc-section-label">Teste verschiedene Szenarien</div>
+
+ <div class="slider-group">
+ <div class="slider-label">
+ <span>Was wenn Burn Rate...</span>
+ <span class="slider-value" id="burnSliderValue">&plusmn;0% (&euro; 15.000)</span>
+ </div>
+ <input type="range" id="burnSlider" min="-50" max="50" value="0" step="5">
+ <div class="slider-bounds">
+ <span>-50%</span>
+ <span>+50%</span>
+ </div>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-label">
+ <span>Was wenn Revenue...</span>
+ <span class="slider-value" id="revenueSliderValue">&plusmn;0% (&euro; 5.000)</span>
+ </div>
+ <input type="range" id="revenueSlider" min="-50" max="100" value="0" step="5">
+ <div class="slider-bounds">
+ <span>-50%</span>
+ <span>+100%</span>
+ </div>
+ </div>
+
+ </div>
+ </div>
+
+ </div>
+
+ <!-- ── RIGHT: Results ── -->
+ <div class="right-column">
+
+ <!-- Key Metrics -->
+ <div class="metrics-grid">
+ <div class="metric-card" id="burnCard">
+ <div class="metric-label">Netto Burn Rate</div>
+ <div class="metric-value" id="burnValue">&euro; 10.000</div>
+ <div class="metric-unit">pro Monat</div>
+ </div>
+ <div class="metric-card" id="runwayCard">
+ <div class="metric-label">Runway</div>
+ <div class="metric-value" id="runwayValue">10</div>
+ <div class="metric-unit">Monate</div>
+ </div>
+ <div class="metric-card" id="zeroCard">
+ <div class="metric-label">Cash-Zero-Datum</div>
+ <div class="metric-value" id="zeroValue">23.12.2026</div>
+ <div class="metric-unit">ohne Fundraising</div>
+ </div>
+ <div class="metric-card hidden" id="fundingRunwayCard">
+ <div class="metric-label">Runway mit Fundraising</div>
+ <div class="metric-value" id="fundingRunwayValue">--</div>
+ <div class="metric-unit">Monate</div>
+ </div>
+ </div>
+
+ <!-- Chart -->
+ <div class="calc-card">
+ <div class="calc-card-header">
+ <span class="icon">&#128202;</span> Cash-Verlauf Prognose
+ </div>
+ <div class="calc-card-body" style="padding: 16px;">
+ <div class="chart-container">
+ <canvas id="runwayChart"></canvas>
+ </div>
+ </div>
+ </div>
+
+ <!-- Benchmarks -->
+ <div class="benchmark-box">
+ <h3>&#128161; Benchmarks für Startups</h3>
+ <ul>
+ <li>Die meisten VCs erwarten 18-24 Monate Runway nach einer Finanzierung</li>
+ <li>Starte spätestens 6 Monate vor Runway-Ende mit dem Fundraising</li>
+ <li>Netto Burn Rate &lt; 70% der Brutto Burn Rate = gutes Zeichen</li>
+ <li>Österreichische AWS/FFG-Förderungen können die Runway signifikant verlängern</li>
+ </ul>
+ </div>
+
+ <!-- CTA -->
+ <div class="calc-cta-section">
+ <button class="calc-cta-btn calc-cta-btn-primary" id="emailBtn">
+ <span class="btn-icon">&#9993;&#65039;</span> Report per E-Mail erhalten
+ </button>
+ <a href="https://www.startupburgenland.at" target="_blank" class="calc-cta-btn calc-cta-btn-accent">
+ <span class="btn-icon">&#128197;</span> Finanzgespräch mit StartUp Burgenland
+ </a>
+ </div>
+
+ </div>
+
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- ── Email Modal ── -->
+ <div class="modal-overlay" id="emailModal">
+ <div class="modal-box">
+ <button class="modal-close" id="modalClose">&times;</button>
+
+ <div id="modalForm">
+ <h2>&#128233; Runway-Report erhalten</h2>
+ <p>Wir senden dir eine Zusammenfassung deiner Berechnung inkl. Empfehlungen für nächste Schritte.</p>
+ <input type="email" class="modal-input" id="emailInput" placeholder="deine@email.at" autocomplete="email">
+ <input type="text" class="modal-input" id="nameInput" placeholder="Dein Name (optional)" autocomplete="name">
+ <button class="modal-submit" id="modalSubmit">Report anfordern</button>
+ <div class="modal-privacy">&#128274; Deine Daten sind sicher. Kein Spam, kein Weitergeben. Datenschutz gemäß DSGVO.</div>
+ </div>
+
+ <div class="modal-success" id="modalSuccess">
+ <div class="checkmark">&#9989;</div>
+ <h3>Report wird gesendet!</h3>
+ <p>Prüfe dein Postfach in den nächsten Minuten. Falls du nichts erhältst, schau in deinen Spam-Ordner.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Unterstützung bei deiner Finanzplanung?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching analysieren wir gemeinsam deine Runway-Situation und entwickeln Strategien für nachhaltiges Wachstum - von Burn-Rate-Optimierung bis Fundraising-Timing.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+(function() {
+ 'use strict';
+
+ // ── DOM References ──
+ var cashInput = document.getElementById('cash');
+ var expensesInput = document.getElementById('expenses');
+ var revenueInput = document.getElementById('revenue');
+ var growthInput = document.getElementById('growth');
+ var fundraisingInput = document.getElementById('fundraising');
+ var burnSlider = document.getElementById('burnSlider');
+ var revenueSlider = document.getElementById('revenueSlider');
+ var burnSliderValue = document.getElementById('burnSliderValue');
+ var revenueSliderValue = document.getElementById('revenueSliderValue');
+
+ var burnCard = document.getElementById('burnCard');
+ var runwayCard = document.getElementById('runwayCard');
+ var zeroCard = document.getElementById('zeroCard');
+ var fundingRunwayCard = document.getElementById('fundingRunwayCard');
+ var burnValue = document.getElementById('burnValue');
+ var runwayValue = document.getElementById('runwayValue');
+ var zeroValue = document.getElementById('zeroValue');
+ var fundingRunwayValue = document.getElementById('fundingRunwayValue');
+
+ // ── Number Formatting ──
+ function formatEUR(num) {
+ if (num === Infinity || num === -Infinity || isNaN(num)) return '--';
+ var absNum = Math.abs(Math.round(num));
+ var formatted = absNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+ return (num < 0? '-': '') + '\u20AC ' + formatted;
+ }
+
+ function formatEURShort(num) {
+ var absNum = Math.abs(Math.round(num));
+ var formatted = absNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+ return (num < 0? '-': '') + '\u20AC ' + formatted;
+ }
+
+ function formatDate(date) {
+ var d = date.getDate().toString().padStart(2, '0');
+ var m = (date.getMonth() + 1).toString().padStart(2, '0');
+ var y = date.getFullYear();
+ return d + '.' + m + '.' + y;
+ }
+
+ // ── Calculation Engine ──
+ function calculateRunway(cash, monthlyExpenses, monthlyRevenue, revenueGrowth, fundraising) {
+ var balance = cash;
+ var month = 0;
+ var maxMonths = 60;
+ var data = [{ month: 0, balance: cash, revenue: 0, cumulativeRevenue: 0 }];
+ var cumulativeRevenue = 0;
+ var currentRevenue = monthlyRevenue;
+
+ while (balance > 0 && month < maxMonths) {
+ month++;
+ currentRevenue = monthlyRevenue * Math.pow(1 + revenueGrowth / 100, month);
+ cumulativeRevenue += currentRevenue;
+ balance = balance - monthlyExpenses + currentRevenue;
+
+ if (month === 3 && fundraising > 0) {
+ balance += fundraising;
+ }
+
+ data.push({
+ month: month,
+ balance: Math.max(balance, 0),
+ revenue: currentRevenue,
+ cumulativeRevenue: cumulativeRevenue
+ });
+
+ if (balance <= 0) break;
+ }
+
+ var netBurnRate = monthlyExpenses - monthlyRevenue;
+ return { runway: month, data: data, netBurnRate: netBurnRate };
+ }
+
+ function calculateRunwayWithout(cash, monthlyExpenses, monthlyRevenue, revenueGrowth) {
+ return calculateRunway(cash, monthlyExpenses, monthlyRevenue, revenueGrowth, 0);
+ }
+
+ // ── Chart Setup ──
+ var ctx = document.getElementById('runwayChart').getContext('2d');
+
+ var chart = new Chart(ctx, {
+ type: 'line',
+ data: {
+ labels: [],
+ datasets: [
+ {
+ label: 'Cash Balance',
+ data: [],
+ borderColor: '#FF8C00',
+ backgroundColor: 'rgba(230, 57, 70, 0.08)',
+ borderWidth: 2.5,
+ fill: true,
+ tension: 0.3,
+ pointRadius: 0,
+ pointHoverRadius: 5,
+ pointHoverBackgroundColor: '#FF8C00',
+ order: 2
+ },
+ {
+ label: 'Kumulierter Revenue',
+ data: [],
+ borderColor: '#28A745',
+ backgroundColor: 'rgba(40, 167, 69, 0.05)',
+ borderWidth: 2,
+ fill: false,
+ tension: 0.3,
+ pointRadius: 0,
+ pointHoverRadius: 4,
+ pointHoverBackgroundColor: '#28A745',
+ order: 3
+ },
+ {
+ label: 'Cash mit Fundraising',
+ data: [],
+ borderColor: '#E63946',
+ borderDash: [6, 4],
+ borderWidth: 2,
+ fill: false,
+ tension: 0.3,
+ pointRadius: 0,
+ pointHoverRadius: 4,
+ pointHoverBackgroundColor: '#E63946',
+ order: 1
+ },
+ {
+ label: '6-Monats-Warnung',
+ data: [],
+ borderColor: '#FF8C00',
+ borderDash: [4, 4],
+ borderWidth: 1.5,
+ fill: false,
+ pointRadius: 0,
+ pointHoverRadius: 0,
+ order: 5
+ },
+ {
+ label: 'Null-Linie',
+ data: [],
+ borderColor: '#DC3545',
+ borderDash: [6, 3],
+ borderWidth: 1.5,
+ fill: false,
+ pointRadius: 0,
+ pointHoverRadius: 0,
+ order: 4
+ }
+ ]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ animation: {
+ duration: 400,
+ easing: 'easeOutQuart'
+ },
+ interaction: {
+ mode: 'index',
+ intersect: false
+ },
+ plugins: {
+ legend: {
+ position: 'bottom',
+ labels: {
+ usePointStyle: true,
+ pointStyle: 'line',
+ padding: 16,
+ font: {
+ size: 11,
+ weight: '500'
+ },
+ filter: function(item) {
+ if (item.text === 'Cash mit Fundraising') {
+ var val = parseFloat(fundraisingInput.value) || 0;
+ return val > 0;
+ }
+ return true;
+ }
+ }
+ },
+ tooltip: {
+ backgroundColor: 'rgba(26, 26, 46, 0.92)',
+ titleFont: { size: 12, weight: '600' },
+ bodyFont: { size: 12 },
+ padding: 10,
+ cornerRadius: 8,
+ callbacks: {
+ title: function(items) {
+ return 'Monat ' + items[0].label;
+ },
+ label: function(context) {
+ if (context.dataset.label === 'Null-Linie' || context.dataset.label === '6-Monats-Warnung') return null;
+ var val = context.parsed.y;
+ return context.dataset.label + ': ' + formatEUR(val);
+ }
+ }
+ }
+ },
+ scales: {
+ x: {
+ title: {
+ display: true,
+ text: 'Monat',
+ font: { size: 12, weight: '600' },
+ color: '#6B7280'
+ },
+ grid: { display: false },
+ ticks: {
+ font: { size: 11 },
+ color: '#6B7280'
+ }
+ },
+ y: {
+ title: {
+ display: true,
+ text: 'EUR',
+ font: { size: 12, weight: '600' },
+ color: '#6B7280'
+ },
+ grid: {
+ color: 'rgba(226, 232, 240, 0.6)'
+ },
+ ticks: {
+ font: { size: 11 },
+ color: '#6B7280',
+ callback: function(value) {
+ if (value >= 1000000) return (value / 1000000).toFixed(1) + ' Mio';
+ if (value >= 1000) return (value / 1000).toFixed(0) + 'k';
+ return value;
+ }
+ },
+ beginAtZero: false
+ }
+ }
+ }
+ });
+
+ // ── Update Logic ──
+ var debounceTimer = null;
+
+ function getInputValues() {
+ var cash = parseFloat(cashInput.value) || 0;
+ var expenses = parseFloat(expensesInput.value) || 0;
+ var revenue = parseFloat(revenueInput.value) || 0;
+ var growth = parseFloat(growthInput.value) || 0;
+ var fundraising = parseFloat(fundraisingInput.value) || 0;
+ var burnAdj = parseFloat(burnSlider.value) || 0;
+ var revAdj = parseFloat(revenueSlider.value) || 0;
+
+ var adjExpenses = expenses * (1 + burnAdj / 100);
+ var adjRevenue = revenue * (1 + revAdj / 100);
+
+ return {
+ cash: cash,
+ expenses: adjExpenses,
+ revenue: adjRevenue,
+ growth: growth,
+ fundraising: fundraising,
+ baseExpenses: expenses,
+ baseRevenue: revenue,
+ burnAdj: burnAdj,
+ revAdj: revAdj
+ };
+ }
+
+ function updateSliderLabels(vals) {
+ var burnSign = vals.burnAdj > 0? '+': (vals.burnAdj === 0? '\u00B1': '');
+ burnSliderValue.textContent = burnSign + vals.burnAdj + '% (' + formatEURShort(vals.expenses) + ')';
+
+ var revSign = vals.revAdj > 0? '+': (vals.revAdj === 0? '\u00B1': '');
+ revenueSliderValue.textContent = revSign + vals.revAdj + '% (' + formatEURShort(vals.revenue) + ')';
+ }
+
+ function setCardColor(card, color) {
+ card.classList.remove('green', 'yellow', 'red');
+ if (color) card.classList.add(color);
+ }
+
+ function updateAll() {
+ var vals = getInputValues();
+ updateSliderLabels(vals);
+
+ // Calculate without fundraising
+ var resultBase = calculateRunwayWithout(vals.cash, vals.expenses, vals.revenue, vals.growth);
+
+ // Calculate with fundraising
+ var resultFund = calculateRunway(vals.cash, vals.expenses, vals.revenue, vals.growth, vals.fundraising);
+
+ // Net Burn Rate
+ var netBurn = vals.expenses - vals.revenue;
+ burnValue.textContent = formatEUR(Math.abs(netBurn));
+ if (netBurn <= 0) {
+ setCardColor(burnCard, 'green');
+ } else {
+ setCardColor(burnCard, 'red');
+ }
+
+ // Runway (without fundraising)
+ var runway = resultBase.runway;
+ if (runway >= 60) {
+ runwayValue.textContent = '60+';
+ } else {
+ runwayValue.textContent = runway;
+ }
+
+ if (runway > 18) {
+ setCardColor(runwayCard, 'green');
+ } else if (runway >= 6) {
+ setCardColor(runwayCard, 'yellow');
+ } else {
+ setCardColor(runwayCard, 'red');
+ }
+
+ // Cash-Zero-Datum
+ if (runway >= 60) {
+ zeroValue.textContent = 'Kein Ende';
+ zeroCard.querySelector('.metric-unit').textContent = 'Cash reicht 60+ Monate';
+ setCardColor(zeroCard, 'green');
+ } else {
+ var today = new Date();
+ var zeroDate = new Date(today.getFullYear(), today.getMonth() + runway, today.getDate());
+ zeroValue.textContent = formatDate(zeroDate);
+ zeroCard.querySelector('.metric-unit').textContent = 'ohne Fundraising';
+ if (runway > 18) {
+ setCardColor(zeroCard, 'green');
+ } else if (runway >= 6) {
+ setCardColor(zeroCard, 'yellow');
+ } else {
+ setCardColor(zeroCard, 'red');
+ }
+ }
+
+ // Fundraising runway
+ if (vals.fundraising > 0) {
+ fundingRunwayCard.classList.remove('hidden');
+ var fundRunway = resultFund.runway;
+ if (fundRunway >= 60) {
+ fundingRunwayValue.textContent = '60+';
+ } else {
+ fundingRunwayValue.textContent = fundRunway;
+ }
+ if (fundRunway > 18) {
+ setCardColor(fundingRunwayCard, 'green');
+ } else if (fundRunway >= 6) {
+ setCardColor(fundingRunwayCard, 'yellow');
+ } else {
+ setCardColor(fundingRunwayCard, 'red');
+ }
+ } else {
+ fundingRunwayCard.classList.add('hidden');
+ }
+
+ // ── Update Chart ──
+ var maxChartMonths = Math.min(Math.max(resultBase.runway, resultFund.runway, 12) + 3, 36);
+ var baseData = resultBase.data;
+ var fundData = resultFund.data;
+
+ var labels = [];
+ var cashLine = [];
+ var revLine = [];
+ var fundLine = [];
+ var warningLine = [];
+ var zeroLine = [];
+
+ // 6-month warning threshold = 6 * net burn rate (expenses - current revenue)
+ var sixMonthWarning = vals.expenses * 6;
+
+ for (var i = 0; i <= maxChartMonths; i++) {
+ labels.push(i.toString());
+
+ // Base cash
+ if (i < baseData.length) {
+ cashLine.push(baseData[i].balance);
+ } else {
+ cashLine.push(0);
+ }
+
+ // Cumulative revenue
+ if (i < baseData.length) {
+ revLine.push(baseData[i].cumulativeRevenue);
+ } else if (baseData.length > 0) {
+ revLine.push(baseData[baseData.length - 1].cumulativeRevenue);
+ } else {
+ revLine.push(0);
+ }
+
+ // Fundraising line
+ if (vals.fundraising > 0 && i < fundData.length) {
+ fundLine.push(fundData[i].balance);
+ } else if (vals.fundraising > 0) {
+ fundLine.push(0);
+ } else {
+ fundLine.push(null);
+ }
+
+ // Warning line
+ warningLine.push(sixMonthWarning);
+
+ // Zero line
+ zeroLine.push(0);
+ }
+
+ chart.data.labels = labels;
+ chart.data.datasets[0].data = cashLine;
+ chart.data.datasets[1].data = revLine;
+ chart.data.datasets[2].data = fundLine;
+ chart.data.datasets[3].data = warningLine;
+ chart.data.datasets[4].data = zeroLine;
+
+ chart.update('none');
+ // Re-run with animation
+ chart.update();
+ }
+
+ // ── Debounced Update ──
+ function debouncedUpdate() {
+ clearTimeout(debounceTimer);
+ debounceTimer = setTimeout(updateAll, 300);
+ }
+
+ // Sliders update immediately (no debounce needed for smooth UX)
+ function sliderUpdate() {
+ clearTimeout(debounceTimer);
+ debounceTimer = setTimeout(updateAll, 50);
+ }
+
+ // ── Event Listeners ──
+ [cashInput, expensesInput, revenueInput, growthInput, fundraisingInput].forEach(function(input) {
+ input.addEventListener('input', debouncedUpdate);
+ });
+
+ burnSlider.addEventListener('input', sliderUpdate);
+ revenueSlider.addEventListener('input', sliderUpdate);
+
+ // ── Email Modal ──
+ var emailModal = document.getElementById('emailModal');
+ var emailBtn = document.getElementById('emailBtn');
+ var modalClose = document.getElementById('modalClose');
+ var modalSubmit = document.getElementById('modalSubmit');
+ var modalForm = document.getElementById('modalForm');
+ var modalSuccess = document.getElementById('modalSuccess');
+ var emailInput = document.getElementById('emailInput');
+
+ emailBtn.addEventListener('click', function() {
+ emailModal.classList.add('active');
+ modalForm.style.display = 'block';
+ modalSuccess.style.display = 'none';
+ emailInput.value = '';
+ document.getElementById('nameInput').value = '';
+ setTimeout(function() { emailInput.focus(); }, 200);
+ });
+
+ modalClose.addEventListener('click', function() {
+ emailModal.classList.remove('active');
+ });
+
+ emailModal.addEventListener('click', function(e) {
+ if (e.target === emailModal) {
+ emailModal.classList.remove('active');
+ }
+ });
+
+ modalSubmit.addEventListener('click', function() {
+ var email = emailInput.value.trim();
+ if (!email ||!email.includes('@') ||!email.includes('.')) {
+ emailInput.style.borderColor = '#DC3545';
+ emailInput.focus();
+ return;
+ }
+ emailInput.style.borderColor = '';
+ modalForm.style.display = 'none';
+ modalSuccess.style.display = 'block';
+ });
+
+ emailInput.addEventListener('keypress', function(e) {
+ if (e.key === 'Enter') {
+ modalSubmit.click();
+ }
+ });
+
+ // ── Keyboard: Escape closes modal ──
+ document.addEventListener('keydown', function(e) {
+ if (e.key === 'Escape' && emailModal.classList.contains('active')) {
+ emailModal.classList.remove('active');
+ }
+ });
+
+ // ── Initial Calculation ──
+ updateAll();
+
+})();
+</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

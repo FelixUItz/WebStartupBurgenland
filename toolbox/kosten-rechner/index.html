@@ -1,0 +1,1530 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Startup-Kosten-Rechner | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Berechne deine Gründungskosten in Österreich: EPU, GmbH, FlexCo oder GmbH & Co KG. Kostenloser Rechner von StartUp Burgenland.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/kosten-rechner/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/kosten-rechner/">
+ <meta property="og:title" content="Startup-Kosten-Rechner | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Berechne deine Gründungskosten in Österreich: EPU, GmbH, FlexCo oder GmbH & Co KG. Kostenloser Rechner von StartUp Burgenland.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Startup-Kosten-Rechner | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* ── Step Wizard Progress ── */
+.tool-content.step-wizard {
+ background: #fff;
+ border-bottom: 1px solid var(--tb-border);
+ padding: 20px 0 14px;
+ position: sticky;
+ top: 0;
+ z-index: 50;
+ }
+.tool-content.step-indicators {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 0;
+ margin-bottom: 8px;
+ }
+.tool-content.step-dot {
+ width: 38px;
+ height: 38px;
+ border-radius: 50%;
+ background: var(--tb-border);
+ color: var(--tb-text-light);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 700;
+ font-size: 14px;
+ transition: all 0.3s ease;
+ position: relative;
+ z-index: 2;
+ }
+.tool-content.step-dot.active {
+ background: var(--tb-primary);
+ color: #fff;
+ box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.15);
+ }
+.tool-content.step-dot.completed {
+ background: var(--tb-success);
+ color: #fff;
+ }
+.tool-content.step-connector {
+ width: 60px;
+ height: 3px;
+ background: var(--tb-border);
+ transition: all 0.3s ease;
+ z-index: 1;
+ }
+.tool-content.step-connector.active {
+ background: var(--tb-success);
+ }
+.tool-content.step-labels {
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ }
+.tool-content.step-label {
+ font-size: 13px;
+ color: var(--tb-text-light);
+ font-weight: 500;
+ text-align: center;
+ transition: all 0.3s ease;
+ width: 90px;
+ }
+.tool-content.step-label.active {
+ color: var(--tb-primary);
+ font-weight: 600;
+ }
+.tool-content.progress-bar-track {
+ height: 4px;
+ background: var(--tb-border);
+ border-radius: 2px;
+ overflow: hidden;
+ margin-top: 8px;
+ }
+.tool-content.progress-bar-fill {
+ height: 100%;
+ background: linear-gradient(90deg, var(--tb-primary), var(--tb-accent));
+ border-radius: 2px;
+ transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+ width: 0%;
+ }
+
+ /* ── Steps Container ── */
+.tool-content.steps-container {
+ position: relative;
+ overflow: hidden;
+ }
+.tool-content.step {
+ display: none;
+ animation: tcFadeSlideIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.step.active {
+ display: block;
+ }
+ @keyframes tcFadeSlideIn {
+ from { opacity: 0; transform: translateY(16px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+.tool-content.step-heading {
+ font-size: 24px;
+ font-weight: 800;
+ color: var(--tb-primary);
+ margin-bottom: 6px;
+ letter-spacing: -0.02em;
+ }
+.tool-content.step-subheading {
+ color: var(--tb-text-light);
+ font-size: 15px;
+ margin-bottom: 24px;
+ line-height: 1.5;
+ }
+
+ /* ── Rechtsform Cards (Step 1) ── */
+.tool-content.rechtsform-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 12px;
+ }
+.tool-content.rechtsform-card {
+ background: #fff;
+ border: 2px solid var(--tb-border);
+ border-radius: 12px;
+ padding: 20px 16px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ position: relative;
+ text-align: center;
+ }
+.tool-content.rechtsform-card:hover {
+ border-color: var(--tb-accent);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ transform: translateY(-2px);
+ }
+.tool-content.rechtsform-card.selected {
+ border-color: var(--tb-primary);
+ background: rgba(230, 57, 70, 0.03);
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+ }
+.tool-content.rechtsform-icon {
+ width: 52px;
+ height: 52px;
+ margin: 0 auto 10px;
+ background: var(--tb-bg-light);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 22px;
+ transition: all 0.3s ease;
+ }
+.tool-content.rechtsform-card.selected.rechtsform-icon {
+ background: var(--tb-primary);
+ color: #fff;
+ }
+.tool-content.rechtsform-card.rf-badge {
+ position: absolute;
+ top: -8px;
+ right: -8px;
+ background: var(--tb-accent);
+ color: #fff;
+ font-size: 10px;
+ font-weight: 800;
+ padding: 3px 8px;
+ border-radius: 20px;
+ text-transform: uppercase;
+ letter-spacing: 0.03em;
+ white-space: nowrap;
+ }
+.tool-content.rechtsform-name {
+ font-weight: 700;
+ font-size: 15px;
+ color: var(--tb-text);
+ margin-bottom: 4px;
+ }
+.tool-content.rechtsform-desc {
+ font-size: 13px;
+ color: var(--tb-text-light);
+ line-height: 1.4;
+ }
+
+ /* ── Form Elements (Step 2) ── */
+.tool-content.radio-group {
+ display: flex;
+ gap: 8px;
+ }
+.tool-content.radio-btn {
+ flex: 1;
+ text-align: center;
+ }
+.tool-content.radio-btn input {
+ display: none;
+ }
+.tool-content.radio-btn label {
+ display: block;
+ padding: 10px 12px;
+ background: #fff;
+ border: 2px solid var(--tb-border);
+ border-radius: 8px;
+ cursor: pointer;
+ font-weight: 600;
+ font-size: 15px;
+ transition: all 0.3s ease;
+ color: var(--tb-text);
+ }
+.tool-content.radio-btn input:checked + label {
+ border-color: var(--tb-primary);
+ background: rgba(230, 57, 70, 0.04);
+ color: var(--tb-primary);
+ }
+.tool-content.radio-btn label:hover {
+ border-color: var(--tb-accent);
+ }
+
+ /* ── Toggle Switch (NeuFöG) ── */
+.tool-content.toggle-row {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background: #fff;
+ border: 2px solid var(--tb-border);
+ border-radius: 8px;
+ padding: 14px 16px;
+ }
+.tool-content.toggle-left {
+ display: flex;
+ flex-direction: column;
+ gap: 2px;
+ }
+.tool-content.toggle-label-text {
+ font-weight: 600;
+ font-size: 15px;
+ color: var(--tb-text);
+ }
+.tool-content.toggle-tooltip {
+ font-size: 13px;
+ color: var(--tb-text-light);
+ line-height: 1.3;
+ }
+.tool-content.toggle-switch {
+ position: relative;
+ width: 48px;
+ height: 26px;
+ flex-shrink: 0;
+ }
+.tool-content.toggle-switch input {
+ display: none;
+ }
+.tool-content.toggle-slider {
+ position: absolute;
+ inset: 0;
+ background: var(--tb-border);
+ border-radius: 13px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+.tool-content.toggle-slider::before {
+ content: '';
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ left: 3px;
+ top: 3px;
+ background: #fff;
+ border-radius: 50%;
+ transition: all 0.3s ease;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+ }
+.tool-content.toggle-switch input:checked +.toggle-slider {
+ background: var(--tb-success);
+ }
+.tool-content.toggle-switch input:checked +.toggle-slider::before {
+ transform: translateX(22px);
+ }
+
+ /* ── Navigation Buttons ── */
+.tool-content.nav-buttons {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 30px;
+ gap: 12px;
+ }
+
+ /* ── Results (Step 3) ── */
+.tool-content.results-wrapper {
+ animation: tcFadeSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.result-card {
+ background: #fff;
+ border-radius: 16px;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ overflow: hidden;
+ margin-bottom: 20px;
+ }
+.tool-content.result-header {
+ background: linear-gradient(135deg, var(--tb-primary), var(--tb-accent));
+ color: #fff;
+ padding: 18px 20px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+.tool-content.result-header-icon {
+ width: 48px;
+ height: 48px;
+ background: rgba(255,255,255,0.15);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 20px;
+ flex-shrink: 0;
+ }
+.tool-content.result-header-text h2 {
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 2px;
+ color: #fff;
+ }
+.tool-content.result-header-text p {
+ font-size: 13px;
+ opacity: 0.85;
+ margin: 0;
+ }
+.tool-content.result-section {
+ padding: 20px;
+ }
+.tool-content.result-section +.result-section {
+ border-top: 1px solid var(--tb-border);
+ }
+.tool-content.result-section-title {
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ color: var(--tb-text-light);
+ margin-bottom: 12px;
+ }
+.tool-content.result-line {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 6px 0;
+ font-size: 15px;
+ }
+.tool-content.result-line-label {
+ color: var(--tb-text);
+ }
+.tool-content.result-line-value {
+ font-weight: 600;
+ font-variant-numeric: tabular-nums;
+ color: var(--tb-text);
+ min-width: 80px;
+ text-align: right;
+ }
+.tool-content.result-line.saving.result-line-value {
+ color: var(--tb-success);
+ }
+.tool-content.result-line.saving.result-line-label {
+ color: var(--tb-success);
+ }
+.tool-content.result-divider {
+ border: none;
+ border-top: 2px dashed var(--tb-border);
+ margin: 10px 0;
+ }
+.tool-content.result-total {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 8px 0 0;
+ font-size: 18px;
+ font-weight: 800;
+ }
+.tool-content.result-total.result-total-value {
+ color: var(--tb-primary);
+ font-variant-numeric: tabular-nums;
+ }
+.tool-content.result-note {
+ margin-top: 8px;
+ font-size: 13px;
+ color: var(--tb-text-light);
+ font-style: italic;
+ }
+
+ /* ── Comparison Chart ── */
+.tool-content.chart-card {
+ background: #fff;
+ border-radius: 16px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ padding: 20px;
+ margin-bottom: 20px;
+ }
+.tool-content.chart-title {
+ font-size: 18px;
+ font-weight: 700;
+ color: var(--tb-primary);
+ margin-bottom: 4px;
+ }
+.tool-content.chart-subtitle {
+ font-size: 13px;
+ color: var(--tb-text-light);
+ margin-bottom: 16px;
+ }
+.tool-content.chart-container {
+ position: relative;
+ height: 280px;
+ }
+
+ /* ── CTA Buttons in results ── */
+.tool-content.cta-group {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ margin-bottom: 20px;
+ }
+.tool-content.btn-cta-email {
+ background: var(--tb-accent);
+ color: #fff;
+ font-weight: 700;
+ border-color: var(--tb-accent);
+ }
+.tool-content.btn-cta-email:hover {
+ background: #E07600;
+ border-color: #E07600;
+ }
+.tool-content.btn-cta-termin {
+ background: var(--tb-primary);
+ color: #fff;
+ font-weight: 700;
+ border-color: var(--tb-primary);
+ }
+.tool-content.btn-cta-termin:hover {
+ background: var(--tb-accent);
+ border-color: var(--tb-accent);
+ }
+.tool-content.restart-row {
+ text-align: center;
+ margin-bottom: 16px;
+ }
+.tool-content.btn-restart {
+ background: transparent;
+ border: none;
+ color: var(--tb-text-light);
+ font-size: 14px;
+ font-weight: 500;
+ cursor: pointer;
+ text-decoration: underline;
+ text-underline-offset: 2px;
+ }
+.tool-content.btn-restart:hover {
+ color: var(--tb-primary);
+ }
+
+ /* ── Modal Overlay ── */
+.tool-content.modal-overlay {
+ display: none;
+ position: fixed;
+ inset: 0;
+ background: rgba(0, 0, 0, 0.5);
+ z-index: 10000;
+ align-items: center;
+ justify-content: center;
+ padding: 16px;
+ animation: tcFadeIn 0.25s ease;
+ }
+.tool-content.modal-overlay.visible {
+ display: flex;
+ }
+ @keyframes tcFadeIn {
+ from { opacity: 0; }
+ to { opacity: 1; }
+ }
+.tool-content.modal-content {
+ background: #fff;
+ border-radius: 16px;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ max-width: 440px;
+ width: 100%;
+ padding: 30px 24px;
+ position: relative;
+ animation: tcModalSlideIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ @keyframes tcModalSlideIn {
+ from { opacity: 0; transform: translateY(20px) scale(0.97); }
+ to { opacity: 1; transform: translateY(0) scale(1); }
+ }
+.tool-content.modal-close {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ width: 34px;
+ height: 34px;
+ background: var(--tb-bg-light);
+ border: none;
+ border-radius: 50%;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 18px;
+ color: var(--tb-text-light);
+ transition: all 0.3s ease;
+ }
+.tool-content.modal-close:hover {
+ background: var(--tb-border);
+ color: var(--tb-text);
+ }
+.tool-content.modal-icon {
+ width: 60px;
+ height: 60px;
+ background: linear-gradient(135deg, var(--tb-accent), #FF8C00);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 24px;
+ margin: 0 auto 14px;
+ }
+.tool-content.modal-title {
+ font-size: 20px;
+ font-weight: 700;
+ text-align: center;
+ color: var(--tb-primary);
+ margin-bottom: 6px;
+ }
+.tool-content.modal-desc {
+ text-align: center;
+ font-size: 14px;
+ color: var(--tb-text-light);
+ margin-bottom: 18px;
+ line-height: 1.5;
+ }
+.tool-content.modal-input-group {
+ display: flex;
+ gap: 8px;
+ margin-bottom: 10px;
+ }
+.tool-content.modal-input {
+ flex: 1;
+ padding: 10px 12px;
+ font-size: 15px;
+ border: 2px solid var(--tb-border);
+ border-radius: 8px;
+ transition: all 0.3s ease;
+ }
+.tool-content.modal-input:focus {
+ outline: none;
+ border-color: var(--tb-accent);
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+ }
+.tool-content.modal-input::placeholder {
+ color: #9CA3AF;
+ }
+.tool-content.modal-privacy {
+ text-align: center;
+ font-size: 12px;
+ color: var(--tb-text-light);
+ }
+.tool-content.modal-success {
+ display: none;
+ text-align: center;
+ padding: 16px 0;
+ }
+.tool-content.modal-success.visible {
+ display: block;
+ animation: tcFadeSlideIn 0.4s ease;
+ }
+.tool-content.modal-success-icon {
+ font-size: 40px;
+ margin-bottom: 8px;
+ }
+.tool-content.modal-success-text {
+ font-weight: 600;
+ color: var(--tb-success);
+ font-size: 17px;
+ margin-bottom: 4px;
+ }
+.tool-content.modal-success-sub {
+ font-size: 14px;
+ color: var(--tb-text-light);
+ }
+
+ /* ── Responsive ── */
+ @media (max-width: 576px) {
+.tool-content.rechtsform-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.step-heading {
+ font-size: 20px;
+ }
+.tool-content.step-connector {
+ width: 36px;
+ }
+.tool-content.modal-input-group {
+ flex-direction: column;
+ }
+.tool-content.chart-container {
+ height: 220px;
+ }
+ }
+
+ /* ── Print ── */
+ @media print {
+.tool-content.step-wizard,
+.tool-content.nav-buttons,
+.tool-content.cta-group,
+.tool-content.chart-card,
+.tool-content.restart-row {
+ display: none!important;
+ }
+.tool-content.result-card {
+ box-shadow: none;
+ border: 1px solid #ccc;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Startup-Kosten-Rechner Österreich</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Berechne deine Gründungskosten - EPU, GmbH, FlexCo oder GmbH &amp; Co KG</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Startup-Kosten-Rechner</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 760px;">
+
+ <!-- Step Wizard Progress -->
+ <div class="step-wizard">
+ <div class="step-indicators">
+ <div class="step-dot active" id="dot-1">1</div>
+ <div class="step-connector" id="conn-1"></div>
+ <div class="step-dot" id="dot-2">2</div>
+ <div class="step-connector" id="conn-2"></div>
+ <div class="step-dot" id="dot-3">3</div>
+ </div>
+ <div class="step-labels">
+ <div class="step-label active" id="label-1">Rechtsform</div>
+ <div class="step-label" id="label-2">Details</div>
+ <div class="step-label" id="label-3">Ergebnis</div>
+ </div>
+ <div class="progress-bar-track">
+ <div class="progress-bar-fill" id="progressFill"></div>
+ </div>
+ </div>
+
+ <!-- Steps Container -->
+ <div class="steps-container mt-4">
+
+ <!-- STEP 1: Rechtsform -->
+ <section class="step active" id="step-1">
+ <h2 class="step-heading">Welche Rechtsform passt zu dir?</h2>
+ <p class="step-subheading">Wähle die geplante Rechtsform für dein Startup. Du kannst später jederzeit zurück und ändern.</p>
+
+ <div class="rechtsform-grid">
+ <!-- EPU -->
+ <div class="rechtsform-card" data-rf="epu" onclick="selectRechtsform('epu')">
+ <div class="rechtsform-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+ </div>
+ <div class="rechtsform-name">Einzelunternehmen (EPU)</div>
+ <div class="rechtsform-desc">Einfachste Form. Kein Stammkapital. Volle persönliche Haftung.</div>
+ </div>
+
+ <!-- GmbH -->
+ <div class="rechtsform-card" data-rf="gmbh" onclick="selectRechtsform('gmbh')">
+ <div class="rechtsform-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+ </div>
+ <div class="rechtsform-name">GmbH</div>
+ <div class="rechtsform-desc">Klassiker für Startups. Beschränkte Haftung. Stammkapital ab &euro;35.000.</div>
+ </div>
+
+ <!-- FlexCo -->
+ <div class="rechtsform-card" data-rf="flexco" onclick="selectRechtsform('flexco')">
+ <span class="rf-badge">NEU seit 2024</span>
+ <div class="rechtsform-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+ </div>
+ <div class="rechtsform-name">FlexCo</div>
+ <div class="rechtsform-desc">Neue flexible Kapitalgesellschaft. Nur &euro;10.000 Stammkapital. Ideal für Startups.</div>
+ </div>
+
+ <!-- GmbH & Co KG -->
+ <div class="rechtsform-card" data-rf="gmbh_cokg" onclick="selectRechtsform('gmbh_cokg')">
+ <div class="rechtsform-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+ </div>
+ <div class="rechtsform-name">GmbH &amp; Co KG</div>
+ <div class="rechtsform-desc">Kombiniert GmbH-Haftungsschutz mit KG-Steuervorteilen. Komplexer.</div>
+ </div>
+ </div>
+
+ <div class="nav-buttons">
+ <div></div>
+ <button class="btn btn-rounded btn-sb-red btn-medium text-transform-none" id="btn-step1-next" disabled onclick="goToStep(2)">
+ Weiter <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i>
+ </button>
+ </div>
+ </section>
+
+ <!-- STEP 2: Details -->
+ <section class="step" id="step-2">
+ <h2 class="step-heading">Details zu deiner Gründung</h2>
+ <p class="step-subheading">Diese Angaben helfen uns, die Kosten genauer zu schätzen.</p>
+
+ <!-- Anzahl Gründer:innen -->
+ <div class="mb-4">
+ <label class="form-label fw-600">Anzahl Gründer:innen</label>
+ <div class="radio-group">
+ <div class="radio-btn">
+ <input type="radio" name="gruender" id="gruender-1" value="1" checked>
+ <label for="gruender-1">1</label>
+ </div>
+ <div class="radio-btn">
+ <input type="radio" name="gruender" id="gruender-2" value="2">
+ <label for="gruender-2">2</label>
+ </div>
+ <div class="radio-btn">
+ <input type="radio" name="gruender" id="gruender-3" value="3">
+ <label for="gruender-3">3+</label>
+ </div>
+ </div>
+ </div>
+
+ <!-- Branche -->
+ <div class="mb-4">
+ <label class="form-label fw-600" for="branche">Branche</label>
+ <select class="form-select" id="branche">
+ <option value="digital">Digital / IT</option>
+ <option value="handel">Handel</option>
+ <option value="produktion">Produktion</option>
+ <option value="dienstleistung">Dienstleistung</option>
+ <option value="gastronomie">Gastronomie</option>
+ </select>
+ </div>
+
+ <!-- Bundesland -->
+ <div class="mb-4">
+ <label class="form-label fw-600" for="bundesland">Firmensitz Bundesland</label>
+ <select class="form-select" id="bundesland">
+ <option value="burgenland" selected>Burgenland</option>
+ <option value="kaernten">Kärnten</option>
+ <option value="niederoesterreich">Niederösterreich</option>
+ <option value="oberoesterreich">Oberösterreich</option>
+ <option value="salzburg">Salzburg</option>
+ <option value="steiermark">Steiermark</option>
+ <option value="tirol">Tirol</option>
+ <option value="vorarlberg">Vorarlberg</option>
+ <option value="wien">Wien</option>
+ </select>
+ </div>
+
+ <!-- NeuFöG -->
+ <div class="mb-4">
+ <label class="form-label fw-600">Neugründungsförderung (NeuFöG)</label>
+ <div class="toggle-row">
+ <div class="toggle-left">
+ <span class="toggle-label-text">NeuFöG nutzen?</span>
+ <span class="toggle-tooltip">Neugründer:innen können diverse Gebühren sparen (Firmenbuch, Gewerbe, u.a.)</span>
+ </div>
+ <label class="toggle-switch">
+ <input type="checkbox" id="neufoeg" checked>
+ <span class="toggle-slider"></span>
+ </label>
+ </div>
+ </div>
+
+ <div class="nav-buttons">
+ <button class="btn btn-rounded btn-border-color-transparent-dark-gray btn-medium text-transform-none" onclick="goToStep(1)">
+ <i class="fa-solid fa-arrow-left me-1" aria-hidden="true"></i> Zurück
+ </button>
+ <button class="btn btn-rounded btn-sb-red btn-medium text-transform-none" onclick="goToStep(3)">
+ Kosten berechnen <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i>
+ </button>
+ </div>
+ </section>
+
+ <!-- STEP 3: Ergebnis -->
+ <section class="step" id="step-3">
+ <div class="results-wrapper" id="resultsWrapper">
+ <!-- Filled by JS -->
+ </div>
+ </section>
+
+ </div>
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- Email Modal -->
+ <div class="modal-overlay" id="emailModal">
+ <div class="modal-content">
+ <button class="modal-close" onclick="closeModal()" aria-label="Schließen">&times;</button>
+
+ <div id="modalForm">
+ <div class="modal-icon">&#9993;</div>
+ <h3 class="modal-title">Detaillierte Aufstellung erhalten</h3>
+ <p class="modal-desc">Wir senden dir eine übersichtliche Kostenaufstellung als PDF - inklusive Tipps zur Förderung für dein Bundesland.</p>
+ <div class="modal-input-group">
+ <input type="email" class="modal-input" id="emailInput" placeholder="deine@email.at" autocomplete="email">
+ <button class="btn btn-rounded btn-sb-orange btn-medium text-transform-none" onclick="submitEmail()">Template erhalten &rarr;</button>
+ </div>
+ <p class="modal-privacy">Kein Spam. Jederzeit abmeldbar.</p>
+ </div>
+
+ <div class="modal-success" id="modalSuccess">
+ <div class="modal-success-icon">&#10003;</div>
+ <p class="modal-success-text">Danke! Deine Aufstellung ist unterwegs.</p>
+ <p class="modal-success-sub">Bitte prüfe auch deinen Spam-Ordner.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Unterstützung bei der Gründung?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching begleiten wir dich von der Rechtsformwahl bis zur Finanzierung - individuell, unverbindlich und kostenlos.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+
+ <script>
+ /* ══════════════════════════════════════════════
+ DATA MODEL
+ ══════════════════════════════════════════════ */
+ const rechtsformen = {
+ epu: {
+ name: "Einzelunternehmen (EPU)",
+ stammkapital: 0,
+ notar: 0,
+ firmenbuch: 0,
+ gewerbe: 50,
+ steuerberater_einmalig: 300,
+ neufoeg_ersparnis: 50,
+ svs_monatlich: 190,
+ steuerberater_monatlich: 150,
+ firmenbuch_jaehrlich: 0,
+ wko_monatlich: 30,
+ mindest_koest_quartal: 0
+ },
+ gmbh: {
+ name: "GmbH",
+ stammkapital: 17500,
+ notar: 1800,
+ firmenbuch: 500,
+ gewerbe: 50,
+ steuerberater_einmalig: 800,
+ neufoeg_ersparnis: 550,
+ svs_monatlich: 0,
+ steuerberater_monatlich: 250,
+ firmenbuch_jaehrlich: 90,
+ wko_monatlich: 40,
+ mindest_koest_quartal: 500
+ },
+ flexco: {
+ name: "FlexCo",
+ stammkapital: 5000,
+ notar: 1200,
+ firmenbuch: 400,
+ gewerbe: 50,
+ steuerberater_einmalig: 700,
+ neufoeg_ersparnis: 450,
+ svs_monatlich: 0,
+ steuerberater_monatlich: 220,
+ firmenbuch_jaehrlich: 90,
+ wko_monatlich: 40,
+ mindest_koest_quartal: 125
+ },
+ gmbh_cokg: {
+ name: "GmbH & Co KG",
+ stammkapital: 17500,
+ notar: 2500,
+ firmenbuch: 700,
+ gewerbe: 50,
+ steuerberater_einmalig: 1200,
+ neufoeg_ersparnis: 750,
+ svs_monatlich: 190,
+ steuerberater_monatlich: 350,
+ firmenbuch_jaehrlich: 180,
+ wko_monatlich: 50,
+ mindest_koest_quartal: 500
+ }
+ };
+
+ /* ══════════════════════════════════════════════
+ STATE
+ ══════════════════════════════════════════════ */
+ let currentStep = 1;
+ let selectedRechtsform = null;
+ let comparisonChart = null;
+
+ /* ══════════════════════════════════════════════
+ STEP NAVIGATION
+ ══════════════════════════════════════════════ */
+ function goToStep(step) {
+ if (step === 2 &&!selectedRechtsform) return;
+ if (step === 3) calculateAndRender();
+
+ document.querySelectorAll('.tool-content.step').forEach(s => s.classList.remove('active'));
+ document.getElementById('step-' + step).classList.add('active');
+
+ // Update indicators
+ for (let i = 1; i <= 3; i++) {
+ const dot = document.getElementById('dot-' + i);
+ const label = document.getElementById('label-' + i);
+ dot.classList.remove('active', 'completed');
+ label.classList.remove('active');
+
+ if (i < step) {
+ dot.classList.add('completed');
+ dot.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+ } else if (i === step) {
+ dot.classList.add('active');
+ dot.textContent = i;
+ } else {
+ dot.textContent = i;
+ }
+
+ if (i === step) label.classList.add('active');
+ }
+
+ // Connectors
+ document.getElementById('conn-1').classList.toggle('active', step > 1);
+ document.getElementById('conn-2').classList.toggle('active', step > 2);
+
+ // Progress bar
+ const pct = ((step - 1) / 2) * 100;
+ document.getElementById('progressFill').style.width = pct + '%';
+
+ currentStep = step;
+
+ // Scroll to top
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+ }
+
+ /* ══════════════════════════════════════════════
+ RECHTSFORM SELECTION
+ ══════════════════════════════════════════════ */
+ function selectRechtsform(key) {
+ selectedRechtsform = key;
+ document.querySelectorAll('.tool-content.rechtsform-card').forEach(c => c.classList.remove('selected'));
+ document.querySelector('[data-rf="' + key + '"]').classList.add('selected');
+ document.getElementById('btn-step1-next').disabled = false;
+ }
+
+ /* ══════════════════════════════════════════════
+ CALCULATION
+ ══════════════════════════════════════════════ */
+ function getFounderCount() {
+ const checked = document.querySelector('input[name="gruender"]:checked');
+ return checked? parseInt(checked.value): 1;
+ }
+
+ function calcCosts(rfKey) {
+ const rf = rechtsformen[rfKey];
+ const founders = getFounderCount();
+ const neufoeg = document.getElementById('neufoeg').checked;
+ const extra = founders > 1? founders - 1: 0;
+
+ // Einmalige Kosten
+ const stammkapital = rf.stammkapital;
+ const notar = Math.round(rf.notar * (1 + extra * 0.2));
+ const firmenbuch = rf.firmenbuch;
+ const gewerbe = rf.gewerbe;
+ const stb_einmalig = rf.steuerberater_einmalig;
+ const neufoeg_ersparnis = neufoeg? rf.neufoeg_ersparnis: 0;
+
+ const einmalig_brutto = stammkapital + notar + firmenbuch + gewerbe + stb_einmalig;
+ const einmalig_total = einmalig_brutto - neufoeg_ersparnis;
+
+ // Laufende monatliche Kosten
+ const svs = rf.svs_monatlich;
+ const stb_monat = rf.steuerberater_monatlich + (extra * 50);
+ const fb_monat = Math.round((rf.firmenbuch_jaehrlich / 12) * 100) / 100;
+ const wko = rf.wko_monatlich;
+ const koest = Math.round((rf.mindest_koest_quartal / 3) * 100) / 100;
+ const monatlich_total = svs + stb_monat + fb_monat + wko + koest;
+
+ return {
+ name: rf.name,
+ stammkapital,
+ notar,
+ firmenbuch,
+ gewerbe,
+ stb_einmalig,
+ neufoeg_ersparnis,
+ einmalig_brutto,
+ einmalig_total,
+ svs,
+ stb_monat,
+ fb_monat,
+ wko,
+ koest,
+ monatlich_total
+ };
+ }
+
+ /* ══════════════════════════════════════════════
+ RENDER RESULTS
+ ══════════════════════════════════════════════ */
+ function formatEur(val) {
+ return val.toLocaleString('de-AT', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+ }
+
+ function formatEurDecimal(val) {
+ if (val === Math.floor(val)) return formatEur(val);
+ return val.toLocaleString('de-AT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+ }
+
+ function calculateAndRender() {
+ const c = calcCosts(selectedRechtsform);
+ const bundesland = document.getElementById('bundesland');
+ const bundeslandText = bundesland.options[bundesland.selectedIndex].text;
+ const branche = document.getElementById('branche');
+ const brancheText = branche.options[branche.selectedIndex].text;
+ const founders = getFounderCount();
+ const neufoeg = document.getElementById('neufoeg').checked;
+
+ const wrapper = document.getElementById('resultsWrapper');
+
+ let lines = [];
+
+ // Build einmalig lines
+ if (c.stammkapital > 0) {
+ lines.push({ label: 'Stammkapital (Mindesteinzahlung)', value: c.stammkapital });
+ }
+ if (c.notar > 0) {
+ lines.push({ label: 'Notarkosten' + (founders > 1? ' (' + founders + ' Gesellschafter:innen)': ' (Gesellschaftsvertrag)'), value: c.notar });
+ }
+ if (c.firmenbuch > 0) {
+ lines.push({ label: 'Firmenbuchgeb\u00fchr', value: c.firmenbuch });
+ }
+ if (c.gewerbe > 0) {
+ lines.push({ label: 'Gewerbeanmeldung', value: c.gewerbe });
+ }
+ if (c.stb_einmalig > 0) {
+ lines.push({ label: 'Steuerberater (Erstberatung)', value: c.stb_einmalig });
+ }
+
+ let einmaligHTML = lines.map(l =>
+ '<div class="result-line"><span class="result-line-label">' + l.label + '</span><span class="result-line-value" data-count="' + l.value + '">\u20AC' + formatEur(l.value) + '</span></div>'
+ ).join('');
+
+ if (c.neufoeg_ersparnis > 0) {
+ einmaligHTML += '<div class="result-line saving"><span class="result-line-label">NeuF\u00f6G-Ersparnis</span><span class="result-line-value" data-count="-' + c.neufoeg_ersparnis + '">\u2212\u20AC' + formatEur(c.neufoeg_ersparnis) + '</span></div>';
+ }
+
+ // Monthly lines
+ let monatLines = [];
+ if (c.svs > 0) monatLines.push({ label: 'SVS-Mindestbeitr\u00e4ge', value: c.svs });
+ monatLines.push({ label: 'Steuerberater (monatl.)', value: c.stb_monat });
+ if (c.fb_monat > 0) monatLines.push({ label: 'Firmenbuch (j\u00e4hrl. / 12)', value: c.fb_monat, decimal: true });
+ monatLines.push({ label: 'WKO-Mitgliedschaft', value: c.wko });
+ if (c.koest > 0) monatLines.push({ label: 'Mindest-K\u00d6St (Quartal / 3)', value: c.koest, decimal: true });
+
+ let monatHTML = monatLines.map(l =>
+ '<div class="result-line"><span class="result-line-label">' + l.label + '</span><span class="result-line-value" data-count="' + l.value + '">\u20AC' + (l.decimal? formatEurDecimal(l.value): formatEur(l.value)) + '</span></div>'
+ ).join('');
+
+ wrapper.innerHTML = `
+ <div class="result-card">
+ <div class="result-header">
+ <div class="result-header-icon">&#9776;</div>
+ <div class="result-header-text">
+ <h2>Gesch\u00e4tzte Gr\u00fcndungskosten</h2>
+ <p>${c.name} \u2022 ${bundeslandText} \u2022 ${brancheText}</p>
+ </div>
+ </div>
+
+ <div class="result-section">
+ <div class="result-section-title">Einmalige Gr\u00fcndungskosten</div>
+ ${einmaligHTML}
+ <hr class="result-divider">
+ <div class="result-total">
+ <span>Gesamt einmalig</span>
+ <span class="result-total-value" data-count="${c.einmalig_total}" id="totalEinmalig">\u20AC${formatEur(c.einmalig_total)}</span>
+ </div>
+ ${c.stammkapital > 0? '<p class="result-note">Stammkapital verbleibt im Unternehmen und ist keine \"Ausgabe\" im engeren Sinn.</p>': ''}
+ </div>
+
+ <div class="result-section">
+ <div class="result-section-title">Laufende monatliche Kosten</div>
+ ${monatHTML}
+ <hr class="result-divider">
+ <div class="result-total">
+ <span>Monatlich ca.</span>
+ <span class="result-total-value" data-count="${c.monatlich_total}" id="totalMonatlich">\u20AC${formatEurDecimal(c.monatlich_total)}</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Comparison Chart -->
+ <div class="chart-card">
+ <h3 class="chart-title">Rechtsformen im Vergleich</h3>
+ <p class="chart-subtitle">Einmalige Gr\u00fcndungskosten aller vier Rechtsformen auf einen Blick</p>
+ <div class="chart-container">
+ <canvas id="compChart"></canvas>
+ </div>
+ </div>
+
+ <!-- CTAs -->
+ <div class="cta-group">
+ <button class="btn btn-rounded btn-sb-orange btn-large w-100 text-transform-none fw-700" onclick="openModal()">
+ &#9993;&#65039; Detaillierte Aufstellung per Email erhalten
+ </button>
+ <a href="https://www.startupburgenland.at" target="_blank" rel="noopener" class="btn btn-rounded btn-sb-red btn-large w-100 text-transform-none fw-700">
+ &#128197; Termin mit StartUp Burgenland buchen
+ </a>
+ </div>
+
+ <div class="restart-row">
+ <button class="btn-restart" onclick="restart()">&#8634; Neue Berechnung starten</button>
+ </div>
+ `;
+
+ // Count-up animation
+ animateCountUp();
+
+ // Render chart
+ renderChart();
+ }
+
+ /* ══════════════════════════════════════════════
+ COUNT-UP ANIMATION
+ ══════════════════════════════════════════════ */
+ function animateCountUp() {
+ const elements = document.querySelectorAll('[data-count]');
+ elements.forEach(el => {
+ const target = parseFloat(el.getAttribute('data-count'));
+ const isNegative = target < 0;
+ const absTarget = Math.abs(target);
+ const hasDecimal = absTarget!== Math.floor(absTarget);
+ const duration = 800;
+ const start = performance.now();
+
+ function update(now) {
+ const elapsed = now - start;
+ const progress = Math.min(elapsed / duration, 1);
+ // Ease out cubic
+ const eased = 1 - Math.pow(1 - progress, 3);
+ const current = absTarget * eased;
+
+ if (isNegative) {
+ el.textContent = '\u2212\u20AC' + (hasDecimal? formatEurDecimal(current): formatEur(Math.round(current)));
+ } else {
+ el.textContent = '\u20AC' + (hasDecimal? formatEurDecimal(current): formatEur(Math.round(current)));
+ }
+
+ if (progress < 1) {
+ requestAnimationFrame(update);
+ } else {
+ // Final value
+ if (isNegative) {
+ el.textContent = '\u2212\u20AC' + (hasDecimal? formatEurDecimal(absTarget): formatEur(absTarget));
+ } else {
+ el.textContent = '\u20AC' + (hasDecimal? formatEurDecimal(absTarget): formatEur(absTarget));
+ }
+ }
+ }
+
+ requestAnimationFrame(update);
+ });
+ }
+
+ /* ══════════════════════════════════════════════
+ CHART
+ ══════════════════════════════════════════════ */
+ function renderChart() {
+ const canvas = document.getElementById('compChart');
+ if (!canvas) return;
+
+ if (comparisonChart) {
+ comparisonChart.destroy();
+ comparisonChart = null;
+ }
+
+ const keys = ['epu', 'gmbh', 'flexco', 'gmbh_cokg'];
+ const labels = keys.map(k => {
+ if (k === 'epu') return 'EPU';
+ if (k === 'gmbh') return 'GmbH';
+ if (k === 'flexco') return 'FlexCo';
+ return 'GmbH & Co KG';
+ });
+
+ const einmaligData = keys.map(k => calcCosts(k).einmalig_total);
+ const monatlichData = keys.map(k => Math.round(calcCosts(k).monatlich_total));
+
+ const highlightColors = keys.map(k =>
+ k === selectedRechtsform? 'rgba(230, 57, 70, 0.95)': 'rgba(230, 57, 70, 0.35)'
+ );
+
+ const highlightColors2 = keys.map(k =>
+ k === selectedRechtsform? 'rgba(255, 140, 0, 0.95)': 'rgba(255, 140, 0, 0.4)'
+ );
+
+ comparisonChart = new Chart(canvas, {
+ type: 'bar',
+ data: {
+ labels: labels,
+ datasets: [
+ {
+ label: 'Einmalig',
+ data: einmaligData,
+ backgroundColor: highlightColors,
+ borderRadius: 6,
+ borderSkipped: false
+ },
+ {
+ label: 'Monatlich',
+ data: monatlichData,
+ backgroundColor: highlightColors2,
+ borderRadius: 6,
+ borderSkipped: false
+ }
+ ]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ interaction: {
+ intersect: false,
+ mode: 'index'
+ },
+ plugins: {
+ legend: {
+ position: 'bottom',
+ labels: {
+ font: { size: 12, weight: '600' },
+ padding: 16,
+ usePointStyle: true,
+ pointStyleWidth: 12
+ }
+ },
+ tooltip: {
+ backgroundColor: '#E63946',
+ titleFont: { weight: '600' },
+ padding: 10,
+ cornerRadius: 8,
+ callbacks: {
+ label: function(ctx) {
+ return ctx.dataset.label + ': \u20AC' + ctx.parsed.y.toLocaleString('de-AT');
+ }
+ }
+ }
+ },
+ scales: {
+ x: {
+ grid: { display: false },
+ ticks: {
+ font: { size: 11, weight: '600' },
+ color: '#6B7280'
+ }
+ },
+ y: {
+ beginAtZero: true,
+ grid: { color: 'rgba(0,0,0,0.04)' },
+ ticks: {
+ font: { size: 11 },
+ color: '#6B7280',
+ callback: function(value) {
+ return '\u20AC' + value.toLocaleString('de-AT');
+ }
+ }
+ }
+ }
+ }
+ });
+ }
+
+ /* ══════════════════════════════════════════════
+ MODAL
+ ══════════════════════════════════════════════ */
+ function openModal() {
+ document.getElementById('emailModal').classList.add('visible');
+ document.getElementById('modalForm').style.display = 'block';
+ document.getElementById('modalSuccess').classList.remove('visible');
+ setTimeout(() => {
+ document.getElementById('emailInput').focus();
+ }, 300);
+ }
+
+ function closeModal() {
+ document.getElementById('emailModal').classList.remove('visible');
+ }
+
+ function submitEmail() {
+ const email = document.getElementById('emailInput').value.trim();
+ if (!email ||!email.includes('@') ||!email.includes('.')) {
+ document.getElementById('emailInput').style.borderColor = '#DC3545';
+ document.getElementById('emailInput').focus();
+ return;
+ }
+ document.getElementById('modalForm').style.display = 'none';
+ document.getElementById('modalSuccess').classList.add('visible');
+ // In production: send email to backend
+ setTimeout(closeModal, 2500);
+ }
+
+ // Close modal on overlay click
+ document.getElementById('emailModal').addEventListener('click', function(e) {
+ if (e.target === this) closeModal();
+ });
+
+ // Close modal on Escape
+ document.addEventListener('keydown', function(e) {
+ if (e.key === 'Escape') closeModal();
+ });
+
+ // Submit on Enter in email field
+ document.addEventListener('keydown', function(e) {
+ if (e.key === 'Enter' && document.getElementById('emailModal').classList.contains('visible')) {
+ submitEmail();
+ }
+ });
+
+ /* ══════════════════════════════════════════════
+ RESTART
+ ══════════════════════════════════════════════ */
+ function restart() {
+ selectedRechtsform = null;
+ document.querySelectorAll('.tool-content.rechtsform-card').forEach(c => c.classList.remove('selected'));
+ document.getElementById('btn-step1-next').disabled = true;
+ document.querySelector('input[name="gruender"][value="1"]').checked = true;
+ document.getElementById('branche').selectedIndex = 0;
+ document.getElementById('bundesland').value = 'burgenland';
+ document.getElementById('neufoeg').checked = true;
+ if (comparisonChart) {
+ comparisonChart.destroy();
+ comparisonChart = null;
+ }
+ goToStep(1);
+ }
+
+ /* ══════════════════════════════════════════════
+ INIT
+ ══════════════════════════════════════════════ */
+ // Set initial progress
+ document.getElementById('progressFill').style.width = '0%';
+ </script>
+
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

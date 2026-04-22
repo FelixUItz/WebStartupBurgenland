@@ -1,0 +1,1007 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Investor Types Cheat Sheet | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Alle Investorentypen auf einen Blick: Von Friends &amp; Family bis PE/Growth Capital. Ticket-Größen, Phasen, Vor- und Nachteile für österreichische Startups.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/investor-types/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/investor-types/">
+ <meta property="og:title" content="Investor Types Cheat Sheet | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Alle Investorentypen auf einen Blick: Von Friends &amp; Family bis PE/Growth Capital. Ticket-Größen, Phasen, Vor- und Nachteile.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Investor Types Cheat Sheet | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Investor Types Cheat Sheet */
+ /* ========== DESIGN TOKENS ========== */
+.tool-content {
+ --primary: #E63946;
+ --primary-light: #FF8C00;
+ --accent: #FF8C00;
+ --success: #28A745;
+ --danger: #DC3545;
+ --text-dark: #1C1D1F;
+ --text-light: #6B7280;
+ --bg-light: #F8FAFC;
+ --bg-white: #FFFFFF;
+ --border: #E2E8F0;
+ --phase-preseed: #FF8C00;
+ --phase-preseed-bg: #FEF2F2;
+ --phase-preseed-border: #FEE2E2;
+ --phase-seed: #28A745;
+ --phase-seed-bg: #DCFCE7;
+ --phase-seed-border: #A7F3D0;
+ --phase-series-a: #FF8C00;
+ --phase-series-a-bg: #FFF7ED;
+ --phase-series-a-border: #FDBA74;
+ --phase-growth: #DC3545;
+ --phase-growth-bg: #FEE2E2;
+ --phase-growth-border: #FCA5A5;
+ --phase-series-b: #E63946;
+ --phase-series-b-bg: #F3F4F6;
+ --phase-series-b-border: #D1D5DB;
+ }
+
+ /* ========== PAGE STRUCTURE ========== */
+.tool-content.page {
+ width: 210mm;
+ min-height: 297mm;
+ margin: 0 auto;
+ padding: 12mm 14mm 10mm 14mm;
+ background: var(--bg-white);
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ }
+
+ /* ========== HEADER ========== */
+.tool-content.cheat-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 8px;
+ border-bottom: 3px solid var(--primary);
+ margin-bottom: 10px;
+ }
+
+.tool-content.header-left {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+
+.tool-content.logo-mark {
+ width: 34px;
+ height: 34px;
+ background: var(--primary);
+ border-radius: 7px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-weight: 700;
+ font-size: 18px;
+ letter-spacing: -0.5px;
+ flex-shrink: 0;
+ }
+
+.tool-content.header-text h2 {
+ font-size: 22px;
+ font-weight: 800;
+ color: var(--primary);
+ line-height: 1.15;
+ letter-spacing: -0.3px;
+ margin: 0;
+ }
+
+.tool-content.header-text.subtitle {
+ font-size: 13.5px;
+ color: var(--text-light);
+ font-weight: 500;
+ }
+
+.tool-content.header-badge {
+ background: var(--accent);
+ color: #fff;
+ font-size: 12.5px;
+ font-weight: 700;
+ padding: 4px 10px;
+ border-radius: 4px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ white-space: nowrap;
+ }
+
+ /* ========== PHASE BAR ========== */
+.tool-content.phase-bar {
+ display: flex;
+ align-items: stretch;
+ margin-bottom: 10px;
+ border-radius: 8px;
+ overflow: hidden;
+ border: 1px solid var(--border);
+ }
+
+.tool-content.phase-step {
+ flex: 1;
+ text-align: center;
+ padding: 5px 4px;
+ color: white;
+ font-weight: 700;
+ font-size: 13px;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1px;
+ }
+
+.tool-content.phase-step.phase-label {
+ font-size: 11px;
+ font-weight: 500;
+ opacity: 0.9;
+ }
+
+.tool-content.phase-step::after {
+ content: '';
+ position: absolute;
+ right: -8px;
+ top: 50%;
+ transform: translateY(-50%);
+ width: 0;
+ height: 0;
+ border-left: 8px solid;
+ border-top: 16px solid transparent;
+ border-bottom: 16px solid transparent;
+ z-index: 1;
+ }
+
+.tool-content.phase-step:last-child::after {
+ display: none;
+ }
+
+.tool-content.phase-preseed { background: var(--phase-preseed); }
+.tool-content.phase-preseed::after { border-left-color: var(--phase-preseed); }
+.tool-content.phase-seed { background: var(--phase-seed); }
+.tool-content.phase-seed::after { border-left-color: var(--phase-seed); }
+.tool-content.phase-series-a { background: var(--phase-series-a); color: var(--text-dark); }
+.tool-content.phase-series-a::after { border-left-color: var(--phase-series-a); }
+.tool-content.phase-series-a.phase-label { opacity: 0.75; }
+.tool-content.phase-series-b { background: var(--phase-series-b); }
+.tool-content.phase-series-b::after { border-left-color: var(--phase-series-b); }
+.tool-content.phase-growth { background: var(--phase-growth); }
+
+ /* ========== INVESTOR CARDS GRID ========== */
+.tool-content.cards-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 8px;
+ flex: 1;
+ }
+
+.tool-content.investor-card {
+ background: var(--bg-white);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+ }
+
+.tool-content.card-header-inv {
+ padding: 6px 8px;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ color: white;
+ font-weight: 700;
+ font-size: 13.5px;
+ letter-spacing: -0.2px;
+ }
+
+.tool-content.card-header-inv.card-icon {
+ font-size: 17px;
+ flex-shrink: 0;
+ line-height: 1;
+ }
+
+.tool-content.card-header-inv.card-title {
+ line-height: 1.2;
+ }
+
+ /* Card header colors based on typical earliest phase */
+.tool-content.card-ff.card-header-inv { background: var(--phase-preseed); }
+.tool-content.card-angel.card-header-inv { background: var(--phase-preseed); }
+.tool-content.card-grants.card-header-inv { background: linear-gradient(135deg, var(--phase-preseed), var(--phase-seed)); }
+.tool-content.card-crowd.card-header-inv { background: var(--phase-seed); }
+.tool-content.card-vc.card-header-inv { background: linear-gradient(135deg, var(--phase-seed), var(--phase-series-a)); }
+.tool-content.card-family-office.card-header-inv { background: linear-gradient(135deg, var(--phase-seed), var(--phase-series-a)); }
+.tool-content.card-cvc.card-header-inv { background: var(--phase-series-a); color: var(--text-dark); }
+.tool-content.card-eif.card-header-inv { background: var(--phase-series-b); }
+.tool-content.card-pe.card-header-inv { background: var(--phase-growth); }
+
+.tool-content.card-body-inv {
+ padding: 6px 8px;
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+ }
+
+ /* Ticket & Phase Row */
+.tool-content.card-meta {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 4px;
+ flex-wrap: wrap;
+ }
+
+.tool-content.ticket-size {
+ font-size: 15px;
+ font-weight: 800;
+ color: var(--primary);
+ letter-spacing: -0.3px;
+ }
+
+.tool-content.phase-badges {
+ display: flex;
+ gap: 3px;
+ flex-wrap: wrap;
+ }
+
+.tool-content.phase-badge {
+ display: inline-block;
+ padding: 1px 6px;
+ border-radius: 3px;
+ font-size: 10.5px;
+ font-weight: 600;
+ color: white;
+ white-space: nowrap;
+ }
+
+.tool-content.badge-preseed { background: var(--phase-preseed); }
+.tool-content.badge-seed { background: var(--phase-seed); }
+.tool-content.badge-series-a { background: var(--phase-series-a); color: var(--text-dark); }
+.tool-content.badge-series-b { background: var(--phase-series-b); }
+.tool-content.badge-growth { background: var(--phase-growth); }
+
+ /* Description */
+.tool-content.card-desc {
+ font-size: 11.5px;
+ color: var(--text-dark);
+ line-height: 1.3;
+ }
+
+ /* Examples */
+.tool-content.card-examples {
+ background: var(--bg-light);
+ border-radius: 4px;
+ padding: 4px 6px;
+ font-size: 11px;
+ line-height: 1.3;
+ }
+
+.tool-content.card-examples.examples-label {
+ font-weight: 700;
+ color: var(--primary);
+ font-size: 10.5px;
+ text-transform: uppercase;
+ letter-spacing: 0.3px;
+ }
+
+.tool-content.card-examples.examples-list {
+ color: var(--text-dark);
+ }
+
+ /* Pros & Cons */
+.tool-content.card-proscons {
+ display: flex;
+ gap: 6px;
+ margin-top: auto;
+ font-size: 10.5px;
+ line-height: 1.25;
+ }
+
+.tool-content.proscons-col {
+ flex: 1;
+ }
+
+.tool-content.pro-item,.tool-content.con-item {
+ display: flex;
+ align-items: baseline;
+ gap: 3px;
+ }
+
+.tool-content.pro-icon {
+ color: var(--success);
+ font-weight: 700;
+ flex-shrink: 0;
+ font-size: 11px;
+ }
+
+.tool-content.con-icon {
+ color: var(--danger);
+ font-weight: 700;
+ flex-shrink: 0;
+ font-size: 11px;
+ }
+
+.tool-content.pro-item span,.tool-content.con-item span {
+ color: var(--text-light);
+ }
+
+ /* ========== BOTTOM INFO BAR ========== */
+.tool-content.info-bar {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 8px;
+ margin-top: 10px;
+ }
+
+.tool-content.info-box {
+ background: var(--bg-light);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 5px 8px;
+ font-size: 11.5px;
+ line-height: 1.3;
+ }
+
+.tool-content.info-box strong {
+ color: var(--primary);
+ display: block;
+ font-size: 12.5px;
+ margin-bottom: 1px;
+ }
+
+ /* ========== CHEAT SHEET FOOTER ========== */
+.tool-content.cheat-footer {
+ padding-top: 7px;
+ border-top: 2px solid var(--primary);
+ margin-top: 8px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 11px;
+ color: var(--text-light);
+ }
+
+.tool-content.footer-left {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ }
+
+.tool-content.footer-logo-mark {
+ width: 16px;
+ height: 16px;
+ background: var(--primary);
+ border-radius: 3px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-weight: 700;
+ font-size: 8.5px;
+ }
+
+ /* ========== PRINT STYLES ========== */
+ @media print {
+.tool-content.page {
+ width: 210mm;
+ height: 297mm;
+ min-height: 297mm;
+ max-height: 297mm;
+ margin: 0;
+ padding: 12mm 14mm 10mm 14mm;
+ overflow: hidden;
+ }
+
+ @page {
+ size: A4 portrait;
+ margin: 0;
+ }
+
+.tool-content.investor-card,.tool-content.card-header-inv,.tool-content.phase-badge,.tool-content.phase-step,
+.tool-content.info-box,.tool-content.logo-mark,.tool-content.footer-logo-mark,.tool-content.header-badge,
+.tool-content.card-examples {
+ -webkit-print-color-adjust: exact!important;
+ print-color-adjust: exact!important;
+ }
+
+.tool-content.investor-card {
+ box-shadow: none;
+ }
+ }
+
+ /* ========== SCREEN-ONLY STYLES ========== */
+ @media screen {
+.tool-content.page {
+ box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+ }
+ }
+
+ /* ========== RESPONSIVE (SCREEN) ========== */
+ @media screen and (max-width: 800px) {
+.tool-content.page {
+ width: 100%;
+ min-height: auto;
+ padding: 16px;
+ }
+
+.tool-content.cards-grid {
+ grid-template-columns: 1fr;
+ gap: 12px;
+ }
+
+.tool-content.phase-bar {
+ flex-wrap: wrap;
+ }
+
+.tool-content.phase-step {
+ min-width: 60px;
+ }
+
+.tool-content.cheat-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 6px;
+ }
+
+.tool-content.info-bar {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Investor Types Cheat Sheet</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Europa &amp; Österreich - Alle Investorentypen auf einen Blick</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Investor Types Cheat Sheet</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <div class="page">
+
+ <!-- ==================== HEADER ==================== -->
+ <div class="cheat-header">
+ <div class="header-left">
+ <div class="logo-mark">SB</div>
+ <div class="header-text">
+ <h2>Investor Types Cheat Sheet - Europa &amp; Österreich</h2>
+ <div class="subtitle">StartUp Burgenland &middot; Alle Investorentypen auf einen Blick</div>
+ </div>
+ </div>
+ <div class="header-badge">2026</div>
+ </div>
+
+ <!-- ==================== PHASE BAR ==================== -->
+ <div class="phase-bar">
+ <div class="phase-step phase-preseed">
+ Pre-Seed
+ <span class="phase-label">Idee &amp; Team</span>
+ </div>
+ <div class="phase-step phase-seed">
+ Seed
+ <span class="phase-label">Prototyp &amp; PMF</span>
+ </div>
+ <div class="phase-step phase-series-a">
+ Series A
+ <span class="phase-label">Markteintritt</span>
+ </div>
+ <div class="phase-step phase-series-b">
+ Series B
+ <span class="phase-label">Skalierung</span>
+ </div>
+ <div class="phase-step phase-growth">
+ Growth
+ <span class="phase-label">Expansion</span>
+ </div>
+ </div>
+
+ <!-- ==================== INVESTOR CARDS ==================== -->
+ <div class="cards-grid">
+
+ <!-- 1. Friends & Family -->
+ <div class="investor-card card-ff">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F46A;</span>
+ <span class="card-title">Friends &amp; Family</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;5K - &euro;50K</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-preseed">Pre-Seed</span>
+ </div>
+ </div>
+ <div class="card-desc">Pers&ouml;nliches Netzwerk, keine formellen Strukturen. Oft erste Finanzierung, bevor professionelle Investoren einsteigen.</div>
+ <div class="card-examples">
+ <span class="examples-label">Merkmale</span><br>
+ <span class="examples-list">Kein formeller Prozess, schnelle Entscheidung, emotionale Basis</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Schnell verf&uuml;gbar</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Kein Pitch n&ouml;tig</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Beziehungsrisiko</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Kleine Tickets</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 2. Business Angels -->
+ <div class="investor-card card-angel">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F47C;</span>
+ <span class="card-title">Business Angels</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;10K - &euro;250K</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-preseed">Pre-Seed</span>
+ <span class="phase-badge badge-seed">Seed</span>
+ </div>
+ </div>
+ <div class="card-desc">Erfahrene Unternehmer:innen, die Kapital plus Know-how und Netzwerk einbringen. Oft erste professionelle Investoren.</div>
+ <div class="card-examples">
+ <span class="examples-label">AT-Beispiele</span><br>
+ <span class="examples-list">AAIA, i2 Business Angels, primeCROWD, Conda Business Angels</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Smart Money</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Mentoring</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Begrenzte Tickets</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Wenig Follow-on</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 3. aws/FFG Grants -->
+ <div class="investor-card card-grants">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F3DB;</span>
+ <span class="card-title">aws / FFG Grants</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;50K - &euro;1M</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-preseed">Pre-Seed</span>
+ <span class="phase-badge badge-series-a">Series A</span>
+ </div>
+ </div>
+ <div class="card-desc">&Ouml;ffentliche F&ouml;rderungen: Zusch&uuml;sse, bedingt r&uuml;ckzahlbare Darlehen, Equity. Kein Kontrollverlust bei Zusch&uuml;ssen.</div>
+ <div class="card-examples">
+ <span class="examples-label">Programme</span><br>
+ <span class="examples-list">aws Preseed, aws Seedfinancing, FFG Basisprogramm, aws Gr&uuml;ndungsfonds</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Kein/wenig Equity</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Signal an Markt</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Langer Prozess</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>B&uuml;rokratie</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 4. Crowdfunding -->
+ <div class="investor-card card-crowd">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F465;</span>
+ <span class="card-title">Crowdfunding</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;50K - &euro;1M</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-seed">Seed</span>
+ <span class="phase-badge badge-growth">Growth</span>
+ </div>
+ </div>
+ <div class="card-desc">Viele Kleinanleger investieren via Plattform. Equity-based oder Lending-based. Gleichzeitig Marketing-Effekt.</div>
+ <div class="card-examples">
+ <span class="examples-label">AT-Plattformen</span><br>
+ <span class="examples-list">Conda, Green Rocket, Finnest, Rockets.at</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Marketing-Effekt</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Community</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Viel Aufwand</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Reporting-Pflicht</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 5. Venture Capital -->
+ <div class="investor-card card-vc">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F680;</span>
+ <span class="card-title">Venture Capital (VC)</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;500K - &euro;10M+</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-seed">Seed</span>
+ <span class="phase-badge badge-series-b">Series B+</span>
+ </div>
+ </div>
+ <div class="card-desc">Professionelle Fonds mit institutionellem Kapital. Erwarten hohes Wachstum und Exit innerhalb von 5-8 Jahren.</div>
+ <div class="card-examples">
+ <span class="examples-label">AT-VCs</span><br>
+ <span class="examples-list">Speedinvest, Calm/Storm, IST Cube, Push Ventures, 3VC, Apex Ventures, Elevator Ventures</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Gro&szlig;e Tickets</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Follow-on m&ouml;glich</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Equity-Abgabe</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Exit-Druck</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 6. Family Offices -->
+ <div class="investor-card card-family-office">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F3E6;</span>
+ <span class="card-title">Family Offices</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;250K - &euro;5M</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-seed">Seed</span>
+ <span class="phase-badge badge-growth">Growth</span>
+ </div>
+ </div>
+ <div class="card-desc">Verm&ouml;gensverwaltung wohlhabender Familien. Diskret, schwer identifizierbar, oft &uuml;ber Intermedi&auml;re erreichbar.</div>
+ <div class="card-examples">
+ <span class="examples-label">Zugang</span><br>
+ <span class="examples-list">&Uuml;ber Netzwerk, Anw&auml;lte, Privatbanken, Verm&ouml;gensberater</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Patient Capital</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Flexibel</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Schwer zu finden</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Intransparent</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 7. Corporate VC -->
+ <div class="investor-card card-cvc">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F3ED;</span>
+ <span class="card-title">Corporate VC (CVC)</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;500K - &euro;20M</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-series-a">Series A+</span>
+ </div>
+ </div>
+ <div class="card-desc">Venture-Arme gro&szlig;er Konzerne. Neben Kapital auch strategischer Marktzugang, Pilotprojekte und Vertriebskan&auml;le.</div>
+ <div class="card-examples">
+ <span class="examples-label">AT-CVCs</span><br>
+ <span class="examples-list">Elevator Ventures (RBI), VERBUND X, OMV Petrom, A1 Telekom Austria</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Marktzugang</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Pilotprojekte</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Strategische Ziele</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Langsame Prozesse</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 8. EIF/EU-Fonds -->
+ <div class="investor-card card-eif">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F1EA;&#x1F1FA;</span>
+ <span class="card-title">EIF / EU-Fonds</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;1M - &euro;25M</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-series-a">Series A+</span>
+ </div>
+ </div>
+ <div class="card-desc">Europ&auml;ische Institutionen f&ouml;rdern Innovation &uuml;ber Fonds-Beteiligungen und direkte Grants f&uuml;r Wachstumsunternehmen.</div>
+ <div class="card-examples">
+ <span class="examples-label">Programme</span><br>
+ <span class="examples-list">EIF, Horizon Europe EIC Accelerator, EIT Programs</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Sehr gro&szlig;e Tickets</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>G&uuml;tesignal</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Hohe Anforderungen</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Langer Vorlauf</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 9. PE / Growth Capital -->
+ <div class="investor-card card-pe">
+ <div class="card-header-inv">
+ <span class="card-icon">&#x1F4C8;</span>
+ <span class="card-title">PE / Growth Capital</span>
+ </div>
+ <div class="card-body-inv">
+ <div class="card-meta">
+ <span class="ticket-size">&euro;10M+</span>
+ <div class="phase-badges">
+ <span class="phase-badge badge-growth">Growth</span>
+ </div>
+ </div>
+ <div class="card-desc">Private Equity f&uuml;r sp&auml;te Phasen. Nicht typisch f&uuml;r &ouml;sterreichische Fr&uuml;hphasen, aber relevant f&uuml;r Scale-ups mit Traktion.</div>
+ <div class="card-examples">
+ <span class="examples-label">Merkmale</span><br>
+ <span class="examples-list">Profitabilit&auml;t erwartet, Mehrheitsbeteiligung m&ouml;glich, internationale Player</span>
+ </div>
+ <div class="card-proscons">
+ <div class="proscons-col">
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Massive Tickets</span></div>
+ <div class="pro-item"><span class="pro-icon">+</span> <span>Operational Support</span></div>
+ </div>
+ <div class="proscons-col">
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Kontrollverlust</span></div>
+ <div class="con-item"><span class="con-icon">&minus;</span> <span>Hohe Erwartungen</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ </div><!-- /.cards-grid -->
+
+ <!-- ==================== INFO BAR ==================== -->
+ <div class="info-bar">
+ <div class="info-box">
+ <strong>&#x1F4A1; Typischer Finanzierungspfad Österreich</strong>
+ F&amp;F &rarr; aws Preseed + SBB Phase 1 &rarr; Business Angels &rarr; aws Seedfinancing &rarr; VC Seed &rarr; Series A
+ </div>
+ <div class="info-box">
+ <strong>&#x2705; F&ouml;rdermix ist Standard</strong>
+ In Österreich kombinieren die meisten Startups &ouml;ffentliche F&ouml;rderungen mit privatem Kapital - das ist erw&uuml;nscht und kein Widerspruch.
+ </div>
+ <div class="info-box">
+ <strong>&#x1F4DE; Erstgespr&auml;ch bei SBB</strong>
+ Wir helfen bei der richtigen Investoren-Strategie: startupburgenland.at - kostenlos und unverbindlich.
+ </div>
+ </div>
+
+ <!-- ==================== CHEAT SHEET FOOTER ==================== -->
+ <div class="cheat-footer">
+ <div class="footer-left">
+ <div class="footer-logo-mark">SB</div>
+ <span>Stand: Februar 2026 &nbsp;|&nbsp; StartUp Burgenland &nbsp;|&nbsp; startupburgenland.at</span>
+ </div>
+ <span>Keine Anlageberatung. Alle Angaben ohne Gew&auml;hr.</span>
+ </div>
+
+ </div><!-- /.page -->
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Welche Investoren passen zu deinem Startup?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching entwickeln wir gemeinsam deine Investoren-Strategie und finden die richtige Finanzierungsmix f&uuml;r deine Phase.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespr&auml;ch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

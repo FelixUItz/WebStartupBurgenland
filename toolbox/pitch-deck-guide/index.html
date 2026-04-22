@@ -1,0 +1,1369 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Pitch Deck Guide | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Der komplette Leitfaden für österreichische Startups: 12 Slides nach YC/Sequoia-Standard, Slide für Slide mit Coaching-Tipps aus über 40 begleiteten Startups.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/pitch-deck-guide/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/pitch-deck-guide/">
+ <meta property="og:title" content="Pitch Deck Guide | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Der komplette Leitfaden für österreichische Startups: 12 Slides nach YC/Sequoia-Standard, Slide für Slide mit Coaching-Tipps.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Pitch Deck Guide | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Pitch Deck Guide */
+
+ /* Sidebar Navigation */
+.tool-content.deck-sidebar {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 12px;
+ padding: 20px;
+ position: sticky;
+ top: 100px;
+ }
+.tool-content.deck-sidebar-title {
+ font-size: 10px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1.2px;
+ color: #6B7280;
+ margin-bottom: 12px;
+ }
+.tool-content.deck-sidebar nav a {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ padding: 6px 10px;
+ text-decoration: none;
+ color: #1C1D1F;
+ font-size: 13px;
+ font-weight: 500;
+ transition: all 0.2s;
+ border-left: 3px solid transparent;
+ border-radius: 0 6px 6px 0;
+ }
+.tool-content.deck-sidebar nav a:hover {
+ background: #F8FAFC;
+ color: #E63946;
+ border-left-color: #FF8C00;
+ }
+.tool-content.deck-sidebar nav a.nav-num {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 26px;
+ height: 26px;
+ background: #F8FAFC;
+ border-radius: 6px;
+ font-size: 11px;
+ font-weight: 700;
+ color: #E63946;
+ flex-shrink: 0;
+ }
+.tool-content.deck-sidebar nav a.nav-section {
+ margin-top: 14px;
+ color: #6B7280;
+ font-size: 10px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-weight: 700;
+ pointer-events: none;
+ }
+.tool-content.deck-sidebar nav a.nav-section.nav-num {
+ display: none;
+ }
+
+ /* Intro Section */
+.tool-content.deck-intro {
+ background: #fff;
+ border-radius: 12px;
+ padding: 28px;
+ margin-bottom: 28px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.deck-intro h2 {
+ font-size: 22px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 12px;
+ }
+.tool-content.deck-intro p {
+ font-size: 15px;
+ line-height: 1.7;
+ margin-bottom: 12px;
+ }
+.tool-content.intro-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 14px;
+ margin-top: 18px;
+ }
+.tool-content.intro-card {
+ background: #F8FAFC;
+ border-radius: 8px;
+ padding: 16px;
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.intro-card h4 {
+ font-size: 13px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 6px;
+ }
+.tool-content.intro-card p {
+ font-size: 13px;
+ color: #6B7280;
+ margin-bottom: 0;
+ }
+.tool-content.key-rule {
+ background: linear-gradient(135deg, #E63946 0%, #C62833 100%);
+ color: white;
+ border-radius: 8px;
+ padding: 18px;
+ margin-top: 18px;
+ text-align: center;
+ }
+.tool-content.key-rule p {
+ color: rgba(255,255,255,0.95);
+ font-size: 16px;
+ font-weight: 600;
+ margin-bottom: 0;
+ }
+.tool-content.key-rule p em {
+ color: #FF8C00;
+ font-style: normal;
+ }
+
+ /* Slide Card */
+.tool-content.slide-card {
+ background: #fff;
+ border-radius: 12px;
+ margin-bottom: 16px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ overflow: hidden;
+ transition: box-shadow 0.2s;
+ }
+.tool-content.slide-card:hover {
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ }
+.tool-content.slide-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 16px 20px;
+ cursor: pointer;
+ user-select: none;
+ transition: background 0.15s;
+ }
+.tool-content.slide-header:hover {
+ background: #F8FAFC;
+ }
+.tool-content.slide-header-left {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+.tool-content.slide-num {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 42px;
+ height: 42px;
+ background: #E63946;
+ color: white;
+ border-radius: 10px;
+ font-size: 15px;
+ font-weight: 800;
+ flex-shrink: 0;
+ }
+.tool-content.slide-title-group h3 {
+ font-size: 16px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin: 0;
+ }
+.tool-content.slide-time {
+ font-size: 12px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+.tool-content.slide-toggle {
+ width: 30px;
+ height: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: #F8FAFC;
+ border-radius: 6px;
+ transition: transform 0.3s;
+ flex-shrink: 0;
+ }
+.tool-content.slide-toggle svg {
+ width: 16px;
+ height: 16px;
+ color: #6B7280;
+ }
+.tool-content.slide-card.open.slide-toggle {
+ transform: rotate(180deg);
+ }
+.tool-content.slide-body {
+ display: none;
+ padding: 0 20px 20px;
+ }
+.tool-content.slide-card.open.slide-body {
+ display: block;
+ }
+
+ /* Coach Notes */
+.tool-content.coach-notes {
+ background: linear-gradient(135deg, #FFF7ED 0%, #FFF7ED 100%);
+ border-left: 4px solid #FF8C00;
+ border-radius: 0 8px 8px 0;
+ padding: 16px 18px;
+ margin-bottom: 16px;
+ }
+.tool-content.coach-notes-label {
+ font-size: 11px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.8px;
+ color: #FF8C00;
+ margin-bottom: 6px;
+ }
+.tool-content.coach-notes p {
+ color: #1C1D1F;
+ font-size: 14px;
+ font-style: italic;
+ margin-bottom: 0;
+ line-height: 1.7;
+ }
+
+ /* Do / Don't Grid */
+.tool-content.do-dont-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 12px;
+ margin-bottom: 16px;
+ }
+.tool-content.do-list,
+.tool-content.dont-list {
+ border-radius: 8px;
+ padding: 16px;
+ }
+.tool-content.do-list {
+ background: #F0FDF4;
+ border: 1px solid #BBF7D0;
+ }
+.tool-content.dont-list {
+ background: #FEF2F2;
+ border: 1px solid #FECACA;
+ }
+.tool-content.do-list h4,
+.tool-content.dont-list h4 {
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 10px;
+ }
+.tool-content.do-list h4 { color: #28A745; }
+.tool-content.dont-list h4 { color: #DC3545; }
+.tool-content.do-list ul,
+.tool-content.dont-list ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+.tool-content.do-list li,
+.tool-content.dont-list li {
+ font-size: 13px;
+ padding: 4px 0;
+ padding-left: 18px;
+ position: relative;
+ line-height: 1.5;
+ }
+.tool-content.do-list li::before {
+ content: '\2705';
+ position: absolute;
+ left: 0;
+ top: 4px;
+ font-size: 12px;
+ }
+.tool-content.dont-list li::before {
+ content: '\274C';
+ position: absolute;
+ left: 0;
+ top: 4px;
+ font-size: 11px;
+ }
+
+ /* Pro Tipp */
+.tool-content.pro-tipp {
+ background: linear-gradient(135deg, #E63946 0%, #FF8C00 100%);
+ color: white;
+ border-radius: 8px;
+ padding: 16px 18px;
+ }
+.tool-content.pro-tipp-label {
+ font-size: 11px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.8px;
+ color: #FF8C00;
+ margin-bottom: 6px;
+ }
+.tool-content.pro-tipp p {
+ color: rgba(255,255,255,0.95);
+ font-size: 14px;
+ margin-bottom: 0;
+ line-height: 1.7;
+ }
+
+ /* Extra Sections */
+.tool-content.deck-section {
+ background: #fff;
+ border-radius: 12px;
+ padding: 28px;
+ margin-bottom: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.deck-section h2 {
+ font-size: 20px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 16px;
+ }
+.tool-content.deck-section h3 {
+ font-size: 16px;
+ font-weight: 600;
+ color: #1C1D1F;
+ margin: 16px 0 8px;
+ }
+.tool-content.deck-section p,
+.tool-content.deck-section li {
+ font-size: 14px;
+ line-height: 1.7;
+ }
+.tool-content.deck-section ul,
+.tool-content.deck-section ol {
+ padding-left: 18px;
+ margin-bottom: 12px;
+ }
+.tool-content.deck-section li {
+ margin-bottom: 6px;
+ }
+
+ /* Mistake Card */
+.tool-content.mistake-card {
+ background: #F8FAFC;
+ border-radius: 8px;
+ padding: 16px 18px;
+ margin-bottom: 12px;
+ border-left: 4px solid #DC3545;
+ }
+.tool-content.mistake-card h4 {
+ font-size: 14px;
+ font-weight: 700;
+ color: #DC3545;
+ margin-bottom: 6px;
+ }
+.tool-content.mistake-card p {
+ margin-bottom: 0;
+ color: #1C1D1F;
+ }
+
+ /* Checklist */
+.tool-content.checklist {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+.tool-content.checklist li {
+ padding: 8px 0;
+ padding-left: 28px;
+ position: relative;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 14px;
+ }
+.tool-content.checklist li:last-child {
+ border-bottom: none;
+ }
+.tool-content.checklist li::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 10px;
+ width: 18px;
+ height: 18px;
+ border: 2px solid #E2E8F0;
+ border-radius: 4px;
+ }
+
+ /* Layout Grid */
+.tool-content.deck-layout {
+ display: grid;
+ grid-template-columns: 240px 1fr;
+ gap: 28px;
+ align-items: flex-start;
+ }
+
+ /* Responsive */
+ @media (max-width: 991px) {
+.tool-content.deck-layout {
+ grid-template-columns: 1fr;
+ }
+.tool-content.deck-sidebar {
+ position: relative;
+ top: 0;
+ }
+.tool-content.do-dont-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.intro-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ /* Print */
+ @media print {
+.tool-content.deck-sidebar {
+ display: none;
+ }
+.tool-content.deck-layout {
+ grid-template-columns: 1fr;
+ }
+.tool-content.slide-card {
+ break-inside: avoid;
+ box-shadow: none;
+ border: 1px solid #ccc;
+ }
+.tool-content.slide-body {
+ display: block!important;
+ }
+.tool-content.slide-toggle {
+ display: none;
+ }
+.tool-content.slide-card,
+.tool-content.slide-num,
+.tool-content.pro-tipp,
+.tool-content.key-rule,
+.tool-content.coach-notes,
+.tool-content.do-list,
+.tool-content.dont-list,
+.tool-content.mistake-card {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Pitch Deck Guide</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Slide f&uuml;r Slide zum perfekten Pitch - Der komplette Leitfaden f&uuml;r &ouml;sterreichische Startups</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Pitch Deck Guide</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 1200px;">
+
+ <div class="deck-layout">
+
+ <!-- Sidebar -->
+ <aside class="deck-sidebar">
+ <div class="deck-sidebar-title">Navigation</div>
+ <nav>
+ <a href="#intro"><span class="nav-num">&rarr;</span> Einleitung</a>
+ <a href="#slide-1"><span class="nav-num">1</span> Titelseite</a>
+ <a href="#slide-2"><span class="nav-num">2</span> Das Problem</a>
+ <a href="#slide-3"><span class="nav-num">3</span> Die L&ouml;sung</a>
+ <a href="#slide-4"><span class="nav-num">4</span> Warum jetzt?</a>
+ <a href="#slide-5"><span class="nav-num">5</span> Marktgr&ouml;&szlig;e</a>
+ <a href="#slide-6"><span class="nav-num">6</span> Gesch&auml;ftsmodell</a>
+ <a href="#slide-7"><span class="nav-num">7</span> Traction</a>
+ <a href="#slide-8"><span class="nav-num">8</span> Wettbewerb</a>
+ <a href="#slide-9"><span class="nav-num">9</span> Go-to-Market</a>
+ <a href="#slide-10"><span class="nav-num">10</span> Team</a>
+ <a href="#slide-11"><span class="nav-num">11</span> Finanzplanung</a>
+ <a href="#slide-12"><span class="nav-num">12</span> Der Ask</a>
+ <a class="nav-section"><span class="nav-num"></span>Extras</a>
+ <a href="#fehler"><span class="nav-num">!</span> 5 h&auml;ufige Fehler</a>
+ <a href="#checkliste"><span class="nav-num">&check;</span> Pitch-Checkliste</a>
+ <a href="#ressourcen"><span class="nav-num">&oplus;</span> Ressourcen</a>
+ </nav>
+ </aside>
+
+ <!-- Main Content -->
+ <div>
+
+ <!-- Introduction -->
+ <section class="deck-intro" id="intro">
+ <h2>Warum ein Pitch Deck entscheidet</h2>
+ <p>Investor:innen sehen hunderte Decks pro Jahr. Durchschnittlich verbringen sie <strong>3 Minuten und 44 Sekunden</strong> mit einem Deck. In dieser Zeit entscheidet sich, ob du ein Meeting bekommst oder im Papierkorb landest.</p>
+ <p>Ein gutes Pitch Deck ist kein PowerPoint-Dokument. Es ist ein <strong>Verkaufswerkzeug</strong>, das eine klare Geschichte erz&auml;hlt: Es gibt ein gro&szlig;es Problem, du hast die L&ouml;sung, der Markt ist riesig, und dein Team kann es umsetzen.</p>
+
+ <div class="intro-grid">
+ <div class="intro-card">
+ <h4>F&uuml;r wen ist dieser Guide?</h4>
+ <p>Startups im DACH-Raum, die eine Pre-Seed- bis Series-A-Runde raisen wollen. Ob Business Angel, VC oder F&ouml;rderstelle: das Format funktioniert.</p>
+ </div>
+ <div class="intro-card">
+ <h4>So verwendest du ihn</h4>
+ <p>Lade den Gamma.app-Prompt herunter, generiere dein Deck, und nutze diesen Guide als Coaching-Begleiter f&uuml;r jede einzelne Slide.</p>
+ </div>
+ <div class="intro-card">
+ <h4>Das Format</h4>
+ <p>12 Slides nach dem bew&auml;hrten YC/Sequoia-Standard. Kein Slide mehr, kein Slide weniger. Jeder Slide hat einen klaren Job.</p>
+ </div>
+ </div>
+
+ <div class="key-rule">
+ <p>Die goldene Regel: <em>Ein Pitch Deck erz&auml;hlt eine Geschichte - nicht eine Featureliste.</em></p>
+ </div>
+ </section>
+
+ <!-- Slide 1 -->
+ <div class="slide-card open" id="slide-1">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">1</div>
+ <div class="slide-title-group">
+ <h3>Titelseite</h3>
+ <div class="slide-time">Zeitbudget: 15-30 Sekunden</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>In 5 Sekunden muss klar sein: Was macht dieses Startup? Die Titelseite ist euer erster Eindruck. Kein Logo-Redesign-Wettbewerb - sondern ein klarer, knackiger Satz, der sofort vermittelt, worum es geht.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Eine Tagline, die auch deine Oma verstehen w&uuml;rde</li>
+ <li>Sauberes, professionelles Layout - weniger ist mehr</li>
+ <li>Kontaktdaten direkt auf der ersten Slide</li>
+ <li>&bdquo;Vertraulich&ldquo;-Vermerk zeigt Professionalit&auml;t</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Buzzword-Bingo: &bdquo;AI-powered disruptive Blockchain-Solution&ldquo;</li>
+ <li>Zu viel Text - die Tagline ist kein Abstract</li>
+ <li>Ein pixeliges Logo oder gar kein Logo</li>
+ <li>Datum weglassen - Investor:innen wollen wissen wie aktuell das Deck ist</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Teste deine Tagline: Zeig die Titelseite drei Personen, die nichts &uuml;ber dein Startup wissen. Wenn sie nach 5 Sekunden nicht erkl&auml;ren k&ouml;nnen, was ihr macht, &uuml;berarbeite sie.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 2 -->
+ <div class="slide-card" id="slide-2">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">2</div>
+ <div class="slide-title-group">
+ <h3>Das Problem</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Investor:innen investieren in L&ouml;sungen f&uuml;r echte Probleme. Wenn das Problem nicht weh tut, ist die L&ouml;sung nicht interessant. Diese Slide muss Empathie erzeugen - die Zuh&ouml;rer:innen sollen das Problem f&ouml;rmlich sp&uuml;ren.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Erz&auml;hle eine kurze Geschichte, die das Problem greifbar macht</li>
+ <li>Zeige die Gr&ouml;&szlig;e des Problems mit konkreten Zahlen</li>
+ <li>Nenne die Kosten des Status Quo - was passiert, wenn nichts passiert?</li>
+ <li>Fokus auf maximal 3 zusammenh&auml;ngende Pain Points</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Mehr als 3 Probleme gleichzeitig ansprechen</li>
+ <li>Technische Details statt emotionalem Impact</li>
+ <li>Das Problem zu abstrakt beschreiben - &bdquo;Ineffizienz&ldquo; sagt niemand etwas</li>
+ <li>Das Problem als L&ouml;sung verkleiden: &bdquo;Es fehlt ein Tool f&uuml;r X&ldquo;</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Starte mit einem konkreten Beispiel einer echten Person. &bdquo;Maria ist &Auml;rztin in Wien und verbringt 3 Stunden pro Tag mit Dokumentation statt mit Patient:innen&ldquo; wirkt st&auml;rker als jede Statistik. Zahlen kommen danach als Verst&auml;rkung.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 3 -->
+ <div class="slide-card" id="slide-3">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">3</div>
+ <div class="slide-title-group">
+ <h3>Die L&ouml;sung</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Jetzt die Aufl&ouml;sung: Wie l&ouml;st ihr genau dieses Problem? Investor:innen wollen den Moment erleben, wo die L&ouml;sung so offensichtlich erscheint, dass sie sich fragen, warum es das nicht schon l&auml;ngst gibt. Zeig das Produkt, nicht eine Beschreibung davon.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Zeige einen Screenshot, ein Mockup oder eine Demo - visuell schl&auml;gt Text</li>
+ <li>Erkl&auml;re die L&ouml;sung in einem Satz, bevor du in Details gehst</li>
+ <li>Verbinde jedes Feature direkt mit einem Pain Point von Slide 2</li>
+ <li>Nutze die Sprache deiner Kund:innen, nicht Entwickler-Jargon</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Jedes Feature auflisten - fokussiere auf die Top 3</li>
+ <li>Nur Text ohne visuelle Darstellung des Produkts</li>
+ <li>Technologie-Stack erkl&auml;ren statt Nutzen zu zeigen</li>
+ <li>Versprechen machen, die ihr noch nicht einl&ouml;sen k&ouml;nnt</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Nutze das &bdquo;Vorher-Nachher&ldquo;-Prinzip: Zeige links den schmerzhaften Status Quo und rechts die Welt mit eurer L&ouml;sung. Das erzeugt einen sofortigen &bdquo;Aha-Moment&ldquo;, den Investor:innen lieben.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 4 -->
+ <div class="slide-card" id="slide-4">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">4</div>
+ <div class="slide-title-group">
+ <h3>Warum jetzt?</h3>
+ <div class="slide-time">Zeitbudget: 30-60 Sekunden</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Diese Slide wird oft untersch&auml;tzt, ist aber entscheidend. Investor:innen fragen sich immer: Warum hat das vorher noch niemand gemacht? Was hat sich ver&auml;ndert, dass diese L&ouml;sung genau jetzt m&ouml;glich oder n&ouml;tig ist? Wenn du diese Frage &uuml;berzeugend beantwortest, steigt die Glaubw&uuml;rdigkeit des gesamten Pitches.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Zeige konkrete Marktver&auml;nderungen: Regulierung, Technologie, Verhalten</li>
+ <li>Nutze aktuelle Daten und Trends - je frischer, desto besser</li>
+ <li>Erkl&auml;re, welches Zeitfenster sich gerade &ouml;ffnet</li>
+ <li>Verkn&uuml;pfe mit &uuml;bergeordneten Megatrends (Digitalisierung, Nachhaltigkeit, etc.)</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Vage Aussagen wie &bdquo;Die Zeit ist reif&ldquo; ohne Begr&uuml;ndung</li>
+ <li>Trends aufz&auml;hlen, die keinen direkten Bezug zu eurem Startup haben</li>
+ <li>Zu viele Trends auf einmal - 3 starke reichen v&ouml;llig</li>
+ <li>Die Slide weglassen - es wirkt, als h&auml;ttet ihr euch diese Frage nie gestellt</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Die st&auml;rksten &bdquo;Warum jetzt?&ldquo;-Argumente sind regulatorische Ver&auml;nderungen (z.B. neue EU-Richtlinien) oder Technologie-Durchbr&uuml;che, die eure L&ouml;sung erstmals wirtschaftlich machbar machen. In &Ouml;sterreich sind gerade Green-Tech-Regulierungen und die Digitalisierung im Gesundheitswesen starke Treiber.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 5 -->
+ <div class="slide-card" id="slide-5">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">5</div>
+ <div class="slide-title-group">
+ <h3>Marktgr&ouml;&szlig;e</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Die Marktgr&ouml;&szlig;e entscheidet, ob das Startup f&uuml;r VCs &uuml;berhaupt interessant ist. Ein genialer Marktgr&ouml;&szlig;en-Slide zeigt, dass ihr euren Markt wirklich versteht - nicht nur eine Google-Suche nach &bdquo;Marktgr&ouml;&szlig;e XY&ldquo; gemacht habt. Bottom-up schl&auml;gt immer Top-down.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>TAM/SAM/SOM klar trennen und jeweils die Herleitung zeigen</li>
+ <li>Bottom-up-Berechnung: Anzahl potentieller Kund:innen x Preis pro Kunde</li>
+ <li>Quellen angeben - eigene Analyse plus externe Studie</li>
+ <li>Wachstumsrate (CAGR) des Marktes nennen</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Einen Billionen-TAM aus einem Statista-Report kopieren ohne Kontext</li>
+ <li>TAM und SOM verwechseln oder unrealistische SOM-Zahlen nennen</li>
+ <li>Keine Quellen angeben - das zerst&ouml;rt Vertrauen sofort</li>
+ <li>Den europ&auml;ischen Markt ignorieren und nur US-Zahlen zeigen</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Berechne dein SOM von unten nach oben: &bdquo;In &Ouml;sterreich gibt es 45.000 &Auml;rzt:innen. Wir adressieren die 12.000 Allgemeinmediziner:innen. Bei einer Conversion Rate von 5% und einem Jahrespreis von 2.400 Euro ergibt das ein SOM von 1,44 Mio. Euro.&ldquo; Das ist hundertmal &uuml;berzeugender als &bdquo;Der Digital-Health-Markt ist 200 Milliarden Euro gro&szlig;.&ldquo;</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 6 -->
+ <div class="slide-card" id="slide-6">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">6</div>
+ <div class="slide-title-group">
+ <h3>Gesch&auml;ftsmodell</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Wie verdient ihr Geld? Das klingt simpel, aber hier scheitern &uuml;berraschend viele Pitches. Investor:innen wollen verstehen, ob euer Gesch&auml;ftsmodell skaliert. Ein SaaS mit 80% Marge erz&auml;hlt eine andere Geschichte als ein Marktplatz mit 15% Take-Rate. Zeigt, dass ihr die Unit Economics versteht.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Zeige klar: Wer zahlt, was zahlt er, und wie oft?</li>
+ <li>Pricing-Stufen visualisieren - Tabelle oder Flussdiagramm</li>
+ <li>Unit Economics angeben: CAC, LTV, LTV:CAC Ratio</li>
+ <li>Bei Marketplace-Modellen: Take-Rate und GMV erkl&auml;ren</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>&bdquo;Wir monetarisieren sp&auml;ter&ldquo; - das will kein:e Investor:in h&ouml;ren</li>
+ <li>Zu viele Revenue Streams gleichzeitig zeigen - Fokus!</li>
+ <li>Unit Economics komplett weglassen</li>
+ <li>Unrealistische LTV:CAC Ratios ohne Begr&uuml;ndung</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Wenn ihr noch keine echten Unit Economics habt (Pre-Seed ist OK), zeigt eure Annahmen transparent: &bdquo;Basierend auf unseren ersten 20 Kund:innen gehen wir von einem CAC von 120 Euro und einem LTV von 1.800 Euro aus.&ldquo; Ehrlichkeit &uuml;ber Annahmen baut mehr Vertrauen auf als gesch&ouml;nte Zahlen.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 7 -->
+ <div class="slide-card" id="slide-7">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">7</div>
+ <div class="slide-title-group">
+ <h3>Traction &amp; Meilensteine</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Traction ist der st&auml;rkste Beweis, dass euer Startup funktioniert. Nichts &uuml;berzeugt mehr als echte Zahlen - egal ob Umsatz, Nutzer:innen, Waitlist-Eintr&auml;ge oder LOIs. Diese Slide ist der Wendepunkt im Pitch: Hier entscheidet sich, ob aus Interesse echte Aufmerksamkeit wird.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Wachstumskurve zeigen - auch wenn sie noch klein ist, Trend z&auml;hlt</li>
+ <li>Die Metrik w&auml;hlen, die euch am besten aussehen l&auml;sst (MRR, Nutzer, Retention)</li>
+ <li>Meilenstein-Timeline: Was habt ihr bisher geschafft?</li>
+ <li>Social Proof einbauen: bekannte Kund:innen, Partnerships, Awards</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Vanity Metrics: 10.000 Website-Besucher sagen nichts &uuml;ber Product-Market-Fit</li>
+ <li>Nur absolute Zahlen ohne Wachstumsrate</li>
+ <li>Vergangene Meilensteine und zuk&uuml;nftige Pl&auml;ne vermischen</li>
+ <li>Zahlen sch&ouml;nrechnen oder &bdquo;projizierte&ldquo; Traction als echte verkaufen</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Kein Revenue? Kein Problem - wenn du Pre-Seed bist. Zeige dann andere Beweise: &bdquo;30 LOIs von Pilot-Kund:innen&ldquo;, &bdquo;200 Personen auf der Warteliste nach 2 Wochen&ldquo;, &bdquo;3 zahlende Beta-Tester:innen ohne Marketing&ldquo;. Jede Art von Validierung z&auml;hlt - aber sei ehrlich dar&uuml;ber, was es ist.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 8 -->
+ <div class="slide-card" id="slide-8">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">8</div>
+ <div class="slide-title-group">
+ <h3>Wettbewerb</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>&bdquo;Wir haben keine Konkurrenz&ldquo; ist der schnellste Weg, einen Pitch zu verlieren. Investor:innen wollen sehen, dass ihr den Markt kennt und wisst, wo ihr steht. Die Wettbewerbs-Slide zeigt eure strategische Reife - nicht eure Angst vor Konkurrenz.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>2x2-Positionierungsmatrix mit relevanten Achsen verwenden</li>
+ <li>Echte Wettbewerber nennen - auch indirekte (z.B. Excel, manuelle Prozesse)</li>
+ <li>Euren unfairen Vorteil klar herausarbeiten</li>
+ <li>Auch gro&szlig;e Player zeigen - das beweist, dass der Markt existiert</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>&bdquo;Wir haben keine Konkurrenz&ldquo; - hat noch nie gestimmt</li>
+ <li>Feature-Vergleichstabelle mit 20 H&auml;kchen bei euch und 20 Kreuzen bei allen anderen</li>
+ <li>Wettbewerber schlecht reden - zeigt Unsicherheit</li>
+ <li>Die Matrix-Achsen so w&auml;hlen, dass nur ihr oben rechts landet</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>W&auml;hle die zwei Achsen eurer 2x2-Matrix basierend auf dem, was euren Kund:innen wirklich wichtig ist - nicht auf dem, was euch gut aussehen l&auml;sst. Investor:innen durchschauen manipulierte Achsen sofort. Ehrliche Positionierung + klarer Differenziator = Vertrauen.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 9 -->
+ <div class="slide-card" id="slide-9">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">9</div>
+ <div class="slide-title-group">
+ <h3>Go-to-Market Strategie</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Gutes Produkt allein reicht nicht - wie kommt es zu den Kund:innen? Investor:innen wollen sehen, dass ihr einen konkreten Plan habt, Kund:innen zu gewinnen. Nicht &bdquo;wir machen Social Media&ldquo;, sondern welcher Kanal, welche Taktik, welche Kosten, welcher Zeitplan.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Phasen-Plan: Was macht ihr in den ersten 6, 12, 24 Monaten?</li>
+ <li>Kan&auml;le benennen und priorisieren - nicht alles auf einmal</li>
+ <li>Erste Erfolge zeigen: &bdquo;Wir haben bereits 10 Kund:innen &uuml;ber LinkedIn gewonnen&ldquo;</li>
+ <li>F&uuml;r den &ouml;sterreichischen Markt: lokale Netzwerke, WKO, Branchenverb&auml;nde erw&auml;hnen</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>&bdquo;Wir machen Content Marketing, Social Media, SEO, PR, Events und Partnerships&ldquo; - alles gleichzeitig funktioniert nie</li>
+ <li>Keine konkreten Zahlen: Was kostet ein Lead? Was ist euer Ziel?</li>
+ <li>International skalieren wollen, bevor der Heimatmarkt funktioniert</li>
+ <li>Den Vertriebskanal ignorieren und nur &uuml;ber Marketing reden</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Zeige, dass ihr bereits wisst, welcher Kanal funktioniert - auch wenn es nur ein kleiner Test war. &bdquo;Wir haben mit 500 Euro LinkedIn-Ads 30 qualifizierte Leads generiert&ldquo; ist zehnmal &uuml;berzeugender als ein theoretischer Multi-Channel-Plan. F&uuml;r &ouml;sterreichische B2B-Startups: Untersch&auml;tzt nicht den WKO-Au&szlig;enhandel und die Branchentreffen.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 10 -->
+ <div class="slide-card" id="slide-10">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">10</div>
+ <div class="slide-title-group">
+ <h3>Team</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Fr&uuml;h-Phase-Investor:innen wetten auf Teams, nicht auf Ideen. Warum seid genau ihr die richtigen Leute, um dieses Problem zu l&ouml;sen? Zeigt relevante Erfahrung, Komplementarit&auml;t und &bdquo;Founder-Market-Fit&ldquo;. Ein starkes Team kann eine mittelm&auml;&szlig;ige Idee retten - umgekehrt nicht.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Relevante Erfahrung hervorheben: Was qualifiziert euch genau f&uuml;r dieses Problem?</li>
+ <li>Komplementarit&auml;t zeigen: Business + Tech + Domain-Expertise</li>
+ <li>Bekannte Advisors oder Beir&auml;te erw&auml;hnen - das baut Vertrauen</li>
+ <li>Professionelle Fotos verwenden - LinkedIn-Profilbilder reichen</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Jeden Praktikanten und Werkstudenten aufz&auml;hlen</li>
+ <li>Nur Titel nennen ohne zu erkl&auml;ren, warum die Erfahrung relevant ist</li>
+ <li>Fehlende Rollen verschweigen - besser offen sagen: &bdquo;CTO suchen wir noch&ldquo;</li>
+ <li>Zehn Advisor-Logos zeigen, die niemand kennt</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Der &bdquo;Unfair Advantage&ldquo; eures Teams ist oft wichtiger als Titel. &bdquo;Unsere CTO hat 8 Jahre die Logistik-Software bei DPD mitentwickelt&ldquo; sagt mehr als &bdquo;CTO, 10 Jahre Erfahrung&ldquo;. Zeigt den Founder-Market-Fit: Warum brennt ihr f&uuml;r genau dieses Problem?</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 11 -->
+ <div class="slide-card" id="slide-11">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">11</div>
+ <div class="slide-title-group">
+ <h3>Finanzplanung</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Keine Excel-Tabelle mit 47 Zeilen, sondern ein klares Bild: Wo steht ihr, wo wollt ihr hin, und was braucht ihr daf&uuml;r? Die Finanzplanung zeigt, ob ihr mit Geld umgehen k&ouml;nnt. Investor:innen erwarten keine perfekte Prognose - aber durchdachte Annahmen.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>3-Jahres-Umsatzprognose mit klaren Annahmen dahinter</li>
+ <li>Break-Even-Zeitpunkt angeben - wann wird das Startup profitabel?</li>
+ <li>Monatliche Burn-Rate und Runway nennen</li>
+ <li>Konservatives und realistisches Szenario zeigen</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Hockey-Stick-Prognosen ohne Begr&uuml;ndung - &bdquo;Jahr 3: 50 Mio. Euro Revenue&ldquo;</li>
+ <li>Keine Annahmen offenlegen - das wirkt wie Wunschdenken</li>
+ <li>Die gesamte P&amp;L auf eine Slide quetschen</li>
+ <li>Kosten vergessen: Server, Rechtsberatung, Steuern, Puffer</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Die wichtigste Zahl in der Finanzplanung ist nicht der Umsatz in Jahr 3, sondern eure monatliche Burn-Rate und der daraus resultierende Runway. Investor:innen rechnen sofort: &bdquo;Wie lange reicht das Geld?&ldquo; Zeigt, dass ihr das wisst. Und: Plant immer 20% Puffer ein - es dauert immer l&auml;nger als gedacht.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 12 -->
+ <div class="slide-card" id="slide-12">
+ <div class="slide-header" onclick="toggleSlide(this)">
+ <div class="slide-header-left">
+ <div class="slide-num">12</div>
+ <div class="slide-title-group">
+ <h3>Der Ask</h3>
+ <div class="slide-time">Zeitbudget: 1-2 Minuten</div>
+ </div>
+ </div>
+ <div class="slide-toggle">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+ </div>
+ </div>
+ <div class="slide-body">
+ <div class="coach-notes">
+ <div class="coach-notes-label">Was Investor:innen sehen wollen</div>
+ <p>Die letzte Slide - und die wichtigste nach dem Problem. Hier sagt ihr klar, was ihr braucht und wof&uuml;r. Kein &bdquo;Wir sind offen f&uuml;r Gespr&auml;che&ldquo;, sondern eine konkrete Zahl, ein konkreter Plan, eine konkrete Timeline. Wer nicht fragt, bekommt nicht.</p>
+ </div>
+ <div class="do-dont-grid">
+ <div class="do-list">
+ <h4>Do&rsquo;s</h4>
+ <ul>
+ <li>Klare Summe nennen: &bdquo;Wir raisen 500.000 Euro Pre-Seed&ldquo;</li>
+ <li>Mittelverwendung aufschl&uuml;sseln: Produkt, Team, Marketing, Puffer</li>
+ <li>Meilensteine definieren, die mit dem Investment erreicht werden</li>
+ <li>Kontaktdaten und n&auml;chsten Schritt klar kommunizieren</li>
+ </ul>
+ </div>
+ <div class="dont-list">
+ <h4>Don&rsquo;ts</h4>
+ <ul>
+ <li>Keine konkrete Summe nennen - &bdquo;zwischen 200K und 2 Millionen&ldquo;</li>
+ <li>Bewertung auf die Slide schreiben (das wird verhandelt, nicht pr&auml;sentiert)</li>
+ <li>Nur &bdquo;f&uuml;r Wachstum&ldquo; sagen statt konkrete Mittelverwendung</li>
+ <li>Den Ask kleinreden: &bdquo;Wir brauchen nur...&ldquo; - steht zu eurem Bedarf</li>
+ </ul>
+ </div>
+ </div>
+ <div class="pro-tipp">
+ <div class="pro-tipp-label">Pro-Tipp</div>
+ <p>Beende den Pitch mit einem klaren Call-to-Action: &bdquo;Wir haben noch 200.000 Euro in der Runde offen. Wenn das f&uuml;r Sie interessant ist, w&uuml;rde ich vorschlagen, dass wir n&auml;chste Woche ein Folgegespr&auml;ch f&uuml;hren. Ich schicke Ihnen gerne unser Data Room-Paket.&ldquo; Das zeigt Momentum und macht es der/dem Investor:in leicht, den n&auml;chsten Schritt zu gehen.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- 5 häufige Fehler -->
+ <section class="deck-section" id="fehler">
+ <h2>5 h&auml;ufige Fehler &ouml;sterreichischer Startups beim Pitchen</h2>
+
+ <div class="mistake-card">
+ <h4>Fehler 1: Zu viel Technik, zu wenig Problem</h4>
+ <p>&Ouml;sterreichische Gr&uuml;nder:innen - besonders aus dem technischen Bereich - verlieren sich oft in der Technologie. Investor:innen wollen zuerst wissen, ob das Problem gro&szlig; genug ist. Die Technologie ist das Mittel, nicht der Zweck. Regel: 70% des Pitches &uuml;ber Problem, Markt und Traction - 30% &uuml;ber die L&ouml;sung und Technik.</p>
+ </div>
+
+ <div class="mistake-card">
+ <h4>Fehler 2: Zu bescheiden sein</h4>
+ <p>Die &ouml;sterreichische Mentalit&auml;t neigt zum Untertreiben. &bdquo;Wir sind ein kleines Startup aus dem Burgenland&ldquo; klingt nicht nach einem Investment-Case. Ihr m&uuml;sst nicht angeben - aber ihr m&uuml;sst eure Ambition zeigen. Investor:innen suchen Teams, die gro&szlig; denken und konkret planen. Zeigt eure Vision selbstbewusst, aber faktenbasiert.</p>
+ </div>
+
+ <div class="mistake-card">
+ <h4>Fehler 3: Keinen klaren Ask haben</h4>
+ <p>Viele &ouml;sterreichische Startups beenden ihren Pitch mit &bdquo;Wir freuen uns auf Fragen&ldquo; statt mit einem konkreten Ask. Das ist, als w&uuml;rdest du ein Verkaufsgespr&auml;ch f&uuml;hren und vergessen zu fragen, ob der Kunde kaufen will. Nennt eine Zahl, erkl&auml;rt die Verwendung, definiert die n&auml;chsten Meilensteine.</p>
+ </div>
+
+ <div class="mistake-card">
+ <h4>Fehler 4: Nur &Ouml;sterreich als Markt zeigen</h4>
+ <p>F&uuml;r VCs ist der &ouml;sterreichische Markt allein selten gro&szlig; genug. Zeigt von Anfang an, wie ihr nach DACH und dann europaweit expandieren wollt. &Ouml;sterreich kann der perfekte Testmarkt sein - aber die Vision muss gr&ouml;&szlig;er sein. Zeigt einen konkreten Internationalisierungsplan mit Timeline.</p>
+ </div>
+
+ <div class="mistake-card">
+ <h4>Fehler 5: Zu viele Slides und zu wenig Story</h4>
+ <p>20, 30, manchmal 40 Slides. Das ist kein Pitch, das ist ein Gesch&auml;ftsbericht. 12 Slides reichen. Jede zus&auml;tzliche Slide verw&auml;ssert eure Message. Wenn etwas nicht in 12 Slides passt, geh&ouml;rt es in den Appendix oder ins Data Room. Ein Pitch ist eine Geschichte mit Anfang (Problem), Mitte (L&ouml;sung + Beweis) und Ende (Ask).</p>
+ </div>
+ </section>
+
+ <!-- Checkliste -->
+ <section class="deck-section" id="checkliste">
+ <h2>Pitch-Checkliste vor dem Termin</h2>
+ <p>Gehe diese 10 Punkte durch, bevor du dein Deck verschickst oder live pitchst:</p>
+
+ <ul class="checklist">
+ <li><strong>Problem-L&ouml;sung-Br&uuml;cke:</strong> Kann jemand ohne Kontext in 30 Sekunden verstehen, welches Problem ihr l&ouml;st und wie?</li>
+ <li><strong>Zahlen-Check:</strong> Sind alle Zahlen aktuell, korrekt und belegbar? Kann ich jede Zahl im Q&amp;A erkl&auml;ren?</li>
+ <li><strong>Marktgr&ouml;&szlig;e validiert:</strong> Habe ich eine Bottom-up-Berechnung f&uuml;r mein SOM? Sind TAM/SAM/SOM konsistent?</li>
+ <li><strong>Traction aktualisiert:</strong> Zeige ich die neuesten Daten? Habe ich Wachstumsraten berechnet?</li>
+ <li><strong>Team-Slide &uuml;berpr&uuml;ft:</strong> Ist der Founder-Market-Fit klar? Fehlen kritische Rollen - und spreche ich das an?</li>
+ <li><strong>Wettbewerbs-Slide ehrlich:</strong> Kenne ich meine Top-5-Wettbewerber? Kann ich erkl&auml;ren, warum Kund:innen uns w&auml;hlen?</li>
+ <li><strong>Der Ask ist konkret:</strong> Steht eine klare Summe und Mittelverwendung auf der letzten Slide?</li>
+ <li><strong>Design-Check:</strong> Sind alle Slides konsistent? Keine Tippfehler? Lesbar auch auf einem Beamer?</li>
+ <li><strong>Timing ge&uuml;bt:</strong> Passt der Pitch in 10 Minuten (oder die vorgegebene Zeit)? Habe ich mindestens 3x laut ge&uuml;bt?</li>
+ <li><strong>Appendix vorbereitet:</strong> Habe ich Backup-Slides f&uuml;r tiefe Fragen zu Financials, Technik und Wettbewerb?</li>
+ </ul>
+ </section>
+
+ <!-- Ressourcen -->
+ <section class="deck-section" id="ressourcen">
+ <h2>Ressourcen und weiterf&uuml;hrende Links</h2>
+
+ <h3>Pitch-Deck erstellen</h3>
+ <ul>
+ <li><strong>Gamma.app</strong> - Nutze unseren mitgelieferten Prompt, um dein Deck in Minuten zu generieren. Dann individuell anpassen.</li>
+ <li><strong>Canva</strong> - Kostenlose Pitch-Deck-Templates als Alternative.</li>
+ <li><strong>Google Slides / PowerPoint</strong> - F&uuml;r volle Kontrolle &uuml;ber Design und Layout.</li>
+ </ul>
+
+ <h3>F&ouml;rderungen und Finanzierung in &Ouml;sterreich</h3>
+ <ul>
+ <li><strong>AWS (Austria Wirtschaftsservice)</strong> - Gr&uuml;ndungsfonds, Preseed, Seedfinancing. <em>aws.at</em></li>
+ <li><strong>FFG (&Ouml;sterreichische Forschungsf&ouml;rderungsgesellschaft)</strong> - Basisprogramme, Frontrunner. <em>ffg.at</em></li>
+ <li><strong>Wirtschaftsagentur Burgenland</strong> - Regionale F&ouml;rderungen und StartUp Burgenland Programm. <em>wirtschaftsagentur-burgenland.at</em></li>
+ </ul>
+
+ <h3>Pitch-&Uuml;bung und Feedback</h3>
+ <ul>
+ <li><strong>StartUp Burgenland Coaching</strong> - Individuelles 1:1-Pitch-Training mit erfahrenen Coaches.</li>
+ <li><strong>Startup Live / Startup Weekend</strong> - Pitch-Events zum &Uuml;ben unter Realbedingungen.</li>
+ <li><strong>Investorenverzeichnis AAIA</strong> - Austrian Angel Investors Association f&uuml;r Business Angel Kontakte. <em>aaia.at</em></li>
+ </ul>
+ </section>
+
+ </div><!-- end main column -->
+
+ </div><!-- end deck-layout -->
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Feedback zu deinem Pitch Deck?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Buche ein kostenloses Erstgespr&auml;ch mit StartUp Burgenland. Wir geben dir ehrliches Feedback und helfen dir, dein Deck auf Investor:innen-Niveau zu bringen.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Pitch-Training anfragen">Pitch-Training anfragen</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <script>
+ function toggleSlide(headerEl) {
+ var card = headerEl.closest('.slide-card');
+ card.classList.toggle('open');
+ }
+
+ // Open all slides on print
+ window.addEventListener('beforeprint', function() {
+ document.querySelectorAll('.slide-card').forEach(function(card) {
+ card.classList.add('open');
+ });
+ });
+
+ // Smooth scroll for sidebar links
+ document.querySelectorAll('.deck-sidebar nav a[href^="#"]').forEach(function(anchor) {
+ anchor.addEventListener('click', function(e) {
+ e.preventDefault();
+ var target = document.querySelector(this.getAttribute('href'));
+ if (target) {
+ target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
+ });
+ });
+ </script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

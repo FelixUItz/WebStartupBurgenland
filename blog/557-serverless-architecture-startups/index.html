@@ -1,0 +1,257 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Serverless Architecture für Startups - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Serverless verspricht weniger Aufwand und niedrigere Kosten, aber stimmt das wirklich? Wir zeigen dir, wann Serverless für dein Startup Sinn macht und wann du besser die Finger davon lässt."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/557-serverless-architecture-startups"><!-- Open Graph --><meta property="og:title" content="Serverless Architecture für Startups - StartUp Burgenland Blog"><meta property="og:description" content="Serverless verspricht weniger Aufwand und niedrigere Kosten, aber stimmt das wirklich? Wir zeigen dir, wann Serverless für dein Startup Sinn macht und wann du besser die Finger davon lässt."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Serverless Architecture für Startups","description":"Serverless verspricht weniger Aufwand und niedrigere Kosten, aber stimmt das wirklich? Wir zeigen dir, wann Serverless für dein Startup Sinn macht und wann du besser die Finger davon lässt.","datePublished":"2024-11-04T00:00:00.000Z","dateModified":"2024-11-04T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/557-serverless-architecture-startups","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/557-serverless-architecture-startups"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/produkt-und-technologie/" class="blog-tag" style="text-decoration:none;"> produkt-und-technologie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Serverless Architecture für Startups</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2024-11-04">18. Jänner 2029</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>11 min</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="serverless-architecture-für-startups">Serverless Architecture für Startups</h1>
+<p>"Kein Server, kein Problem", so einfach klingt das Versprechen von Serverless. Du schreibst deinen Code, lädt ihn hoch, und der Cloud-Provider kümmert sich um alles andere. Kein Patching, kein Skalieren, keine Serverwartung um drei Uhr morgens.</p>
+<p>Aber ist Serverless wirklich das Wundermittel, als das es vermarktet wird? In diesem Beitrag schauen wir uns an, was Serverless für dich als Startup-Gründer in Österreich wirklich bedeutet, mit konkreten Beispielen, echten Kosten und einer ehrlichen Einschätzung.</p>
+<hr>
+<h2 id="was-ist-serverless-überhaupt">Was ist Serverless überhaupt?</h2>
+<p>Serverless bedeutet nicht, dass es keine Server gibt. Es bedeutet, dass <strong>du dich nicht um die Server kümmern musst</strong>. Der Cloud-Provider stellt die Infrastruktur bereit, skaliert automatisch und rechnet nur ab, was du tatsächlich nutzt.</p>
+<p>Die wichtigsten Serverless-Dienste sind:</p>
+<ul>
+<li><strong>Functions as a Service (FaaS)</strong>: AWS Lambda, Azure Functions, Google Cloud Functions</li>
+<li><strong>Serverless Datenbanken</strong>: DynamoDB, Firebase, PlanetScale</li>
+<li><strong>Serverless Storage</strong>: S3, Azure Blob Storage</li>
+<li><strong>Serverless APIs</strong>: API Gateway, Azure API Management</li>
+<li><strong>Serverless Queues</strong>: SQS, Azure Service Bus</li>
+</ul>
+<h3 id="das-prinzip-event-driven">Das Prinzip: Event-driven</h3>
+<p>Serverless-Funktionen werden durch Events ausgelöst, ein HTTP-Request, eine Datenbankänderung, ein Timer, eine Nachricht in einer Queue. Du schreibst eine Funktion, die auf dieses Event reagiert, und der Rest passiert automatisch.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// Beispiel: AWS Lambda Funktion</span></span>
+<span class="line"><span style="color:#79B8FF">exports</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">handler</span><span style="color:#F97583"> =</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">event</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583"> const</span><span style="color:#79B8FF"> userId</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> event.pathParameters.id;</span></span>
+<span class="line"><span style="color:#F97583"> const</span><span style="color:#79B8FF"> user</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> database.</span><span style="color:#B392F0">getUser</span><span style="color:#E1E4E8">(userId);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583"> return</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> statusCode: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8"> body: </span><span style="color:#79B8FF">JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stringify</span><span style="color:#E1E4E8">(user)</span></span>
+<span class="line"><span style="color:#E1E4E8"> };</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<hr>
+<h2 id="die-vorteile-von-serverless-für-startups">Die Vorteile von Serverless für Startups</h2>
+<h3 id="1-keine-serveradministration">1. Keine Serveradministration</h3>
+<p>Als Gründer hast du tausend Dinge auf der To-do-Liste. Serverwartung sollte nicht dazugehören. Mit Serverless entfällt:</p>
+<ul>
+<li>Betriebssystem-Updates</li>
+<li>Security-Patches</li>
+<li>Kapazitätsplanung</li>
+<li>Server-Monitoring (teilweise)</li>
+</ul>
+<h3 id="2-pay-per-use">2. Pay-per-Use</h3>
+<p>Du zahlst nur, wenn dein Code tatsächlich ausgeführt wird. Bei AWS Lambda zum Beispiel:</p>
+<ul>
+<li><strong>Erste 1 Million Requests pro Monat</strong>: Kostenlos</li>
+<li><strong>Danach</strong>: 0,20 USD pro 1 Million Requests</li>
+<li><strong>Compute-Zeit</strong>: 0,0000166667 USD pro GB-Sekunde</li>
+</ul>
+<p>Für ein Startup in der Frühphase kann das bedeuten: <strong>0 EUR pro Monat</strong> für dein Backend. Ja, wirklich null.</p>
+<h3 id="3-automatische-skalierung">3. Automatische Skalierung</h3>
+<p>Ob ein User oder zehntausend gleichzeitig zugreifen, Serverless skaliert automatisch. Du musst keine Autoscaling-Gruppen konfigurieren oder Load Balancer einrichten.</p>
+<h3 id="4-schnelleres-time-to-market">4. Schnelleres Time-to-Market</h3>
+<p>Weniger Infrastruktur-Aufwand bedeutet mehr Zeit für Features. Du konzentrierst dich auf das, was zählt: dein Produkt.</p>
+<h3 id="5-geringeres-risiko">5. Geringeres Risiko</h3>
+<p>Kein laufender Server bedeutet keine laufenden Kosten. Wenn dein Startup nicht funktioniert, hast du nicht monatelang für ungenutzte Server bezahlt.</p>
+<hr>
+<h2 id="die-nachteile----und-sie-sind-real">Die Nachteile, und sie sind real</h2>
+<h3 id="1-cold-starts">1. Cold Starts</h3>
+<p>Wenn eine Serverless-Funktion länger nicht aufgerufen wurde, muss sie erst "aufgeweckt" werden. Das kann 100ms bis mehrere Sekunden dauern. Für ein interaktives SaaS-Produkt kann das ein Problem sein.</p>
+<p><strong>Typische Cold-Start-Zeiten:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Runtime</th><th>Cold Start</th></tr></thead><tbody><tr><td>Python</td><td>200-500ms</td></tr><tr><td>Node.js</td><td>100-300ms</td></tr><tr><td>Java</td><td>1-5 Sekunden</td></tr><tr><td>.NET</td><td>500ms-2 Sekunden</td></tr></tbody></table>
+<h3 id="2-vendor-lock-in">2. Vendor Lock-in</h3>
+<p>Serverless-Code ist stark an den jeweiligen Provider gebunden. Eine AWS-Lambda-Funktion lässt sich nicht einfach auf Azure übertragen. Das Serverless Framework und andere Tools helfen, aber der Lock-in bleibt.</p>
+<h3 id="3-debugging-ist-schwieriger">3. Debugging ist schwieriger</h3>
+<p>Wenn etwas schiefgeht, hast du keinen Server, auf den du dich per SSH verbinden kannst. Debugging erfolgt über Logs (CloudWatch, Application Insights) und ist oft mühsam.</p>
+<h3 id="4-begrenzte-ausführungszeit">4. Begrenzte Ausführungszeit</h3>
+<p>AWS Lambda hat ein Limit von 15 Minuten. Für lang laufende Prozesse brauchst du andere Lösungen (Step Functions, ECS, etc.).</p>
+<h3 id="5-kosten-können-überraschen">5. Kosten können überraschen</h3>
+<p>Pay-per-Use klingt toll, bis dein Traffic explodiert. Ein viraler Moment kann bei Serverless teuer werden, weil du für jeden einzelnen Request zahlst. Bei einem fixen Server zahlst du dasselbe, egal ob 100 oder 100.000 Requests kommen.</p>
+<hr>
+<h2 id="wann-serverless-für-dein-startup-sinn-macht">Wann Serverless für dein Startup Sinn macht</h2>
+<h3 id="ideale-use-cases">Ideale Use Cases</h3>
+<ol>
+<li><strong>APIs mit variablem Traffic</strong>: Wenn dein Traffic zwischen Tag und Nacht stark schwankt</li>
+<li><strong>Webhooks und Event-Processing</strong>: Verarbeitung von Stripe-Zahlungen, E-Mail-Versand, etc.</li>
+<li><strong>Cron-Jobs und Scheduled Tasks</strong>: Regelmässige Aufgaben wie Report-Generierung</li>
+<li><strong>MVPs und Prototypen</strong>: Schnell etwas bauen, ohne sich um Infrastruktur zu kümmern</li>
+<li><strong>Bild- und Dateiverarbeitung</strong>: Thumbnails erstellen, PDFs generieren</li>
+<li><strong>Chatbots und Integrationen</strong>: Slack-Bots, Teams-Integrationen</li>
+</ol>
+<h3 id="weniger-geeignete-use-cases">Weniger geeignete Use Cases</h3>
+<ol>
+<li><strong>Echtzeit-Anwendungen</strong>: WebSockets und lange Verbindungen sind schwierig</li>
+<li><strong>Rechenintensive Workloads</strong>: ML-Training, Video-Encoding</li>
+<li><strong>Stateful Applications</strong>: Anwendungen, die einen persistenten Zustand brauchen</li>
+<li><strong>Konstant hoher Traffic</strong>: Wenn dein Service rund um die Uhr gleichmässig ausgelastet ist</li>
+</ol>
+<hr>
+<h2 id="serverless-in-der-praxis----ein-beispiel">Serverless in der Praxis, Ein Beispiel</h2>
+<p>Du baust ein SaaS-Produkt für Winzer im Burgenland (davon gibt es bekanntlich einige). Dein Produkt hilft bei der Verwaltung von Kundenbestellungen und Versand.</p>
+<h3 id="architektur-mit-serverless">Architektur mit Serverless</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Frontend (React/Next.js)</span></span>
+<span class="line"><span> |</span></span>
+<span class="line"><span> v</span></span>
+<span class="line"><span>API Gateway</span></span>
+<span class="line"><span> |</span></span>
+<span class="line"><span> v</span></span>
+<span class="line"><span>Lambda Functions</span></span>
+<span class="line"><span> |-- GET /orders --> Lambda: Bestellungen abrufen</span></span>
+<span class="line"><span> |-- POST /orders --> Lambda: Bestellung erstellen</span></span>
+<span class="line"><span> |-- POST /shipments --> Lambda: Versand ausloesen</span></span>
+<span class="line"><span> |</span></span>
+<span class="line"><span> v</span></span>
+<span class="line"><span>DynamoDB (Bestellungen)</span></span>
+<span class="line"><span> |</span></span>
+<span class="line"><span> v</span></span>
+<span class="line"><span>SQS Queue (Versand-Events)</span></span>
+<span class="line"><span> |</span></span>
+<span class="line"><span> v</span></span>
+<span class="line"><span>Lambda: E-Mail-Benachrichtigung (via SES)</span></span></code></pre>
+<h3 id="kosten-pro-monat-geschätzt-500-bestellungenmonat">Kosten pro Monat (geschätzt, 500 Bestellungen/Monat)</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Service</th><th>Kosten</th></tr></thead><tbody><tr><td>API Gateway</td><td>0 EUR (Free Tier)</td></tr><tr><td>Lambda</td><td>0 EUR (Free Tier)</td></tr><tr><td>DynamoDB</td><td>0 EUR (Free Tier)</td></tr><tr><td>SES (E-Mails)</td><td>0,50 EUR</td></tr><tr><td>S3 (Rechnungen/PDFs)</td><td>0,10 EUR</td></tr><tr><td><strong>Gesamt</strong></td><td><strong>&#x3C; 1 EUR/Monat</strong></td></tr></tbody></table>
+<p>Ja, für weniger als einen Euro pro Monat kannst du ein funktionierendes Backend betreiben. Das ist die Magie von Serverless in der Frühphase.</p>
+<hr>
+<h2 id="serverless-frameworks-und-tools">Serverless Frameworks und Tools</h2>
+<p>Du musst nicht alles von Hand konfigurieren. Diese Tools helfen dir:</p>
+<h3 id="serverless-framework">Serverless Framework</h3>
+<p>Das populärste Framework für Serverless-Deployments. Unterstützt AWS, Azure und Google Cloud.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#6A737D"># serverless.yml</span></span>
+<span class="line"><span style="color:#85E89D">service</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">winzer-api</span></span>
+<span class="line"><span style="color:#85E89D">provider</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">aws</span></span>
+<span class="line"><span style="color:#85E89D"> runtime</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">nodejs18.x</span></span>
+<span class="line"><span style="color:#85E89D"> region</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">eu-central-1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">functions</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> getOrders</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> handler</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">handlers/orders.get</span></span>
+<span class="line"><span style="color:#85E89D"> events</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">http</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">/orders</span></span>
+<span class="line"><span style="color:#85E89D"> method</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">get</span></span>
+<span class="line"><span style="color:#85E89D"> createOrder</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> handler</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">handlers/orders.create</span></span>
+<span class="line"><span style="color:#85E89D"> events</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8"> - </span><span style="color:#85E89D">http</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D"> path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">/orders</span></span>
+<span class="line"><span style="color:#85E89D"> method</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">post</span></span></code></pre>
+<h3 id="aws-sam-serverless-application-model">AWS SAM (Serverless Application Model)</h3>
+<p>AWS-eigenes Tool für Serverless-Entwicklung. Gut integriert mit dem AWS-Ökosystem.</p>
+<h3 id="sst-serverless-stack">SST (Serverless Stack)</h3>
+<p>Modernes Framework speziell für AWS, mit guter Developer Experience und TypeScript-Support.</p>
+<h3 id="terraform">Terraform</h3>
+<p>Nicht Serverless-spezifisch, aber du kannst damit deine gesamte Infrastruktur, inklusive Serverless-Funktionen, als Code definieren.</p>
+<hr>
+<h2 id="serverless-und-dsgvo----was-du-beachten-musst">Serverless und DSGVO, Was du beachten musst</h2>
+<p>Als österreichisches Startup musst du die DSGVO einhalten. Bei Serverless gibt es einige Besonderheiten:</p>
+<ol>
+<li><strong>Datenstandort</strong>: Stelle sicher, dass deine Lambda-Funktionen und Datenbanken in der EU-Region laufen (eu-central-1 für AWS, West Europe für Azure)</li>
+<li><strong>Logging</strong>: CloudWatch-Logs können personenbezogene Daten enthalten, konfiguriere entsprechende Retention-Policies</li>
+<li><strong>Auftragsverarbeitung</strong>: Du brauchst einen AV-Vertrag mit deinem Cloud-Provider (bei AWS und Azure standardmässig vorhanden)</li>
+<li><strong>Verschlüsselung</strong>: Aktiviere Encryption at Rest für alle Datenbanken und Storage-Services</li>
+</ol>
+<hr>
+<h2 id="migration-zu-serverless----schritt-für-schritt">Migration zu Serverless, Schritt für Schritt</h2>
+<p>Du hast bereits ein bestehendes Backend und willst auf Serverless umsteigen? Hier ist ein pragmatischer Ansatz:</p>
+<h3 id="schritt-1-identifiziere-geeignete-komponenten">Schritt 1: Identifiziere geeignete Komponenten</h3>
+<p>Nicht alles muss serverless sein. Starte mit:</p>
+<ul>
+<li>Background-Jobs (E-Mail-Versand, Report-Generierung)</li>
+<li>Webhooks (Zahlungs-Callbacks, API-Integrationen)</li>
+<li>Neue Features (statt bestehende umzubauen)</li>
+</ul>
+<h3 id="schritt-2-strangler-fig-pattern">Schritt 2: Strangler Fig Pattern</h3>
+<p>Baue neue Features serverless und leite Traffic schrittweise um. Das bestehende System läuft weiter, während du Stück für Stück migrierst.</p>
+<h3 id="schritt-3-monitoring-einrichten">Schritt 3: Monitoring einrichten</h3>
+<p>Bevor du migrierst, richte Monitoring ein. Du musst wissen, ob die serverlose Version genauso performant ist wie die bestehende.</p>
+<h3 id="schritt-4-optimiere-cold-starts">Schritt 4: Optimiere Cold Starts</h3>
+<p>Nutze Provisioned Concurrency (AWS) oder Premium Plan (Azure), wenn Cold Starts ein Problem sind. Das kostet extra, aber eliminiert das Problem.</p>
+<hr>
+<h2 id="die-ehrliche-einschätzung">Die ehrliche Einschätzung</h2>
+<p>Serverless ist fantastisch für Startups in der Frühphase. Die Kosten sind minimal, die Skalierung automatisch, und du kannst dich auf dein Produkt konzentrieren.</p>
+<p>Aber Serverless ist kein Allheilmittel. Wenn dein Produkt wächst, wirst du wahrscheinlich einen <strong>hybriden Ansatz</strong> wählen: Serverless für Event-Processing und Background-Jobs, Container oder VMs für dein Haupt-Backend.</p>
+<h3 id="meine-empfehlung-für-österreichische-startups">Meine Empfehlung für österreichische Startups</h3>
+<ol>
+<li><strong>Starte mit Serverless</strong>, wenn du AWS-Credits hast und dein Team JavaScript/Python kann</li>
+<li><strong>Starte mit einem einfachen Server</strong> (Hetzner), wenn du kein Cloud-Erfahrung hast und dein Budget knapp ist</li>
+<li><strong>Nutze Serverless selektiv</strong> für Background-Jobs, auch wenn dein Haupt-Backend auf einem Server läuft</li>
+</ol>
+<hr>
+
+<p>Serverless ist eine der spannendsten Entwicklungen im Cloud-Bereich, und für Startups besonders attraktiv. Du kannst ein komplettes Backend für unter einem Euro pro Monat betreiben und musst dich nicht um Server kümmern.</p>
+<p>Aber geh mit offenen Augen rein. Verstehe die Limitierungen, plane für Cold Starts, und baue deine Architektur so, dass du nicht zu 100 Prozent an einen Provider gebunden bist. Serverless ist ein Werkzeug, kein Dogma.</p>
+<p>Als Gründer im Burgenland oder anderswo in Österreich hast du damit ein mächtigtes Instrument in der Hand, um mit minimalen Kosten maximalen Impact zu erzielen.</p>
+<hr>
+<h2 id="startup-burgenland-unterstützt-dich">Startup Burgenland unterstützt dich</h2>
+<p>Du überlegst, ob Serverless für dein Startup der richtige Ansatz ist? Bei <strong>Startup Burgenland</strong> helfen wir dir, die passende Architektur für dein Produkt zu finden. Unsere technischen Mentoren kennen die Vor- und Nachteile aus eigener Erfahrung.</p>
+<p><strong><a href="https://www.startup-burgenland.at/kontakt/">Jetzt Beratung anfragen</a></strong></p>
+<h2 id="weiterführende-artikel">Weiterführende Artikel</h2>
+<ul>
+<li><a href="/blog/562-skalierbare-infrastruktur-planen">Skalierbare Infrastruktur planen</a></li>
+<li><a href="/blog/556-cloud-hosting-aws-azure-hetzner">Cloud-Hosting für Startups, AWS Azure oder Hetzner</a></li>
+<li><a href="/blog/563-kosten-optimierung-cloud">Kosten-Optimierung in der Cloud</a></li>
+<li><a href="/blog/558-devops-grundlagen-gruender">DevOps Grundlagen für Gründer</a></li>
+<li><a href="/blog/737-kuenstliche-intelligenz-agi">Künstliche Intelligenz und AGI, Was kommt als Nächstes für Startups?</a></li>
+</ul>
+<hr>
+<p><em>Dieser Beitrag ist Teil der Serie "Cloud und Infrastruktur" im Startup Burgenland Blog. In dieser Serie behandeln wir alle technischen Themen rund um Hosting, Deployment und Skalierung, speziell für österreichische Startups und Gründer.</em></p>
+<hr>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/Serverless/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Serverless </a><a href="/blog/tag/AWS Lambda/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> AWS Lambda </a><a href="/blog/tag/Cloud Functions/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Cloud Functions </a><a href="/blog/tag/Startups/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Startups </a><a href="/blog/tag/Architektur/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Architektur </a><a href="/blog/tag/FaaS/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> FaaS </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2024-11-04" class="d-block fw-600 text-dark-gray">18. Jänner 2029</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

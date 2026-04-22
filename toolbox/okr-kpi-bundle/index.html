@@ -1,0 +1,1245 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>OKR + KPI Bundle | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="OKR-Framework und KPI-Dashboard für österreichische Startups: Objectives & Key Results erklärt, Beispiel-OKRs, die 15 wichtigsten SaaS-Metriken und Tracking-Templates.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/okr-kpi-bundle/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/okr-kpi-bundle/">
+ <meta property="og:title" content="OKR + KPI Bundle | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="OKR-Framework und KPI-Dashboard für österreichische Startups: Objectives & Key Results erklärt, Beispiel-OKRs, die 15 wichtigsten SaaS-Metriken und Tracking-Templates.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="OKR + KPI Bundle | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for OKR + KPI Bundle */
+
+ /* ========== DESIGN TOKENS (scoped) ========== */
+.tool-content {
+ --sec-okr: #E63946;
+ --sec-okr-bg: #FEF2F2;
+ --sec-okr-border: #FEE2E2;
+ --sec-example: #6B7280;
+ --sec-example-bg: #F3F4F6;
+ --sec-example-border: #D1D5DB;
+ --sec-kpi: #4B5563;
+ --sec-kpi-bg: #F3F4F6;
+ --sec-kpi-border: #D1D5DB;
+ --sec-template: #28A745;
+ --sec-template-bg: #DCFCE7;
+ --sec-template-border: #A7F3D0;
+ --sec-checklist: #FF8C00;
+ --sec-checklist-bg: #FFF7ED;
+ --sec-checklist-border: #FDBA74;
+ }
+
+ /* ========== NAVIGATION ========== */
+.tool-content.nav-bar {
+ background: white;
+ border-bottom: 1px solid #E2E8F0;
+ padding: 0;
+ display: flex;
+ gap: 4px;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ margin-bottom: 30px;
+ border-radius: 8px;
+ }
+.tool-content.nav-bar a {
+ display: inline-block;
+ padding: 12px 16px;
+ font-size: 13px;
+ font-weight: 600;
+ color: #6B7280;
+ text-decoration: none;
+ white-space: nowrap;
+ border-bottom: 2px solid transparent;
+ transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.nav-bar a:hover,
+.tool-content.nav-bar a.active {
+ color: #E63946;
+ border-bottom-color: #FF8C00;
+ }
+
+ /* ========== SECTION STYLES ========== */
+.tool-content.section {
+ margin-top: 32px;
+ }
+.tool-content.section-header {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin-bottom: 20px;
+ }
+.tool-content.section-number {
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 800;
+ font-size: 16px;
+ color: white;
+ flex-shrink: 0;
+ }
+.tool-content.section-title {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ letter-spacing: -0.3px;
+ }
+
+ /* ========== CONTENT CARDS ========== */
+.tool-content.content-card {
+ background: white;
+ border-radius: 12px;
+ padding: 24px;
+ margin-bottom: 16px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.content-card h3 {
+ font-size: 17px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 12px;
+ }
+.tool-content.content-card p {
+ margin-bottom: 10px;
+ color: #1C1D1F;
+ line-height: 1.7;
+ }
+.tool-content.content-card p:last-child {
+ margin-bottom: 0;
+ }
+
+ /* ========== INFO BOXES ========== */
+.tool-content.info-box {
+ padding: 20px 24px;
+ border-radius: 8px;
+ margin-bottom: 16px;
+ border-left: 4px solid;
+ }
+.tool-content.info-box.okr {
+ background: var(--sec-okr-bg);
+ border-color: var(--sec-okr);
+ }
+.tool-content.info-box.example {
+ background: var(--sec-example-bg);
+ border-color: var(--sec-example);
+ }
+.tool-content.info-box.kpi {
+ background: var(--sec-kpi-bg);
+ border-color: var(--sec-kpi);
+ }
+.tool-content.info-box.template {
+ background: var(--sec-template-bg);
+ border-color: var(--sec-template);
+ }
+.tool-content.info-box.checklist {
+ background: var(--sec-checklist-bg);
+ border-color: var(--sec-checklist);
+ }
+.tool-content.info-box-title {
+ font-weight: 700;
+ font-size: 14px;
+ margin-bottom: 6px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.info-box.okr.info-box-title { color: var(--sec-okr); }
+.tool-content.info-box.example.info-box-title { color: var(--sec-example); }
+.tool-content.info-box.kpi.info-box-title { color: var(--sec-kpi); }
+.tool-content.info-box.template.info-box-title { color: var(--sec-template); }
+.tool-content.info-box.checklist.info-box-title { color: var(--sec-checklist); }
+
+ /* ========== OKR CARDS ========== */
+.tool-content.okr-objective {
+ background: white;
+ border-radius: 12px;
+ margin-bottom: 20px;
+ overflow: hidden;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.okr-objective-header {
+ background: #E63946;
+ color: white;
+ padding: 14px 20px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+.tool-content.okr-obj-badge {
+ background: #FF8C00;
+ color: #fff;
+ font-weight: 800;
+ font-size: 12px;
+ padding: 3px 10px;
+ border-radius: 4px;
+ white-space: nowrap;
+ }
+.tool-content.okr-obj-text {
+ font-weight: 700;
+ font-size: 15px;
+ }
+.tool-content.okr-kr-list {
+ padding: 20px 24px;
+ }
+.tool-content.okr-kr {
+ display: flex;
+ align-items: flex-start;
+ gap: 12px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.okr-kr:last-child {
+ border-bottom: none;
+ }
+.tool-content.kr-badge {
+ background: var(--sec-okr-bg);
+ color: var(--sec-okr);
+ font-weight: 700;
+ font-size: 11px;
+ padding: 2px 8px;
+ border-radius: 4px;
+ white-space: nowrap;
+ flex-shrink: 0;
+ margin-top: 2px;
+ }
+.tool-content.kr-content {
+ flex: 1;
+ }
+.tool-content.kr-text {
+ font-weight: 600;
+ font-size: 14px;
+ margin-bottom: 4px;
+ }
+.tool-content.kr-detail {
+ font-size: 13px;
+ color: #6B7280;
+ }
+.tool-content.kr-progress {
+ width: 60px;
+ flex-shrink: 0;
+ text-align: right;
+ }
+.tool-content.kr-progress-bar {
+ height: 6px;
+ background: #E2E8F0;
+ border-radius: 3px;
+ overflow: hidden;
+ margin-bottom: 3px;
+ }
+.tool-content.kr-progress-fill {
+ height: 100%;
+ border-radius: 3px;
+ transition: width 0.5s ease;
+ }
+.tool-content.kr-progress-text {
+ font-size: 11px;
+ font-weight: 700;
+ color: #6B7280;
+ }
+
+ /* ========== KPI GRID ========== */
+.tool-content.kpi-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 12px;
+ margin-bottom: 16px;
+ }
+.tool-content.kpi-card {
+ background: white;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 16px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ position: relative;
+ overflow: hidden;
+ }
+.tool-content.kpi-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 3px;
+ }
+.tool-content.kpi-card.growth::before { background: #28A745; }
+.tool-content.kpi-card.revenue::before { background: #FF8C00; }
+.tool-content.kpi-card.efficiency::before { background: #FF8C00; }
+.tool-content.kpi-card.retention::before { background: #6B7280; }
+.tool-content.kpi-card.health::before { background: #DC3545; }
+.tool-content.kpi-number {
+ font-size: 12px;
+ font-weight: 700;
+ color: #6B7280;
+ margin-bottom: 4px;
+ }
+.tool-content.kpi-name {
+ font-size: 15px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 4px;
+ }
+.tool-content.kpi-formula {
+ font-family: 'Courier New', monospace;
+ font-size: 12px;
+ background: #F8FAFC;
+ padding: 4px 8px;
+ border-radius: 4px;
+ border: 1px solid #E2E8F0;
+ color: #E63946;
+ margin-bottom: 6px;
+ display: inline-block;
+ }
+.tool-content.kpi-desc {
+ font-size: 13px;
+ color: #6B7280;
+ line-height: 1.5;
+ }
+.tool-content.kpi-benchmark {
+ font-size: 12px;
+ font-weight: 600;
+ color: #28A745;
+ margin-top: 6px;
+ }
+
+ /* ========== TEMPLATE TABLE ========== */
+.tool-content.template-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ margin-bottom: 16px;
+ }
+.tool-content.template-table th {
+ background: #E63946;
+ color: white;
+ padding: 10px 12px;
+ text-align: left;
+ font-weight: 600;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.template-table td {
+ padding: 10px 12px;
+ border-bottom: 1px solid #E2E8F0;
+ vertical-align: top;
+ }
+.tool-content.template-table tr:nth-child(even) {
+ background: #F8FAFC;
+ }
+.tool-content.template-table tr:hover {
+ background: var(--sec-okr-bg);
+ }
+
+ /* ========== CHECKLIST ========== */
+.tool-content.checklist {
+ list-style: none;
+ padding: 0;
+ }
+.tool-content.checklist li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 14px;
+ }
+.tool-content.checklist li:last-child {
+ border-bottom: none;
+ }
+.tool-content.check-icon {
+ width: 22px;
+ height: 22px;
+ border-radius: 50%;
+ border: 2px solid #E2E8F0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ font-size: 12px;
+ margin-top: 1px;
+ color: transparent;
+ transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.checklist li:hover.check-icon {
+ border-color: #28A745;
+ color: #28A745;
+ }
+.tool-content.check-text strong {
+ color: #E63946;
+ }
+
+ /* ========== RESPONSIVE ========== */
+ @media (max-width: 768px) {
+.tool-content.section-title {
+ font-size: 18px;
+ }
+.tool-content.kpi-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.content-card {
+ padding: 16px;
+ }
+.tool-content.template-table {
+ font-size: 12px;
+ }
+.tool-content.template-table th,
+.tool-content.template-table td {
+ padding: 8px;
+ }
+ }
+
+ /* ========== PRINT ========== */
+ @media print {
+.tool-content.nav-bar { display: none; }
+.tool-content.okr-objective-header,
+.tool-content.kpi-card,
+.tool-content.info-box,
+.tool-content.template-table thead th {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">OKR + KPI Bundle</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Ziele setzen, messen und steuern - für Startups in Österreich</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/scaleup/">Phase 3: Scale-Up</a>
+ <span class="separator">/</span>
+ <span class="current">OKR + KPI Bundle</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 960px;">
+
+ <!-- ========== NAVIGATION ========== -->
+ <nav class="nav-bar">
+ <a href="#was-sind-okrs" class="active">Was sind OKRs?</a>
+ <a href="#framework">OKR-Framework</a>
+ <a href="#beispiele">Beispiel-OKRs</a>
+ <a href="#tracking">Tracking Template</a>
+ <a href="#kpi-dashboard">KPI Dashboard</a>
+ <a href="#checkliste">Checkliste</a>
+ </nav>
+
+ <!-- ===== SECTION 1: Was sind OKRs? ===== -->
+ <section class="section" id="was-sind-okrs">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-okr);">1</div>
+ <h2 class="section-title">Was sind OKRs?</h2>
+ </div>
+
+ <div class="content-card">
+ <h3>Objectives &amp; Key Results - das Steuerungstool für Startups</h3>
+ <p>OKRs (Objectives and Key Results) sind ein Zielsetzungs-Framework, das ambitionierte, qualitative Ziele (<strong>Objectives</strong>) mit messbaren Ergebnissen (<strong>Key Results</strong>) verbindet. Ursprünglich bei Intel entwickelt und durch Google skaliert, sind OKRs heute der Standard für wachstumsorientierte Unternehmen.</p>
+
+ <div class="info-box okr">
+ <div class="info-box-title">Grundprinzip</div>
+ <p><strong>Objective:</strong> Was will ich erreichen? (qualitativ, inspirierend, ambitioniert)<br>
+ <strong>Key Results:</strong> Woran messe ich den Erfolg? (quantitativ, messbar, zeitgebunden)</p>
+ </div>
+
+ <p><strong>Warum OKRs für Startups in Österreich?</strong></p>
+ <p>Gerade in der Frühphase musst du schnell Entscheidungen treffen und dein Team auf wenige, wichtige Ziele ausrichten. OKRs helfen dir dabei, denn sie zwingen dich zur Priorisierung. Statt 20 Dinge gleichzeitig halbherzig zu machen, fokussierst du dich auf 3-5 Objectives pro Quartal. In unserer Erfahrung aus der Arbeit mit über 40 Startups ist genau dieser Fokus der Unterschied zwischen Wachstum und Stillstand.</p>
+
+ <div class="info-box okr">
+ <div class="info-box-title">OKR vs. KPI - der Unterschied</div>
+ <p><strong>OKRs</strong> beschreiben, wohin du willst (zukunftsorientiert, quartalsweise, ambitioniert).<br>
+ <strong>KPIs</strong> zeigen, wie gesund dein Geschäft aktuell ist (laufend, operativ, Status quo).<br>
+ Du brauchst beides: OKRs für Richtung, KPIs für Kontrolle.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ===== SECTION 2: OKR-Framework ===== -->
+ <section class="section" id="framework">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-okr);">2</div>
+ <h2 class="section-title">OKR-Framework für Startups</h2>
+ </div>
+
+ <div class="content-card">
+ <h3>Der Quarterly Cycle: So funktioniert der OKR-Rhythmus</h3>
+
+ <div class="info-box okr">
+ <div class="info-box-title">OKR-Zyklus (12 Wochen)</div>
+ <p>
+ <strong>Woche 0:</strong> OKR Planning - Objectives &amp; Key Results für das Quartal festlegen<br>
+ <strong>Woche 1-12:</strong> Umsetzung mit wöchentlichen Check-ins (15 Min.)<br>
+ <strong>Woche 6:</strong> Mid-Quarter Review - Sind wir auf Kurs?<br>
+ <strong>Woche 12:</strong> OKR Review &amp; Scoring (0-100%)<br>
+ <strong>Woche 12+:</strong> Retrospektive - Was lernen wir für nächstes Quartal?
+ </p>
+ </div>
+
+ <h3>Kaskadierung: Company, Team, Individual</h3>
+ <p>OKRs funktionieren auf drei Ebenen. Wichtig: Nicht alles muss top-down sein. Die besten OKRs entstehen im Dialog.</p>
+
+ <div class="table-responsive">
+ <table class="template-table">
+ <thead>
+ <tr>
+ <th>Ebene</th>
+ <th>Wer setzt?</th>
+ <th>Anzahl Objectives</th>
+ <th>Zeithorizont</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Company OKRs</strong></td>
+ <td>Gründer:innen / GF</td>
+ <td>2-3 Objectives</td>
+ <td>Quartal (optional: Jahres-OKRs als Nordstern)</td>
+ </tr>
+ <tr>
+ <td><strong>Team OKRs</strong></td>
+ <td>Team-Leads + Team</td>
+ <td>2-3 Objectives</td>
+ <td>Quartal, abgeleitet von Company OKRs</td>
+ </tr>
+ <tr>
+ <td><strong>Individual OKRs</strong></td>
+ <td>Jede:r Mitarbeiter:in</td>
+ <td>1-2 Objectives</td>
+ <td>Quartal, optional bei Startups &lt;10 Personen</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="info-box okr">
+ <div class="info-box-title">Praxis-Tipp</div>
+ <p>Bei Teams unter 10 Personen reichen oft Company OKRs. Individual OKRs machen erst ab 10+ Mitarbeiter:innen Sinn, wenn nicht mehr alle am selben Tisch sitzen.</p>
+ </div>
+
+ <h3>Die goldenen OKR-Regeln</h3>
+ <div class="table-responsive">
+ <table class="template-table">
+ <thead>
+ <tr>
+ <th>Regel</th>
+ <th>Richtig</th>
+ <th>Falsch</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Max. 3-5 Objectives pro Ebene</td>
+ <td>3 fokussierte Objectives</td>
+ <td>10 Objectives, die sich überlappen</td>
+ </tr>
+ <tr>
+ <td>Max. 3-5 Key Results pro Objective</td>
+ <td>3 messbare Key Results</td>
+ <td>8 Key Results, die niemand trackt</td>
+ </tr>
+ <tr>
+ <td>Key Results sind Outcomes, keine Tasks</td>
+ <td>&bdquo;Churn von 5% auf 3% senken&ldquo;</td>
+ <td>&bdquo;Onboarding-E-Mails verschicken&ldquo;</td>
+ </tr>
+ <tr>
+ <td>Stretch Goals: 70% Erreichung = gut</td>
+ <td>&bdquo;MRR auf EUR 80K steigern&ldquo; (ambitioniert)</td>
+ <td>&bdquo;MRR auf EUR 52K steigern&ldquo; (sicher)</td>
+ </tr>
+ <tr>
+ <td>OKRs sind NICHT an Bonus gekoppelt</td>
+ <td>OKRs als Steuerungstool</td>
+ <td>OKRs als Gehalts-Verhandlung</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </section>
+
+ <!-- ===== SECTION 3: Beispiel-OKRs ===== -->
+ <section class="section" id="beispiele">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-example);">3</div>
+ <h2 class="section-title">Beispiel-OKRs für ein typisches Startup</h2>
+ </div>
+
+ <div class="info-box example">
+ <div class="info-box-title">Szenario</div>
+ <p>SaaS-Startup aus Wien, 8 Mitarbeiter:innen, Post-Seed-Phase, EUR 35K MRR, bereitet sich auf Series A vor. Q2/2026 OKRs.</p>
+ </div>
+
+ <!-- Objective 1 -->
+ <div class="okr-objective">
+ <div class="okr-objective-header">
+ <span class="okr-obj-badge">O1</span>
+ <span class="okr-obj-text">Wir erreichen Product-Market Fit und beweisen Skalierbarkeit</span>
+ </div>
+ <div class="okr-kr-list">
+ <div class="okr-kr">
+ <span class="kr-badge">KR 1.1</span>
+ <div class="kr-content">
+ <div class="kr-text">MRR von EUR 35K auf EUR 55K steigern</div>
+ <div class="kr-detail">Wachstum durch Upselling und neue Enterprise-Kunden. Fokus auf DACH-Markt.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:35%; background: #FF8C00;"></div></div>
+ <div class="kr-progress-text">35%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 1.2</span>
+ <div class="kr-content">
+ <div class="kr-text">Net Revenue Retention auf 115% erhöhen</div>
+ <div class="kr-detail">Bestehende Kund:innen expandieren schneller als Churn. Zeigt echten Product-Market Fit.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:50%; background: #28A745;"></div></div>
+ <div class="kr-progress-text">50%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 1.3</span>
+ <div class="kr-content">
+ <div class="kr-text">Churn Rate von 4,5% auf unter 3% senken</div>
+ <div class="kr-detail">Durch verbessertes Onboarding und proaktiven Customer Success.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:20%; background: #DC3545;"></div></div>
+ <div class="kr-progress-text">20%</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Objective 2 -->
+ <div class="okr-objective">
+ <div class="okr-objective-header">
+ <span class="okr-obj-badge">O2</span>
+ <span class="okr-obj-text">Wir bauen eine skalierbare Sales-Engine auf</span>
+ </div>
+ <div class="okr-kr-list">
+ <div class="okr-kr">
+ <span class="kr-badge">KR 2.1</span>
+ <div class="kr-content">
+ <div class="kr-text">Inbound-Pipeline auf EUR 200K ARR aufbauen</div>
+ <div class="kr-detail">Content Marketing + SEO + LinkedIn Ads als primäre Kanäle.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:45%; background: #28A745;"></div></div>
+ <div class="kr-progress-text">45%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 2.2</span>
+ <div class="kr-content">
+ <div class="kr-text">CAC/LTV-Ratio auf 1:4 verbessern</div>
+ <div class="kr-detail">Aktuell bei 1:2,5. Optimierung durch bessere Conversion und höheren LTV.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:30%; background: #FF8C00;"></div></div>
+ <div class="kr-progress-text">30%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 2.3</span>
+ <div class="kr-content">
+ <div class="kr-text">Sales-Zyklus von 60 auf 40 Tage verkürzen</div>
+ <div class="kr-detail">Durch standardisiertes Demo-Skript, Proposal-Templates und schnelleres Follow-up.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:25%; background: #DC3545;"></div></div>
+ <div class="kr-progress-text">25%</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Objective 3 -->
+ <div class="okr-objective">
+ <div class="okr-objective-header">
+ <span class="okr-obj-badge">O3</span>
+ <span class="okr-obj-text">Wir werden Series-A-ready</span>
+ </div>
+ <div class="okr-kr-list">
+ <div class="okr-kr">
+ <span class="kr-badge">KR 3.1</span>
+ <div class="kr-content">
+ <div class="kr-text">Investor Data Room vollständig aufbauen</div>
+ <div class="kr-detail">Alle Finanzen, Legal Docs, Cap Table, Metriken-Dashboard, Team-Übersicht dokumentiert.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:60%; background: #28A745;"></div></div>
+ <div class="kr-progress-text">60%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 3.2</span>
+ <div class="kr-content">
+ <div class="kr-text">Warm Intros zu 15 relevanten VCs in DACH erhalten</div>
+ <div class="kr-detail">Über Netzwerk, Accelerator-Alumni und bestehende Angels.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:40%; background: #FF8C00;"></div></div>
+ <div class="kr-progress-text">40%</div>
+ </div>
+ </div>
+ <div class="okr-kr">
+ <span class="kr-badge">KR 3.3</span>
+ <div class="kr-content">
+ <div class="kr-text">Monatliches Investor-Update an 30+ Kontakte senden</div>
+ <div class="kr-detail">Regelmäßige Updates bauen Vertrauen und Beziehungen auf, bevor du Geld brauchst.</div>
+ </div>
+ <div class="kr-progress">
+ <div class="kr-progress-bar"><div class="kr-progress-fill" style="width:75%; background: #28A745;"></div></div>
+ <div class="kr-progress-text">75%</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ===== SECTION 4: Tracking Template ===== -->
+ <section class="section" id="tracking">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-template);">4</div>
+ <h2 class="section-title">OKR-Tracking Template Struktur</h2>
+ </div>
+
+ <div class="content-card">
+ <h3>So baust du dein OKR-Tracking auf (Google Sheets / Notion)</h3>
+ <p>Du brauchst kein teures OKR-Tool. Ein gut strukturiertes Google Sheet oder Notion Board reicht für Startups bis 30 Mitarbeiter:innen völlig aus.</p>
+
+ <div class="info-box template">
+ <div class="info-box-title">Google Sheets Struktur</div>
+ <p>Erstelle ein Sheet mit folgenden Tabs: (1) Company OKRs, (2) Team OKRs, (3) Weekly Check-in, (4) Scoring History</p>
+ </div>
+
+ <h3>Tab 1: Company OKRs</h3>
+ <div class="table-responsive">
+ <table class="template-table">
+ <thead>
+ <tr>
+ <th>Spalte</th>
+ <th>Inhalt</th>
+ <th>Beispiel</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>A: Objective</td>
+ <td>Qualitatives Ziel</td>
+ <td>Wir erreichen Product-Market Fit</td>
+ </tr>
+ <tr>
+ <td>B: Key Result</td>
+ <td>Messbares Ergebnis</td>
+ <td>MRR von EUR 35K auf EUR 55K</td>
+ </tr>
+ <tr>
+ <td>C: Owner</td>
+ <td>Verantwortliche Person</td>
+ <td>Anna (CEO)</td>
+ </tr>
+ <tr>
+ <td>D: Startwert</td>
+ <td>Baseline zu Quartalsbeginn</td>
+ <td>EUR 35.000</td>
+ </tr>
+ <tr>
+ <td>E: Zielwert</td>
+ <td>Target am Quartalsende</td>
+ <td>EUR 55.000</td>
+ </tr>
+ <tr>
+ <td>F: Aktueller Wert</td>
+ <td>Wird wöchentlich aktualisiert</td>
+ <td>EUR 42.000</td>
+ </tr>
+ <tr>
+ <td>G: Fortschritt %</td>
+ <td>Formel: (Aktuell - Start) / (Ziel - Start)</td>
+ <td>35%</td>
+ </tr>
+ <tr>
+ <td>H: Status</td>
+ <td>On Track / At Risk / Off Track</td>
+ <td>On Track</td>
+ </tr>
+ <tr>
+ <td>I: Kommentar</td>
+ <td>Wöchentliches Update</td>
+ <td>Enterprise-Deal in Pipeline</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <h3>Tab 3: Weekly Check-in (15 Min.)</h3>
+ <div class="table-responsive">
+ <table class="template-table">
+ <thead>
+ <tr>
+ <th>Spalte</th>
+ <th>Inhalt</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>A: Datum</td>
+ <td>Kalenderwoche</td>
+ </tr>
+ <tr>
+ <td>B: Confidence Level</td>
+ <td>Wie zuversichtlich bist du, dass du das KR erreichst? (1-10)</td>
+ </tr>
+ <tr>
+ <td>C: Was lief gut?</td>
+ <td>1-2 Sätze</td>
+ </tr>
+ <tr>
+ <td>D: Was blockiert?</td>
+ <td>Hindernisse, die Hilfe brauchen</td>
+ </tr>
+ <tr>
+ <td>E: Nächste Schritte</td>
+ <td>Top 1-3 Aktionen für nächste Woche</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="info-box template">
+ <div class="info-box-title">Notion Alternative</div>
+ <p>In Notion kannst du OKRs als Datenbank mit Relations aufbauen: Eine Datenbank für Objectives, eine für Key Results (verlinkt), eine für Weekly Check-ins. Nutze Formeln für automatische Fortschrittsberechnung und Rollups für aggregierte Objective-Scores.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ===== SECTION 5: KPI Dashboard ===== -->
+ <section class="section" id="kpi-dashboard">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-kpi);">5</div>
+ <h2 class="section-title">SaaS KPI Dashboard - Die 15 wichtigsten Metriken</h2>
+ </div>
+
+ <div class="content-card">
+ <p>Diese 15 KPIs sollte jedes SaaS-Startup in Österreich tracken. Nicht alle sind ab Tag 1 relevant - starte mit den ersten 5 und erweitere schrittweise.</p>
+ </div>
+
+ <div class="kpi-grid">
+ <!-- KPI 1 -->
+ <div class="kpi-card revenue">
+ <div class="kpi-number">#1 - Revenue</div>
+ <div class="kpi-name">Monthly Recurring Revenue (MRR)</div>
+ <div class="kpi-formula">MRR = Summe aller monatl. Abo-Einnahmen</div>
+ <div class="kpi-desc">Die wichtigste Metrik. Zeigt, wie viel wiederkehrender Umsatz du monatlich generierst. Basis für alle Wachstumsberechnungen.</div>
+ <div class="kpi-benchmark">Benchmark: 15-20% MoM Wachstum in der Frühphase</div>
+ </div>
+
+ <!-- KPI 2 -->
+ <div class="kpi-card revenue">
+ <div class="kpi-number">#2 - Revenue</div>
+ <div class="kpi-name">Annual Recurring Revenue (ARR)</div>
+ <div class="kpi-formula">ARR = MRR x 12</div>
+ <div class="kpi-desc">Annualisierter Umsatz. Die Zahl, die Investoren am meisten interessiert. Ab EUR 1M ARR bist du Series-A-relevant.</div>
+ <div class="kpi-benchmark">Benchmark: EUR 1M+ ARR für Series A in DACH</div>
+ </div>
+
+ <!-- KPI 3 -->
+ <div class="kpi-card growth">
+ <div class="kpi-number">#3 - Growth</div>
+ <div class="kpi-name">MRR Growth Rate</div>
+ <div class="kpi-formula">Growth = (MRR_neu - MRR_alt) / MRR_alt</div>
+ <div class="kpi-desc">Monatliche Wachstumsrate deines MRR. Zeigt Momentum und ob du beschleunigst oder stagnierst.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;10% MoM = gut, &gt;20% MoM = exzellent</div>
+ </div>
+
+ <!-- KPI 4 -->
+ <div class="kpi-card retention">
+ <div class="kpi-number">#4 - Retention</div>
+ <div class="kpi-name">Churn Rate (Kundenabwanderung)</div>
+ <div class="kpi-formula">Churn = verlorene Kunden / Kunden Monatsbeginn</div>
+ <div class="kpi-desc">Wie viel Prozent deiner Kund:innen kündigen monatlich. Der stille Killer jedes SaaS-Geschäfts.</div>
+ <div class="kpi-benchmark">Benchmark: &lt;5% monatlich (B2B), &lt;7% (B2C)</div>
+ </div>
+
+ <!-- KPI 5 -->
+ <div class="kpi-card retention">
+ <div class="kpi-number">#5 - Retention</div>
+ <div class="kpi-name">Net Revenue Retention (NRR)</div>
+ <div class="kpi-formula">NRR = (MRR + Expansion - Churn) / MRR_start</div>
+ <div class="kpi-desc">Zeigt, ob bestehende Kund:innen mehr ausgeben (Expansion) als verloren geht (Churn). Über 100% = organisches Wachstum.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;110% = gut, &gt;130% = weltklasse</div>
+ </div>
+
+ <!-- KPI 6 -->
+ <div class="kpi-card efficiency">
+ <div class="kpi-number">#6 - Effizienz</div>
+ <div class="kpi-name">Customer Acquisition Cost (CAC)</div>
+ <div class="kpi-formula">CAC = (Marketing + Sales Kosten) / Neukunden</div>
+ <div class="kpi-desc">Was kostet es, einen neuen Kunden zu gewinnen? Inkl. aller Marketing- und Vertriebskosten.</div>
+ <div class="kpi-benchmark">Benchmark: CAC sollte &lt; 1/3 des LTV sein</div>
+ </div>
+
+ <!-- KPI 7 -->
+ <div class="kpi-card efficiency">
+ <div class="kpi-number">#7 - Effizienz</div>
+ <div class="kpi-name">Customer Lifetime Value (LTV / CLV)</div>
+ <div class="kpi-formula">LTV = ARPU / Churn Rate</div>
+ <div class="kpi-desc">Der erwartete Gesamtumsatz pro Kund:in über die gesamte Kundenbeziehung. Zusammen mit CAC die wichtigste Unit-Economics-Metrik.</div>
+ <div class="kpi-benchmark">Benchmark: LTV:CAC &gt; 3:1</div>
+ </div>
+
+ <!-- KPI 8 -->
+ <div class="kpi-card efficiency">
+ <div class="kpi-number">#8 - Effizienz</div>
+ <div class="kpi-name">CAC Payback Period</div>
+ <div class="kpi-formula">Payback = CAC / (ARPU x Bruttomarge)</div>
+ <div class="kpi-desc">Wie viele Monate dauert es, bis ein Neukunde die Akquisekosten eingespielt hat? Kritisch für Cash-Planung.</div>
+ <div class="kpi-benchmark">Benchmark: &lt;12 Monate (B2B SaaS)</div>
+ </div>
+
+ <!-- KPI 9 -->
+ <div class="kpi-card health">
+ <div class="kpi-number">#9 - Health</div>
+ <div class="kpi-name">Burn Rate (monatlich)</div>
+ <div class="kpi-formula">Net Burn = Ausgaben - Einnahmen (pro Monat)</div>
+ <div class="kpi-desc">Wie viel Geld verlierst du monatlich netto? Grundlage für Runway-Berechnung. In Österreich durch Förderungen (FFG, AWS) oft reduzierbar.</div>
+ <div class="kpi-benchmark">Benchmark: Kontextabhängig. Runway &gt;12 Monate halten!</div>
+ </div>
+
+ <!-- KPI 10 -->
+ <div class="kpi-card health">
+ <div class="kpi-number">#10 - Health</div>
+ <div class="kpi-name">Runway (Monate)</div>
+ <div class="kpi-formula">Runway = Cash im Konto / Net Burn Rate</div>
+ <div class="kpi-desc">Wie lange kannst du mit dem aktuellen Geld weitermachen? Starte Fundraising bei 6+ Monaten Runway.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;12 Monate = komfortabel, &lt;6 = kritisch</div>
+ </div>
+
+ <!-- KPI 11 -->
+ <div class="kpi-card growth">
+ <div class="kpi-number">#11 - Growth</div>
+ <div class="kpi-name">Conversion Rate (Trial-to-Paid)</div>
+ <div class="kpi-formula">Conversion = zahlende Kunden / Trial-Anmeldungen</div>
+ <div class="kpi-desc">Wie viele Trial-Nutzer:innen werden zu zahlenden Kund:innen? Zeigt, wie gut dein Produkt und Onboarding funktionieren.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;5% (Self-Serve), &gt;25% (Sales-Led)</div>
+ </div>
+
+ <!-- KPI 12 -->
+ <div class="kpi-card growth">
+ <div class="kpi-number">#12 - Growth</div>
+ <div class="kpi-name">Aktivierungsrate</div>
+ <div class="kpi-formula">Aktivierung = Nutzer mit Aha-Moment / Gesamt-Signups</div>
+ <div class="kpi-desc">Wie viele angemeldete Nutzer:innen erleben den Kern-Mehrwert deines Produkts? Definiere deinen &bdquo;Aha-Moment&ldquo; klar.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;40% innerhalb der ersten 7 Tage</div>
+ </div>
+
+ <!-- KPI 13 -->
+ <div class="kpi-card retention">
+ <div class="kpi-number">#13 - Retention</div>
+ <div class="kpi-name">Net Promoter Score (NPS)</div>
+ <div class="kpi-formula">NPS = % Promoter (9-10) - % Detractors (0-6)</div>
+ <div class="kpi-desc">Wie wahrscheinlich empfehlen dich deine Kund:innen weiter? Einfach zu erheben, starker Indikator für Zufriedenheit.</div>
+ <div class="kpi-benchmark">Benchmark: &gt;40 = gut, &gt;60 = exzellent</div>
+ </div>
+
+ <!-- KPI 14 -->
+ <div class="kpi-card efficiency">
+ <div class="kpi-number">#14 - Effizienz</div>
+ <div class="kpi-name">Gross Margin (Bruttomarge)</div>
+ <div class="kpi-formula">Gross Margin = (Umsatz - COGS) / Umsatz</div>
+ <div class="kpi-desc">Wie profitabel ist dein Produkt vor Overhead-Kosten? Bei SaaS sollte die Bruttomarge hoch sein (Hosting, Support = COGS).</div>
+ <div class="kpi-benchmark">Benchmark: &gt;70% (SaaS), &gt;50% (Marketplace)</div>
+ </div>
+
+ <!-- KPI 15 -->
+ <div class="kpi-card health">
+ <div class="kpi-number">#15 - Health</div>
+ <div class="kpi-name">Quick Ratio (SaaS)</div>
+ <div class="kpi-formula">Quick Ratio = (New MRR + Expansion) / (Churn + Contraction)</div>
+ <div class="kpi-desc">Misst die Effizienz deines Wachstums: Wie viel neuer Umsatz kommt rein im Verhältnis zu dem, was du verlierst?</div>
+ <div class="kpi-benchmark">Benchmark: &gt;4 = gesundes Wachstum</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ===== SECTION 6: Checkliste ===== -->
+ <section class="section" id="checkliste">
+ <div class="section-header">
+ <div class="section-number" style="background: var(--sec-checklist);">6</div>
+ <h2 class="section-title">Checkliste für den OKR-Prozess</h2>
+ </div>
+
+ <div class="content-card">
+ <h3>Vor dem Quartal (Woche 0)</h3>
+ <ul class="checklist">
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Review des letzten Quartals abschließen</strong> - Was haben wir erreicht? Was nicht? Warum?</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Company-Strategie und Jahres-Ziele überprüfen</strong> - Sind sie noch aktuell? Hat sich der Markt verändert?</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>2-3 Company Objectives für das Quartal definieren</strong> - Ambitioniert, aber nicht unrealistisch. Der &bdquo;Stretch&ldquo; soll motivieren, nicht frustrieren.</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Je 3 Key Results pro Objective formulieren</strong> - Messbar, mit klarem Startwert und Zielwert. Formel: &bdquo;Von X auf Y bis [Quartalsende].&ldquo;</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Owner für jedes Key Result benennen</strong> - Eine Person, die verantwortlich ist (nicht: das gesamte Team).</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Tracking-Tool einrichten</strong> - Google Sheet, Notion oder OKR-Tool mit allen KRs, Startwerten und Zielwerten.</span>
+ </li>
+ </ul>
+
+ <h3 style="margin-top: 20px;">Während des Quartals (Woche 1-12)</h3>
+ <ul class="checklist">
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Wöchentlicher OKR Check-in (15 Min.)</strong> - Jeder Owner berichtet: Fortschritt, Confidence Level (1-10), Blocker.</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Confidence Level unter 5?</strong> - Sofort eskalieren. Braucht das KR mehr Ressourcen oder muss es angepasst werden?</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Mid-Quarter Review (Woche 6)</strong> - Tieferer Check: Sind wir auf Kurs? Müssen wir Priorities shiften?</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>OKRs sichtbar halten</strong> - Dashboard im Büro, Slack-Channel, Start jedes Team-Meetings.</span>
+ </li>
+ </ul>
+
+ <h3 style="margin-top: 20px;">Nach dem Quartal (Woche 12+)</h3>
+ <ul class="checklist">
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Scoring durchführen</strong> - Jedes KR bewerten: 0% bis 100%. 70% = gutes Stretch Goal erreicht.</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Retrospektive</strong> - Was haben wir über unseren OKR-Prozess gelernt? Waren die KRs messbar genug? Zu ambitioniert?</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Ergebnisse dokumentieren</strong> - Scoring History pflegen für Langzeit-Trends.</span>
+ </li>
+ <li>
+ <span class="check-icon">&#10003;</span>
+ <span class="check-text"><strong>Learnings in nächstes Quartal einfließen lassen</strong> - Unerledigte KRs nicht automatisch übernehmen. Neu bewerten.</span>
+ </li>
+ </ul>
+
+ <div class="info-box checklist" style="margin-top: 20px;">
+ <div class="info-box-title">Häufige Fehler, die wir bei Startups sehen</div>
+ <p>
+ <strong>1. Zu viele OKRs:</strong> Mehr als 5 Objectives = kein Fokus.<br>
+ <strong>2. Tasks statt Outcomes:</strong> &bdquo;Landing Page bauen&ldquo; ist kein Key Result. &bdquo;100 Leads über Landing Page generieren&ldquo; schon.<br>
+ <strong>3. Set-and-Forget:</strong> OKRs ohne wöchentliche Check-ins sind nutzlos.<br>
+ <strong>4. OKRs an Gehalt koppeln:</strong> Das zerstört die Bereitschaft, ambitionierte Ziele zu setzen.<br>
+ <strong>5. Keine Baseline:</strong> Ohne Startwert kannst du Fortschritt nicht messen.
+ </p>
+ </div>
+ </div>
+ </section>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">OKRs in der Praxis umsetzen?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Bei StartUp Burgenland helfen wir dir, deine OKRs aufzusetzen, die richtigen KPIs zu tracken und dein Startup datengetrieben zu steuern - individuell und praxisnah.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

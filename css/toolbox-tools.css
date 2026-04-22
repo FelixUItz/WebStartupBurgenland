@@ -1,0 +1,201 @@
+/* ============================================
+   toolbox-tools.css
+   Shared component styles for all 21 toolbox tool pages.
+   Loaded AFTER the main site CSS stack (vendors, style, responsive, startup-burgenland).
+   Only contains tool-specific components that Bootstrap doesn't provide.
+   ============================================ */
+
+/* ---------- DESIGN TOKENS ---------- */
+:root {
+  --tb-primary: #E63946;
+  --tb-accent: #FF8C00;
+  --tb-success: #28A745;
+  --tb-danger: #DC3545;
+  --tb-text: #1C1D1F;
+  --tb-text-light: #6B7280;
+  --tb-bg-light: #F8FAFC;
+  --tb-border: #E2E8F0;
+  --tb-phase-1: #E63946;
+  --tb-phase-2: #28A745;
+  --tb-phase-3: #FF8C00;
+}
+
+/* ---------- FOCUS VISIBLE ---------- */
+:focus-visible {
+  outline: 2px solid var(--tb-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- BREADCRUMB BAR ---------- */
+.tb-breadcrumb-bar {
+  background: var(--tb-bg-light);
+  border-bottom: 1px solid var(--tb-border);
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.tb-breadcrumb-bar a {
+  color: var(--tb-text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tb-breadcrumb-bar a:hover {
+  color: var(--tb-primary);
+  text-decoration: underline;
+}
+
+.tb-breadcrumb-bar .separator {
+  color: var(--tb-text-light);
+  margin: 0 6px;
+}
+
+.tb-breadcrumb-bar .current {
+  color: var(--tb-text);
+  font-weight: 600;
+}
+
+/* ---------- TOOL CONTENT WRAPPER ---------- */
+.tool-content {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* ---------- PHASE BADGES ---------- */
+.tb-phase-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tb-phase-badge--1 { background: var(--tb-phase-1); }
+.tb-phase-badge--2 { background: var(--tb-phase-2); }
+.tb-phase-badge--3 { background: var(--tb-phase-3); }
+.tb-phase-badge--all { background: var(--tb-text-light); }
+
+/* ---------- INFO / TIP / WARNING BOXES ---------- */
+.tb-box {
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tb-box .tb-box-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.tb-box--tip {
+  background: #FFF7ED;
+  border-left: 4px solid var(--tb-accent);
+  color: #92400E;
+}
+
+.tb-box--warning {
+  background: #FEF2F2;
+  border-left: 4px solid var(--tb-danger);
+  color: #991B1B;
+}
+
+.tb-box--success {
+  background: #F0FDF4;
+  border-left: 4px solid var(--tb-success);
+  color: #166534;
+}
+
+.tb-box--info {
+  background: #EFF6FF;
+  border-left: 4px solid #3B82F6;
+  color: #1E40AF;
+}
+
+/* ---------- CTA SECTION ---------- */
+.tb-cta-section {
+  background: linear-gradient(135deg, var(--tb-primary) 0%, #C62833 100%);
+  padding: 60px 0;
+}
+
+/* ---------- TOOL CARD COMPONENTS ---------- */
+.tb-section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tb-accent);
+  margin-bottom: 4px;
+}
+
+/* ---------- PRINT BASE RULES ---------- */
+@media print {
+  /* Hide site chrome */
+  header, footer, .tb-breadcrumb-bar, .tb-cta-section,
+  #cookieConsent, .skip-navigation, .scroll-progress {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .tool-content {
+    padding: 0 !important;
+  }
+
+  /* A4 portrait default */
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}
+
+/* ---------- PRINT: CHEATSHEET PAGES (A4 portrait) ---------- */
+@media print {
+  .tb-print-a4 .tb-print-page {
+    width: 210mm;
+    min-height: 277mm;
+    padding: 0;
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .tb-print-a4 .tb-print-page:last-child {
+    page-break-after: auto;
+  }
+}
+
+/* ---------- PRINT: CANVAS PAGES (A4 landscape) ---------- */
+@media print {
+  .tb-print-landscape {
+    /* Override @page for landscape canvas */
+  }
+
+  .tb-print-landscape .tb-print-page {
+    width: 297mm;
+    height: 210mm;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+/* Ensure print color preservation for common elements */
+@media print {
+  .tb-phase-badge, .badge, .bg-danger, .bg-success, .bg-warning,
+  .bg-primary, .bg-info, .table thead th, .btn {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

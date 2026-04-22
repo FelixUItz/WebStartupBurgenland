@@ -1,0 +1,1699 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Startup Glossar DE-EN | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Die wichtigsten Startup-Begriffe verständlich erklärt. 110+ Einträge mit deutscher Erklärung, englischem Fachbegriff, Formeln und Beispielen.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/startup-glossar/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/startup-glossar/">
+ <meta property="og:title" content="Startup Glossar DE-EN | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Die wichtigsten Startup-Begriffe verständlich erklärt. 110+ Einträge mit deutscher Erklärung, englischem Fachbegriff, Formeln und Beispielen.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Startup Glossar DE-EN | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Glossary-specific styles */
+.tool-content.glossary-search-section {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 12px;
+ padding: 24px;
+ margin-bottom: 30px;
+ }
+.tool-content.search-wrap { position: relative; }
+.tool-content.search-wrap svg {
+ position: absolute; left: 16px; top: 50%;
+ transform: translateY(-50%); color: #6B7280; pointer-events: none;
+ }
+.tool-content #searchInput {
+ width: 100%; padding: 14px 16px 14px 48px; font-size: 16px;
+ font-family: inherit; border: 2px solid #E2E8F0; border-radius: 12px;
+ background: #F8FAFC; transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+ }
+.tool-content #searchInput:focus {
+ border-color: #FF8C00; box-shadow: 0 0 0 3px rgba(230,57,70,0.15); background: #fff;
+ }
+.tool-content #searchInput::placeholder { color: #9CA3AF; }
+.tool-content.search-info {
+ display: flex; justify-content: space-between; align-items: center;
+ margin-top: 10px; font-size: 13px; color: #6B7280;
+ }
+.tool-content #resultCount { font-weight: 600; color: #E63946; }
+.tool-content.filters { padding: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-content.filter-btn {
+ display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px;
+ font-size: 13px; font-family: inherit; font-weight: 500;
+ border: 1.5px solid #E2E8F0; border-radius: 20px; background: #fff;
+ color: #1C1D1F; cursor: pointer; transition: all 0.15s; white-space: nowrap;
+ }
+.tool-content.filter-btn:hover { border-color: #FF8C00; color: #E63946; }
+.tool-content.filter-btn.active { background: #E63946; color: #fff; border-color: #E63946; }
+.tool-content.alpha-nav { padding: 14px 0 6px; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.tool-content.alpha-btn {
+ width: 34px; height: 34px; display: inline-flex; align-items: center;
+ justify-content: center; font-size: 13px; font-weight: 600; font-family: inherit;
+ border: 1.5px solid #E2E8F0; border-radius: 8px; background: #fff;
+ color: #1C1D1F; cursor: pointer; transition: all 0.15s;
+ }
+.tool-content.alpha-btn:hover { border-color: #FF8C00; color: #E63946; }
+.tool-content.alpha-btn.active { background: #FF8C00; color: #fff; border-color: #FF8C00; }
+.tool-content.alpha-btn.disabled { opacity: 0.3; cursor: default; }
+.tool-content.glossary { padding: 0 0 20px; }
+.tool-content.letter-group { margin-bottom: 32px; }
+.tool-content.letter-heading {
+ display: flex; align-items: center; gap: 12px; margin-bottom: 16px; scroll-margin-top: 180px;
+ }
+.tool-content.letter-heading span {
+ display: inline-flex; align-items: center; justify-content: center;
+ width: 44px; height: 44px; background: #E63946; color: #fff;
+ font-size: 22px; font-weight: 800; border-radius: 10px; flex-shrink: 0;
+ }
+.tool-content.letter-heading hr { flex: 1; border: none; border-top: 2px solid #E2E8F0; }
+.tool-content.entry {
+ background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+ padding: 20px 24px; margin-bottom: 12px; transition: box-shadow 0.2s, border-color 0.2s;
+ }
+.tool-content.entry:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); border-color: #D1D5DB; }
+.tool-content.entry-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.tool-content.entry-term { font-size: 18px; font-weight: 700; color: #E63946; }
+.tool-content.entry-en { font-size: 14px; color: #6B7280; font-weight: 400; }
+.tool-content.entry-short { font-size: 15px; font-weight: 500; color: #1C1D1F; margin-bottom: 8px; }
+.tool-content.entry-cat {
+ display: inline-flex; align-items: center; gap: 4px; font-size: 12px;
+ font-weight: 600; padding: 3px 10px; border-radius: 12px; margin-bottom: 10px;
+ }
+.tool-content.cat-finanzkennzahl { background: #FEF2F2; color: #E63946; }
+.tool-content.cat-legal { background: #F3F4F6; color: #1C1D1F; }
+.tool-content.cat-fundraising { background: #FFF7ED; color: #C26900; }
+.tool-content.cat-produkt { background: #DCFCE7; color: #065F46; }
+.tool-content.cat-growth { background: #FEF2F2; color: #C62833; }
+.tool-content.cat-organisation { background: #F3F4F6; color: #4B5563; }
+.tool-content.entry-cat svg,.tool-content.filter-btn svg { width: 14px; height: 14px; vertical-align: -2px; flex-shrink: 0; }
+.tool-content.entry-desc { font-size: 14px; color: #374151; line-height: 1.65; margin-bottom: 0; }
+.tool-content.entry-formula {
+ margin-top: 10px; padding: 10px 14px; background: #F3F4F6; border-radius: 8px;
+ font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px;
+ color: #E63946; border-left: 3px solid #FF8C00;
+ }
+.tool-content.entry-example { margin-top: 8px; font-size: 13px; color: #6B7280; font-style: italic; }
+.tool-content.entry.hidden { display: none; }
+.glossar-count-badge {
+ display: inline-block; margin-top: 10px; background: rgba(255,255,255,0.15);
+ border: 1px solid rgba(255,255,255,0.25); border-radius: 20px;
+ padding: 5px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.9);
+ }
+.tool-content.no-results { text-align: center; padding: 60px 20px; color: #6B7280; display: none; }
+.tool-content.no-results.visible { display: block; }
+.tool-content.no-results h3 { font-size: 20px; color: #1C1D1F; margin-bottom: 8px; }
+ @media (max-width: 640px) {
+.tool-content.entry { padding: 16px; }
+.tool-content.entry-term { font-size: 16px; }
+.tool-content.alpha-btn { width: 30px; height: 30px; font-size: 12px; }
+.tool-content.filter-btn { font-size: 12px!important; padding: 6px 10px!important; }
+ }
+ @media print {
+.tool-content.glossary-search-section { display: none!important; }
+.tool-content.entry { break-inside: avoid; page-break-inside: avoid; border: 1px solid #ccc; padding: 10px 12px; margin-bottom: 6px; box-shadow: none!important; }
+.tool-content.entry-term { font-size: 11pt; }
+.tool-content.entry-desc,.tool-content.entry-short { font-size: 9pt; }
+.tool-content.entry-formula { font-size: 8pt; }
+.tool-content.entry-cat,.tool-content.letter-heading span {
+ -webkit-print-color-adjust: exact; print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Startup Glossar DE-EN</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Die wichtigsten Startup-Begriffe - verständlich erklärt für Gründerinnen und Gründer</p>
+ <span class="glossar-count-badge" id="totalBadge">110+ Begriffe</span>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/idee/">Phase 1: Idee</a>
+ <span class="separator">/</span>
+ <span class="current">Startup Glossar</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- Search & Filter Section -->
+ <div class="glossary-search-section">
+ <div class="search-wrap">
+ <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+ <input type="text" id="searchInput" placeholder="Begriff suchen … z.B. ARR, Vesting, Wandeldarlehen">
+ </div>
+ <div class="search-info">
+ <span><span id="resultCount">0</span> Begriffe angezeigt</span>
+ <span>Suche nach Begriff, Definition oder Kategorie</span>
+ </div>
+ <div class="filters" id="filters">
+ <button class="filter-btn active" data-cat="all">Alle</button>
+ <button class="filter-btn" data-cat="finanzkennzahl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="9" width="3" height="6" rx="0.5"/><rect x="6" y="5" width="3" height="10" rx="0.5"/><rect x="11" y="1" width="3" height="14" rx="0.5"/></svg> Finanzkennzahl</button>
+ <button class="filter-btn" data-cat="legal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Legal</button>
+ <button class="filter-btn" data-cat="fundraising"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg> Fundraising</button>
+ <button class="filter-btn" data-cat="produkt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1L1 9l6 6 8-8V1H9z"/><circle cx="12" cy="4" r="1.2" fill="currentColor"/></svg> Produkt</button>
+ <button class="filter-btn" data-cat="growth"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 14 5.5 7 9 10 15 2"/><polyline points="10 2 15 2 15 7"/></svg> Growth</button>
+ <button class="filter-btn" data-cat="organisation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="1" width="10" height="14" rx="1"/><line x1="6" y1="4" x2="10" y2="4"/><line x1="6" y1="7" x2="10" y2="7"/><line x1="6" y1="10" x2="10" y2="10"/></svg> Organisation</button>
+ </div>
+ <div class="alpha-nav" id="alphaNav"></div>
+ </div>
+
+ <!-- Glossary rendered by JS -->
+ <div class="glossary" id="glossary"></div>
+ <div class="no-results" id="noResults">
+ <h3>Kein Treffer</h3>
+ <p>Versuche einen anderen Suchbegriff oder setze den Filter zurück.</p>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Du willst nicht nur Begriffe kennen, sondern anwenden?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching bei StartUp Burgenland helfen wir dir, die richtigen Kennzahlen zu tracken, dein Geschäftsmodell zu schärfen und Investoren zu überzeugen.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+ <script>
+const TERMS = [
+ {
+ term: "Accelerator",
+ en: "Accelerator",
+ short: "Zeitlich begrenztes Intensivprogramm für Startups",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Ein Accelerator ist ein Förderprogramm, das Startups in einer frühen Wachstumsphase durch Mentoring, Netzwerk, Kapital und strukturierte Programme beschleunigt. Typische Dauer: 3-6 Monate. In Österreich z.\u00A0B. StartUp Burgenland, i2c TU Wien, accent Incubator.",
+ example: "Ein SaaS-Startup durchläuft ein 4-monatiges Programm mit wöchentlichem Coaching, Demo Day und Zugang zu Investoren."
+ },
+ {
+ term: "Acqui-hire",
+ en: "Acqui-hire",
+ short: "Übernahme eines Unternehmens primär wegen des Teams",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Bei einem Acqui-hire kauft ein Unternehmen ein Startup nicht wegen des Produkts, sondern um das Gründerteam und dessen Talente zu gewinnen. Das Produkt wird oft eingestellt, die Mitarbeitenden werden integriert."
+ },
+ {
+ term: "Angel Investor",
+ en: "Angel Investor / Business Angel",
+ short: "Privatperson, die in Frühphasen-Startups investiert",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Angel Investor (auch Business Angel) investiert eigenes Kapital in Startups in der Frühphase, meist Pre-Seed oder Seed. Neben Geld bringen Angels oft Branchenwissen, Netzwerk und Mentoring mit. In Österreich organisiert im Netzwerk angel.investmentclub (aaia) und über aws Business Angel Fonds.",
+ example: "Ein erfahrener Unternehmer investiert €50.000 in ein HealthTech-Startup für 8\u00A0% Anteile und hilft beim Markteintritt."
+ },
+ {
+ term: "ARPU",
+ en: "Average Revenue Per User",
+ short: "Durchschnittlicher Umsatz pro Nutzer",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der ARPU zeigt, wie viel Umsatz ein Unternehmen im Schnitt pro aktivem Nutzer/Kunden in einem bestimmten Zeitraum erzielt. Wichtig für die Bewertung von Preisstrategien und Unit Economics.",
+ formula: "ARPU = Gesamtumsatz ÷ Anzahl aktiver Nutzer",
+ example: "€120.000 Monatsumsatz ÷ 2.000 aktive Nutzer = ARPU €60/Monat"
+ },
+ {
+ term: "ARR",
+ en: "Annual Recurring Revenue",
+ short: "Jährlich wiederkehrender Umsatz",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der ARR ist der jährliche Wert aller aktiven Abonnements und wiederkehrenden Verträge. Zentrale Metrik für SaaS- und Subscription-Geschäftsmodelle zur Bewertung von Wachstum und Unternehmenswert.",
+ formula: "ARR = MRR × 12",
+ example: "100 Kunden × €100/Monat = MRR €10.000 → ARR = €120.000"
+ },
+ {
+ term: "B2B",
+ en: "Business-to-Business",
+ short: "Geschäftsbeziehung zwischen Unternehmen",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "B2B bezeichnet Geschäftsmodelle, bei denen Unternehmen an andere Unternehmen verkaufen. Typisch: längere Verkaufszyklen, höhere Auftragswerte, mehrere Entscheider. In Österreichs Startup-Szene dominieren B2B-SaaS und DeepTech."
+ },
+ {
+ term: "B2C",
+ en: "Business-to-Consumer",
+ short: "Geschäftsbeziehung zwischen Unternehmen und Endkunden",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "B2C bezeichnet Geschäftsmodelle, bei denen direkt an Endverbraucher verkauft wird. Typisch: kürzere Kaufentscheidungen, größere Zielgruppe, starker Marketing-Fokus. Beispiele: E-Commerce, Consumer Apps, D2C-Brands."
+ },
+ {
+ term: "Blitzscaling",
+ en: "Blitzscaling",
+ short: "Extremes Wachstum mit Vorrang vor Effizienz",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Blitzscaling ist eine Strategie, bei der ein Startup Wachstum bewusst über Effizienz und Profitabilität stellt, um einen Markt schnell zu dominieren. Hohes Risiko, hoher Kapitalbedarf. Selten in europäischen Märkten sinnvoll."
+ },
+ {
+ term: "Board of Directors",
+ en: "Board of Directors",
+ short: "Aufsichtsgremium eines Unternehmens",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Der Board of Directors (Verwaltungsrat/Beirat) ist das Kontrollorgan, das die Geschäftsführung überwacht und strategische Entscheidungen mitträgt. Bei Startups typischerweise ab Series A mit Investorenvertretern besetzt. In Österreich bei der AG als Aufsichtsrat gesetzlich vorgeschrieben, bei der GmbH optional."
+ },
+ {
+ term: "Bootstrapping",
+ en: "Bootstrapping",
+ short: "Unternehmensaufbau ohne externe Finanzierung",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Bootstrapping bedeutet, ein Startup ausschließlich aus eigenen Mitteln und laufenden Einnahmen zu finanzieren, ohne Investoren. Vorteil: volle Kontrolle und kein Verwässerungsrisiko. Nachteil: langsameres Wachstum.",
+ example: "Ein Gründerteam aus dem Burgenland entwickelt eine App abends und am Wochenende, finanziert durch Freelance-Aufträge, bis die ersten zahlenden Kunden kommen."
+ },
+ {
+ term: "Bridge Round",
+ en: "Bridge Round / Bridge Financing",
+ short: "Zwischenfinanzierung bis zur nächsten großen Runde",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Bridge Round ist eine kleinere Finanzierungsrunde, die ein Startup überbrückt, bis die nächste reguläre Runde (z.\u00A0B. Series A) abgeschlossen ist. Oft als Convertible Note oder SAFE strukturiert.",
+ example: "Ein Startup nimmt €200.000 als Wandeldarlehen auf, um 6 Monate bis zur Series A zu überbrücken."
+ },
+ {
+ term: "Burn Rate",
+ en: "Burn Rate",
+ short: "Monatlicher Netto-Geldverbrauch",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Burn Rate zeigt, wie viel Geld ein Startup pro Monat netto verbraucht (Ausgaben minus Einnahmen). Zusammen mit dem Kontostand ergibt sich die Runway. Zentrale Kennzahl im Cash-Management.",
+ formula: "Burn Rate = Monatliche Ausgaben − Monatliche Einnahmen",
+ example: "€30.000 Ausgaben − €10.000 Einnahmen = €20.000 Burn Rate/Monat"
+ },
+ {
+ term: "Business Angel",
+ en: "Business Angel",
+ short: "Privatinvestor in der Frühphase, siehe Angel Investor",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Synonym für Angel Investor. In Österreich und im DACH-Raum ist der Begriff ‚Business Angel' gebräuchlicher. Organisiert u.\u00A0a. über die Austrian Angel Investors Association (aaia) und regionale Netzwerke."
+ },
+ {
+ term: "CAC",
+ en: "Customer Acquisition Cost",
+ short: "Kosten zur Gewinnung eines neuen Kunden",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Customer Acquisition Cost (CAC) beziffern die durchschnittlichen Kosten, um einen neuen zahlenden Kunden zu gewinnen. Beinhaltet alle Marketing- und Vertriebskosten. Zusammen mit dem LTV zentral für die Bewertung der Unit Economics.",
+ formula: "CAC = Gesamtkosten Marketing + Vertrieb ÷ Anzahl Neukunden",
+ example: "€15.000 Marketing-Budget ÷ 100 Neukunden = CAC €150"
+ },
+ {
+ term: "Cap Table",
+ en: "Capitalization Table",
+ short: "Übersicht aller Gesellschaftsanteile und Beteiligungen",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die Cap Table (Beteiligungstabelle) zeigt, wer welche Anteile am Unternehmen hält, Gründer, Investoren, ESOP-Pool. Wird mit jeder Finanzierungsrunde aktualisiert und ist zentral für Verwässerungsberechnungen und Exit-Szenarien."
+ },
+ {
+ term: "Churn Rate",
+ en: "Churn Rate",
+ short: "Kundenabwanderungsrate in einem Zeitraum",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Churn Rate misst den Prozentsatz der Kunden (oder des Umsatzes), die in einem bestimmten Zeitraum abwandern. Gegenstück zur Retention Rate. Niedrige Churn = hohe Kundenbindung.",
+ formula: "Churn Rate = Verlorene Kunden ÷ Kunden zu Periodenbeginn × 100",
+ example: "10 Kündigungen bei 200 Kunden zum Monatsbeginn = 5\u00A0% monatliche Churn"
+ },
+ {
+ term: "Cliff",
+ en: "Cliff",
+ short: "Sperrfrist vor dem ersten Vesting von Anteilen",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Der Cliff ist die Mindestzeit (typisch: 12 Monate), die ein Gründer oder Mitarbeiter bleiben muss, bevor erstmals Anteile gevestet werden. Schützt das Unternehmen vor frühzeitigem Ausscheiden mit Beteiligung.",
+ example: "Bei einem 4-Jahres-Vesting mit 1-Jahres-Cliff erhält man nach 12 Monaten auf einen Schlag 25\u00A0% der Anteile."
+ },
+ {
+ term: "Convertible Note",
+ en: "Convertible Note",
+ short: "Wandeldarlehen (wandelbare Schuldverschreibung)",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Convertible Note ist ein kurzfristiges Darlehen, das bei der nächsten Finanzierungsrunde in Unternehmensanteile umgewandelt wird, meist mit Discount (10-20\u00A0%) und/oder Valuation Cap. Im DACH-Raum als ‚Wandeldarlehen' verbreitet. Siehe auch: Wandeldarlehen.",
+ example: "Ein Angel gibt €50.000 als Convertible Note mit 20\u00A0% Discount. Bei der Seed-Runde wandelt das Darlehen zu einem 20\u00A0% günstigeren Preis je Anteil um."
+ },
+ {
+ term: "CVC",
+ en: "Corporate Venture Capital",
+ short: "Risikokapital von Konzernen für Startups",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Corporate Venture Capital (CVC) sind Investmentarme großer Unternehmen, die strategisch in Startups investieren, oft mit dem Ziel, Innovationen frühzeitig zu erschließen. In Österreich z.\u00A0B. Elevator Ventures (Raiffeisen), UNIQA Ventures, Verbund X Ventures."
+ },
+ {
+ term: "Data Room",
+ en: "Data Room",
+ short: "Virtueller Raum mit Unternehmensunterlagen für Investoren",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Data Room (oft virtuell) ist ein geschützter Bereich, in dem Startups alle relevanten Dokumente für die Due Diligence bereitstellen: Finanzen, Verträge, Cap Table, IP, Team-Infos. Tools: Google Drive, Notion, DocSend oder spezialisierte VDR-Lösungen."
+ },
+ {
+ term: "Deal Flow",
+ en: "Deal Flow",
+ short: "Pipeline an Investment-Möglichkeiten für Investoren",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Der Deal Flow beschreibt die Menge und Qualität an Startup-Investment-Möglichkeiten, die ein Investor oder VC zu sehen bekommt. Guter Deal Flow ist ein Wettbewerbsvorteil. Für Startups relevant: ‚Wie komme ich in den Deal Flow guter VCs?'"
+ },
+ {
+ term: "Dilution",
+ en: "Dilution / Verwässerung",
+ short: "Verringerung der Anteilsquote durch neue Anteile",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Dilution (Verwässerung) entsteht, wenn neue Anteile ausgegeben werden (z.\u00A0B. bei einer Finanzierungsrunde) und bestehende Gesellschafter prozentual weniger Anteile halten. Normal, aber zu überwachen. Pro-Rata-Rechte können Verwässerung begrenzen.",
+ formula: "Verwässerung = Neue Anteile ÷ (Alte Anteile + Neue Anteile) × 100",
+ example: "Gründerin hält 100\u00A0% (1.000 Anteile). Investor erhält 250 neue Anteile → Gründerin: 80\u00A0%, Investor: 20\u00A0%."
+ },
+ {
+ term: "Down Round",
+ en: "Down Round",
+ short: "Finanzierungsrunde zu niedrigerer Bewertung als zuvor",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Down Round ist eine Finanzierungsrunde, bei der die Unternehmensbewertung niedriger ist als in der vorigen Runde. Signal für Probleme. Kann Anti-Dilution-Klauseln auslösen und bestehende Investoren und Gründer stark verwässern."
+ },
+ {
+ term: "Drag-Along",
+ en: "Drag-Along Right",
+ short: "Mitverkaufsrecht, das Minderheitsgesellschafter zum Exit zwingt",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein Drag-Along-Recht erlaubt es der Mehrheit der Gesellschafter (oft Investoren ab einem gewissen Schwellenwert), Minderheitsgesellschafter bei einem Verkauf mitzuziehen. Stellt sicher, dass ein Exit nicht blockiert werden kann. Gegenstück: Tag-Along."
+ },
+ {
+ term: "Due Diligence",
+ en: "Due Diligence",
+ short: "Sorgfältige Prüfung eines Unternehmens vor einem Investment",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Due Diligence (DD) ist die umfassende Prüfung eines Startups durch potenzielle Investoren, rechtlich, finanziell, technisch und kommerziell. Typische Dauer: 2-8 Wochen. Vorbereitung über einen sauberen Data Room verkürzt den Prozess."
+ },
+ {
+ term: "EBITDA",
+ en: "Earnings Before Interest, Taxes, Depreciation and Amortization",
+ short: "Ergebnis vor Zinsen, Steuern und Abschreibungen",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Das EBITDA zeigt die operative Ertragskraft eines Unternehmens, bereinigt um Finanzierungsstruktur, Steuern und Abschreibungspolitik. Oft als Basis für Unternehmensbewertungen (z.\u00A0B. EBITDA × Multiplikator).",
+ formula: "EBITDA = Umsatz − Betriebskosten (ohne Zinsen, Steuern, Abschreibungen)"
+ },
+ {
+ term: "EIR",
+ en: "Entrepreneur in Residence",
+ short: "Erfahrener Gründer im Einsatz bei einem VC oder Accelerator",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Ein Entrepreneur in Residence (EIR) ist ein erfahrener Gründer, der temporär bei einem VC, Accelerator oder Inkubator arbeitet, als Mentor, Berater oder um selbst ein neues Unternehmen zu starten."
+ },
+ {
+ term: "Elevator Pitch",
+ en: "Elevator Pitch",
+ short: "Kurzpräsentation eines Startups in 30-60 Sekunden",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Ein Elevator Pitch ist eine prägnante, überzeugende Kurzbeschreibung des Startups, so kurz, dass sie in eine Aufzugfahrt passt (30-60 Sekunden). Beantwortet: Was macht ihr? Für wen? Warum jetzt? Warum ihr?",
+ example: "‚Wir helfen KMUs in Österreich, ihre Energiekosten um 30\u00A0% zu senken, mit einer KI-gestützten Plattform, die in 10 Minuten eingerichtet ist.'"
+ },
+ {
+ term: "ESOP",
+ en: "Employee Stock Option Plan",
+ short: "Mitarbeiterbeteiligungsprogramm über Aktienoptionen",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein ESOP ermöglicht es Mitarbeitern, Anteile am Unternehmen zu erwerben, oft zu einem vergünstigten Preis (Strike Price). Wichtiges Instrument, um Talente in Startups zu binden. In Österreich seit 2024 steuerlich verbessert durch das Start-up-Paket. Siehe auch: VSOP."
+ },
+ {
+ term: "Exit",
+ en: "Exit",
+ short: "Verkauf oder Börsengang eines Startups",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Exit ist der Verkauf der Unternehmensanteile durch Gründer und/oder Investoren. Formen: Trade Sale (Verkauf an Unternehmen), IPO (Börsengang), Secondary Sale (Anteilsverkauf an Dritte), Acqui-hire. Ziel der meisten VC-finanzierten Startups."
+ },
+ {
+ term: "First Mover Advantage",
+ en: "First Mover Advantage",
+ short: "Wettbewerbsvorteil durch frühesten Markteintritt",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Der First Mover Advantage entsteht, wenn ein Unternehmen als Erstes einen Markt betritt und dadurch Markenbekanntheit, Kunden und Netzwerkeffekte aufbaut, bevor Wettbewerber folgen. Kann Vorteil sein, aber ‚Second Mover' lernen aus den Fehlern der Ersten."
+ },
+ {
+ term: "Flat Round",
+ en: "Flat Round",
+ short: "Finanzierungsrunde zur gleichen Bewertung wie zuvor",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Flat Round ist eine Finanzierungsrunde, bei der die Bewertung gleich bleibt wie in der vorherigen Runde. Besser als eine Down Round, signalisiert aber stagnierendes Wachstum."
+ },
+ {
+ term: "FlexCo",
+ en: "Flexible Company (FlexCo)",
+ short: "Neue österreichische Rechtsform zwischen GmbH und AG",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die FlexCo ist eine seit 2024 in Österreich verfügbare Rechtsform, die Vorteile der GmbH (einfache Gründung) mit Elementen der AG (leichtere Anteilsübertragung, Mitarbeiterbeteiligung) kombiniert. Mindeststammkapital: €10.000. Besonders für Startups mit Beteiligungsprogrammen attraktiv."
+ },
+ {
+ term: "Follow-on",
+ en: "Follow-on Investment",
+ short: "Folgeinvestment eines bestehenden Investors",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Follow-on ist eine erneute Investition eines bestehenden Investors in einer späteren Finanzierungsrunde. Zeigt Vertrauen und ist ein positives Signal an neue Investoren. Viele VCs reservieren 50\u00A0% oder mehr ihres Fondsvolumens für Follow-ons."
+ },
+ {
+ term: "Founder Vesting",
+ en: "Founder Vesting",
+ short: "Schrittweiser Erwerb von Gründeranteilen über Zeit",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Founder Vesting regelt, dass Gründer ihre Anteile erst über einen definierten Zeitraum (typisch: 4 Jahre mit 1-Jahres-Cliff) vollständig ‚verdienen'. Schützt das Unternehmen, wenn ein Gründer frühzeitig aussteigt. Von fast allen Investoren gefordert."
+ },
+ {
+ term: "Freemium",
+ en: "Freemium",
+ short: "Geschäftsmodell mit kostenloser Basis- und kostenpflichtiger Premiumversion",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Freemium kombiniert ‚Free' und ‚Premium': Eine Basisversion ist kostenlos, erweiterte Funktionen kosten Geld. Ziel: große Nutzerbasis aufbauen und einen Teil zu zahlenden Kunden konvertieren. Typische Conversion Rate: 2-5\u00A0%.",
+ example: "Eine Projektmanagement-App ist bis 5 Nutzer kostenlos. Ab 6 Nutzern oder für erweiterte Features: €9/Nutzer/Monat."
+ },
+ {
+ term: "FTE",
+ en: "Full-Time Equivalent",
+ short: "Vollzeitäquivalent, Maßeinheit für Arbeitskapazität",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Ein FTE (Vollzeitäquivalent) entspricht der Arbeitskraft einer Vollzeitstelle. Wird verwendet, um Teilzeitkräfte und Freelancer vergleichbar zu machen. Wichtig bei Förderanträgen (z.\u00A0B. FFG, aws) und Team-Planung.",
+ example: "2 Vollzeitkräfte + 2 Halbtagskräfte = 3 FTE"
+ },
+ {
+ term: "GMV",
+ en: "Gross Merchandise Value",
+ short: "Bruttowarenvolumen, Gesamtwert aller Transaktionen",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Das GMV ist der Gesamtwert aller über eine Plattform abgewickelten Transaktionen, vor Abzug von Gebühren, Retouren und Rabatten. Relevante Metrik für Marktplätze und E-Commerce-Plattformen. Nicht zu verwechseln mit Umsatz.",
+ formula: "GMV = Anzahl Transaktionen × Durchschnittlicher Bestellwert"
+ },
+ {
+ term: "Go-to-Market",
+ en: "Go-to-Market Strategy (GTM)",
+ short: "Strategie für den Markteintritt eines Produkts",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Die Go-to-Market-Strategie (GTM) definiert, wie ein Produkt den Zielmarkt erreicht: Zielgruppe, Kanäle, Pricing, Positionierung, Vertriebsmodell. Entscheidend für den Erfolg nach dem MVP-Stadium."
+ },
+ {
+ term: "Gross Margin",
+ en: "Gross Margin / Bruttomarge",
+ short: "Umsatz abzüglich direkter Herstellkosten in Prozent",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Gross Margin (Bruttomarge) zeigt, wie viel vom Umsatz nach Abzug der direkten Kosten (COGS) übrig bleibt. Hohe Gross Margin (>70\u00A0%) = Software/SaaS typisch. Niedrig (<30\u00A0%) = Hardware, physische Produkte.",
+ formula: "Gross Margin = (Umsatz − COGS) ÷ Umsatz × 100"
+ },
+ {
+ term: "Growth Hacking",
+ en: "Growth Hacking",
+ short: "Kreative, datengetriebene Wachstumstaktiken",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Growth Hacking beschreibt kreative, experimentelle und datengetriebene Marketing-Taktiken, die auf schnelles Wachstum bei geringem Budget abzielen. Kombiniert Produkt, Daten und Marketing. Beispiele: Referral-Programme, virale Mechaniken, A/B-Testing."
+ },
+ {
+ term: "Hockey Stick",
+ en: "Hockey-Stick Growth",
+ short: "Wachstumskurve mit langsamer Phase und dann steilem Anstieg",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Die Hockey-Stick-Kurve beschreibt ein typisches Startup-Wachstumsmuster: Eine lange, flache Phase (Produktentwicklung, Validation) gefolgt von exponenziellem Wachstum nach Erreichen von Product-Market Fit. Das angestrebte Muster in jedem Pitch Deck."
+ },
+ {
+ term: "Horizon (1/2/3)",
+ en: "Three Horizons Model",
+ short: "Strategisches Modell für drei Zeithorizonte der Innovation",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Das Drei-Horizonte-Modell strukturiert Innovation in drei Zeitstufen: Horizon 1 = Kerngeschäft optimieren, Horizon 2 = neue Wachstumsfelder erschließen, Horizon 3 = disruptive Ideen für die Zukunft. Hilft Startups bei der strategischen Ressourcenallokation."
+ },
+ {
+ term: "ICO",
+ en: "Initial Coin Offering",
+ short: "Kapitalbeschaffung durch Ausgabe von Krypto-Token",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Bei einem ICO sammelt ein Projekt Kapital, indem es Krypto-Token an Investoren verkauft. Nach dem Hype 2017/18 stark reguliert. In Österreich durch die FMA beaufsichtigt. Heute weitgehend durch STOs (Security Token Offerings) und regulierte Alternativen ersetzt."
+ },
+ {
+ term: "Incubator",
+ en: "Incubator / Inkubator",
+ short: "Förderprogramm für Startups in der frühesten Phase",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Ein Incubator (Inkubator) begleitet Startups ab der Ideenphase: Büroinfrastruktur, Mentoring, Workshops, Netzwerk. Längere Laufzeit als Accelerators (6-24 Monate). StartUp Burgenland bietet individuelles 1:1 Coaching von der Idee bis zum Markteintritt."
+ },
+ {
+ term: "IP",
+ en: "Intellectual Property",
+ short: "Geistiges Eigentum, Patente, Marken, Urheberrechte",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "IP (geistiges Eigentum) umfasst Patente, Markenrechte, Urheberrechte, Geschäftsgeheimnisse und Designs. Für Startups zentral, da IP oft den größten Unternehmenswert darstellt. In Österreich über das Patentamt und EU-Behörden schützbar."
+ },
+ {
+ term: "IRR",
+ en: "Internal Rate of Return",
+ short: "Interner Zinsfuß, annualisierte Rendite eines Investments",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die IRR ist die annualisierte Rendite eines Investments unter Berücksichtigung des Zeitwerts des Geldes. VCs streben typischerweise eine IRR von 20-30\u00A0% auf Fondsebene an. Einzelne Startup-Investments können deutlich höher oder bei null liegen."
+ },
+ {
+ term: "JTBD",
+ en: "Jobs to Be Done",
+ short: "Framework: Welche ‚Aufgabe' erledigt der Kunde mit deinem Produkt?",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Jobs to Be Done (JTBD) ist ein Framework, das Kundenbedürfnisse als ‚Jobs' versteht, die erledigt werden müssen. Statt zu fragen ‚Wer ist mein Kunde?' fragt man ‚Welches Problem löst mein Produkt?'. Hilft bei Innovation, Positioning und Feature-Priorisierung.",
+ example: "Kunden ‚beauftragen' kein Bohrgerät, sie beauftragen ein Loch in der Wand."
+ },
+ {
+ term: "KöSt",
+ en: "Körperschaftsteuer / Corporate Tax",
+ short: "Steuer auf Gewinne von Kapitalgesellschaften in Österreich",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die Körperschaftsteuer (KöSt) ist die Steuer auf den Gewinn von Kapitalgesellschaften (GmbH, AG, FlexCo) in Österreich. Aktueller Satz: 23\u00A0% (seit 2024, gesenkt von 25\u00A0%). Mindestkörperschaftsteuer für GmbH: €500/Jahr (unabhängig vom Gewinn).",
+ formula: "KöSt = Steuerpflichtiger Gewinn × 23\u00A0%"
+ },
+ {
+ term: "KPI",
+ en: "Key Performance Indicator",
+ short: "Kennzahl zur Messung der Zielerreichung",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "KPIs sind die wichtigsten Kennzahlen, an denen ein Startup seinen Fortschritt misst. Sollten SMART sein (spezifisch, messbar, erreichbar, relevant, terminiert). Jede Phase hat andere KPIs: Pre-Seed = Validierung, Seed = Traction, Series A = Wachstumsrate.",
+ example: "Ein SaaS-Startup trackt: MRR, Churn Rate, CAC, LTV, NPS als Kern-KPIs."
+ },
+ {
+ term: "Lead Investor",
+ en: "Lead Investor",
+ short: "Hauptinvestor, der eine Finanzierungsrunde anführt",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Der Lead Investor ist der Hauptinvestor einer Finanzierungsrunde. Er verhandelt die Konditionen (Term Sheet), investiert den größten Betrag und erhält oft einen Board Seat. Für Startups ist es entscheidend, zuerst den Lead zu finden, Co-Investoren folgen dann leichter."
+ },
+ {
+ term: "Lean Startup",
+ en: "Lean Startup",
+ short: "Methodik für schnelles, hypothesenbasiertes Unternehmensgründen",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Die Lean-Startup-Methodik basiert auf dem Build-Measure-Learn-Zyklus: Hypothese aufstellen, MVP bauen, messen, lernen, anpassen. Ziel: Verschwendung minimieren und schnell validieren, ob ein Geschäftsmodell funktioniert. Standard-Methodik in Accelerator-Programmen."
+ },
+ {
+ term: "LOI",
+ en: "Letter of Intent",
+ short: "Absichtserklärung, unverbindliche Vereinbarung vor Vertragsschluss",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein Letter of Intent (Absichtserklärung) ist ein vorvertragliches Dokument, das die Absicht zur Zusammenarbeit, Investition oder Übernahme festhält. Meist rechtlich unverbindlich, aber mit verbindlichen Klauseln (z.\u00A0B. Exklusivität, NDA). Kommt vor dem Term Sheet."
+ },
+ {
+ term: "LTV",
+ en: "Lifetime Value / Customer Lifetime Value (CLV)",
+ short: "Gesamtumsatz eines Kunden über die gesamte Geschäftsbeziehung",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der Lifetime Value (LTV, auch CLV) schätzt den Gesamtumsatz, den ein Kunde über seine gesamte Beziehung zum Unternehmen generiert. Zusammen mit dem CAC die wichtigste Unit-Economics-Kennzahl. Faustregel: LTV ≥ 3× CAC.",
+ formula: "LTV = ARPU × Bruttomarge × Durchschnittliche Kundenlebensdauer",
+ example: "€50/Monat × 70\u00A0% Marge × 24 Monate = LTV €840"
+ },
+ {
+ term: "MoM",
+ en: "Multiple on Money / Multiple on Invested Capital (MOIC)",
+ short: "Vielfaches des eingesetzten Kapitals bei einem Exit",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Das Multiple on Money (MoM) zeigt, wie oft ein Investor sein eingesetztes Kapital zurückbekommt. Ein MoM von 5× bedeutet: €100.000 investiert, €500.000 zurückerhalten. VCs streben pro Fonds ein MoM von 3× an.",
+ formula: "MoM = Gesamterlös ÷ Investiertes Kapital",
+ example: "€200.000 investiert, €1.000.000 beim Exit erhalten = 5× MoM"
+ },
+ {
+ term: "Moat",
+ en: "Moat / Economic Moat",
+ short: "Nachhaltiger Wettbewerbsvorteil, ‚Burggraben'",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Ein Moat (‚Burggraben') ist ein dauerhafter Wettbewerbsvorteil, der ein Startup vor Nachahmern schützt. Arten: Netzwerkeffekte, Skaleneffekte, Switching Costs, proprietäre Technologie, regulatorische Hürden, Marke. Investoren fragen immer: ‚Was ist euer Moat?'"
+ },
+ {
+ term: "MRR",
+ en: "Monthly Recurring Revenue",
+ short: "Monatlich wiederkehrender Umsatz",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der MRR ist der normalisierte monatliche Umsatz aus wiederkehrenden Verträgen (Abos, Lizenzen). Grundlage für ARR-Berechnung und wichtigste operative Metrik für SaaS-Startups.",
+ formula: "MRR = Σ aller monatlichen Abo-Zahlungen",
+ example: "50 Kunden × €200/Monat + 100 Kunden × €50/Monat = MRR €15.000"
+ },
+ {
+ term: "MVP",
+ en: "Minimum Viable Product",
+ short: "Erste funktionsfähige Produktversion mit Kernfunktionen",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Das MVP (Minimum Viable Product) ist die einfachste Version eines Produkts, die ausreicht, um die Kernhypothese am Markt zu testen. Ziel: mit minimalem Aufwand maximales Lernen. Kein Prototyp, sondern ein nutzbares Produkt mit dem wichtigsten Feature.",
+ example: "Statt einer vollständigen Plattform: eine Landing Page mit Anmeldeformular, um Nachfrage zu validieren."
+ },
+ {
+ term: "NDA",
+ en: "Non-Disclosure Agreement",
+ short: "Geheimhaltungsvereinbarung",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein NDA (Geheimhaltungsvereinbarung) verpflichtet die Parteien, vertrauliche Informationen nicht weiterzugeben. Wichtig bei Kooperationen und Due Diligence. Vorsicht: Die meisten VCs unterschreiben keine NDAs vor einem Erstgespräch, das ist Branchenstandard."
+ },
+ {
+ term: "NeuFöG",
+ en: "Neugründungsförderungsgesetz",
+ short: "Österreichisches Gesetz zur Befreiung von Gründungsnebenkosten",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Das NeuFöG (Neugründungsförderungsgesetz) befreit Neugründerinnen und Neugründer in Österreich von diversen Gebühren: Stempelgebühren, Grunderwerbsteuer, Gesellschaftsteuer, Gerichtsgebühren und Kammerumlage. Gilt auch für Betriebsübernahmen. Antrag über das zuständige Finanzamt bzw. die WKO."
+ },
+ {
+ term: "NRR",
+ en: "Net Revenue Retention",
+ short: "Netto-Umsatzbindung, Umsatzentwicklung bestehender Kunden",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die NRR misst, wie sich der Umsatz bestehender Kunden über einen Zeitraum entwickelt, inklusive Upselling, Cross-Selling, Downgrades und Churn. NRR >100\u00A0% bedeutet: Bestandskunden bringen mehr Umsatz als im Vorjahr. Top-SaaS: NRR >120\u00A0%.",
+ formula: "NRR = (Start-MRR + Expansion − Contraction − Churn) ÷ Start-MRR × 100"
+ },
+ {
+ term: "NPS",
+ en: "Net Promoter Score",
+ short: "Kennzahl für Kundenzufriedenheit und Weiterempfehlungsbereitschaft",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der NPS misst auf einer Skala von 0-10, wie wahrscheinlich es ist, dass Kunden ein Produkt weiterempfehlen. Promotoren (9-10) minus Detraktoren (0-6) ergibt den NPS. Werte über 50 gelten als exzellent.",
+ formula: "NPS = % Promotoren (9-10) − % Detraktoren (0-6)"
+ },
+ {
+ term: "OKR",
+ en: "Objectives and Key Results",
+ short: "Zielsetzungs-Framework mit qualitativen Zielen und messbaren Ergebnissen",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "OKRs sind ein Zielsetzungs-Framework: Ein Objective (qualitatives Ziel) wird durch 2-5 Key Results (messbare Ergebnisse) konkretisiert. Quartalsweise gesetzt. Hilft Startups, Fokus und Alignment im Team herzustellen.",
+ example: "Objective: ‚Product-Market Fit erreichen'. KR1: 100 zahlende Kunden. KR2: NPS >40. KR3: Churn <5\u00A0%/Monat."
+ },
+ {
+ term: "Option Pool",
+ en: "Option Pool / ESOP Pool",
+ short: "Reservierte Anteile für zukünftige Mitarbeiterbeteiligungen",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Der Option Pool ist ein Anteil am Unternehmen (typisch: 10-15\u00A0%), der für zukünftige Mitarbeiterbeteiligungen reserviert wird. Wird meist vor einer Finanzierungsrunde eingerichtet und verwässert bestehende Gesellschafter, daher oft ein Verhandlungspunkt mit Investoren."
+ },
+ {
+ term: "Payback Period",
+ en: "Payback Period / CAC Payback",
+ short: "Dauer, bis sich die Kundenakquisekosten amortisiert haben",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Payback Period zeigt, wie viele Monate es dauert, bis die Kundenakquisekosten (CAC) durch den Deckungsbeitrag eines Kunden zurückverdient sind. Je kürzer, desto besser. Benchmark SaaS: <12 Monate.",
+ formula: "Payback Period = CAC ÷ (ARPU × Gross Margin)",
+ example: "CAC €600 ÷ (€100/Monat × 70\u00A0%) = 8,6 Monate Payback"
+ },
+ {
+ term: "Pivot",
+ en: "Pivot",
+ short: "Grundlegende strategische Kursänderung eines Startups",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Ein Pivot ist eine fundamentale Änderung der Geschäftsstrategie, Zielgruppe, Produkt, Geschäftsmodell oder Vertriebskanal, basierend auf Erkenntnissen aus dem Markt. Kein Scheitern, sondern validiertes Lernen. Viele erfolgreiche Startups haben pivotiert."
+ },
+ {
+ term: "PMF",
+ en: "Product-Market Fit",
+ short: "Das Produkt löst ein echtes Problem für einen Zielmarkt",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Product-Market Fit (PMF) ist der Moment, in dem ein Produkt ein echtes Kundenproblem so gut löst, dass der Markt es ‚zieht'. Anzeichen: organisches Wachstum, hohe Retention, Weiterempfehlungen. Die wichtigste Milestone vor dem Skalieren.",
+ example: "Wenn >40\u00A0% der Nutzer sagen, sie wären ‚sehr enttäuscht' ohne das Produkt → PMF-Signal."
+ },
+ {
+ term: "Post-Money Valuation",
+ en: "Post-Money Valuation",
+ short: "Unternehmensbewertung nach einer Finanzierungsrunde",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Die Post-Money Valuation ist der Unternehmenswert direkt nach einer Investition. Berechnung: Pre-Money Valuation + investiertes Kapital. Bestimmt den Prozentsatz, den der Investor erhält.",
+ formula: "Post-Money = Pre-Money + Investment",
+ example: "Pre-Money €2 Mio. + €500.000 Investment = Post-Money €2,5 Mio. → Investor erhält 20\u00A0%."
+ },
+ {
+ term: "Pre-Money Valuation",
+ en: "Pre-Money Valuation",
+ short: "Unternehmensbewertung vor einer Finanzierungsrunde",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Die Pre-Money Valuation ist der zugeschriebene Wert eines Startups unmittelbar vor einer Investition. Wird verhandelt und hängt von Traction, Markt, Team und Vergleichstransaktionen ab. Gemeinsam mit dem Investment ergibt sich die Post-Money Valuation.",
+ formula: "Pre-Money = Post-Money − Investment"
+ },
+ {
+ term: "Pre-Seed",
+ en: "Pre-Seed",
+ short: "Früheste Finanzierungsphase, oft noch vor dem MVP",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Pre-Seed ist die allererste Finanzierungsphase, oft noch vor einem fertigen MVP. Kapital kommt typischerweise von den Gründern selbst (Bootstrapping), Friends & Family oder Angels. Typisches Volumen in Österreich: €10.000-€250.000. Bei StartUp Burgenland gibt es in Phase 1 einen Gründungszuschuss von €10.000."
+ },
+ {
+ term: "Pro-Rata",
+ en: "Pro-Rata Right",
+ short: "Recht eines Investors, in Folgerunden anteilig mitzuinvestieren",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Pro-Rata-Rechte erlauben es bestehenden Investoren, bei künftigen Finanzierungsrunden ihren prozentualen Anteil zu halten, indem sie proportional nachfinanzieren. Schützt vor Verwässerung. Wird im Gesellschaftervertrag oder SHA geregelt."
+ },
+ {
+ term: "Revenue Multiple",
+ en: "Revenue Multiple / Umsatzmultiplikator",
+ short: "Bewertungskennzahl: Unternehmenswert im Verhältnis zum Umsatz",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der Revenue Multiple drückt die Unternehmensbewertung als Vielfaches des (Jahres-)Umsatzes aus. Typisch: SaaS-Startups 5-15× ARR, E-Commerce 1-3× Umsatz. Je höher das Wachstum und die Margen, desto höher der Multiple.",
+ formula: "Bewertung = ARR (oder Jahresumsatz) × Multiple"
+ },
+ {
+ term: "Runway",
+ en: "Runway",
+ short: "Verbleibende Monate, bis das Geld ausgeht",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Runway zeigt, wie viele Monate ein Startup bei aktuellem Burn Rate noch finanziert ist. Faustregel: mindestens 12-18 Monate Runway nach jeder Finanzierungsrunde. Neue Fundraising-Runde spätestens bei 6 Monaten verbleibender Runway starten.",
+ formula: "Runway = Kassenbestand ÷ Monatliche Burn Rate",
+ example: "€300.000 Konto ÷ €20.000 Burn Rate = 15 Monate Runway"
+ },
+ {
+ term: "SAFE",
+ en: "Simple Agreement for Future Equity",
+ short: "Einfaches Finanzierungsinstrument mit Wandlungsrecht",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein SAFE ist ein von Y Combinator entwickeltes Investmentinstrument: Der Investor gibt Geld und erhält bei der nächsten Finanzierungsrunde Anteile, zu einem vereinbarten Valuation Cap und/oder Discount. Einfacher als eine Convertible Note (kein Darlehen, kein Zinssatz, kein Fälligkeitsdatum). Im DACH-Raum seltener als Wandeldarlehen."
+ },
+ {
+ term: "SaaS",
+ en: "Software as a Service",
+ short: "Software als Abo-Dienstleistung über die Cloud",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "SaaS (Software as a Service) ist ein Geschäftsmodell, bei dem Software über das Internet als Abo angeboten wird, statt als Einmalkauf. Hohe Skalierbarkeit, wiederkehrende Umsätze, hohe Margen. Das beliebteste Geschäftsmodell im Startup-Ökosystem.",
+ example: "Statt einer €10.000-Lizenz: €99/Monat/Nutzer mit monatlicher Kündigung."
+ },
+ {
+ term: "Seed Round",
+ en: "Seed Round / Seed-Finanzierung",
+ short: "Erste institutionelle Finanzierungsrunde",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Die Seed Round ist typischerweise die erste größere Finanzierungsrunde nach Pre-Seed. Kapital kommt von Angels, Micro-VCs oder Seed-Fonds. Verwendung: Team aufbauen, PMF finden, erste Traction zeigen. Typisches Volumen in Österreich: €200.000-€1.500.000."
+ },
+ {
+ term: "Series A / B / C",
+ en: "Series A / B / C",
+ short: "Aufeinanderfolgende VC-Finanzierungsrunden",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Series A, B, C bezeichnen die aufeinanderfolgenden Wachstumsfinanzierungsrunden. Series A: PMF bewiesen, Skalierung starten (€2-10 Mio.). Series B: Marktposition ausbauen (€10-30 Mio.). Series C+: internationale Expansion, Marktdominanz. In Österreich Series A über VCs wie Speedinvest, aws Gründerfonds, Athena Burgenland VC."
+ },
+ {
+ term: "SHA",
+ en: "Shareholders Agreement / Gesellschaftervertrag",
+ short: "Vertrag zwischen allen Gesellschaftern eines Unternehmens",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Der Shareholders Agreement (SHA, Gesellschaftervertrag) regelt die Rechte und Pflichten aller Gesellschafter: Stimmrechte, Vesting, Tag-Along/Drag-Along, Informationsrechte, Anti-Dilution, Exit-Regelungen. Neben der Satzung das wichtigste Dokument einer GmbH mit Investoren."
+ },
+ {
+ term: "SPV",
+ en: "Special Purpose Vehicle",
+ short: "Zweckgesellschaft zur Bündelung von Investoren",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein SPV (Zweckgesellschaft) wird gegründet, um mehrere kleinere Investoren zu bündeln und als ein Gesellschafter in der Cap Table aufzutreten. Vereinfacht die Verwaltung. Oft verwendet bei Angel-Runden oder Crowdfunding."
+ },
+ {
+ term: "Sweat Equity",
+ en: "Sweat Equity",
+ short: "Anteile, die durch Arbeit statt Kapital verdient werden",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Sweat Equity bezeichnet Unternehmensanteile, die nicht durch Kapitaleinlage, sondern durch Arbeitsleistung erworben werden. Typisch für Gründer und frühe Mitarbeiter, die unter Marktwert arbeiten und dafür Anteile erhalten."
+ },
+ {
+ term: "Tag-Along",
+ en: "Tag-Along Right / Mitverkaufsrecht",
+ short: "Recht eines Minderheitsgesellschafters, bei einem Verkauf mitzuverkaufen",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein Tag-Along-Recht gibt Minderheitsgesellschaftern das Recht, ihre Anteile zu den gleichen Konditionen zu verkaufen, wenn ein Mehrheitsgesellschafter seinen Anteil veräußert. Schützt Kleinanleger vor nachteiligen Deals. Gegenstück: Drag-Along."
+ },
+ {
+ term: "TAM / SAM / SOM",
+ en: "Total Addressable Market / Serviceable Addressable Market / Serviceable Obtainable Market",
+ short: "Drei Ebenen der Marktgrößen-Schätzung",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "TAM = gesamter potenzieller Markt weltweit. SAM = der Teil des TAM, den du mit deinem Produkt adressieren kannst. SOM = der realistische Marktanteil in den nächsten 2-3 Jahren. Investoren erwarten diese Analyse in jedem Pitch Deck.",
+ example: "TAM: €5 Mrd. (alle KMUs in Europa). SAM: €500 Mio. (KMUs mit >10 MA im DACH-Raum). SOM: €5 Mio. (1\u00A0% Marktanteil in 3 Jahren)."
+ },
+ {
+ term: "Term Sheet",
+ en: "Term Sheet",
+ short: "Eckpunktevereinbarung einer Finanzierungsrunde",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Das Term Sheet ist das zentrale Dokument einer Finanzierungsverhandlung. Enthält die wesentlichen Konditionen: Bewertung, Investmentvolumen, Liquidation Preference, Board Seats, Anti-Dilution, Vesting. Meist nicht rechtsverbindlich, aber Grundlage der Verträge."
+ },
+ {
+ term: "Traction",
+ en: "Traction",
+ short: "Messbare Beweise, dass das Geschäftsmodell funktioniert",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Traction sind quantitative Belege für den Markterfolg: Nutzer, Umsatz, Wachstumsrate, Partnerschaften, LOIs. Je früher die Phase, desto ‚weicher' darf Traction sein (z.\u00A0B. Warteliste). Ab Series A erwarten Investoren harte Zahlen.",
+ example: "500 zahlende Kunden, €25.000 MRR, 15\u00A0% monatliches Wachstum = starke Traction."
+ },
+ {
+ term: "Unicorn",
+ en: "Unicorn",
+ short: "Startup mit einer Bewertung von über 1 Milliarde Dollar",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Unicorn ist ein privat gehaltenes Startup mit einer Bewertung von über USD 1 Milliarde. Aus Österreich: Bitpanda, GoStudent, Refurbed (zum Zeitpunkt der Bewertung). Der Begriff symbolisiert die Seltenheit solcher Unternehmen."
+ },
+ {
+ term: "Unit Economics",
+ en: "Unit Economics",
+ short: "Wirtschaftlichkeit pro einzelner Einheit (Kunde, Transaktion)",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Unit Economics analysieren, ob ein Geschäftsmodell auf Ebene einer einzelnen Einheit (z.\u00A0B. pro Kunde) profitabel ist. Kern: LTV vs. CAC. Wenn du mit jedem Kunden Geld verlierst, hilft auch Wachstum nicht.",
+ formula: "LTV:CAC Ratio (Ziel: ≥ 3:1)"
+ },
+ {
+ term: "Up Round",
+ en: "Up Round",
+ short: "Finanzierungsrunde zu höherer Bewertung als zuvor",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Up Round ist eine Finanzierungsrunde, bei der die Bewertung höher ist als in der vorherigen Runde. Das erwartete und gewünschte Szenario. Zeigt Wertsteigerung und Fortschritt. Gegenteil: Down Round."
+ },
+ {
+ term: "Valuation",
+ en: "Valuation / Bewertung",
+ short: "Geschätzter Wert eines Unternehmens",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Die Valuation (Bewertung) ist der geschätzte Wert eines Startups zu einem bestimmten Zeitpunkt. Bei Frühphasen-Startups meist verhandelt (nicht berechnet). Methoden: Comparable Transactions, DCF (selten bei Startups), Revenue Multiple. Unterscheidung: Pre-Money vs. Post-Money."
+ },
+ {
+ term: "VC",
+ en: "Venture Capital / Risikokapital",
+ short: "Institutionelles Risikokapital für wachstumsstarke Startups",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Venture Capital (VC) ist institutionelles Risikokapital, das in Startups mit hohem Wachstumspotenzial investiert wird, im Austausch gegen Unternehmensanteile. VCs verwalten Fonds von Limited Partners (LPs). In Österreich: Speedinvest, aws Gründerfonds, Athena Burgenland VC, Push Ventures."
+ },
+ {
+ term: "Vesting",
+ en: "Vesting",
+ short: "Schrittweiser Erwerb von Anteilen über einen definierten Zeitraum",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Vesting regelt, dass Anteile erst über einen Zeitraum (typisch: 4 Jahre) schrittweise ‚erdient' werden. Schützt Unternehmen und Co-Gründer, falls jemand frühzeitig aussteigt. Standard: 4 Jahre mit 1-Jahres-Cliff, dann monatliches Vesting.",
+ example: "10\u00A0% Anteile mit 4-Jahres-Vesting und 1-Jahres-Cliff: Nach 1 Jahr = 2,5\u00A0%. Danach jeden Monat 1/48."
+ },
+ {
+ term: "VSOP",
+ en: "Virtual Stock Option Plan",
+ short: "Virtuelle Mitarbeiterbeteiligung ohne echte Gesellschaftsanteile",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Ein VSOP gibt Mitarbeitern virtuelle Beteiligungen, die bei einem Exit oder Liquiditätsereignis ausgezahlt werden, ohne echte Anteile zu übertragen. Vorteil: keine Eintragung im Firmenbuch, einfachere Handhabung. In Österreich häufig als Alternative zu ESOP verwendet."
+ },
+ {
+ term: "Wandeldarlehen",
+ en: "Convertible Loan / Convertible Note",
+ short: "Darlehen, das in Unternehmensanteile umgewandelt werden kann",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Das Wandeldarlehen ist das DACH-Äquivalent zur Convertible Note: Ein Investor gibt ein Darlehen, das bei einem definierten Auslöseereignis (z.\u00A0B. nächste Finanzierungsrunde) in Anteile umgewandelt wird. Typische Konditionen: Discount (10-25\u00A0%), Valuation Cap, Zinssatz, Laufzeit. In Österreich das häufigste Instrument für Frühphasen-Finanzierung.",
+ example: "€100.000 Wandeldarlehen mit 20\u00A0% Discount und €3 Mio. Cap. Bei Seed-Runde zu €4 Mio. Pre-Money wandelt es zum Cap-Preis."
+ },
+ {
+ term: "Waterfall Analysis",
+ en: "Waterfall Analysis / Exit Waterfall",
+ short: "Verteilungsanalyse der Erlöse bei einem Exit",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Waterfall Analysis zeigt, wie die Erlöse bei einem Exit auf alle Beteiligten verteilt werden, unter Berücksichtigung von Liquidation Preferences, Participating/Non-Participating, Cap Table und Wandeldarlehen. Essentiell, um zu verstehen, was Gründer am Ende tatsächlich erhalten."
+ },
+ {
+ term: "Anti-Dilution",
+ en: "Anti-Dilution Protection",
+ short: "Verwässerungsschutz für Investoren bei Down Rounds",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Anti-Dilution-Klauseln schützen Investoren vor Verwässerung, wenn eine spätere Runde zu niedrigerer Bewertung stattfindet (Down Round). Häufigste Varianten: Full Ratchet (aggressiv) und Weighted Average (marktüblich). Wird im Term Sheet verhandelt."
+ },
+ {
+ term: "ATV",
+ en: "Average Transaction Value",
+ short: "Durchschnittlicher Transaktionswert",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der ATV (auch AOV, Average Order Value) gibt den durchschnittlichen Umsatz pro Transaktion oder Bestellung an. Wichtig für E-Commerce und Marktplatz-Geschäftsmodelle.",
+ formula: "ATV = Gesamtumsatz ÷ Anzahl Transaktionen"
+ },
+ {
+ term: "Breakeven",
+ en: "Breakeven / Gewinnschwelle",
+ short: "Punkt, ab dem Einnahmen die Kosten decken",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der Breakeven-Punkt ist erreicht, wenn ein Startup genauso viel einnimmt wie es ausgibt, Gewinn und Verlust sind null. Kann auf Unternehmensebene (operativer Breakeven) oder auf Kundenebene (CAC Payback) betrachtet werden.",
+ formula: "Breakeven = Fixkosten ÷ Deckungsbeitrag pro Einheit"
+ },
+ {
+ term: "Burn Multiple",
+ en: "Burn Multiple",
+ short: "Verhältnis von Cash-Verbrauch zu Netto-Neuumsatz",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Der Burn Multiple zeigt, wie effizient ein Startup wächst: Wie viel Cash wird verbrannt, um einen Euro neuen ARR zu generieren? Je niedriger, desto effizienter. Unter 1,5× gilt als exzellent, über 3× als problematisch.",
+ formula: "Burn Multiple = Netto Burn ÷ Netto Neuer ARR"
+ },
+ {
+ term: "Cohort Analysis",
+ en: "Cohort Analysis / Kohortenanalyse",
+ short: "Analyse von Nutzergruppen basierend auf ihrem Startzeitpunkt",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Kohortenanalyse gruppiert Kunden nach ihrem Registrierungs- oder Kaufdatum und vergleicht ihr Verhalten über die Zeit. Zeigt, ob sich Retention, Umsatz und Engagement verbessern. Essentiell für SaaS- und Subscription-Modelle."
+ },
+ {
+ term: "D2C",
+ en: "Direct-to-Consumer",
+ short: "Direktvertrieb an Endkunden ohne Zwischenhändler",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "D2C-Marken verkaufen direkt an Endkunden, ohne Einzelhandel oder Zwischenhändler. Vorteile: höhere Margen, direkter Kundenkontakt, Datenhoheit. Beispiele: Online-Shops, Abo-Boxen, eigene Marken-Shops."
+ },
+ {
+ term: "Decacorn",
+ en: "Decacorn",
+ short: "Startup mit einer Bewertung von über 10 Milliarden Dollar",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Ein Decacorn ist ein privat gehaltenes Startup mit einer Bewertung von über USD 10 Milliarden. Noch seltener als Unicorns. Beispiele weltweit: Stripe, SpaceX, Databricks."
+ },
+ {
+ term: "Deep Tech",
+ en: "Deep Tech / Deep Technology",
+ short: "Startups basierend auf tiefgreifender wissenschaftlicher Innovation",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Deep Tech bezeichnet Startups, deren Produkt auf substanzieller wissenschaftlicher oder technologischer Forschung basiert, z.\u00A0B. Biotech, Quantencomputing, neue Materialien, KI-Grundlagenforschung. Längere Entwicklungszyklen, aber stärkerer IP-Schutz. In Österreich stark an TU Wien, TU Graz und IST Austria."
+ },
+ {
+ term: "Disruptive Innovation",
+ en: "Disruptive Innovation",
+ short: "Innovation, die bestehende Märkte grundlegend verändert",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Disruptive Innovation verdrängt etablierte Produkte oder Geschäftsmodelle, oft von ‚unten' kommend (günstiger, einfacher) und dann schrittweise besser werdend. Nicht jede Innovation ist disruptiv. Echt disruptive Startups adressieren oft zunächst ein vernachlässigtes Marktsegment."
+ },
+ {
+ term: "Equity",
+ en: "Equity / Eigenkapital",
+ short: "Unternehmensanteile, das Eigentum am Startup",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Equity (Eigenkapital) bezeichnet die Eigentumsanteile an einem Unternehmen. Investoren erhalten Equity im Austausch für Kapital. Equity-Finanzierung verwässert bestehende Anteile, erfordert aber keine Rückzahlung. Gegenteil: Fremdkapital (Debt)."
+ },
+ {
+ term: "FFG",
+ en: "Österreichische Forschungsförderungsgesellschaft",
+ short: "Zentrale Förderagentur für Forschung und Innovation in Österreich",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Die FFG (Österreichische Forschungsförderungsgesellschaft) ist die wichtigste Anlaufstelle für Forschungs- und Innovationsförderung in Österreich. Relevante Programme für Startups: Basisprogramm, Spin-off Fellowships, Bridge. Startups können über FFG-Förderungen die Produktentwicklung teilfinanzieren."
+ },
+ {
+ term: "Friends & Family Round",
+ en: "Friends & Family Round",
+ short: "Früheste Finanzierung durch persönliches Umfeld",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Friends & Family Round ist informelles Startkapital von Familie und Freunden, oft die allererste externe Finanzierung. Vorsicht: Klare Verträge auch im privaten Umfeld, um Beziehungen zu schützen. Typisches Volumen: €5.000-€50.000."
+ },
+ {
+ term: "Funnel",
+ en: "Funnel / Trichter",
+ short: "Stufenweiser Prozess von Erstkontakt bis Conversion",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Der Funnel (Marketing-/Sales-Trichter) beschreibt die Stufen, die ein potenzieller Kunde durchläuft: Awareness → Interest → Consideration → Conversion → Retention. Jede Stufe hat eigene Metriken und Optimierungspotenzial."
+ },
+ {
+ term: "GmbH",
+ en: "Gesellschaft mit beschränkter Haftung",
+ short: "Standard-Rechtsform für Startups in Österreich",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die GmbH ist die häufigste Rechtsform für Startups in Österreich. Mindeststammkapital: €35.000 (Gründungsprivilegierung: €10.000). Haftung beschränkt auf das Gesellschaftsvermögen. Seit 2024 gibt es mit der FlexCo eine Alternative. Eintragung im Firmenbuch, Notariatsakt erforderlich."
+ },
+ {
+ term: "Ideation",
+ en: "Ideation",
+ short: "Kreative Phase der Ideenfindung und -entwicklung",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Ideation ist die systematische Phase der Ideengenerierung, oft mittels Design Thinking, Brainstorming, JTBD-Analyse oder Kundeninterviews. Ziel: möglichst viele Lösungsansätze entwickeln, bevor die beste Idee validiert wird."
+ },
+ {
+ term: "Iteration",
+ en: "Iteration",
+ short: "Wiederholter Verbesserungszyklus eines Produkts oder Prozesses",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Eine Iteration ist ein Durchlauf des Build-Measure-Learn-Zyklus: Version bauen, Feedback einholen, verbessern, wiederholen. Schnelle Iterationen sind der Kern agiler Produktentwicklung. Je kürzer die Zyklen, desto schneller das Lernen."
+ },
+ {
+ term: "Kleinunternehmerregelung",
+ en: "Small Business Exemption (Austrian VAT)",
+ short: "USt-Befreiung für Unternehmen unter €55.000 Jahresumsatz in Österreich",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die Kleinunternehmerregelung befreit Unternehmen in Österreich mit einem Jahresumsatz unter €55.000 (seit 2025) von der Umsatzsteuer. Vorteil: keine USt auf Rechnungen. Nachteil: kein Vorsteuerabzug. Für Startups in der Frühphase oft sinnvoll, vor dem Wachstum aber zu prüfen."
+ },
+ {
+ term: "Lean Canvas",
+ en: "Lean Canvas",
+ short: "Einseitige Geschäftsmodell-Übersicht für Startups",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Das Lean Canvas ist eine Startup-spezifische Variante des Business Model Canvas. Auf einer Seite: Problem, Lösung, Unique Value Proposition, unfairer Vorteil, Kundensegmente, Schlüsselkennzahlen, Kanäle, Kostenstruktur und Einnahmequellen. Ideal für schnelle Hypothesendokumentation."
+ },
+ {
+ term: "Liquidation Preference",
+ en: "Liquidation Preference",
+ short: "Vorrangiges Rückzahlungsrecht für Investoren bei Exit oder Liquidation",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die Liquidation Preference bestimmt, wer bei einem Exit oder einer Liquidation zuerst ausgezahlt wird. Standard: 1× non-participating (Investor bekommt sein Investment zurück ODER wandelt in Stammaktien, je nachdem, was mehr bringt). Participating Preferences (zusätzlich zum Investment auch proportionaler Anteil) sind gründerunfreundlich."
+ },
+ {
+ term: "Lock-up Period",
+ en: "Lock-up Period",
+ short: "Sperrfrist für den Verkauf von Anteilen nach einem IPO oder Exit",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die Lock-up Period ist ein Zeitraum (typisch: 6-12 Monate), in dem Gründer und frühe Investoren ihre Anteile nach einem IPO nicht verkaufen dürfen. Soll den Aktienkurs stabilisieren."
+ },
+ {
+ term: "Marketplace",
+ en: "Marketplace / Marktplatz",
+ short: "Plattform, die Anbieter und Nachfrager zusammenbringt",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Ein Marketplace ist eine Plattform, die Käufer und Verkäufer zusammenbringt und typischerweise eine Provision (Take Rate) auf Transaktionen erhebt. Herausforderung: das Henne-Ei-Problem (beide Seiten gleichzeitig aufbauen). Beispiele: Airbnb, Etsy, willhaben."
+ },
+ {
+ term: "Milestone",
+ en: "Milestone / Meilenstein",
+ short: "Definierter Zielpunkt in der Startup-Entwicklung",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Milestones sind klar definierte Zielpunkte, die den Fortschritt eines Startups markieren: MVP fertig, erster zahlender Kunde, PMF erreicht, Break-even. Investoren koppeln oft Kapitalfreigaben (Tranchen) an Milestones."
+ },
+ {
+ term: "Network Effects",
+ en: "Network Effects / Netzwerkeffekte",
+ short: "Das Produkt wird wertvoller mit jedem neuen Nutzer",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Netzwerkeffekte entstehen, wenn ein Produkt mit jedem zusätzlichen Nutzer wertvoller wird, für alle Nutzer. Direkter Netzwerkeffekt: Telefon, Social Media. Indirekter Netzwerkeffekt: Marktplatz (mehr Verkäufer → mehr Käufer). Stärkster Moat überhaupt."
+ },
+ {
+ term: "Pitch Deck",
+ en: "Pitch Deck",
+ short: "Präsentation für Investoren, typischerweise 10-15 Slides",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Ein Pitch Deck ist eine Präsentation (10-15 Slides), die das Startup gegenüber Investoren vorstellt. Typische Struktur: Problem, Lösung, Markt, Geschäftsmodell, Traction, Team, Finanzierung. Wird per E-Mail verschickt (Send Deck) oder live präsentiert (Pitch)."
+ },
+ {
+ term: "Product-Led Growth",
+ en: "Product-Led Growth (PLG)",
+ short: "Wachstumsstrategie, bei der das Produkt selbst für Akquise sorgt",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Bei Product-Led Growth (PLG) ist das Produkt selbst der Haupttreiber für Kundengewinnung, Conversion und Expansion. Nutzer erleben den Wert direkt (Free Trial, Freemium) und upgraden selbstständig. Senkt CAC und verkürzt Sales Cycles. Beispiele: Slack, Notion, Figma."
+ },
+ {
+ term: "Revenue Run Rate",
+ en: "Revenue Run Rate",
+ short: "Hochrechnung des aktuellen Umsatzes auf ein Jahr",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Revenue Run Rate projiziert den aktuellen Monatsumsatz auf ein volles Jahr, auch wenn das Unternehmen noch kein volles Jahr besteht. Nützlich, aber kann irreführend sein, wenn der Monat nicht repräsentativ ist.",
+ formula: "Run Rate = Aktueller Monatsumsatz × 12"
+ },
+ {
+ term: "Scalability",
+ en: "Scalability / Skalierbarkeit",
+ short: "Fähigkeit, Wachstum ohne proportionalen Kostenanstieg zu bewältigen",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Skalierbarkeit beschreibt, ob ein Geschäftsmodell überproportional wachsen kann, mehr Umsatz ohne linearen Anstieg der Kosten. Software/SaaS = hoch skalierbar. Dienstleistungen/Beratung = gering skalierbar. Investoren prüfen Skalierbarkeit als Kernanforderung."
+ },
+ {
+ term: "Scrum",
+ en: "Scrum",
+ short: "Agiles Framework für iterative Produktentwicklung",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Scrum ist ein agiles Projektmanagement-Framework mit festen Rollen (Product Owner, Scrum Master, Team), Sprints (1-4 Wochen) und Ritualen (Daily, Sprint Review, Retro). Weit verbreitet in der Softwareentwicklung. Hilft Startups, schnell und fokussiert zu iterieren."
+ },
+ {
+ term: "Stakeholder",
+ en: "Stakeholder",
+ short: "Alle Personen und Gruppen mit Interesse am Unternehmen",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Stakeholder sind alle Personen und Gruppen, die ein Interesse am Erfolg (oder Misserfolg) eines Unternehmens haben: Gründer, Investoren, Mitarbeiter, Kunden, Partner, Regulierungsbehörden. Gutes Stakeholder-Management ist gerade bei Startups mit Investoren zentral."
+ },
+ {
+ term: "SVS",
+ en: "Sozialversicherung der Selbständigen",
+ short: "Pflichtversicherung für Selbständige in Österreich",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die SVS (Sozialversicherung der Selbständigen) ist die Pflichtversicherung für alle Gewerbetreibenden, Freiberufler und neue Selbständige in Österreich. Deckt Kranken-, Pensions- und Unfallversicherung ab. Beiträge orientieren sich am Gewinn. Für Gründer wichtig: Beitragsgrundlage in den ersten Jahren oft auf Mindestbasis."
+ },
+ {
+ term: "aws",
+ en: "Austria Wirtschaftsservice",
+ short: "Bundesförderbank für Startups und KMUs in Österreich",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Die aws (Austria Wirtschaftsservice) ist die zentrale Förderinstitution des Bundes. Für Startups relevant: aws Gründerfonds (Equity), aws Preseed/Seed-Förderung, aws Creative Impact, aws First Inkubator. Auch Garantien und Zuschüsse für innovative Projekte."
+ },
+ {
+ term: "WKO",
+ en: "Wirtschaftskammer Österreich",
+ short: "Gesetzliche Interessenvertretung der österreichischen Wirtschaft",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Die WKO (Wirtschaftskammer Österreich) ist die Pflichtmitgliedschaft für alle Gewerbetreibenden. Bietet: Gründerservice, Rechtsberatung, Brancheninformationen, Förderdatenbank, Außenhandelsstellen. Das WKO-Gründerservice ist die erste Anlaufstelle für formale Gründungsfragen."
+ },
+ {
+ term: "Retention Rate",
+ en: "Retention Rate",
+ short: "Prozentsatz der Kunden, die im Zeitraum aktiv bleiben",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Retention Rate ist das Gegenstück zur Churn Rate: Sie misst, wie viel Prozent der Kunden (oder des Umsatzes) über einen Zeitraum gehalten werden. Hohe Retention = starkes Produkt. Benchmark SaaS: >90\u00A0% jährliche Retention.",
+ formula: "Retention Rate = (Kunden am Ende − Neukunden) ÷ Kunden am Anfang × 100"
+ },
+ {
+ term: "Runway Extension",
+ en: "Runway Extension",
+ short: "Maßnahmen zur Verlängerung der finanziellen Reichweite",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Runway Extension umfasst alle Maßnahmen, um die finanzielle Reichweite eines Startups zu verlängern, ohne neue Finanzierungsrunde. Optionen: Kosten senken, Umsatz beschleunigen, Zahlungsziele verhandeln, Bridge-Finanzierung, Fördermittel (FFG, aws)."
+ },
+ {
+ term: "Take Rate",
+ en: "Take Rate",
+ short: "Anteil, den eine Plattform an jeder Transaktion verdient",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Take Rate ist der Prozentsatz, den eine Plattform oder ein Marktplatz an jeder vermittelten Transaktion verdient. Typisch: 5-30\u00A0% je nach Branche. Die Take Rate × GMV = tatsächlicher Plattform-Umsatz.",
+ formula: "Take Rate = Plattform-Umsatz ÷ GMV × 100"
+ },
+ {
+ term: "Tranche",
+ en: "Tranche",
+ short: "Teilweise Auszahlung eines Investments an Meilensteine geknüpft",
+ cat: "fundraising",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\"/><path d=\"M8 3.5v9M10 5.5c0-1-1-1.5-2-1.5s-2.5-2 1.5 1 1.5 2 1.5 2.5 2 1.5-1 1.5-2 1.5-2-.5-2-1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/></svg> Fundraising",
+ desc: "Eine Tranche ist eine Teilauszahlung eines vereinbarten Investments, die an das Erreichen definierter Milestones geknüpft ist. Reduziert das Risiko für Investoren. Für Startups: höherer Druck, aber auch klare Ziele."
+ },
+ {
+ term: "Venture Builder",
+ en: "Venture Builder / Company Builder",
+ short: "Organisation, die systematisch neue Startups aufbaut",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Ein Venture Builder (Company Builder) baut systematisch Startups auf: Ideen intern generieren, Teams zusammenstellen, Ressourcen bereitstellen. Im Gegensatz zu Accelerators entwickelt ein Venture Builder die Geschäftsideen oft selbst."
+ },
+ {
+ term: "Viral Coefficient",
+ en: "Viral Coefficient / K-Faktor",
+ short: "Messwert, wie viele neue Nutzer ein bestehender Nutzer bringt",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Der Viral Coefficient (K-Faktor) misst, wie viele neue Nutzer durch jeden bestehenden Nutzer generiert werden. K >1 = virales Wachstum (jeder Nutzer bringt mehr als einen neuen). K <1 = kein selbsttragendes virales Wachstum.",
+ formula: "K = Einladungen pro Nutzer × Conversion Rate der Einladungen"
+ },
+ {
+ term: "Working Capital",
+ en: "Working Capital / Betriebskapital",
+ short: "Kurzfristige Mittel für den laufenden Geschäftsbetrieb",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Working Capital (Betriebskapital) ist die Differenz zwischen kurzfristigen Vermögenswerten (Forderungen, Vorräte, Kasse) und kurzfristigen Verbindlichkeiten. Positives Working Capital = das Unternehmen kann seine laufenden Verpflichtungen decken.",
+ formula: "Working Capital = Umlaufvermögen − kurzfristige Verbindlichkeiten"
+ },
+ {
+ term: "YoY",
+ en: "Year-over-Year",
+ short: "Vergleich eines Zeitraums mit dem gleichen Vorjahreszeitraum",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "YoY (Year-over-Year) vergleicht eine Kennzahl mit dem Vorjahreswert desselben Zeitraums. Eliminiert saisonale Effekte. Investoren schauen auf YoY-Wachstumsraten, um den Fortschritt eines Startups zu beurteilen.",
+ formula: "YoY Growth = (Aktueller Wert − Vorjahreswert) ÷ Vorjahreswert × 100"
+ },
+ {
+ term: "Zero-to-One",
+ en: "Zero-to-One",
+ short: "Von nichts zu etwas Neuem, echte Innovation statt Kopie",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Zero-to-One beschreibt die Schaffung von etwas völlig Neuem (von 0 auf 1), im Gegensatz zu inkrementeller Verbesserung (von 1 auf n). Echte Innovation statt Kopie. Der Kern erfolgreicher Startups: ein Problem auf eine Weise lösen, die vorher nicht existierte."
+ },
+ {
+ term: "AARRR",
+ en: "AARRR / Pirate Metrics",
+ short: "Fünf zentrale Startup-Metriken: Acquisition, Activation, Retention, Referral, Revenue",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "AARRR (Pirate Metrics) ist ein Framework für die fünf wichtigsten Startup-Metriken: Acquisition (Nutzergewinnung), Activation (erster Aha-Moment), Retention (Wiederkehr), Referral (Weiterempfehlung), Revenue (Umsatz). Hilft, den Funnel systematisch zu analysieren und Engstellen zu identifizieren."
+ },
+ {
+ term: "Benchmarking",
+ en: "Benchmarking",
+ short: "Vergleich der eigenen Kennzahlen mit Branchen- oder Wettbewerbsdaten",
+ cat: "organisation",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"1\" width=\"10\" height=\"14\" rx=\"1\"/><line x1=\"6\" y1=\"4\" x2=\"10\" y2=\"4\"/><line x1=\"6\" y1=\"7\" x2=\"10\" y2=\"7\"/><line x1=\"6\" y1=\"10\" x2=\"10\" y2=\"10\"/></svg> Organisation",
+ desc: "Benchmarking ist der systematische Vergleich eigener KPIs mit Branchen-Standards, Wettbewerbern oder Best Practices. Hilft Startups, ihre Leistung realistisch einzuordnen, z.\u00A0B. ‚Ist unsere Churn Rate von 5\u00A0% gut oder schlecht für B2B-SaaS?'"
+ },
+ {
+ term: "Compliance",
+ en: "Compliance",
+ short: "Einhaltung gesetzlicher und regulatorischer Vorschriften",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Compliance bezeichnet die Einhaltung aller relevanten Gesetze, Vorschriften und internen Richtlinien. Für Startups in Österreich relevant: DSGVO, Gewerbeordnung, UGB, Arbeitsrecht, branchenspezifische Regulierung (z.\u00A0B. FMA für FinTech). Je nach Branche schon früh ein Thema."
+ },
+ {
+ term: "DSGVO",
+ en: "Datenschutz-Grundverordnung (GDPR)",
+ short: "EU-weite Datenschutzverordnung",
+ cat: "legal",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 1v14M3 4l5-2 5 2M2 4l3 6h6l3-6\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Legal",
+ desc: "Die DSGVO (General Data Protection Regulation, GDPR) regelt den Umgang mit personenbezogenen Daten in der EU. Für Startups ab Tag 1 relevant: Datenschutzerklärung, Verarbeitungsverzeichnis, Einwilligungen, Auftragsverarbeitung. Verstöße können hohe Strafen nach sich ziehen. Österreichische Datenschutzbehörde: dsb.gv.at."
+ },
+ {
+ term: "Economies of Scale",
+ en: "Economies of Scale / Skaleneffekte",
+ short: "Kostenvorteile durch steigende Produktionsmenge",
+ cat: "growth",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"1 14 5.5 7 9 10 15 2\"/><polyline points=\"10 2 15 2 15 7\"/></svg> Growth",
+ desc: "Economies of Scale (Skaleneffekte) entstehen, wenn die Stückkosten mit wachsender Menge sinken, weil Fixkosten auf mehr Einheiten verteilt werden. Für Startups relevant: Serverkosten pro Nutzer bei SaaS, Einkaufspreise bei Hardware, Vertriebskosten bei Wachstum."
+ },
+ {
+ term: "Proof of Concept",
+ en: "Proof of Concept (PoC)",
+ short: "Machbarkeitsnachweis für eine Technologie oder Idee",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Ein Proof of Concept (PoC) demonstriert, dass eine Idee oder Technologie grundsätzlich funktioniert, noch vor dem MVP. Oft technisch, nicht marktbezogen. Besonders bei Deep-Tech- und Hardware-Startups wichtig. Nicht zu verwechseln mit einem Prototyp."
+ },
+ {
+ term: "Prototyp",
+ en: "Prototype",
+ short: "Frühe Produktversion zur Demonstration und zum Testen",
+ cat: "produkt",
+ catLabel: "🛠️ Produkt",
+ desc: "Ein Prototyp ist ein frühes Modell eines Produkts, das Funktionalität und Design zeigt, aber noch nicht marktreif ist. Kann ein Klick-Dummy, 3D-Druck, Hardware-Mockup oder funktionaler Code-Prototyp sein. Ziel: Feedback sammeln, bevor das eigentliche Produkt gebaut wird."
+ },
+ {
+ term: "Revenue Churn",
+ en: "Revenue Churn / Umsatzchurn",
+ short: "Prozentsatz des wiederkehrenden Umsatzes, der verloren geht",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Revenue Churn misst den Anteil des wiederkehrenden Umsatzes (MRR), der durch Kündigungen und Downgrades verloren geht. Kann durch Expansion Revenue (Upselling) ausgeglichen werden → Net Revenue Churn kann negativ sein (= Wachstum).",
+ formula: "Revenue Churn = Verlorener MRR ÷ Start-MRR × 100"
+ },
+ {
+ term: "Rule of 40",
+ en: "Rule of 40",
+ short: "Wachstumsrate + Profitabilität sollte zusammen ≥40\u00A0% ergeben",
+ cat: "finanzkennzahl",
+ catLabel: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\"><rect x=\"1\" y=\"9\" width=\"3\" height=\"6\" rx=\"0.5\"/><rect x=\"6\" y=\"5\" width=\"3\" height=\"10\" rx=\"0.5\"/><rect x=\"11\" y=\"1\" width=\"3\" height=\"14\" rx=\"0.5\"/></svg> Finanzkennzahl",
+ desc: "Die Rule of 40 besagt: Die Summe aus Umsatzwachstum (in %) und Gewinnmarge (in %) sollte mindestens 40 ergeben. Schnelles Wachstum bei Verlusten ist OK, wenn die Summe stimmt. Ebenso langsames Wachstum bei hoher Marge. Standard-Benchmark für SaaS ab Series B.",
+ formula: "Rule of 40 = YoY-Umsatzwachstum (%) + EBITDA-Marge (%)"
+ }
+];
+
+// --- Rendering ---
+const glossaryEl = document.getElementById('glossary');
+const searchInput = document.getElementById('searchInput');
+const resultCount = document.getElementById('resultCount');
+const noResults = document.getElementById('noResults');
+const filtersEl = document.getElementById('filters');
+const alphaNavEl = document.getElementById('alphaNav');
+
+let activeCat = 'all';
+let activeLetter = null;
+
+function getCatClass(cat) {
+ const map = {
+ finanzkennzahl: 'cat-finanzkennzahl',
+ legal: 'cat-legal',
+ fundraising: 'cat-fundraising',
+ produkt: 'cat-produkt',
+ growth: 'cat-growth',
+ organisation: 'cat-organisation'
+ };
+ return map[cat] || '';
+}
+
+function buildGlossary() {
+ // Sort terms alphabetically by term
+ TERMS.sort((a, b) => a.term.localeCompare(b.term, 'de'));
+
+ // Group by first letter
+ const groups = {};
+ TERMS.forEach(t => {
+ const letter = t.term.charAt(0).toUpperCase();
+ if (!groups[letter]) groups[letter] = [];
+ groups[letter].push(t);
+ });
+
+ let html = '';
+ const letters = Object.keys(groups).sort((a, b) => a.localeCompare(b, 'de'));
+ letters.forEach(letter => {
+ html += '<div class="letter-group" id="letter-' + letter + '">';
+ html += '<div class="letter-heading"><span>' + letter + '</span><hr></div>';
+ groups[letter].forEach(t => {
+ html += '<div class="entry" data-cat="' + t.cat + '" data-term="' + t.term.toLowerCase() + '" data-en="' + (t.en || '').toLowerCase() + '" data-desc="' + (t.desc || '').toLowerCase() + '" data-letter="' + letter + '">';
+ html += '<div class="entry-header">';
+ html += '<span class="entry-term">' + t.term + '</span>';
+ if (t.en) html += '<span class="entry-en">(' + t.en + ')</span>';
+ html += '</div>';
+ html += '<div class="entry-short">' + t.short + '</div>';
+ html += '<span class="entry-cat ' + getCatClass(t.cat) + '">' + t.catLabel + '</span>';
+ html += '<div class="entry-desc">' + t.desc + '</div>';
+ if (t.formula) html += '<div class="entry-formula">' + t.formula + '</div>';
+ if (t.example) html += '<div class="entry-example">💡 ' + t.example + '</div>';
+ html += '</div>';
+ });
+ html += '</div>';
+ });
+ glossaryEl.innerHTML = html;
+
+ // Build alpha nav
+ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+ let alphaHtml = '';
+ alphabet.forEach(l => {
+ const exists =!!groups[l];
+ alphaHtml += '<button class="alpha-btn' + (exists? '': ' disabled') + '" data-letter="' + l + '"' + (exists? '': ' disabled') + '>' + l + '</button>';
+ });
+ alphaNavEl.innerHTML = alphaHtml;
+
+ updateCount();
+}
+
+function updateCount() {
+ const visible = glossaryEl.querySelectorAll('.entry:not(.hidden)').length;
+ resultCount.textContent = visible;
+ noResults.classList.toggle('visible', visible === 0);
+
+ // Update total badge
+ document.getElementById('totalBadge').textContent = TERMS.length + ' Begriffe';
+}
+
+function filterEntries() {
+ const query = searchInput.value.toLowerCase().trim();
+ const entries = glossaryEl.querySelectorAll('.entry');
+ entries.forEach(entry => {
+ const matchesCat = activeCat === 'all' || entry.dataset.cat === activeCat;
+ const matchesLetter =!activeLetter || entry.dataset.letter === activeLetter;
+ const matchesSearch =!query ||
+ entry.dataset.term.includes(query) ||
+ entry.dataset.en.includes(query) ||
+ entry.dataset.desc.includes(query);
+ entry.classList.toggle('hidden',!(matchesCat && matchesLetter && matchesSearch));
+ });
+
+ // Hide empty letter groups
+ glossaryEl.querySelectorAll('.letter-group').forEach(group => {
+ const hasVisible = group.querySelectorAll('.entry:not(.hidden)').length > 0;
+ group.style.display = hasVisible? '': 'none';
+ });
+
+ updateCount();
+}
+
+// Event listeners
+searchInput.addEventListener('input', () => {
+ activeLetter = null;
+ alphaNavEl.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+ filterEntries();
+});
+
+filtersEl.addEventListener('click', e => {
+ const btn = e.target.closest('.filter-btn');
+ if (!btn) return;
+ filtersEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ activeCat = btn.dataset.cat;
+ filterEntries();
+});
+
+alphaNavEl.addEventListener('click', e => {
+ const btn = e.target.closest('.alpha-btn:not([disabled])');
+ if (!btn) return;
+ const letter = btn.dataset.letter;
+ if (activeLetter === letter) {
+ activeLetter = null;
+ btn.classList.remove('active');
+ } else {
+ alphaNavEl.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ activeLetter = letter;
+ const target = document.getElementById('letter-' + letter);
+ if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
+ filterEntries();
+});
+
+// Init
+buildGlossary();
+
+ </script>
+
+</body>
+</html>

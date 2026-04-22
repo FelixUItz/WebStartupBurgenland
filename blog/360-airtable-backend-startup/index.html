@@ -1,0 +1,414 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Airtable als Backend für dein Startup - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="So nutzt du Airtable als leichtgewichtiges Backend für dein No-Code-Startup. Datenstruktur, Automations und Integrationen Schritt für Schritt erklärt."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/360-airtable-backend-startup"><!-- Open Graph --><meta property="og:title" content="Airtable als Backend für dein Startup - StartUp Burgenland Blog"><meta property="og:description" content="So nutzt du Airtable als leichtgewichtiges Backend für dein No-Code-Startup. Datenstruktur, Automations und Integrationen Schritt für Schritt erklärt."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Airtable als Backend für dein Startup","description":"So nutzt du Airtable als leichtgewichtiges Backend für dein No-Code-Startup. Datenstruktur, Automations und Integrationen Schritt für Schritt erklärt.","datePublished":"2023-05-23T00:00:00.000Z","dateModified":"2023-05-23T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/360-airtable-backend-startup","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/360-airtable-backend-startup"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/produkt-und-technologie/" class="blog-tag" style="text-decoration:none;"> produkt-und-technologie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Airtable als Backend für dein Startup</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2023-05-23">23. Mai 2023</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="airtable-als-backend-für-dein-startup----deine-daten-dein-fundament">Airtable als Backend für dein Startup, Deine Daten, dein Fundament</h1>
+<p>Jedes Startup braucht ein Backend, einen Ort, an dem Daten gespeichert, verwaltet und abgerufen werden. Traditionell bedeutet das: Datenbank aufsetzen, Server konfigurieren, APIs programmieren. Aber mit Airtable geht das alles ohne Code.</p>
+<p>In <a href="/blog/356-no-code-grundlagen-ohne-programmieren">unseren No-Code-Grundlagen</a> haben wir Airtable bereits als zentrale Komponente im No-Code-Stack vorgestellt. Jetzt zeige ich dir im Detail, wie du es als Backend für dein Startup einsetzt.</p>
+<h2 id="was-ist-airtable----und-was-ist-es-nicht">Was ist Airtable, und was ist es nicht?</h2>
+<p>Airtable sieht aus wie ein Spreadsheet, ist aber eigentlich eine relationale Datenbank mit einer visuellen Oberfläche. Stell dir Excel vor, aber intelligenter, strukturierter und mit der Fähigkeit, mit anderen Tools zu kommunizieren.</p>
+<h3 id="airtable-ist">Airtable ist:</h3>
+<ul>
+<li>Eine visuelle Datenbank mit verschiedenen Ansichten</li>
+<li>Ein Collaboration-Tool für Teams</li>
+<li>Eine Automatisierungsplattform für einfache Workflows</li>
+<li>Ein Backend für No-Code-Anwendungen via API</li>
+<li>Ein Projektmanagement-Werkzeug</li>
+</ul>
+<h3 id="airtable-ist-nicht">Airtable ist NICHT:</h3>
+<ul>
+<li>Eine echte relationale Datenbank (keine SQL-Abfragen)</li>
+<li>Ein Ersatz für PostgreSQL oder MySQL bei grossen Datenmengen</li>
+<li>Eine Web-App-Plattform (dafür brauchst du <a href="/blog/358-mvp-mit-bubble-bauen">Bubble</a> oder Softr)</li>
+<li>Ein Echtzeit-System für Millionen von Abfragen</li>
+</ul>
+<h2 id="die-grundbausteine-von-airtable">Die Grundbausteine von Airtable</h2>
+<h3 id="bases">Bases</h3>
+<p>Eine Base ist deine Datenbank. Für jedes Projekt erstellst du eine eigene Base. Eine Base für dein Startup könnte zum Beispiel alle Tabellen enthalten, die du für dein Produkt brauchst.</p>
+<h3 id="tables">Tables</h3>
+<p>Tables sind die einzelnen Tabellen innerhalb einer Base, vergleichbar mit Blättern in einer Excel-Mappe. Jede Tabelle hat ein bestimmtes Thema: Kunden, Bestellungen, Produkte etc.</p>
+<h3 id="fields">Fields</h3>
+<p>Fields sind die Spalten deiner Tabelle. Hier kommt die Stärke von Airtable ins Spiel: Du hast über 20 verschiedene Feldtypen zur Auswahl:</p>
+<ul>
+<li><strong>Text</strong>: Einfacher Text oder langer Text</li>
+<li><strong>Number</strong>: Zahlen mit verschiedenen Formatierungen</li>
+<li><strong>Single Select</strong>: Auswahlfeld mit vordefinierten Optionen</li>
+<li><strong>Multiple Select</strong>: Mehrfachauswahl</li>
+<li><strong>Date</strong>: Datumsfelder mit Kalender</li>
+<li><strong>Checkbox</strong>: Ja/Nein-Felder</li>
+<li><strong>URL</strong>: Links</li>
+<li><strong>Email</strong>: E-Mail-Adressen</li>
+<li><strong>Phone</strong>: Telefonnummern</li>
+<li><strong>Currency</strong>: Währungsbeträge</li>
+<li><strong>Attachment</strong>: Dateien und Bilder</li>
+<li><strong>Linked Record</strong>: Verknüpfungen zu anderen Tabellen</li>
+<li><strong>Formula</strong>: Berechnete Felder</li>
+<li><strong>Rollup</strong>: Aggregierte Werte aus verknüpften Tabellen</li>
+<li><strong>Lookup</strong>: Werte aus verknüpften Tabellen anzeigen</li>
+</ul>
+<h3 id="views">Views</h3>
+<p>Views sind verschiedene Ansichten deiner Daten, ohne die Daten selbst zu verändern:</p>
+<ul>
+<li><strong>Grid View</strong>: Die klassische Tabellenansicht</li>
+<li><strong>Kanban View</strong>: Karten auf einem Board (wie Trello)</li>
+<li><strong>Calendar View</strong>: Einträge auf einem Kalender</li>
+<li><strong>Gallery View</strong>: Bild-basierte Kartenansicht</li>
+<li><strong>Form View</strong>: Ein Formular zum Erfassen neuer Einträge</li>
+<li><strong>Gantt View</strong>: Zeitstrahl für Projekte</li>
+</ul>
+<h2 id="praxis-beispiel-crm-für-dein-startup">Praxis-Beispiel: CRM für dein Startup</h2>
+<p>Lass uns ein konkretes Beispiel durchgehen. Du gründest ein Startup im Burgenland und brauchst ein CRM-System, um deine Kontakte, Deals und Aktivitäten zu verwalten.</p>
+<h3 id="tabelle-1-kontakte">Tabelle 1: Kontakte</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Beschreibung</th></tr></thead><tbody><tr><td>Name</td><td>Text</td><td>Vor- und Nachname</td></tr><tr><td>Unternehmen</td><td>Linked Record</td><td>Verknüpfung zur Unternehmen-Tabelle</td></tr><tr><td>E-Mail</td><td>Email</td><td>Kontakt-E-Mail</td></tr><tr><td>Telefon</td><td>Phone</td><td>Telefonnummer</td></tr><tr><td>Rolle</td><td>Single Select</td><td>"Entscheider", "Einfluss", "Nutzer"</td></tr><tr><td>Status</td><td>Single Select</td><td>"Lead", "Qualifiziert", "Kunde", "Inaktiv"</td></tr><tr><td>Quelle</td><td>Single Select</td><td>"Website", "Event", "Empfehlung", "LinkedIn"</td></tr><tr><td>Notizen</td><td>Long Text</td><td>Freitext für Notizen</td></tr><tr><td>Letzter Kontakt</td><td>Date</td><td>Datum des letzten Kontakts</td></tr><tr><td>Deals</td><td>Linked Record</td><td>Verknüpfung zur Deals-Tabelle</td></tr></tbody></table>
+<h3 id="tabelle-2-unternehmen">Tabelle 2: Unternehmen</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Beschreibung</th></tr></thead><tbody><tr><td>Name</td><td>Text</td><td>Unternehmensname</td></tr><tr><td>Branche</td><td>Single Select</td><td>z.B. "Tourismus", "Landwirtschaft", "IT"</td></tr><tr><td>Website</td><td>URL</td><td>Unternehmenswebsite</td></tr><tr><td>Standort</td><td>Text</td><td>Stadt/Region</td></tr><tr><td>Grösse</td><td>Single Select</td><td>"1-10", "11-50", "51-200", "200+"</td></tr><tr><td>Kontakte</td><td>Linked Record</td><td>Verknüpfung zur Kontakte-Tabelle</td></tr><tr><td>Jahresumsatz</td><td>Currency</td><td>Geschätzter Jahresumsatz in EUR</td></tr></tbody></table>
+<h3 id="tabelle-3-deals">Tabelle 3: Deals</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Beschreibung</th></tr></thead><tbody><tr><td>Name</td><td>Text</td><td>Deal-Bezeichnung</td></tr><tr><td>Kontakt</td><td>Linked Record</td><td>Verknüpfung zur Kontakte-Tabelle</td></tr><tr><td>Wert</td><td>Currency</td><td>Deal-Wert in EUR</td></tr><tr><td>Phase</td><td>Single Select</td><td>"Erstkontakt", "Angebot", "Verhandlung", "Gewonnen", "Verloren"</td></tr><tr><td>Wahrscheinlichkeit</td><td>Number</td><td>Abschlusswahrscheinlichkeit in Prozent</td></tr><tr><td>Gewichteter Wert</td><td>Formula</td><td>Wert mal Wahrscheinlichkeit</td></tr><tr><td>Erwartetes Abschlussdatum</td><td>Date</td><td>Wann rechnest du mit dem Abschluss?</td></tr><tr><td>Aktivitäten</td><td>Linked Record</td><td>Verknüpfung zur Aktivitäten-Tabelle</td></tr></tbody></table>
+<h3 id="tabelle-4-aktivitäten">Tabelle 4: Aktivitäten</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Beschreibung</th></tr></thead><tbody><tr><td>Typ</td><td>Single Select</td><td>"Anruf", "E-Mail", "Meeting", "Notiz"</td></tr><tr><td>Datum</td><td>Date</td><td>Wann fand die Aktivität statt?</td></tr><tr><td>Kontakt</td><td>Linked Record</td><td>Verknüpfung zur Kontakte-Tabelle</td></tr><tr><td>Deal</td><td>Linked Record</td><td>Verknüpfung zur Deals-Tabelle</td></tr><tr><td>Beschreibung</td><td>Long Text</td><td>Was wurde besprochen?</td></tr><tr><td>Nächster Schritt</td><td>Text</td><td>Was ist als nächstes zu tun?</td></tr><tr><td>Fällig am</td><td>Date</td><td>Deadline für den nächsten Schritt</td></tr></tbody></table>
+<h2 id="airtable-views-für-verschiedene-perspektiven">Airtable Views für verschiedene Perspektiven</h2>
+<h3 id="sales-pipeline-kanban-view">Sales Pipeline (Kanban View)</h3>
+<p>Erstelle eine Kanban-Ansicht der Deals-Tabelle, gruppiert nach "Phase". So siehst du auf einen Blick, wie viele Deals in jeder Phase sind und kannst sie per Drag-and-Drop verschieben.</p>
+<h3 id="kalender-ansicht-für-aktivitäten">Kalender-Ansicht für Aktivitäten</h3>
+<p>Eine Kalender-Ansicht der Aktivitäten-Tabelle zeigt dir alle geplanten und vergangenen Aktivitäten auf einem Kalender. Perfekt für die Tages- und Wochenplanung.</p>
+<h3 id="galerie-ansicht-für-kontakte">Galerie-Ansicht für Kontakte</h3>
+<p>Eine Galerie-Ansicht der Kontakte-Tabelle zeigt dir Kontaktkarten mit den wichtigsten Informationen. Ideal, um schnell einen Überblick zu bekommen.</p>
+<h3 id="formular-für-neue-leads">Formular für neue Leads</h3>
+<p>Erstelle eine Form-View für die Kontakte-Tabelle. Du kannst dieses Formular auf deiner <a href="/blog/359-webflow-startup-websites">Webflow-Website</a> einbetten oder den Link teilen. Neue Einträge landen automatisch in deiner Datenbank.</p>
+<h2 id="airtable-automations----workflows-ohne-code">Airtable Automations, Workflows ohne Code</h2>
+<p>Airtable hat ein eingebautes Automatisierungssystem. Damit kannst du Aktionen ausführen, wenn bestimmte Bedingungen erfüllt sind.</p>
+<h3 id="automation-1-willkommens-e-mail-bei-neuem-lead">Automation 1: Willkommens-E-Mail bei neuem Lead</h3>
+<p><strong>Auslöser</strong>: Neuer Eintrag in der Kontakte-Tabelle
+<strong>Bedingung</strong>: Status = "Lead"
+<strong>Aktion</strong>: Sende eine E-Mail an den neuen Kontakt mit einer Willkommensnachricht</p>
+<h3 id="automation-2-benachrichtigung-bei-grossem-deal">Automation 2: Benachrichtigung bei grossem Deal</h3>
+<p><strong>Auslöser</strong>: Neuer Eintrag in der Deals-Tabelle
+<strong>Bedingung</strong>: Wert grösser als 10.000 EUR
+<strong>Aktion</strong>: Sende eine Slack-Nachricht an den Sales-Kanal</p>
+<h3 id="automation-3-erinnerung-bei-fälligen-aktivitäten">Automation 3: Erinnerung bei fälligen Aktivitäten</h3>
+<p><strong>Auslöser</strong>: Täglich um 8:00 Uhr
+<strong>Bedingung</strong>: Aktivitäten mit "Fällig am" = heute
+<strong>Aktion</strong>: Sende eine zusammenfassende E-Mail</p>
+<h3 id="automation-4-status-update-bei-gewonnenem-deal">Automation 4: Status-Update bei gewonnenem Deal</h3>
+<p><strong>Auslöser</strong>: Feld "Phase" wird auf "Gewonnen" geändert
+<strong>Aktion</strong>:</p>
+<ol>
+<li>Ändere den Status des verknüpften Kontakts auf "Kunde"</li>
+<li>Sende eine Glückwunsch-E-Mail an das Team</li>
+<li>Erstelle einen neuen Eintrag in einer "Onboarding"-Tabelle</li>
+</ol>
+<h2 id="die-airtable-api----dein-backend-für-andere-tools">Die Airtable API, Dein Backend für andere Tools</h2>
+<p>Hier wird es richtig spannend: Airtable bietet eine REST-API, mit der andere Tools auf deine Daten zugreifen können. Das macht Airtable zu einem echten Backend für dein No-Code-Stack.</p>
+<h3 id="typische-api-anwendungsfälle">Typische API-Anwendungsfälle:</h3>
+<ul>
+<li><strong>Softr</strong>: Baut eine Web-App direkt auf deinen Airtable-Daten auf</li>
+<li><strong>Webflow</strong>: Zeigt Airtable-Daten auf deiner Website an</li>
+<li><strong>Glide</strong>: Erstellt eine <a href="/blog/361-mobile-apps-ohne-code-glide-adalo">Mobile App</a> aus deinen Airtable-Daten</li>
+<li><strong>Zapier/Make</strong>: Verbindet Airtable mit <a href="/blog/363-automatisierung-no-code-tools">hunderten anderen Tools</a></li>
+</ul>
+<h3 id="api-limits-beachten">API-Limits beachten</h3>
+<p>Der Free Plan von Airtable hat ein API-Limit von 5 Anfragen pro Sekunde. Für ein kleines Startup reicht das völlig aus, aber bei wachsender Nutzerzahl musst du das im Auge behalten.</p>
+<h2 id="airtable-extensions----zusatzfunktionen">Airtable Extensions, Zusatzfunktionen</h2>
+<p>Airtable bietet eine Reihe von Extensions (früher "Apps"), die dir zusätzliche Funktionalität bieten:</p>
+<ul>
+<li><strong>Chart</strong>: Erstelle Diagramme aus deinen Daten</li>
+<li><strong>Page Designer</strong>: Erstelle druckfertige Dokumente (Rechnungen, Berichte)</li>
+<li><strong>Pivot Table</strong>: Kreuztabellen für Datenanalyse</li>
+<li><strong>Import CSV</strong>: Importiere Daten aus CSV-Dateien</li>
+<li><strong>Scripting</strong>: Für fortgeschrittene Nutzer, die kleine Skripte schreiben wollen</li>
+</ul>
+<h2 id="best-practices-für-dein-airtable-backend">Best Practices für dein Airtable-Backend</h2>
+<h3 id="1-plane-deine-datenstruktur-vorher">1. Plane deine Datenstruktur vorher</h3>
+<p>Nimm dir Zeit, bevor du loslegst. Zeichne die Beziehungen zwischen deinen Tabellen auf. Welche Tabellen brauchst du? Wie hängen sie zusammen? Welche Felder brauchst du?</p>
+<h3 id="2-nutze-linked-records-konsequent">2. Nutze Linked Records konsequent</h3>
+<p>Linked Records sind das Herzstuck von Airtable. Sie ermöglichen es dir, Beziehungen zwischen Tabellen herzustellen, genau wie in einer echten relationalen Datenbank.</p>
+<p><strong>Beispiel</strong>: Ein Kontakt gehört zu einem Unternehmen. Statt den Unternehmensnamen als Text in der Kontakte-Tabelle zu speichern, erstellst du einen Linked Record zum Unternehmen. So kannst du:</p>
+<ul>
+<li>Den Unternehmensnamen automatisch anzeigen</li>
+<li>Alle Kontakte eines Unternehmens sehen</li>
+<li>Änderungen am Unternehmen werden automatisch überall aktualisiert</li>
+</ul>
+<h3 id="3-verwende-formeln-und-rollups">3. Verwende Formeln und Rollups</h3>
+<p>Formeln und Rollups sparen dir manuelle Arbeit:</p>
+<ul>
+<li><strong>Formel</strong>: Berechne den gewichteten Wert eines Deals automatisch</li>
+<li><strong>Rollup</strong>: Zeige die Summe aller Deals pro Unternehmen an</li>
+<li><strong>Count</strong>: Zähle die Anzahl der Kontakte pro Unternehmen</li>
+</ul>
+<h3 id="4-erstelle-views-für-verschiedene-zwecke">4. Erstelle Views für verschiedene Zwecke</h3>
+<p>Erstelle für jedes Team-Mitglied und jeden Anwendungsfall eine eigene View:</p>
+<ul>
+<li>"Meine offenen Deals" (gefiltert nach zugewiesenem Mitarbeiter)</li>
+<li>"Heisse Leads" (gefiltert nach Wahrscheinlichkeit grösser 70 Prozent)</li>
+<li>"Überfallige Aktivitäten" (gefiltert nach Fälligkeitsdatum)</li>
+</ul>
+<h3 id="5-nutze-farben-und-icons">5. Nutze Farben und Icons</h3>
+<p>Airtable unterstützt Farben für Single Select und Multiple Select Felder. Nutze sie, um Informationen visuell hervorzuheben:</p>
+<ul>
+<li>Grün für "Gewonnen"</li>
+<li>Rot für "Verloren"</li>
+<li>Gelb für "In Verhandlung"</li>
+</ul>
+<h3 id="6-sichere-deine-daten-regelmässig">6. Sichere deine Daten regelmässig</h3>
+<p>Airtable hat keine automatische Backup-Funktion. Exportiere deine Daten regelmässig als CSV und speichere sie sicher ab. Es gibt auch Tools wie "On2Air Backups", die das automatisch erledigen.</p>
+<h2 id="kosten-und-limits">Kosten und Limits</h2>
+<h3 id="free-plan-0-eur">Free Plan (0 EUR):</h3>
+<ul>
+<li>1.000 Zeilen pro Base</li>
+<li>1 GB Speicher für Anhänge</li>
+<li>Grundlegende Automations</li>
+<li>Bis zu 5 Creator-Nutzer</li>
+</ul>
+<h3 id="team-plan-ca-20-eur-pro-nutzermonat">Team Plan (ca. 20 EUR pro Nutzer/Monat):</h3>
+<ul>
+<li>50.000 Zeilen pro Base</li>
+<li>20 GB Speicher</li>
+<li>Erweiterte Automations</li>
+<li>Gantt- und Timeline-Views</li>
+</ul>
+<h3 id="business-plan-ca-45-eur-pro-nutzermonat">Business Plan (ca. 45 EUR pro Nutzer/Monat):</h3>
+<ul>
+<li>125.000 Zeilen pro Base</li>
+<li>100 GB Speicher</li>
+<li>Premium-Integrationen</li>
+<li>Admin-Panel</li>
+</ul>
+<h3 id="enterprise-auf-anfrage">Enterprise (auf Anfrage):</h3>
+<ul>
+<li>500.000 Zeilen pro Base</li>
+<li>1.000 GB Speicher</li>
+<li>SAML SSO</li>
+<li>Data Loss Prevention</li>
+</ul>
+<h3 id="meine-empfehlung">Meine Empfehlung:</h3>
+<p>Starte mit dem Free Plan. Für die ersten Monate deines Startups reichen 1.000 Zeilen völlig aus. Wenn du wächst und die Limits erreichst, steige auf den Team Plan um, 20 EUR pro Nutzer pro Monat sind gut investiert.</p>
+<h2 id="airtable-alternativen">Airtable-Alternativen</h2>
+<p>Falls Airtable nicht das Richtige für dich ist, gibt es Alternativen:</p>
+<ul>
+<li><strong>Notion</strong>: Vielseitiger, aber weniger Datenbank-fokussiert</li>
+<li><strong>Baserow</strong>: Open-Source-Alternative, selbst gehostet</li>
+<li><strong>NocoDB</strong>: Open-Source, kann auf bestehende Datenbanken aufgesetzt werden</li>
+<li><strong>Google Sheets</strong>: Kostenlos, aber weniger strukturiert</li>
+</ul>
+<p>Für die meisten Startups im Burgenland empfehle ich trotzdem Airtable, das Ökosystem an Integrationen und die Benutzerfreundlichkeit sind einfach unerreicht.</p>
+<h2 id="wann-airtable-an-seine-grenzen-stösst">Wann Airtable an seine Grenzen stösst</h2>
+<p>Airtable ist grossartig für den Start, aber es gibt Situationen, in denen du über Alternativen nachdenken solltest:</p>
+<ul>
+<li><strong>Mehr als 100.000 Datensätze</strong>: Airtable wird langsam</li>
+<li><strong>Komplexe Abfragen</strong>: SQL-Datenbanken sind hier überlegen</li>
+<li><strong>Echtzeit-Synchronisation</strong>: Airtable-APIs haben Rate Limits</li>
+<li><strong>Hohe Sicherheitsanforderungen</strong>: Keine Fine-Grained Access Controls</li>
+<li><strong>Multi-Region-Compliance</strong>: Daten liegen in den USA</li>
+</ul>
+<p>In diesen Fällen ist es Zeit, über den <a href="/blog/365-von-no-code-auf-custom-code">Wechsel zu Custom Code</a> nachzudenken, aber das ist in der Regel erst nach Monaten oder Jahren der Fall.</p>
+<h2 id="fazit-airtable-ist-dein-schweizer-taschenmesser">Airtable ist dein schweizer Taschenmesser</h2>
+<p>Airtable ist eines der vielseitigsten Tools im No-Code-Ökosystem. Als Backend für dein Startup bietet es dir alles, was du für den Start brauchst: eine strukturierte Datenbank, Automatisierungen, eine API und verschiedene Ansichten für verschiedene Zwecke.</p>
+<p>Kombiniert mit <a href="/blog/359-webflow-startup-websites">Webflow für deine Website</a>, <a href="/blog/358-mvp-mit-bubble-bauen">Bubble für deine App</a> und <a href="/blog/363-automatisierung-no-code-tools">Automatisierungstools</a> hast du einen vollständigen Tech-Stack, ohne eine einzige Zeile Code.</p>
+<hr>
+<h2 id="starte-dein-no-code-projekt-mit-startup-burgenland">Starte dein No-Code-Projekt mit Startup Burgenland</h2>
+<p>Du willst Airtable als Backend für dein Startup einsetzen und brauchst Hilfe bei der Datenstruktur? Startup Burgenland bietet dir individuelle Beratung und Zugang zu Experten.</p>
+<p><strong><a href="https://www.startupburgenland.at/kontakt">Jetzt Beratungstermin vereinbaren</a></strong> und baue dein Backend in Rekordzeit auf.</p>
+<hr>
+<p><em>Dieser Beitrag ist Teil der Serie "<a href="/blog/356-no-code-grundlagen-ohne-programmieren">No-Code und Low-Code</a>" auf dem Startup Burgenland Blog. Die Serie richtet sich an Gründerinnen und Gründer, die ohne Programmierkenntnisse ihr Startup aufbauen wollen.</em></p>
+<hr>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/produkt/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Produkt </a><a href="/blog/tag/technologie/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> technologie </a><a href="/blog/tag/startup/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> startup </a><a href="/blog/tag/innovation/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> innovation </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2023-05-23" class="d-block fw-600 text-dark-gray">23. Mai 2023</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

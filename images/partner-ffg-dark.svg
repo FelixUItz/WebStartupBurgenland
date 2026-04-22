@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- FFG Logo - Forschung Förderung Gesellschaft (dark version for light backgrounds) -->
+  <g fill="none">
+    <!-- Red dots/circles representing FFG symbol -->
+    <circle cx="30" cy="28" r="12" fill="#E3000F"/>
+    <circle cx="24" cy="50" r="10" fill="#E3000F"/>
+    <circle cx="42" cy="60" r="7" fill="#E3000F"/>
+    <!-- FFG Text -->
+    <text x="65" y="48" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#1A1A1A">FFG</text>
+    <!-- Tagline -->
+    <text x="65" y="68" font-family="Arial, sans-serif" font-size="12" fill="#666666">Forschung wirkt.</text>
+  </g>
+</svg>

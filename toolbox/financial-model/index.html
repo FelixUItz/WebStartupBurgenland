@@ -1,0 +1,1619 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Financial Model | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Schritt-für-Schritt-Guide zum Aufbau eines soliden 3-bis-5-Jahres-Finanzmodells für dein Startup, mit österreichischer Steuerstruktur und drei Geschäftsmodell-Varianten.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/financial-model/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/financial-model/">
+ <meta property="og:title" content="Financial Model | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Schritt-für-Schritt-Guide zum Aufbau eines soliden 3-bis-5-Jahres-Finanzmodells für dein Startup, mit österreichischer Steuerstruktur und drei Geschäftsmodell-Varianten.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Financial Model | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Financial Model */
+.tool-content.fm-tab-overview {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 12px;
+ margin: 24px 0;
+ }
+ @media (max-width: 700px) {
+.tool-content.fm-tab-overview {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ }
+.tool-content.fm-tab-card {
+ background: #fff;
+ border-radius: 12px;
+ border: 2px solid #E2E8F0;
+ padding: 20px 16px;
+ text-align: center;
+ transition: all 0.2s;
+ }
+.tool-content.fm-tab-card:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+ }
+.tool-content.fm-tab-icon {
+ width: 48px;
+ height: 48px;
+ border-radius: 12px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 22px;
+ margin-bottom: 10px;
+ color: #fff;
+ }
+.tool-content.fm-tab-num {
+ font-size: 11px;
+ font-weight: 700;
+ color: #6B7280;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.fm-tab-name {
+ font-size: 15px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-top: 2px;
+ }
+.tool-content.fm-tab-desc {
+ font-size: 12px;
+ color: #6B7280;
+ margin-top: 4px;
+ }
+ /* Color utilities */
+.tool-content.bg-dashboard { background: #E63946; }
+.tool-content.bg-revenue { background: #28A745; }
+.tool-content.bg-kosten { background: #DC3545; }
+.tool-content.bg-pnl { background: #FF8C00; }
+.tool-content.bg-cashflow { background: #6B7280; }
+.tool-content.bg-annahmen { background: #6B7280; }
+ /* Section styling */
+.tool-content.fm-section {
+ margin-bottom: 48px;
+ }
+.tool-content.fm-section h2 {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ letter-spacing: -0.3px;
+ margin-bottom: 16px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid #E2E8F0;
+ }
+.tool-content.fm-section h3 {
+ font-size: 18px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin: 24px 0 12px;
+ }
+.tool-content.fm-section h4 {
+ font-size: 15px;
+ font-weight: 700;
+ color: #FF8C00;
+ margin: 16px 0 8px;
+ }
+.tool-content.fm-section p {
+ margin-bottom: 12px;
+ font-size: 15px;
+ line-height: 1.7;
+ }
+.tool-content.fm-section ul,
+.tool-content.fm-section ol {
+ margin: 8px 0 16px 20px;
+ font-size: 15px;
+ }
+.tool-content.fm-section li {
+ margin-bottom: 6px;
+ line-height: 1.6;
+ }
+ /* Info boxes */
+.tool-content.fm-info-box {
+ background: #FEF2F2;
+ border: 1px solid #FEE2E2;
+ border-radius: 10px;
+ padding: 20px 24px;
+ margin: 16px 0;
+ font-size: 14px;
+ }
+.tool-content.fm-info-box.warning {
+ background: #FFF7ED;
+ border-color: #FED7AA;
+ }
+.tool-content.fm-info-box.success {
+ background: #F0FDF4;
+ border-color: #BBF7D0;
+ }
+.tool-content.fm-info-box.danger {
+ background: #FEF2F2;
+ border-color: #FECACA;
+ }
+.tool-content.fm-info-box strong {
+ display: block;
+ margin-bottom: 4px;
+ font-size: 13px;
+ text-transform: uppercase;
+ letter-spacing: 0.3px;
+ }
+ /* Formula blocks */
+.tool-content.formula-block {
+ background: #1C1D1F;
+ color: #E2E8F0;
+ border-radius: 10px;
+ padding: 20px 24px;
+ margin: 12px 0;
+ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+ font-size: 13px;
+ line-height: 1.7;
+ overflow-x: auto;
+ white-space: pre-wrap;
+ word-break: break-word;
+ }
+.tool-content.formula-block.comment { color: #6B7280; }
+.tool-content.formula-block.highlight { color: #FF8C00; font-weight: 500; }
+.tool-content.formula-block.green { color: #4ADE80; }
+.tool-content.formula-block.red { color: #F87171; }
+.tool-content.formula-block.blue { color: #E63946; }
+.tool-content.formula-inline {
+ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+ background: #F3F4F6;
+ padding: 2px 6px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #E63946;
+ }
+ /* Collapsible sections */
+.tool-content.fm-collapsible {
+ background: #fff;
+ border-radius: 12px;
+ border: 1px solid #E2E8F0;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+ margin-bottom: 16px;
+ overflow: hidden;
+ }
+.tool-content.fm-collapsible-trigger {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding: 20px 24px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-family: inherit;
+ text-align: left;
+ }
+.tool-content.fm-collapsible-trigger:hover { background: #F8FAFC; }
+.tool-content.fm-trigger-icon {
+ width: 36px;
+ height: 36px;
+ border-radius: 8px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ font-size: 16px;
+ flex-shrink: 0;
+ }
+.tool-content.fm-trigger-text { flex: 1; }
+.tool-content.fm-trigger-title {
+ font-size: 16px;
+ font-weight: 700;
+ color: #1C1D1F;
+ display: block;
+ }
+.tool-content.fm-trigger-sub {
+ font-size: 12px;
+ color: #6B7280;
+ }
+.tool-content.fm-trigger-arrow {
+ font-size: 14px;
+ color: #6B7280;
+ transition: transform 0.2s;
+ flex-shrink: 0;
+ }
+.tool-content.fm-collapsible.open.fm-trigger-arrow {
+ transform: rotate(180deg);
+ }
+.tool-content.fm-collapsible-content {
+ display: none;
+ padding: 0 20px 20px;
+ border-top: 1px solid #E2E8F0;
+ }
+.tool-content.fm-collapsible.open.fm-collapsible-content {
+ display: block;
+ }
+ /* Variant tabs */
+.tool-content.fm-variant-tabs { margin: 20px 0; }
+.tool-content.fm-variant-tab-buttons {
+ display: flex;
+ gap: 0;
+ border-bottom: 2px solid #E2E8F0;
+ margin-bottom: 0;
+ }
+.tool-content.fm-variant-tab-btn {
+ padding: 10px 20px;
+ background: none;
+ border: none;
+ border-bottom: 2px solid transparent;
+ margin-bottom: -2px;
+ font-family: inherit;
+ font-size: 14px;
+ font-weight: 600;
+ color: #6B7280;
+ cursor: pointer;
+ transition: all 0.2s;
+ }
+.tool-content.fm-variant-tab-btn:hover { color: #E63946; }
+.tool-content.fm-variant-tab-btn.active {
+ color: #E63946;
+ border-bottom-color: #E63946;
+ }
+.tool-content.fm-variant-tab-panel {
+ display: none;
+ padding: 20px 0;
+ }
+.tool-content.fm-variant-tab-panel.active { display: block; }
+ /* Data tables */
+.tool-content.fm-data-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 16px 0;
+ font-size: 14px;
+ }
+.tool-content.fm-data-table th {
+ background: #E63946;
+ color: #fff;
+ padding: 10px 14px;
+ text-align: left;
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.fm-data-table th:first-child { border-radius: 8px 0 0 0; }
+.tool-content.fm-data-table th:last-child { border-radius: 0 8px 0 0; }
+.tool-content.fm-data-table td {
+ padding: 10px 14px;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.fm-data-table tr:nth-child(even) { background: #F8FAFC; }
+.tool-content.fm-data-table.mono {
+ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+ font-size: 13px;
+ }
+ /* Step grid */
+.tool-content.fm-step-grid {
+ display: grid;
+ gap: 12px;
+ margin: 16px 0;
+ }
+.tool-content.fm-step-item {
+ display: flex;
+ gap: 14px;
+ align-items: flex-start;
+ }
+.tool-content.fm-step-num {
+ width: 32px;
+ height: 32px;
+ background: #E63946;
+ color: #fff;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 14px;
+ font-weight: 700;
+ flex-shrink: 0;
+ }
+.tool-content.fm-step-content { flex: 1; padding-top: 4px; }
+.tool-content.fm-step-content strong {
+ display: block;
+ font-size: 15px;
+ margin-bottom: 2px;
+ }
+.tool-content.fm-step-content p {
+ font-size: 14px;
+ color: #6B7280;
+ margin: 0;
+ }
+ /* Card */
+.tool-content.fm-card {
+ background: #fff;
+ border-radius: 12px;
+ border: 1px solid #E2E8F0;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+ overflow: hidden;
+ margin-bottom: 16px;
+ }
+.tool-content.fm-card-body { padding: 20px; }
+ /* Checklist */
+.tool-content.fm-checklist {
+ list-style: none;
+ margin: 16px 0;
+ padding: 0;
+ }
+.tool-content.fm-checklist li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 14px;
+ }
+.tool-content.fm-checklist li:last-child { border-bottom: none; }
+.tool-content.fm-check-box {
+ width: 22px;
+ height: 22px;
+ border: 2px solid #E2E8F0;
+ border-radius: 4px;
+ flex-shrink: 0;
+ margin-top: 1px;
+ }
+ /* Mistake items */
+.tool-content.fm-mistake-item {
+ display: flex;
+ gap: 12px;
+ padding: 14px 0;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.fm-mistake-item:last-child { border-bottom: none; }
+.tool-content.fm-mistake-icon {
+ width: 28px;
+ height: 28px;
+ background: #FEF2F2;
+ color: #DC3545;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 14px;
+ font-weight: 700;
+ flex-shrink: 0;
+ }
+.tool-content.fm-mistake-content strong {
+ display: block;
+ font-size: 14px;
+ margin-bottom: 2px;
+ }
+.tool-content.fm-mistake-content p {
+ font-size: 13px;
+ color: #6B7280;
+ margin: 0;
+ }
+ /* Responsive */
+ @media (max-width: 768px) {
+.tool-content.fm-tab-overview { grid-template-columns: 1fr 1fr; }
+.tool-content.fm-data-table { display: block; overflow-x: auto; }
+ }
+ @media (max-width: 480px) {
+.tool-content.fm-tab-overview { grid-template-columns: 1fr; }
+ }
+ /* Print */
+ @media print {
+.tool-content.fm-collapsible-content { display: block!important; }
+.tool-content.fm-trigger-arrow { display: none; }
+.tool-content.fm-variant-tab-panel { display: block!important; }
+.tool-content.fm-variant-tab-panel::before {
+ content: attr(data-variant-label);
+ font-weight: 700;
+ font-size: 14px;
+ display: block;
+ margin-bottom: 8px;
+ color: #E63946;
+ }
+.tool-content.fm-variant-tab-buttons { display: none; }
+.tool-content.fm-section { page-break-inside: avoid; }
+.tool-content.formula-block {
+ background: #F3F4F6;
+ color: #1C1D1F;
+ border: 1px solid #E2E8F0;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Financial Model</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Anleitung &amp; Strukturdokumentation - Dein Guide zum professionellen Finanzmodell</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Financial Model</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- 1. EINLEITUNG -->
+ <div class="fm-section" id="einleitung">
+ <h2>1. Einleitung</h2>
+
+ <h3>Warum jedes Startup ein Finanzmodell braucht</h3>
+ <p>Ein Finanzmodell ist weit mehr als eine Pflichtübung für Investor:innen-Gespräche. Es ist dein wichtigstes Steuerungsinstrument. Es beantwortet drei zentrale Fragen: <strong>Wie viel Geld brauche ich?</strong>, <strong>Wann wird mein Startup profitabel?</strong> und <strong>Welche Hebel beeinflussen mein Ergebnis am stärksten?</strong></p>
+ <p>Ob du eine Förderung bei der aws oder FFG beantragst, mit Business Angels in Wien sprichst oder bei einem VC in Graz pitchst - ein durchdachtes Finanzmodell zeigt, dass du dein Geschäft verstehst und strategisch denkst.</p>
+
+ <div class="fm-info-box">
+ <strong>Wichtig</strong>
+ Niemand erwartet, dass deine Prognosen exakt eintreffen. Was Investor:innen sehen wollen: dass du die richtigen Fragen stellst, deine Annahmen kennst und weißt, welche Stellschrauben dein Business treiben.
+ </div>
+
+ <h3>Wer dieses Template nutzen sollte</h3>
+ <ul>
+ <li><strong>Pre-Seed &amp; Seed Startups</strong>, die sich auf Investor:innen-Gespräche oder Förderanträge vorbereiten</li>
+ <li><strong>Gründer:innen im Accelerator</strong>, die ihre Unit Economics verstehen wollen</li>
+ <li><strong>Bestehende Startups</strong>, die ihr erstes Finanzmodell von einem einfachen Budgetplan auf ein professionelles Modell upgraden wollen</li>
+ </ul>
+
+ <h3>Was du brauchst, bevor du startest</h3>
+ <div class="fm-step-grid">
+ <div class="fm-step-item">
+ <div class="fm-step-num">1</div>
+ <div class="fm-step-content">
+ <strong>Klares Pricing</strong>
+ <p>Du solltest zumindest eine erste Preisvorstellung haben. Auch wenn sich der Preis noch ändert - ohne Pricing-Annahme kein Revenue Model.</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">2</div>
+ <div class="fm-step-content">
+ <strong>Marktdaten &amp; Benchmarks</strong>
+ <p>Wie groß ist dein adressierbarer Markt (TAM/SAM/SOM)? Wie sehen typische Conversion Rates in deiner Branche aus? Wie hoch ist der durchschnittliche Churn?</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">3</div>
+ <div class="fm-step-content">
+ <strong>Teamplanung (grob)</strong>
+ <p>Welche Rollen brauchst du wann? Personalkosten sind in der Regel der größte Kostenblock - hier genau zu sein, macht den Unterschied.</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">4</div>
+ <div class="fm-step-content">
+ <strong>Geschäftsmodell-Typ</strong>
+ <p>SaaS, Marketplace oder B2B Services? Dieses Template deckt alle drei Varianten ab. Wähle die, die deinem Modell am nächsten kommt.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 2. TAB-ÜBERSICHT -->
+ <div class="fm-section" id="tab-uebersicht">
+ <h2>2. Übersicht der Tab-Struktur</h2>
+ <p>Das Financial Model besteht aus 6 Tabs, die aufeinander aufbauen. Die Tabs 2, 3 und 6 werden manuell befüllt - Tab 1, 4 und 5 berechnen sich automatisch daraus.</p>
+
+ <div class="fm-tab-overview">
+ <div class="fm-tab-card" style="border-color: #E63946;">
+ <div class="fm-tab-icon bg-dashboard">&#9632;</div>
+ <div class="fm-tab-num">Tab 1</div>
+ <div class="fm-tab-name">Dashboard</div>
+ <div class="fm-tab-desc">Alles auf einen Blick</div>
+ </div>
+ <div class="fm-tab-card" style="border-color: #28A745;">
+ <div class="fm-tab-icon bg-revenue">&#9650;</div>
+ <div class="fm-tab-num">Tab 2</div>
+ <div class="fm-tab-name">Revenue Model</div>
+ <div class="fm-tab-desc">Umsatzplanung</div>
+ </div>
+ <div class="fm-tab-card" style="border-color: #DC3545;">
+ <div class="fm-tab-icon bg-kosten">&#9660;</div>
+ <div class="fm-tab-num">Tab 3</div>
+ <div class="fm-tab-name">Kosten</div>
+ <div class="fm-tab-desc">Alle Ausgaben</div>
+ </div>
+ <div class="fm-tab-card" style="border-color: #FF8C00;">
+ <div class="fm-tab-icon bg-pnl">&#9644;</div>
+ <div class="fm-tab-num">Tab 4</div>
+ <div class="fm-tab-name">P&amp;L</div>
+ <div class="fm-tab-desc">Gewinn &amp; Verlust</div>
+ </div>
+ <div class="fm-tab-card" style="border-color: #6B7280;">
+ <div class="fm-tab-icon bg-cashflow">&#8644;</div>
+ <div class="fm-tab-num">Tab 5</div>
+ <div class="fm-tab-name">Cash Flow</div>
+ <div class="fm-tab-desc">Geldfluss &amp; Runway</div>
+ </div>
+ <div class="fm-tab-card" style="border-color: #6B7280;">
+ <div class="fm-tab-icon bg-annahmen">&#9881;</div>
+ <div class="fm-tab-num">Tab 6</div>
+ <div class="fm-tab-name">Annahmen</div>
+ <div class="fm-tab-desc">Alle Parameter</div>
+ </div>
+ </div>
+
+ <div class="fm-info-box success">
+ <strong>Tipp</strong>
+ Beginne mit <strong>Tab 6 (Annahmen)</strong>, dann <strong>Tab 2 (Revenue)</strong>, dann <strong>Tab 3 (Kosten)</strong>. Die restlichen Tabs berechnen sich automatisch.
+ </div>
+ </div>
+
+ <!-- 3. TAB-FÜR-TAB DOKUMENTATION -->
+ <div class="fm-section" id="tab-doku">
+ <h2>3. Tab-für-Tab Dokumentation</h2>
+
+ <!-- Tab 1: DASHBOARD -->
+ <div class="fm-collapsible open" id="tab-dashboard">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-dashboard">&#9632;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 1: Dashboard</span>
+ <span class="fm-trigger-sub">Alles auf einen Blick - KPIs, Charts, Zusammenfassung</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Das Dashboard ist dein Cockpit. Es fasst die wichtigsten Kennzahlen aus allen anderen Tabs zusammen und gibt dir (und deinen Investor:innen) sofort einen Überblick über die finanzielle Lage deines Startups.</p>
+
+ <h4>Aufbau</h4>
+ <p><strong>4 KPI-Karten im oberen Bereich:</strong></p>
+ <table class="fm-data-table">
+ <thead>
+ <tr>
+ <th>KPI</th>
+ <th>Quelle</th>
+ <th>Beschreibung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>MRR / Monatsumsatz</strong></td>
+ <td class="mono">Tab 2</td>
+ <td>Monthly Recurring Revenue bzw. monatlicher Umsatz</td>
+ </tr>
+ <tr>
+ <td><strong>Burn Rate</strong></td>
+ <td class="mono">Tab 5</td>
+ <td>Durchschnittlicher monatlicher Netto-Geldabfluss</td>
+ </tr>
+ <tr>
+ <td><strong>Runway</strong></td>
+ <td class="mono">Tab 5</td>
+ <td>Verbleibende Monate bis das Geld aufgebraucht ist</td>
+ </tr>
+ <tr>
+ <td><strong>Headcount</strong></td>
+ <td class="mono">Tab 3</td>
+ <td>Aktuelle Teamgröße (inkl. Gründer:innen)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <p><strong>3 Charts darunter:</strong></p>
+ <ul>
+ <li><strong>Revenue-Entwicklung:</strong> Monatlicher Umsatz über den gesamten Planungszeitraum (Balkendiagramm)</li>
+ <li><strong>Cash-Verlauf:</strong> Kontostand über Zeit, inkl. Funding-Injektionen (Liniendiagramm)</li>
+ <li><strong>Kosten-Aufschlüsselung:</strong> Anteil der Kostenkategorien am Gesamtbudget (Kreisdiagramm)</li>
+ </ul>
+
+ <div class="fm-info-box">
+ <strong>Hinweis</strong>
+ Dieses Tab zieht alle Daten automatisch aus den anderen Tabs. Du musst hier nichts manuell eintragen. Wenn die Werte nicht stimmen, prüfe die Quelltabs.
+ </div>
+ </div>
+ </div>
+
+ <!-- Tab 2: REVENUE MODEL -->
+ <div class="fm-collapsible" id="tab-revenue">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-revenue">&#9650;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 2: Revenue Model</span>
+ <span class="fm-trigger-sub">Umsatzplanung und -prognose - 3 Geschäftsmodell-Varianten</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Hier modellierst du deine Umsatzentwicklung über 60 Monate (5 Jahre). Die Spalten laufen von Monat 1 bis Monat 60, gruppiert nach Jahren. Wähle die Variante, die deinem Geschäftsmodell am nächsten kommt.</p>
+
+ <h4>Spaltenstruktur</h4>
+ <div class="formula-block"><span class="comment">// Zeitachse</span>
+Spalten: <span class="blue">M1</span> | <span class="blue">M2</span> | <span class="blue">M3</span> |.. | <span class="blue">M12</span> | <span class="highlight">Jahr 1 Summe</span> | <span class="blue">M13</span> |.. | <span class="blue">M60</span> | <span class="highlight">Jahr 5 Summe</span> | <span class="highlight">Gesamt</span></div>
+
+ <!-- Variant Tabs -->
+ <div class="fm-variant-tabs">
+ <div class="fm-variant-tab-buttons">
+ <button class="fm-variant-tab-btn active" onclick="switchFmVariant(this, 'saas')">SaaS</button>
+ <button class="fm-variant-tab-btn" onclick="switchFmVariant(this, 'marketplace')">Marketplace</button>
+ <button class="fm-variant-tab-btn" onclick="switchFmVariant(this, 'b2b')">B2B Services</button>
+ </div>
+
+ <!-- SaaS Panel -->
+ <div class="fm-variant-tab-panel active" id="panel-saas" data-variant-label="SaaS-Variante">
+ <h4>SaaS-Variante: Recurring Revenue</h4>
+ <p>Das klassische SaaS-Modell basiert auf monatlichen Abonnements in verschiedenen Preisstufen. Der Schlüssel liegt im Zusammenspiel von Neukundengewinnung, Churn (Abwanderung) und Upgrades.</p>
+
+ <p><strong>Pricing Tiers (Zeilen):</strong></p>
+ <div class="formula-block"><span class="comment">// Preisstufen definieren</span>
+<span class="green">Basis-Plan:</span> &euro;29/Monat <span class="comment">// Einzelnutzer:innen, eingeschränkter Funktionsumfang</span>
+<span class="green">Pro-Plan:</span> &euro;79/Monat <span class="comment">// Teams, voller Funktionsumfang</span>
+<span class="green">Enterprise:</span> &euro;249/Monat <span class="comment">// Großkunden, individuelle Features, SLA</span></div>
+
+ <p><strong>Kundenentwicklung pro Tier:</strong></p>
+ <div class="formula-block"><span class="comment">// Formeln für jeden Monat</span>
+<span class="blue">Neue Kund:innen</span> (pro Monat): abhängig von Marketing-Spend &amp; Conversion
+<span class="red">Churn</span> (pro Monat): Bestandskund:innen &times; Churn Rate
+<span class="green">Upgrades</span> (pro Monat): Bestandskund:innen &times; Upgrade Rate
+
+<span class="highlight">Aktive Kund:innen (Basis)</span> = Vormonat_Basis + Neue_Basis &minus; Churn_Basis &minus; Upgrades_zu_Pro
+<span class="highlight">Aktive Kund:innen (Pro)</span> = Vormonat_Pro + Neue_Pro + Upgrades_von_Basis &minus; Churn_Pro &minus; Upgrades_zu_Enterprise
+<span class="highlight">Aktive Kund:innen (Ent.)</span> = Vormonat_Ent + Neue_Ent + Upgrades_von_Pro &minus; Churn_Ent</div>
+
+ <p><strong>MRR-Berechnung:</strong></p>
+ <div class="formula-block"><span class="highlight">MRR</span> = (Kund:innen_Basis &times; &euro;29) + (Kund:innen_Pro &times; &euro;79) + (Kund:innen_Enterprise &times; &euro;249)
+
+<span class="highlight">ARR</span> = MRR &times; 12
+
+<span class="comment">// Zusätzliche SaaS-Metriken</span>
+<span class="blue">Net Revenue Retention</span> = (MRR_Beginn + Expansion &minus; Churn &minus; Downgrades) / MRR_Beginn &times; 100
+<span class="blue">ARPU</span> = MRR / Gesamtanzahl_aktive_Kund:innen
+<span class="blue">LTV</span> = ARPU / Churn_Rate</div>
+
+ <div class="fm-info-box">
+ <strong>Benchmark</strong>
+ Gute SaaS-Startups erreichen nach 18 Monaten eine Net Revenue Retention von über 100&nbsp;%, d.&nbsp;h. der Bestand wächst auch ohne Neukund:innen. Churn unter 5&nbsp;% monatlich ist für Early-Stage-SaaS ein solider Wert.
+ </div>
+ </div>
+
+ <!-- Marketplace Panel -->
+ <div class="fm-variant-tab-panel" id="panel-marketplace" data-variant-label="Marketplace-Variante">
+ <h4>Marketplace-Variante: Transaktionsbasiert</h4>
+ <p>Bei Marktplätzen generierst du Umsatz durch eine Provision (Take Rate) auf jede Transaktion. Die Herausforderung liegt im Chicken-and-Egg-Problem: Du brauchst sowohl Käufer:innen als auch Verkäufer:innen.</p>
+
+ <p><strong>Buyer-Seite:</strong></p>
+ <div class="formula-block"><span class="blue">Aktive Käufer:innen:</span> Wachstumsannahme pro Monat (aus Tab 6)
+<span class="blue">Transaktionen/Käufer:in/Monat:</span> 1,5 <span class="comment">// Abhängig von Kategorie</span>
+<span class="blue">Durchschnittl. Warenkorb:</span> &euro;85 <span class="comment">// Durchschnittlicher Bestellwert</span></div>
+
+ <p><strong>Seller-Seite:</strong></p>
+ <div class="formula-block"><span class="green">Aktive Verkäufer:innen:</span> Wachstumsannahme pro Monat (aus Tab 6)
+<span class="green">Listings/Verkäufer:in:</span> 12 <span class="comment">// Durchschnittliche Anzahl aktiver Angebote</span></div>
+
+ <p><strong>Revenue-Berechnung:</strong></p>
+ <div class="formula-block"><span class="highlight">GMV</span> = Aktive Käufer:innen &times; Transaktionen/Monat &times; Durchschnittl. Warenkorb
+
+<span class="comment">// Beispiel: 200 Käufer:innen &times; 1,5 Transaktionen &times; &euro;85 = &euro;25.500 GMV</span>
+
+<span class="blue">Take Rate:</span> 15% <span class="comment">// Provision auf den Warenkorbwert</span>
+<span class="highlight">Net Revenue</span> = GMV &times; Take Rate
+
+<span class="comment">// &euro;25.500 &times; 15% = &euro;3.825 Net Revenue</span>
+
+<span class="comment">// Zusätzliche Marketplace-Metriken</span>
+<span class="blue">Liquidity</span> = Transaktionen / Listings <span class="comment">// Wie aktiv ist der Marktplatz?</span>
+<span class="blue">Buyer:Seller Ratio</span> = Aktive Käufer:innen / Aktive Verkäufer:innen
+<span class="blue">Repeat Rate</span> = Wiederkehrende Käufer:innen / Gesamt Käufer:innen &times; 100</div>
+
+ <div class="fm-info-box">
+ <strong>Benchmark</strong>
+ Take Rates variieren stark nach Branche: 5-10&nbsp;% bei Commodities, 15-25&nbsp;% bei spezialisierten Nischen, bis zu 30&nbsp;% bei Services-Marktplätzen. In Österreich solltest du auch an die USt-Pflicht für Marktplatzbetreiber denken.
+ </div>
+ </div>
+
+ <!-- B2B Services Panel -->
+ <div class="fm-variant-tab-panel" id="panel-b2b" data-variant-label="B2B-Services-Variante">
+ <h4>B2B-Services-Variante: Projekt- &amp; Stundenbasiert</h4>
+ <p>Bei B2B Services hängt dein Revenue direkt an der Teamkapazität. Der Schlüssel ist die Utilization Rate - also wie viel Prozent der verfügbaren Zeit tatsächlich abgerechnet werden kann.</p>
+
+ <p><strong>Projektbasiertes Modell:</strong></p>
+ <div class="formula-block"><span class="blue">Aktive Projekte:</span> 3 <span class="comment">// Parallel laufende Projekte</span>
+<span class="blue">Durchschnittl. Projektvolumen:</span> &euro;25.000 <span class="comment">// Gesamtwert pro Projekt</span>
+<span class="blue">Projektdauer:</span> 4 Monate
+
+<span class="highlight">Monatl. Revenue (Projekt)</span> = Aktive Projekte &times; (Projektvolumen / Projektdauer)
+<span class="comment">// 3 &times; (&euro;25.000 / 4) = &euro;18.750/Monat</span></div>
+
+ <p><strong>Stundenbasiertes Modell:</strong></p>
+ <div class="formula-block"><span class="blue">Abrechenbare MA:</span> 3 <span class="comment">// Nicht alle MA sind abrechenbar</span>
+<span class="blue">Stundensatz:</span> &euro;120 <span class="comment">// Durchschnittlicher externer Stundensatz</span>
+<span class="blue">Utilization Rate:</span> 75% <span class="comment">// Anteil abrechenbarer Stunden</span>
+<span class="blue">Arbeitstage/Monat:</span> 20
+<span class="blue">Stunden/Tag:</span> 8
+
+<span class="highlight">Monatl. Revenue (Stunden)</span> = MA &times; Stundensatz &times; Utilization &times; 160h
+<span class="comment">// 3 &times; &euro;120 &times; 0,75 &times; 160 = &euro;43.200/Monat</span>
+
+<span class="comment">// Zusätzliche B2B-Metriken</span>
+<span class="blue">Revenue per Employee</span> = Monatl. Revenue / Gesamte MA
+<span class="blue">Effective Rate</span> = Monatl. Revenue / (Abrechenbare MA &times; 160h)
+<span class="blue">Pipeline Coverage</span> = Pipeline-Wert / Quartalsziel <span class="comment">// Sollte mind. 3x sein</span></div>
+
+ <div class="fm-info-box">
+ <strong>Benchmark</strong>
+ Top-Beratungen erreichen Utilization Rates von 80-85&nbsp;%. Für Startups im Aufbau sind 60-70&nbsp;% realistisch. Plane konservativ: Akquise, Interna und Krankenstände fressen mehr Zeit, als man denkt.
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Tab 3: KOSTEN -->
+ <div class="fm-collapsible" id="tab-kosten">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-kosten">&#9660;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 3: Kosten</span>
+ <span class="fm-trigger-sub">Alle Ausgaben - Personal, Office, Marketing, Tools, Recht</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Hier erfasst du alle laufenden Kosten deines Startups, Monat für Monat. Personalkosten machen bei den meisten Startups 60-80&nbsp;% der Gesamtkosten aus - sei hier besonders genau.</p>
+
+ <h4>Kategorie 1: Personal</h4>
+ <div class="formula-block"><span class="comment">// Österreichische Lohnnebenkosten: ~30% auf das Bruttogehalt</span>
+<span class="comment">// DG-Beiträge (SV, DB, DZ, KommSt, MVK) &cong; 30,08-31,58 %</span>
+
+<span class="green">Gründer:innen-Gehalt:</span>
+ Bruttogehalt &times; Anzahl &times; 1,30
+ <span class="comment">// Beispiel: &euro;3.000 &times; 2 &times; 1,30 = &euro;7.800/Monat</span>
+
+<span class="green">Entwickler:innen:</span>
+ Bruttogehalt &times; Anzahl &times; 1,30
+ <span class="comment">// Beispiel: &euro;4.000 &times; 2 &times; 1,30 = &euro;10.400/Monat</span>
+
+<span class="green">Sales &amp; Marketing:</span>
+ Bruttogehalt &times; Anzahl &times; 1,30
+ <span class="comment">// Beispiel: &euro;3.200 &times; 1 &times; 1,30 = &euro;4.160/Monat</span>
+
+<span class="green">Operations / Admin:</span>
+ Bruttogehalt &times; Anzahl &times; 1,30
+ <span class="comment">// Beispiel: &euro;2.800 &times; 1 &times; 1,30 = &euro;3.640/Monat</span>
+
+<span class="highlight">Formel Brutto-Personalkosten:</span>
+ Personalkosten_gesamt = &Sigma; (Gehalt_Rolle &times; Anzahl_Rolle &times; 1,30)
+
+<span class="comment">// ACHTUNG: Geschäftsführer:innen einer GmbH, die &gt;25% halten,</span>
+<span class="comment">// sind GSVG-versichert (SVS), nicht ASVG.</span>
+<span class="red">SVS-Beiträge für GF:</span> ca. &euro;800-1.200/Monat <span class="comment">// je nach Gewinn</span></div>
+
+ <div class="fm-info-box warning">
+ <strong>Österreich-Hinweis</strong>
+ Vergiss nicht: In Österreich kommen zum Bruttogehalt noch 13. und 14. Monatsgehalt (Urlaubs- und Weihnachtsgeld) dazu. Das sind ~17&nbsp;% on top, die im Faktor 1,30 noch NICHT inkludiert sind. Plane für Jahresbetrachtungen: Jahreskosten = Monatsgehalt &times; 14 &times; 1,30.
+ </div>
+
+ <h4>Kategorie 2: Office &amp; Infrastruktur</h4>
+ <div class="formula-block"><span class="green">Miete / Coworking:</span> &euro;500-2.000/Monat <span class="comment">// Coworking ab ~&euro;200/Platz, eigenes Büro mehr</span>
+<span class="green">Internet / Telefon:</span> &euro;80-150/Monat
+<span class="green">Hardware / Equipment:</span> &euro;200-500/Monat <span class="comment">// Abgeschrieben über 3 Jahre (AfA)</span></div>
+
+ <h4>Kategorie 3: Marketing &amp; Sales</h4>
+ <div class="formula-block"><span class="green">Online Marketing:</span> &euro;500-5.000/Monat <span class="comment">// Google Ads, Meta, LinkedIn</span>
+<span class="green">Content / SEO:</span> &euro;300-1.500/Monat <span class="comment">// Agentur oder Freelancer</span>
+<span class="green">Events / Messen:</span> &euro;200-1.000/Monat <span class="comment">// Durchschnitt, saisonal schwankend</span>
+<span class="green">PR:</span> &euro;0-2.000/Monat <span class="comment">// Oft erst ab Seed relevant</span></div>
+
+ <h4>Kategorie 4: Tools &amp; Software</h4>
+ <div class="formula-block"><span class="green">Cloud / Hosting:</span> &euro;100-2.000/Monat <span class="comment">// AWS, Azure, GCP - skaliert mit Nutzung</span>
+<span class="green">SaaS-Tools:</span> &euro;200-800/Monat <span class="comment">// Slack, Notion, HubSpot, etc.</span>
+<span class="green">Entwickler-Tools:</span> &euro;50-300/Monat <span class="comment">// GitHub, Figma, Sentry, etc.</span></div>
+
+ <h4>Kategorie 5: Recht &amp; Steuern</h4>
+ <div class="formula-block"><span class="green">Steuerberater:in:</span> &euro;300-800/Monat <span class="comment">// Laufende Buchhaltung + Jahresabschluss</span>
+<span class="green">Rechtsanwalt / -anwältin:</span> &euro;200-500/Monat <span class="comment">// AGB, Verträge, IP-Schutz</span>
+<span class="green">Wirtschaftsprüfer:in:</span> &euro;3.000-8.000/Jahr <span class="comment">// Ab gewisser Größe Pflicht</span></div>
+
+ <h4>Kategorie 6: Sonstiges</h4>
+ <div class="formula-block"><span class="green">Reisekosten:</span> &euro;200-800/Monat <span class="comment">// Kundenbesuche, Events, Pitches</span>
+<span class="green">Versicherungen:</span> &euro;100-300/Monat <span class="comment">// Betriebshaftpflicht, D&amp;O, Cyber</span>
+
+<span class="red">Unvorhergesehenes (Buffer):</span> &Sigma; aller Kosten &times; 10%
+<span class="comment">// IMMER einplanen. Es kommt IMMER etwas Unerwartetes.</span></div>
+ </div>
+ </div>
+
+ <!-- Tab 4: P&L -->
+ <div class="fm-collapsible" id="tab-pnl">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-pnl">&#9644;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 4: P&amp;L (Gewinn- und Verlustrechnung)</span>
+ <span class="fm-trigger-sub">Von Revenue bis Netto-Ergebnis - die volle GuV</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Die P&amp;L zeigt, ob dein Startup profitabel arbeitet - und wo die Margen liegen. Sie zieht Daten aus Tab 2 (Revenue) und Tab 3 (Kosten) und berechnet die Ergebniskette automatisch.</p>
+
+ <h4>Aufbau der GuV</h4>
+ <div class="formula-block"><span class="green">+ Revenue</span> <span class="comment">// Aus Tab 2 - Netto-Umsatz</span>
+
+<span class="red">&minus; COGS (Cost of Goods Sold)</span>
+ <span class="comment">// SaaS: Hosting, Support-Personal, Onboarding-Kosten</span>
+ <span class="comment">// Marketplace: Payment Processing (~2,5%), Versand-Subventionen</span>
+ <span class="comment">// B2B: Direkte Projektkosten, Freelancer, Material</span>
+
+<span class="highlight">= GROSS PROFIT (Rohertrag)</span>
+ <span class="blue">Gross Margin</span> = Gross Profit / Revenue &times; 100
+
+<span class="red">&minus; Personalkosten</span> <span class="comment">// Aus Tab 3 - alle Gehälter + Lohnnebenkosten</span>
+<span class="red">&minus; Marketing &amp; Sales</span> <span class="comment">// Aus Tab 3</span>
+<span class="red">&minus; Office &amp; Infrastruktur</span> <span class="comment">// Aus Tab 3</span>
+<span class="red">&minus; Tools &amp; Software</span> <span class="comment">// Aus Tab 3</span>
+<span class="red">&minus; Recht &amp; Steuern</span> <span class="comment">// Aus Tab 3 - laufende Beratungskosten</span>
+<span class="red">&minus; Sonstige Kosten</span> <span class="comment">// Aus Tab 3 - inkl. Buffer</span>
+
+<span class="highlight">= EBITDA</span>
+ <span class="comment">// Earnings Before Interest, Taxes, Depreciation &amp; Amortization</span>
+ <span class="blue">EBITDA-Marge</span> = EBITDA / Revenue &times; 100
+
+<span class="red">&minus; Abschreibungen (AfA)</span>
+ <span class="comment">// Hardware: 3 Jahre linear, Software-Lizenzen: 3-5 Jahre</span>
+ <span class="comment">// Beispiel: Laptop &euro;1.800 &rarr; &euro;50/Monat AfA</span>
+
+<span class="highlight">= EBIT</span>
+ <span class="comment">// Earnings Before Interest &amp; Taxes (operatives Ergebnis)</span>
+
+<span class="red">&minus; Zinsen</span>
+ <span class="comment">// Darlehen, Wandeldarlehen (Zinssatz lt. Vertrag)</span>
+
+<span class="highlight">= EBT (Ergebnis vor Steuern)</span>
+
+<span class="red">&minus; KöSt (Körperschaftsteuer)</span>
+ <span class="comment">// 23% auf positives EBT (seit 2024)</span>
+ <span class="comment">// ACHTUNG: Mindest-KöSt auch bei Verlust!</span>
+ <span class="comment">// GmbH: &euro;500/Quartal = &euro;2.000/Jahr</span>
+ <span class="comment">// FlexCo: &euro;125/Quartal = &euro;500/Jahr (ab 2024)</span>
+ <span class="comment">// AG: &euro;875/Quartal = &euro;3.500/Jahr</span>
+
+<span class="highlight">= NETTO-ERGEBNIS</span>
+ <span class="comment">// Jahresüberschuss (positiv) oder Jahresfehlbetrag (negativ)</span></div>
+
+ <h4>Typische Gross Margins nach Geschäftsmodell</h4>
+ <table class="fm-data-table">
+ <thead>
+ <tr>
+ <th>Modell</th>
+ <th>Typische Gross Margin</th>
+ <th>Anmerkung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>SaaS</td>
+ <td class="mono">70-85 %</td>
+ <td>Hosting-Kosten sind niedrig, Skalierung günstig</td>
+ </tr>
+ <tr>
+ <td>Marketplace</td>
+ <td class="mono">60-80 %</td>
+ <td>Abhängig von Take Rate und Fulfillment-Beteiligung</td>
+ </tr>
+ <tr>
+ <td>B2B Services</td>
+ <td class="mono">40-60 %</td>
+ <td>Personalintensiv, limitierte Skalierung</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="fm-info-box warning">
+ <strong>Österreich-Hinweis: Mindest-KöSt</strong>
+ Auch wenn dein Startup Verluste schreibt: Die Mindest-Körperschaftsteuer fällt trotzdem an. Bei einer GmbH sind das &euro;500 pro Quartal, ab dem ersten vollen Geschäftsjahr. Bei der neuen FlexCo (seit 2024) nur &euro;125 pro Quartal. Diesen Betrag musst du im Cash Flow einplanen.
+ </div>
+ </div>
+ </div>
+
+ <!-- Tab 5: CASH FLOW -->
+ <div class="fm-collapsible" id="tab-cashflow">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-cashflow">&#8644;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 5: Cash Flow</span>
+ <span class="fm-trigger-sub">Geldfluss, Runway und Liquiditätsplanung</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Die P&amp;L zeigt, ob du profitabel bist. Der Cash Flow zeigt, ob du <strong>überlebst</strong>. Viele profitable Startups gehen pleite, weil ihnen das Geld ausgeht (Stichwort: Zahlungsziele, Vorfinanzierung). Dieses Tab ist dein Frühwarnsystem.</p>
+
+ <h4>Cash In (Geldzuflüsse)</h4>
+ <div class="formula-block"><span class="green">+ Revenue (zahlungswirksam)</span>
+ <span class="comment">// ACHTUNG: Nicht der gebuchte Umsatz, sondern was tatsächlich eingeht</span>
+ <span class="comment">// Bei B2B typisch: 30-60 Tage Zahlungsziel</span>
+ <span class="comment">// Bei SaaS: sofort (Kreditkarte) oder monatlich (Rechnung)</span>
+
+<span class="green">+ Eigenkapital-Einlagen</span>
+ <span class="comment">// Stammkapital bei Gründung: GmbH &euro;35.000 (halb einzuzahlen),</span>
+ <span class="comment">// FlexCo ab &euro;10.000 (halb einzuzahlen)</span>
+
+<span class="green">+ Investoren-Funding (Equity)</span>
+ <span class="comment">// Business Angels, VC-Runden - als einmaliger Zufluss modellieren</span>
+
+<span class="green">+ Wandeldarlehen / Darlehen</span>
+ <span class="comment">// Zeitpunkt und Höhe lt. Vertrag</span>
+
+<span class="green">+ Förderungen</span>
+ <span class="comment">// aws Preseed: bis &euro;200.000</span>
+ <span class="comment">// aws Seed: bis &euro;800.000</span>
+ <span class="comment">// FFG Basisprogramm: bis &euro;500.000 (50% Förderquote)</span>
+ <span class="comment">// ACHTUNG: Förderungen kommen oft 3-6 Monate verzögert!</span>
+
+<span class="highlight">= TOTAL CASH IN</span></div>
+
+ <h4>Cash Out (Geldabflüsse)</h4>
+ <div class="formula-block"><span class="red">&minus; Personalkosten</span> <span class="comment">// Inkl. Lohnnebenkosten, 13./14. Gehalt</span>
+<span class="red">&minus; Betriebskosten</span> <span class="comment">// Miete, Internet, Tools - wie in Tab 3</span>
+<span class="red">&minus; Marketing-Ausgaben</span> <span class="comment">// Sofort zahlungswirksam</span>
+<span class="red">&minus; Investitionen (CapEx)</span> <span class="comment">// Hardware, Einrichtung - voller Betrag bei Kauf</span>
+<span class="red">&minus; Steuerzahlungen</span>
+ <span class="comment">// KöSt-Vorauszahlungen: quartalsweise</span>
+ <span class="comment">// USt-Voranmeldung: monatlich oder quartalsweise</span>
+ <span class="comment">// USt-Zahllast = Eingenommene USt &minus; Vorsteuer</span>
+<span class="red">&minus; Darlehensrückzahlungen</span> <span class="comment">// Lt. Tilgungsplan</span>
+
+<span class="highlight">= TOTAL CASH OUT</span></div>
+
+ <h4>Kernkennzahlen</h4>
+ <div class="formula-block"><span class="highlight">NET CASH FLOW</span> = Total Cash In &minus; Total Cash Out
+
+<span class="highlight">CASH BALANCE</span> = Vormonat_Cash_Balance + Net_Cash_Flow_aktueller_Monat
+
+<span class="highlight">RUNWAY</span> = Cash Balance / durchschnittl. monatl. Net Cash Out
+ <span class="comment">// Ergebnis in Monaten</span>
+ <span class="comment">// Unter 6 Monate = ALARM</span>
+ <span class="comment">// 6-12 Monate = Fundraising starten</span>
+ <span class="comment">// 12-18 Monate = Komfortzone</span>
+ <span class="comment">// 18+ Monate = Stark</span>
+
+<span class="highlight">BURN RATE</span> = Durchschnittl. monatl. Net Cash Out (letzte 3 Monate)
+ <span class="comment">// Auch Gross Burn (nur Ausgaben) vs. Net Burn (abzgl. Einnahmen) unterscheiden</span></div>
+
+ <div class="fm-info-box danger">
+ <strong>Kritisch: USt-Voranmeldung nicht vergessen</strong>
+ Viele Gründer:innen vergessen die USt-Zahllast im Cash Flow. Wenn du &euro;100.000 Umsatz machst, sammelst du &euro;20.000 USt ein - die gehören nicht dir. Die USt-Voranmeldung ist bei Umsatz über &euro;100.000/Jahr monatlich fällig, darunter quartalsweise. Das kann ein ordentliches Loch ins Cash reißen, wenn nicht eingeplant.
+ </div>
+ </div>
+ </div>
+
+ <!-- Tab 6: ANNAHMEN -->
+ <div class="fm-collapsible" id="tab-annahmen">
+ <button class="fm-collapsible-trigger" onclick="toggleFmCollapsible(this)">
+ <div class="fm-trigger-icon bg-annahmen">&#9881;</div>
+ <div class="fm-trigger-text">
+ <span class="fm-trigger-title">Tab 6: Annahmen</span>
+ <span class="fm-trigger-sub">Alle Parameter an einem Ort - Wachstum, Pricing, Kosten, Steuern</span>
+ </div>
+ <span class="fm-trigger-arrow">&#9660;</span>
+ </button>
+ <div class="fm-collapsible-content">
+ <h4>Zweck</h4>
+ <p>Hier dokumentierst du <strong>alle</strong> Annahmen, die in dein Modell fließen. Das ist der wichtigste Tab für Investor:innen-Gespräche: Sie wollen verstehen, <em>warum</em> du bestimmte Zahlen annimmst, und schnell Szenarien durchspielen.</p>
+
+ <h4>Wachstums-Annahmen</h4>
+ <div class="formula-block"><span class="green">Kundengewinn pro Monat:</span>
+ Monat 1-6: 5 Neukund:innen/Monat <span class="comment">// Manueller Vertrieb</span>
+ Monat 7-12: 12 Neukund:innen/Monat <span class="comment">// Erste Inbound-Effekte</span>
+ Jahr 2: 25 Neukund:innen/Monat <span class="comment">// Marketing skaliert</span>
+ Jahr 3: 50 Neukund:innen/Monat <span class="comment">// Produkt-markt-fit erreicht</span>
+ Jahr 4-5: 80 Neukund:innen/Monat <span class="comment">// Organisches Wachstum + Partnerships</span>
+
+<span class="green">Churn Rate:</span> 5% monatlich (Monat 1-12), 3% (ab Jahr 2)
+<span class="green">Revenue Growth MoM:</span> 15-20% (Monat 1-12), 8-12% (Jahr 2), 5-8% (Jahr 3-5)
+<span class="green">Conversion Rate:</span> Trial &rarr; Paid: 8-12%</div>
+
+ <h4>Pricing-Annahmen</h4>
+ <div class="formula-block"><span class="green">ARPU:</span> &euro;55/Monat <span class="comment">// Gewichteter Durchschnitt über alle Tiers</span>
+<span class="green">Preissteigerung:</span> 5% pro Jahr <span class="comment">// Ab Jahr 2</span>
+<span class="green">Discount-Quote:</span> 15% der Kund:innen bekommen jährliche Abrechnung (&minus;20%)</div>
+
+ <h4>Kosten-Annahmen</h4>
+ <div class="formula-block"><span class="green">Gehaltssteigerung:</span> 3-5% pro Jahr <span class="comment">// AT-Inflation + Markt</span>
+<span class="green">Hiring Plan:</span>
+ Jahr 1: +2 MA (1&times; Dev, 1&times; Sales)
+ Jahr 2: +4 MA (2&times; Dev, 1&times; Marketing, 1&times; Customer Success)
+ Jahr 3: +5 MA (2&times; Dev, 1&times; Sales, 1&times; Ops, 1&times; Finance)
+ Jahr 4: +6 MA
+ Jahr 5: +4 MA
+
+<span class="green">Marketing-Budget:</span> 15-25% des Revenue <span class="comment">// Höher in der Frühphase</span></div>
+
+ <h4>Steuer-Annahmen (Österreich)</h4>
+ <div class="formula-block"><span class="highlight">KöSt:</span> 23% <span class="comment">// Körperschaftsteuer auf Gewinne (seit 2024)</span>
+<span class="highlight">Lohnnebenkosten:</span> ~30% <span class="comment">// DG-Anteil SV + DB + DZ + KommSt + MVK</span>
+<span class="highlight">USt:</span> 20% <span class="comment">// Vorsteuerabzug berücksichtigen</span>
+
+<span class="red">Mindest-KöSt:</span>
+ GmbH: &euro;500/Quartal = &euro;2.000/Jahr
+ FlexCo: &euro;125/Quartal = &euro;500/Jahr
+ AG: &euro;875/Quartal = &euro;3.500/Jahr
+ <span class="comment">// Ab dem 1. vollen Geschäftsjahr fällig</span>
+
+<span class="green">Forschungsprämie:</span> 14% auf F&amp;E-Aufwendungen
+ <span class="comment">// Gutschrift auf dem Abgabenkonto - bares Geld zurück</span>
+ <span class="comment">// Gilt für: Personalkosten F&amp;E, externe F&amp;E-Aufträge (bis 1 Mio.)</span>
+ <span class="comment">// FFG-Bestätigung empfohlen</span>
+
+<span class="green">Kleinunternehmerregelung:</span> bis &euro;55.000 Jahresumsatz USt-befreit
+ <span class="comment">// Nur für Einzelunternehmen relevant, nicht für GmbH/FlexCo</span></div>
+
+ <div class="fm-info-box success">
+ <strong>Pro-Tipp</strong>
+ Baue ein &bdquo;Sensitivity Panel&ldquo; in diesen Tab ein: Was passiert, wenn der Churn um 2 Prozentpunkte steigt? Was, wenn du 3 Monate später launchst? Investor:innen lieben Gründer:innen, die ihre Downside-Szenarien kennen.
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ <!-- 4. BEISPIELWERTE -->
+ <div class="fm-section" id="beispielwerte">
+ <h2>4. Beispielwerte für jede Variante</h2>
+ <p>Hier findest du konkrete Beispielzahlen für ein fiktives österreichisches Startup in jeder Geschäftsmodell-Variante. Die Werte sind bewusst konservativ angesetzt und dienen als Orientierung.</p>
+
+ <!-- Variant Tabs for Examples -->
+ <div class="fm-variant-tabs">
+ <div class="fm-variant-tab-buttons">
+ <button class="fm-variant-tab-btn active" onclick="switchFmVariant(this, 'ex-saas')">SaaS-Beispiel</button>
+ <button class="fm-variant-tab-btn" onclick="switchFmVariant(this, 'ex-marketplace')">Marketplace-Beispiel</button>
+ <button class="fm-variant-tab-btn" onclick="switchFmVariant(this, 'ex-b2b')">B2B-Beispiel</button>
+ </div>
+
+ <!-- SaaS Example -->
+ <div class="fm-variant-tab-panel active" id="panel-ex-saas" data-variant-label="SaaS-Beispiel">
+ <h4>&bdquo;DataClean&ldquo; - B2B-SaaS für automatisierte Datenbereinigung</h4>
+ <p>Standort: Eisenstadt, 2 Gründer:innen, GmbH, Pre-Seed-Phase</p>
+
+ <table class="fm-data-table">
+ <thead>
+ <tr><th>Kennzahl</th><th>Jahr 1</th><th>Jahr 2</th><th>Jahr 3</th><th>Jahr 5</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Kund:innen (Ende)</strong></td><td class="mono">38</td><td class="mono">185</td><td class="mono">520</td><td class="mono">1.680</td></tr>
+ <tr><td><strong>MRR (Ende)</strong></td><td class="mono">&euro;2.660</td><td class="mono">&euro;13.875</td><td class="mono">&euro;43.160</td><td class="mono">&euro;152.880</td></tr>
+ <tr><td><strong>ARR (Ende)</strong></td><td class="mono">&euro;31.920</td><td class="mono">&euro;166.500</td><td class="mono">&euro;517.920</td><td class="mono">&euro;1.834.560</td></tr>
+ <tr><td><strong>Personalkosten/Monat</strong></td><td class="mono">&euro;7.800</td><td class="mono">&euro;18.200</td><td class="mono">&euro;35.100</td><td class="mono">&euro;72.800</td></tr>
+ <tr><td><strong>Gesamtkosten/Monat</strong></td><td class="mono">&euro;12.500</td><td class="mono">&euro;28.400</td><td class="mono">&euro;52.000</td><td class="mono">&euro;98.000</td></tr>
+ <tr><td><strong>Break-even</strong></td><td colspan="4">Monat 26 (Anfang Jahr 3)</td></tr>
+ <tr><td><strong>Churn</strong></td><td class="mono">5 %</td><td class="mono">3,5 %</td><td class="mono">2,5 %</td><td class="mono">2 %</td></tr>
+ <tr><td><strong>Gross Margin</strong></td><td class="mono">78 %</td><td class="mono">80 %</td><td class="mono">82 %</td><td class="mono">84 %</td></tr>
+ <tr><td><strong>Funding benötigt</strong></td><td colspan="4">&euro;250.000 Pre-Seed (Monat 1), &euro;800.000 Seed (Monat 14)</td></tr>
+ </tbody>
+ </table>
+
+ <div class="formula-block"><span class="comment">// Pricing-Annahmen</span>
+Basis: &euro;29/Monat &rarr; 60% der Kund:innen
+Pro: &euro;79/Monat &rarr; 30% der Kund:innen
+Enterprise: &euro;249/Monat &rarr; 10% der Kund:innen
+ARPU: &euro;70/Monat <span class="comment">// gewichteter Durchschnitt</span>
+
+<span class="comment">// Team-Entwicklung</span>
+Jahr 1: 2 Gründer:innen (Tech + Business)
+Jahr 2: +1 Dev, +1 Sales = 4 Personen
+Jahr 3: +2 Dev, +1 Customer Success, +1 Marketing = 8 Personen
+Jahr 5: 16 Personen</div>
+ </div>
+
+ <!-- Marketplace Example -->
+ <div class="fm-variant-tab-panel" id="panel-ex-marketplace" data-variant-label="Marketplace-Beispiel">
+ <h4>&bdquo;RegioMarkt&ldquo; - Marktplatz für regionale Produzent:innen</h4>
+ <p>Standort: Oberwart, 2 Gründer:innen, FlexCo, Seed-Phase</p>
+
+ <table class="fm-data-table">
+ <thead>
+ <tr><th>Kennzahl</th><th>Jahr 1</th><th>Jahr 2</th><th>Jahr 3</th><th>Jahr 5</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Aktive Käufer:innen (Ende)</strong></td><td class="mono">420</td><td class="mono">1.800</td><td class="mono">5.200</td><td class="mono">18.000</td></tr>
+ <tr><td><strong>Aktive Verkäufer:innen (Ende)</strong></td><td class="mono">45</td><td class="mono">120</td><td class="mono">280</td><td class="mono">650</td></tr>
+ <tr><td><strong>Monatl. GMV (Ende)</strong></td><td class="mono">&euro;53.550</td><td class="mono">&euro;229.500</td><td class="mono">&euro;663.000</td><td class="mono">&euro;2.295.000</td></tr>
+ <tr><td><strong>Take Rate</strong></td><td class="mono">12 %</td><td class="mono">14 %</td><td class="mono">15 %</td><td class="mono">15 %</td></tr>
+ <tr><td><strong>Net Revenue/Monat (Ende)</strong></td><td class="mono">&euro;6.426</td><td class="mono">&euro;32.130</td><td class="mono">&euro;99.450</td><td class="mono">&euro;344.250</td></tr>
+ <tr><td><strong>Break-even</strong></td><td colspan="4">Monat 22 (Mitte Jahr 2)</td></tr>
+ <tr><td><strong>Funding benötigt</strong></td><td colspan="4">&euro;150.000 Pre-Seed (Monat 1), &euro;500.000 Seed (Monat 10)</td></tr>
+ </tbody>
+ </table>
+
+ <div class="formula-block"><span class="comment">// Marketplace-Annahmen</span>
+Transaktionen/Käufer:in/Monat: 1,5
+Durchschnittl. Warenkorb: &euro;85
+Repeat Rate nach 6 Monaten: 40%
+Buyer:Seller Ratio: ~10:1 <span class="comment">// Gesund für Nischen-Marktplatz</span>
+
+<span class="comment">// Kostenstruktur</span>
+Payment Processing: 2,5% des GMV <span class="comment">// Stripe/Mollie</span>
+Logistik-Zuschuss: 3% des GMV <span class="comment">// Anreiz für Verkäufer:innen</span>
+Personalkosten: &euro;7.800/Monat (Jahr 1) &rarr; &euro;65.000/Monat (Jahr 5)</div>
+ </div>
+
+ <!-- B2B Example -->
+ <div class="fm-variant-tab-panel" id="panel-ex-b2b" data-variant-label="B2B-Services-Beispiel">
+ <h4>&bdquo;GreenAudit&ldquo; - ESG-Beratung für KMU</h4>
+ <p>Standort: Graz, 2 Gründer:innen, GmbH, bootstrapped</p>
+
+ <table class="fm-data-table">
+ <thead>
+ <tr><th>Kennzahl</th><th>Jahr 1</th><th>Jahr 2</th><th>Jahr 3</th><th>Jahr 5</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Abrechenbare MA</strong></td><td class="mono">2</td><td class="mono">4</td><td class="mono">7</td><td class="mono">14</td></tr>
+ <tr><td><strong>Utilization Rate</strong></td><td class="mono">60 %</td><td class="mono">70 %</td><td class="mono">75 %</td><td class="mono">78 %</td></tr>
+ <tr><td><strong>Stundensatz (Durchschn.)</strong></td><td class="mono">&euro;110</td><td class="mono">&euro;120</td><td class="mono">&euro;130</td><td class="mono">&euro;145</td></tr>
+ <tr><td><strong>Revenue/Monat (Ende)</strong></td><td class="mono">&euro;21.120</td><td class="mono">&euro;53.760</td><td class="mono">&euro;109.200</td><td class="mono">&euro;251.328</td></tr>
+ <tr><td><strong>Revenue/Jahr</strong></td><td class="mono">&euro;178.000</td><td class="mono">&euro;520.000</td><td class="mono">&euro;1.180.000</td><td class="mono">&euro;2.850.000</td></tr>
+ <tr><td><strong>Gross Margin</strong></td><td class="mono">48 %</td><td class="mono">52 %</td><td class="mono">55 %</td><td class="mono">58 %</td></tr>
+ <tr><td><strong>Break-even</strong></td><td colspan="4">Monat 8 (Ende Jahr 1)</td></tr>
+ <tr><td><strong>Funding benötigt</strong></td><td colspan="4">&euro;50.000 eigene Einlage - bootstrapped</td></tr>
+ </tbody>
+ </table>
+
+ <div class="formula-block"><span class="comment">// B2B-Services-Annahmen</span>
+Projektbasiert: 70% des Revenue (Paketpreise)
+Stundenbasiert: 30% des Revenue (laufende Beratung)
+Durchschn. Projekt: &euro;18.000 über 3 Monate
+Akquise-Zyklus: 6-8 Wochen
+Pipeline-Coverage: 3,5&times;
+
+<span class="comment">// Team-Entwicklung</span>
+Jahr 1: 2 Gründer:innen (abrechenbar) + 1 Werkstudent:in
+Jahr 2: +2 Berater:innen = 5 Personen
+Jahr 3: +3 Berater:innen, +1 Ops = 9 Personen
+Jahr 5: 18 Personen (14 abrechenbar, 4 Overhead)</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 5. HÄUFIGE FEHLER -->
+ <div class="fm-section" id="haeufige-fehler">
+ <h2>5. Häufige Fehler beim Financial Modelling</h2>
+ <p>Diese Fehler sehen wir bei StartUp Burgenland immer wieder. Vermeide sie, und dein Modell wird deutlich überzeugender.</p>
+
+ <div class="fm-card">
+ <div class="fm-card-body">
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">1</div>
+ <div class="fm-mistake-content">
+ <strong>Hockey-Stick ohne Begründung</strong>
+ <p>&bdquo;Ab Monat 12 geht es steil nach oben&ldquo; - aber warum? Jeder Wachstumssprung braucht einen konkreten Treiber: mehr Marketing-Budget, ein neues Produkt-Feature, ein Partnership. Unbegründete Sprünge zerstören deine Glaubwürdigkeit.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">2</div>
+ <div class="fm-mistake-content">
+ <strong>Lohnnebenkosten vergessen (AT-Klassiker)</strong>
+ <p>Ein:e Entwickler:in mit &euro;4.000 brutto kostet dich nicht &euro;4.000, sondern ca. &euro;5.200 pro Monat (&times;1,30). Dazu kommen 13. und 14. Gehalt. Auf Jahressicht: &euro;4.000 &times; 14 &times; 1,30 = &euro;72.800 - nicht &euro;48.000.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">3</div>
+ <div class="fm-mistake-content">
+ <strong>Mindest-KöSt nicht eingeplant</strong>
+ <p>Deine GmbH zahlt &euro;2.000 KöSt pro Jahr - auch wenn du &euro;200.000 Verlust machst. Bei der FlexCo sind es &euro;500/Jahr. Das klingt nach wenig, kann aber im Cash Flow überraschen, wenn man es nicht einplant.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">4</div>
+ <div class="fm-mistake-content">
+ <strong>USt-Voranmeldung ignoriert</strong>
+ <p>Du sammelst 20&nbsp;% USt von deinen Kund:innen ein - das ist durchlaufender Posten, kein Umsatz. Die Zahllast (Eingenommene USt minus Vorsteuer) muss regelmäßig ans Finanzamt abgeführt werden. Plane das in den Cash Flow ein.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">5</div>
+ <div class="fm-mistake-content">
+ <strong>Revenue-Modell top-down statt bottom-up</strong>
+ <p>&bdquo;Der Markt ist &euro;5 Mrd. groß, wir holen uns 1&nbsp;%&ldquo; ist keine Prognose. Modelliere bottom-up: Wie viele Leads generierst du, wie hoch ist die Conversion, wie viel zahlt ein:e Kund:in? Das ist glaubwürdig.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">6</div>
+ <div class="fm-mistake-content">
+ <strong>Churn wird ignoriert oder unterschätzt</strong>
+ <p>Ohne Churn im Modell wachsen deine Kund:innenzahlen nur nach oben. Das ist unrealistisch. Selbst bei exzellenten Produkten verlierst du monatlich 2-5&nbsp;% deiner Kund:innen. Modelliere den Churn von Tag 1.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">7</div>
+ <div class="fm-mistake-content">
+ <strong>Förderungen als sicheren Revenue verbuchen</strong>
+ <p>aws- und FFG-Förderungen sind keine garantierten Einnahmen. Plane sie im optimistischen Szenario ein, aber dein Base Case sollte auch ohne Förderung funktionieren. Außerdem kommen Fördergelder oft 3-6 Monate nach Zusage.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">8</div>
+ <div class="fm-mistake-content">
+ <strong>Kein Buffer für Unvorhergesehenes</strong>
+ <p>Server-Ausfälle, Rechtsstreitigkeiten, ein:e Schlüsselmitarbeiter:in kündigt - es kommt immer etwas. Plane mindestens 10&nbsp;% Buffer auf deine Gesamtkosten ein. Das ist kein Pessimismus, sondern Realismus.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">9</div>
+ <div class="fm-mistake-content">
+ <strong>Cash Flow und P&amp;L verwechseln</strong>
+ <p>Die P&amp;L zeigt Erträge und Aufwände - der Cash Flow zeigt, wann Geld tatsächlich fließt. Du kannst auf dem Papier profitabel sein und trotzdem kein Geld am Konto haben (z.&nbsp;B. weil Kund:innen 60 Tage später zahlen). Beide Perspektiven brauchen ein eigenes Tab.</p>
+ </div>
+ </div>
+
+ <div class="fm-mistake-item">
+ <div class="fm-mistake-icon">10</div>
+ <div class="fm-mistake-content">
+ <strong>Annahmen nicht dokumentiert</strong>
+ <p>Wenn du in 6 Monaten auf dein Modell schaust und nicht weißt, warum du 15&nbsp;% Churn angenommen hast, ist das Modell wertlos. Jede Annahme gehört in Tab 6 - mit Begründung und Quelle (z.&nbsp;B. &bdquo;Branchenbenchmark&ldquo;, &bdquo;eigener Test&ldquo;, &bdquo;Gespräch mit 10 Kund:innen&ldquo;).</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 6. CHECKLISTE -->
+ <div class="fm-section" id="checkliste">
+ <h2>6. Checkliste vor dem Investor:innen-Gespräch</h2>
+ <p>Gehe diese 10 Punkte durch, bevor du dein Finanzmodell präsentierst. Hake ab, was passt - und arbeite nach, was fehlt.</p>
+
+ <div class="fm-card">
+ <div class="fm-card-body">
+ <ul class="fm-checklist">
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Annahmen sind dokumentiert und begründet</strong><br>
+ Jede Wachstums-, Pricing- und Kostenannahme steht in Tab 6 mit einer nachvollziehbaren Begründung (Benchmark, Marktdaten, eigener Test).
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Bottom-up Revenue-Modell</strong><br>
+ Dein Umsatz ergibt sich aus konkreten Treibern (Kund:innen &times; Preis &times; Conversion), nicht aus einer Top-down-Marktannahme.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Alle österreichischen Steuern berücksichtigt</strong><br>
+ KöSt (23&nbsp;%), Mindest-KöSt, Lohnnebenkosten (~30&nbsp;%), USt-Voranmeldung, SVS-Beiträge für Geschäftsführer:innen. Alles drin?
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Cash Flow spiegelt die Realität wider</strong><br>
+ Zahlungsziele sind berücksichtigt, Förderungen kommen zeitverzögert, 13./14. Gehalt sind eingeplant, USt-Zahllast ist drin.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Runway ist berechnet und markiert</strong><br>
+ Du weißt, wann dir das Geld ausgeht (ohne neues Funding). Dieser Zeitpunkt ist im Dashboard klar erkennbar.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Hiring Plan ist realistisch und getimt</strong><br>
+ Jede neue Stelle hat einen Startmonat. Personalkosten steigen nicht sprunghaft ohne Erklärung. Die Hiring-Timeline passt zur Funding-Timeline.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Unit Economics sind sauber</strong><br>
+ Du kennst deine CAC (Customer Acquisition Cost), LTV (Lifetime Value) und die LTV:CAC-Ratio. Ziel: mindestens 3:1.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Szenarien sind vorbereitet</strong><br>
+ Du kannst mindestens ein Bear Case (pessimistisch) und ein Bull Case (optimistisch) neben dem Base Case zeigen. Idealerweise schaltbar über Tab 6.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Das Modell ist konsistent</strong><br>
+ Alle Tabs ziehen aus denselben Annahmen. Es gibt keine Widersprüche zwischen P&amp;L, Cash Flow und Dashboard. Revenue in Tab 2 = Revenue in Tab 4.
+ </div>
+ </li>
+ <li>
+ <div class="fm-check-box"></div>
+ <div>
+ <strong>Du kannst jede Zahl erklären</strong><br>
+ Der ultimative Test: Investor:in zeigt auf eine beliebige Zelle und fragt &bdquo;Woher kommt diese Zahl?&ldquo; Wenn du nicht sofort antworten kannst, musst du das Modell besser verstehen.
+ </div>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- 7. RESSOURCEN -->
+ <div class="fm-section" id="ressourcen">
+ <h2>7. Ressourcen &amp; nächste Schritte</h2>
+
+ <h3>Weitere StartUp Burgenland Templates</h3>
+ <table class="fm-data-table">
+ <thead>
+ <tr>
+ <th>Template</th>
+ <th>Beschreibung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Runway &amp; Burn Rate Calculator</strong></td>
+ <td>Interaktiver Rechner für deine Liquiditätsplanung - wie lange reicht dein Geld?</td>
+ </tr>
+ <tr>
+ <td><strong>Startup Kosten-Rechner</strong></td>
+ <td>Alle Gründungskosten in Österreich auf einen Blick - von Notar bis SVS.</td>
+ </tr>
+ <tr>
+ <td><strong>Förderungen Cheat Sheet</strong></td>
+ <td>Überblick über aws, FFG und weitere Förderprogramme für österreichische Startups.</td>
+ </tr>
+ <tr>
+ <td><strong>Legal Cheat Sheet</strong></td>
+ <td>GmbH, FlexCo, Einzelunternehmen - welche Rechtsform passt zu dir?</td>
+ </tr>
+ <tr>
+ <td><strong>Lean Canvas &amp; Business Model Canvas</strong></td>
+ <td>Strategische Planungstools für dein Geschäftsmodell.</td>
+ </tr>
+ <tr>
+ <td><strong>Metrics Cheat Sheet</strong></td>
+ <td>Die wichtigsten Startup-Kennzahlen - von MRR bis Net Promoter Score.</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h3>Empfohlene nächste Schritte</h3>
+ <div class="fm-step-grid">
+ <div class="fm-step-item">
+ <div class="fm-step-num">1</div>
+ <div class="fm-step-content">
+ <strong>Tab 6 ausfüllen</strong>
+ <p>Starte mit deinen Annahmen. Recherchiere Benchmarks für deine Branche und halte alles schriftlich fest.</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">2</div>
+ <div class="fm-step-content">
+ <strong>Revenue-Modell bauen (Tab 2)</strong>
+ <p>Wähle deine Variante (SaaS, Marketplace, B2B) und modelliere die Umsatzentwicklung bottom-up.</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">3</div>
+ <div class="fm-step-content">
+ <strong>Kosten eintragen (Tab 3)</strong>
+ <p>Personalkosten zuerst, dann alle anderen Kategorien. Vergiss den 10&nbsp;%-Buffer nicht.</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">4</div>
+ <div class="fm-step-content">
+ <strong>Dashboard prüfen (Tab 1)</strong>
+ <p>Stimmen die automatisch berechneten KPIs? Ergibt der Runway Sinn? Ist der Break-even-Zeitpunkt realistisch?</p>
+ </div>
+ </div>
+ <div class="fm-step-item">
+ <div class="fm-step-num">5</div>
+ <div class="fm-step-content">
+ <strong>Coaching-Session buchen</strong>
+ <p>Lass dein Modell von unseren Coaches challengen - bevor es Investor:innen tun.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Hilfe mit deinem Finanzmodell?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching unterstützen wir dich beim Aufbau, der Validierung und der Präsentation deines Financial Models - individuell und ohne Batch.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+
+ <!-- Financial Model inline JS -->
+ <script>
+ // Toggle collapsible sections
+ function toggleFmCollapsible(trigger) {
+ var collapsible = trigger.closest('.fm-collapsible');
+ collapsible.classList.toggle('open');
+ }
+
+ // Switch variant tabs
+ function switchFmVariant(btn, panelId) {
+ var tabGroup = btn.closest('.fm-variant-tabs');
+ tabGroup.querySelectorAll('.fm-variant-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+ tabGroup.querySelectorAll('.fm-variant-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+ btn.classList.add('active');
+ var panel = tabGroup.querySelector('#panel-' + panelId);
+ if (panel) panel.classList.add('active');
+ }
+ </script>
+
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

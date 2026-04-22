@@ -1,0 +1,1162 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Steuer-Basics Cheat Sheet | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Die wichtigsten Steuer-Basics für Gründer:innen in Österreich: KöSt, ESt, USt, SVS, NeuFöG, Forschungsprämie, Lohnnebenkosten und Fristen auf einen Blick.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/steuer-basics/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/steuer-basics/">
+ <meta property="og:title" content="Steuer-Basics Cheat Sheet | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Die wichtigsten Steuer-Basics für Gründer:innen in Österreich: KöSt, ESt, USt, SVS, NeuFöG, Forschungsprämie, Lohnnebenkosten und Fristen auf einen Blick.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Steuer-Basics Cheat Sheet | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Steuer-Basics Cheat Sheet */
+
+ /* ========== DESIGN TOKENS ========== */
+.tool-content {
+ --koest-color: #E63946;
+ --koest-bg: #FEF2F2;
+ --koest-border: #FEE2E2;
+ --est-color: #28A745;
+ --est-bg: #DCFCE7;
+ --est-border: #A7F3D0;
+ --ust-color: #FF8C00;
+ --ust-bg: #FFF7ED;
+ --ust-border: #FDBA74;
+ --svs-color: #6B7280;
+ --svs-bg: #F3F4F6;
+ --svs-border: #D1D5DB;
+ --neufoeg-color: #4B5563;
+ --neufoeg-bg: #F3F4F6;
+ --neufoeg-border: #D1D5DB;
+ --forschung-color: #DC3545;
+ --forschung-bg: #FEF2F2;
+ --forschung-border: #FECACA;
+ --lohn-color: #C26900;
+ --lohn-bg: #FFF7ED;
+ --lohn-border: #FED7AA;
+ --fristen-color: #E63946;
+ --fristen-bg: #F3F4F6;
+ --fristen-border: #D1D5DB;
+ --pauschal-color: #059669;
+ --pauschal-bg: #DCFCE7;
+ --pauschal-border: #A7F3D0;
+ }
+
+ /* ========== PAGE STRUCTURE (A4 print pages) ========== */
+.tool-content.page {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 24px 0;
+ }
+
+ /* ========== HEADER (cheat-sheet internal header) ========== */
+.tool-content.cs-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 10px;
+ border-bottom: 3px solid var(--koest-color);
+ margin-bottom: 16px;
+ }
+
+.tool-content.cs-header-left {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+
+.tool-content.logo-mark {
+ width: 38px;
+ height: 38px;
+ background: var(--koest-color);
+ border-radius: 6px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-weight: 800;
+ font-size: 18px;
+ letter-spacing: -0.5px;
+ flex-shrink: 0;
+ }
+
+.tool-content.cs-header-text h2 {
+ font-size: 22px;
+ font-weight: 800;
+ color: var(--koest-color);
+ line-height: 1.15;
+ margin: 0;
+ }
+
+.tool-content.cs-header-text.subtitle {
+ font-size: 13.5px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+
+.tool-content.cs-header-badge {
+ background: #FF8C00;
+ color: #fff;
+ font-size: 12.5px;
+ font-weight: 700;
+ padding: 4px 12px;
+ border-radius: 4px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ white-space: nowrap;
+ }
+
+ /* ========== TWO-COLUMN GRID ========== */
+.tool-content.grid-2col {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 14px;
+ }
+
+.tool-content.grid-2col.gap-sm {
+ gap: 10px;
+ }
+
+.tool-content.full-width {
+ grid-column: 1 / -1;
+ }
+
+ /* ========== SECTION CARD ========== */
+.tool-content.section-card {
+ border: 1px solid #E2E8F0;
+ border-radius: 10px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ }
+
+.tool-content.section-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ padding: 8px 14px;
+ font-weight: 700;
+ font-size: 15px;
+ color: #fff;
+ letter-spacing: 0.02em;
+ }
+
+.tool-content.section-header.icon {
+ font-size: 17px;
+ flex-shrink: 0;
+ }
+
+.tool-content.section-header.section-num {
+ background: rgba(255,255,255,0.25);
+ padding: 1px 6px;
+ border-radius: 3px;
+ font-size: 11.5px;
+ font-weight: 600;
+ margin-right: 2px;
+ }
+
+.tool-content.section-body {
+ padding: 12px 14px 14px;
+ flex: 1;
+ font-size: 15px;
+ line-height: 1.45;
+ }
+
+ /* Section color variants */
+.tool-content.s-koest.section-header { background: var(--koest-color); }
+.tool-content.s-koest { border-color: var(--koest-border); }
+
+.tool-content.s-est.section-header { background: var(--est-color); }
+.tool-content.s-est { border-color: var(--est-border); }
+
+.tool-content.s-ust.section-header { background: var(--ust-color); color: #1C1D1F; }
+.tool-content.s-ust { border-color: var(--ust-border); }
+
+.tool-content.s-svs.section-header { background: var(--svs-color); }
+.tool-content.s-svs { border-color: var(--svs-border); }
+
+.tool-content.s-neufoeg.section-header { background: var(--neufoeg-color); }
+.tool-content.s-neufoeg { border-color: var(--neufoeg-border); }
+
+.tool-content.s-forschung.section-header { background: var(--forschung-color); }
+.tool-content.s-forschung { border-color: var(--forschung-border); }
+
+.tool-content.s-lohn.section-header { background: var(--lohn-color); color: #fff; }
+.tool-content.s-lohn { border-color: var(--lohn-border); }
+
+.tool-content.s-fristen.section-header { background: var(--fristen-color); }
+.tool-content.s-fristen { border-color: var(--fristen-border); }
+
+.tool-content.s-pauschal.section-header { background: var(--pauschal-color); }
+.tool-content.s-pauschal { border-color: var(--pauschal-border); }
+
+ /* ========== RATE BOX ========== */
+.tool-content.rate-box {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 6px;
+ padding: 4px 10px;
+ margin: 2px 0;
+ }
+
+.tool-content.rate-big {
+ font-weight: 700;
+ font-size: 22px;
+ color: var(--koest-color);
+ font-variant-numeric: tabular-nums;
+ }
+
+.tool-content.rate-label {
+ font-size: 13px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+
+ /* ========== FORMULA BOX ========== */
+.tool-content.formula-box {
+ font-size: 13.5px;
+ font-weight: 600;
+ background: #F8FAFC;
+ padding: 4px 10px;
+ border-radius: 4px;
+ border: 1px solid #E2E8F0;
+ color: #1C1D1F;
+ display: inline-block;
+ margin: 3px 0;
+ line-height: 1.5;
+ font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+ }
+
+ /* ========== HIGHLIGHT BOXES ========== */
+.tool-content.highlight-box {
+ border-radius: 6px;
+ padding: 6px 10px;
+ margin: 4px 0;
+ font-size: 14px;
+ }
+
+.tool-content.highlight-orange {
+ background: var(--ust-bg);
+ border-left: 3px solid var(--ust-color);
+ }
+
+.tool-content.highlight-red {
+ background: var(--forschung-bg);
+ border-left: 3px solid var(--forschung-color);
+ }
+
+.tool-content.highlight-teal {
+ background: var(--neufoeg-bg);
+ border-left: 3px solid var(--neufoeg-color);
+ }
+
+ /* ========== COMPACT LIST ========== */
+.tool-content ul.compact {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+
+.tool-content ul.compact li {
+ padding: 2px 0;
+ padding-left: 16px;
+ position: relative;
+ font-size: 14.5px;
+ line-height: 1.4;
+ }
+
+.tool-content ul.compact li::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 9px;
+ width: 5px;
+ height: 5px;
+ border-radius: 50%;
+ background: #6B7280;
+ }
+
+.tool-content.s-koest ul.compact li::before { background: var(--koest-color); }
+.tool-content.s-est ul.compact li::before { background: var(--est-color); }
+.tool-content.s-ust ul.compact li::before { background: var(--ust-color); }
+.tool-content.s-svs ul.compact li::before { background: var(--svs-color); }
+.tool-content.s-neufoeg ul.compact li::before { background: var(--neufoeg-color); }
+.tool-content.s-forschung ul.compact li::before { background: var(--forschung-color); }
+.tool-content.s-lohn ul.compact li::before { background: var(--lohn-color); }
+.tool-content.s-fristen ul.compact li::before { background: var(--fristen-color); }
+.tool-content.s-pauschal ul.compact li::before { background: var(--pauschal-color); }
+
+ /* ========== MONO TEXT ========== */
+.tool-content.mono {
+ font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+ font-weight: 600;
+ }
+
+ /* ========== TEXT HELPERS ========== */
+.tool-content.text-muted-cs {
+ color: #6B7280;
+ font-size: 13px;
+ }
+
+.tool-content.text-small {
+ font-size: 12.5px;
+ color: #6B7280;
+ }
+
+ /* ========== BADGES ========== */
+.tool-content.cs-badge {
+ display: inline-block;
+ font-size: 11.5px;
+ font-weight: 600;
+ padding: 2px 8px;
+ border-radius: 3px;
+ white-space: nowrap;
+ }
+
+.tool-content.cs-badge-green {
+ background: #DCFCE7;
+ color: #065F46;
+ border: 1px solid #A7F3D0;
+ }
+
+.tool-content.cs-badge-blue {
+ background: #FEF2F2;
+ color: #374151;
+ border: 1px solid #FEE2E2;
+ }
+
+ /* ========== TAX RATE TABLE ========== */
+.tool-content.tax-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13.5px;
+ margin: 4px 0;
+ }
+
+.tool-content.tax-table th {
+ background: #F8FAFC;
+ font-weight: 600;
+ padding: 4px 8px;
+ text-align: left;
+ font-size: 12.5px;
+ border-bottom: 1px solid #E2E8F0;
+ color: #1C1D1F;
+ }
+
+.tool-content.tax-table td {
+ padding: 3px 8px;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 13.5px;
+ }
+
+.tool-content.tax-table td:last-child {
+ font-weight: 600;
+ text-align: right;
+ white-space: nowrap;
+ font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+ }
+
+.tool-content.tax-table tr:last-child td {
+ border-bottom: none;
+ }
+
+.tool-content.tax-table.row-highlight {
+ background: #FFF7ED;
+ }
+
+ /* ========== FRISTEN TABLE ========== */
+.tool-content.fristen-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13.5px;
+ margin: 4px 0;
+ }
+
+.tool-content.fristen-table thead th {
+ background: var(--fristen-color);
+ color: #fff;
+ font-weight: 600;
+ padding: 6px 8px;
+ text-align: left;
+ font-size: 12.5px;
+ }
+
+.tool-content.fristen-table td {
+ padding: 4px 8px;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 13.5px;
+ line-height: 1.35;
+ }
+
+.tool-content.fristen-table td:first-child {
+ font-weight: 600;
+ color: var(--koest-color);
+ white-space: nowrap;
+ }
+
+.tool-content.fristen-table tr:nth-child(even) {
+ background: #F8FAFC;
+ }
+
+.tool-content.fristen-table tr:last-child td {
+ border-bottom: none;
+ }
+
+ /* ========== EXAMPLE BOX ========== */
+.tool-content.example-box {
+ background: #FFF7ED;
+ border: 1px solid #FED7AA;
+ border-radius: 6px;
+ padding: 6px 10px;
+ margin-top: 6px;
+ font-size: 13.5px;
+ }
+
+.tool-content.example-box.example-label {
+ font-weight: 700;
+ font-size: 12.5px;
+ color: #92400E;
+ text-transform: uppercase;
+ letter-spacing: 0.03em;
+ }
+
+ /* ========== TIP BOXES (3-column) ========== */
+.tool-content.tip-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 10px;
+ }
+
+.tool-content.tip-card {
+ border-radius: 8px;
+ padding: 10px 12px;
+ font-size: 13px;
+ border: 1px solid;
+ }
+
+.tool-content.tip-card-title {
+ font-weight: 700;
+ font-size: 14.5px;
+ margin-bottom: 4px;
+ }
+
+.tool-content.tip-card-body {
+ line-height: 1.4;
+ }
+
+ /* ========== COMPARISON BOX ========== */
+.tool-content.comparison-box {
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 10px 14px;
+ }
+
+.tool-content.comparison-box.comparison-title {
+ color: var(--koest-color);
+ font-size: 15px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ }
+
+.tool-content.comparison-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 12px;
+ }
+
+.tool-content.comparison-col-title {
+ font-weight: 700;
+ font-size: 13px;
+ margin-bottom: 4px;
+ }
+
+ /* ========== CS FOOTER (print page footer) ========== */
+.tool-content.cs-footer {
+ padding-top: 8px;
+ border-top: 2px solid var(--koest-color);
+ margin-top: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 11px;
+ color: #6B7280;
+ gap: 8px;
+ }
+
+.tool-content.cs-footer-left {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ }
+
+.tool-content.cs-footer-logo {
+ width: 18px;
+ height: 18px;
+ background: var(--koest-color);
+ border-radius: 3px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-weight: 700;
+ font-size: 9px;
+ flex-shrink: 0;
+ }
+
+.tool-content.cs-disclaimer {
+ font-style: italic;
+ color: #DC3545;
+ font-weight: 500;
+ }
+
+ /* ========== RESPONSIVE ========== */
+ @media (max-width: 768px) {
+.tool-content.grid-2col {
+ grid-template-columns: 1fr;
+ }
+.tool-content.tip-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.comparison-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.cs-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 8px;
+ }
+.tool-content.tax-table,
+.tool-content.fristen-table {
+ display: block;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ }
+ }
+
+ /* ========== PRINT ========== */
+ @media print {
+.tool-content.page {
+ width: 210mm;
+ min-height: 277mm;
+ padding: 12mm 14mm 10mm 14mm;
+ margin: 0;
+ page-break-after: always;
+ }
+.tool-content.page:last-child {
+ page-break-after: auto;
+ }
+.tool-content.section-header,
+.tool-content.logo-mark,
+.tool-content.cs-footer-logo,
+.tool-content.cs-header-badge,
+.tool-content.rate-box,
+.tool-content.formula-box,
+.tool-content.highlight-box,
+.tool-content.highlight-orange,
+.tool-content.highlight-red,
+.tool-content.highlight-teal,
+.tool-content.cs-badge,
+.tool-content.tax-table th,
+.tool-content.fristen-table thead th,
+.tool-content.example-box,
+.tool-content.tip-card,
+.tool-content.comparison-box {
+ -webkit-print-color-adjust: exact!important;
+ print-color-adjust: exact!important;
+ }
+.tool-content.section-card {
+ break-inside: avoid;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Steuer-Basics Cheat Sheet</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Die wichtigsten Steuer-Themen f&uuml;r Gr&uuml;nder:innen in &Ouml;sterreich auf einen Blick</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/markteintritt/">Phase 2: Markteintritt</a>
+ <span class="separator">/</span>
+ <span class="current">Steuer-Basics Cheat Sheet</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content tb-print-a4">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- ==================== PAGE 1 ==================== -->
+ <div class="page tb-print-page">
+
+ <!-- Header -->
+ <div class="cs-header">
+ <div class="cs-header-left">
+ <div class="logo-mark">SB</div>
+ <div class="cs-header-text">
+ <h2>Steuer-Basics Cheat Sheet f&uuml;r Gr&uuml;nder:innen</h2>
+ <div class="subtitle">StartUp Burgenland &middot; Die wichtigsten Steuer-Themen auf einen Blick</div>
+ </div>
+ </div>
+ <div class="cs-header-badge">2025/26</div>
+ </div>
+
+ <!-- Grid: 2 columns, 5 sections on page 1 -->
+ <div class="grid-2col">
+
+ <!-- ===== 1. KöSt ===== -->
+ <div class="section-card s-koest">
+ <div class="section-header">
+ <span class="section-num">1</span>
+ <span class="icon">&#127970;</span>
+ K&ouml;rperschaftsteuer (K&ouml;St)
+ </div>
+ <div class="section-body">
+ <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+ <div class="rate-box">
+ <span class="rate-big">23%</span>
+ <span class="rate-label">auf den Gewinn<br><span class="text-small">seit 2024</span></span>
+ </div>
+ </div>
+ <ul class="compact">
+ <li><strong>Gilt f&uuml;r:</strong> GmbH, FlexCo, AG</li>
+ <li><strong>Mindest-K&ouml;St:</strong> <span class="mono">&euro;500</span>/Quartal (GmbH, AG), <span class="mono">&euro;125</span>/Quartal (FlexCo)</li>
+ <li>Mindest-K&ouml;St wird auf sp&auml;tere K&ouml;St angerechnet</li>
+ <li><strong>Gewinnaussch&uuml;ttung:</strong> zus&auml;tzlich <span class="mono">27,5%</span> KESt auf Dividenden</li>
+ <li><strong>Gesamtbelastung bei Aussch&uuml;ttung:</strong> ca. <span class="mono">44,2%</span></li>
+ </ul>
+ <div class="formula-box" style="margin-top:6px;">
+ K&ouml;St = Gewinn &times; 23%
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== 2. ESt ===== -->
+ <div class="section-card s-est">
+ <div class="section-header">
+ <span class="section-num">2</span>
+ <span class="icon">&#128100;</span>
+ Einkommensteuer (ESt)
+ </div>
+ <div class="section-body">
+ <div class="text-muted-cs" style="margin-bottom:3px;">F&uuml;r EPU &amp; Personengesellschaften - Progressionsstufen 2024/25:</div>
+ <table class="tax-table">
+ <tr><td>&euro;0 - &euro;12.816</td><td>0%</td></tr>
+ <tr><td>&euro;12.816 - &euro;20.818</td><td>20%</td></tr>
+ <tr><td>&euro;20.818 - &euro;34.513</td><td>30%</td></tr>
+ <tr class="row-highlight"><td>&euro;34.513 - &euro;66.612</td><td>40%</td></tr>
+ <tr><td>&euro;66.612 - &euro;99.266</td><td>48%</td></tr>
+ <tr><td>&euro;99.266 - &euro;1.000.000</td><td>50%</td></tr>
+ <tr><td>&Uuml;ber &euro;1.000.000</td><td>55%</td></tr>
+ </table>
+ <ul class="compact" style="margin-top:4px;">
+ <li><strong>Gewinnfreibetrag:</strong> <span class="mono">15%</span> des Gewinns bis <span class="mono">&euro;33.000</span> (Grundfreibetrag automatisch)</li>
+ <li><strong>Pauschalierung:</strong> 12% bzw. 6% des Umsatzes m&ouml;glich</li>
+ </ul>
+ </div>
+ </div>
+
+ <!-- ===== 3. USt ===== -->
+ <div class="section-card s-ust">
+ <div class="section-header">
+ <span class="section-num">3</span>
+ <span class="icon">&#128176;</span>
+ Umsatzsteuer (USt)
+ </div>
+ <div class="section-body">
+ <div style="display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+ <div class="rate-box">
+ <span class="rate-big">20%</span>
+ <span class="rate-label">Regelsteuersatz</span>
+ </div>
+ <div class="rate-box">
+ <span class="rate-big" style="font-size: 17px;">10%</span>
+ <span class="rate-label" style="font-size: 10.5px;">Lebensmittel,<br>B&uuml;cher, Miete</span>
+ </div>
+ <div class="rate-box">
+ <span class="rate-big" style="font-size: 17px;">13%</span>
+ <span class="rate-label" style="font-size: 10.5px;">Kultur,<br>Sport</span>
+ </div>
+ </div>
+ <div class="highlight-orange" style="margin-bottom:6px;">
+ <strong>Kleinunternehmerregelung:</strong> Unter <span class="mono">&euro;42.000</span> Umsatz/Jahr (seit 2025) USt-befreit<br>
+ <span class="text-small">&#10003; Keine USt an Finanzamt &nbsp;&nbsp; &#10007; Kein Vorsteuerabzug &nbsp;&nbsp; Option zur Regelbesteuerung (5 J. Bindung)</span>
+ </div>
+ <ul class="compact">
+ <li><strong>UVA:</strong> Monatlich (&gt;&euro;100K Vorjahres-USt) oder quartalsweise</li>
+ <li><strong>Reverse Charge:</strong> Bei EU-Dienstleistungen</li>
+ <li><strong>Innergemeinschaftliche Lieferungen:</strong> USt-frei mit UID-Nr.</li>
+ </ul>
+ </div>
+ </div>
+
+ <!-- ===== 4. SVS ===== -->
+ <div class="section-card s-svs">
+ <div class="section-header">
+ <span class="section-num">4</span>
+ <span class="icon">&#127973;</span>
+ Sozialversicherung (SVS)
+ </div>
+ <div class="section-body">
+ <div class="text-muted-cs" style="margin-bottom:3px;">SVS f&uuml;r EPU, Gesellschafter:innen-GF</div>
+ <table class="tax-table">
+ <tr><td>Krankenversicherung</td><td>6,80%</td></tr>
+ <tr><td>Pensionsversicherung</td><td>18,50%</td></tr>
+ <tr><td>Unfallversicherung</td><td>&euro;11,35/Mon.</td></tr>
+ <tr><td>Selbst&auml;ndigenvorsorge</td><td>1,53%</td></tr>
+ <tr style="background:var(--svs-bg);font-weight:600;"><td><strong>GESAMT</strong></td><td><strong>~26,83% + UV</strong></td></tr>
+ </table>
+ <ul class="compact" style="margin-top:4px;">
+ <li><strong>Mindestbeitragsgrundlage:</strong> ca. <span class="mono">&euro;537</span>/Mon. (2025)</li>
+ <li><strong>H&ouml;chstbeitragsgrundlage:</strong> ca. <span class="mono">&euro;7.070</span>/Mon. (2025)</li>
+ <li><strong>Erste 3 Jahre:</strong> Reduzierte Beitr&auml;ge <span class="cs-badge cs-badge-green">Neugr&uuml;nder:innen-Privileg</span></li>
+ <li><strong>GmbH-GF &lt;25% Anteile:</strong> ASVG (Dienstnehmer:in)</li>
+ <li><strong>GmbH-GF &ge;25% Anteile:</strong> GSVG / SVS</li>
+ </ul>
+ </div>
+ </div>
+
+ <!-- ===== 5. NeuFöG ===== -->
+ <div class="section-card s-neufoeg full-width">
+ <div class="section-header">
+ <span class="section-num">5</span>
+ <span class="icon">&#127381;</span>
+ NeuF&ouml;G (Neugr&uuml;ndungsf&ouml;rderungsgesetz)
+ </div>
+ <div class="section-body">
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+ <div>
+ <strong>Befreiungen bei Neugr&uuml;ndung:</strong>
+ <ul class="compact" style="margin-top:4px;">
+ <li>Firmenbuchgeb&uuml;hren</li>
+ <li>Gewerbeanmeldegeb&uuml;hren</li>
+ <li>Stempelgeb&uuml;hren</li>
+ <li>Grunderwerbsteuer (bei Betriebs&uuml;bertragung)</li>
+ <li><strong>Lohnnebenkosten-Befreiung f&uuml;r 12 Monate</strong> (SV-Beitr&auml;ge DG-Anteil, DB, DZ, KommSt)</li>
+ </ul>
+ </div>
+ <div>
+ <div class="highlight-teal">
+ <strong>Voraussetzung:</strong> Neugr&uuml;ndung oder Betriebs&uuml;bertragung<br>
+ <strong>Formular:</strong> NeuF&ouml;G-Erkl&auml;rung beim Finanzamt oder WKO Gr&uuml;nderservice einreichen<br>
+ <span class="cs-badge cs-badge-blue" style="margin-top:3px;">Unbedingt VOR Gr&uuml;ndung beantragen!</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ <!-- Footer Page 1 -->
+ <div class="cs-footer">
+ <div class="cs-footer-left">
+ <div class="cs-footer-logo">SB</div>
+ <span>Stand: Februar 2026 &middot; StartUp Burgenland &middot; startupburgenland.at</span>
+ </div>
+ <span class="cs-disclaimer">Keine Steuerberatung. Bitte konsultiere einen Steuerberater.</span>
+ </div>
+
+ </div>
+
+ <!-- ==================== PAGE 2 ==================== -->
+ <div class="page tb-print-page">
+
+ <!-- Page 2 Header -->
+ <div class="cs-header">
+ <div class="cs-header-left">
+ <div class="logo-mark" style="width:30px;height:30px;font-size:15px;">SB</div>
+ <div class="cs-header-text">
+ <h2 style="font-size:20px;">Steuer-Basics Cheat Sheet - Fortsetzung</h2>
+ </div>
+ </div>
+ <div class="cs-header-badge">Seite 2/2</div>
+ </div>
+
+ <!-- Grid: 2 columns -->
+ <div class="grid-2col gap-sm">
+
+ <!-- ===== 6. Forschungsprämie ===== -->
+ <div class="section-card s-forschung">
+ <div class="section-header">
+ <span class="section-num">6</span>
+ <span class="icon">&#128300;</span>
+ Forschungspr&auml;mie
+ </div>
+ <div class="section-body">
+ <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+ <div class="rate-box">
+ <span class="rate-big">14%</span>
+ <span class="rate-label">der F&amp;E-Aufwendungen<br><span class="text-small">als Steuergutschrift</span></span>
+ </div>
+ </div>
+ <ul class="compact">
+ <li>Gilt f&uuml;r: <strong>eigene F&amp;E</strong> und <strong>Auftrags-F&amp;E</strong></li>
+ <li>Max. Bemessungsgrundlage Auftrags-F&amp;E: <span class="mono">&euro;1.000.000</span></li>
+ <li>Antragsweg: &uuml;ber <strong>FinanzOnline</strong> + <strong>FFG-Gutachten</strong></li>
+ </ul>
+ <div class="highlight-red" style="margin-top:6px;">
+ <strong>&#128161; Auch f&uuml;r Startups ohne Gewinn nutzbar - wird ausbezahlt!</strong>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== 7. Lohnnebenkosten ===== -->
+ <div class="section-card s-lohn">
+ <div class="section-header">
+ <span class="section-num">7</span>
+ <span class="icon">&#128101;</span>
+ Lohnnebenkosten (Arbeitgeber)
+ </div>
+ <div class="section-body">
+ <div class="text-muted-cs" style="margin-bottom:3px;">Lohnnebenkosten ca. <strong style="color:#1C1D1F;">30%</strong> auf Bruttogehalt:</div>
+ <table class="tax-table">
+ <tr><td>SV-Dienstgeberanteil</td><td>~21,09%</td></tr>
+ <tr><td>DB (Dienstgeberbeitrag FLAF)</td><td>3,70%</td></tr>
+ <tr><td>DZ (Zuschlag zum DB)</td><td>~0,36%</td></tr>
+ <tr><td>Kommunalsteuer</td><td>3,00%</td></tr>
+ <tr><td>MVK (Mitarbeitervorsorgekasse)</td><td>1,53%</td></tr>
+ </table>
+ <div class="example-box">
+ <span class="example-label">Beispiel:</span>
+ <span class="mono">&euro;4.000</span> brutto &rarr; ca. <span class="mono">&euro;5.200</span> Gesamtkosten AG<br>
+ <span class="text-small">&#9888; 13. und 14. Gehalt beachten! (Sonderzahlungen)</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- ===== 9. Betriebsausgabenpauschalierung ===== -->
+ <div class="section-card s-pauschal">
+ <div class="section-header">
+ <span class="section-num">9</span>
+ <span class="icon">&#128221;</span>
+ Betriebsausgabenpauschalierung
+ </div>
+ <div class="section-body">
+ <div class="text-muted-cs" style="margin-bottom:3px;">F&uuml;r EPU als Alternative zur Einzelaufzeichnung</div>
+ <div style="display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+ <div class="rate-box">
+ <span class="rate-big" style="font-size: 18px;">12%</span>
+ <span class="rate-label" style="font-size: 10.5px;">allgemein</span>
+ </div>
+ <div class="rate-box">
+ <span class="rate-big" style="font-size: 18px;">6%</span>
+ <span class="rate-label" style="font-size: 10.5px;">Dienstleistungs-<br>betriebe</span>
+ </div>
+ </div>
+ <ul class="compact">
+ <li>Max. Bemessungsgrundlage: <span class="mono">&euro;220.000</span> Umsatz</li>
+ <li>Daneben: Tats&auml;chliche <strong>SVS-Beitr&auml;ge</strong> absetzbar</li>
+ <li>Vereinfacht die Buchhaltung erheblich</li>
+ </ul>
+ </div>
+ </div>
+
+ <!-- ===== 8. Wichtige Fristen ===== -->
+ <div class="section-card s-fristen">
+ <div class="section-header">
+ <span class="section-num">8</span>
+ <span class="icon">&#128197;</span>
+ Wichtige Fristen
+ </div>
+ <div class="section-body">
+ <table class="fristen-table">
+ <thead>
+ <tr>
+ <th>Was</th>
+ <th>Frist</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>UVA</td>
+ <td>15. des zweitfolgenden Monats <span class="text-small">(z.B. J&auml;nner-UVA bis 15. M&auml;rz)</span></td>
+ </tr>
+ <tr>
+ <td>USt/ESt/K&ouml;St-Erkl&auml;rung</td>
+ <td>30.6. (Papier) / 30.9. (FinanzOnline)</td>
+ </tr>
+ <tr>
+ <td>Mit Steuerberater:in</td>
+ <td>Verl&auml;ngerung bis Folgejahr (Quotenregelung)</td>
+ </tr>
+ <tr>
+ <td>K&ouml;St-Vorauszahlung</td>
+ <td>Quartalsweise: 15.2. / 15.5. / 15.8. / 15.11.</td>
+ </tr>
+ <tr>
+ <td>SVS-Beitr&auml;ge</td>
+ <td>Quartalsweise</td>
+ </tr>
+ <tr>
+ <td>Jahresabschluss GmbH</td>
+ <td>9 Monate nach Bilanzstichtag</td>
+ </tr>
+ <tr>
+ <td>Offenlegung Firmenbuch</td>
+ <td>9 Monate nach Bilanzstichtag</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+
+ <!-- ===== Quick Reference: 3 Tip Cards ===== -->
+ <div class="full-width tip-grid">
+
+ <!-- Tipp-Box 1 -->
+ <div class="tip-card" style="background:var(--est-bg);border-color:var(--est-border);">
+ <div class="tip-card-title" style="color:#166534;">&#9989; EPU oder Kapitalgesellschaft?</div>
+ <div class="tip-card-body">
+ <strong>Faustregel:</strong> Ab ca. <span class="mono">&euro;60.000</span> Gewinn wird die GmbH/FlexCo steuerlich attraktiver als das EPU (23% K&ouml;St vs. 48% ESt).
+ </div>
+ </div>
+
+ <!-- Tipp-Box 2 -->
+ <div class="tip-card" style="background:var(--koest-bg);border-color:var(--koest-border);">
+ <div class="tip-card-title" style="color:var(--koest-color);">&#128218; FinanzOnline nutzen</div>
+ <div class="tip-card-body">
+ &Uuml;ber FinanzOnline l&auml;ngere Abgabefristen (30.9. statt 30.6.), elektronische UVA, Forschungspr&auml;mie-Antr&auml;ge und Steuerkonto-Einsicht.
+ </div>
+ </div>
+
+ <!-- Tipp-Box 3 -->
+ <div class="tip-card" style="background:var(--forschung-bg);border-color:var(--forschung-border);">
+ <div class="tip-card-title" style="color:#991B1B;">&#9888; H&auml;ufige Fehler</div>
+ <div class="tip-card-body">
+ NeuF&ouml;G nicht beantragt, USt-Voranmeldung vergessen, Kleinunternehmergrenze &uuml;berschritten, SVS-Nachzahlungen nicht eingeplant.
+ </div>
+ </div>
+
+ </div>
+
+ <!-- ===== Gesamtübersicht: Schnellvergleich ===== -->
+ <div class="full-width" style="margin-top:4px;">
+ <div class="comparison-box">
+ <div class="comparison-title">Schnellvergleich: EPU vs. GmbH/FlexCo</div>
+ <div class="comparison-grid">
+ <div>
+ <div class="comparison-col-title" style="color:var(--est-color);">EPU / Einzelunternehmen</div>
+ <ul class="compact">
+ <li>Einkommensteuer 0-55% (progressiv)</li>
+ <li>SVS-Beitr&auml;ge ~26,83%</li>
+ <li>Gewinnfreibetrag 15% (bis &euro;33.000)</li>
+ <li>Keine Mindest-K&ouml;St</li>
+ <li>Betriebsausgabenpauschalierung m&ouml;glich</li>
+ <li>Unbeschr&auml;nkte Haftung</li>
+ </ul>
+ </div>
+ <div>
+ <div class="comparison-col-title" style="color:var(--koest-color);">GmbH / FlexCo</div>
+ <ul class="compact">
+ <li>K&ouml;rperschaftsteuer <span class="mono">23%</span> (flat)</li>
+ <li>KESt <span class="mono">27,5%</span> bei Aussch&uuml;ttung</li>
+ <li>Mindest-K&ouml;St: &euro;500/Q. (GmbH) / &euro;125/Q. (FlexCo)</li>
+ <li>GF-Bezug als Betriebsausgabe</li>
+ <li>Beschr&auml;nkte Haftung</li>
+ <li>Gesamtlast bei Aussch&uuml;ttung: ~<span class="mono">44,2%</span></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ <!-- Footer Page 2 -->
+ <div class="cs-footer">
+ <div class="cs-footer-left">
+ <div class="cs-footer-logo">SB</div>
+ <span>Stand: Februar 2026 &middot; StartUp Burgenland &middot; startupburgenland.at</span>
+ </div>
+ <span class="cs-disclaimer">Keine Steuerberatung. Bitte konsultiere einen Steuerberater.</span>
+ </div>
+
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Steuer-Fragen? Wir helfen dir weiter.</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching besprechen wir deine steuerliche Situation und verbinden dich mit den richtigen Expert:innen - von der Rechtsformwahl bis zur F&ouml;rderung.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespr&auml;ch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Mobile Apps ohne Code mit Glide und Adalo - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="So baust du mobile Apps ohne Programmierkenntnisse. Ein ausführlicher Vergleich von Glide und Adalo für österreichische Startups."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/361-mobile-apps-ohne-code-glide-adalo"><!-- Open Graph --><meta property="og:title" content="Mobile Apps ohne Code mit Glide und Adalo - StartUp Burgenland Blog"><meta property="og:description" content="So baust du mobile Apps ohne Programmierkenntnisse. Ein ausführlicher Vergleich von Glide und Adalo für österreichische Startups."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mobile Apps ohne Code mit Glide und Adalo","description":"So baust du mobile Apps ohne Programmierkenntnisse. Ein ausführlicher Vergleich von Glide und Adalo für österreichische Startups.","datePublished":"2023-05-25T00:00:00.000Z","dateModified":"2023-05-25T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/361-mobile-apps-ohne-code-glide-adalo","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/361-mobile-apps-ohne-code-glide-adalo"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/produkt-und-technologie/" class="blog-tag" style="text-decoration:none;"> produkt-und-technologie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Mobile Apps ohne Code mit Glide und Adalo</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2023-05-25">25. Mai 2023</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="mobile-apps-ohne-code-mit-glide-und-adalo">Mobile Apps ohne Code mit Glide und Adalo</h1>
+<p>Deine Nutzer sind mobil, das ist kein Trend mehr, sondern Realität. Über 70 Prozent des Internet-Traffics in Österreich kommt von mobilen Geräten. Wenn dein Startup eine App braucht, stehst du vor einer grossen Entscheidung: Entwicklerteam einstellen (teuer), eine Agentur beauftragen (auch teuer) oder es selbst machen (mit den richtigen Tools).</p>
+<p>In <a href="/blog/356-no-code-grundlagen-ohne-programmieren">unseren No-Code-Grundlagen</a> haben wir das Prinzip bereits vorgestellt. Jetzt zeige ich dir, wie du mit Glide und Adalo mobile Apps baust, komplett ohne Code.</p>
+<h2 id="native-app-vs-progressive-web-app----was-ist-der-unterschied">Native App vs. Progressive Web App, was ist der Unterschied?</h2>
+<p>Bevor wir in die Tools einsteigen, musst du verstehen, welche Arten von mobilen Apps es gibt:</p>
+<h3 id="native-apps">Native Apps</h3>
+<ul>
+<li>Werden über den App Store (iOS) oder Google Play (Android) installiert</li>
+<li>Voller Zugriff auf Geräte-Funktionen (Kamera, GPS, Push-Notifications)</li>
+<li>Müssen für jede Plattform separat entwickelt werden</li>
+<li>Höchste Performance und beste User Experience</li>
+</ul>
+<h3 id="progressive-web-apps-pwas">Progressive Web Apps (PWAs)</h3>
+<ul>
+<li>Laufen im Browser, können aber wie eine App installiert werden</li>
+<li>Eingeschränkter Zugriff auf Geräte-Funktionen</li>
+<li>Funktionieren auf allen Plattformen mit einem Build</li>
+<li>Kein App-Store-Review nötig</li>
+<li>Schnellere Entwicklung</li>
+</ul>
+<h3 id="hybride-apps">Hybride Apps</h3>
+<ul>
+<li>Einmal entwickelt, laufen auf iOS und Android</li>
+<li>Werden über den App Store verteilt</li>
+<li>Guter Kompromiss zwischen nativer Performance und Entwicklungsgeschwindigkeit</li>
+</ul>
+<h2 id="glide----apps-aus-spreadsheets">Glide, Apps aus Spreadsheets</h2>
+<h3 id="was-ist-glide">Was ist Glide?</h3>
+<p>Glide ist eine Plattform, die deine Daten aus Google Sheets, Airtable oder der eigenen Glide Tables in eine mobile App verwandelt. Der Ansatz ist genial einfach: Du hast bereits Daten in einem Spreadsheet? Dann hast du in einer Stunde eine funktionierende App.</p>
+<h3 id="wie-funktioniert-glide">Wie funktioniert Glide?</h3>
+<ol>
+<li><strong>Datenquelle verbinden</strong>: Google Sheets, <a href="/blog/360-airtable-backend-startup">Airtable</a> oder Glide Tables</li>
+<li><strong>Layout wählen</strong>: Glide bietet verschiedene Layouts für Listen, Details, Formulare etc.</li>
+<li><strong>Anpassen</strong>: Farben, Icons, Navigation, Berechtigungen</li>
+<li><strong>Veröffentlichen</strong>: Sofort als PWA verfügbar</li>
+</ol>
+<h3 id="was-kannst-du-mit-glide-bauen">Was kannst du mit Glide bauen?</h3>
+<p><strong>Interne Team-Apps:</strong></p>
+<ul>
+<li>Inventarverwaltung für ein Lager im Burgenland</li>
+<li>Schichtplanung für ein Gastro-Startup</li>
+<li>Aufgabenverwaltung für dein Team</li>
+<li>Kunden-Datenbank für den Aussendienst</li>
+</ul>
+<p><strong>Kunden-Apps:</strong></p>
+<ul>
+<li>Speisekarte und Bestellsystem für ein Restaurant</li>
+<li>Veranstaltungskalender für eine Region</li>
+<li>Mitglieder-Verzeichnis für einen Verein</li>
+<li>Produktkatalog mit Anfrage-Funktion</li>
+</ul>
+<p><strong>Community-Apps:</strong></p>
+<ul>
+<li>Branchenbuch für regionale Unternehmen</li>
+<li>Event-Übersicht für das Burgenland</li>
+<li>Marktplatz für lokale Produkte</li>
+</ul>
+<h3 id="glide-schritt-für-schritt">Glide Schritt für Schritt</h3>
+<p>Lass uns eine konkrete App bauen: Ein Branchenbuch für Startups im Burgenland.</p>
+<p><strong>Schritt 1: Daten vorbereiten</strong></p>
+<p>Erstelle ein Google Sheet oder eine Airtable-Base mit folgenden Spalten:</p>
+<ul>
+<li>Unternehmensname</li>
+<li>Branche</li>
+<li>Beschreibung</li>
+<li>Adresse</li>
+<li>Website</li>
+<li>E-Mail</li>
+<li>Telefon</li>
+<li>Logo (URL zu einem Bild)</li>
+<li>Gründungsjahr</li>
+</ul>
+<p>Füge 10-20 Beispieldaten ein.</p>
+<p><strong>Schritt 2: Glide-Projekt erstellen</strong></p>
+<p>Geh auf glideapps.com, erstelle einen Account und verbinde dein Spreadsheet. Glide analysiert deine Daten und erstellt automatisch eine erste Version deiner App.</p>
+<p><strong>Schritt 3: Layout anpassen</strong></p>
+<p>Wähle für die Übersichtsseite ein Card-Layout mit Bild. Für die Detailseite nutze ein Standard-Detail-Layout.</p>
+<p><strong>Schritt 4: Filter und Suche hinzufügen</strong></p>
+<p>Füge einen Filter nach Branche und eine Suchfunktion hinzu. So finden Nutzer schnell das Startup, das sie suchen.</p>
+<p><strong>Schritt 5: Aktionen einrichten</strong></p>
+<p>Für jedes Startup sollen Nutzer:</p>
+<ul>
+<li>Die Website öffnen können</li>
+<li>Eine E-Mail senden können</li>
+<li>Anrufen können</li>
+<li>Die Adresse auf der Karte sehen können</li>
+</ul>
+<p>Glide bietet für all das fertige Aktions-Buttons.</p>
+<p><strong>Schritt 6: Design anpassen</strong></p>
+<p>Wähle Farben, die zu deinem Branding passen. Für ein Burgenland-Projekt könnten warme Rottone und Gold passen, angelehnt an die Farben der Region.</p>
+<p><strong>Schritt 7: Veröffentlichen</strong></p>
+<p>Klicke auf "Publish" und teile den Link. Nutzer können die App im Browser öffnen und als PWA auf ihrem Homescreen installieren.</p>
+<h3 id="glide-kosten">Glide Kosten</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Plan</th><th>Kosten/Monat</th><th>Features</th></tr></thead><tbody><tr><td>Free</td><td>0 EUR</td><td>3 Apps, grundlegende Features</td></tr><tr><td>Maker</td><td>ca. 60 EUR</td><td>Private Apps, mehr Zeilen</td></tr><tr><td>Team</td><td>ca. 125 EUR</td><td>Team-Features, mehr Kapazität</td></tr><tr><td>Business</td><td>ca. 250 EUR</td><td>Erweiterte Sicherheit, Priority Support</td></tr></tbody></table>
+<h3 id="glide-stärken-und-schwächen">Glide Stärken und Schwächen</h3>
+<p><strong>Stärken:</strong></p>
+<ul>
+<li>Extrem einfacher Einstieg, in Stunden zur fertigen App</li>
+<li>Perfekte Spreadsheet-Integration</li>
+<li>Gute für interne Tools und einfache Kunden-Apps</li>
+<li>Faire Preise</li>
+<li>Regelmäessige Updates mit neuen Features</li>
+</ul>
+<p><strong>Schwächen:</strong></p>
+<ul>
+<li>Design-Möglichkeiten sind begrenzt</li>
+<li>Keine nativen App-Store-Apps</li>
+<li>Performance bei grossen Datenmengen</li>
+<li>Eingeschränkte Offline-Funktionalität</li>
+<li>Komplexe Logik schwer umsetzbar</li>
+</ul>
+<h2 id="adalo----native-apps-ohne-code">Adalo, Native Apps ohne Code</h2>
+<h3 id="was-ist-adalo">Was ist Adalo?</h3>
+<p>Adalo ist eine Plattform, mit der du echte native Apps für iOS und Android baust, komplett ohne Programmierung. Im Gegensatz zu Glide, das auf PWAs setzt, erstellt Adalo Apps, die du im Apple App Store und Google Play Store veröffentlichen kannst.</p>
+<h3 id="wie-funktioniert-adalo">Wie funktioniert Adalo?</h3>
+<ol>
+<li><strong>App erstellen</strong>: Wähle zwischen Mobile App, Tablet App oder Web App</li>
+<li><strong>Screens designen</strong>: Drag-and-Drop-Editor für alle Bildschirme</li>
+<li><strong>Datenbank einrichten</strong>: Eigene Datenbank oder externe Datenquellen</li>
+<li><strong>Logik definieren</strong>: Aktionen und Workflows festlegen</li>
+<li><strong>Veröffentlichen</strong>: Im App Store, Play Store oder als Web App</li>
+</ol>
+<h3 id="was-kannst-du-mit-adalo-bauen">Was kannst du mit Adalo bauen?</h3>
+<p><strong>Marketplace-Apps:</strong></p>
+<ul>
+<li>Lokaler Marktplatz für burgenländische Produkte</li>
+<li>Dienstleister-Vermittlung</li>
+<li>Peer-to-Peer-Verleih</li>
+</ul>
+<p><strong>Service-Apps:</strong></p>
+<ul>
+<li>Buchungs-Apps für Dienstleister</li>
+<li>Fitness- und Gesundheits-Apps</li>
+<li>Liefer-Service-Apps</li>
+</ul>
+<p><strong>Community-Apps:</strong></p>
+<ul>
+<li>Social Networks für Nischen</li>
+<li>Vereins-Apps</li>
+<li>Alumni-Netzwerke</li>
+</ul>
+<p><strong>Produktivitäts-Apps:</strong></p>
+<ul>
+<li>Zeiterfassung</li>
+<li>Projektmanagement</li>
+<li>CRM-Apps</li>
+</ul>
+<h3 id="adalo-schritt-für-schritt">Adalo Schritt für Schritt</h3>
+<p>Lass uns eine Buchungs-App für einen Weintouren-Anbieter im Burgenland bauen.</p>
+<p><strong>Schritt 1: Neues Projekt</strong></p>
+<p>Erstelle ein neues Mobile-App-Projekt in Adalo. Wähle ein leeres Template, so hast du volle Kontrolle.</p>
+<p><strong>Schritt 2: Datenbank einrichten</strong></p>
+<p>Erstelle folgende Collections (Tabellen):</p>
+<p><em>Touren:</em></p>
+<ul>
+<li>Name (Text)</li>
+<li>Beschreibung (Text)</li>
+<li>Preis (Number), in EUR</li>
+<li>Dauer (Text), z.B. "3 Stunden"</li>
+<li>Bild (Image)</li>
+<li>Max-Teilnehmer (Number)</li>
+<li>Region (Text)</li>
+</ul>
+<p><em>Termine:</em></p>
+<ul>
+<li>Tour (Relationship zu Touren)</li>
+<li>Datum (Date)</li>
+<li>Verfügbare Plätze (Number)</li>
+<li>Status (Text)</li>
+</ul>
+<p><em>Buchungen:</em></p>
+<ul>
+<li>Termin (Relationship zu Termine)</li>
+<li>User (Relationship zu Users)</li>
+<li>Anzahl Personen (Number)</li>
+<li>Gesamtpreis (Number)</li>
+<li>Status (Text)</li>
+</ul>
+<p><strong>Schritt 3: Screens gestalten</strong></p>
+<p><em>Home Screen:</em></p>
+<ul>
+<li>Header mit Logo und Suchleiste</li>
+<li>Liste aller verfügbaren Touren als Karten</li>
+<li>Filter nach Region</li>
+</ul>
+<p><em>Tour-Detail-Screen:</em></p>
+<ul>
+<li>Grosses Bild der Tour</li>
+<li>Beschreibung, Preis, Dauer</li>
+<li>Liste verfügbarer Termine</li>
+<li>"Jetzt buchen"-Button</li>
+</ul>
+<p><em>Buchungs-Screen:</em></p>
+<ul>
+<li>Ausgewählter Termin anzeigen</li>
+<li>Anzahl Personen wählen</li>
+<li>Gesamtpreis berechnen</li>
+<li>Buchung bestätigen</li>
+</ul>
+<p><em>Profil-Screen:</em></p>
+<ul>
+<li>Nutzerdaten</li>
+<li>Meine Buchungen</li>
+<li>Einstellungen</li>
+</ul>
+<p><strong>Schritt 4: Navigation einrichten</strong></p>
+<p>Erstelle eine Bottom-Tab-Navigation mit:</p>
+<ul>
+<li>Home (Touren)</li>
+<li>Suche</li>
+<li>Meine Buchungen</li>
+<li>Profil</li>
+</ul>
+<p><strong>Schritt 5: Logik und Workflows</strong></p>
+<p>Wenn ein Nutzer auf "Jetzt buchen" klickt:</p>
+<ol>
+<li>Erstelle eine neue Buchung in der Datenbank</li>
+<li>Reduziere die verfügbaren Plätze im Termin</li>
+<li>Navigiere zum Bestätigungs-Screen</li>
+<li>Sende eine Push-Benachrichtigung zur Bestätigung</li>
+</ol>
+<p><strong>Schritt 6: Design polieren</strong></p>
+<p>Passe Farben, Schriften und Abstande an. Achte auf:</p>
+<ul>
+<li>Konsistente Farben (maximal 3 Hauptfarben)</li>
+<li>Lesbare Schriftgrössen (mindestens 14pt für Body-Text)</li>
+<li>Genügend Abstand zwischen Elementen (Touch-Targets mindestens 44x44 Pixel)</li>
+</ul>
+<p><strong>Schritt 7: Testen und Veröffentlichen</strong></p>
+<p>Teste die App auf echten Geräten. Adalo bietet eine Preview-App für iOS und Android, mit der du deine App vor der Veröffentlichung testen kannst.</p>
+<p>Für die Veröffentlichung im App Store brauchst du:</p>
+<ul>
+<li>Apple Developer Account (99 USD pro Jahr)</li>
+<li>Google Developer Account (25 USD einmalig)</li>
+<li>App-Icons und Screenshots</li>
+<li>Beschreibungstext und Keywords</li>
+</ul>
+<h3 id="adalo-kosten">Adalo Kosten</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Plan</th><th>Kosten/Monat</th><th>Features</th></tr></thead><tbody><tr><td>Free</td><td>0 EUR</td><td>Test und Prototyping</td></tr><tr><td>Starter</td><td>ca. 45 EUR</td><td>Veröffentlichung als Web-App</td></tr><tr><td>Professional</td><td>ca. 65 EUR</td><td>Native App-Store-Veröffentlichung</td></tr><tr><td>Team</td><td>ca. 200 EUR</td><td>Team-Features, mehr Kapazität</td></tr><tr><td>Business</td><td>ca. 250 EUR</td><td>Erweiterte Features, Priority Support</td></tr></tbody></table>
+<h3 id="adalo-stärken-und-schwächen">Adalo Stärken und Schwächen</h3>
+<p><strong>Stärken:</strong></p>
+<ul>
+<li>Echte native App-Store-Apps</li>
+<li>Visueller Drag-and-Drop-Editor</li>
+<li>Push-Benachrichtigungen</li>
+<li>Eigene Datenbank</li>
+<li>Marketplace für Komponenten</li>
+<li>Custom Actions für erweiterte Logik</li>
+</ul>
+<p><strong>Schwächen:</strong></p>
+<ul>
+<li>Performance kann bei komplexen Apps leiden</li>
+<li>Lernkurve steiler als bei Glide</li>
+<li>App-Store-Veröffentlichung kann komplex sein</li>
+<li>Design-Anpassungen manchmal limitiert</li>
+<li>Teurere Pläne für native Apps</li>
+</ul>
+<h2 id="glide-vs-adalo----der-direkte-vergleich">Glide vs. Adalo, Der direkte Vergleich</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Kriterium</th><th>Glide</th><th>Adalo</th></tr></thead><tbody><tr><td>Einstieg</td><td>Sehr einfach</td><td>Mittel</td></tr><tr><td>App-Typ</td><td>PWA</td><td>Native + PWA</td></tr><tr><td>App Store</td><td>Nein</td><td>Ja</td></tr><tr><td>Design-Freiheit</td><td>Begrenzt</td><td>Hoch</td></tr><tr><td>Datenquelle</td><td>Spreadsheets, Airtable</td><td>Eigene DB</td></tr><tr><td>Push-Notifications</td><td>Eingeschränkt</td><td>Ja</td></tr><tr><td>Offline-Modus</td><td>Eingeschränkt</td><td>Besser</td></tr><tr><td>Kosten Einstieg</td><td>ab 0 EUR</td><td>ab 0 EUR</td></tr><tr><td>Kosten Pro</td><td>ab 60 EUR/Monat</td><td>ab 65 EUR/Monat</td></tr><tr><td>Beste für</td><td>Interne Tools, einfache Apps</td><td>Kunden-Apps, Marktplätze</td></tr></tbody></table>
+<h3 id="wann-du-glide-wählen-solltest">Wann du Glide wählen solltest:</h3>
+<ul>
+<li>Du hast bereits Daten in einem Spreadsheet</li>
+<li>Du brauchst die App schnell (Stunden, nicht Tage)</li>
+<li>Es ist ein internes Tool oder eine einfache Kunden-App</li>
+<li>Du brauchst keine App-Store-Präsenz</li>
+<li>Dein Budget ist begrenzt</li>
+</ul>
+<h3 id="wann-du-adalo-wählen-solltest">Wann du Adalo wählen solltest:</h3>
+<ul>
+<li>Du brauchst eine native App im App Store</li>
+<li>Design und User Experience sind dir wichtig</li>
+<li>Du brauchst Push-Benachrichtigungen</li>
+<li>Deine App hat komplexere Logik</li>
+<li>Du planst, die App kommerziell zu vertreiben</li>
+</ul>
+<h2 id="weitere-mobile-app-alternativen">Weitere Mobile-App-Alternativen</h2>
+<p>Falls weder Glide noch Adalo perfekt passen, Weitere Optionen:</p>
+<h3 id="flutterflow">FlutterFlow</h3>
+<ul>
+<li>Basiert auf Googles Flutter-Framework</li>
+<li>Hohe Performance und Design-Freiheit</li>
+<li>Steile Lernkurve, aber mächtig</li>
+<li>Eher Low-Code als No-Code</li>
+</ul>
+<h3 id="thunkable">Thunkable</h3>
+<ul>
+<li>Ähnlich wie Adalo, aber mit Block-basierter Programmierung</li>
+<li>Guter für Bildungseinrichtungen</li>
+<li>Cross-Platform (iOS + Android)</li>
+</ul>
+<h3 id="appsheet-google">AppSheet (Google)</h3>
+<ul>
+<li>Googles eigener No-Code-App-Builder</li>
+<li>Gute Integration mit Google Workspace</li>
+<li>Kostenlos für einfache Apps</li>
+<li>Eher für Business-Apps als Konsumenten-Apps</li>
+</ul>
+<h2 id="tipps-für-erfolgreiche-no-code-mobile-apps">Tipps für erfolgreiche No-Code-Mobile-Apps</h2>
+<h3 id="1-mobile-first-denken">1. Mobile-First denken</h3>
+<p>Deine App wird auf einem kleinen Bildschirm genutzt. Jeder Screen sollte eine klare Aufgabe haben. Keine überladenen Screens, keine winzigen Buttons.</p>
+<h3 id="2-offline-fähigkeit-bedenken">2. Offline-Fähigkeit bedenken</h3>
+<p>In ländlichen Gegenden des Burgenlands ist die Mobilfunkabdeckung nicht überall perfekt. Wenn deine App auch offline funktionieren soll, plane das von Anfang an ein.</p>
+<h3 id="3-push-benachrichtigungen-strategisch-einsetzen">3. Push-Benachrichtigungen strategisch einsetzen</h3>
+<p>Push-Benachrichtigungen sind mächtig, aber auch gefährlich. Zu viele Benachrichtigungen und deine Nutzer deinstallieren die App. Setze sie gezielt ein, nur für wirklich relevante Informationen.</p>
+<h3 id="4-testen-auf-echten-geräten">4. Testen auf echten Geräten</h3>
+<p>Der Preview im Browser ist nicht dasselbe wie die echte App auf einem Handy. Teste immer auf echten Geräten, verschiedene Bildschirmgrössen, verschiedene Betriebssysteme.</p>
+<h3 id="5-feedback-früh-einholen">5. Feedback früh einholen</h3>
+<p>Zeige deine App früh echten Nutzern. Nicht wenn sie "fertig" ist, sondern wenn sie "gut genug" ist. Das spart dir Wochen an Arbeit an Features, die niemand braucht.</p>
+<h2 id="kosten-vergleich-no-code-vs-traditionelle-app-entwicklung">Kosten-Vergleich: No-Code vs. traditionelle App-Entwicklung</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Aspekt</th><th>No-Code (Glide/Adalo)</th><th>Traditionell</th></tr></thead><tbody><tr><td>Entwicklungskosten</td><td>50-250 EUR/Monat</td><td>20.000-100.000 EUR</td></tr><tr><td>Entwicklungszeit</td><td>1-4 Wochen</td><td>3-12 Monate</td></tr><tr><td>Wartung</td><td>Inklusive</td><td>1.000-5.000 EUR/Monat</td></tr><tr><td>Updates</td><td>Sofort</td><td>Wochen</td></tr><tr><td>App Store Kosten</td><td>99-124 USD/Jahr</td><td>99-124 USD/Jahr</td></tr><tr><td>Team</td><td>1 Person</td><td>2-5 Personen</td></tr></tbody></table>
+<p>Die Ersparnis ist enorm, besonders in der Frühphase deines Startups, wenn jeder Euro zählt.</p>
+<h2 id="fazit-mobile-apps-sind-kein-luxus-mehr">Mobile Apps sind kein Luxus mehr</h2>
+<p>Mit Glide und Adalo kannst du mobile Apps bauen, die vor wenigen Jahren noch ein Entwicklerteam und ein sechsstelliges Budget erfordert hätten. Egal ob du ein internes Tool, eine Kunden-App oder einen Marktplatz brauchst, es gibt ein No-Code-Tool, das passt.</p>
+<p>Starte mit Glide, wenn du schnelle Ergebnisse brauchst. Wechsle zu Adalo, wenn du eine native App-Store-Präsenz willst. Und wenn du an die Grenzen beider Tools stösst, lies <a href="/blog/365-von-no-code-auf-custom-code">unseren Beitrag zum Wechsel auf Custom Code</a>.</p>
+<hr>
+<h2 id="starte-dein-no-code-projekt-mit-startup-burgenland">Starte dein No-Code-Projekt mit Startup Burgenland</h2>
+<p>Du willst eine mobile App für dein Startup bauen und brauchst Unterstützung? Startup Burgenland bietet dir Beratung, Mentoring und Zugang zu einem starken Netzwerk.</p>
+<p><strong><a href="https://www.startupburgenland.at/kontakt">Jetzt Beratungstermin vereinbaren</a></strong> und bring deine App-Idee zum Leben.</p>
+<hr>
+<p><em>Dieser Beitrag ist Teil der Serie "<a href="/blog/356-no-code-grundlagen-ohne-programmieren">No-Code und Low-Code</a>" auf dem Startup Burgenland Blog. Die Serie richtet sich an Gründerinnen und Gründer, die ohne Programmierkenntnisse ihr Startup aufbauen wollen.</em></p>
+<hr>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/produkt/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Produkt </a><a href="/blog/tag/technologie/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> technologie </a><a href="/blog/tag/startup/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> startup </a><a href="/blog/tag/innovation/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> innovation </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2023-05-25" class="d-block fw-600 text-dark-gray">25. Mai 2023</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

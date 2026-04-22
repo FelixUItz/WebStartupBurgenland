@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Gesundheitsdaten und ELGA, So arbeitest du mit der elektronischen Gesundheitsakte - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="ELGA ist das Rückgrat der digitalen Gesundheitsinfrastruktur in Österreich. Erfahre, wie du als HealthTech-Startup ELGA-Daten nutzen kannst, welche Schnittstellen es gibt und was du beim Datenschutz beachten musst."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/621-gesundheitsdaten-elga"><!-- Open Graph --><meta property="og:title" content="Gesundheitsdaten und ELGA, So arbeitest du mit der elektronischen Gesundheitsakte - StartUp Burgenland Blog"><meta property="og:description" content="ELGA ist das Rückgrat der digitalen Gesundheitsinfrastruktur in Österreich. Erfahre, wie du als HealthTech-Startup ELGA-Daten nutzen kannst, welche Schnittstellen es gibt und was du beim Datenschutz beachten musst."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gesundheitsdaten und ELGA, So arbeitest du mit der elektronischen Gesundheitsakte","description":"ELGA ist das Rückgrat der digitalen Gesundheitsinfrastruktur in Österreich. Erfahre, wie du als HealthTech-Startup ELGA-Daten nutzen kannst, welche Schnittstellen es gibt und was du beim Datenschutz beachten musst.","datePublished":"2025-04-25T00:00:00.000Z","dateModified":"2025-04-25T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/621-gesundheitsdaten-elga","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/621-gesundheitsdaten-elga"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/geschaeftsmodell-und-strategie/" class="blog-tag" style="text-decoration:none;"> Geschäftsmodell &amp; Strategie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Gesundheitsdaten und ELGA, So arbeitest du mit der elektronischen Gesundheitsakte</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2025-04-25">25. April 2025</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>13 min</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="gesundheitsdaten-und-elga----so-arbeitest-du-mit-der-elektronischen-gesundheitsakte">Gesundheitsdaten und ELGA, So arbeitest du mit der elektronischen Gesundheitsakte</h1>
+<p>Gesundheitsdaten sind der Treibstoff für HealthTech-Innovationen. In Österreich bildet ELGA, die Elektronische Gesundheitsakte, das Rückgrat der digitalen Gesundheitsinfrastruktur. Für Startups ist ELGA gleichzeitig Chance und Herausforderung: Die Daten sind da, aber der Zugang ist streng reguliert.</p>
+<p>In diesem Beitrag erkläre ich dir, wie ELGA funktioniert, welche Daten verfügbar sind, wie du als Startup darauf zugreifen kannst und was du beim Datenschutz unbedingt beachten musst.</p>
+<h2 id="was-ist-elga">Was ist ELGA?</h2>
+<h3 id="grundlagen">Grundlagen</h3>
+<p>ELGA steht für Elektronische Gesundheitsakte und ist ein Informationssystem, das Gesundheitsdaten von Patienten elektronisch verfügbar macht. Seit 2015 ist ELGA schrittweise in ganz Österreich eingeführt worden.</p>
+<p><strong>Wichtig zu verstehen</strong>: ELGA ist keine zentrale Datenbank. Die Daten bleiben dort gespeichert, wo sie entstanden sind, bei Ärzten, Krankenhäusern und Laboren. ELGA ist ein Verweissystem, das den Zugriff auf diese verteilten Daten ermöglicht.</p>
+<h3 id="elga-komponenten">ELGA-Komponenten</h3>
+<p>Das ELGA-System besteht aus mehreren Bausteinen:</p>
+<p><strong>e-Befund</strong></p>
+<ul>
+<li>Entlassungsbriefe aus Krankenhäusern</li>
+<li>Befunde von Laboren und Radiologen</li>
+<li>Pflege-Entlassungsbriefe</li>
+<li>Ambulanzbefunde</li>
+</ul>
+<p><strong>e-Medikation</strong></p>
+<ul>
+<li>Aktuelle Medikation des Patienten</li>
+<li>Wechselwirkungsprüfung</li>
+<li>Verschreibungshistorie</li>
+</ul>
+<p><strong>e-Impfpass</strong></p>
+<ul>
+<li>Impfstatus</li>
+<li>Impfempfehlungen</li>
+<li>COVID-19-Impfzertifikate</li>
+</ul>
+<p><strong>e-Rezept</strong></p>
+<ul>
+<li>Elektronische Verschreibung von Medikamenten</li>
+<li>Einlösung in Apotheken</li>
+<li>Verfügbar seit 2022 flächendeckend</li>
+</ul>
+<p><strong>ELGA-Portal</strong></p>
+<ul>
+<li>Web-Zugang für Bürger über gesundheit.gv.at</li>
+<li>Einsicht in eigene Gesundheitsdaten</li>
+<li>Opt-out-Möglichkeit</li>
+</ul>
+<h3 id="wer-hat-zugang">Wer hat Zugang?</h3>
+<p>Der Zugang zu ELGA-Daten ist streng geregelt:</p>
+<ul>
+<li><strong>Ärzte und Zahnärzte</strong>: Im Rahmen der Behandlung</li>
+<li><strong>Krankenhäuser</strong>: Für stationäre und ambulante Behandlung</li>
+<li><strong>Apotheken</strong>: Für e-Medikation und e-Rezept</li>
+<li><strong>Pflegeeinrichtungen</strong>: Im Rahmen der Pflege</li>
+<li><strong>Patienten</strong>: Über das ELGA-Portal mit Bürgerkarte oder Handy-Signatur</li>
+</ul>
+<p><strong>Startups haben keinen direkten Zugang zu ELGA-Daten.</strong> Aber es gibt Wege, wie du dein Produkt mit der ELGA-Infrastruktur verbinden kannst.</p>
+<h2 id="technische-architektur-von-elga">Technische Architektur von ELGA</h2>
+<h3 id="standards-und-protokolle">Standards und Protokolle</h3>
+<p>ELGA basiert auf internationalen Standards:</p>
+<ul>
+<li><strong>HL7 CDA (Clinical Document Architecture)</strong>: Dokumentenformat für e-Befunde</li>
+<li><strong>IHE-Profile (Integrating the Healthcare Enterprise)</strong>: Kommunikationsprotokolle</li>
+<li><strong>LOINC</strong>: Kodierung von Laborergebnissen</li>
+<li><strong>SNOMED CT</strong>: Medizinische Terminologie (wird schrittweise eingeführt)</li>
+<li><strong>ATC-Codes</strong>: Arzneimittelklassifikation für e-Medikation</li>
+</ul>
+<h3 id="schnittstellen">Schnittstellen</h3>
+<p>Die wichtigsten technischen Schnittstellen:</p>
+<p><strong>GDA-Schnittstelle (Gesundheitsdiensteanbieter)</strong></p>
+<ul>
+<li>Für zugelassene Gesundheitsdiensteanbieter</li>
+<li>Anbindung über GDA-Index</li>
+<li>Authentifizierung über e-Card-System</li>
+</ul>
+<p><strong>ELGA-Reference-Application</strong></p>
+<ul>
+<li>Open-Source-Referenzimplementierung</li>
+<li>Verfügbar auf der ELGA-Website</li>
+<li>Dokumentation und Testsysteme</li>
+</ul>
+<p><strong>HL7 FHIR (Fast Healthcare Interoperability Resources)</strong></p>
+<ul>
+<li>Modernerer Standard, wird zunehmend genutzt</li>
+<li>RESTful API</li>
+<li>JSON- und XML-basiert</li>
+<li>Zukunft der ELGA-Schnittstellen</li>
+</ul>
+<h2 id="möglichkeiten-für-startups">Möglichkeiten für Startups</h2>
+<h3 id="weg-1-gda-anbindung">Weg 1: GDA-Anbindung</h3>
+<p>Wenn du Software für Gesundheitsdiensteanbieter entwickelst (z.B. Praxis-Software, Klinik-Informationssysteme), kannst du eine GDA-Anbindung an ELGA implementieren.</p>
+<p><strong>Voraussetzungen</strong>:</p>
+<ul>
+<li>Zertifizierung deiner Software durch die ELGA GmbH</li>
+<li>Einhaltung der technischen Spezifikationen</li>
+<li>Sicherheitskonzept und Datenschutz-Folgenabschätzung</li>
+<li>Konformitätstests</li>
+</ul>
+<p><strong>Prozess</strong>:</p>
+<ol>
+<li>Registrierung bei der ELGA GmbH</li>
+<li>Zugang zum Testsystem beantragen</li>
+<li>Implementierung der Schnittstellen</li>
+<li>Konformitätstest durchführen</li>
+<li>Produktivanbindung beantragen</li>
+</ol>
+<p><strong>Kosten</strong>: 20.000 bis 80.000 EUR für die Implementierung
+<strong>Dauer</strong>: 6 bis 12 Monate</p>
+<h3 id="weg-2-integration-in-bestehende-gda-software">Weg 2: Integration in bestehende GDA-Software</h3>
+<p>Statt selbst eine GDA-Anbindung aufzubauen, kannst du dein Produkt in bestehende Praxis- oder Kliniksoftware integrieren.</p>
+<p><strong>Vorteile</strong>:</p>
+<ul>
+<li>Kein eigener ELGA-Zertifizierungsprozess</li>
+<li>Zugang zum bestehenden Kundenpool des Softwareanbieters</li>
+<li>Schnellere Time-to-Market</li>
+</ul>
+<p><strong>Potenzielle Partner</strong>:</p>
+<ul>
+<li>CGM (CompuGroup Medical)</li>
+<li>INNOMED</li>
+<li>Mediastar</li>
+<li>systema</li>
+<li>Iatros</li>
+</ul>
+<p><strong>Ansatz</strong>: Entwickle ein Plugin oder eine Schnittstelle, die sich in die bestehende Software einbetten lässt.</p>
+<h3 id="weg-3-patienteninitiierter-datenzugang">Weg 3: Patienteninitiierter Datenzugang</h3>
+<p>Patienten können über das ELGA-Portal ihre eigenen Daten einsehen und herunterladen. Dein Startup kann Patienten ermöglichen, ihre eigenen Daten in deine App zu importieren.</p>
+<p><strong>Vorteile</strong>:</p>
+<ul>
+<li>Keine direkte ELGA-Anbindung nötig</li>
+<li>Patient hat volle Kontrolle</li>
+<li>DSGVO-konform durch Einwilligung</li>
+</ul>
+<p><strong>Herausforderungen</strong>:</p>
+<ul>
+<li>Umständlicher Prozess für den Patienten</li>
+<li>Datenformat muss geparst werden</li>
+<li>Nicht automatisiert</li>
+</ul>
+<h3 id="weg-4-eigenständige-datenerfassung">Weg 4: Eigenständige Datenerfassung</h3>
+<p>Viele erfolgreiche HealthTech-Startups arbeiten mit eigenen Daten, die sie direkt von Patienten oder Geräten erfassen:</p>
+<ul>
+<li><strong>Wearable-Daten</strong>: Smartwatches, Fitness-Tracker, medizinische Sensoren</li>
+<li><strong>Patient-Reported Outcomes (PRO)</strong>: Fragebogen und Symptomerfassung</li>
+<li><strong>App-generierte Daten</strong>: Nutzungsverhalten, Therapiefortschritt</li>
+<li><strong>IoT-Daten</strong>: Medizinische Geräte im Home-Setting</li>
+</ul>
+<h2 id="datenschutz-bei-gesundheitsdaten">Datenschutz bei Gesundheitsdaten</h2>
+<h3 id="dsgvo-anforderungen">DSGVO-Anforderungen</h3>
+<p>Gesundheitsdaten gehören zu den besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO. Die Verarbeitung ist grundsätzlich verboten, mit Ausnahmen:</p>
+<p><strong>Mögliche Rechtsgrundlagen</strong>:</p>
+<ol>
+<li><strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a): Am häufigsten bei Apps</li>
+<li><strong>Gesundheitsversorgung</strong> (Art. 9 Abs. 2 lit. h): Wenn du als Gesundheitsdiensteanbieter agierst</li>
+<li><strong>Öffentliches Interesse im Bereich Public Health</strong> (Art. 9 Abs. 2 lit. i): Selten anwendbar</li>
+<li><strong>Wissenschaftliche Forschung</strong> (Art. 9 Abs. 2 lit. j): Für Studiendaten</li>
+</ol>
+<h3 id="österreich-spezifische-regelungen">Österreich-spezifische Regelungen</h3>
+<p><strong>Gesundheitstelematikgesetz (GTelG)</strong></p>
+<ul>
+<li>Regelt den elektronischen Austausch von Gesundheitsdaten</li>
+<li>Definiert Sicherheitsanforderungen</li>
+<li>Verweist auf ELGA-Konformität</li>
+</ul>
+<p><strong>DSG 2018 (Datenschutzgesetz)</strong></p>
+<ul>
+<li>Österreichische Ergänzung zur DSGVO</li>
+<li>Sonderbestimmungen für Forschungsdaten</li>
+<li>Strafbestimmungen bei Verstössen</li>
+</ul>
+<p><strong>Datenschutzbehörde</strong></p>
+<ul>
+<li>Zuständig für die Überwachung des Datenschutzes</li>
+<li>Kann Bussgelder verhängen (bis zu 20 Millionen EUR oder 4 Prozent des Jahresumsatzes)</li>
+</ul>
+<h3 id="praktische-datenschutz-checkliste">Praktische Datenschutz-Checkliste</h3>
+<p>Für dein HealthTech-Startup solltest du folgende Punkte abarbeiten:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Verarbeitungsverzeichnis</strong> erstellen (Art. 30 DSGVO)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Datenschutz-Folgenabschätzung</strong> durchführen (bei grossen Datenmengen oder Profiling)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Datenschutzbeauftragten</strong> bestellen (wenn Kerngeschäft die Verarbeitung von Gesundheitsdaten ist)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Auftragsverarbeitungsverträge</strong> mit allen Dienstleistern abschliessen</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Technische und organisatorische Massnahmen</strong> implementieren und dokumentieren</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Informationspflichten</strong> erfüllen (Datenschutzerklärung für App/Website)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Prozesse für Betroffenenrechte</strong> einrichten (Auskunft, Löschung, Berichtigung)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Data Breach Notification</strong> Prozess definieren (72-Stunden-Frist!)</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Hosting in der EU</strong> sicherstellen</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>Verschlüsselung</strong> implementieren (at rest und in transit)</li>
+</ul>
+<h2 id="datenqualität-und-standardisierung">Datenqualität und Standardisierung</h2>
+<h3 id="das-problem-der-datenqualität">Das Problem der Datenqualität</h3>
+<p>Gesundheitsdaten sind oft:</p>
+<ul>
+<li><strong>Unstrukturiert</strong>: Freitext-Befunde, gescannte Dokumente</li>
+<li><strong>Inkonsistent</strong>: Verschiedene Kodierungen, unterschiedliche Formate</li>
+<li><strong>Unvollständig</strong>: Lücken in der Dokumentation</li>
+<li><strong>Veraltet</strong>: Nicht aktualisierte Informationen</li>
+</ul>
+<h3 id="strategien-für-bessere-datenqualität">Strategien für bessere Datenqualität</h3>
+<p><strong>Strukturierte Datenerfassung</strong>
+Designe deine App so, dass Daten von Anfang an strukturiert erfasst werden:</p>
+<ul>
+<li>Dropdown-Menüs statt Freitext</li>
+<li>Validierung bei der Eingabe</li>
+<li>Standardisierte Kodierungen (ICD-10, LOINC, SNOMED CT)</li>
+</ul>
+<p><strong>Natural Language Processing (NLP)</strong>
+Für unstrukturierte Daten kannst du NLP-Technologien einsetzen:</p>
+<ul>
+<li>Extraktion von Diagnosen aus Freitext-Befunden</li>
+<li>Kodierung von Symptomen</li>
+<li>Zusammenfassung von Entlassungsbriefen</li>
+</ul>
+<p><strong>Datenbereinigung</strong>
+Implementiere Prozesse zur Datenbereinigung:</p>
+<ul>
+<li>Duplikaterkennung</li>
+<li>Plausibilitätsprüfung</li>
+<li>Datenabgleich mit Referenzdatenbanken</li>
+</ul>
+<h3 id="interoperabilität-als-geschäftsmodell">Interoperabilität als Geschäftsmodell</h3>
+<p>Interoperabilität, also die Fähigkeit verschiedener Systeme, Daten auszutauschen, ist ein eigenes Geschäftsfeld:</p>
+<ul>
+<li><strong>Middleware-Lösungen</strong>: Verbinde verschiedene Systeme miteinander</li>
+<li><strong>Datentransformations-Services</strong>: Konvertiere zwischen verschiedenen Formaten</li>
+<li><strong>FHIR-Server</strong>: Biete eine moderne API für Gesundheitsdaten an</li>
+<li><strong>Master Patient Index</strong>: Ordne Patientendaten aus verschiedenen Quellen zu</li>
+</ul>
+<h2 id="ki-und-gesundheitsdaten">KI und Gesundheitsdaten</h2>
+<h3 id="möglichkeiten">Möglichkeiten</h3>
+<p>Künstliche Intelligenz kann Gesundheitsdaten auf vielfältige Weise nutzen:</p>
+<ul>
+<li><strong>Diagnoseunterstützung</strong>: Mustererkennung in Bilddaten, Labordaten, Symptomen</li>
+<li><strong>Prognose</strong>: Vorhersage von Krankheitsverlaufen</li>
+<li><strong>Personalisierung</strong>: Individuelle Therapieempfehlungen</li>
+<li><strong>Effizienz</strong>: Automatisierung von Dokumentation und Kodierung</li>
+<li><strong>Forschung</strong>: Identifikation von Zusammenhängen in grossen Datensätzen</li>
+</ul>
+<h3 id="herausforderungen">Herausforderungen</h3>
+<ul>
+<li><strong>Datenmengen</strong>: Für Machine Learning brauchst du ausreichend grosse, qualitativ hochwertige Datensätze</li>
+<li><strong>Bias</strong>: KI-Modelle können bestehende Ungleichheiten verstärken</li>
+<li><strong>Erklärbarkeit</strong>: Ärzte wollen verstehen, warum die KI eine bestimmte Empfehlung gibt</li>
+<li><strong>Regulierung</strong>: KI-basierte Medizinprodukte unterliegen der MDR und künftig auch dem EU AI Act</li>
+<li><strong>Datenschutz</strong>: Anonymisierung vs. Pseudonymisierung, Federated Learning als Alternative</li>
+</ul>
+<h3 id="regulierung-von-ki-im-gesundheitsbereich">Regulierung von KI im Gesundheitsbereich</h3>
+<p>Der EU AI Act klassifiziert KI-Systeme im Gesundheitsbereich als hochriskant. Das bedeutet:</p>
+<ul>
+<li>Risikomanagement-System erforderlich</li>
+<li>Datenqualitäts-Anforderungen</li>
+<li>Dokumentation und Transparenz</li>
+<li>Menschliche Aufsicht</li>
+<li>Robustheit und Genauigkeit</li>
+</ul>
+<p>Für dein Startup bedeutet das: Plane die Compliance mit dem AI Act von Anfang an ein, auch wenn die konkreten Anforderungen noch ausgearbeitet werden.</p>
+<h2 id="sekundärnutzung-von-gesundheitsdaten">Sekundärnutzung von Gesundheitsdaten</h2>
+<h3 id="european-health-data-space-ehds">European Health Data Space (EHDS)</h3>
+<p>Die EU arbeitet am European Health Data Space, der die Sekundärnutzung von Gesundheitsdaten für Forschung und Innovation erleichtern soll. Für Startups ist das besonders interessant:</p>
+<ul>
+<li><strong>Zugang zu grossen Datensätzen</strong>: Über sichere Verarbeitungsumgebungen</li>
+<li><strong>Harmonisierte Regeln</strong>: Einheitliche Regeln für alle EU-Länder</li>
+<li><strong>Datenzugangsstellen</strong>: Nationale Stellen, die Datenanträge bearbeiten</li>
+</ul>
+<p>Der EHDS ist noch in der Umsetzung, aber du solltest die Entwicklung verfolgen und dein Geschäftsmodell darauf vorbereiten.</p>
+<h3 id="forschungsdaten-in-österreich">Forschungsdaten in Österreich</h3>
+<p>Schon heute gibt es Möglichkeiten, Gesundheitsdaten für Forschung zu nutzen:</p>
+<ul>
+<li><strong>Statistik Austria</strong>: Gesundheitsdaten für statistische Zwecke</li>
+<li><strong>OECD Health Data</strong>: Internationale Vergleichsdaten</li>
+<li><strong>Klinische Register</strong>: Krankheitsspezifische Datenbanken</li>
+<li><strong>Biobanken</strong>: Proben und zugehörige Daten für Forschung</li>
+</ul>
+<h2 id="datenstrategie-für-dein-startup">Datenstrategie für dein Startup</h2>
+<h3 id="schritt-1-dateninventar-erstellen">Schritt 1: Dateninventar erstellen</h3>
+<p>Dokumentiere, welche Daten du brauchst, woher sie kommen und wie du sie verarbeitest:</p>
+<ul>
+<li>Welche Datenkategorien sammelst du?</li>
+<li>Von wem kommen die Daten?</li>
+<li>Wo werden sie gespeichert?</li>
+<li>Wer hat Zugriff?</li>
+<li>Wie lange werden sie aufbewahrt?</li>
+</ul>
+<h3 id="schritt-2-datenarchitektur-planen">Schritt 2: Datenarchitektur planen</h3>
+<p>Definiere eine skalierbare Datenarchitektur:</p>
+<ul>
+<li><strong>Datenmodell</strong>: Welche Entitäten und Beziehungen?</li>
+<li><strong>Speicher</strong>: Cloud-Datenbank, Data Lake, Data Warehouse?</li>
+<li><strong>APIs</strong>: Wie werden Daten ein- und ausgelesen?</li>
+<li><strong>Sicherheit</strong>: Verschlüsselung, Zugriffskontrollen, Audit-Logs</li>
+</ul>
+<h3 id="schritt-3-datenschutz-integrieren">Schritt 3: Datenschutz integrieren</h3>
+<p>Privacy by Design und Privacy by Default:</p>
+<ul>
+<li>Minimiere die Datenerhebung (nur was wirklich nötig ist)</li>
+<li>Pseudonymisiere oder anonymisiere wo möglich</li>
+<li>Implementiere granulare Zugriffskontrollen</li>
+<li>Logge alle Datenzugriffe</li>
+<li>Plane regelmässige Datenschutz-Audits</li>
+</ul>
+<h3 id="schritt-4-datenqualität-sicherstellen">Schritt 4: Datenqualität sicherstellen</h3>
+<p>Definiere Prozesse für:</p>
+<ul>
+<li>Validierung bei der Eingabe</li>
+<li>Regelmässige Qualitätsprüfungen</li>
+<li>Bereinigung und Korrektur</li>
+<li>Feedback-Schleifen mit Nutzern</li>
+</ul>
+<h3 id="schritt-5-datenmonetarisierung">Schritt 5: Datenmonetarisierung</h3>
+<p>Überlege, wie Daten Wert schaffen können (unter Einhaltung des Datenschutzes):</p>
+<ul>
+<li><strong>Aggregierte Analysen</strong>: Anonymisierte Insights für Pharma oder Forschung</li>
+<li><strong>Benchmarking</strong>: Anonymisierte Vergleichsdaten für Gesundheitseinrichtungen</li>
+<li><strong>Forschungskooperationen</strong>: Daten für klinische Studien bereitstellen</li>
+<li><strong>Produktverbesserung</strong>: Datengetriebene Optimierung deines eigenen Produkts</li>
+</ul>
+<h2 id="praxistipps-für-startups-im-burgenland">Praxistipps für Startups im Burgenland</h2>
+<h3 id="regionale-datenquellen-nutzen">Regionale Datenquellen nutzen</h3>
+<ul>
+<li><strong>KRAGES-Daten</strong>: Kooperationen mit Burgenländischen Krankenanstalten</li>
+<li><strong>Ordinations-Software</strong>: Integration in lokale Praxissysteme</li>
+<li><strong>Thermenregion</strong>: Daten aus Gesundheitstourismus und Rehabilitation</li>
+<li><strong>Pflegeeinrichtungen</strong>: Daten aus der stationären und mobilen Pflege</li>
+</ul>
+<h3 id="lokale-partner-einbinden">Lokale Partner einbinden</h3>
+<ul>
+<li><strong>FH Burgenland</strong>: Studiengang Gesundheitsmanagement und -technologie</li>
+<li><strong>Wirtschaftsagentur Burgenland</strong>: Förderung für Digitalisierungsprojekte</li>
+<li><strong>BGLK (Burgenländische Landeskrankenanstalten)</strong>: Potenzielle Pilotpartner</li>
+</ul>
+
+<p>Gesundheitsdaten sind das Fundament jeder HealthTech-Innovation. In Österreich bietet ELGA eine einzigartige Infrastruktur, die zunehmend auch für Startups zugänglich wird. Der Schlüssel liegt darin, die richtigen Zugangswege zu finden, den Datenschutz von Anfang an ernst zu nehmen und eine klare Datenstrategie zu entwickeln.</p>
+<p>Die Zukunft gehört Startups, die Gesundheitsdaten intelligent und verantwortungsvoll nutzen. Mit dem European Health Data Space werden sich die Möglichkeiten noch deutlich erweitern. Bereite dein Startup jetzt darauf vor.</p>
+<h2 id="weiterführende-artikel">Weiterführende Artikel</h2>
+<ul>
+<li><a href="/blog/619-telemedizin-remote-monitoring">Telemedizin und Remote-Monitoring, Geschäftsmodelle für Startups in Österreich</a></li>
+<li><a href="/blog/616-healthtech-oesterreich-chancen">HealthTech in Österreich, Chancen und Regulierung für Startups</a></li>
+<li><a href="/blog/618-digital-health-apps-entwickeln">Digital Health Apps entwickeln, Vom Konzept bis zum Launch in Österreich</a></li>
+<li><a href="/blog/622-zulassung-ce-kennzeichnung">Zulassung und CE-Kennzeichnung</a></li>
+<li><a href="/blog/696-kreativwirtschaft-chancen-oesterreich">Kreativwirtschaft und Startups, Chancen in Österreich</a></li>
+</ul>
+<hr>
+<p><strong>Du willst Gesundheitsdaten für dein Startup nutzen und brauchst Orientierung?</strong> Startup Burgenland bietet dir Zugang zu Experten für Datenschutz, ELGA-Integration und Datenarchitektur. Lass uns gemeinsam deine Datenstrategie entwickeln.</p>
+<p><em>Dieser Beitrag ist Teil der Serie "HealthTech und MedTech" im Bereich Geschäftsmodell und Strategie. Im nächsten Beitrag erklären wir dir alles rund um die Zulassung und CE-Kennzeichnung deines Medizinprodukts.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/ELGA/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> ELGA </a><a href="/blog/tag/Gesundheitsdaten/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Gesundheitsdaten </a><a href="/blog/tag/eHealth/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> eHealth </a><a href="/blog/tag/Datenschutz/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Datenschutz </a><a href="/blog/tag/Startup/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Startup </a><a href="/blog/tag/Oesterreich/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Oesterreich </a><a href="/blog/tag/Interoperabilitaet/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Interoperabilitaet </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2025-04-25" class="d-block fw-600 text-dark-gray">25. April 2025</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

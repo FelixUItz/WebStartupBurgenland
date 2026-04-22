@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+
+Sitemap: https://startupburgenland.vulpinecreations.com/sitemap.xml

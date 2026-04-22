@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- AplusB - Academia Plus Business (dark version for light backgrounds) -->
+  <g fill="none">
+    <!-- AplusB main text -->
+    <text x="15" y="45" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2B7A9B">AplusB</text>
+    <!-- Tagline -->
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="10" fill="#2B7A9B" letter-spacing="1.5">ACADEMIA PLUS BUSINESS</text>
+  </g>
+</svg>

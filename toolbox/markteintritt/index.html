@@ -1,0 +1,485 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Phase 2: Prototyp → Markt | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="8 kostenlose Tools für Phase 2: Finanzierung sichern, pitchen, Kennzahlen verstehen und den Markteintritt vorbereiten.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/markteintritt/">
+ <!-- Open Graph / Facebook -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/markteintritt/">
+ <meta property="og:title" content="Phase 2: Prototyp → Markt | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="8 kostenlose Tools für Phase 2: Finanzierung sichern, pitchen, Kennzahlen verstehen und den Markteintritt vorbereiten.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Phase 2: Prototyp → Markt | StartUp Burgenland Toolbox">
+ <meta name="twitter:description" content="8 kostenlose Tools für Phase 2: Finanzierung sichern, pitchen, Kennzahlen verstehen und den Markteintritt vorbereiten.">
+ <meta name="twitter:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css" />
+ <style>
+:focus-visible { outline: 2px solid #E63946; outline-offset: 2px; }
+ /* Toolbox-specific styles */
+.tool-card {
+ border: 1px solid #e2e8f0;
+ border-radius: 12px;
+ padding: 28px 24px;
+ background: #fff;
+ transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ }
+.tool-card:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+ border-color: var(--sb-red, #E63946);
+ }
+.tool-card__top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ margin-bottom: 14px;
+ gap: 8px;
+ }
+.tool-card__number {
+ background: var(--sb-red, #E63946);
+ color: #fff;
+ font-size: 12px;
+ font-weight: 700;
+ padding: 3px 10px;
+ border-radius: 4px;
+ flex-shrink: 0;
+ }
+.tool-card__badges {
+ display: flex;
+ gap: 6px;
+ flex-wrap: wrap;
+ }
+.tool-badge {
+ font-size: 11px;
+ font-weight: 600;
+ padding: 3px 8px;
+ border-radius: 99px;
+ text-transform: uppercase;
+ letter-spacing: 0.03em;
+ white-space: nowrap;
+ }
+.tool-badge--format {
+ background: #f3f4f6;
+ color: #6B7280;
+ border: 1px solid #e2e8f0;
+ }
+.tool-badge--phase-1 { background: rgba(230,57,70,0.1); color: #E63946; }
+.tool-badge--phase-2 { background: rgba(40,167,69,0.1); color: #28A745; }
+.tool-badge--phase-3 { background: rgba(255,140,0,0.1); color: #C26900; }
+.tool-card h4 {
+ font-size: 17px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ color: #1C1D1F;
+ line-height: 1.35;
+ }
+.tool-card__desc {
+ font-size: 14px;
+ color: #6b7280;
+ line-height: 1.55;
+ flex: 1;
+ margin-bottom: 16px;
+ }
+.tool-card__action {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ color: var(--sb-red, #E63946);
+ font-weight: 600;
+ font-size: 14px;
+ text-decoration: none;
+ transition: gap 0.15s;
+ }
+.tool-card:hover.tool-card__action { gap: 10px; }
+.tool-card__action:hover { text-decoration: none; }
+.stats-pill {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ font-size: 15px;
+ color: #4B5563;
+ }
+.stats-pill strong {
+ color: var(--sb-red, #E63946);
+ font-weight: 700;
+ }
+ </style>
+ <!-- Schema.org ItemList -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "StartUp Burgenland Toolbox, Phase 2: Prototyp → Markt",
+ "description": "8 kostenlose Tools für Startup-Gründer:innen in Phase 2: Finanzierung, Pitch, Kennzahlen und Markteintritt",
+ "numberOfItems": 8,
+ "itemListElement": [
+ {"@type": "ListItem", "position": 1, "name": "Förderungen Cheat Sheet", "url": "https://startupburgenland.vulpinecreations.com/toolbox/foerderungen-cheatsheet/"},
+ {"@type": "ListItem", "position": 2, "name": "Pitch Deck Guide", "url": "https://startupburgenland.vulpinecreations.com/toolbox/pitch-deck-guide/"},
+ {"@type": "ListItem", "position": 3, "name": "Startup-Kosten-Rechner", "url": "https://startupburgenland.vulpinecreations.com/toolbox/kosten-rechner/"},
+ {"@type": "ListItem", "position": 4, "name": "Financial Model", "url": "https://startupburgenland.vulpinecreations.com/toolbox/financial-model/"},
+ {"@type": "ListItem", "position": 5, "name": "Runway Calculator", "url": "https://startupburgenland.vulpinecreations.com/toolbox/runway-calculator/"},
+ {"@type": "ListItem", "position": 6, "name": "Metrics Cheat Sheet", "url": "https://startupburgenland.vulpinecreations.com/toolbox/metrics-cheatsheet/"},
+ {"@type": "ListItem", "position": 7, "name": "Investor Types Cheat Sheet", "url": "https://startupburgenland.vulpinecreations.com/toolbox/investor-types/"},
+ {"@type": "ListItem", "position": 8, "name": "Steuer-Basics Cheat Sheet", "url": "https://startupburgenland.vulpinecreations.com/toolbox/steuer-basics/"}
+ ]
+ }
+ </script>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ 
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start page title -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Phase 2: Prototyp &rarr; Markt</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Finanzierung sichern, pitchen, Kennzahlen verstehen und den Markteintritt vorbereiten.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end page title -->
+
+ <!-- stats bar -->
+ <section class="py-4 border-bottom border-color-light-gray">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-auto">
+ <div class="d-flex flex-wrap justify-content-center gap-4 gap-lg-5">
+ <span class="stats-pill"><strong>8</strong> kostenlose Tools</span>
+ <span class="stats-pill"><strong>Phase 2</strong> Prototyp &rarr; Markt</span>
+ <span class="stats-pill"><strong>0 €</strong> Kein Login nötig</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end stats bar -->
+
+ <!-- breadcrumb -->
+ <section class="py-3">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <ol class="breadcrumb mb-0" style="font-size:14px;">
+ <li class="breadcrumb-item"><a href="/toolbox/" class="text-medium-gray">Toolbox</a></li>
+ <li class="breadcrumb-item active text-dark-gray fw-600" aria-current="page">Phase 2: Prototyp &rarr; Markt</li>
+ </ol>
+ </nav>
+ </div>
+ </section>
+ <!-- end breadcrumb -->
+
+ <!-- tools grid -->
+ <section class="py-5 bg-very-light-gray" id="phase-2-tools">
+ <div class="container">
+ <div class="row justify-content-center mb-4">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-dark-gray fw-600 ls-minus-2px mb-15px">Alle Phase-2-Tools im Überblick</h2>
+ <p class="text-medium-gray">Von Förder-Cheat-Sheets bis zum Runway-Rechner. Alles was du für den Markteintritt brauchst.</p>
+ </div>
+ </div>
+ <div class="row g-4 mb-3">
+ <!-- #01 Förderungen Cheat Sheet -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#01</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Cheat Sheet</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Förderungen Cheat Sheet</h4>
+ <p class="tool-card__desc">Alle wichtigen Förderstellen (FFG, AWS, WKO) auf einen Blick mit Beträgen, Fristen und Links.</p>
+ <a href="/toolbox/foerderungen-cheatsheet/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #06 Pitch Deck Guide -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#06</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Guide</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Pitch Deck Guide</h4>
+ <p class="tool-card__desc">12-Slide-Vorlage mit Anleitung für jede Slide. Optimiert für österreichische Förderstellen und Investor:innen.</p>
+ <a href="/toolbox/pitch-deck-guide/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #07 Startup-Kosten-Rechner -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#07</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Rechner</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Startup-Kosten-Rechner</h4>
+ <p class="tool-card__desc">Interaktiver Rechner für GmbH-Gründung, laufende Kosten und monatliches Budget in Österreich.</p>
+ <a href="/toolbox/kosten-rechner/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #08 Financial Model -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#08</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Anleitung</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Financial Model</h4>
+ <p class="tool-card__desc">Schritt-für-Schritt-Anleitung zum Aufbau deines Financial Models in Google Sheets.</p>
+ <a href="/toolbox/financial-model/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #09 Runway Calculator -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#09</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Rechner</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Runway Calculator</h4>
+ <p class="tool-card__desc">Berechne deine Runway in Sekunden. Wie lange reicht dein Geld noch?</p>
+ <a href="/toolbox/runway-calculator/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #10 Metrics Cheat Sheet -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#10</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Cheat Sheet</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Metrics Cheat Sheet</h4>
+ <p class="tool-card__desc">Die 25 wichtigsten Startup-KPIs mit Formeln, Benchmarks und Erklärungen.</p>
+ <a href="/toolbox/metrics-cheatsheet/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #11 Investor Types Cheat Sheet -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#11</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Cheat Sheet</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Investor Types Cheat Sheet</h4>
+ <p class="tool-card__desc">Alle Investor:innen-Typen im Überblick: Business Angels, VCs, Crowdfunding und was sie erwarten.</p>
+ <a href="/toolbox/investor-types/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <!-- #12 Steuer-Basics Cheat Sheet -->
+ <div class="col-lg-4 col-md-6">
+ <div class="tool-card">
+ <div class="tool-card__top">
+ <span class="tool-card__number">#12</span>
+ <div class="tool-card__badges">
+ <span class="tool-badge tool-badge--format">Cheat Sheet</span>
+ <span class="tool-badge tool-badge--phase-2">Phase 2</span>
+ </div>
+ </div>
+ <h4>Steuer-Basics Cheat Sheet</h4>
+ <p class="tool-card__desc">Steuerliche Grundlagen für Gründer:innen in Österreich: SVS, Kleinunternehmerregelung, USt und mehr.</p>
+ <a href="/toolbox/steuer-basics/" class="tool-card__action">Öffnen <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end tools grid -->
+
+ <!-- cross-links to other phases -->
+ <section class="py-4">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <p class="text-medium-gray mb-20px">Andere Phasen erkunden:</p>
+ <a href="/toolbox/idee/" class="btn btn-rounded btn-outline-dark btn-small me-2 mb-2">Phase 1: Idee</a>
+ <a href="/toolbox/scaleup/" class="btn btn-rounded btn-outline-dark btn-small mb-2">Phase 3: Scale-Up</a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end cross-links -->
+
+ <!-- CTA section -->
+ <section class="bg-gradient-sb py-5">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du persönliche Unterstützung?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">StartUp Burgenland bietet kostenloses 1:1 Coaching für Gründer:innen. Strategie, Validierung, Pitch-Training und Netzwerk, alles individuell auf dich zugeschnitten.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1471 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>DSGVO Checklist | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Interaktive DSGVO-Checkliste mit 15 Checkpoints für österreichische Startups. Kritisch, wichtig und Best Practice, Schritt für Schritt compliant werden.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/dsgvo-checklist/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/dsgvo-checklist/">
+ <meta property="og:title" content="DSGVO Checklist | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Interaktive DSGVO-Checkliste mit 15 Checkpoints für österreichische Startups. Kritisch, wichtig und Best Practice.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="DSGVO Checklist | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for DSGVO Checklist */
+
+ /* Progress Section */
+.tool-content.progress-section {
+ background: #fff;
+ border-bottom: 1px solid #E2E8F0;
+ padding: 16px 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+ }
+.tool-content.progress-inner {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 0 15px;
+ }
+.tool-content.progress-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 6px;
+ }
+.tool-content.progress-label {
+ font-size: 13px;
+ font-weight: 600;
+ color: #1C1D1F;
+ }
+.tool-content.progress-count {
+ font-size: 13px;
+ font-weight: 600;
+ color: #FF8C00;
+ }
+.tool-content.progress-bar-track {
+ width: 100%;
+ height: 10px;
+ background: #E2E8F0;
+ border-radius: 999px;
+ overflow: hidden;
+ }
+.tool-content.progress-bar-fill {
+ height: 100%;
+ width: 0%;
+ background: linear-gradient(90deg, #FF8C00, #28A745);
+ border-radius: 999px;
+ transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.progress-badges {
+ display: flex;
+ gap: 12px;
+ margin-top: 8px;
+ flex-wrap: wrap;
+ }
+.tool-content.progress-badge {
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ font-size: 12px;
+ font-weight: 500;
+ color: #6B7280;
+ }
+.tool-content.progress-badge-dot {
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ flex-shrink: 0;
+ }
+.tool-content.progress-badge-dot.kritisch { background: #DC3545; }
+.tool-content.progress-badge-dot.wichtig { background: #FF8C00; }
+.tool-content.progress-badge-dot.best-practice { background: #28A745; }
+
+ /* Section Headers */
+.tool-content.section-header {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ margin-top: 30px;
+ margin-bottom: 14px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid #E2E8F0;
+ }
+.tool-content.section-header:first-child {
+ margin-top: 0;
+ }
+.tool-content.section-icon {
+ width: 40px;
+ height: 40px;
+ border-radius: 8px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 16px;
+ flex-shrink: 0;
+ }
+.tool-content.section-icon.kritisch { background: #FEE2E2; }
+.tool-content.section-icon.wichtig { background: #FFF7ED; }
+.tool-content.section-icon.best-practice { background: #D1FAE5; }
+.tool-content.section-title {
+ font-size: 16px;
+ font-weight: 700;
+ color: #1C1D1F;
+ }
+.tool-content.section-subtitle {
+ font-size: 12px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+
+ /* Checkpoint Cards */
+.tool-content.checkpoint {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 12px;
+ margin-bottom: 10px;
+ overflow: hidden;
+ transition: box-shadow 0.2s ease, border-color 0.2s ease;
+ }
+.tool-content.checkpoint:hover {
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+ }
+.tool-content.checkpoint.checked {
+ border-color: #28A745;
+ background: #F0FDF4;
+ }
+.tool-content.checkpoint-header {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ padding: 14px 16px;
+ cursor: pointer;
+ user-select: none;
+ }
+.tool-content.checkpoint-checkbox {
+ position: relative;
+ flex-shrink: 0;
+ margin-top: 2px;
+ }
+.tool-content.checkpoint-checkbox input {
+ position: absolute;
+ opacity: 0;
+ width: 0;
+ height: 0;
+ }
+.tool-content.checkbox-visual {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 24px;
+ height: 24px;
+ border: 2px solid #E2E8F0;
+ border-radius: 6px;
+ background: #fff;
+ transition: all 0.2s ease;
+ cursor: pointer;
+ }
+.tool-content.checkbox-visual svg {
+ width: 14px;
+ height: 14px;
+ fill: none;
+ stroke: #fff;
+ stroke-width: 2.5;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ opacity: 0;
+ transform: scale(0.5);
+ transition: all 0.2s ease;
+ }
+.tool-content.checkpoint-checkbox input:checked +.checkbox-visual {
+ background: #28A745;
+ border-color: #28A745;
+ }
+.tool-content.checkpoint-checkbox input:checked +.checkbox-visual svg {
+ opacity: 1;
+ transform: scale(1);
+ }
+.tool-content.checkpoint-checkbox input:focus-visible +.checkbox-visual {
+ outline: 2px solid #FF8C00;
+ outline-offset: 2px;
+ }
+.tool-content.checkpoint-content {
+ flex: 1;
+ min-width: 0;
+ }
+.tool-content.checkpoint-top-row {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ flex-wrap: wrap;
+ margin-bottom: 3px;
+ }
+.tool-content.checkpoint-number {
+ font-size: 10px;
+ font-weight: 700;
+ color: #fff;
+ background: #E63946;
+ width: 24px;
+ height: 24px;
+ border-radius: 50%;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ }
+.tool-content.checkpoint-title {
+ font-size: 14px;
+ font-weight: 700;
+ color: #1C1D1F;
+ line-height: 1.3;
+ }
+.tool-content.checkpoint.checked.checkpoint-title {
+ text-decoration: line-through;
+ color: #6B7280;
+ }
+.tool-content.priority-badge {
+ font-size: 10px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ padding: 2px 8px;
+ border-radius: 999px;
+ flex-shrink: 0;
+ white-space: nowrap;
+ }
+.tool-content.priority-badge.kritisch {
+ background: #FEE2E2;
+ color: #DC3545;
+ }
+.tool-content.priority-badge.wichtig {
+ background: #FFF7ED;
+ color: #C26900;
+ }
+.tool-content.priority-badge.best-practice {
+ background: #D1FAE5;
+ color: #065F46;
+ }
+.tool-content.checkpoint-article {
+ font-size: 12px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+.tool-content.checkpoint-toggle {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 30px;
+ height: 30px;
+ flex-shrink: 0;
+ margin-top: 2px;
+ border: none;
+ background: none;
+ cursor: pointer;
+ color: #6B7280;
+ transition: transform 0.3s ease;
+ border-radius: 6px;
+ }
+.tool-content.checkpoint-toggle:hover {
+ background: #F8FAFC;
+ }
+.tool-content.checkpoint-toggle svg {
+ width: 16px;
+ height: 16px;
+ transition: transform 0.3s ease;
+ }
+.tool-content.checkpoint-toggle.open svg {
+ transform: rotate(180deg);
+ }
+
+ /* Detail Panels */
+.tool-content.checkpoint-details {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+ }
+.tool-content.checkpoint-details.open {
+ max-height: 500px;
+ }
+.tool-content.checkpoint-details-inner {
+ padding: 0 16px 14px 40px;
+ }
+.tool-content.checkpoint-explanation {
+ font-size: 13px;
+ color: #1C1D1F;
+ line-height: 1.65;
+ margin-bottom: 10px;
+ }
+.tool-content.checkpoint-explanation ul {
+ list-style: none;
+ padding: 0;
+ margin: 6px 0;
+ }
+.tool-content.checkpoint-explanation ul li {
+ position: relative;
+ padding-left: 16px;
+ margin-bottom: 4px;
+ }
+.tool-content.checkpoint-explanation ul li::before {
+ content: '\2192';
+ position: absolute;
+ left: 0;
+ color: #FF8C00;
+ font-weight: 600;
+ }
+.tool-content.checkpoint-tip {
+ background: #FFF7ED;
+ border: 1px solid #FED7AA;
+ border-radius: 8px;
+ padding: 10px 12px;
+ font-size: 12px;
+ line-height: 1.55;
+ color: #92400E;
+ }
+.tool-content.checkpoint-tip strong {
+ font-weight: 700;
+ }
+
+ /* Actions Row */
+.tool-content.actions-row {
+ display: flex;
+ gap: 10px;
+ margin-top: 30px;
+ flex-wrap: wrap;
+ }
+.tool-content.btn-action {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ padding: 10px 18px;
+ font-size: 13px;
+ font-weight: 600;
+ border-radius: 8px;
+ border: none;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ text-decoration: none;
+ font-family: inherit;
+ }
+.tool-content.btn-action svg {
+ width: 16px;
+ height: 16px;
+ }
+.tool-content.btn-action--primary {
+ background: #E63946;
+ color: #fff;
+ }
+.tool-content.btn-action--primary:hover {
+ background: #FF8C00;
+ }
+.tool-content.btn-action--outline {
+ background: #fff;
+ color: #1C1D1F;
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.btn-action--outline:hover {
+ border-color: #FF8C00;
+ color: #FF8C00;
+ }
+.tool-content.btn-action--danger {
+ background: #fff;
+ color: #DC3545;
+ border: 1px solid #FECACA;
+ }
+.tool-content.btn-action--danger:hover {
+ background: #FEE2E2;
+ }
+
+ /* Completion Banner */
+.tool-content.completion-banner {
+ display: none;
+ background: linear-gradient(135deg, #065F46, #047857);
+ color: #fff;
+ text-align: center;
+ padding: 24px;
+ border-radius: 12px;
+ margin-top: 30px;
+ }
+.tool-content.completion-banner.visible {
+ display: block;
+ animation: fadeSlideIn 0.5s ease;
+ }
+.tool-content.completion-banner h2 {
+ font-size: 18px;
+ margin-bottom: 6px;
+ color: #fff;
+ }
+.tool-content.completion-banner p {
+ font-size: 13px;
+ opacity: 0.9;
+ margin: 0;
+ }
+
+ @keyframes fadeSlideIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+.tool-content.checkpoint-header { padding: 10px 12px; }
+.tool-content.checkpoint-details-inner { padding: 0 12px 10px 32px; }
+.tool-content.actions-row { flex-direction: column; }
+.tool-content.btn-action { justify-content: center; }
+.tool-content.progress-badges { gap: 8px; }
+ }
+
+ /* Print Styles */
+ @media print {
+.tool-content.progress-section {
+ position: static;
+ box-shadow: none;
+ }
+.tool-content.checkpoint {
+ break-inside: avoid;
+ box-shadow: none;
+ }
+.tool-content.checkpoint-toggle {
+ display: none;
+ }
+.tool-content.checkpoint-details {
+ max-height: none!important;
+ overflow: visible!important;
+ }
+.tool-content.actions-row,
+.tool-content.completion-banner {
+ display: none!important;
+ }
+.tool-content.checkpoint,
+.tool-content.checkpoint.checked,
+.tool-content.priority-badge,
+.tool-content.section-icon,
+.tool-content.checkpoint-number,
+.tool-content.checkpoint-tip,
+.tool-content.progress-bar-fill,
+.tool-content.progress-badge-dot {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">DSGVO Compliance Checklist</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">15 Checkpoints von kritisch bis Best Practice - Schritt für Schritt DSGVO-konform</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/idee/">Phase 1: Idee</a>
+ <span class="separator">/</span>
+ <span class="current">DSGVO Checklist</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- Sticky Progress Bar -->
+ <div class="progress-section">
+ <div class="progress-inner">
+ <div class="progress-header">
+ <span class="progress-label">Fortschritt</span>
+ <span class="progress-count" id="progressCount">0 / 15 erledigt</span>
+ </div>
+ <div class="progress-bar-track">
+ <div class="progress-bar-fill" id="progressBar"></div>
+ </div>
+ <div class="progress-badges">
+ <span class="progress-badge">
+ <span class="progress-badge-dot kritisch"></span>
+ Kritisch (<span id="badgeKritisch">0</span>/5)
+ </span>
+ <span class="progress-badge">
+ <span class="progress-badge-dot wichtig"></span>
+ Wichtig (<span id="badgeWichtig">0</span>/5)
+ </span>
+ <span class="progress-badge">
+ <span class="progress-badge-dot best-practice"></span>
+ Best Practice (<span id="badgeBest">0</span>/5)
+ </span>
+ </div>
+ </div>
+ </div>
+
+ <!-- KRITISCH -->
+ <div class="section-header">
+ <div class="section-icon kritisch">&#x1F534;</div>
+ <div>
+ <div class="section-title">Kritisch - Sofort erledigen</div>
+ <div class="section-subtitle">Punkte 1-5: Ohne diese bist du nicht DSGVO-konform</div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 1 -->
+ <div class="checkpoint" data-id="1" data-priority="kritisch">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 1 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">1</span>
+ <span class="priority-badge kritisch">Kritisch</span>
+ <span class="checkpoint-article">Art. 30 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Verarbeitungsverzeichnis erstellen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Dokumentiere <strong>alle</strong> personenbezogenen Daten, die du verarbeitest. Das Verarbeitungsverzeichnis ist das Fundament deiner DSGVO-Compliance - ohne geht gar nichts.
+ <ul>
+ <li>Erfasse jede Datenkategorie (Kundendaten, Bewerberdaten, Websitedaten, etc.)</li>
+ <li>Halte fest: Zweck, Rechtsgrundlage, Speicherdauer, Empfänger</li>
+ <li>Das Verzeichnis muss jederzeit der Datenschutzbehörde vorgelegt werden können</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Starte mit einer einfachen Tabelle: Datenkategorie | Zweck | Rechtsgrundlage | Speicherdauer | Empfänger. Die WKO bietet Muster-Vorlagen dafür an.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 2 -->
+ <div class="checkpoint" data-id="2" data-priority="kritisch">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 2 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">2</span>
+ <span class="priority-badge kritisch">Kritisch</span>
+ <span class="checkpoint-article">Art. 6 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Rechtsgrundlage für jede Verarbeitung festlegen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Jede Verarbeitung personenbezogener Daten braucht eine <strong>Rechtsgrundlage</strong>. Die DSGVO nennt sechs mögliche Grundlagen - für Startups sind vor allem vier relevant:
+ <ul>
+ <li><strong>Einwilligung</strong> - z.B. Newsletter-Anmeldung</li>
+ <li><strong>Vertragserfüllung</strong> - z.B. Kundendaten für Bestellungen</li>
+ <li><strong>Berechtigtes Interesse</strong> - z.B. Website-Analytics</li>
+ <li><strong>Rechtliche Verpflichtung</strong> - z.B. Rechnungsdaten für das Finanzamt</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Die häufigsten Grundlagen für Startups: Vertrag (Kund:innen), berechtigtes Interesse (Analytics), Einwilligung (Newsletter). Trage die Rechtsgrundlage direkt in dein Verarbeitungsverzeichnis ein.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 3 -->
+ <div class="checkpoint" data-id="3" data-priority="kritisch">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 3 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">3</span>
+ <span class="priority-badge kritisch">Kritisch</span>
+ <span class="checkpoint-article">Art. 13 &amp; 14 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Datenschutzerklärung auf Website veröffentlichen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Deine Datenschutzerklärung muss leicht auffindbar, verständlich und vollständig sein. Sie gehört in den Footer jeder Seite.
+ <ul>
+ <li>Name und Kontaktdaten des Verantwortlichen</li>
+ <li>Zwecke und Rechtsgrundlagen der Datenverarbeitung</li>
+ <li>Empfänger bzw. Kategorien von Empfängern</li>
+ <li>Speicherdauer oder Kriterien für die Festlegung</li>
+ <li>Hinweis auf Betroffenenrechte und Beschwerderecht bei der DSB</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Nutze den Datenschutzerklärungs-Generator der WKO (<a href="https://www.wko.at" target="_blank" rel="noopener">wko.at</a>) als Ausgangsbasis und passe ihn individuell an dein Startup an.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 4 -->
+ <div class="checkpoint" data-id="4" data-priority="kritisch">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 4 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">4</span>
+ <span class="priority-badge kritisch">Kritisch</span>
+ <span class="checkpoint-article">Art. 7 DSGVO &amp; TKG 2021</span>
+ </div>
+ <div class="checkpoint-title">Cookie-Banner implementieren</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Seit dem Telekommunikationsgesetz 2021 ist klar geregelt: Tracking- und Marketing-Cookies brauchen eine <strong>aktive Einwilligung (Opt-in)</strong>.
+ <ul>
+ <li><strong>Technisch notwendige Cookies:</strong> OK ohne Einwilligung</li>
+ <li><strong>Analytics/Tracking/Marketing:</strong> Nur mit explizitem Opt-in</li>
+ <li>"Alle akzeptieren" darf nicht prominenter sein als "Nur notwendige"</li>
+ <li>Tools: Cookiebot, Usercentrics, CookieYes</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Teste deinen Cookie-Banner mit dem Scan-Tool von Cookiebot - es zeigt dir alle Cookies, die deine Seite setzt. Achtung: Google Fonts und eingebettete YouTube-Videos setzen oft unbemerkt Cookies!
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 5 -->
+ <div class="checkpoint" data-id="5" data-priority="kritisch">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 5 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">5</span>
+ <span class="priority-badge kritisch">Kritisch</span>
+ <span class="checkpoint-article">Art. 28 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Auftragsverarbeitungsverträge (AVV) abschließen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Mit <strong>jedem Dienstleister</strong>, der Zugang zu personenbezogenen Daten hat, brauchst du einen Auftragsverarbeitungsvertrag.
+ <ul>
+ <li>Cloud-Provider (AWS, Azure, Google Cloud)</li>
+ <li>E-Mail-Marketing (Mailchimp, ActiveCampaign, Brevo)</li>
+ <li>Analytics (Google Analytics, Matomo Cloud)</li>
+ <li>CRM (HubSpot, Pipedrive, Salesforce)</li>
+ <li>Hosting, Payment-Provider, Buchhaltungssoftware</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Die meisten großen Anbieter (AWS, Google, Mailchimp) haben Standard-AVVs - du musst sie nur im Admin-Panel aktivieren oder digital unterschreiben. Führe eine Liste aller Auftragsverarbeiter.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- WICHTIG -->
+ <div class="section-header">
+ <div class="section-icon wichtig">&#x1F7E1;</div>
+ <div>
+ <div class="section-title">Wichtig - Zeitnah umsetzen</div>
+ <div class="section-subtitle">Punkte 6-10: Stärken deine Compliance wesentlich</div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 6 -->
+ <div class="checkpoint" data-id="6" data-priority="wichtig">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 6 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">6</span>
+ <span class="priority-badge wichtig">Wichtig</span>
+ <span class="checkpoint-article">Art. 32 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Technische &amp; organisatorische Maßnahmen (TOMs) dokumentieren</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Du musst nachweisen, dass du angemessene Sicherheitsmaßnahmen zum Schutz personenbezogener Daten getroffen hast.
+ <ul>
+ <li>Verschlüsselung (HTTPS, verschlüsselte Datenbanken)</li>
+ <li>Zugangskontrollen und Berechtigungskonzepte</li>
+ <li>Regelmäßige Backups und Wiederherstellungstests</li>
+ <li>Passwort-Policies und Passwort-Manager</li>
+ <li>Physische Sicherheit (Büro, Server)</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Auch für kleine Startups sofort relevant: 2FA für alle Accounts aktivieren, Zugriffsrechte auf das Notwendige einschränken (Least Privilege), regelmäßige Backups einrichten. Dokumentiere alles schriftlich.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 7 -->
+ <div class="checkpoint" data-id="7" data-priority="wichtig">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 7 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">7</span>
+ <span class="priority-badge wichtig">Wichtig</span>
+ <span class="checkpoint-article">Art. 37 DSGVO &amp; DSG</span>
+ </div>
+ <div class="checkpoint-title">Datenschutzbeauftragten prüfen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ In Österreich gibt es konkrete Regelungen, wann ein Datenschutzbeauftragter (DSB) bestellt werden muss.
+ <ul>
+ <li>Ab 20 Personen, die ständig mit Datenverarbeitung befasst sind</li>
+ <li>Bei Kerntätigkeit = umfangreiche Datenverarbeitung (z.B. Health-Tech, AdTech)</li>
+ <li>Bei regelmäßiger und systematischer Überwachung von Personen</li>
+ <li>Kann intern oder extern bestellt werden</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Für die meisten Early-Stage-Startups ist ein DSB nicht verpflichtend - aber empfehlenswert ab Series A oder wenn ihr mit sensiblen Daten arbeitet. Externe DSBs gibt es in Österreich ab ca. EUR 200/Monat.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 8 -->
+ <div class="checkpoint" data-id="8" data-priority="wichtig">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 8 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">8</span>
+ <span class="priority-badge wichtig">Wichtig</span>
+ <span class="checkpoint-article">Art. 7 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Einwilligungsmanagement aufsetzen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Einwilligungen müssen freiwillig, informiert, spezifisch und unmissverständlich sein - und du musst sie nachweisen können.
+ <ul>
+ <li>Double Opt-in für Newsletter (rechtlicher Standard in Österreich)</li>
+ <li>Einwilligungen müssen jederzeit widerrufbar sein</li>
+ <li>Koppelungsverbot beachten: Einwilligung darf nicht Bedingung für einen Service sein</li>
+ <li>Für Minderjährige unter 14 Jahren: Einwilligung der Erziehungsberechtigten</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Speichere bei jeder Einwilligung: Timestamp + IP-Adresse + den genauen Text der Einwilligung. So kannst du im Streitfall nachweisen, dass und wann die Einwilligung erteilt wurde.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 9 -->
+ <div class="checkpoint" data-id="9" data-priority="wichtig">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 9 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">9</span>
+ <span class="priority-badge wichtig">Wichtig</span>
+ <span class="checkpoint-article">Art. 15-22 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Betroffenenrechte sicherstellen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Betroffene Personen haben umfangreiche Rechte - und du musst innerhalb eines Monats reagieren.
+ <ul>
+ <li><strong>Auskunftsrecht</strong> - Welche Daten hast du über mich?</li>
+ <li><strong>Recht auf Berichtigung</strong> - Falsche Daten korrigieren</li>
+ <li><strong>Recht auf Löschung</strong> - "Recht auf Vergessenwerden"</li>
+ <li><strong>Recht auf Datenportabilität</strong> - Daten in maschinenlesbarem Format</li>
+ <li><strong>Widerspruchsrecht</strong> - Gegen bestimmte Verarbeitungen</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Erstelle ein internes Playbook: Wer bearbeitet Anfragen? Wo sind die Daten gespeichert? Wie exportierst/löschst du sie? Frist: maximal 1 Monat ab Anfrage.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 10 -->
+ <div class="checkpoint" data-id="10" data-priority="wichtig">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 10 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">10</span>
+ <span class="priority-badge wichtig">Wichtig</span>
+ <span class="checkpoint-article">Art. 35 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Datenschutz-Folgenabschätzung prüfen (DSFA)</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Bei Verarbeitungen mit <strong>voraussichtlich hohem Risiko</strong> für Betroffene ist eine DSFA verpflichtend.
+ <ul>
+ <li>Profiling mit rechtlicher oder erheblicher Wirkung</li>
+ <li>Umfangreiche Verarbeitung sensibler Daten (Gesundheit, Biometrie)</li>
+ <li>Systematische Überwachung öffentlich zugänglicher Bereiche</li>
+ <li>Einsatz neuer Technologien mit hohem Risiko</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Nutze die DSFA-Schwellenwertanalyse der österreichischen Datenschutzbehörde (<a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a>). Wenn zwei oder mehr Kriterien zutreffen, ist eine DSFA in der Regel notwendig.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- BEST PRACTICE -->
+ <div class="section-header">
+ <div class="section-icon best-practice">&#x1F7E2;</div>
+ <div>
+ <div class="section-title">Best Practice - Professionell aufstellen</div>
+ <div class="section-subtitle">Punkte 11-15: Machen dich langfristig sattelfest</div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 11 -->
+ <div class="checkpoint" data-id="11" data-priority="best-practice">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 11 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">11</span>
+ <span class="priority-badge best-practice">Best Practice</span>
+ <span class="checkpoint-article">Art. 44-49 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Datenweitergabe an Drittländer absichern</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Wenn Daten die EU/den EWR verlassen, brauchst du eine zusätzliche Rechtsgrundlage für den Transfer.
+ <ul>
+ <li><strong>USA:</strong> EU-US Data Privacy Framework prüfen (gilt seit Juli 2023)</li>
+ <li><strong>Andere Drittländer:</strong> Standardvertragsklauseln (SCCs) der EU-Kommission nutzen</li>
+ <li><strong>Angemessenheitsbeschluss:</strong> Für einige Länder (Schweiz, UK, Japan, etc.) existiert einer</li>
+ <li>Dokumentiere die Rechtsgrundlage für jeden Drittlandtransfer</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Prüfe bei jedem SaaS-Tool, wo die Daten gehostet werden. Viele Anbieter bieten mittlerweile EU-Hosting an (z.B. AWS Frankfurt, Google Belgium). Bevorzuge EU-Hosting wenn möglich.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 12 -->
+ <div class="checkpoint" data-id="12" data-priority="best-practice">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 12 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">12</span>
+ <span class="priority-badge best-practice">Best Practice</span>
+ <span class="checkpoint-article">Art. 33 &amp; 34 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Datenpannen-Meldeprozess einrichten</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Bei einer Datenpanne (Data Breach) tickt die Uhr: Du hast <strong>72 Stunden</strong>, um die Datenschutzbehörde zu informieren.
+ <ul>
+ <li>Meldung an die DSB (Datenschutzbehörde Österreich) innerhalb von 72 Stunden</li>
+ <li>Bei hohem Risiko für Betroffene: auch diese unverzüglich informieren</li>
+ <li>Dokumentationspflicht: auch Pannen ohne Meldepflicht intern dokumentieren</li>
+ <li>DSB-Meldeformular: Online über <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a></li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Erstelle einen Notfallplan <strong>bevor</strong> etwas passiert. Definiere: Wer wird intern informiert? Wer meldet an die DSB? Welche Sofortmaßnahmen werden gesetzt? In der Hektik einer Datenpanne ist man froh über klare Abläufe.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 13 -->
+ <div class="checkpoint" data-id="13" data-priority="best-practice">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 13 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">13</span>
+ <span class="priority-badge best-practice">Best Practice</span>
+ <span class="checkpoint-article">Art. 5 Abs. 1 lit. e DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Löschkonzept erstellen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Der Grundsatz der Speicherbegrenzung verlangt, dass Daten nur so lange gespeichert werden, wie sie für den Zweck erforderlich sind.
+ <ul>
+ <li>Speicherdauer pro Datenkategorie definieren</li>
+ <li>Gesetzliche Aufbewahrungsfristen beachten: 7 Jahre für Buchhaltungsunterlagen (BAO)</li>
+ <li>Steuerrelevante Unterlagen: 7 Jahre gemäß Bundesabgabenordnung</li>
+ <li>Bewerberdaten: max. 6 Monate nach Absage (außer mit Einwilligung)</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Richte automatische Löschroutinen ein, wo technisch möglich. Viele CRM- und Newsletter-Tools bieten automatische Bereinigung inaktiver Kontakte an. Das spart nicht nur DSGVO-Kopfschmerzen, sondern auch Lizenzkosten.
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 14 -->
+ <div class="checkpoint" data-id="14" data-priority="best-practice">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 14 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">14</span>
+ <span class="priority-badge best-practice">Best Practice</span>
+ <span class="checkpoint-article">Art. 39 Abs. 1 lit. b DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Mitarbeiter:innen schulen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ Die beste Datenschutz-Dokumentation nützt nichts, wenn das Team die Grundlagen nicht kennt. Schulungen sind Teil der Rechenschaftspflicht.
+ <ul>
+ <li>Datenschutz-Grundlagen für alle Teammitglieder</li>
+ <li>Spezifische Schulungen für Mitarbeiter:innen mit Datenzugang</li>
+ <li>Dokumentieren: Datum, Teilnehmer:innen, Inhalte</li>
+ <li>Neue Mitarbeiter:innen beim Onboarding schulen</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Kurze 30-Minuten-Sessions alle 6 Monate reichen für kleine Teams völlig aus. Halte die Schulung praxisnah: Was darf ich per E-Mail weiterleiten? Wie erkenne ich Phishing? Was mache ich bei einer Datenanfrage?
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Checkpoint 15 -->
+ <div class="checkpoint" data-id="15" data-priority="best-practice">
+ <div class="checkpoint-header" role="button" tabindex="0">
+ <label class="checkpoint-checkbox" onclick="event.stopPropagation()">
+ <input type="checkbox" aria-label="Checkpoint 15 abhaken">
+ <div class="checkbox-visual">
+ <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+ </div>
+ </label>
+ <div class="checkpoint-content">
+ <div class="checkpoint-top-row">
+ <span class="checkpoint-number">15</span>
+ <span class="priority-badge best-practice">Best Practice</span>
+ <span class="checkpoint-article">Art. 25 DSGVO</span>
+ </div>
+ <div class="checkpoint-title">Regelmäßige Überprüfung planen</div>
+ </div>
+ <button class="checkpoint-toggle" aria-label="Details ein-/ausblenden">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+ </button>
+ </div>
+ <div class="checkpoint-details">
+ <div class="checkpoint-details-inner">
+ <div class="checkpoint-explanation">
+ DSGVO-Compliance ist kein einmaliges Projekt, sondern ein laufender Prozess. Mindestens einmal jährlich solltest du alles reviewen.
+ <ul>
+ <li>Jährlicher Review aller Maßnahmen und Dokumentationen</li>
+ <li>Bei neuen Tools oder Prozessen: Datenschutz sofort mitdenken (Privacy by Design)</li>
+ <li>Verarbeitungsverzeichnis aktuell halten</li>
+ <li>Neue gesetzliche Anforderungen prüfen (z.B. AI Act, ePrivacy-VO)</li>
+ </ul>
+ </div>
+ <div class="checkpoint-tip">
+ <strong>Tipp:</strong> Setze dir einen jährlichen Kalender-Reminder für den DSGVO-Check - am besten im Jänner. Und: Bei jedem neuen Tool, das du einführst, frage dich zuerst: "Welche Daten fließen wohin?"
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Actions -->
+ <div class="actions-row">
+ <button class="btn-action btn-action--primary" onclick="window.print()">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+ Als PDF drucken
+ </button>
+ <button class="btn-action btn-action--outline" onclick="toggleAllDetails()">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l5 5 5-5"/><path d="M7 13l5 5 5-5"/></svg>
+ <span id="toggleAllLabel">Alle Details öffnen</span>
+ </button>
+ <button class="btn-action btn-action--danger" onclick="resetChecklist()">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+ Zurücksetzen
+ </button>
+ </div>
+
+ <!-- Completion Banner -->
+ <div class="completion-banner" id="completionBanner">
+ <h2>Gratulation! Alle 15 Checkpoints erledigt.</h2>
+ <p>Dein Startup ist auf einem guten Weg zur DSGVO-Compliance. Vergiss nicht: Regelmäßig reviewen und bei Änderungen aktualisieren.</p>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Unsicher bei der DSGVO-Umsetzung?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching helfen wir dir, die richtigen Prioritäten zu setzen und dein Startup datenschutzkonform aufzustellen - pragmatisch und ohne Juristendeutsch.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+
+ <!-- DSGVO Checklist Logic -->
+ <script>
+ (function() {
+ 'use strict';
+
+ const STORAGE_KEY = 'sbb-dsgvo-checklist';
+
+ // DOM refs
+ const checkpoints = document.querySelectorAll('.checkpoint');
+ const progressBar = document.getElementById('progressBar');
+ const progressCount = document.getElementById('progressCount');
+ const badgeKritisch = document.getElementById('badgeKritisch');
+ const badgeWichtig = document.getElementById('badgeWichtig');
+ const badgeBest = document.getElementById('badgeBest');
+ const completionBanner = document.getElementById('completionBanner');
+
+ // Load saved state
+ function loadState() {
+ try {
+ const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+ if (saved && typeof saved === 'object') return saved;
+ } catch (e) { /* ignore */ }
+ return {};
+ }
+
+ // Save state
+ function saveState(state) {
+ try {
+ localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+ } catch (e) { /* ignore */ }
+ }
+
+ // Update progress UI
+ function updateProgress() {
+ const state = loadState();
+ let total = 0;
+ let kritisch = 0;
+ let wichtig = 0;
+ let best = 0;
+
+ checkpoints.forEach(function(cp) {
+ var id = cp.getAttribute('data-id');
+ var priority = cp.getAttribute('data-priority');
+ var checkbox = cp.querySelector('input[type="checkbox"]');
+ var isChecked =!!state[id];
+
+ checkbox.checked = isChecked;
+
+ if (isChecked) {
+ cp.classList.add('checked');
+ total++;
+ if (priority === 'kritisch') kritisch++;
+ else if (priority === 'wichtig') wichtig++;
+ else best++;
+ } else {
+ cp.classList.remove('checked');
+ }
+ });
+
+ var pct = Math.round((total / 15) * 100);
+ progressBar.style.width = pct + '%';
+ progressCount.textContent = total + ' / 15 erledigt (' + pct + ' %)';
+ badgeKritisch.textContent = kritisch;
+ badgeWichtig.textContent = wichtig;
+ badgeBest.textContent = best;
+
+ if (total === 15) {
+ completionBanner.classList.add('visible');
+ } else {
+ completionBanner.classList.remove('visible');
+ }
+ }
+
+ // Attach checkbox handlers
+ checkpoints.forEach(function(cp) {
+ var id = cp.getAttribute('data-id');
+ var checkbox = cp.querySelector('input[type="checkbox"]');
+
+ checkbox.addEventListener('change', function() {
+ var state = loadState();
+ if (this.checked) {
+ state[id] = true;
+ } else {
+ delete state[id];
+ }
+ saveState(state);
+ updateProgress();
+ });
+ });
+
+ // Toggle detail panels
+ checkpoints.forEach(function(cp) {
+ var header = cp.querySelector('.checkpoint-header');
+ var details = cp.querySelector('.checkpoint-details');
+ var toggle = cp.querySelector('.checkpoint-toggle');
+
+ function toggleDetails(e) {
+ // Don't toggle when clicking checkbox
+ if (e && e.target.closest('.checkpoint-checkbox')) return;
+ var isOpen = details.classList.contains('open');
+ if (isOpen) {
+ details.classList.remove('open');
+ toggle.classList.remove('open');
+ } else {
+ details.classList.add('open');
+ toggle.classList.add('open');
+ }
+ }
+
+ header.addEventListener('click', toggleDetails);
+ header.addEventListener('keydown', function(e) {
+ if (e.key === 'Enter' || e.key === ' ') {
+ e.preventDefault();
+ toggleDetails(e);
+ }
+ });
+ });
+
+ // Initial load
+ updateProgress();
+
+ // Toggle all details globally
+ window.toggleAllDetails = function() {
+ var allDetails = document.querySelectorAll('.checkpoint-details');
+ var allToggles = document.querySelectorAll('.checkpoint-toggle');
+ var label = document.getElementById('toggleAllLabel');
+ var anyOpen = false;
+
+ allDetails.forEach(function(d) {
+ if (d.classList.contains('open')) anyOpen = true;
+ });
+
+ if (anyOpen) {
+ allDetails.forEach(function(d) { d.classList.remove('open'); });
+ allToggles.forEach(function(t) { t.classList.remove('open'); });
+ label.textContent = 'Alle Details öffnen';
+ } else {
+ allDetails.forEach(function(d) { d.classList.add('open'); });
+ allToggles.forEach(function(t) { t.classList.add('open'); });
+ label.textContent = 'Alle Details schließen';
+ }
+ };
+
+ // Reset checklist
+ window.resetChecklist = function() {
+ if (confirm('Bist du sicher? Alle Häkchen werden zurückgesetzt.')) {
+ localStorage.removeItem(STORAGE_KEY);
+ checkpoints.forEach(function(cp) {
+ cp.querySelector('input[type="checkbox"]').checked = false;
+ cp.classList.remove('checked');
+ });
+ updateProgress();
+ }
+ };
+
+ })();
+ </script>
+
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

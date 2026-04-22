@@ -1,0 +1,1704 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Cap Table Template | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Cap Table Template für österreichische GmbH und FlexCo: Gesellschafterverzeichnis, ESOP/VSOP, Finanzierungsrunden, Verwässerung und Wandeldarlehen. Mit interaktivem Szenario-Rechner.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/cap-table/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/cap-table/">
+ <meta property="og:title" content="Cap Table Template | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Cap Table Template für österreichische GmbH und FlexCo: Gesellschafterverzeichnis, ESOP/VSOP, Finanzierungsrunden, Verwässerung und Wandeldarlehen.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Cap Table Template | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Cap Table Template */
+
+ /* ========== DESIGN TOKENS ========== */
+.tool-content {
+ --primary: #E63946;
+ --primary-light: #FF8C00;
+ --accent: #FF8C00;
+ --success: #28A745;
+ --danger: #DC3545;
+ --text-dark: #1C1D1F;
+ --text-light: #6B7280;
+ --bg-light: #F8FAFC;
+ --bg-white: #FFFFFF;
+ --border: #E2E8F0;
+ --sec-intro: #E63946;
+ --sec-intro-bg: #FEF2F2;
+ --sec-begriffe: #6B7280;
+ --sec-begriffe-bg: #F3F4F6;
+ --sec-struktur: #4B5563;
+ --sec-struktur-bg: #F3F4F6;
+ --sec-rechner: #28A745;
+ --sec-rechner-bg: #DCFCE7;
+ --sec-fehler: #DC3545;
+ --sec-fehler-bg: #FEF2F2;
+ --sec-checklist: #FF8C00;
+ --sec-checklist-bg: #FFF7ED;
+ }
+
+ /* ========== TABLE OF CONTENTS ========== */
+.tool-content.toc {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 12px;
+ padding: 20px 24px;
+ margin-bottom: 28px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+ }
+.tool-content.toc h2 {
+ font-size: 14px;
+ font-weight: 700;
+ color: #E63946;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 12px;
+ }
+.tool-content.toc-list {
+ list-style: none;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 6px 24px;
+ padding: 0;
+ margin: 0;
+ }
+.tool-content.toc-list a {
+ color: #FF8C00;
+ text-decoration: none;
+ font-size: 14px;
+ font-weight: 500;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ transition: color 0.2s;
+ }
+.tool-content.toc-list a:hover {
+ color: #E63946;
+ text-decoration: underline;
+ }
+.tool-content.toc-num {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 22px;
+ height: 22px;
+ background: #E63946;
+ color: #fff;
+ font-size: 11px;
+ font-weight: 700;
+ border-radius: 4px;
+ flex-shrink: 0;
+ }
+
+ /* ========== SECTION CARD ========== */
+.tool-content.section-card {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 12px;
+ margin-bottom: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+ overflow: hidden;
+ }
+.tool-content.section-header {
+ padding: 14px 20px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ cursor: pointer;
+ user-select: none;
+ transition: background 0.2s;
+ }
+.tool-content.section-header:hover {
+ filter: brightness(0.97);
+ }
+.tool-content.section-header.section-icon {
+ font-size: 20px;
+ flex-shrink: 0;
+ }
+.tool-content.section-header h2 {
+ font-size: 17px;
+ font-weight: 700;
+ color: #fff;
+ flex: 1;
+ line-height: 1.3;
+ margin: 0;
+ }
+.tool-content.section-header.chevron {
+ width: 20px;
+ height: 20px;
+ fill: rgba(255,255,255,0.7);
+ transition: transform 0.3s ease;
+ flex-shrink: 0;
+ }
+.tool-content.section-header.collapsed.chevron {
+ transform: rotate(-90deg);
+ }
+.tool-content.section-body {
+ padding: 20px 24px 24px;
+ overflow: hidden;
+ transition: max-height 0.4s ease, padding 0.3s ease;
+ }
+.tool-content.section-body.collapsed {
+ max-height: 0!important;
+ padding-top: 0;
+ padding-bottom: 0;
+ overflow: hidden;
+ }
+
+ /* Section color themes */
+.tool-content.section-intro.section-header { background: var(--sec-intro); }
+.tool-content.section-begriffe.section-header { background: var(--sec-begriffe); }
+.tool-content.section-struktur.section-header { background: var(--sec-struktur); }
+.tool-content.section-rechner.section-header { background: var(--sec-rechner); }
+.tool-content.section-fehler.section-header { background: var(--sec-fehler); }
+.tool-content.section-checklist.section-header { background: var(--sec-checklist); }
+.tool-content.section-checklist.section-header h2 { color: var(--primary); }
+.tool-content.section-checklist.section-header.chevron { fill: var(--primary); }
+.tool-content.section-cta.section-header { background: var(--primary); }
+
+ /* ========== CONTENT STYLES ========== */
+.tool-content.section-body h3 {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin: 20px 0 8px;
+ line-height: 1.3;
+ }
+.tool-content.section-body h3:first-child { margin-top: 0; }
+.tool-content.section-body h4 {
+ font-size: 14px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin: 16px 0 6px;
+ }
+.tool-content.section-body p {
+ margin-bottom: 12px;
+ color: #1C1D1F;
+ }
+.tool-content.section-body ul,
+.tool-content.section-body ol {
+ margin: 0 0 14px 20px;
+ }
+.tool-content.section-body li {
+ margin-bottom: 6px;
+ }
+.tool-content.section-body strong {
+ color: #E63946;
+ font-weight: 700;
+ }
+
+ /* ========== INFO BOXES ========== */
+.tool-content.info-box {
+ border-radius: 8px;
+ padding: 14px 16px;
+ margin: 14px 0;
+ font-size: 14px;
+ line-height: 1.55;
+ }
+.tool-content.info-box.gmbh {
+ background: #FEF2F2;
+ border-left: 4px solid #E63946;
+ }
+.tool-content.info-box.flexco {
+ background: #F3F4F6;
+ border-left: 4px solid #6B7280;
+ }
+.tool-content.info-box.tip {
+ background: #DCFCE7;
+ border-left: 4px solid #28A745;
+ }
+.tool-content.info-box.warning {
+ background: #FEF2F2;
+ border-left: 4px solid #DC3545;
+ }
+.tool-content.info-box.neutral {
+ background: #F8FAFC;
+ border-left: 4px solid #E2E8F0;
+ }
+.tool-content.info-box-label {
+ font-weight: 700;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 4px;
+ display: block;
+ }
+.tool-content.info-box.gmbh.info-box-label { color: #E63946; }
+.tool-content.info-box.flexco.info-box-label { color: #6B7280; }
+.tool-content.info-box.tip.info-box-label { color: #28A745; }
+.tool-content.info-box.warning.info-box-label { color: #DC3545; }
+
+ /* ========== TABLES ========== */
+.tool-content.table-wrap {
+ overflow-x: auto;
+ margin: 14px 0;
+ border-radius: 8px;
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.table-wrap table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ }
+.tool-content.table-wrap thead th {
+ background: #E63946;
+ color: #fff;
+ font-weight: 600;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.3px;
+ padding: 10px 12px;
+ text-align: left;
+ white-space: nowrap;
+ }
+.tool-content.table-wrap tbody td {
+ padding: 9px 12px;
+ border-bottom: 1px solid #E2E8F0;
+ vertical-align: top;
+ }
+.tool-content.table-wrap tbody tr:last-child td { border-bottom: none; }
+.tool-content.table-wrap tbody tr:nth-child(even) { background: #F8FAFC; }
+.tool-content.table-wrap tbody tr.total-row {
+ background: #FEF2F2;
+ font-weight: 700;
+ }
+.tool-content.table-wrap tbody tr.total-row td {
+ border-top: 2px solid #E63946;
+ }
+
+ /* ========== DEFINITION LIST ========== */
+.tool-content.def-grid {
+ display: grid;
+ gap: 10px;
+ margin: 12px 0;
+ }
+.tool-content.def-item {
+ background: #F8FAFC;
+ border-radius: 8px;
+ padding: 12px 16px;
+ border-left: 3px solid #FF8C00;
+ }
+.tool-content.def-term {
+ font-weight: 700;
+ font-size: 14px;
+ color: #E63946;
+ margin-bottom: 2px;
+ }
+.tool-content.def-desc {
+ font-size: 14px;
+ color: #1C1D1F;
+ }
+
+ /* ========== CODE / FORMULA BLOCKS ========== */
+.tool-content.formula-block {
+ background: #1C1D1F;
+ color: #E2E8F0;
+ border-radius: 8px;
+ padding: 16px 18px;
+ margin: 14px 0;
+ font-family: 'Courier New', monospace;
+ font-size: 13px;
+ line-height: 1.7;
+ overflow-x: auto;
+ }
+.tool-content.formula-block.comment { color: #6B7280; }
+.tool-content.formula-block.highlight { color: #FF8C00; font-weight: 600; }
+.tool-content.formula-block.keyword { color: #9CA3AF; }
+.tool-content code {
+ font-family: 'Courier New', monospace;
+ font-size: 13px;
+ background: #F8FAFC;
+ padding: 2px 6px;
+ border-radius: 4px;
+ color: #E63946;
+ }
+
+ /* ========== SCENARIO EXAMPLE ========== */
+.tool-content.scenario {
+ border: 2px solid #E2E8F0;
+ border-radius: 10px;
+ margin: 18px 0;
+ overflow: hidden;
+ }
+.tool-content.scenario-header {
+ background: #F8FAFC;
+ padding: 10px 16px;
+ font-weight: 700;
+ font-size: 14px;
+ color: #E63946;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.scenario-body { padding: 16px; }
+.tool-content.scenario-step {
+ margin-bottom: 14px;
+ padding-left: 16px;
+ border-left: 3px solid #FF8C00;
+ }
+.tool-content.scenario-step:last-child { margin-bottom: 0; }
+.tool-content.scenario-step-label {
+ font-weight: 700;
+ font-size: 13px;
+ color: #FF8C00;
+ margin-bottom: 4px;
+ }
+.tool-content.scenario-step ul { list-style: none; margin: 0; padding: 0; }
+.tool-content.scenario-step li {
+ font-size: 14px;
+ margin-bottom: 2px;
+ display: flex;
+ justify-content: space-between;
+ gap: 8px;
+ }
+.tool-content.scenario-step li span.val {
+ font-family: 'Courier New', monospace;
+ font-weight: 600;
+ color: #E63946;
+ white-space: nowrap;
+ }
+
+ /* ========== TAB NAVIGATION ========== */
+.tool-content.tabs {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 4px;
+ margin-bottom: 16px;
+ border-bottom: 2px solid #E2E8F0;
+ padding-bottom: 0;
+ }
+.tool-content.tab-btn {
+ padding: 8px 16px;
+ border: none;
+ background: transparent;
+ font-size: 13px;
+ font-weight: 600;
+ color: #6B7280;
+ cursor: pointer;
+ border-bottom: 2px solid transparent;
+ margin-bottom: -2px;
+ transition: color 0.2s, border-color 0.2s;
+ white-space: nowrap;
+ }
+.tool-content.tab-btn:hover { color: #E63946; }
+.tool-content.tab-btn.active {
+ color: #E63946;
+ border-bottom-color: #E63946;
+ }
+.tool-content.tab-content { display: none; }
+.tool-content.tab-content.active { display: block; }
+
+ /* ========== INTERACTIVE CALCULATOR ========== */
+.tool-content.calc-container {
+ background: #F8FAFC;
+ border: 2px solid #A7F3D0;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 16px 0;
+ }
+.tool-content.calc-section { margin-bottom: 20px; }
+.tool-content.calc-section:last-child { margin-bottom: 0; }
+.tool-content.calc-section-title {
+ font-size: 14px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 10px;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ }
+.tool-content.founder-row {
+ display: grid;
+ grid-template-columns: 1fr 120px 40px;
+ gap: 8px;
+ margin-bottom: 8px;
+ align-items: center;
+ }
+.tool-content.founder-row input[type="text"],
+.tool-content.founder-row input[type="number"] {
+ width: 100%;
+ padding: 9px 12px;
+ border: 1.5px solid #E2E8F0;
+ border-radius: 6px;
+ font-size: 14px;
+ font-weight: 500;
+ background: #fff;
+ color: #1C1D1F;
+ transition: border-color 0.2s;
+ }
+.tool-content.founder-row input:focus {
+ outline: none;
+ border-color: #FF8C00;
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+ }
+.tool-content.btn-remove {
+ width: 34px;
+ height: 34px;
+ border: none;
+ background: #DC3545;
+ color: #fff;
+ border-radius: 6px;
+ font-size: 18px;
+ font-weight: 700;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: background 0.2s;
+ }
+.tool-content.btn-remove:hover { background: #C62833; }
+.tool-content.btn-add,
+.tool-content.btn-calc {
+ padding: 10px 18px;
+ border: none;
+ border-radius: 6px;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background 0.2s, transform 0.1s;
+ }
+.tool-content.btn-add:active,
+.tool-content.btn-calc:active { transform: scale(0.97); }
+.tool-content.btn-add {
+ background: #FF8C00;
+ color: #fff;
+ margin-top: 4px;
+ }
+.tool-content.btn-add:hover { background: #E63946; }
+.tool-content.btn-calc {
+ background: #28A745;
+ color: #fff;
+ font-size: 15px;
+ padding: 12px 28px;
+ display: block;
+ width: 100%;
+ margin-top: 12px;
+ }
+.tool-content.btn-calc:hover { background: #166534; }
+.tool-content.calc-input-group { margin-bottom: 12px; }
+.tool-content.calc-input-group label {
+ display: block;
+ font-weight: 600;
+ font-size: 13px;
+ color: #1C1D1F;
+ margin-bottom: 4px;
+ }
+.tool-content.calc-input-group.helper {
+ font-size: 12px;
+ color: #6B7280;
+ margin-bottom: 4px;
+ }
+.tool-content.calc-input-group input {
+ width: 100%;
+ max-width: 280px;
+ padding: 9px 12px;
+ border: 1.5px solid #E2E8F0;
+ border-radius: 6px;
+ font-size: 14px;
+ font-weight: 500;
+ background: #fff;
+ color: #1C1D1F;
+ transition: border-color 0.2s;
+ }
+.tool-content.calc-input-group input:focus {
+ outline: none;
+ border-color: #FF8C00;
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+ }
+.tool-content.calc-input-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 12px;
+ }
+.tool-content.calc-input-row.calc-input-group input { max-width: 100%; }
+
+ /* Calculator Results */
+.tool-content.calc-results { margin-top: 20px; display: none; }
+.tool-content.calc-results.visible { display: block; }
+.tool-content.calc-results-title {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 12px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid #E63946;
+ }
+.tool-content.result-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 14px;
+ border-radius: 8px;
+ overflow: hidden;
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.result-table thead th {
+ background: #E63946;
+ color: #fff;
+ font-weight: 600;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.3px;
+ padding: 10px 14px;
+ text-align: left;
+ }
+.tool-content.result-table tbody td {
+ padding: 10px 14px;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.result-table tbody tr:last-child td { border-bottom: none; }
+.tool-content.result-table tbody tr:nth-child(even) { background: #F8FAFC; }
+.tool-content.result-table tbody tr.total-row {
+ background: #FEF2F2;
+ font-weight: 700;
+ }
+.tool-content.result-table tbody tr.total-row td {
+ border-top: 2px solid #E63946;
+ }
+.tool-content.bar-cell { position: relative; }
+.tool-content.bar-bg {
+ position: absolute;
+ left: 0;
+ top: 0;
+ bottom: 0;
+ background: rgba(230, 57, 70, 0.12);
+ border-radius: 0 4px 4px 0;
+ transition: width 0.5s ease;
+ }
+.tool-content.bar-text {
+ position: relative;
+ z-index: 1;
+ font-weight: 600;
+ font-family: 'Courier New', monospace;
+ }
+.tool-content.dilution-badge {
+ display: inline-block;
+ font-family: 'Courier New', monospace;
+ font-size: 12px;
+ font-weight: 600;
+ padding: 2px 8px;
+ border-radius: 4px;
+ background: #FEF2F2;
+ color: #DC3545;
+ }
+
+ /* ========== CHECKLIST ========== */
+.tool-content.checklist {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ counter-reset: checklist;
+ }
+.tool-content.checklist li {
+ counter-increment: checklist;
+ display: flex;
+ align-items: flex-start;
+ gap: 12px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ font-size: 14px;
+ }
+.tool-content.checklist li:last-child { border-bottom: none; }
+.tool-content.checklist li::before {
+ content: counter(checklist);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-width: 26px;
+ height: 26px;
+ background: #FF8C00;
+ color: #fff;
+ font-weight: 700;
+ font-size: 12px;
+ border-radius: 50%;
+ flex-shrink: 0;
+ margin-top: 1px;
+ }
+
+ /* ========== RESPONSIVE ========== */
+ @media (max-width: 768px) {
+.tool-content.toc-list { grid-template-columns: 1fr; }
+.tool-content.section-body { padding: 16px; }
+.tool-content.calc-input-row { grid-template-columns: 1fr; }
+.tool-content.founder-row { grid-template-columns: 1fr 90px 34px; }
+.tool-content.tabs { gap: 2px; }
+.tool-content.tab-btn { font-size: 12px; padding: 6px 10px; }
+.tool-content.table-wrap table { font-size: 12px; }
+.tool-content.table-wrap thead th,
+.tool-content.table-wrap tbody td { padding: 7px 8px; }
+ }
+ @media (max-width: 480px) {
+.tool-content.founder-row { grid-template-columns: 1fr; }
+.tool-content.founder-row.btn-remove {
+ width: 100%;
+ height: auto;
+ padding: 6px;
+ }
+ }
+
+ /* ========== PRINT ========== */
+ @media print {
+.tool-content.section-body.collapsed {
+ max-height: none!important;
+ padding: 16pt 20pt!important;
+ overflow: visible!important;
+ }
+.tool-content.section-header.chevron { display: none; }
+.tool-content.section-card {
+ break-inside: avoid;
+ box-shadow: none;
+ border: 1px solid #ccc;
+ }
+.tool-content.calc-container { border: 1px solid #ccc; }
+.tool-content.btn-add,
+.tool-content.btn-remove,
+.tool-content.btn-calc { display: none; }
+.tool-content.toc { break-inside: avoid; }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Cap Table Template</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">GmbH &amp; FlexCo - Gesellschafterverzeichnis, ESOP/VSOP, Verwässerung &amp; Szenario-Rechner</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/scaleup/">Phase 3: Scale-Up</a>
+ <span class="separator">/</span>
+ <span class="current">Cap Table Template</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- ==================== TABLE OF CONTENTS ==================== -->
+ <nav class="toc">
+ <h2>Inhaltsverzeichnis</h2>
+ <ol class="toc-list">
+ <li><a href="#einleitung"><span class="toc-num">1</span> Einleitung: Was ist ein Cap Table?</a></li>
+ <li><a href="#begriffe"><span class="toc-num">2</span> Grundbegriffe - Österreich</a></li>
+ <li><a href="#struktur"><span class="toc-num">3</span> Cap Table Struktur (5&nbsp;Tabs)</a></li>
+ <li><a href="#rechner"><span class="toc-num">4</span> Szenario-Rechner (interaktiv)</a></li>
+ <li><a href="#fehler"><span class="toc-num">5</span> Häufige Fehler</a></li>
+ <li><a href="#checkliste"><span class="toc-num">6</span> Checkliste (10 Punkte)</a></li>
+ </ol>
+ </nav>
+
+ <!-- ==================== 1. EINLEITUNG ==================== -->
+ <section id="einleitung" class="section-card section-intro">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#128202;</span>
+ <h2>1. Einleitung: Was ist ein Cap Table und warum brauchst du einen?</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+ <p>Ein <strong>Cap Table</strong> (Capitalization Table) ist die vollständige Übersicht, wem welcher Anteil an deinem Startup gehört - und wie sich diese Anteile über die Zeit verändern. Er ist das zentrale Dokument für jede Finanzierungsrunde, jeden ESOP-Plan und jede Exit-Verhandlung.</p>
+
+ <h3>Warum ist der Cap Table so wichtig?</h3>
+ <ul>
+ <li><strong>Transparenz:</strong> Alle Gesellschafter:innen sehen, wem wie viel gehört.</li>
+ <li><strong>Investor:innen-Readiness:</strong> Kein professioneller Investor investiert ohne aktuellen Cap Table.</li>
+ <li><strong>Verwässerungsplanung:</strong> Du siehst frühzeitig, wie künftige Runden deine Anteile verändern.</li>
+ <li><strong>Rechtssicherheit:</strong> Basis für Gesellschafterverträge, Notartermine und Firmenbuch.</li>
+ <li><strong>Team-Motivation:</strong> ESOP/VSOP-Pläne dokumentieren, was Mitarbeiter:innen erwartet.</li>
+ </ul>
+
+ <h3>Unterschied zu US-Cap-Tables</h3>
+ <div class="info-box neutral">
+ <p>In der US-Literatur dreht sich alles um <em>Shares</em>, <em>Stock Options</em> und <em>Authorized Shares</em>. In Österreich funktioniert das Gesellschaftsrecht anders:</p>
+ <ul style="margin-top:8px;">
+ <li><strong>Stammeinlagen</strong> statt Shares - gemessen in Euro-Beträgen</li>
+ <li><strong>Geschäftsanteile</strong> statt Stock - in % oder &euro;-Nennbeträgen</li>
+ <li><strong>Firmenbucheintragung</strong> statt Share Register - öffentlich einsehbar</li>
+ <li><strong>Notariatsakt</strong> für Anteilsabtretungen bei GmbH (FlexCo erleichtert das)</li>
+ </ul>
+ </div>
+
+ <h3>Wann brauchst du einen Cap Table?</h3>
+ <ul>
+ <li><strong>Ab 2+ Gesellschafter:innen</strong> - auch bei 50/50-Aufteilung.</li>
+ <li><strong>Spätestens beim ersten Investment</strong> - Investor:innen wollen den Cap Table sehen, bevor sie ein Term Sheet schicken.</li>
+ <li><strong>Beim ersten Mitarbeiter:innen-Beteiligungsprogramm</strong> - ESOP oder VSOP müssen im Cap Table abgebildet sein.</li>
+ <li><strong>Idealerweise: ab Gründung.</strong> Je früher du anfängst, desto weniger Chaos später.</li>
+ </ul>
+ </div>
+ </section>
+
+ <!-- ==================== 2. GRUNDBEGRIFFE ==================== -->
+ <section id="begriffe" class="section-card section-begriffe">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#128218;</span>
+ <h2>2. Grundbegriffe im österreichischen Kontext</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+
+ <div class="def-grid">
+ <div class="def-item">
+ <div class="def-term">Stammkapital</div>
+ <div class="def-desc">Das gesamte Kapital der Gesellschaft, aufgeteilt auf alle Gesellschafter:innen. Es steht im Gesellschaftsvertrag und im Firmenbuch.</div>
+ </div>
+ <div class="def-item">
+ <div class="def-term">Stammeinlage</div>
+ <div class="def-desc">Der Anteil einer einzelnen Gesellschafterin am Stammkapital - in Euro. Deine Stammeinlage geteilt durch das Stammkapital ergibt deinen prozentualen Anteil.</div>
+ </div>
+ <div class="def-item">
+ <div class="def-term">Geschäftsanteile</div>
+ <div class="def-desc">Der Gesellschaftsanteil, ausgedrückt in Prozent oder Euro-Nennbeträgen. Bestimmt Stimmrechte, Gewinnausschüttung und Erlös beim Exit.</div>
+ </div>
+ <div class="def-item">
+ <div class="def-term">Gesellschafterverzeichnis</div>
+ <div class="def-desc">Die offizielle Liste aller Gesellschafter:innen mit ihren Stammeinlagen. Muss beim Firmenbuch eingereicht werden. Der Cap Table ist die erweiterte, interne Version davon.</div>
+ </div>
+ <div class="def-item">
+ <div class="def-term">Firmenbucheintragung</div>
+ <div class="def-desc">Öffentliches Register beim Handelsgericht. Jede Änderung im Gesellschafterkreis muss dort eingetragen werden - erst dann ist sie rechtswirksam.</div>
+ </div>
+ </div>
+
+ <h3>GmbH vs. FlexCo: Stammkapital im Vergleich</h3>
+
+ <div class="info-box gmbh">
+ <span class="info-box-label">GmbH</span>
+ <ul>
+ <li>Stammkapital mindestens <strong>&euro;&nbsp;35.000</strong></li>
+ <li>Davon mindestens <strong>&euro;&nbsp;17.500 bar</strong> einzuzahlen bei Gründung</li>
+ <li>Anteilsabtretung erfordert <strong>Notariatsakt</strong></li>
+ <li>Klassische Rechtsform, bewährt und weit verbreitet</li>
+ </ul>
+ </div>
+
+ <div class="info-box flexco">
+ <span class="info-box-label">FlexCo (seit 1. Jänner 2024)</span>
+ <ul>
+ <li>Stammkapital mindestens <strong>&euro;&nbsp;10.000</strong></li>
+ <li>Davon mindestens <strong>&euro;&nbsp;5.000 bar</strong> einzuzahlen bei Gründung</li>
+ <li>Anteilsabtretung in <strong>Schriftform</strong> (kein Notariatsakt nötig)</li>
+ <li><strong>Unternehmenswert-Anteile (UW-Anteile)</strong> für Mitarbeiterbeteiligung (ESOP) direkt im Gesetz vorgesehen</li>
+ <li>Flexiblere Stimmrechtsgestaltung möglich</li>
+ </ul>
+ </div>
+
+ <div class="info-box tip">
+ <span class="info-box-label">Tipp</span>
+ Die FlexCo ist für Startups in Österreich besonders attraktiv: niedrigeres Mindestkapital, einfachere Anteilsabtretung und UW-Anteile für ESOP-Programme. Lass dich bei der Wahl der Rechtsform von deiner Anwältin beraten.
+ </div>
+
+ </div>
+ </section>
+
+ <!-- ==================== 3. CAP TABLE STRUKTUR ==================== -->
+ <section id="struktur" class="section-card section-struktur">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#128203;</span>
+ <h2>3. Cap Table Struktur - 5 Tabs für Google Sheets</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+
+ <p>Baue deinen Cap Table in Google Sheets mit diesen 5&nbsp;Tabs auf. Jeder Tab erfüllt eine eigene Funktion - zusammen bilden sie die vollständige Eigentümerstruktur ab.</p>
+
+ <!-- Tab Navigation -->
+ <div class="tabs">
+ <button class="tab-btn active" onclick="switchTab(event, 'tab-gesellschafter')">Tab 1: Gesellschafter</button>
+ <button class="tab-btn" onclick="switchTab(event, 'tab-esop')">Tab 2: ESOP/VSOP</button>
+ <button class="tab-btn" onclick="switchTab(event, 'tab-runden')">Tab 3: Runden</button>
+ <button class="tab-btn" onclick="switchTab(event, 'tab-verwaesserung')">Tab 4: Verwässerung</button>
+ <button class="tab-btn" onclick="switchTab(event, 'tab-wandel')">Tab 5: Wandeldarlehen</button>
+ </div>
+
+ <!-- TAB 1: Gesellschafterverzeichnis -->
+ <div id="tab-gesellschafter" class="tab-content active">
+ <h3>Tab 1: Gesellschafterverzeichnis</h3>
+ <p>Die Basis deines Cap Tables. Hier dokumentierst du alle Gesellschafter:innen mit ihren Stammeinlagen, Einzahlungsstatus und Stimmrechten.</p>
+
+ <div class="table-wrap">
+ <table>
+ <thead>
+ <tr>
+ <th>#</th>
+ <th>Gesellschafter:in</th>
+ <th>Stammeinlage (&euro;)</th>
+ <th>Anteil (%)</th>
+ <th>Einzahlung (&euro;)</th>
+ <th>Ausstehend (&euro;)</th>
+ <th>Stimmrechte (%)</th>
+ <th>Eintritt</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1</td>
+ <td>Anna Gründer</td>
+ <td>7.000</td>
+ <td>70,0&nbsp;%</td>
+ <td>3.500</td>
+ <td>3.500</td>
+ <td>70,0&nbsp;%</td>
+ <td>01.01.2025</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>Ben Mitgründer</td>
+ <td>3.000</td>
+ <td>30,0&nbsp;%</td>
+ <td>1.500</td>
+ <td>1.500</td>
+ <td>30,0&nbsp;%</td>
+ <td>01.01.2025</td>
+ </tr>
+ <tr class="total-row">
+ <td></td>
+ <td><strong>GESAMT</strong></td>
+ <td><strong>10.000</strong></td>
+ <td><strong>100,0&nbsp;%</strong></td>
+ <td><strong>5.000</strong></td>
+ <td><strong>5.000</strong></td>
+ <td><strong>100,0&nbsp;%</strong></td>
+ <td></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="info-box tip">
+ <span class="info-box-label">Google-Sheets-Tipp</span>
+ Verwende Formeln: <code>=Stammeinlage/SUMME(Stammeinlagen)</code> für den Anteil und <code>=Stammeinlage-Einzahlung</code> für den ausstehenden Betrag. So bleibt alles automatisch aktuell.
+ </div>
+ </div>
+
+ <!-- TAB 2: ESOP/VSOP -->
+ <div id="tab-esop" class="tab-content">
+ <h3>Tab 2: ESOP / VSOP Pool</h3>
+ <p>Mitarbeiterbeteiligung ist entscheidend, um gute Leute zu gewinnen und zu halten. GmbH und FlexCo bieten dafür unterschiedliche Instrumente.</p>
+
+ <div class="info-box flexco">
+ <span class="info-box-label">FlexCo: Unternehmenswert-Anteile (UW-Anteile)</span>
+ <ul>
+ <li><strong>Kein echtes Stammkapital</strong> - aber wirtschaftliche Beteiligung am Unternehmenswert</li>
+ <li>Gesetzlich vorgesehen in der FlexCo (FlexKapGesG)</li>
+ <li>Bis zu <strong>24,99&nbsp;%</strong> des Unternehmenswertes können als UW-Anteile ausgegeben werden</li>
+ <li><strong>Kein Stimmrecht</strong> - aber Anspruch auf anteiligen Gewinn und Exit-Erlös</li>
+ <li><strong>Vesting Schedule:</strong> Typisch 4 Jahre Gesamtlaufzeit mit 1 Jahr Cliff (25&nbsp;% vesten nach 12 Monaten, danach monatlich)</li>
+ <li><strong>Good Leaver / Bad Leaver:</strong> Klauseln regeln, was bei Ausscheiden passiert. Good Leaver behält gevestete Anteile, Bad Leaver verliert alles oder teilweise.</li>
+ </ul>
+ </div>
+
+ <div class="info-box gmbh">
+ <span class="info-box-label">GmbH: Virtual Stock Option Plan (VSOP)</span>
+ <ul>
+ <li><strong>Schuldrechtliche Vereinbarung</strong> - kein echtes Eigenkapital, keine Firmenbuchänderung</li>
+ <li>Mitarbeiter:in erhält vertraglichen Anspruch auf eine Zahlung, die sich am Unternehmenswert orientiert</li>
+ <li><strong>Auszahlung bei Exit/Liquidation</strong> - oder bei vertraglich definiertem Trigger-Event</li>
+ <li><strong>Steuerliche Behandlung:</strong> Einkünfte aus nichtselbständiger Arbeit (Lohnsteuer, SV-Beiträge). Achtung: Steuervorteil der FlexCo-UW-Anteile beachten!</li>
+ <li>Vesting und Good/Bad Leaver analog zu FlexCo möglich</li>
+ </ul>
+ </div>
+
+ <h4>Tabellen-Struktur für Google Sheets</h4>
+ <div class="table-wrap">
+ <table>
+ <thead>
+ <tr>
+ <th>#</th>
+ <th>Mitarbeiter:in</th>
+ <th>Rolle</th>
+ <th>UW/VSOP (%)</th>
+ <th>Vesting Start</th>
+ <th>Cliff Ende</th>
+ <th>Voll gevestet</th>
+ <th>Gevestet (%)</th>
+ <th>Status</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1</td>
+ <td>Clara Tech</td>
+ <td>CTO</td>
+ <td>5,0&nbsp;%</td>
+ <td>01.04.2025</td>
+ <td>01.04.2026</td>
+ <td>01.04.2029</td>
+ <td>0,0&nbsp;%</td>
+ <td>Cliff läuft</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>David Ops</td>
+ <td>Head of Ops</td>
+ <td>2,5&nbsp;%</td>
+ <td>01.07.2025</td>
+ <td>01.07.2026</td>
+ <td>01.07.2029</td>
+ <td>0,0&nbsp;%</td>
+ <td>Cliff läuft</td>
+ </tr>
+ <tr>
+ <td>3</td>
+ <td>-</td>
+ <td>Reserviert</td>
+ <td>2,5&nbsp;%</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+ <td>Pool</td>
+ </tr>
+ <tr class="total-row">
+ <td></td>
+ <td colspan="2"><strong>ESOP Pool Gesamt</strong></td>
+ <td><strong>10,0&nbsp;%</strong></td>
+ <td colspan="4"></td>
+ <td></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="info-box tip">
+ <span class="info-box-label">Formel für gevesteten Anteil</span>
+ <code>=WENN(HEUTE()&lt;Cliff; 0; MIN(1; (HEUTE()-VestingStart) / (VollGevestet-VestingStart)) * Gesamt%)</code>
+ </div>
+ </div>
+
+ <!-- TAB 3: Finanzierungsrunden -->
+ <div id="tab-runden" class="tab-content">
+ <h3>Tab 3: Finanzierungsrunden</h3>
+ <p>Dokumentiere jede Finanzierungsrunde übersichtlich. Dieser Tab ist die historische Aufzeichnung aller Kapitalzuführungen.</p>
+
+ <div class="table-wrap">
+ <table>
+ <thead>
+ <tr>
+ <th>Runde</th>
+ <th>Datum</th>
+ <th>Investor:in</th>
+ <th>Investment (&euro;)</th>
+ <th>Pre-Money (&euro;)</th>
+ <th>Post-Money (&euro;)</th>
+ <th>Neue Anteile (%)</th>
+ <th>Preis / %</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Gründung</td>
+ <td>01.01.2025</td>
+ <td>Gründer:innen</td>
+ <td>10.000</td>
+ <td>-</td>
+ <td>-</td>
+ <td>100,0&nbsp;%</td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>Pre-Seed</td>
+ <td>01.06.2025</td>
+ <td>Business Angel</td>
+ <td>100.000</td>
+ <td>400.000</td>
+ <td>500.000</td>
+ <td>20,0&nbsp;%</td>
+ <td>5.000&nbsp;&euro;/%</td>
+ </tr>
+ <tr>
+ <td>Seed</td>
+ <td>01.03.2026</td>
+ <td>VC Fonds</td>
+ <td>500.000</td>
+ <td>2.000.000</td>
+ <td>2.500.000</td>
+ <td>20,0&nbsp;%</td>
+ <td>25.000&nbsp;&euro;/%</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="formula-block">
+ <span class="comment">// Kernformeln für Finanzierungsrunden</span><br>
+ <span class="keyword">Post-Money</span> = Pre-Money + Investment<br>
+ <span class="keyword">Neue Anteile (%)</span> = Investment / Post-Money &times; 100<br>
+ <span class="keyword">Preis pro %</span> = Investment / Neue Anteile (%)
+ </div>
+ </div>
+
+ <!-- TAB 4: Verwässerung -->
+ <div id="tab-verwaesserung" class="tab-content">
+ <h3>Tab 4: Verwässerungsberechnung</h3>
+ <p>Der wichtigste Tab für Gründer:innen: Hier siehst du, wie sich dein Anteil durch Finanzierungsrunden und ESOP-Pools verändert.</p>
+
+ <div class="scenario">
+ <div class="scenario-header">Szenario-Beispiel: FlexCo mit &euro;&nbsp;10.000 Stammkapital</div>
+ <div class="scenario-body">
+
+ <div class="scenario-step">
+ <div class="scenario-step-label">Schritt 1: Gründung</div>
+ <ul>
+ <li>Anna <span class="val">70,0&nbsp;% (&euro;&nbsp;7.000)</span></li>
+ <li>Ben <span class="val">30,0&nbsp;% (&euro;&nbsp;3.000)</span></li>
+ </ul>
+ </div>
+
+ <div class="scenario-step">
+ <div class="scenario-step-label">Schritt 2: Seed-Runde - &euro;&nbsp;200.000 bei &euro;&nbsp;800.000 Pre-Money</div>
+ <p style="font-size:13px;color:#6B7280;margin-bottom:6px;">Post-Money = &euro;&nbsp;1.000.000 &rarr; Investor erhält 20&nbsp;%</p>
+ <ul>
+ <li>Anna <span class="val">70&nbsp;% &times; 80&nbsp;% = 56,0&nbsp;%</span></li>
+ <li>Ben <span class="val">30&nbsp;% &times; 80&nbsp;% = 24,0&nbsp;%</span></li>
+ <li>Investor <span class="val">20,0&nbsp;%</span></li>
+ </ul>
+ </div>
+
+ <div class="scenario-step">
+ <div class="scenario-step-label">Schritt 3: ESOP-Pool - 10&nbsp;% aus bestehenden Anteilen</div>
+ <p style="font-size:13px;color:#6B7280;margin-bottom:6px;">Alle bestehenden Anteile werden um 10&nbsp;% verwässert</p>
+ <ul>
+ <li>Anna <span class="val">56&nbsp;% &times; 90&nbsp;% = 50,4&nbsp;%</span></li>
+ <li>Ben <span class="val">24&nbsp;% &times; 90&nbsp;% = 21,6&nbsp;%</span></li>
+ <li>Investor <span class="val">20&nbsp;% &times; 90&nbsp;% = 18,0&nbsp;%</span></li>
+ <li>ESOP Pool <span class="val">10,0&nbsp;%</span></li>
+ </ul>
+ </div>
+
+ </div>
+ </div>
+
+ <h4>Formeln für die Verwässerung</h4>
+ <div class="formula-block">
+ <span class="comment">// Verwässerungsformeln</span><br><br>
+ <span class="keyword">Verwässerung</span> = Neue Anteile / Post-Money Stammkapital<br><br>
+ <span class="keyword">Neuer Anteil</span> = Alter Anteil &times; (1 &minus; Verwässerung)<br><br>
+ <span class="keyword">Post-Money</span> = Pre-Money + Investment<br><br>
+ <span class="keyword">Preis pro Prozent</span> = Investment / Neue Anteile (%)
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Achtung</span>
+ Richte den ESOP-Pool <strong>vor</strong> der Investor:innen-Runde ein - nicht danach. Investor:innen bestehen häufig darauf, dass der ESOP-Pool auf der Pre-Money-Bewertung basiert, was bedeutet, dass nur die Gründer:innen verwässert werden - nicht der Investor.
+ </div>
+ </div>
+
+ <!-- TAB 5: Wandeldarlehen -->
+ <div id="tab-wandel" class="tab-content">
+ <h3>Tab 5: Wandeldarlehen-Konvertierung</h3>
+
+ <p>Ein <strong>Wandeldarlehen</strong> (Convertible Loan) ist in Österreich das beliebteste Frühphasen-Finanzierungsinstrument. Du bekommst Geld als Darlehen, das später in Anteile umgewandelt wird - typischerweise bei der nächsten Finanzierungsrunde.</p>
+
+ <h4>Typische Konditionen in Österreich</h4>
+ <div class="table-wrap">
+ <table>
+ <thead>
+ <tr>
+ <th>Parameter</th>
+ <th>Typischer Wert</th>
+ <th>Erklärung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Darlehenssumme</strong></td>
+ <td>&euro;&nbsp;25.000-200.000</td>
+ <td>Hängt von Phase und Bedarf ab</td>
+ </tr>
+ <tr>
+ <td><strong>Zinssatz</strong></td>
+ <td>2-5&nbsp;% p.a.</td>
+ <td>Wird zum Darlehen addiert, erhöht Konvertierungsbetrag</td>
+ </tr>
+ <tr>
+ <td><strong>Laufzeit</strong></td>
+ <td>12-24 Monate</td>
+ <td>Muss bis Ablauf konvertiert oder zurückgezahlt werden</td>
+ </tr>
+ <tr>
+ <td><strong>Discount</strong></td>
+ <td>10-25&nbsp;%</td>
+ <td>Rabatt auf die Bewertung der nächsten Runde als Belohnung für frühes Risiko</td>
+ </tr>
+ <tr>
+ <td><strong>Valuation Cap</strong></td>
+ <td>Optional</td>
+ <td>Maximale Bewertung, zu der konvertiert wird - schützt den Investor bei starkem Wachstum</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <h4>Konvertierungsformel</h4>
+ <div class="formula-block">
+ <span class="comment">// Wandeldarlehen-Konvertierung</span><br><br>
+ <span class="keyword">Konvertierungsbetrag</span> = Darlehen &times; (1 + Zinssatz &times; Laufzeit / 12)<br><br>
+ <span class="keyword">Konvertierungspreis</span> = Min(Cap, Bewertung &times; (1 &minus; Discount))<br><br>
+ <span class="keyword">Neue Anteile (%)</span> = Konvertierungsbetrag / Post-Money Bewertung &times; 100
+ </div>
+
+ <h4>Beispielrechnung</h4>
+ <div class="info-box neutral">
+ <ul>
+ <li>Darlehen: <strong>&euro;&nbsp;100.000</strong>, Zinssatz: <strong>4&nbsp;% p.a.</strong>, Laufzeit: <strong>18 Monate</strong></li>
+ <li>Konvertierungsbetrag: &euro;&nbsp;100.000 &times; (1 + 0,04 &times; 18/12) = <strong>&euro;&nbsp;106.000</strong></li>
+ <li>Nächste Runde: Pre-Money <strong>&euro;&nbsp;2.000.000</strong>, Discount: <strong>20&nbsp;%</strong></li>
+ <li>Konvertierungspreis: &euro;&nbsp;2.000.000 &times; (1 &minus; 0,20) = <strong>&euro;&nbsp;1.600.000</strong> effektive Bewertung</li>
+ <li>Post-Money (inkl. Runde + Konvertierung): abhängig von Rundendetails</li>
+ </ul>
+ </div>
+
+ <div class="info-box tip">
+ <span class="info-box-label">Praxis-Tipp</span>
+ Dokumentiere jedes Wandeldarlehen im Cap Table, auch wenn es noch nicht konvertiert wurde. Führe eine Spalte &ldquo;Status&rdquo; (aktiv / konvertiert / zurückgezahlt) und berechne den potenziellen Konvertierungsbetrag laufend mit.
+ </div>
+ </div>
+
+ </div>
+ </section>
+
+ <!-- ==================== 4. SZENARIO-RECHNER ==================== -->
+ <section id="rechner" class="section-card section-rechner">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#128172;</span>
+ <h2>4. Szenario-Rechner - Verwässerung berechnen</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+
+ <p>Gib deine Gesellschafter:innen und eine Finanzierungsrunde ein, um zu sehen, wie sich die Anteile verändern. Alle Berechnungen passieren lokal - keine Daten werden gesendet.</p>
+
+ <div class="calc-container">
+
+ <!-- Founders Section -->
+ <div class="calc-section">
+ <div class="calc-section-title">Gesellschafter:innen vor der Runde</div>
+ <div id="founders-list">
+ <div class="founder-row">
+ <input type="text" placeholder="Name (z.B. Anna)" value="Anna" aria-label="Name Gesellschafter:in">
+ <input type="number" placeholder="%" value="70" min="0" max="100" step="0.1" aria-label="Anteil in Prozent">
+ <button class="btn-remove" onclick="removeFounder(this)" title="Entfernen" aria-label="Gesellschafter:in entfernen">&times;</button>
+ </div>
+ <div class="founder-row">
+ <input type="text" placeholder="Name (z.B. Ben)" value="Ben" aria-label="Name Gesellschafter:in">
+ <input type="number" placeholder="%" value="30" min="0" max="100" step="0.1" aria-label="Anteil in Prozent">
+ <button class="btn-remove" onclick="removeFounder(this)" title="Entfernen" aria-label="Gesellschafter:in entfernen">&times;</button>
+ </div>
+ </div>
+ <button class="btn-add" onclick="addFounder()">+ Gesellschafter:in hinzufügen</button>
+ </div>
+
+ <!-- Investment Round -->
+ <div class="calc-section">
+ <div class="calc-section-title">Finanzierungsrunde</div>
+ <div class="calc-input-row">
+ <div class="calc-input-group">
+ <label for="calc-investment">Investment (&euro;)</label>
+ <div class="helper">Wie viel investiert wird</div>
+ <input type="number" id="calc-investment" value="200000" min="0" step="1000" aria-label="Investment in Euro">
+ </div>
+ <div class="calc-input-group">
+ <label for="calc-premoney">Pre-Money Bewertung (&euro;)</label>
+ <div class="helper">Bewertung vor dem Investment</div>
+ <input type="number" id="calc-premoney" value="800000" min="0" step="1000" aria-label="Pre-Money Bewertung in Euro">
+ </div>
+ </div>
+ <div class="calc-input-group">
+ <label for="calc-esop">ESOP-Pool nach Runde (%)</label>
+ <div class="helper">Optional: z.B. 10&nbsp;% - wird aus bestehenden Anteilen reserviert. 0 = kein Pool.</div>
+ <input type="number" id="calc-esop" value="0" min="0" max="50" step="0.5" aria-label="ESOP Pool in Prozent">
+ </div>
+ </div>
+
+ <button class="btn-calc" onclick="calculateCapTable()">Cap Table berechnen</button>
+
+ <!-- Results -->
+ <div class="calc-results" id="calc-results">
+ <div class="calc-results-title" id="results-title">Ergebnis: Cap Table nach der Runde</div>
+ <div id="results-summary" style="font-size:14px;margin-bottom:14px;color:#6B7280;"></div>
+ <div class="table-wrap">
+ <table class="result-table">
+ <thead>
+ <tr>
+ <th>Gesellschafter:in</th>
+ <th>Anteil vorher</th>
+ <th>Anteil nachher</th>
+ <th>Verwässerung</th>
+ <th style="width:30%">Visualisierung</th>
+ </tr>
+ </thead>
+ <tbody id="results-tbody">
+ </tbody>
+ </table>
+ </div>
+ <div id="results-note" style="margin-top:12px;font-size:13px;color:#6B7280;"></div>
+ </div>
+
+ </div>
+
+ </div>
+ </section>
+
+ <!-- ==================== 5. HÄUFIGE FEHLER ==================== -->
+ <section id="fehler" class="section-card section-fehler">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#9888;&#65039;</span>
+ <h2>5. Häufige Fehler beim Cap Table</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+
+ <div class="info-box warning" style="margin-top:0;">
+ <span class="info-box-label">Fehler 1: Cap Table nicht von Anfang an führen</span>
+ Viele Gründer:innen starten den Cap Table erst, wenn ein Investor danach fragt. Dann fehlen historische Daten, Vesting-Zeitpunkte und frühere Vereinbarungen. <strong>Starte ab Tag&nbsp;1.</strong>
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 2: Vesting-Klauseln vergessen</span>
+ Ohne Vesting kann ein:e Mitgründer:in nach drei Monaten mit 50&nbsp;% der Firma gehen. Standardmäßig sollte jede:r Gründer:in einem 4-Jahres-Vesting mit Cliff unterliegen - auch du selbst.
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 3: ESOP-Pool zu spät einrichten</span>
+ Wenn du den Pool nach der Investor:innen-Runde einrichtest, verwässerst du dich zusätzlich. Investor:innen bestehen fast immer darauf, dass der Pool <em>vor</em> ihrem Einstieg (auf Pre-Money-Basis) eingerichtet wird.
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 4: Wandeldarlehen-Konditionen nicht dokumentieren</span>
+ Jedes Wandeldarlehen verändert den Cap Table bei Konvertierung. Wenn die Konditionen (Discount, Cap, Zinssatz) nicht sauber dokumentiert sind, gibt es bei der nächsten Runde böse Überraschungen.
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 5: Gesellschafterverzeichnis nicht aktualisieren</span>
+ Der Cap Table ist ein internes Dokument - aber das Gesellschafterverzeichnis im Firmenbuch muss bei jeder Änderung aktualisiert werden. Verspätete Eintragungen können rechtliche Probleme verursachen.
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 6: Dead Equity ignorieren</span>
+ Anteile, die von inaktiven Gesellschafter:innen gehalten werden (z.B. früher Advisor, der nicht mehr aktiv ist), blockieren künftige Runden. Definiere klare Reverse-Vesting- oder Rückfallklauseln.
+ </div>
+
+ <div class="info-box warning">
+ <span class="info-box-label">Fehler 7: 50/50-Aufteilung ohne Deadlock-Klausel</span>
+ Gleiche Anteile klingen fair, führen aber bei Meinungsverschiedenheiten zu Stillstand. Wenn 50/50, dann mit klarer Deadlock-Resolution im Gesellschaftsvertrag (z.B. Stichentscheid, Mediation, Drag-Along).
+ </div>
+
+ </div>
+ </section>
+
+ <!-- ==================== 6. CHECKLISTE ==================== -->
+ <section id="checkliste" class="section-card section-checklist">
+ <div class="section-header" onclick="toggleSection(this)">
+ <span class="section-icon">&#9989;</span>
+ <h2>6. Checkliste: Cap Table Management (10 Punkte)</h2>
+ <svg class="chevron" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+ </div>
+ <div class="section-body">
+
+ <ol class="checklist">
+ <li><strong>Cap Table ab Gründung führen</strong> - auch bei nur zwei Gesellschafter:innen. Google Sheets reicht für den Start völlig aus.</li>
+ <li><strong>Gesellschafterverzeichnis und Firmenbuch aktuell halten</strong> - bei jeder Änderung im Gesellschafterkreis die Eintragung beim Firmenbuchgericht veranlassen.</li>
+ <li><strong>Vesting für alle Gründer:innen vereinbaren</strong> - 4&nbsp;Jahre mit 1&nbsp;Jahr Cliff als Standard. Im Gesellschaftsvertrag fixieren.</li>
+ <li><strong>ESOP-Pool frühzeitig reservieren</strong> - idealerweise bei Gründung oder spätestens vor der ersten Investor:innen-Runde. 10-15&nbsp;% ist ein typischer Wert.</li>
+ <li><strong>Jede Finanzierungsrunde dokumentieren</strong> - Investment, Pre-Money, Post-Money, neue Anteile. In Tab 3 eintragen.</li>
+ <li><strong>Wandeldarlehen laufend tracken</strong> - alle offenen Convertibles mit Konditionen, Laufzeit und potenziellem Konvertierungsbetrag in Tab 5 führen.</li>
+ <li><strong>Verwässerungsszenarien simulieren</strong> - vor jeder Runde berechnen, wie die Anteile aussehen werden. Nutze den Szenario-Rechner oben.</li>
+ <li><strong>Good Leaver / Bad Leaver definieren</strong> - im ESOP-Vertrag und im Gesellschaftsvertrag. Was passiert bei Kündigung, Krankheit, Streit?</li>
+ <li><strong>Cap Table bei jeder Runde mit Investor:innen und Anwältin abstimmen</strong> - alle müssen dasselbe Bild haben. Unstimmigkeiten früh klären.</li>
+ <li><strong>Steuerliche Auswirkungen prüfen</strong> - Anteilsabtretungen können in Österreich steuerpflichtig sein (KESt auf Substanzgewinn). Steuerberater:in frühzeitig einbinden.</li>
+ </ol>
+
+ </div>
+ </section>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Unterstützung beim Cap Table?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching helfen wir dir bei Gesellschafterstruktur, ESOP-Programm und Verwässerungsplanung - vertraulich und kostenlos.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+
+ <script>
+ // ========== COLLAPSIBLE SECTIONS ==========
+ function toggleSection(headerEl) {
+ const body = headerEl.nextElementSibling;
+ const isCollapsed = body.classList.contains('collapsed');
+
+ if (isCollapsed) {
+ body.classList.remove('collapsed');
+ body.style.maxHeight = body.scrollHeight + 'px';
+ headerEl.classList.remove('collapsed');
+ setTimeout(function() {
+ body.style.maxHeight = 'none';
+ }, 400);
+ } else {
+ body.style.maxHeight = body.scrollHeight + 'px';
+ body.offsetHeight;
+ body.classList.add('collapsed');
+ body.style.maxHeight = '0';
+ headerEl.classList.add('collapsed');
+ }
+ }
+
+ // ========== TAB SWITCHING ==========
+ function switchTab(event, tabId) {
+ var tabButtons = event.target.closest('.tabs').querySelectorAll('.tab-btn');
+ tabButtons.forEach(function(btn) { btn.classList.remove('active'); });
+ event.target.classList.add('active');
+
+ var sectionBody = event.target.closest('.section-body');
+ var tabContents = sectionBody.querySelectorAll('.tab-content');
+ tabContents.forEach(function(tc) { tc.classList.remove('active'); });
+
+ document.getElementById(tabId).classList.add('active');
+ }
+
+ // ========== FOUNDER MANAGEMENT ==========
+ function addFounder() {
+ var list = document.getElementById('founders-list');
+ var row = document.createElement('div');
+ row.className = 'founder-row';
+ row.innerHTML = '<input type="text" placeholder="Name" aria-label="Name Gesellschafter:in">' +
+ '<input type="number" placeholder="%" min="0" max="100" step="0.1" aria-label="Anteil in Prozent">' +
+ '<button class="btn-remove" onclick="removeFounder(this)" title="Entfernen" aria-label="Gesellschafter:in entfernen">&times;</button>';
+ list.appendChild(row);
+ }
+
+ function removeFounder(btn) {
+ var list = document.getElementById('founders-list');
+ if (list.children.length > 1) {
+ btn.closest('.founder-row').remove();
+ }
+ }
+
+ // ========== CAP TABLE CALCULATOR ==========
+ function calculateCapTable() {
+ var rows = document.querySelectorAll('#founders-list.founder-row');
+ var founders = [];
+ var totalSharesBefore = 0;
+
+ rows.forEach(function(row) {
+ var inputs = row.querySelectorAll('input');
+ var name = inputs[0].value.trim() || 'Unbenannt';
+ var share = parseFloat(inputs[1].value) || 0;
+ if (share > 0) {
+ founders.push({ name: name, shareBefore: share });
+ totalSharesBefore += share;
+ }
+ });
+
+ if (founders.length === 0) {
+ alert('Bitte mindestens eine:n Gesellschafter:in mit Anteil > 0 eingeben.');
+ return;
+ }
+
+ if (Math.abs(totalSharesBefore - 100) > 0.01) {
+ var confirm_norm = confirm(
+ 'Die Anteile summieren sich auf ' + totalSharesBefore.toFixed(1) +
+ ' %. Sollen sie auf 100 % normalisiert werden?'
+ );
+ if (confirm_norm) {
+ founders.forEach(function(f) {
+ f.shareBefore = (f.shareBefore / totalSharesBefore) * 100;
+ });
+ totalSharesBefore = 100;
+ }
+ }
+
+ var investment = parseFloat(document.getElementById('calc-investment').value) || 0;
+ var preMoney = parseFloat(document.getElementById('calc-premoney').value) || 0;
+ var esopPool = parseFloat(document.getElementById('calc-esop').value) || 0;
+
+ if (investment <= 0 || preMoney <= 0) {
+ alert('Bitte Investment und Pre-Money Bewertung eingeben (beide > 0).');
+ return;
+ }
+
+ var postMoney = preMoney + investment;
+ var investorShare = (investment / postMoney) * 100;
+
+ var dilutionFactor = 1 - (investorShare / 100);
+ var esopFactor = esopPool > 0? (1 - esopPool / 100): 1;
+
+ var results = [];
+
+ founders.forEach(function(f) {
+ var afterInvestment = f.shareBefore * dilutionFactor;
+ var afterAll = afterInvestment * esopFactor;
+ results.push({
+ name: f.name,
+ before: f.shareBefore,
+ after: afterAll,
+ dilution: f.shareBefore - afterAll
+ });
+ });
+
+ var investorAfterEsop = investorShare * esopFactor;
+ results.push({
+ name: 'Investor:in',
+ before: 0,
+ after: investorAfterEsop,
+ dilution: 0,
+ isNew: true
+ });
+
+ if (esopPool > 0) {
+ results.push({
+ name: 'ESOP Pool',
+ before: 0,
+ after: esopPool,
+ dilution: 0,
+ isNew: true
+ });
+ }
+
+ var resultsContainer = document.getElementById('calc-results');
+ var tbody = document.getElementById('results-tbody');
+ var summary = document.getElementById('results-summary');
+ var note = document.getElementById('results-note');
+
+ tbody.innerHTML = '';
+
+ results.forEach(function(r) {
+ var tr = document.createElement('tr');
+
+ if (r.name === 'ESOP Pool') {
+ tr.style.background = '#F3F4F6';
+ }
+
+ var dilutionHtml = r.isNew
+? '<span style="color:#28A745;font-weight:600;font-family:\'Courier New\',monospace;font-size:12px;">NEU</span>'
+: '<span class="dilution-badge">&minus;' + r.dilution.toFixed(1) + ' pp</span>';
+
+ tr.innerHTML =
+ '<td style="font-weight:600;">' + r.name + '</td>' +
+ '<td style="font-family:\'Courier New\',monospace;font-size:13px;">' +
+ (r.isNew? '-': r.before.toFixed(1) + ' %') + '</td>' +
+ '<td style="font-family:\'Courier New\',monospace;font-size:13px;font-weight:600;">' +
+ r.after.toFixed(1) + ' %</td>' +
+ '<td>' + dilutionHtml + '</td>' +
+ '<td class="bar-cell">' +
+ '<div class="bar-bg" style="width:' + r.after.toFixed(1) + '%"></div>' +
+ '<span class="bar-text">' + r.after.toFixed(1) + ' %</span>' +
+ '</td>';
+
+ tbody.appendChild(tr);
+ });
+
+ var totalAfter = results.reduce(function(sum, r) { return sum + r.after; }, 0);
+ var totalTr = document.createElement('tr');
+ totalTr.className = 'total-row';
+ totalTr.innerHTML =
+ '<td><strong>GESAMT</strong></td>' +
+ '<td></td>' +
+ '<td style="font-family:\'Courier New\',monospace;font-size:13px;"><strong>' + totalAfter.toFixed(1) + ' %</strong></td>' +
+ '<td></td><td></td>';
+ tbody.appendChild(totalTr);
+
+ summary.innerHTML =
+ 'Post-Money Bewertung: <strong>&euro; ' + postMoney.toLocaleString('de-AT') + '</strong> | ' +
+ 'Investor:innen-Anteil: <strong>' + investorShare.toFixed(1) + ' %</strong> | ' +
+ 'Preis pro %: <strong>&euro; ' + Math.round(investment / investorShare).toLocaleString('de-AT') + '</strong>';
+
+ if (esopPool > 0) {
+ note.innerHTML = 'Hinweis: Der ESOP-Pool (' + esopPool.toFixed(1) +
+ ' %) wurde aus allen bestehenden Anteilen (inkl. Investor:in) herausgerechnet. ' +
+ 'In der Praxis wird der Pool häufig <em>vor</em> dem Investment auf Pre-Money-Basis eingerichtet - was nur die Gründer:innen verwässert.';
+ } else {
+ note.innerHTML = '';
+ }
+
+ resultsContainer.classList.add('visible');
+ resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
+
+ // ========== SMOOTH SCROLL FOR TOC ==========
+ document.querySelectorAll('.toc-list a').forEach(function(link) {
+ link.addEventListener('click', function(e) {
+ e.preventDefault();
+ var targetId = this.getAttribute('href').substring(1);
+ var target = document.getElementById(targetId);
+ if (target) {
+ var sectionHeader = target.querySelector('.section-header');
+ var sectionBody = target.querySelector('.section-body');
+ if (sectionHeader && sectionBody && sectionBody.classList.contains('collapsed')) {
+ toggleSection(sectionHeader);
+ }
+ target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
+ });
+ });
+ </script>
+
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

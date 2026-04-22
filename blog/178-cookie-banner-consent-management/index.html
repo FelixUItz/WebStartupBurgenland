@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Cookie-Banner und Consent-Management: Was wirklich Pflicht ist - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Technische und rechtliche Anforderungen an Cookie-Consent auf deiner Website, TKG 2021, Opt-in, CMPs und Google Consent Mode erklärt."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/178-cookie-banner-consent-management"><!-- Open Graph --><meta property="og:title" content="Cookie-Banner und Consent-Management: Was wirklich Pflicht ist - StartUp Burgenland Blog"><meta property="og:description" content="Technische und rechtliche Anforderungen an Cookie-Consent auf deiner Website, TKG 2021, Opt-in, CMPs und Google Consent Mode erklärt."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cookie-Banner und Consent-Management: Was wirklich Pflicht ist","description":"Technische und rechtliche Anforderungen an Cookie-Consent auf deiner Website, TKG 2021, Opt-in, CMPs und Google Consent Mode erklärt.","datePublished":"2022-01-28T00:00:00.000Z","dateModified":"2022-01-28T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/178-cookie-banner-consent-management","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/178-cookie-banner-consent-management"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/gruendung-und-recht/" class="blog-tag" style="text-decoration:none;"> Gründung &amp; Recht </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Cookie-Banner und Consent-Management: Was wirklich Pflicht ist</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2022-01-28">28. Januar 2022</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h2 id="cookie-banner-nervt-alle----muss-aber-sein">Cookie-Banner: Nervt alle, muss aber sein</h2>
+<p>Du kennst sie, du hasst sie, aber du brauchst sie: Cookie-Banner. Seit der DSGVO und dem österreichischen TKG 2021 (Telekommunikationsgesetz) ist die Einwilligung für nicht-zentral Cookies Pflicht. Einfach einen "OK"-Button hinzuklatschen reicht schon lange nicht mehr. Das Cookie-Banner muss rechtlich korrekt sein, technisch funktionieren und den Nutzer wirklich vor die Wahl stellen, sonst riskierst du Beschwerden bei der DSB und Bußgelder.</p>
+<p>Bei Startup Burgenland sehen wir immer wieder Gründer, die entweder gar kein Cookie-Banner haben oder eines, das technisch nicht funktioniert, sprich: die Cookies werden trotz fehlender Einwilligung geladen. Beides ist problematisch. Und seit die DSB in Österreich aktiver geworden ist und der EuGH mit dem Planet49-Urteil klare Ansagen gemacht hat, gibt es kaum noch Spielraum für kreative Interpretationen.</p>
+<p>In diesem Post klären wir: welche Cookies welcher Kategorie zugeordnet werden, was technisch und rechtlich Pflicht ist, welche Consent-Management-Plattformen für Startups sinnvoll sind und wie du Google Consent Mode v2 korrekt einrichtest.</p>
+<h2 id="die-rechtliche-grundlage-paragraph-165-tkg-2021">Die rechtliche Grundlage: Paragraph 165 TKG 2021</h2>
+<p>In Österreich regelt Paragraph 165 Abs. 3 TKG 2021 das Setzen von Cookies und vergleichbaren Technologien. Das Telekommunikationsgesetz setzt die ePrivacy-Richtlinie der EU (Richtlinie 2002/58/EG) in österreichisches Recht um. Die Kernaussage ist klar:</p>
+<p>Du brauchst eine informierte, aktive Einwilligung, bevor du Cookies oder ähnliche Technologien auf dem Endgerät der Nutzer speicherst, es sei denn, sie sind technisch unbedingt notwendig für den vom Nutzer ausdrücklich gewünschten Dienst.</p>
+<p>Die DSGVO kommt zusätzlich ins Spiel, weil die meisten Cookies personenbezogene Daten verarbeiten (insbesondere wenn sie zur Identifizierung oder Nachverfolgung dienen). Du brauchst also sowohl die TKG-Einwilligung für den Zugriff auf das Endgerät als auch eine DSGVO-Rechtsgrundlage für die Verarbeitung der dabei erhobenen Daten.</p>
+<p><strong>Wichtig:</strong> Auch Technologien, die keine Cookies im engeren Sinne sind, fallen unter diese Regelung. Local Storage, Session Storage, Fingerprinting, Tracking-Pixel, ETags und andere Methoden zur Speicherung oder zum Auslesen von Informationen auf dem Endgerät unterliegen denselben Anforderungen. Der Gesetzgeber hat bewusst technologieneutral formuliert.</p>
+<p>Das Verhältnis zwischen TKG und DSGVO ist hierarchisch: Zuerst musst du die TKG-Einwilligung für den Cookie-Zugriff einholen, dann greift die DSGVO für die anschließende Datenverarbeitung. In der Praxis holst du beides mit einem korrekten Cookie-Banner gleichzeitig ein.</p>
+<h2 id="cookie-kategorien-was-braucht-einwilligung-und-was-nicht">Cookie-Kategorien: Was braucht Einwilligung und was nicht?</h2>
+<p>Nicht alle Cookies sind gleich. Die Unterscheidung nach Zweck ist entscheidend für die Frage, ob du eine Einwilligung brauchst:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Kategorie</th><th>Beispiele</th><th>Einwilligung nötig?</th><th>Begründung</th></tr></thead><tbody><tr><td>Technisch notwendig</td><td>Session-Cookie, Warenkorb, CSRF-Token, Login-Cookie</td><td>Nein</td><td>Unbedingt erforderlich für den gewünschten Dienst</td></tr><tr><td>Funktional</td><td>Spracheinstellungen, gespeicherte Formulardaten, Chat-Status</td><td>Graubereich</td><td>Im Zweifel Einwilligung einholen</td></tr><tr><td>Statistik/Analytics</td><td>Google Analytics, Matomo (mit Cookies), Hotjar</td><td>Ja</td><td>Nicht technisch notwendig</td></tr><tr><td>Marketing/Tracking</td><td>Facebook Pixel, Google Ads, LinkedIn Insight Tag</td><td>Ja</td><td>Eindeutig einwilligungspflichtig</td></tr><tr><td>Social Media</td><td>YouTube-Embeds, Instagram-Widgets, Twitter-Feeds</td><td>Ja</td><td>Datentransfer an Drittanbieter</td></tr></tbody></table>
+<p>Bei funktionalen Cookies gibt es einen Graubereich. Eine Spracheinstellung, die der Nutzer aktiv gewählt hat, kann als technisch notwendig argumentiert werden. Ein Cookie, das sich merkt, welche Produkte der Nutzer angesehen hat, ist eher Marketing. Im Zweifel: Einwilligung einholen. Das ist rechtlich sicherer und kostet technisch nichts extra.</p>
+<p><strong>Sonderfall Matomo/Piwik:</strong> Wenn du Matomo so konfigurierst, dass keine Cookies gesetzt werden, die IP-Adresse anonymisiert wird und die Daten auf deinem eigenen Server bleiben, kann eine Analyse ohne Einwilligung auf Basis des berechtigten Interesses möglich sein. Die französische Aufsichtsbehörde CNIL hat das in bestimmten Konfigurationen für zulässig erklärt. Die österreichische DSB hat sich dazu nicht explizit positioniert, mit Cookie-freiem Matomo bist du aber auf der sicheren Seite.</p>
+<h2 id="anforderungen-an-ein-rechtlich-korrektes-cookie-banner">Anforderungen an ein rechtlich korrektes Cookie-Banner</h2>
+<p>Ein Cookie-Banner muss mehrere Kriterien gleichzeitig erfüllen, um sowohl TKG- als auch DSGVO-konform zu sein. Die Anforderungen sind durch Urteile des EuGH und Entscheidungen nationaler Aufsichtsbehörden mittlerweile recht klar definiert.</p>
+<h3 id="1-opt-in-statt-opt-out">1. Opt-In statt Opt-Out</h3>
+<p>Cookies dürfen erst gesetzt werden, nachdem der Nutzer aktiv zugestimmt hat. Vorangekreuzte Checkboxen sind ungültig (EuGH, Rs. C-673/17, Planet49). Das bedeutet technisch: Alle Tracking-Skripte müssen blockiert werden, bis die Einwilligung vorliegt. Kein Google-Analytics-Tag, kein Facebook-Pixel, kein YouTube-Embed darf vor dem Consent laden. Das ist der häufigste technische Fehler, das Banner wird zwar angezeigt, aber die Skripte laufen trotzdem schon im Hintergrund.</p>
+<h3 id="2-gleichwertige-ablehnungsmöglichkeit">2. Gleichwertige Ablehnungsmöglichkeit</h3>
+<p>Der "Ablehnen"-Button muss genauso prominent sein wie der "Akzeptieren"-Button. Gleiche Größe, gleiche Farbe, gleiche Position. Ein kleiner Link "Einstellungen" neben einem großen grünen "Alle akzeptieren"-Button ist nach aktueller Rechtsprechung ein Dark Pattern und wird von Aufsichtsbehörden beanstandet. Die französische CNIL hat 2022 gegen Google und Facebook Bußgelder in Millionenhöhe wegen genau solcher Designs verhängt. Die DSB und andere europäische Behörden folgen dieser Linie.</p>
+<h3 id="3-granulare-auswahl">3. Granulare Auswahl</h3>
+<p>Nutzer müssen einzelne Cookie-Kategorien auswählen können. "Alles oder nichts" ist nicht zulässig. Typische Kategorien im Banner sind: Notwendig (nicht abwählbar, ausgegraut), Statistik, Marketing und Funktional. Manche Consent-Management-Plattformen erlauben auch die Auswahl auf Ebene einzelner Dienste, das ist besonders nutzerfreundlich, aber nicht verpflichtend.</p>
+<h3 id="4-informationspflichten-im-banner">4. Informationspflichten im Banner</h3>
+<p>Im oder über das Banner müssen folgende Informationen zugänglich sein: Welche Cookies und Tracking-Technologien werden eingesetzt (Name, Anbieter, Zweck, Laufzeit), auf welcher Rechtsgrundlage, ein Link zur vollständigen <a href="/blog/177-datenschutzerklaerung-website">Datenschutzerklärung</a> und ein Hinweis auf die Widerrufsmöglichkeit. Du musst nicht alles direkt im Banner zeigen, eine zweite Ebene ("Details anzeigen") ist üblich und zulässig.</p>
+<h3 id="5-dokumentation-der-einwilligung">5. Dokumentation der Einwilligung</h3>
+<p>Du musst nachweisen können, dass und wann eine Person eingewilligt hat (Rechenschaftspflicht nach Art. 5 Abs. 2 DSGVO). Das heißt: Consent-Logs speichern, mit Timestamp, gewählten Kategorien, Version des Banner-Textes und idealerweise einem anonymisierten Identifier. Die meisten Consent-Management-Plattformen erledigen das automatisch.</p>
+<h3 id="6-widerrufsmöglichkeit">6. Widerrufsmöglichkeit</h3>
+<p>Die Einwilligung muss jederzeit widerrufbar sein, und der Widerruf muss genauso einfach sein wie die Erteilung (Art. 7 Abs. 3 DSGVO). In der Praxis bedeutet das: Ein dauerhaft sichtbarer Link im Footer (z. B. "Cookie-Einstellungen"), über den der Nutzer das Banner erneut öffnen und seine Auswahl ändern kann.</p>
+<h2 id="consent-management-plattformen-cmps-im-vergleich">Consent-Management-Plattformen (CMPs) im Vergleich</h2>
+<p>Du musst das Cookie-Banner nicht selbst programmieren. Es gibt spezialisierte Plattformen, die Banner, Consent-Logik, Cookie-Scan und Dokumentation mitbringen:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Plattform</th><th>Kosten (Einstieg)</th><th>Vorteile</th><th>Nachteile</th></tr></thead><tbody><tr><td>Cookiebot (Usercentrics)</td><td>Gratis bis 50 Unterseiten</td><td>Automatischer Cookie-Scan, TCF 2.2, Google-zertifiziert</td><td>Teuer bei Wachstum (ab EUR 12/Monat)</td></tr><tr><td>Usercentrics</td><td>Ab ca. EUR 50/Monat</td><td>Sehr umfangreich, Google-zertifiziert, TCF 2.2</td><td>Overkill für kleine Seiten</td></tr><tr><td>Klaro (Open Source)</td><td>Kostenlos</td><td>Selbst gehostet, flexibel, keine laufenden Kosten</td><td>Technisches Know-how nötig, kein Auto-Scan</td></tr><tr><td>Complianz (WordPress)</td><td>Ab EUR 45/Jahr</td><td>Gutes WordPress-Plugin, einfache Einrichtung</td><td>Nur für WordPress</td></tr><tr><td>CookieYes</td><td>Gratis-Basisversion</td><td>Einfache Einrichtung, Google-zertifiziert</td><td>Weniger Funktionen in der Gratisversion</td></tr><tr><td>Borlabs Cookie (WordPress)</td><td>Ca. EUR 50 einmalig</td><td>Sehr beliebtes WordPress-Plugin, einmalige Kosten</td><td>Nur für WordPress, kein Auto-Scan</td></tr></tbody></table>
+<h3 id="empfehlung-für-startups">Empfehlung für Startups</h3>
+<p>Wenn du gerade startest und eine kleine Website mit unter 50 Seiten hast, nimm <strong>Cookiebot</strong> in der Gratisversion. Es scannt deine Website automatisch, kategorisiert die gefundenen Cookies und generiert ein rechtskonformes Banner. Wenn du WordPress nutzt, ist <strong>Complianz</strong> oder <strong>Borlabs Cookie</strong> eine solide und kostengünstige Alternative.</p>
+<p>Für technisch versierte Gründer ist <strong>Klaro</strong> spannend: Open Source, self-hosted, keine laufenden Kosten, volle Kontrolle. Aber du musst die Cookies selbst kategorisieren und das Banner konfigurieren. Wenn du mit dem Google Tag Manager arbeitest, lässt sich Klaro gut integrieren.</p>
+<p>Achte bei der Auswahl darauf, dass die CMP als "Google Consent Mode Partner" zertifiziert ist, wenn du Google-Dienste nutzt. Das vereinfacht die Integration erheblich.</p>
+<h3 id="kosten-nutzen-vergleich-für-startups">Kosten-Nutzen-Vergleich für Startups</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Kriterium</th><th>Cookiebot (Free)</th><th>Complianz (WordPress)</th><th>Klaro (Open Source)</th><th>Usercentrics</th></tr></thead><tbody><tr><td>Einrichtungszeit</td><td>30 Min</td><td>45 Min</td><td>2-4 Std</td><td>60 Min</td></tr><tr><td>Technisches Know-how</td><td>Niedrig</td><td>Niedrig</td><td>Hoch</td><td>Mittel</td></tr><tr><td>Automatischer Cookie-Scan</td><td>Ja</td><td>Teilweise</td><td>Nein</td><td>Ja</td></tr><tr><td>Google Consent Mode v2</td><td>Ja</td><td>Ja</td><td>Manuell</td><td>Ja</td></tr><tr><td>TCF 2.2 Support</td><td>Ja</td><td>Nein</td><td>Nein</td><td>Ja</td></tr><tr><td>Laufende Kosten (1. Jahr)</td><td>EUR 0</td><td>EUR 45</td><td>EUR 0</td><td>EUR 600+</td></tr><tr><td>Geeignet für</td><td>Kleine Sites</td><td>WordPress-Sites</td><td>Tech-Startups</td><td>Wachsende Sites</td></tr></tbody></table>
+<h2 id="google-consent-mode-v2----was-es-ist-und-wie-du-es-einrichtest">Google Consent Mode v2, was es ist und wie du es einrichtest</h2>
+<p>Seit März 2024 verlangt Google den Consent Mode v2 für alle Websites, die Google-Dienste nutzen (Analytics, Ads, Tag Manager). Ohne Consent Mode riskierst du Datenverluste in Google Analytics und kannst keine Remarketing-Listen mehr in Google Ads aufbauen.</p>
+<p><strong>Was ist der Consent Mode?</strong> Der Consent Mode kommuniziert den Einwilligungsstatus des Nutzers an Google-Dienste. Er steuert, wie sich Google-Tags verhalten, je nachdem ob der Nutzer zugestimmt hat oder nicht.</p>
+<p>Es gibt zwei Implementierungsvarianten:</p>
+<p><strong>Basic Mode:</strong> Google-Tags werden erst nach Einwilligung geladen. Ohne Einwilligung werden keine Daten an Google gesendet. Dies ist die datenschutzrechtlich sicherste Variante und die, die ich für österreichische Startups empfehle.</p>
+<p><strong>Advanced Mode:</strong> Google-Tags werden immer geladen, senden aber ohne Einwilligung nur cookielose, anonymisierte Pings an Google. Google nutzt diese für statistische Modellierung, um Datenlücken zu füllen. Diese Variante ist datenschutzrechtlich umstritten, weil auch ohne explizite Einwilligung Daten an Google-Server übermittelt werden. Die DSB hat sich dazu noch nicht abschließend geäußert, aber europäische Aufsichtsbehörden sehen das kritisch.</p>
+<h3 id="technische-einrichtung">Technische Einrichtung</h3>
+<p>Die meisten Consent-Management-Plattformen unterstützen Google Consent Mode v2 out of the box. In Cookiebot oder Usercentrics aktivierst du es mit einem Klick. Wenn du den Google Tag Manager (GTM) nutzt, musst du die Consent-Einstellungen in den Tag-Konfigurationen richtig setzen:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Consent-Signal</th><th>Bedeutung</th><th>Typische Zuordnung</th></tr></thead><tbody><tr><td><code>ad_storage</code></td><td>Erlaubnis für Werbe-Cookies</td><td>Marketing-Kategorie</td></tr><tr><td><code>analytics_storage</code></td><td>Erlaubnis für Analytics-Cookies</td><td>Statistik-Kategorie</td></tr><tr><td><code>ad_user_data</code></td><td>Erlaubnis, Nutzerdaten an Google Ads zu senden</td><td>Marketing-Kategorie</td></tr><tr><td><code>ad_personalization</code></td><td>Erlaubnis für personalisierte Werbung</td><td>Marketing-Kategorie</td></tr><tr><td><code>functionality_storage</code></td><td>Erlaubnis für funktionale Cookies</td><td>Funktional-Kategorie</td></tr><tr><td><code>personalization_storage</code></td><td>Erlaubnis für Personalisierungs-Cookies</td><td>Funktional-Kategorie</td></tr></tbody></table>
+<p>Im GTM setzt du für jeden Tag die "Consent Settings" auf "Require consent" für die relevanten Signale. Der GTM blockiert dann automatisch Tags, für die keine Einwilligung vorliegt.</p>
+<h2 id="technische-checkliste-cookie-banner-richtig-implementieren">Technische Checkliste: Cookie-Banner richtig implementieren</h2>
+<p>Hier die Schritt-für-Schritt-Anleitung für eine korrekte Implementierung:</p>
+<ol>
+<li><strong>Cookie-Scan durchführen:</strong> Welche Cookies und Tracking-Technologien setzt deine Website tatsächlich? Nutze die Browser-Entwicklertools (Application > Cookies) oder einen Online-Scanner wie den von Cookiebot</li>
+<li><strong>Kategorien zuordnen:</strong> Ordne jeden Cookie einer Kategorie zu (notwendig, funktional, statistik, marketing)</li>
+<li><strong>CMP auswählen und einrichten:</strong> Installiere die gewählte Consent-Management-Plattform</li>
+<li><strong>Alle Skripte blockieren</strong> bis Einwilligung vorliegt: Setze type="text/plain" bei Script-Tags oder nutze den Tag Manager mit Consent-Triggern</li>
+<li><strong>Banner gestalten:</strong> Gleichwertige Buttons, keine Dark Patterns, klare Sprache, Link zur Datenschutzerklärung</li>
+<li><strong>Cookie-Tabelle</strong> in der <a href="/blog/177-datenschutzerklaerung-website">Datenschutzerklärung</a> ergänzen</li>
+<li><strong>Consent-Logs aktivieren:</strong> Einwilligungen werden dokumentiert</li>
+<li><strong>Widerruf ermöglichen:</strong> Link im Footer zum erneuten Öffnen des Banners</li>
+<li><strong>Google Consent Mode</strong> konfigurieren, falls Google-Dienste im Einsatz</li>
+<li><strong>Testen:</strong> Mit Browser-Entwicklertools prüfen, ob Cookies wirklich erst nach Consent gesetzt werden. Teste beide Szenarien, Zustimmung und Ablehnung</li>
+<li><strong>Regelmäßig scannen:</strong> Neue Cookies können durch Updates, Plugins oder eingebettete Inhalte entstehen. Plane einen monatlichen Check ein</li>
+</ol>
+<h2 id="sonderfall-cookie-freies-tracking-und-server-side-analytics">Sonderfall: Cookie-freies Tracking und Server-Side Analytics</h2>
+<p>Eine zunehmend beliebte Alternative zum klassischen Cookie-basierten Tracking sind cookie-freie oder server-seitige Analytics-Lösungen. Sie können den Cookie-Banner-Aufwand deutlich reduzieren:</p>
+<p><strong>Matomo ohne Cookies:</strong> Matomo kann so konfiguriert werden, dass keine Cookies gesetzt werden und die IP-Adresse anonymisiert wird. In dieser Konfiguration greift Paragraph 165 TKG 2021 nicht (kein Zugriff auf das Endgerät), und du kannst Analytics ohne Cookie-Consent betreiben. Die französische CNIL hat das explizit für zulässig erklärt, und andere europäische Aufsichtsbehörden folgen dieser Einschätzung. Du brauchst aber weiterhin eine DSGVO-Rechtsgrundlage, in der Regel das berechtigte Interesse (Art. 6 Abs. 1 lit. f).</p>
+<p><strong>Plausible Analytics:</strong> Ein datenschutzfreundlicher Analytics-Dienst, der grundsätzlich keine Cookies setzt und keine personenbezogenen Daten speichert. Server in der EU. Ideal für Startups, die einfache Statistiken ohne Consent-Hürden wollen. Kosten: ab EUR 9 pro Monat.</p>
+<p><strong>Fathom:</strong> Ähnlich wie Plausible, keine Cookies, keine personenbezogenen Daten. Etwas günstiger und mit guter API für Entwickler.</p>
+<p><strong>Server-Side Tracking:</strong> Bei server-seitigem Tracking werden die Analytics-Daten auf deinem eigenen Server verarbeitet, bevor sie (ggf. anonymisiert) an Analytics-Tools weitergeleitet werden. Das reduziert den Drittlandtransfer und gibt dir mehr Kontrolle. Google bietet Server-Side Tagging über den Google Tag Manager an, allerdings brauchst du dafür einen eigenen Server (z. B. bei Google Cloud oder einem EU-Hoster) und technisches Know-how. Für die meisten Startups in der Frühphase ist das Overkill.</p>
+<p><strong>Mein Tipp:</strong> Wenn du gerade deine Website aufbaust und noch kein Analytics eingerichtet hast, starte direkt mit Plausible oder Matomo ohne Cookies. Du sparst dir das Cookie-Banner-Thema für Analytics komplett, bekommst trotzdem die wichtigsten Kennzahlen (Seitenaufrufe, Referrer, Gerätetypen) und musst keine komplexe Consent-Infrastruktur aufbauen.</p>
+<h2 id="cookie-banner-und-single-page-applications-spas">Cookie-Banner und Single-Page-Applications (SPAs)</h2>
+<p>Wenn deine Website oder Web-App als Single-Page-Application gebaut ist (React, Vü, Angular, Svelte), gibt es technische Besonderheiten beim Cookie-Banner:</p>
+<ul>
+<li><strong>Consent-Check bei Navigation:</strong> In einer SPA wird die Seite nicht bei jeder Navigation neu geladen. Das Cookie-Banner muss trotzdem beim ersten Besuch angezeigt werden, und der Consent-Status muss bei internen Navigationen berücksichtigt werden</li>
+<li><strong>Dynamisch geladene Skripte:</strong> Tracking-Skripte werden in SPAs oft dynamisch nachgeladen. Stelle sicher, dass sie nur nach Consent geladen werden</li>
+<li><strong>Tag Manager und SPAs:</strong> Der Google Tag Manager hat spezielle History-Change-Trigger für SPAs. Konfiguriere sie korrekt, damit Pageviews auch bei Client-Side-Navigation getrackt werden, aber natürlich nur nach Consent</li>
+</ul>
+<p>Die meisten CMP-Anbieter (Cookiebot, Usercentrics) unterstützen SPAs, aber du musst die Integration sorgfältig testen. Prüfe insbesondere, ob der Consent-Status bei Client-Side-Navigation korrekt übergeben wird und ob Skripte nicht versehentlich ohne Consent nachladen.</p>
+<h2 id="häufige-fehler-bei-cookie-bannern">Häufige Fehler bei Cookie-Bannern</h2>
+<p><strong>1. Banner zeigt sich, Cookies laufen trotzdem:</strong> Der häufigste technische Fehler. Das Banner ist rein kosmetisch, die Tracking-Skripte laden unabhängig davon. Teste immer im Inkognito-Modus: Lade die Seite, lehne alle Cookies ab und prüfe dann, welche Cookies trotzdem gesetzt werden.</p>
+<p><strong>2. "Cookie-Wall" ohne Alternative:</strong> Manche Websites blockieren den gesamten Inhalt, bis der Nutzer Cookies akzeptiert. Das ist nur in wenigen Ausnahmefällen zulässig (z. B. bei werbefinanzierten Medien mit echtem Alternativangebot). Für Startup-Websites ist eine Cookie-Wall praktisch nie gerechtfertigt.</p>
+<p><strong>3. Fehlende Widerrufsmöglichkeit:</strong> Der Nutzer muss seine Cookie-Einstellungen jederzeit ändern können. Ein Link im Footer ist der Standard. Wenn du Cookiebot nutzt, wird automatisch ein Widerrufs-Link generiert.</p>
+<p><strong>4. Banner auf jeder Seite neu anzeigen:</strong> Wenn ein Nutzer seine Wahl getroffen hat, sollte das Banner nicht bei jedem Seitenaufruf erneut erscheinen. Die CMP speichert die Entscheidung in einem eigenen Cookie (das ist ein technisch notwendiges Cookie und braucht keine Einwilligung).</p>
+<p><strong>5. "Nur notwendige Cookies" als versteckten Link:</strong> Wenn du nur "Alle akzeptieren" als Button und "Nur notwendige" als kleinen Textlink anbietest, ist das ein Dark Pattern. Beide Optionen müssen gleichwertig dargestellt werden.</p>
+<h2 id="cookie-banner-regelmäßig-prüfen-und-aktualisieren">Cookie-Banner regelmäßig prüfen und aktualisieren</h2>
+<p>Ein Cookie-Banner ist kein Set-and-forget-Element. Deine Website verändert sich laufend, und damit auch die Cookies:</p>
+<p><strong>Wann du das Banner prüfen musst:</strong></p>
+<ul>
+<li>Nach jedem Plugin-Update (WordPress-Plugins können neue Cookies einführen)</li>
+<li>Wenn du ein neues Tool einbindest (Chat-Widget, Analytics, A/B-Testing)</li>
+<li>Wenn du Inhalte einbettest (YouTube-Videos, Instagram-Posts, Google Maps)</li>
+<li>Mindestens vierteljährlich als Routine-Check</li>
+</ul>
+<p><strong>Wie du prüfst:</strong></p>
+<ul>
+<li>Öffne deine Website im Inkognito-Modus</li>
+<li>Lehne alle Cookies ab</li>
+<li>Prüfe in den Browser-Entwicklertools (Application > Cookies), welche Cookies trotzdem gesetzt werden</li>
+<li>Prüfe im Netzwerk-Tab, ob Anfragen an Drittanbieter gehen</li>
+<li>Wiederhole den Test nach Akzeptieren aller Cookies</li>
+</ul>
+<p><strong>Automatische Scans:</strong> Cookiebot und Usercentrics bieten automatische Website-Scans an, die neue Cookies erkennen und dich benachrichtigen. Nutze diese Funktion, sie spart dir regelmäßige manuelle Prüfungen.</p>
+<h2 id="abmahnrisiko-und-aktuelle-rechtsprechung">Abmahnrisiko und aktuelle Rechtsprechung</h2>
+<p>In Österreich gibt es bisher keine systematische Abmahnwelle wegen fehlerhafter Cookie-Banner, wie sie in manchen deutschen Gerichtsbezirken vorkommt. Aber die Risiken steigen:</p>
+<ul>
+<li>Die DSB hat in mehreren Entscheidungen Cookie-Banner beanstandet, die keine gleichwertige Ablehnungsmöglichkeit boten</li>
+<li>Der EuGH hat mit dem Planet49-Urteil klare Maßstäbe für gültige Cookie-Einwilligungen gesetzt</li>
+<li>Die CNIL (Frankreich) hat 2022 gegen Google und Facebook Bußgelder in Höhe von EUR 150 Millionen bzw. EUR 60 Millionen wegen fehlerhafter Cookie-Banner verhängt</li>
+<li>Die irische DPC hat mehrere Verfahren gegen Tech-Unternehmen wegen Cookie-Practices eingeleitet</li>
+<li>NOYB (die Organisation von Max Schrems) hat hunderte Beschwerden gegen Websites mit mangelhaften Cookie-Bannern bei verschiedenen europäischen Aufsichtsbehörden eingereicht</li>
+</ul>
+<p>Für Startups: Das Risiko einer Abmahnung durch Konkurrenten ist in Österreich gering, aber Beschwerden von Nutzern bei der DSB nehmen zu. Ein korrektes Cookie-Banner schützt dich vor beiden Szenarien.</p>
+<h2 id="cookie-banner-und-performance----der-balanceakt">Cookie-Banner und Performance, der Balanceakt</h2>
+<p>Ein Thema, das technisch versierte Gründer oft beschäftigt: Cookie-Banner und Consent-Management-Plattformen können die Website-Performance beeinträchtigen. Das Laden des CMP-Skripts, das Blockieren von Tracking-Skripten bis zum Consent und die Consent-Abfrage selbst kosten Millisekunden, die sich auf Core Web Vitals und damit auf das Google-Ranking auswirken können.</p>
+<p><strong>Tipps für bessere Performance:</strong></p>
+<ul>
+<li>Lade das CMP-Skript asynchron, damit es den Seitenaufbau nicht blockiert</li>
+<li>Nutze einen CDN-gehosteten CMP-Service statt Self-Hosting (Cookiebot und Usercentrics sind CDN-optimiert)</li>
+<li>Minimiere die Anzahl der eingebundenen Drittanbieter-Skripte, jedes Skript, das du nicht brauchst, spart dir eine Cookie-Kategorie und Ladezeit</li>
+<li>Implementiere den "Facade"-Ansatz für YouTube-Videos und andere Embeds: Zeige ein statisches Vorschaubild und lade den Embed erst nach Klick</li>
+<li>Nutze Server-Side Tagging, um die Anzahl der Client-Side-Skripte zu reduzieren (technisch aufwändig, aber für performancekritische Websites lohnend)</li>
+</ul>
+<p>Der Performance-Impact eines korrekt implementierten Cookie-Banners ist in der Praxis gering (typischerweise 50-100ms zusätzliche Ladezeit). Die DSGVO-Compliance ist das deutlich gewichtigere Argument. Optimiere, wo es geht, aber opfere nie die Rechtskonformität für Geschwindigkeit.</p>
+<h2 id="zusammenfassung-cookie-compliance-auf-einen-blick">Zusammenfassung: Cookie-Compliance auf einen Blick</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Aspekt</th><th>Anforderung</th><th>Umsetzung</th></tr></thead><tbody><tr><td>Rechtsgrundlage</td><td>TKG 2021, Paragraph 165 + DSGVO</td><td>Cookie-Banner mit Opt-in</td></tr><tr><td>Technisch notwendige Cookies</td><td>Keine Einwilligung nötig</td><td>Immer laden</td></tr><tr><td>Tracking/Marketing-Cookies</td><td>Einwilligung vor dem Setzen</td><td>Skripte blockieren bis Consent</td></tr><tr><td>Ablehnung</td><td>Gleichwertig zum Akzeptieren</td><td>Gleichgroße Buttons</td></tr><tr><td>Granularität</td><td>Einzelne Kategorien wählbar</td><td>Kategorien im Banner</td></tr><tr><td>Dokumentation</td><td>Consent-Logs mit Timestamp</td><td>CMP-Logfunktion nutzen</td></tr><tr><td>Widerruf</td><td>Jederzeit möglich, einfach</td><td>Link im Footer</td></tr><tr><td>Google Consent Mode</td><td>v2 seit März 2024 nötig</td><td>Basic Mode empfohlen</td></tr></tbody></table>
+<h2 id="von-der-theorie-in-die-praxis">Von der Theorie in die Praxis</h2>
+<p>Dein Cookie-Banner steht, super. Aber hast du auch <a href="/blog/179-auftragsverarbeitung-avv-erstellen">Auftragsverarbeitungsverträge</a> mit all den Diensten, deren Cookies du setzt? Google, Facebook, dein Analytics-Anbieter, sie alle brauchen einen AVV. Im nächsten Post erklären wir dir, wann du einen AVV brauchst und wie du ihn abschließt. Bei Startup Burgenland helfen wir dir, die technische und rechtliche Seite zusammenzubringen.</p>
+<hr>
+<p><em>Startup Burgenland macht Gründung leistbar: EUR 10.000 Gründungszuschuss (nicht rückzahlbar, keine Eigenkapitalabgabe), 1:1 Coaching und ein Netzwerk aus Steuerberatern, Notaren und Rechtsanwälten. Flexibler Einstieg jederzeit. Schreib uns ein formloses E-Mail.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/recht/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Recht </a><a href="/blog/tag/datenschutz/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> datenschutz </a><a href="/blog/tag/website/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> website </a><a href="/blog/tag/cookies/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> cookies </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2022-01-28" class="d-block fw-600 text-dark-gray">28. Januar 2022</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

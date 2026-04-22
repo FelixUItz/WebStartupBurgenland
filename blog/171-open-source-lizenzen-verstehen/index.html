@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Open-Source-Lizenzen verstehen: GPL, MIT und Apache im Überblick - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Was du beachten musst, wenn du Open-Source-Software in deinem Startup nutzt, permissive vs. Copyleft-Lizenzen, Compliance und SBOM für Investoren."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/171-open-source-lizenzen-verstehen"><!-- Open Graph --><meta property="og:title" content="Open-Source-Lizenzen verstehen: GPL, MIT und Apache im Überblick - StartUp Burgenland Blog"><meta property="og:description" content="Was du beachten musst, wenn du Open-Source-Software in deinem Startup nutzt, permissive vs. Copyleft-Lizenzen, Compliance und SBOM für Investoren."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Open-Source-Lizenzen verstehen: GPL, MIT und Apache im Überblick","description":"Was du beachten musst, wenn du Open-Source-Software in deinem Startup nutzt, permissive vs. Copyleft-Lizenzen, Compliance und SBOM für Investoren.","datePublished":"2022-01-16T00:00:00.000Z","dateModified":"2022-01-16T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/171-open-source-lizenzen-verstehen","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/171-open-source-lizenzen-verstehen"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/gruendung-und-recht/" class="blog-tag" style="text-decoration:none;"> Gründung &amp; Recht </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Open-Source-Lizenzen verstehen: GPL, MIT und Apache im Überblick</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2022-01-16">16. Januar 2022</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>10 min Lesezeit</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h2 id="open-source-ist-überall----verstehst-du-die-regeln">Open Source ist überall, verstehst du die Regeln?</h2>
+<p>Dein Startup nutzt React für das Frontend, Express für das Backend, PostgreSQL als Datenbank und dutzende npm-Pakete dazwischen. All das ist Open Source. Kostenlos. Aber nicht ohne Regeln.</p>
+<p>Viele Gründerinnen und Gründer denken: Open Source heißt, ich darf alles damit machen. Das stimmt nicht. Jede Open-Source-Bibliothek steht unter einer bestimmten Lizenz, und diese Lizenz bestimmt, was du darfst und was nicht. Bei Startup Burgenland sehen wir immer wieder Startups, die kurz vor einer Investorenrunde feststellen, dass sie GPL-Code in ihrem proprietären Produkt haben, und das kann richtig teuer werden.</p>
+<p>Dieser Beitrag erklärt dir die wichtigsten Open-Source-Lizenzen, ihre Unterschiede und was du konkret tun musst, um compliant zu bleiben. Denn das Thema betrifft jedes Tech-Startup, ausnahmslos.</p>
+<h2 id="das-lizenz-spektrum-von-permissiv-bis-copyleft">Das Lizenz-Spektrum: Von permissiv bis Copyleft</h2>
+<p>Open-Source-Lizenzen lassen sich auf einem Spektrum von "sehr freizügig" bis "sehr restriktiv" einordnen. Das Verständnis dieses Spektrums ist der Schlüssel zum richtigen Umgang mit Open-Source-Software.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lizenz</th><th>Typ</th><th>Kommerzielle Nutzung</th><th>Copyleft</th><th>Risiko für Startups</th></tr></thead><tbody><tr><td>MIT</td><td>Permissiv</td><td>Ja</td><td>Nein</td><td>Gering</td></tr><tr><td>BSD (2/3-Clause)</td><td>Permissiv</td><td>Ja</td><td>Nein</td><td>Gering</td></tr><tr><td>Apache 2.0</td><td>Permissiv</td><td>Ja</td><td>Nein</td><td>Gering</td></tr><tr><td>ISC</td><td>Permissiv</td><td>Ja</td><td>Nein</td><td>Gering</td></tr><tr><td>LGPL 2.1/3.0</td><td>Schwaches Copyleft</td><td>Ja (mit Bedingungen)</td><td>Teilweise</td><td>Mittel</td></tr><tr><td>MPL 2.0</td><td>Schwaches Copyleft</td><td>Ja (mit Bedingungen)</td><td>Datei-basiert</td><td>Mittel</td></tr><tr><td>GPL 2.0/3.0</td><td>Starkes Copyleft</td><td>Ja (mit Bedingungen)</td><td>Ja</td><td>Hoch</td></tr><tr><td>AGPL 3.0</td><td>Stärkstes Copyleft</td><td>Ja (mit Bedingungen)</td><td>Ja, auch SaaS</td><td>Sehr hoch</td></tr></tbody></table>
+<p>Die Grundregel: Je weiter rechts im Spektrum, desto mehr Pflichten hast du. Permissive Lizenzen lassen dir fast alle Freiheiten. Copyleft-Lizenzen fordern, dass du deine eigenen Änderungen unter der gleichen Lizenz weitergibst.</p>
+<h2 id="die-permissiven-lizenzen-mit-bsd-und-apache">Die permissiven Lizenzen: MIT, BSD und Apache</h2>
+<h3 id="mit-lizenz">MIT-Lizenz</h3>
+<p>Die MIT-Lizenz ist die populärste Open-Source-Lizenz überhaupt. Sie besteht aus wenigen Zeilen und ist extrem freizügig.</p>
+<p><strong>Was du darfst:</strong></p>
+<ul>
+<li>Kommerziell nutzen, modifizieren, verbreiten, unterlizenzieren</li>
+<li>Den Code in proprietäre Software einbauen</li>
+<li>Den Code beliebig kombinieren</li>
+</ul>
+<p><strong>Was du musst:</strong></p>
+<ul>
+<li>Den Copyright-Hinweis und den Lizenztext beibehalten</li>
+</ul>
+<p><strong>Was du nicht darfst:</strong></p>
+<ul>
+<li>Den Autor haftbar machen</li>
+</ul>
+<p>Das war's. Die MIT-Lizenz ist für kommerzielle Startups ideal. Du musst lediglich den Copyright-Hinweis irgendwo in deinem Produkt unterbringen, in einer NOTICES-Datei, einem "Open Source"-Abschnitt in den Einstellungen oder in der Dokumentation. Kein Quellcode-Offenlegungspflicht, keine Einschränkungen bei der Verbreitung.</p>
+<h3 id="apache-20">Apache 2.0</h3>
+<p>Die Apache-Lizenz ist ähnlich freizügig wie MIT, aber ausführlicher formuliert und enthält zwei wichtige Zusätze.</p>
+<p><strong>Unterschiede zu MIT:</strong></p>
+<ul>
+<li><strong>Explizite Patentlizenz:</strong> Contributor gewähren dir automatisch eine Lizenz an ihren Patenten, die den Code betreffen. Das schützt dich vor Patentklagen durch Contributor.</li>
+<li><strong>Patent-Retaliationsklausel:</strong> Wenn du wegen Patenten klagst, die den Apache-Code betreffen, verlierst du automatisch die Patentlizenz.</li>
+<li><strong>NOTICE-Datei:</strong> Änderungen müssen in einer NOTICE-Datei dokumentiert werden.</li>
+</ul>
+<p>Für Startups in patent-sensitiven Branchen (Hardware, Biotech, Medizintechnik) ist Apache 2.0 die bessere Wahl als MIT. In den meisten Fällen sind beide aber gleichwertig unproblematisch.</p>
+<h3 id="bsd-lizenzen">BSD-Lizenzen</h3>
+<p>Die BSD-Lizenz gibt es in mehreren Varianten. Die 2-Clause BSD ist praktisch identisch mit MIT. Die 3-Clause BSD enthält eine zusätzliche "No-Endorsement"-Klausel: Du darfst den Namen des Projekts oder der Autoren nicht für Werbezwecke nutzen, ohne Genehmigung.</p>
+<h2 id="gpl-der-copyleft-effekt-im-detail">GPL: Der Copyleft-Effekt im Detail</h2>
+<p>Die GNU General Public License (GPL) verfolgt eine andere Philosophie als permissive Lizenzen: Software-Freiheit. Der "Copyleft"-Effekt bedeutet: Wenn du GPL-Code in deinem Produkt nutzt und das Produkt verbreitest, muss dein gesamtes Produkt unter GPL stehen, und du musst den Quellcode veröffentlichen.</p>
+<h3 id="gpl-20-vs-gpl-30">GPL 2.0 vs. GPL 3.0</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Aspekt</th><th>GPL 2.0</th><th>GPL 3.0</th></tr></thead><tbody><tr><td>Copyleft</td><td>Ja</td><td>Ja</td></tr><tr><td>Patentlizenz</td><td>Implizit</td><td>Explizit</td></tr><tr><td>Tivoization-Schutz</td><td>Nein</td><td>Ja (Hardware muss modifizierbar sein)</td></tr><tr><td>Kompatibilität mit Apache 2.0</td><td>Nein</td><td>Ja</td></tr><tr><td>Typische Projekte</td><td>Linux Kernel, viele ältere Projekte</td><td>Neuere GNU-Projekte</td></tr></tbody></table>
+<h3 id="wann-greift-der-copyleft-effekt">Wann greift der Copyleft-Effekt?</h3>
+<p>Der entscheidende Punkt: Der Copyleft-Effekt greift bei <strong>Verbreitung</strong> (Distribution). Wenn du GPL-Software nur intern nutzt, aber nicht an Kunden weitergibst, musst du deinen Code nicht offenlegen. Das ist die sogenannte "private use exception".</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Szenario</th><th>Copyleft greift?</th><th>Erläuterung</th></tr></thead><tbody><tr><td>GPL-Bibliothek in Desktop-App</td><td>Ja</td><td>Du verbreitest die App an Endnutzer</td></tr><tr><td>GPL-Bibliothek in Mobile App</td><td>Ja</td><td>Du verbreitest die App über den App Store</td></tr><tr><td>GPL-Tool auf deinem Server (intern)</td><td>Nein</td><td>Keine Verbreitung an Dritte</td></tr><tr><td>GPL-Bibliothek in SaaS-Backend</td><td>Nein</td><td>Keine Verbreitung, nur Zugriff über Netzwerk</td></tr><tr><td>AGPL-Bibliothek in SaaS-Backend</td><td>Ja!</td><td>AGPL schließt die SaaS-Lücke</td></tr><tr><td>Statisches Linking mit GPL-Code</td><td>Ja</td><td>Das Ergebnis ist ein "abgeleitetes Werk"</td></tr><tr><td>Dynamisches Linking mit LGPL-Code</td><td>Nein</td><td>LGPL erlaubt dynamisches Linking</td></tr></tbody></table>
+<h3 id="agpl-die-saas-falle">AGPL: Die SaaS-Falle</h3>
+<p>Die AGPL (Affero GPL) schließt die sogenannte "SaaS-Lücke" der GPL. Wenn du AGPL-Code auf einem Server nutzt und Nutzer über ein Netzwerk darauf zugreifen, gilt das als Verbreitung. Du musst dann den gesamten Quellcode deiner Anwendung veröffentlichen und unter AGPL stellen.</p>
+<p><strong>Für SaaS-Startups ist AGPL-Code ein echtes Problem.</strong> Wenn du eine AGPL-Bibliothek in deinem Backend verwendest, kann das bedeuten, dass du deinen gesamten Server-Code offenlegen musst. Das ist für die meisten kommerziellen SaaS-Startups inakzeptabel.</p>
+<p>Typische AGPL-Projekte, die dir in der Praxis begegnen: MongoDB (ab Version 4.2 unter SSPL, davor teilweise AGPL), Grafana (Frontend), iText (PDF-Bibliothek), Nextcloud. Prüfe immer die Lizenz, bevor du eine Bibliothek einbindest.</p>
+<h2 id="lgpl-und-mpl-die-mittelweg-lizenzen">LGPL und MPL: Die Mittelweg-Lizenzen</h2>
+<p>Zwischen permissiv und starkem Copyleft gibt es "schwache" Copyleft-Lizenzen, die einen Kompromiss bieten.</p>
+<p><strong>LGPL (Lesser GPL):</strong> Erlaubt dir, LGPL-Bibliotheken in proprietärer Software zu verwenden, solange du sie dynamisch linkst (als separate Bibliothek einbindest). Deine eigene Software muss nicht unter LGPL stehen. Aber wenn du die LGPL-Bibliothek selbst veränderst, musst du diese Änderungen unter LGPL veröffentlichen.</p>
+<p><strong>MPL 2.0 (Mozilla Public License):</strong> Arbeitet datei-basiert. Dateien unter MPL müssen unter MPL bleiben, aber du kannst sie mit proprietären Dateien in einem Projekt kombinieren. Weniger restriktiv als LGPL.</p>
+<p>Für die meisten Startups sind LGPL und MPL beherrschbar, solange du die Regeln kennst und einhältst.</p>
+<h2 id="lizenzkompatibilität-was-passt-zusammen">Lizenzkompatibilität: Was passt zusammen?</h2>
+<p>Wenn du Code unter verschiedenen Lizenzen kombinierst, müssen die Lizenzen kompatibel sein. Hier die wichtigsten Regeln:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Kombination</th><th>Kompatibel?</th><th>Ergebnis-Lizenz</th></tr></thead><tbody><tr><td>MIT + MIT</td><td>Ja</td><td>MIT</td></tr><tr><td>MIT + Apache 2.0</td><td>Ja</td><td>Apache 2.0</td></tr><tr><td>MIT + GPL 3.0</td><td>Ja</td><td>GPL 3.0</td></tr><tr><td>Apache 2.0 + GPL 3.0</td><td>Ja</td><td>GPL 3.0</td></tr><tr><td>Apache 2.0 + GPL 2.0</td><td>Nein</td><td>Inkompatibel</td></tr><tr><td>GPL 2.0 + GPL 3.0</td><td>Nur wenn "or later"</td><td>GPL 3.0</td></tr><tr><td>MIT + Proprietary</td><td>Ja</td><td>Proprietary (mit Hinweis)</td></tr><tr><td>GPL + Proprietary</td><td>Nein</td><td>Inkompatibel</td></tr><tr><td>AGPL + Proprietary</td><td>Nein</td><td>Inkompatibel</td></tr></tbody></table>
+<p><strong>Faustregel:</strong> Permissive Lizenzen sind mit fast allem kompatibel. GPL-Code "infiziert" alles, womit er kombiniert wird, das kombinierte Werk muss unter GPL stehen. Proprietärer Code und GPL-Code lassen sich nicht in einem Programm mischen.</p>
+<h2 id="compliance-in-der-praxis-was-du-konkret-tun-musst">Compliance in der Praxis: Was du konkret tun musst</h2>
+<h3 id="schritt-1-software-bill-of-materials-sbom-erstellen">Schritt 1: Software Bill of Materials (SBOM) erstellen</h3>
+<p>Ein SBOM ist eine Inventarliste aller Software-Komponenten in deinem Produkt, inklusive ihrer Lizenzen und Versionen. Ohne SBOM hast du keine Übersicht und kannst keine Compliance-Aussage treffen.</p>
+<p>Tools für die automatische SBOM-Erstellung:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Tool</th><th>Sprache/Ökosystem</th><th>Kosten</th></tr></thead><tbody><tr><td>license-checker (npm)</td><td>JavaScript/Node.js</td><td>Kostenlos</td></tr><tr><td>pip-licenses</td><td>Python</td><td>Kostenlos</td></tr><tr><td>Maven License Plugin</td><td>Java</td><td>Kostenlos</td></tr><tr><td>ScanCode Toolkit</td><td>Sprachunabhängig</td><td>Kostenlos (Open Source)</td></tr><tr><td>FOSSA</td><td>Alle Sprachen</td><td>Freemium</td></tr><tr><td>Snyk</td><td>Alle Sprachen</td><td>Freemium</td></tr><tr><td>Black Duck</td><td>Enterprise</td><td>Kostenpflichtig</td></tr></tbody></table>
+<h3 id="schritt-2-lizenzen-kategorisieren">Schritt 2: Lizenzen kategorisieren</h3>
+<p>Teile alle gefundenen Lizenzen in drei Ampelkategorien ein:</p>
+<ol>
+<li><strong>Grün (Permissiv):</strong> MIT, BSD, Apache, ISC, unproblematisch, Copyright-Hinweis beibehalten</li>
+<li><strong>Gelb (Schwaches Copyleft):</strong> LGPL, MPL, prüfen, wie du die Bibliothek technisch einbindest</li>
+<li><strong>Rot (Starkes Copyleft):</strong> GPL, AGPL, genau prüfen, ob und wie du sie nutzt. Gegebenenfalls Alternative suchen</li>
+</ol>
+<h3 id="schritt-3-pflichten-erfüllen">Schritt 3: Pflichten erfüllen</h3>
+<p>Für alle Open-Source-Lizenzen gilt mindestens:</p>
+<ul>
+<li>Copyright-Hinweise und Lizenztexte beibehalten und weitergeben</li>
+<li>In deinem Produkt zugänglich machen (NOTICES-Datei, About-Screen, Dokumentation)</li>
+<li>Bei Copyleft: Prüfen, ob du den Quellcode offenlegen musst</li>
+<li>Änderungen an Apache-lizenziertem Code in NOTICE-Datei dokumentieren</li>
+</ul>
+<h3 id="schritt-4-interne-open-source-policy-etablieren">Schritt 4: Interne Open-Source-Policy etablieren</h3>
+<p>Erstelle eine Policy, die klar definiert:</p>
+<ul>
+<li>Welche Lizenztypen sind automatisch erlaubt (Grün)?</li>
+<li>Welche brauchen eine Prüfung vor Einbindung (Gelb)?</li>
+<li>Welche sind grundsätzlich verboten (Rot)?</li>
+<li>Wer entscheidet bei Zweifelsfällen?</li>
+<li>Wie wird das SBOM aktualisiert?</li>
+<li>Wie oft findet ein Audit statt?</li>
+</ul>
+<h2 id="open-source-und-investoren-due-diligence">Open Source und Investoren-Due-Diligence</h2>
+<p>Investoren achten bei der Due Diligence zunehmend auf Open-Source-Compliance. Typische Fragen, die du beantworten können musst:</p>
+<ul>
+<li>Habt ihr ein vollständiges und aktuelles SBOM?</li>
+<li>Nutzt ihr GPL- oder AGPL-Code in eurem Kernprodukt?</li>
+<li>Ist euer proprietärer Code sauber von Copyleft-Code getrennt?</li>
+<li>Habt ihr eine dokumentierte Open-Source-Policy?</li>
+<li>Gibt es Lizenz-Inkompatibilitäten in eurem Stack?</li>
+<li>Erfüllt ihr alle Attributionspflichten?</li>
+</ul>
+<p>Wenn du diese Fragen nicht beantworten kannst, sinkt das Vertrauen, und im schlimmsten Fall platzt der Deal oder die Bewertung wird reduziert. Mach die Compliance von Anfang an richtig, nicht erst vor der Funding-Runde.</p>
+<p>Mehr zum Thema Urheberrecht an Software findest du in meinem Beitrag zum <a href="/blog/169-urheberrecht-software-design">Urheberrecht für Software und Design</a>.</p>
+<h2 id="häufige-fehler-im-umgang-mit-open-source">Häufige Fehler im Umgang mit Open Source</h2>
+<p><strong>Keine Lizenz prüfen, bevor du eine Bibliothek einbindest.</strong> Viele Entwickler installieren Pakete per npm install oder pip install, ohne die Lizenz zu lesen. Mach es zur Gewohnheit: Vor dem Einbinden die Lizenz auf GitHub oder im Package-Manager prüfen.</p>
+<p><strong>GPL-Code in proprietärer Desktop- oder Mobile-App.</strong> Das ist der Klassiker, der bei der Due Diligence auffliegt. Einmal eingebaut, musst du entweder deinen gesamten Code unter GPL stellen oder die GPL-Komponente durch eine Alternative unter permissiver Lizenz ersetzen.</p>
+<p><strong>Open-Source-Lizenzbedingungen ignorieren.</strong> Auch permissive Lizenzen haben Pflichten, zumindest die Attribution (Copyright-Hinweis beibehalten). Wenn du keine NOTICES-Datei oder keinen Open-Source-Screen in deiner App hast, verletzt du die Lizenzbedingungen.</p>
+<p><strong>Eigenen Code ohne Lizenz veröffentlichen.</strong> Wenn du Code auf GitHub veröffentlichst, ohne eine Lizenzdatei beizufügen, ist der Code urheberrechtlich geschützt, niemand darf ihn nutzen. Wähle bewusst eine Lizenz, wenn du Open Source beitragen willst.</p>
+<p><strong>Interne Forks von Open-Source-Projekten ohne Tracking.</strong> Wenn du einen Fork eines Open-Source-Projekts erstellst und intern weiterentwickelst, musst du die Lizenz des Originals weiterhin einhalten. Dokumentiere den Fork und seine Lizenz im SBOM.</p>
+<h2 id="open-source-und-das-österreichische-recht">Open Source und das österreichische Recht</h2>
+<p>In Österreich gibt es keine spezifische Gesetzgebung zu Open-Source-Lizenzen. Open-Source-Lizenzen werden als urheberrechtliche Lizenzverträge behandelt und unterliegen dem allgemeinen Vertragsrecht und dem UrhG.</p>
+<p>Einige Besonderheiten im österreichischen Kontext:</p>
+<ul>
+<li><strong>Haftungsausschlüsse</strong> in Open-Source-Lizenzen sind nach österreichischem Recht möglicherweise nicht in vollem Umfang wirksam. Die im anglo-amerikanischen Recht üblichen "AS IS"-Klauseln können nach österreichischem Verbraucherrecht eingeschränkt sein.</li>
+<li><strong>Urheberrechtliche Zuordnung:</strong> Wenn deine Angestellten zu Open-Source-Projekten beitragen, gelten die Regeln des § 40b UrhG, die Verwertungsrechte liegen beim Arbeitgeber. Stelle sicher, dass du als Arbeitgeber die Veröffentlichung unter einer Open-Source-Lizenz genehmigt hast.</li>
+<li><strong>Contributor License Agreements (CLAs):</strong> Wenn du selbst ein Open-Source-Projekt betreibst, fordere von externen Contributors ein CLA, das dir die notwendigen Rechte zur Lizenzierung einräumt.</li>
+</ul>
+<h2 id="dual-licensing-open-source-als-geschäftsmodell">Dual Licensing: Open Source als Geschäftsmodell</h2>
+<p>Viele erfolgreiche Unternehmen nutzen Open Source strategisch: Sie bieten ihren Code unter einer Open-Source-Lizenz (oft AGPL oder GPL) an und verkaufen gleichzeitig kommerzielle Lizenzen an Unternehmen, die den Copyleft-Effekt vermeiden wollen.</p>
+<p>Beispiele: MySQL (GPL + kommerzielle Lizenz), Qt (LGPL + kommerzielle Lizenz), GitLab (MIT für CE, proprietär für EE). Wenn du selbst eine Bibliothek oder ein Tool entwickelst, kann Dual Licensing ein interessantes Geschäftsmodell sein. Voraussetzung: Du musst alle Urheberrechte am Code halten, deshalb sind saubere Contributor License Agreements (CLAs) wichtig.</p>
+<p>Das Open-Core-Modell ist eine Variante: Die Basis-Version ist Open Source (oft MIT oder Apache), Premium-Features sind proprietär. GitLab, Grafana und viele andere nutzen dieses Modell erfolgreich. Es kombiniert Community-Wachstum mit kommerziellem Umsatz.</p>
+<p>Mehr zu Lizenzmodellen und strategischen Überlegungen zur Monetarisierung von IP findest du in meinem Beitrag zu <a href="/blog/173-lizenzmodelle-ip-monetarisierung">Lizenzmodellen für Startups</a>.</p>
+<p>Mehr zu Lizenzmodellen und IP-Monetarisierung findest du in meinem Beitrag zu <a href="/blog/173-lizenzmodelle-ip-monetarisierung">Lizenzmodellen für Startups</a>.</p>
+<h2 id="so-gehst-du-jetzt-weiter">So gehst du jetzt weiter</h2>
+<p>Erstelle jetzt ein SBOM für dein Projekt. Nutze license-checker (npm), pip-licenses (Python) oder ScanCode und kategorisiere alle Lizenzen in Grün, Gelb und Rot. Wenn du GPL- oder AGPL-Code findest, prüfe sofort, ob das mit deinem Geschäftsmodell kompatibel ist. Suche bei Bedarf nach Alternativen unter permissiven Lizenzen.</p>
+<p>Und für den großen Überblick: Die <a href="/blog/175-ip-strategie-startup-aufbauen">IP-Strategie von Anfang an</a> zeigt dir, wie Open-Source-Compliance in deine gesamte IP-Planung passt.</p>
+<p>Und wenn du dein geistiges Eigentum umfassend schützen willst, lies den Beitrag zu <a href="/blog/172-geschaeftsgeheimnisse-schuetzen">Geschäftsgeheimnissen</a>, denn dein proprietärer Code sollte ebenso sorgfältig geschützt sein wie deine Open-Source-Compliance.</p>
+<p>Wenn du gerade erst anfängst, dich mit dem Thema zu beschäftigen, starte mit diesen drei Schritten: Erstens, installiere ein SBOM-Tool. Zweitens, kategorisiere alle Lizenzen in Grün, Gelb und Rot. Drittens, ersetze alle Rot-Komponenten durch Alternativen unter permissiven Lizenzen. Das dauert einen Nachmittag und erspart dir monatelange Probleme.</p>
+<p>Open-Source-Compliance mag auf den ersten Blick wie eine lästige Pflicht wirken. Aber richtig umgesetzt ist sie ein Qualitätsmerkmal deines Startups, und ein positives Signal an Investoren, Kunden und Partner. Sie zeigt, dass du professionell arbeitest und Risiken proaktiv managst.</p>
+<p>Denke auch an die Community: Wenn du von Open Source profitierst, überlege, ob du selbst etwas zurückgeben kannst. Ein Pull Request, ein Bug Report oder ein finanzieller Beitrag zu den Projekten, die du nutzt, stärkt das Ökosystem, und baut Goodwill in der Developer-Community auf.</p>
+<p>Bei Startup Burgenland helfen wir dir, Open-Source-Risiken frühzeitig zu erkennen und die richtigen Entscheidungen zu treffen. Unsere Netzwerk-Anwälte und Tech-Coaches stehen dir zur Seite.</p>
+<hr>
+<p><em>Startup Burgenland macht Gründung leistbar: EUR 10.000 Gründungszuschuss (nicht rückzahlbar, keine Eigenkapitalabgabe), 1:1 Coaching und ein Netzwerk aus Steuerberatern, Notaren und Rechtsanwälten. Flexibler Einstieg jederzeit. Schreib uns ein formloses E-Mail.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/recht/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> Recht </a><a href="/blog/tag/ip/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> ip </a><a href="/blog/tag/software/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> software </a><a href="/blog/tag/open-source/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> open-source </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2022-01-16" class="d-block fw-600 text-dark-gray">16. Januar 2022</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

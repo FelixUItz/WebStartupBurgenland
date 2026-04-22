@@ -1,0 +1,777 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Term Sheet Cheat Sheet | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Alle wichtigen Term Sheet Klauseln für österreichische Startups erklärt: Pre-Money, Liquidation Preference, Anti-Dilution, Vesting, Drag-Along und mehr. Mit Gründer-Tipps.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/term-sheet-cheatsheet/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/term-sheet-cheatsheet/">
+ <meta property="og:title" content="Term Sheet Cheat Sheet | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Alle wichtigen Term Sheet Klauseln für österreichische Startups erklärt: Pre-Money, Liquidation Preference, Anti-Dilution, Vesting, Drag-Along und mehr.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Term Sheet Cheat Sheet | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Term Sheet Cheat Sheet */
+.tool-content.ts-legend {
+ display: flex;
+ gap: 16px;
+ margin-bottom: 12px;
+ padding: 8px 14px;
+ background: #F8FAFC;
+ border-radius: 8px;
+ font-size: 13px;
+ font-weight: 600;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+.tool-content.ts-legend-label {
+ font-weight: 700;
+ color: #E63946;
+ }
+.tool-content.ts-legend-item {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ }
+.tool-content.ts-legend-dot {
+ width: 12px;
+ height: 12px;
+ border-radius: 50%;
+ flex-shrink: 0;
+ }
+.tool-content.ts-legend-dot.critical { background: #DC3545; }
+.tool-content.ts-legend-dot.important { background: #FF8C00; }
+.tool-content.ts-legend-dot.nice { background: #28A745; }
+
+ /* Page Header (within tool content) */
+.tool-content.ts-page-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 10px;
+ border-bottom: 3px solid #E63946;
+ margin-bottom: 12px;
+ }
+.tool-content.ts-page-header-left {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+.tool-content.ts-logo-mark {
+ width: 34px;
+ height: 34px;
+ background: #E63946;
+ border-radius: 6px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-weight: 700;
+ font-size: 16px;
+ letter-spacing: -0.5px;
+ flex-shrink: 0;
+ }
+.tool-content.ts-page-title {
+ font-size: 20px;
+ font-weight: 800;
+ color: #E63946;
+ line-height: 1.2;
+ letter-spacing: -0.3px;
+ margin: 0;
+ }
+.tool-content.ts-page-subtitle {
+ font-size: 13px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+.tool-content.ts-page-badge {
+ background: #FF8C00;
+ color: #fff;
+ font-size: 11px;
+ font-weight: 700;
+ padding: 4px 10px;
+ border-radius: 4px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ white-space: nowrap;
+ }
+
+ /* Cards Grid */
+.tool-content.ts-cards-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 10px;
+ margin-bottom: 20px;
+ }
+.tool-content.ts-clause-card {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+ }
+.tool-content.ts-card-header {
+ padding: 8px 12px;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ color: white;
+ font-weight: 700;
+ font-size: 13px;
+ letter-spacing: -0.2px;
+ }
+.tool-content.ts-card-header.ts-card-icon {
+ font-size: 16px;
+ flex-shrink: 0;
+ line-height: 1;
+ font-weight: 800;
+ }
+.tool-content.ts-card-header.ts-card-title {
+ line-height: 1.2;
+ }
+.tool-content.ts-card-header.ts-card-en {
+ font-size: 10px;
+ font-weight: 500;
+ opacity: 0.85;
+ margin-left: auto;
+ white-space: nowrap;
+ }
+ /* Importance-based header colors */
+.tool-content.ts-card-critical.ts-card-header { background: #DC3545; }
+.tool-content.ts-card-important.ts-card-header { background: #FF8C00; color: #1C1D1F; }
+.tool-content.ts-card-important.ts-card-header.ts-card-en { opacity: 0.65; }
+.tool-content.ts-card-nice.ts-card-header { background: #28A745; }
+
+.tool-content.ts-card-body {
+ padding: 10px 12px;
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ gap: 6px;
+ font-size: 14px;
+ }
+.tool-content.ts-card-body p {
+ line-height: 1.45;
+ margin-bottom: 0;
+ }
+.tool-content.ts-card-body.ts-definition {
+ color: #6B7280;
+ font-size: 13px;
+ line-height: 1.4;
+ }
+.tool-content.ts-card-body.ts-formula {
+ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+ font-size: 12px;
+ background: #F8FAFC;
+ padding: 6px 10px;
+ border-radius: 4px;
+ border: 1px solid #E2E8F0;
+ color: #E63946;
+ font-weight: 500;
+ line-height: 1.4;
+ }
+.tool-content.ts-card-body.ts-tip {
+ font-size: 12.5px;
+ line-height: 1.4;
+ padding: 6px 10px;
+ border-radius: 4px;
+ margin-top: auto;
+ }
+.tool-content.ts-card-critical.ts-tip {
+ background: #FEF2F2;
+ border-left: 3px solid #DC3545;
+ color: #991B1B;
+ }
+.tool-content.ts-card-important.ts-tip {
+ background: #FFF7ED;
+ border-left: 3px solid #FF8C00;
+ color: #92400E;
+ }
+.tool-content.ts-card-nice.ts-tip {
+ background: #DCFCE7;
+ border-left: 3px solid #28A745;
+ color: #166534;
+ }
+.tool-content.ts-card-body.ts-typical {
+ font-size: 12px;
+ color: #6B7280;
+ display: flex;
+ align-items: baseline;
+ gap: 4px;
+ }
+.tool-content.ts-typical-label {
+ font-weight: 600;
+ color: #E63946;
+ white-space: nowrap;
+ }
+.tool-content.ts-card-body strong {
+ color: #E63946;
+ }
+
+ /* Page Footer (print) */
+.tool-content.ts-page-footer {
+ margin-top: 10px;
+ padding-top: 8px;
+ border-top: 2px solid #E63946;
+ display: flex;
+ justify-content: space-between;
+ font-size: 11px;
+ color: #6B7280;
+ align-items: center;
+ }
+.tool-content.ts-footer-disclaimer {
+ font-style: italic;
+ }
+
+ /* Page separator for screen */
+.tool-content.ts-page-divider {
+ border: none;
+ border-top: 2px dashed #E2E8F0;
+ margin: 40px 0;
+ }
+
+ /* Responsive */
+ @media (max-width: 991px) {
+.tool-content.ts-cards-grid {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ }
+ @media (max-width: 640px) {
+.tool-content.ts-cards-grid {
+ grid-template-columns: 1fr;
+ }
+.tool-content.ts-page-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 8px;
+ }
+.tool-content.ts-legend {
+ flex-wrap: wrap;
+ gap: 8px;
+ }
+ }
+ /* Print */
+ @media print {
+.tool-content.ts-clause-card { break-inside: avoid; }
+.tool-content.ts-page-divider { display: none; }
+.tool-content.ts-cards-grid {
+ grid-template-columns: repeat(3, 1fr);
+ gap: 6px;
+ }
+.tool-content.ts-card-header,
+.tool-content.ts-tip,
+.tool-content.ts-legend,
+.tool-content.ts-logo-mark,
+.tool-content.ts-page-badge,
+.tool-content.ts-formula {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Term Sheet Cheat Sheet</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Die 12 wichtigsten Klauseln f&uuml;r &ouml;sterreichische Gr&uuml;nder:innen - erkl&auml;rt und bewertet</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/scaleup/">Phase 3: Scale-Up</a>
+ <span class="separator">/</span>
+ <span class="current">Term Sheet Cheat Sheet</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 960px;">
+
+ <!-- ==================== PAGE 1 ==================== -->
+ <div class="ts-page-header">
+ <div class="ts-page-header-left">
+ <div class="ts-logo-mark">SB</div>
+ <div>
+ <h2 class="ts-page-title">Term Sheet Cheat Sheet Österreich</h2>
+ <div class="ts-page-subtitle">Die 12 wichtigsten Klauseln f&uuml;r Gr&uuml;nder:innen</div>
+ </div>
+ </div>
+ <div class="ts-page-badge">Seite 1/2</div>
+ </div>
+
+ <div class="ts-legend">
+ <span class="ts-legend-label">Wichtigkeit:</span>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot critical"></div>
+ <span>Kritisch</span>
+ </div>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot important"></div>
+ <span>Wichtig</span>
+ </div>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot nice"></div>
+ <span>Nice-to-have</span>
+ </div>
+ </div>
+
+ <div class="ts-cards-grid">
+ <!-- Card 1: Pre-Money / Post-Money -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">1</span>
+ <span class="ts-card-title">Pre-Money / Post-Money Bewertung</span>
+ <span class="ts-card-en">Valuation</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Bestimmt, wie viel dein Startup vor (Pre) und nach (Post) dem Investment wert ist - und damit deinen Verw&auml;sserungsanteil.</p>
+ <div class="ts-formula">Post-Money = Pre-Money + Investment<br>Verw&auml;sserung = Investment / Post-Money</div>
+ <p><strong>Beispiel:</strong> EUR 800K Pre-Money + EUR 200K Investment = EUR 1M Post-Money. Investor erh&auml;lt 20&nbsp;%.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Pre-Seed EUR 500K-1,5M, Seed EUR 1,5-5M
+ </div>
+ <div class="ts-tip">Achte darauf, ob ESOP/VSOP-Pool in die Pre-Money-Bewertung eingerechnet wird - das verw&auml;ssert dich zus&auml;tzlich!</div>
+ </div>
+ </div>
+
+ <!-- Card 2: Investitionssumme & Stammkapitalerhöhung -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">2</span>
+ <span class="ts-card-title">Investment &amp; Kapitalerh&ouml;hung</span>
+ <span class="ts-card-en">Capital Increase</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Bei GmbH/FlexCo erfolgt ein Equity-Investment &uuml;ber eine Stammkapitalerh&ouml;hung. Der Nominalbetrag geht ins Stammkapital, der Rest in die Kapitalr&uuml;cklage (Agio).</p>
+ <div class="ts-formula">Neuer Anteil = Nominalbetrag / neues Stammkapital<br>Agio = Investment - Nominalbetrag</div>
+ <p><strong>FlexCo-Vorteil:</strong> St&uuml;ckanteile ab EUR 1 (statt EUR 70 bei GmbH). Einfachere Anteilsstruktur &amp; weniger Notarkosten.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ GmbH Stammkapital EUR 35.000, FlexCo ab EUR 10.000
+ </div>
+ <div class="ts-tip">Der Notarakt bei Stammkapitalerh&ouml;hungen kann EUR 2.000-5.000 kosten. Plane das Budget ein!</div>
+ </div>
+ </div>
+
+ <!-- Card 3: Liquidation Preference -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">3</span>
+ <span class="ts-card-title">Liquidation Preference</span>
+ <span class="ts-card-en">Liq. Pref.</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Bestimmt, wer bei einem Exit (Verkauf, Liquidation) zuerst sein Geld zur&uuml;ckbekommt - und wie viel.</p>
+ <p><strong>1x Non-Participating:</strong> Investor bekommt 1x Investment zur&uuml;ck ODER seinen Pro-Rata-Anteil (was h&ouml;her ist). Gr&uuml;nderfreundlich.</p>
+ <p><strong>1x Participating:</strong> Investor bekommt 1x zur&uuml;ck UND seinen Pro-Rata-Anteil. Teuer f&uuml;r Gr&uuml;nder.</p>
+ <div class="ts-formula">Exit EUR 3M, Invest EUR 500K (20%):<br>Non-Part: max(500K, 600K) = 600K<br>Part: 500K + 500K = 1M (!)</div>
+ <div class="ts-tip">Verhandle IMMER 1x Non-Participating. Alles dar&uuml;ber ist ein gro&szlig;es Warnsignal.</div>
+ </div>
+ </div>
+
+ <!-- Card 4: Anti-Dilution -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">4</span>
+ <span class="ts-card-title">Anti-Dilution</span>
+ <span class="ts-card-en">Verw&auml;sserungsschutz</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Sch&uuml;tzt den Investor, wenn eine Folgerunde zu einer niedrigeren Bewertung stattfindet (Down Round).</p>
+ <p><strong>Full Ratchet:</strong> Investor wird so gestellt, als h&auml;tte er zum niedrigeren Preis investiert. Extrem gr&uuml;nderfeindlich.</p>
+ <p><strong>Weighted Average:</strong> Passt den Preis gewichtet an - ber&uuml;cksichtigt, wie viel Kapital zur niedrigeren Bewertung aufgenommen wird. Fairer Standard.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Broad-Based Weighted Average ist Marktstandard
+ </div>
+ <div class="ts-tip">Full Ratchet NIEMALS akzeptieren. Bei Down Rounds kannst du sonst massiv verw&auml;ssert werden.</div>
+ </div>
+ </div>
+
+ <!-- Card 5: Vesting & Cliff -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">5</span>
+ <span class="ts-card-title">Vesting &amp; Cliff</span>
+ <span class="ts-card-en">Vesting Schedule</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Regelt, dass Gr&uuml;nderanteile &uuml;ber Zeit erdient werden. Sch&uuml;tzt das Team, wenn ein Mitgr&uuml;nder fr&uuml;h aussteigt.</p>
+ <p><strong>Standard:</strong> 4 Jahre Vesting, 1 Jahr Cliff. Nach dem Cliff: monatliches Vesting (1/48 pro Monat).</p>
+ <p><strong>Good Leaver:</strong> Gr&uuml;nder beh&auml;lt geveste Anteile (z.B. K&uuml;ndigung durch Firma, Krankheit).</p>
+ <p><strong>Bad Leaver:</strong> Gr&uuml;nder verliert alle/die meisten Anteile (z.B. Betrug, Vertragsbruch).</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ 4J/1J Cliff, Reverse Vesting f&uuml;r Gr&uuml;nder
+ </div>
+ <div class="ts-tip">Kl&auml;re Good/Bad Leaver Definitionen GENAU. Das ist oft der h&auml;rteste Verhandlungspunkt.</div>
+ </div>
+ </div>
+
+ <!-- Card 6: Drag-Along & Tag-Along -->
+ <div class="ts-clause-card ts-card-critical">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">6</span>
+ <span class="ts-card-title">Drag-Along &amp; Tag-Along</span>
+ <span class="ts-card-en">Mitverkaufsrechte</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Regelungen f&uuml;r den Verkauf von Anteilen - sch&uuml;tzen sowohl Investoren als auch Gr&uuml;nder.</p>
+ <p><strong>Drag-Along:</strong> Mehrheitsgesellschafter k&ouml;nnen Minderheiten zum Mitverkauf zwingen. Wichtig f&uuml;r Exit-F&auml;higkeit.</p>
+ <p><strong>Tag-Along:</strong> Minderheiten d&uuml;rfen bei einem Verkauf zu gleichen Konditionen mitverkaufen. Sch&uuml;tzt Gr&uuml;nder.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Drag ab 75% Zustimmung, Tag-Along f&uuml;r alle Gesellschafter
+ </div>
+ <div class="ts-tip">Achte auf Mindestbewertung beim Drag-Along: Du willst nicht unter Wert zum Verkauf gezwungen werden.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="ts-page-footer">
+ <span class="ts-footer-disclaimer">Keine Rechtsberatung. Immer einen Startup-Anwalt hinzuziehen.</span>
+ <span>startupburgenland.at &bull; Term Sheet Cheat Sheet</span>
+ </div>
+
+ <hr class="ts-page-divider">
+
+ <!-- ==================== PAGE 2 ==================== -->
+ <div class="ts-page-header">
+ <div class="ts-page-header-left">
+ <div class="ts-logo-mark">SB</div>
+ <div>
+ <h2 class="ts-page-title">Term Sheet Cheat Sheet Österreich</h2>
+ <div class="ts-page-subtitle">Die 12 wichtigsten Klauseln f&uuml;r Gr&uuml;nder:innen</div>
+ </div>
+ </div>
+ <div class="ts-page-badge">Seite 2/2</div>
+ </div>
+
+ <div class="ts-legend">
+ <span class="ts-legend-label">Wichtigkeit:</span>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot critical"></div>
+ <span>Kritisch</span>
+ </div>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot important"></div>
+ <span>Wichtig</span>
+ </div>
+ <div class="ts-legend-item">
+ <div class="ts-legend-dot nice"></div>
+ <span>Nice-to-have</span>
+ </div>
+ </div>
+
+ <div class="ts-cards-grid">
+ <!-- Card 7: Board-Zusammensetzung -->
+ <div class="ts-clause-card ts-card-important">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">7</span>
+ <span class="ts-card-title">Board / Beirat</span>
+ <span class="ts-card-en">Board Composition</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Legt fest, wer im Beirat (Advisory Board) sitzt und welche Entscheidungen einer Zustimmung bed&uuml;rfen.</p>
+ <p><strong>Sitz-Verteilung:</strong> Typisch 2 Gr&uuml;nder + 1 Investor + 1 Unabh&auml;ngiger bei Seed-Runden. Bei Series A oft parit&auml;tisch.</p>
+ <p><strong>Vetorechte:</strong> Investoren verlangen oft Veto bei: Kapitalerh&ouml;hung, Verkauf, Aufnahme von Schulden &gt;X, neue Gesellschafter, Satzungs&auml;nderung.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ GmbH hat keinen Pflicht-Aufsichtsrat. Beirat ist freiwillig &amp; vertraglich geregelt.
+ </div>
+ <div class="ts-tip">Behalte die Mehrheit im Beirat. Ein unabh&auml;ngiger Sitz kann bei Konflikten entscheiden.</div>
+ </div>
+ </div>
+
+ <!-- Card 8: Informationsrechte -->
+ <div class="ts-clause-card ts-card-important">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">8</span>
+ <span class="ts-card-title">Informationsrechte</span>
+ <span class="ts-card-en">Information Rights</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Definiert, welche Berichte und Daten Investoren regelm&auml;&szlig;ig erhalten. Standard in jedem Term Sheet.</p>
+ <p><strong>Quartalsberichte:</strong> P&amp;L, Cashflow, KPIs, Runway, Team-Update. Innerhalb von 30 Tagen nach Quartalsende.</p>
+ <p><strong>Jahresabschluss:</strong> Gepr&uuml;fter Jahresabschluss innerhalb von 6 Monaten (GmbH-Pflicht ab bestimmter Gr&ouml;&szlig;e).</p>
+ <p><strong>Ad-hoc:</strong> Wesentliche Ereignisse sofort melden (z.B. Rechtsstreit, Key-Man-Verlust, Liquidit&auml;tsengpass).</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Monatliches Investor-Update per E-Mail ist Best Practice
+ </div>
+ <div class="ts-tip">Baue von Anfang an ein monatliches Reporting auf - das schafft Vertrauen und spart dir Arbeit bei Folgerunden.</div>
+ </div>
+ </div>
+
+ <!-- Card 9: Pro-Rata-Rechte -->
+ <div class="ts-clause-card ts-card-important">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">9</span>
+ <span class="ts-card-title">Pro-Rata-Rechte</span>
+ <span class="ts-card-en">Pre-emption Rights</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Gibt bestehenden Investoren das Recht, bei Folgerunden ihren Anteil zu halten, indem sie proportional nachkaufen.</p>
+ <p><strong>Beispiel:</strong> Investor h&auml;lt 20&nbsp;%. Bei Series A (EUR 2M) darf er bis zu EUR 400K investieren, um bei 20&nbsp;% zu bleiben.</p>
+ <p><strong>Pay-to-Play:</strong> Manche Term Sheets koppeln Pro-Rata an die Pflicht mitzuinvestieren - wer nicht mitgeht, verliert Vorzugsrechte.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Pro-Rata ist Standard. Pay-to-Play selten bei Seed.
+ </div>
+ <div class="ts-tip">Pro-Rata ist fair und &uuml;blich. Problematisch wird es erst, wenn ALLE Altinvestoren mitgehen wollen und kein Platz f&uuml;r neue bleibt.</div>
+ </div>
+ </div>
+
+ <!-- Card 10: Gesellschaftervertrag (SHA) -->
+ <div class="ts-clause-card ts-card-important">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">10</span>
+ <span class="ts-card-title">Gesellschaftervertrag (SHA)</span>
+ <span class="ts-card-en">Shareholders' Agreement</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Der Gesellschaftervertrag ist das bindende Dokument, das NACH dem Term Sheet verhandelt wird. Er enth&auml;lt alle Details.</p>
+ <p><strong>Key Clauses AT:</strong></p>
+ <p style="font-size: 13px; line-height: 1.4;">
+ - Gesch&auml;ftsf&uuml;hrer-Bestellung &amp; Abberufung<br>
+ - Zustimmungspflichtige Gesch&auml;fte<br>
+ - Wettbewerbsverbot (typisch 12-24 Monate)<br>
+ - Aufgriffsrecht bei Anteilsverkauf<br>
+ - Gewinnverwendung &amp; Entnahmen<br>
+ - Deadlock-Klausel (Russian Roulette, Shotgun)
+ </p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ Notariatspflicht bei GmbH-Anteils&uuml;bertragung!
+ </div>
+ <div class="ts-tip">Der SHA ist wichtiger als das Term Sheet. Investiere in einen guten Startup-Anwalt f&uuml;r die Verhandlung.</div>
+ </div>
+ </div>
+
+ <!-- Card 11: Lock-up Period -->
+ <div class="ts-clause-card ts-card-nice">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">11</span>
+ <span class="ts-card-title">Lock-up Period</span>
+ <span class="ts-card-en">Haltefrist</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Zeitraum, in dem Gr&uuml;nder ihre Anteile nicht verkaufen d&uuml;rfen. Signalisiert Commitment gegen&uuml;ber Investoren.</p>
+ <p><strong>Standard:</strong> 12-24 Monate nach Closing. Danach oft eingeschr&auml;nkt durch Vorkaufsrechte (Right of First Refusal).</p>
+ <p><strong>Ausnahmen:</strong> Teilverk&auml;ufe f&uuml;r pers&ouml;nliche Liquidit&auml;t (Secondary) werden in sp&auml;teren Runden manchmal erm&ouml;glicht.</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ 12-24 Monate Lock-up, oft an Vesting gekoppelt
+ </div>
+ <div class="ts-tip">Lock-up ist &uuml;blich und fair. Bei langer Lock-up (&gt;24M) verhandle Ausnahmen f&uuml;r H&auml;rtef&auml;lle.</div>
+ </div>
+ </div>
+
+ <!-- Card 12: Exklusivität & Vertraulichkeit -->
+ <div class="ts-clause-card ts-card-nice">
+ <div class="ts-card-header">
+ <span class="ts-card-icon">12</span>
+ <span class="ts-card-title">Exklusivit&auml;t &amp; NDA</span>
+ <span class="ts-card-en">No-Shop / Confidentiality</span>
+ </div>
+ <div class="ts-card-body">
+ <p class="ts-definition">Regelt den Prozess zwischen Term-Sheet-Unterschrift und Closing (Due Diligence Phase).</p>
+ <p><strong>No-Shop-Klausel:</strong> Du darfst f&uuml;r 30-60 Tage nicht mit anderen Investoren &uuml;ber eine Finanzierung verhandeln.</p>
+ <p><strong>Vertraulichkeit:</strong> Beide Seiten d&uuml;rfen Term-Sheet-Details nicht offenlegen. Investoren reden trotzdem untereinander - sei dir dessen bewusst.</p>
+ <p><strong>Exklusivit&auml;t ist NICHT bindend:</strong> Das Term Sheet selbst ist in AT meist unverbindlich (au&szlig;er No-Shop und NDA).</p>
+ <div class="ts-typical">
+ <span class="ts-typical-label">AT typisch:</span>
+ 30-45 Tage No-Shop, 2 Jahre NDA
+ </div>
+ <div class="ts-tip">Halte die No-Shop-Phase kurz (max. 45 Tage). Zu lang = du verlierst Verhandlungsmacht.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="ts-page-footer">
+ <span class="ts-footer-disclaimer">Keine Rechtsberatung. Immer einen Startup-Anwalt hinzuziehen.</span>
+ <span>startupburgenland.at &bull; Term Sheet Cheat Sheet</span>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Term Sheet erhalten? Lass uns dr&uuml;berschauen.</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching gehen wir gemeinsam durch dein Term Sheet und helfen dir, die Klauseln zu verstehen und zu verhandeln - bevor du unterschreibst.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespr&auml;ch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

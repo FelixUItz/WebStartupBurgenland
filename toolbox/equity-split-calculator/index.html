@@ -1,0 +1,1468 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Equity Split Calculator | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Interaktiver Equity Split Calculator für Gründerteams: Fragebogen-basierte Anteilsberechnung in 5 Kategorien. Für österreichische Startups, GmbH und FlexCo.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/equity-split-calculator/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/equity-split-calculator/">
+ <meta property="og:title" content="Equity Split Calculator | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Interaktiver Equity Split Calculator für Gründerteams: Fragebogen-basierte Anteilsberechnung in 5 Kategorien. Für österreichische Startups, GmbH und FlexCo.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Equity Split Calculator | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Equity Split Calculator */
+
+ /* Category Colors */
+.tool-content.cat-idee { --cat-color: #6B7280; --cat-bg: #F3F4F6; }
+.tool-content.cat-commitment { --cat-color: #E63946; --cat-bg: #FEF2F2; }
+.tool-content.cat-skills { --cat-color: #4B5563; --cat-bg: #F3F4F6; }
+.tool-content.cat-kapital { --cat-color: #28A745; --cat-bg: #DCFCE7; }
+.tool-content.cat-netzwerk { --cat-color: #FF8C00; --cat-bg: #FFF7ED; }
+
+ /* Progress Container */
+.tool-content.progress-container {
+ background: #fff;
+ border-radius: 12px;
+ padding: 20px 24px;
+ margin-bottom: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.progress-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 8px;
+ }
+.tool-content.progress-label {
+ font-weight: 700;
+ font-size: 14px;
+ color: #E63946;
+ }
+.tool-content.progress-step {
+ font-size: 13px;
+ color: #6B7280;
+ font-weight: 600;
+ }
+.tool-content.progress-bar-track {
+ height: 8px;
+ background: #E2E8F0;
+ border-radius: 4px;
+ overflow: hidden;
+ }
+.tool-content.progress-fill {
+ height: 100%;
+ background: linear-gradient(90deg, #E63946, #FF8C00);
+ border-radius: 4px;
+ transition: width 0.5s ease;
+ }
+.tool-content.progress-steps {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 8px;
+ }
+.tool-content.step-dot {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 4px;
+ flex: 1;
+ }
+.tool-content.step-dot-circle {
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ background: #E2E8F0;
+ transition: 0.3s ease;
+ }
+.tool-content.step-dot-circle.active { background: #E63946; }
+.tool-content.step-dot-circle.done { background: #28A745; }
+.tool-content.step-dot-label {
+ font-size: 10px;
+ color: #6B7280;
+ text-align: center;
+ font-weight: 500;
+ }
+
+ /* Step Cards */
+.tool-content.step-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 28px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ margin-bottom: 24px;
+ display: none;
+ }
+.tool-content.step-card.active {
+ display: block;
+ animation: eqFadeIn 0.3s ease;
+ }
+ @keyframes eqFadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+.tool-content.step-card h2 {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ margin-bottom: 6px;
+ letter-spacing: -0.3px;
+ }
+.tool-content.step-card.step-desc {
+ color: #6B7280;
+ font-size: 14px;
+ margin-bottom: 20px;
+ line-height: 1.6;
+ }
+
+ /* Founder Count Selector */
+.tool-content.count-selector {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 20px;
+ }
+.tool-content.count-btn {
+ width: 56px;
+ height: 56px;
+ border: 2px solid #E2E8F0;
+ border-radius: 8px;
+ background: #fff;
+ font-size: 20px;
+ font-weight: 800;
+ color: #1C1D1F;
+ cursor: pointer;
+ transition: 0.3s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+.tool-content.count-btn:hover {
+ border-color: #FF8C00;
+ color: #E63946;
+ }
+.tool-content.count-btn.selected {
+ background: #E63946;
+ border-color: #E63946;
+ color: #fff;
+ }
+
+ /* Founder Names */
+.tool-content.founder-names {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ }
+.tool-content.founder-name-row {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+.tool-content.founder-name-label {
+ font-weight: 700;
+ font-size: 14px;
+ color: #E63946;
+ width: 100px;
+ flex-shrink: 0;
+ }
+
+ /* Form Input */
+.tool-content.form-input {
+ width: 100%;
+ padding: 10px 14px;
+ border: 2px solid #E2E8F0;
+ border-radius: 8px;
+ font-size: 14px;
+ color: #1C1D1F;
+ background: #fff;
+ transition: 0.3s ease;
+ }
+.tool-content.form-input:focus {
+ outline: none;
+ border-color: #FF8C00;
+ box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+ }
+
+ /* Category Header */
+.tool-content.category-header {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ margin-bottom: 16px;
+ padding: 12px 16px;
+ border-radius: 8px;
+ }
+.tool-content.category-header.cat-idee { background: #F3F4F6; }
+.tool-content.category-header.cat-commitment { background: #FEF2F2; }
+.tool-content.category-header.cat-skills { background: #F3F4F6; }
+.tool-content.category-header.cat-kapital { background: #DCFCE7; }
+.tool-content.category-header.cat-netzwerk { background: #FFF7ED; }
+.tool-content.category-badge {
+ font-weight: 800;
+ font-size: 12px;
+ padding: 3px 10px;
+ border-radius: 4px;
+ color: #fff;
+ white-space: nowrap;
+ }
+.tool-content.cat-idee.category-badge { background: #6B7280; }
+.tool-content.cat-commitment.category-badge { background: #E63946; }
+.tool-content.cat-skills.category-badge { background: #4B5563; }
+.tool-content.cat-kapital.category-badge { background: #28A745; }
+.tool-content.cat-netzwerk.category-badge { background: #FF8C00; }
+.tool-content.category-title {
+ font-weight: 700;
+ font-size: 16px;
+ color: #1C1D1F;
+ }
+.tool-content.category-weight {
+ margin-left: auto;
+ font-size: 13px;
+ font-weight: 600;
+ color: #6B7280;
+ }
+.tool-content.category-desc {
+ font-size: 13px;
+ color: #6B7280;
+ margin-bottom: 16px;
+ line-height: 1.5;
+ padding: 0 4px;
+ }
+
+ /* Rating Grid */
+.tool-content.rating-grid { margin-bottom: 24px; }
+.tool-content.rating-row {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding: 10px 0;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.rating-row:last-child { border-bottom: none; }
+.tool-content.rating-founder-name {
+ width: 100px;
+ font-weight: 600;
+ font-size: 14px;
+ color: #E63946;
+ flex-shrink: 0;
+ }
+.tool-content.rating-slider-container {
+ flex: 1;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+.tool-content.rating-slider {
+ flex: 1;
+ -webkit-appearance: none;
+ appearance: none;
+ height: 6px;
+ background: #E2E8F0;
+ border-radius: 3px;
+ outline: none;
+ cursor: pointer;
+ }
+.tool-content.rating-slider::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ appearance: none;
+ width: 20px;
+ height: 20px;
+ background: #E63946;
+ border-radius: 50%;
+ cursor: pointer;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ transition: 0.3s ease;
+ }
+.tool-content.rating-slider::-webkit-slider-thumb:hover {
+ transform: scale(1.15);
+ background: #FF8C00;
+ }
+.tool-content.rating-slider::-moz-range-thumb {
+ width: 20px;
+ height: 20px;
+ background: #E63946;
+ border-radius: 50%;
+ cursor: pointer;
+ border: none;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ }
+.tool-content.rating-value {
+ width: 40px;
+ text-align: center;
+ font-weight: 800;
+ font-size: 18px;
+ color: #E63946;
+ font-family: monospace;
+ }
+.tool-content.rating-scale {
+ display: flex;
+ justify-content: space-between;
+ padding: 0 100px 0 112px;
+ font-size: 11px;
+ color: #6B7280;
+ margin-top: -4px;
+ margin-bottom: 8px;
+ }
+
+ /* Buttons */
+.tool-content.btn-row {
+ display: flex;
+ gap: 12px;
+ justify-content: flex-end;
+ margin-top: 20px;
+ }
+.tool-content.eq-btn {
+ padding: 12px 28px;
+ border-radius: 8px;
+ font-size: 14px;
+ font-weight: 700;
+ cursor: pointer;
+ transition: 0.3s ease;
+ border: 2px solid transparent;
+ }
+.tool-content.eq-btn-primary {
+ background: #E63946;
+ color: #fff;
+ border-color: #E63946;
+ }
+.tool-content.eq-btn-primary:hover {
+ background: #FF8C00;
+ border-color: #FF8C00;
+ }
+.tool-content.eq-btn-primary:disabled {
+ opacity: 0.5;
+ cursor: not-allowed;
+ }
+.tool-content.eq-btn-secondary {
+ background: #fff;
+ color: #E63946;
+ border-color: #E2E8F0;
+ }
+.tool-content.eq-btn-secondary:hover {
+ border-color: #E63946;
+ }
+.tool-content.eq-btn-accent {
+ background: #FF8C00;
+ color: #fff;
+ border-color: #FF8C00;
+ }
+.tool-content.eq-btn-accent:hover {
+ background: #C26900;
+ border-color: #C26900;
+ }
+
+ /* Results Container */
+.tool-content.results-container { display: none; }
+.tool-content.results-container.active { display: block; }
+.tool-content.results-header {
+ text-align: center;
+ margin-bottom: 28px;
+ }
+.tool-content.results-header h2 {
+ font-size: 26px;
+ font-weight: 800;
+ color: #E63946;
+ margin-bottom: 6px;
+ }
+.tool-content.results-header p {
+ color: #6B7280;
+ font-size: 15px;
+ }
+
+ /* Results Grid */
+.tool-content.results-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 24px;
+ margin-bottom: 24px;
+ }
+.tool-content.chart-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+.tool-content.chart-card h3 {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 16px;
+ }
+.tool-content.chart-wrapper {
+ width: 100%;
+ max-width: 320px;
+ }
+
+ /* Results Table */
+.tool-content.results-table-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ margin-bottom: 24px;
+ }
+.tool-content.results-table-card h3 {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 16px;
+ }
+.tool-content.results-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ }
+.tool-content.results-table th {
+ background: #E63946;
+ color: #fff;
+ padding: 10px 12px;
+ text-align: left;
+ font-weight: 600;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+.tool-content.results-table td {
+ padding: 10px 12px;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.results-table tr:nth-child(even) {
+ background: #F8FAFC;
+ }
+.tool-content.results-table.equity-value {
+ font-weight: 800;
+ font-size: 15px;
+ color: #E63946;
+ font-family: monospace;
+ }
+
+ /* Adjustment Sliders */
+.tool-content.adjustment-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 24px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ border: 1px solid #E2E8F0;
+ margin-bottom: 24px;
+ }
+.tool-content.adjustment-card h3 {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin-bottom: 6px;
+ }
+.tool-content.adjustment-desc {
+ font-size: 13px;
+ color: #6B7280;
+ margin-bottom: 16px;
+ }
+.tool-content.adjustment-row {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding: 8px 0;
+ border-bottom: 1px solid #E2E8F0;
+ }
+.tool-content.adjustment-row:last-child { border-bottom: none; }
+.tool-content.adjustment-name {
+ width: 100px;
+ font-weight: 600;
+ font-size: 14px;
+ color: #E63946;
+ flex-shrink: 0;
+ }
+.tool-content.adjustment-slider {
+ flex: 1;
+ -webkit-appearance: none;
+ appearance: none;
+ height: 6px;
+ background: #E2E8F0;
+ border-radius: 3px;
+ outline: none;
+ cursor: pointer;
+ }
+.tool-content.adjustment-slider::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ appearance: none;
+ width: 18px;
+ height: 18px;
+ background: #FF8C00;
+ border-radius: 50%;
+ cursor: pointer;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ }
+.tool-content.adjustment-slider::-moz-range-thumb {
+ width: 18px;
+ height: 18px;
+ background: #FF8C00;
+ border-radius: 50%;
+ cursor: pointer;
+ border: none;
+ }
+.tool-content.adjustment-value {
+ width: 55px;
+ text-align: right;
+ font-weight: 800;
+ font-size: 15px;
+ color: #E63946;
+ font-family: monospace;
+ }
+.tool-content.adjustment-total {
+ text-align: right;
+ font-size: 13px;
+ color: #6B7280;
+ margin-top: 8px;
+ padding-top: 8px;
+ border-top: 2px solid #E63946;
+ }
+.tool-content.adjustment-total.error {
+ color: #DC3545;
+ font-weight: 700;
+ }
+
+ /* Warning Box */
+.tool-content.warning-box {
+ background: #FFF7ED;
+ border: 1px solid #FFF7ED;
+ border-radius: 8px;
+ padding: 20px 24px;
+ margin-bottom: 24px;
+ display: none;
+ }
+.tool-content.warning-box.visible {
+ display: flex;
+ align-items: flex-start;
+ gap: 12px;
+ }
+.tool-content.warning-icon {
+ font-size: 20px;
+ flex-shrink: 0;
+ line-height: 1;
+ }
+.tool-content.warning-text {
+ font-size: 14px;
+ color: #C26900;
+ line-height: 1.6;
+ }
+.tool-content.warning-text strong { color: #C26900; }
+
+ /* Email Gate */
+.tool-content.email-gate {
+ background: linear-gradient(135deg, #E63946, #FF8C00);
+ border-radius: 16px;
+ padding: 36px;
+ text-align: center;
+ color: #fff;
+ margin-bottom: 24px;
+ display: none;
+ }
+.tool-content.email-gate.visible { display: block; }
+.tool-content.email-gate h3 {
+ font-size: 20px;
+ font-weight: 800;
+ margin-bottom: 8px;
+ color: #fff;
+ }
+.tool-content.email-gate p {
+ font-size: 14px;
+ opacity: 0.9;
+ margin-bottom: 16px;
+ }
+.tool-content.email-form {
+ display: flex;
+ gap: 10px;
+ max-width: 480px;
+ margin: 0 auto;
+ }
+.tool-content.email-form input {
+ flex: 1;
+ padding: 12px 16px;
+ border: 2px solid rgba(255,255,255,0.3);
+ border-radius: 8px;
+ background: rgba(255,255,255,0.1);
+ color: #fff;
+ font-size: 14px;
+ }
+.tool-content.email-form input::placeholder { color: rgba(255,255,255,0.6); }
+.tool-content.email-form input:focus {
+ outline: none;
+ border-color: #FF8C00;
+ background: rgba(255,255,255,0.15);
+ }
+.tool-content.email-form button {
+ padding: 12px 24px;
+ background: #FF8C00;
+ color: #fff;
+ border: none;
+ border-radius: 8px;
+ font-weight: 700;
+ font-size: 14px;
+ cursor: pointer;
+ transition: 0.3s ease;
+ white-space: nowrap;
+ }
+.tool-content.email-form button:hover { background: #C26900; }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+.tool-content.results-grid { grid-template-columns: 1fr; }
+.tool-content.rating-row { flex-wrap: wrap; }
+.tool-content.rating-founder-name { width: 100%; }
+.tool-content.rating-scale { padding: 0; display: none; }
+.tool-content.count-selector { flex-wrap: wrap; }
+.tool-content.email-form { flex-direction: column; }
+.tool-content.btn-row { flex-direction: column; }
+.tool-content.eq-btn { width: 100%; text-align: center; }
+.tool-content.adjustment-row { flex-wrap: wrap; }
+.tool-content.adjustment-name { width: 100%; }
+.tool-content.progress-steps { display: none; }
+.tool-content.step-card { padding: 20px; }
+ }
+
+ /* Print */
+ @media print {
+.tool-content.progress-container,
+.tool-content.email-gate,
+.tool-content.btn-row { display: none!important; }
+.tool-content.results-table th,
+.tool-content.chart-card,
+.tool-content.category-header,
+.tool-content.category-badge {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Equity Split Calculator</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Faire Anteilsverteilung f&uuml;r Gr&uuml;nderteams - fragebogenbasiert in 5 Kategorien</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/scaleup/">Phase 3: Scale-Up</a>
+ <span class="separator">/</span>
+ <span class="current">Equity Split Calculator</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 960px;">
+
+ <!-- Progress Bar -->
+ <div class="progress-container">
+ <div class="progress-header">
+ <span class="progress-label" id="progressLabel">Schritt 1 von 7</span>
+ <span class="progress-step" id="progressPercent">14%</span>
+ </div>
+ <div class="progress-bar-track">
+ <div class="progress-fill" id="progressFill" style="width: 14%;"></div>
+ </div>
+ <div class="progress-steps">
+ <div class="step-dot"><div class="step-dot-circle active" data-step="0"></div><div class="step-dot-label">Anzahl</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="1"></div><div class="step-dot-label">Namen</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="2"></div><div class="step-dot-label">Idee</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="3"></div><div class="step-dot-label">Commitment</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="4"></div><div class="step-dot-label">Skills</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="5"></div><div class="step-dot-label">Kapital</div></div>
+ <div class="step-dot"><div class="step-dot-circle" data-step="6"></div><div class="step-dot-label">Netzwerk</div></div>
+ </div>
+ </div>
+
+ <!-- ===== STEP 0: Number of Founders ===== -->
+ <div class="step-card active" id="step-0">
+ <h2>Wie viele Mitgründer:innen seid ihr?</h2>
+ <p class="step-desc">Wähle die Anzahl der Gründer:innen, die am Equity Split beteiligt sind. Inkl. dir selbst.</p>
+ <div class="count-selector" id="countSelector">
+ <button class="count-btn" data-count="2">2</button>
+ <button class="count-btn" data-count="3">3</button>
+ <button class="count-btn" data-count="4">4</button>
+ <button class="count-btn" data-count="5">5</button>
+ </div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-primary" id="btnStep0Next" disabled>Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 1: Founder Names ===== -->
+ <div class="step-card" id="step-1">
+ <h2>Wie heißen die Gründer:innen?</h2>
+ <p class="step-desc">Gib die Vornamen oder Kürzel ein. Diese werden in der Auswertung verwendet.</p>
+ <div class="founder-names" id="founderNames"></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(0)">Zurück</button>
+ <button class="eq-btn eq-btn-primary" id="btnStep1Next">Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 2: Category - Idee & IP ===== -->
+ <div class="step-card" id="step-2">
+ <h2>Kategorie 1: Idee &amp; IP</h2>
+ <div class="category-header cat-idee">
+ <span class="category-badge">1/5</span>
+ <span class="category-title">Idee &amp; geistiges Eigentum</span>
+ <span class="category-weight">Gewichtung: 15%</span>
+ </div>
+ <p class="category-desc">Wer hatte die ursprüngliche Idee? Wer hat IP (Patente, Code, Designs, Prototypen) eingebracht? Bewerte jeden Gründer von 0 (kein Beitrag) bis 10 (alleiniger Ideengeber / hat alles an IP mitgebracht).</p>
+ <div class="rating-grid" id="ratings-idee"></div>
+ <div class="rating-scale"><span>0 = kein Beitrag</span><span>5 = gleicher Beitrag</span><span>10 = alleiniger Beitrag</span></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(1)">Zurück</button>
+ <button class="eq-btn eq-btn-primary" onclick="goToStep(3)">Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 3: Category - Commitment & Zeit ===== -->
+ <div class="step-card" id="step-3">
+ <h2>Kategorie 2: Commitment &amp; Zeit</h2>
+ <div class="category-header cat-commitment">
+ <span class="category-badge">2/5</span>
+ <span class="category-title">Commitment &amp; Zeitinvestment</span>
+ <span class="category-weight">Gewichtung: 30%</span>
+ </div>
+ <p class="category-desc">Wer arbeitet Vollzeit am Startup? Wer Teilzeit? Wer hat seinen Job dafür gekündigt? Bewerte den zeitlichen und persönlichen Einsatz. 10 = Vollzeit, alles aufgegeben. 0 = Nur beratend / minimal involviert.</p>
+ <div class="rating-grid" id="ratings-commitment"></div>
+ <div class="rating-scale"><span>0 = minimal</span><span>5 = Teilzeit</span><span>10 = Vollzeit, all-in</span></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(2)">Zurück</button>
+ <button class="eq-btn eq-btn-primary" onclick="goToStep(4)">Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 4: Category - Skills & Erfahrung ===== -->
+ <div class="step-card" id="step-4">
+ <h2>Kategorie 3: Skills &amp; Erfahrung</h2>
+ <div class="category-header cat-skills">
+ <span class="category-badge">3/5</span>
+ <span class="category-title">Relevante Fähigkeiten &amp; Erfahrung</span>
+ <span class="category-weight">Gewichtung: 20%</span>
+ </div>
+ <p class="category-desc">Wer bringt die relevanteste Branchenerfahrung mit? Wer hat die technischen Skills, die das Startup braucht? 10 = unverzichtbare Kernkompetenz (z.B. einziger Developer, Branchenexperte). 0 = keine relevante Erfahrung.</p>
+ <div class="rating-grid" id="ratings-skills"></div>
+ <div class="rating-scale"><span>0 = keine relevante Erfahrung</span><span>5 = solide</span><span>10 = unverzichtbar</span></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(3)">Zurück</button>
+ <button class="eq-btn eq-btn-primary" onclick="goToStep(5)">Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 5: Category - Kapital ===== -->
+ <div class="step-card" id="step-5">
+ <h2>Kategorie 4: Kapital</h2>
+ <div class="category-header cat-kapital">
+ <span class="category-badge">4/5</span>
+ <span class="category-title">Finanzielles Investment</span>
+ <span class="category-weight">Gewichtung: 20%</span>
+ </div>
+ <p class="category-desc">Wer bringt eigenes Geld ein? Wer finanziert Kosten vor? Wer verzichtet auf Gehalt? 10 = trägt den Großteil der finanziellen Last. 0 = bringt kein Kapital ein.</p>
+ <div class="rating-grid" id="ratings-kapital"></div>
+ <div class="rating-scale"><span>0 = kein Kapital</span><span>5 = anteilig</span><span>10 = Hauptfinanzierer</span></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(4)">Zurück</button>
+ <button class="eq-btn eq-btn-primary" onclick="goToStep(6)">Weiter</button>
+ </div>
+ </div>
+
+ <!-- ===== STEP 6: Category - Netzwerk & Vertrieb ===== -->
+ <div class="step-card" id="step-6">
+ <h2>Kategorie 5: Netzwerk &amp; Vertrieb</h2>
+ <div class="category-header cat-netzwerk">
+ <span class="category-badge">5/5</span>
+ <span class="category-title">Netzwerk, Kund:innen &amp; Vertriebskontakte</span>
+ <span class="category-weight">Gewichtung: 15%</span>
+ </div>
+ <p class="category-desc">Wer bringt bestehende Kund:innen, Kontakte oder Vertriebskanäle mit? Wer hat das Netzwerk, das dem Startup Türen öffnet? 10 = bringt Kund:innen und Schlüsselkontakte. 0 = kein relevantes Netzwerk.</p>
+ <div class="rating-grid" id="ratings-netzwerk"></div>
+ <div class="rating-scale"><span>0 = kein Netzwerk</span><span>5 = hilfreich</span><span>10 = Türöffner</span></div>
+ <div class="btn-row">
+ <button class="eq-btn eq-btn-secondary" onclick="goToStep(5)">Zurück</button>
+ <button class="eq-btn eq-btn-accent" onclick="calculateResults()">Ergebnis berechnen</button>
+ </div>
+ </div>
+
+ <!-- ===== RESULTS ===== -->
+ <div class="results-container" id="resultsContainer">
+ <div class="results-header">
+ <h2>Euer empfohlener Equity Split</h2>
+ <p>Basierend auf euren Angaben in 5 Kategorien. Nutzt die Anpassungs-Slider unten für Feintuning.</p>
+ </div>
+
+ <!-- Warning for equal splits -->
+ <div class="warning-box" id="equalWarning">
+ <span class="warning-icon">!</span>
+ <div class="warning-text">
+ <strong>50/50 ist selten optimal - diskutiert das offen!</strong><br>
+ Ein exakt gleicher Split kann zu Entscheidungsblockaden führen. Überlegt, wer die CEO-Rolle übernimmt und ob ein leichtes Übergewicht (z.B. 51/49) sinnvoll ist. Bei mehr als 2 Gründer:innen: Gleiche Anteile für alle deuten darauf hin, dass ihr die Diskussion über Beiträge vermeidet.
+ </div>
+ </div>
+
+ <!-- Charts -->
+ <div class="results-grid">
+ <div class="chart-card">
+ <h3>Anteilsverteilung</h3>
+ <div class="chart-wrapper">
+ <canvas id="pieChart"></canvas>
+ </div>
+ </div>
+ <div class="chart-card">
+ <h3>Beitrag pro Kategorie</h3>
+ <div class="chart-wrapper">
+ <canvas id="radarChart"></canvas>
+ </div>
+ </div>
+ </div>
+
+ <!-- Detailed Table -->
+ <div class="results-table-card">
+ <h3>Detaillierte Auswertung</h3>
+ <table class="results-table" id="resultsTable">
+ <thead>
+ <tr>
+ <th>Gründer:in</th>
+ <th>Idee (15%)</th>
+ <th>Commitment (30%)</th>
+ <th>Skills (20%)</th>
+ <th>Kapital (20%)</th>
+ <th>Netzwerk (15%)</th>
+ <th>Gesamt</th>
+ <th>Equity</th>
+ </tr>
+ </thead>
+ <tbody id="resultsTableBody"></tbody>
+ </table>
+ </div>
+
+ <!-- Adjustment Sliders -->
+ <div class="adjustment-card">
+ <h3>Feintuning: Anteile manuell anpassen</h3>
+ <p class="adjustment-desc">Die berechneten Werte sind ein Startpunkt. Nutzt die Slider, um die Anteile gemeinsam fein abzustimmen. Die Summe muss 100% ergeben.</p>
+ <div id="adjustmentSliders"></div>
+ <div class="adjustment-total" id="adjustmentTotal">Summe: 100,0%</div>
+ </div>
+
+ <!-- Email Gate -->
+ <div class="email-gate" id="emailGate">
+ <h3>Ergebnis als PDF speichern</h3>
+ <p>Erhalte eine professionelle PDF-Zusammenfassung eurer Equity-Split-Berechnung per E-Mail - kostenlos.</p>
+ <div class="email-form">
+ <input type="email" id="emailInput" placeholder="deine@email.at">
+ <button onclick="submitEmail()">PDF anfordern</button>
+ </div>
+ <p style="font-size:12px; opacity:0.7; margin-top:10px; margin-bottom:0;">Wir senden dir nur die PDF. Kein Spam, kein Newsletter ohne deine Zustimmung.</p>
+ </div>
+
+ <!-- Restart & Actions -->
+ <div class="btn-row" style="justify-content: center; margin-top: 24px;">
+ <button class="eq-btn eq-btn-secondary" onclick="resetCalculator()">Neu berechnen</button>
+ <button class="eq-btn eq-btn-primary" onclick="window.print()">Ergebnis drucken</button>
+ <button class="eq-btn eq-btn-accent" onclick="document.getElementById('emailGate').classList.add('visible')">Als PDF speichern</button>
+ </div>
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Equity Split im Detail besprechen?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Die Anteilsverteilung ist eine der wichtigsten Entscheidungen am Anfang. Wir bei StartUp Burgenland helfen euch, die richtige Struktur zu finden - und erklären, wie ihr das Ganze in eine GmbH oder FlexCo überführt.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <script>
+ // ========== STATE ==========
+ const state = {
+ founderCount: 0,
+ founderNames: [],
+ ratings: {
+ idee: [],
+ commitment: [],
+ skills: [],
+ kapital: [],
+ netzwerk: []
+ },
+ weights: {
+ idee: 0.15,
+ commitment: 0.30,
+ skills: 0.20,
+ kapital: 0.20,
+ netzwerk: 0.15
+ },
+ currentStep: 0,
+ calculatedEquity: [],
+ adjustedEquity: [],
+ pieChart: null,
+ radarChart: null
+ };
+
+ const chartColors = ['#E63946', '#FF8C00', '#28A745', '#6366F1', '#DC3545'];
+
+ // ========== STEP NAVIGATION ==========
+ function goToStep(stepIndex) {
+ // Hide all steps
+ document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active'));
+
+ // Show target step
+ const targetStep = document.getElementById('step-' + stepIndex);
+ if (targetStep) {
+ targetStep.classList.add('active');
+ }
+
+ state.currentStep = stepIndex;
+ updateProgress();
+
+ // Generate rating sliders if needed
+ if (stepIndex >= 2 && stepIndex <= 6) {
+ const categories = ['idee', 'commitment', 'skills', 'kapital', 'netzwerk'];
+ const catIndex = stepIndex - 2;
+ generateRatingSliders(categories[catIndex]);
+ }
+ }
+
+ function updateProgress() {
+ const totalSteps = 7;
+ const percent = Math.round(((state.currentStep + 1) / totalSteps) * 100);
+ document.getElementById('progressFill').style.width = percent + '%';
+ document.getElementById('progressLabel').textContent = 'Schritt ' + (state.currentStep + 1) + ' von ' + totalSteps;
+ document.getElementById('progressPercent').textContent = percent + '%';
+
+ // Update step dots
+ document.querySelectorAll('.step-dot-circle').forEach(dot => {
+ const step = parseInt(dot.dataset.step);
+ dot.classList.remove('active', 'done');
+ if (step === state.currentStep) dot.classList.add('active');
+ if (step < state.currentStep) dot.classList.add('done');
+ });
+ }
+
+ // ========== STEP 0: FOUNDER COUNT ==========
+ document.querySelectorAll('.count-btn').forEach(btn => {
+ btn.addEventListener('click', () => {
+ document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('selected'));
+ btn.classList.add('selected');
+ state.founderCount = parseInt(btn.dataset.count);
+ document.getElementById('btnStep0Next').disabled = false;
+ });
+ });
+
+ document.getElementById('btnStep0Next').addEventListener('click', () => {
+ if (state.founderCount > 0) {
+ generateFounderNameInputs();
+ goToStep(1);
+ }
+ });
+
+ // ========== STEP 1: FOUNDER NAMES ==========
+ function generateFounderNameInputs() {
+ const container = document.getElementById('founderNames');
+ container.innerHTML = '';
+ const defaultNames = ['Anna', 'Ben', 'Clara', 'David', 'Eva'];
+
+ for (let i = 0; i < state.founderCount; i++) {
+ const row = document.createElement('div');
+ row.className = 'founder-name-row';
+ row.innerHTML = '<span class="founder-name-label">Gründer:in ' + (i + 1) + '</span>' +
+ '<input type="text" class="form-input founder-name-input" placeholder="' + defaultNames[i] + '" value="">';
+ container.appendChild(row);
+ }
+ }
+
+ document.getElementById('btnStep1Next').addEventListener('click', () => {
+ const inputs = document.querySelectorAll('.founder-name-input');
+ const defaultNames = ['Anna', 'Ben', 'Clara', 'David', 'Eva'];
+ state.founderNames = [];
+
+ inputs.forEach((input, i) => {
+ const name = input.value.trim() || defaultNames[i];
+ state.founderNames.push(name);
+ });
+
+ // Initialize ratings
+ Object.keys(state.ratings).forEach(cat => {
+ state.ratings[cat] = new Array(state.founderCount).fill(5);
+ });
+
+ goToStep(2);
+ });
+
+ // ========== RATING SLIDERS ==========
+ function generateRatingSliders(category) {
+ const container = document.getElementById('ratings-' + category);
+ container.innerHTML = '';
+
+ for (let i = 0; i < state.founderCount; i++) {
+ const row = document.createElement('div');
+ row.className = 'rating-row';
+
+ const currentVal = state.ratings[category][i];
+
+ row.innerHTML = '<span class="rating-founder-name">' + state.founderNames[i] + '</span>' +
+ '<div class="rating-slider-container">' +
+ '<input type="range" class="rating-slider" min="0" max="10" value="' + currentVal + '" ' +
+ 'data-category="' + category + '" data-founder="' + i + '" ' +
+ 'oninput="updateRating(this)">' +
+ '<span class="rating-value" id="rv-' + category + '-' + i + '">' + currentVal + '</span>' +
+ '</div>';
+
+ container.appendChild(row);
+ }
+ }
+
+ function updateRating(slider) {
+ const cat = slider.dataset.category;
+ const idx = parseInt(slider.dataset.founder);
+ const val = parseInt(slider.value);
+ state.ratings[cat][idx] = val;
+ document.getElementById('rv-' + cat + '-' + idx).textContent = val;
+ }
+
+ // ========== CALCULATION ==========
+ function calculateResults() {
+ const scores = [];
+
+ for (let i = 0; i < state.founderCount; i++) {
+ let total = 0;
+ Object.keys(state.weights).forEach(cat => {
+ total += state.ratings[cat][i] * state.weights[cat];
+ });
+ scores.push(total);
+ }
+
+ const totalScore = scores.reduce((a, b) => a + b, 0);
+
+ if (totalScore === 0) {
+ state.calculatedEquity = new Array(state.founderCount).fill(100 / state.founderCount);
+ } else {
+ state.calculatedEquity = scores.map(s => (s / totalScore) * 100);
+ }
+
+ state.adjustedEquity = [...state.calculatedEquity];
+
+ // Hide steps, show results
+ document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active'));
+ document.querySelector('.progress-container').style.display = 'none';
+ document.getElementById('resultsContainer').classList.add('active');
+
+ renderResults();
+ checkEqualSplit();
+ }
+
+ function renderResults() {
+ renderPieChart();
+ renderRadarChart();
+ renderResultsTable();
+ renderAdjustmentSliders();
+ }
+
+ // ========== PIE CHART ==========
+ function renderPieChart() {
+ const ctx = document.getElementById('pieChart').getContext('2d');
+
+ if (state.pieChart) state.pieChart.destroy();
+
+ state.pieChart = new Chart(ctx, {
+ type: 'pie',
+ data: {
+ labels: state.founderNames,
+ datasets: [{
+ data: state.adjustedEquity.map(v => parseFloat(v.toFixed(1))),
+ backgroundColor: chartColors.slice(0, state.founderCount),
+ borderWidth: 2,
+ borderColor: '#FFFFFF'
+ }]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: true,
+ plugins: {
+ legend: {
+ position: 'bottom',
+ labels: {
+ font: { size: 13, weight: '600' },
+ padding: 16,
+ usePointStyle: true,
+ pointStyleWidth: 12
+ }
+ },
+ tooltip: {
+ callbacks: {
+ label: function(context) {
+ return context.label + ': ' + context.parsed.toFixed(1) + '%';
+ }
+ }
+ }
+ }
+ }
+ });
+ }
+
+ // ========== RADAR CHART ==========
+ function renderRadarChart() {
+ const ctx = document.getElementById('radarChart').getContext('2d');
+
+ if (state.radarChart) state.radarChart.destroy();
+
+ const datasets = state.founderNames.map((name, i) => ({
+ label: name,
+ data: [
+ state.ratings.idee[i],
+ state.ratings.commitment[i],
+ state.ratings.skills[i],
+ state.ratings.kapital[i],
+ state.ratings.netzwerk[i]
+ ],
+ borderColor: chartColors[i],
+ backgroundColor: chartColors[i] + '20',
+ borderWidth: 2,
+ pointRadius: 4,
+ pointBackgroundColor: chartColors[i]
+ }));
+
+ state.radarChart = new Chart(ctx, {
+ type: 'radar',
+ data: {
+ labels: ['Idee & IP', 'Commitment', 'Skills', 'Kapital', 'Netzwerk'],
+ datasets: datasets
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: true,
+ scales: {
+ r: {
+ beginAtZero: true,
+ max: 10,
+ ticks: { stepSize: 2, font: { size: 10 } },
+ pointLabels: { font: { size: 11, weight: '600' } }
+ }
+ },
+ plugins: {
+ legend: {
+ position: 'bottom',
+ labels: {
+ font: { size: 12, weight: '600' },
+ padding: 12,
+ usePointStyle: true
+ }
+ }
+ }
+ }
+ });
+ }
+
+ // ========== RESULTS TABLE ==========
+ function renderResultsTable() {
+ const tbody = document.getElementById('resultsTableBody');
+ tbody.innerHTML = '';
+
+ const totalScores = [];
+
+ for (let i = 0; i < state.founderCount; i++) {
+ let total = 0;
+ Object.keys(state.weights).forEach(cat => {
+ total += state.ratings[cat][i] * state.weights[cat];
+ });
+ totalScores.push(total);
+ }
+
+ for (let i = 0; i < state.founderCount; i++) {
+ const row = document.createElement('tr');
+ row.innerHTML =
+ '<td><strong>' + state.founderNames[i] + '</strong></td>' +
+ '<td>' + state.ratings.idee[i] + '/10</td>' +
+ '<td>' + state.ratings.commitment[i] + '/10</td>' +
+ '<td>' + state.ratings.skills[i] + '/10</td>' +
+ '<td>' + state.ratings.kapital[i] + '/10</td>' +
+ '<td>' + state.ratings.netzwerk[i] + '/10</td>' +
+ '<td>' + totalScores[i].toFixed(2) + '</td>' +
+ '<td class="equity-value">' + state.adjustedEquity[i].toFixed(1) + '%</td>';
+ tbody.appendChild(row);
+ }
+ }
+
+ // ========== ADJUSTMENT SLIDERS ==========
+ function renderAdjustmentSliders() {
+ const container = document.getElementById('adjustmentSliders');
+ container.innerHTML = '';
+
+ for (let i = 0; i < state.founderCount; i++) {
+ const row = document.createElement('div');
+ row.className = 'adjustment-row';
+ row.innerHTML =
+ '<span class="adjustment-name">' + state.founderNames[i] + '</span>' +
+ '<input type="range" class="adjustment-slider" min="0" max="100" step="0.5" ' +
+ 'value="' + state.adjustedEquity[i].toFixed(1) + '" ' +
+ 'data-founder="' + i + '" ' +
+ 'oninput="updateAdjustment(this)">' +
+ '<span class="adjustment-value" id="adj-val-' + i + '">' + state.adjustedEquity[i].toFixed(1) + '%</span>';
+ container.appendChild(row);
+ }
+
+ updateAdjustmentTotal();
+ }
+
+ function updateAdjustment(slider) {
+ const idx = parseInt(slider.dataset.founder);
+ state.adjustedEquity[idx] = parseFloat(slider.value);
+ document.getElementById('adj-val-' + idx).textContent = state.adjustedEquity[idx].toFixed(1) + '%';
+
+ updateAdjustmentTotal();
+ renderPieChart();
+ renderResultsTable();
+ checkEqualSplit();
+ }
+
+ function updateAdjustmentTotal() {
+ const total = state.adjustedEquity.reduce((a, b) => a + b, 0);
+ const totalEl = document.getElementById('adjustmentTotal');
+ totalEl.textContent = 'Summe: ' + total.toFixed(1) + '%';
+
+ if (Math.abs(total - 100) > 0.5) {
+ totalEl.classList.add('error');
+ totalEl.textContent += ' (muss 100% ergeben!)';
+ } else {
+ totalEl.classList.remove('error');
+ }
+ }
+
+ // ========== EQUAL SPLIT WARNING ==========
+ function checkEqualSplit() {
+ const warning = document.getElementById('equalWarning');
+ const values = state.adjustedEquity;
+ const maxDiff = Math.max(...values) - Math.min(...values);
+
+ if (maxDiff < 2 && state.founderCount >= 2) {
+ warning.classList.add('visible');
+ } else {
+ warning.classList.remove('visible');
+ }
+ }
+
+ // ========== EMAIL GATE ==========
+ function submitEmail() {
+ const email = document.getElementById('emailInput').value.trim();
+
+ if (!email ||!email.includes('@') ||!email.includes('.')) {
+ document.getElementById('emailInput').style.borderColor = '#DC3545';
+ return;
+ }
+
+ // In production: send to backend API
+ // For now: show confirmation
+ const gate = document.getElementById('emailGate');
+ gate.innerHTML = '<h3 style="color: #28A745;">PDF wird vorbereitet!</h3>' +
+ '<p>Wir senden die Zusammenfassung an <strong>' + email + '</strong>. ' +
+ 'Prüfe auch deinen Spam-Ordner.</p>' +
+ '<p style="font-size:13px; opacity:0.8; margin-top:12px; margin-bottom:0;">In der Zwischenzeit: ' +
+ 'Drucke diese Seite als PDF (Strg/Cmd + P) als Backup.</p>';
+ }
+
+ // ========== RESET ==========
+ function resetCalculator() {
+ state.founderCount = 0;
+ state.founderNames = [];
+ Object.keys(state.ratings).forEach(cat => { state.ratings[cat] = []; });
+ state.calculatedEquity = [];
+ state.adjustedEquity = [];
+ state.currentStep = 0;
+
+ document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('selected'));
+ document.getElementById('btnStep0Next').disabled = true;
+ document.getElementById('resultsContainer').classList.remove('active');
+ document.getElementById('emailGate').classList.remove('visible');
+ document.getElementById('equalWarning').classList.remove('visible');
+
+ // Reset email gate content
+ document.getElementById('emailGate').innerHTML =
+ '<h3>Ergebnis als PDF speichern</h3>' +
+ '<p>Erhalte eine professionelle PDF-Zusammenfassung eurer Equity-Split-Berechnung per E-Mail, kostenlos.</p>' +
+ '<div class="email-form">' +
+ '<input type="email" id="emailInput" placeholder="deine@email.at">' +
+ '<button onclick="submitEmail()">PDF anfordern</button>' +
+ '</div>' +
+ '<p style="font-size:12px; opacity:0.7; margin-top:10px; margin-bottom:0;">Wir senden dir nur die PDF. Kein Spam, kein Newsletter ohne deine Zustimmung.</p>';
+
+ document.querySelector('.progress-container').style.display = 'block';
+ goToStep(0);
+ }
+
+ // Initialize
+ updateProgress();
+ </script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

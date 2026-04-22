@@ -1,0 +1,1083 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Customer Interview Script | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Vollständiger Leitfaden für Problem-Discovery-Interviews: Vorbereitung, Script mit exakten Fragen, Auswertungs-Framework. Für österreichische Startups.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/interview-script/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/interview-script/">
+ <meta property="og:title" content="Customer Interview Script | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Vollständiger Leitfaden für Problem-Discovery-Interviews: Vorbereitung, Script mit exakten Fragen, Auswertungs-Framework.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Customer Interview Script | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <style>
+ /* Page-specific styles for Interview Script */
+.tool-content.teil-header {
+ background: #E63946;
+ color: #fff;
+ padding: 14px 20px;
+ border-radius: 12px 12px 0 0;
+ margin-top: 30px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+.tool-content.teil-header.teil-number {
+ background: #FF8C00;
+ color: #fff;
+ font-weight: 800;
+ font-size: 11px;
+ padding: 3px 10px;
+ border-radius: 20px;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ white-space: nowrap;
+ }
+.tool-content.teil-header h2 {
+ font-size: 18px;
+ font-weight: 700;
+ margin: 0;
+ color: #fff;
+ }
+.tool-content.teil-body {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-top: none;
+ border-radius: 0 0 12px 12px;
+ padding: 24px;
+ }
+.tool-content.section-heading {
+ font-size: 16px;
+ font-weight: 700;
+ color: #E63946;
+ margin: 24px 0 10px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid #E2E8F0;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+.tool-content.section-heading:first-child { margin-top: 0; }
+.tool-content.section-number {
+ background: #FF8C00;
+ color: #fff;
+ font-size: 11px;
+ font-weight: 700;
+ width: 28px;
+ height: 28px;
+ border-radius: 50%;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ }
+ /* Hypothesis Box */
+.tool-content.hypothesis-box {
+ background: linear-gradient(135deg, #F8FAFC, #F3F4F6);
+ border: 2px dashed #FF8C00;
+ border-radius: 10px;
+ padding: 16px 20px;
+ margin: 14px 0;
+ }
+.tool-content.hypothesis-box.label {
+ font-size: 11px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ color: #FF8C00;
+ margin-bottom: 8px;
+ }
+.tool-content.hypothesis-template {
+ font-size: 14px;
+ line-height: 1.8;
+ }
+.tool-content.fill-in {
+ display: inline-block;
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-bottom: 2px solid #FF8C00;
+ border-radius: 4px;
+ padding: 2px 8px;
+ min-width: 120px;
+ color: #6B7280;
+ font-style: italic;
+ font-size: 13px;
+ }
+ /* Stat Grid */
+.tool-content.stat-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ gap: 10px;
+ margin: 14px 0;
+ }
+.tool-content.stat-card {
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 12px;
+ text-align: center;
+ }
+.tool-content.stat-value {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ }
+.tool-content.stat-label {
+ font-size: 12px;
+ color: #6B7280;
+ margin-top: 2px;
+ }
+ /* Setting Grid */
+.tool-content.setting-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 10px;
+ margin: 10px 0;
+ }
+.tool-content.setting-item {
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 8px;
+ padding: 12px;
+ }
+.tool-content.setting-title {
+ font-weight: 700;
+ font-size: 13px;
+ color: #E63946;
+ margin-bottom: 4px;
+ }
+.tool-content.setting-desc {
+ font-size: 13px;
+ color: #6B7280;
+ }
+ /* Phase Sections */
+.tool-content.phase-section {
+ margin: 20px 0;
+ border-radius: 10px;
+ overflow: hidden;
+ border: 1px solid #E2E8F0;
+ }
+.tool-content.phase-header {
+ padding: 12px 16px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ color: #fff;
+ font-weight: 700;
+ }
+.tool-content.phase-label { font-size: 15px; display: flex; align-items: center; gap: 6px; }
+.tool-content.phase-time {
+ font-size: 12px;
+ background: rgba(255,255,255,0.2);
+ padding: 2px 8px;
+ border-radius: 12px;
+ font-weight: 600;
+ }
+.tool-content.phase-badge {
+ font-size: 10px;
+ font-weight: 800;
+ background: rgba(255,255,255,0.25);
+ padding: 2px 6px;
+ border-radius: 4px;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ margin-left: 6px;
+ }
+.phase-intro.phase-header { background: #6B7280; }
+.phase-kontext.phase-header { background: #FF8C00; }
+.phase-problem.phase-header { background: linear-gradient(135deg, #C26900, #FF8C00); }
+.phase-loesung.phase-header { background: #28A745; }
+.phase-abschluss.phase-header { background: #E63946; }
+.tool-content.phase-body { padding: 16px; }
+.phase-intro.phase-body { background: #F3F4F6; }
+.phase-kontext.phase-body { background: #FEF2F2; }
+.phase-problem.phase-body { background: #FFF7ED; }
+.phase-loesung.phase-body { background: #F0FDF4; }
+.phase-abschluss.phase-body { background: #F3F4F6; }
+ /* Script Card */
+.tool-content.script-card {
+ background: #fff;
+ border-radius: 10px;
+ padding: 14px 16px;
+ margin: 10px 0;
+ position: relative;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+ border: 1px solid rgba(0,0,0,0.06);
+ }
+.tool-content.script-card::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 14px;
+ bottom: 14px;
+ width: 3px;
+ border-radius: 3px;
+ }
+.phase-intro.script-card::before { background: #6B7280; }
+.phase-kontext.script-card::before { background: #FF8C00; }
+.phase-problem.script-card::before { background: #FF8C00; }
+.phase-loesung.script-card::before { background: #28A745; }
+.phase-abschluss.script-card::before { background: #E63946; }
+.tool-content.script-text {
+ font-size: 14px;
+ line-height: 1.7;
+ padding-left: 10px;
+ font-style: italic;
+ }
+.tool-content.script-text.placeholder {
+ background: #FFF7ED;
+ padding: 1px 5px;
+ border-radius: 3px;
+ font-style: normal;
+ font-weight: 600;
+ color: #92400E;
+ font-size: 12px;
+ }
+ /* Question Card */
+.tool-content.question-card {
+ background: #fff;
+ border-radius: 10px;
+ padding: 12px 14px;
+ margin: 8px 0;
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+ border: 1px solid rgba(0,0,0,0.06);
+ }
+.tool-content.q-number {
+ flex-shrink: 0;
+ width: 32px;
+ height: 32px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 11px;
+ font-weight: 800;
+ color: #fff;
+ }
+.phase-kontext.q-number { background: #FF8C00; }
+.phase-problem.q-number { background: #FF8C00; }
+.phase-loesung.q-number { background: #28A745; }
+.phase-abschluss.q-number { background: #E63946; }
+.tool-content.q-text {
+ font-size: 14px;
+ line-height: 1.5;
+ font-style: italic;
+ }
+.tool-content.q-text.placeholder {
+ background: #FFF7ED;
+ padding: 1px 5px;
+ border-radius: 3px;
+ font-style: normal;
+ font-weight: 600;
+ color: #92400E;
+ font-size: 12px;
+ }
+ /* Phase Goal */
+.tool-content.phase-goal {
+ background: rgba(255,255,255,0.6);
+ border-radius: 8px;
+ padding: 10px 14px;
+ margin-top: 10px;
+ font-size: 13px;
+ }
+.tool-content.phase-goal strong {
+ display: block;
+ margin-bottom: 4px;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ }
+.tool-content.phase-goal ul { list-style: none; padding: 0; margin: 0; }
+.tool-content.phase-goal ul li { padding: 3px 0 3px 16px; position: relative; }
+.tool-content.phase-goal ul li::before { content: '\2192'; position: absolute; left: 0; font-weight: 700; }
+ /* Tables */
+.tool-content.eval-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ margin: 14px 0;
+ }
+.tool-content.eval-table thead th {
+ background: #E63946;
+ color: #fff;
+ padding: 8px 10px;
+ text-align: left;
+ font-weight: 600;
+ font-size: 12px;
+ }
+.tool-content.eval-table thead th:first-child { border-radius: 8px 0 0 0; }
+.tool-content.eval-table thead th:last-child { border-radius: 0 8px 0 0; }
+.tool-content.eval-table tbody td {
+ padding: 8px 10px;
+ border-bottom: 1px solid #E2E8F0;
+ color: #6B7280;
+ font-style: italic;
+ }
+.tool-content.eval-table tbody tr:nth-child(even) { background: #F8FAFC; }
+ /* Pattern Matrix */
+.tool-content.pattern-block {
+ background: #fff;
+ border: 1px solid #E2E8F0;
+ border-radius: 10px;
+ padding: 14px 16px;
+ margin: 10px 0;
+ }
+.tool-content.pattern-block-title {
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ margin-bottom: 8px;
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ }
+.pattern-block.problems.pattern-block-title { color: #FF8C00; }
+.pattern-block.solutions.pattern-block-title { color: #28A745; }
+.pattern-block.warnings.pattern-block-title { color: #DC3545; }
+.tool-content.check-item {
+ display: flex;
+ align-items: flex-start;
+ gap: 8px;
+ padding: 4px 0;
+ font-size: 13px;
+ }
+.tool-content.checkbox {
+ flex-shrink: 0;
+ width: 18px;
+ height: 18px;
+ border: 2px solid #E2E8F0;
+ border-radius: 4px;
+ margin-top: 2px;
+ }
+.pattern-block.problems.checkbox { border-color: #FF8C00; }
+.pattern-block.solutions.checkbox { border-color: #28A745; }
+.pattern-block.warnings.check-item { color: #991B1B; }
+.tool-content.warn-icon { flex-shrink: 0; font-size: 14px; line-height: 1.4; }
+ /* Signal Grid */
+.tool-content.signal-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 10px;
+ margin: 14px 0;
+ }
+.tool-content.signal-card {
+ border-radius: 10px;
+ padding: 14px;
+ border: 1px solid;
+ }
+.signal-card.strong { background: #F0FDF4; border-color: #BBF7D0; }
+.signal-card.weak { background: #FFF7ED; border-color: #FED7AA; }
+.signal-card.red { background: #FEF2F2; border-color: #FECACA; }
+.tool-content.signal-title {
+ font-weight: 700;
+ font-size: 12px;
+ margin-bottom: 6px;
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ }
+.signal-card.strong.signal-title { color: #166534; }
+.signal-card.weak.signal-title { color: #92400E; }
+.signal-card.red.signal-title { color: #991B1B; }
+.tool-content.signal-card ul { list-style: none; padding: 0; margin: 0; font-size: 13px; }
+.tool-content.signal-card ul li { padding: 3px 0 3px 14px; position: relative; }
+.signal-card.strong ul li::before { content: '\2713'; position: absolute; left: 0; color: #16A34A; font-weight: 700; }
+.signal-card.weak ul li::before { content: '\223C'; position: absolute; left: 0; color: #C26900; font-weight: 700; }
+.signal-card.red ul li::before { content: '\2717'; position: absolute; left: 0; color: #DC3545; font-weight: 700; }
+ /* Decision Grid */
+.tool-content.decision-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 10px;
+ margin: 14px 0;
+ }
+.tool-content.decision-card {
+ border-radius: 10px;
+ padding: 14px;
+ text-align: center;
+ border: 2px solid;
+ }
+.decision-card.persevere { border-color: #28A745; background: #F0FDF4; }
+.decision-card.pivot { border-color: #FF8C00; background: #FFF7ED; }
+.decision-card.kill { border-color: #DC3545; background: #FEF2F2; }
+.tool-content.decision-label { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+.decision-card.persevere.decision-label { color: #166534; }
+.decision-card.pivot.decision-label { color: #92400E; }
+.decision-card.kill.decision-label { color: #991B1B; }
+.tool-content.decision-desc { font-size: 12px; color: #6B7280; line-height: 1.4; }
+ /* Responsive */
+ @media (max-width: 768px) {
+.tool-content.stat-grid { grid-template-columns: repeat(2, 1fr); }
+.tool-content.setting-grid { grid-template-columns: 1fr; }
+.tool-content.signal-grid { grid-template-columns: 1fr; }
+.tool-content.decision-grid { grid-template-columns: 1fr; }
+ }
+ @media (max-width: 480px) {
+.tool-content.stat-grid { grid-template-columns: 1fr; }
+ }
+ /* Print */
+ @media print {
+.tool-content.phase-section { break-inside: avoid; }
+.tool-content.question-card { break-inside: avoid; }
+.tool-content.teil-header,
+.tool-content.phase-header,
+.tool-content.eval-table thead th,
+.tool-content.phase-body,
+.tool-content.signal-card,
+.tool-content.decision-card,
+.tool-content.stat-card,
+.tool-content.setting-item {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Customer Interview Script</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Leitfaden &amp; Script - Dein kompletter Guide für Problem-Discovery-Interviews</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/idee/">Phase 1: Idee</a>
+ <span class="separator">/</span>
+ <span class="current">Customer Interview Script</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- TEIL 1: VORBEREITUNG -->
+ <div class="teil-header">
+ <span class="teil-number">Teil 1</span>
+ <h2>Vorbereitung</h2>
+ </div>
+ <div class="teil-body">
+
+ <!-- 1.1 Hypothese formulieren -->
+ <h3 class="section-heading">
+ <span class="section-number">1</span>
+ Hypothese formulieren
+ </h3>
+ <p>Bevor du loslegst: Schreib klar auf, was du glaubst. Nur so kannst du hinterher prüfen, ob du richtig lagst - oder ob du pivoten musst.</p>
+
+ <div class="hypothesis-box">
+ <div class="label">Deine Problem-Hypothese</div>
+ <div class="hypothesis-template">
+ Wir glauben, dass <span class="fill-in">Zielgruppe</span> das Problem hat, dass <span class="fill-in">Problem beschreiben</span>.<br>
+ Unsere Lösung <span class="fill-in">Lösungsansatz</span> wird ihnen helfen, <span class="fill-in">konkreter Nutzen</span> zu erreichen.
+ </div>
+ </div>
+
+ <div class="tb-box tb-box--tip">
+ <span class="tb-box-icon">&#128161;</span>
+ <div><strong>Tipp:</strong> Formuliere maximal 2-3 Hypothesen. Mehr verwässert deinen Fokus. Du kannst nach den ersten Interviews neue Hypothesen aufstellen.</div>
+ </div>
+
+ <!-- 1.2 Zielgruppe definieren -->
+ <h3 class="section-heading">
+ <span class="section-number">2</span>
+ Zielgruppe definieren
+ </h3>
+ <p><strong>Schlüsselfrage:</strong> Wer hat das Problem am stärksten? Wer leidet so sehr darunter, dass er/sie bereits aktiv nach einer Lösung sucht?</p>
+
+ <p class="mt-2 fw-600" style="color: #E63946;">Wie findest du Interview-Partner:innen?</p>
+ <ul>
+ <li><strong>LinkedIn</strong> - Nach Jobtitel, Branche oder Unternehmensgröße suchen. Kurze, persönliche Nachricht.</li>
+ <li><strong>Eigenes Netzwerk</strong> - Frag Freund:innen und Kolleg:innen um Intros. Aber: Nicht nur Freund:innen interviewen!</li>
+ <li><strong>Facebook- und Reddit-Gruppen</strong> - Themenspezifische Communities, in denen deine Zielgruppe aktiv ist.</li>
+ <li><strong>Events und Meetups</strong> - Startup-Stammtische, Branchenevents, Gründerservice-Veranstaltungen der WKO.</li>
+ <li><strong>Kaltakquise</strong> - Kurz, respektvoll, mit klarem Angebot: &bdquo;15 Minuten deiner Zeit gegen ehrliches Feedback.&ldquo;</li>
+ </ul>
+
+ <div class="tb-box tb-box--tip">
+ <span class="tb-box-icon">&#9733;</span>
+ <div><strong>Goldene Regel:</strong> Die besten Interview-Partner:innen sind die, die NICHT in deinem Freundeskreis sind. Deine Freund:innen sagen dir, was du hören willst. Fremde sagen dir die Wahrheit.</div>
+ </div>
+
+ <!-- 1.3 Anzahl & Timing -->
+ <h3 class="section-heading">
+ <span class="section-number">3</span>
+ Anzahl &amp; Timing
+ </h3>
+
+ <div class="stat-grid">
+ <div class="stat-card">
+ <div class="stat-value">5+</div>
+ <div class="stat-label">Interviews pro Hypothese (Minimum)</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-value">20-30 min</div>
+ <div class="stat-label">pro Interview</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-value">5-8</div>
+ <div class="stat-label">Interviews bis erste Patterns</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-value">12-15</div>
+ <div class="stat-label">Interviews bis Sättigung</div>
+ </div>
+ </div>
+
+ <p class="text-muted" style="font-size: 13px;">&bdquo;Sättigung&ldquo; bedeutet: Du hörst keine neuen Erkenntnisse mehr. Jedes Interview bestätigt, was du schon weißt. Dann ist es Zeit, auszuwerten.</p>
+
+ <!-- 1.4 Setting -->
+ <h3 class="section-heading">
+ <span class="section-number">4</span>
+ Setting
+ </h3>
+
+ <div class="setting-grid">
+ <div class="setting-item">
+ <div class="setting-title">&#128187; Remote</div>
+ <div class="setting-desc">Zoom oder Google Meet. Aufnehmen - mit Erlaubnis! Bildschirm teilen für visuelle Fragen.</div>
+ </div>
+ <div class="setting-item">
+ <div class="setting-title">&#127970; Vor Ort</div>
+ <div class="setting-desc">Ruhiger Raum. Notizblock, Stift, kein Laptop zwischen euch. Echtes Gespräch auf Augenhöhe.</div>
+ </div>
+ <div class="setting-item">
+ <div class="setting-title">&#128101; Immer zu zweit</div>
+ <div class="setting-desc">Eine Person fragt, eine notiert. Nur so kannst du wirklich zuhören, statt mitzuschreiben.</div>
+ </div>
+ <div class="setting-item">
+ <div class="setting-title">&#127908; Aufnahme</div>
+ <div class="setting-desc">Erlaubnis VORHER einholen. DSGVO beachten. Aufnahme = bessere Auswertung, weniger Bias.</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- TEIL 2: INTERVIEW-SCRIPT -->
+ <div class="teil-header">
+ <span class="teil-number">Teil 2</span>
+ <h2>Interview-Script</h2>
+ </div>
+ <div class="teil-body">
+
+ <p class="text-muted mb-3" style="font-size: 13px;">Die folgenden Fragen sind als Leitfaden gedacht - nicht als starres Skript. Hör zu, frag nach, folge dem Gesprächsfluss. Die besten Insights kommen oft von Nachfragen.</p>
+
+ <!-- PHASE 1: Intro -->
+ <div class="phase-section phase-intro">
+ <div class="phase-header">
+ <div class="phase-label">Phase 1: Intro</div>
+ <span class="phase-time">~2 Min.</span>
+ </div>
+ <div class="phase-body">
+ <div class="script-card">
+ <div class="script-text">
+ &bdquo;Danke, dass du dir Zeit nimmst! Kurz zu uns: Wir arbeiten gerade an einem Projekt im Bereich <span class="placeholder">[Thema]</span> und wollen besser verstehen, wie <span class="placeholder">[Zielgruppe]</span> aktuell mit <span class="placeholder">[Problemfeld]</span> umgeht.<br><br>
+ Wichtig: Es gibt keine richtigen oder falschen Antworten. Wir wollen von dir lernen - nicht dir etwas verkaufen. Sei bitte ehrlich, auch wenn etwas negativ ist. Das hilft uns am meisten.<br><br>
+ Ist es für dich okay, wenn wir das Gespräch aufnehmen? Nur für unsere internen Notizen, wird nicht veröffentlicht.&ldquo;
+ </div>
+ </div>
+ <div class="phase-goal">
+ <strong>Ziel dieser Phase:</strong>
+ <ul>
+ <li>Vertrauen aufbauen und Druck rausnehmen</li>
+ <li>Klarstellen: Du willst LERNEN, nicht VERKAUFEN</li>
+ <li>Aufnahme-Erlaubnis einholen</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- PHASE 2: Kontext verstehen -->
+ <div class="phase-section phase-kontext">
+ <div class="phase-header">
+ <div class="phase-label">Phase 2: Kontext verstehen</div>
+ <span class="phase-time">~5 Min.</span>
+ </div>
+ <div class="phase-body">
+ <div class="question-card">
+ <div class="q-number">Q1</div>
+ <div class="q-text">&bdquo;Erzähl mir ein bisschen von deiner Rolle. Was machst du beruflich und wie sieht ein typischer Tag bei dir aus?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q2</div>
+ <div class="q-text">&bdquo;Wie gehst du aktuell mit <span class="placeholder">[Problemfeld]</span> um? Walk me through deinen typischen Prozess.&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q3</div>
+ <div class="q-text">&bdquo;Was funktioniert dabei gut? Und wo hakt es?&ldquo;</div>
+ </div>
+ <div class="phase-goal">
+ <strong>Ziel &amp; Tipps:</strong>
+ <ul>
+ <li>Den IST-Zustand verstehen, ohne zu werten</li>
+ <li>Lass die Person erzählen. Nicht unterbrechen!</li>
+ <li>Achte auf Emotionen: Wo wird die Person frustriert, wo begeistert?</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- PHASE 3: Problem-Tiefe -->
+ <div class="phase-section phase-problem">
+ <div class="phase-header">
+ <div class="phase-label">
+ Phase 3: Problem-Tiefe
+ <span class="phase-badge">Kernstück</span>
+ </div>
+ <span class="phase-time">~10 Min.</span>
+ </div>
+ <div class="phase-body">
+ <div class="question-card">
+ <div class="q-number">Q4</div>
+ <div class="q-text">&bdquo;Kannst du mir von dem letzten Mal erzählen, als <span class="placeholder">[Problem]</span> aufgetreten ist? Was ist genau passiert?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q5</div>
+ <div class="q-text">&bdquo;Was hast du dann gemacht? Welche Lösung hast du versucht?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q6</div>
+ <div class="q-text">&bdquo;Was hat daran funktioniert? Was nicht?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q7</div>
+ <div class="q-text">&bdquo;Wie viel Zeit oder Geld kostet dich das Problem? Pro Woche oder Monat ungefähr?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q8</div>
+ <div class="q-text">&bdquo;Wenn du einen Zauberstab hättest und eine Sache an deinem Workflow ändern könntest - was wäre das?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q9</div>
+ <div class="q-text">&bdquo;Hast du schon aktiv nach einer Lösung gesucht? Was hast du gefunden?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q10</div>
+ <div class="q-text">&bdquo;Was hat dich an den bestehenden Lösungen gestört?&ldquo;</div>
+ </div>
+
+ <div class="tb-box tb-box--tip">
+ <span class="tb-box-icon">&#9733;</span>
+ <div><strong>Goldene Regel:</strong> Frage nach VERGANGENEM Verhalten, nicht nach hypothetischem. &bdquo;Würdest du...?&ldquo; ist WERTLOS. &bdquo;Was hast du gemacht, als...?&ldquo; ist Gold.</div>
+ </div>
+
+ <div class="phase-goal">
+ <strong>Nachfrage-Techniken:</strong>
+ <ul>
+ <li>&bdquo;Warum?&ldquo; - Die mächtigste Frage überhaupt</li>
+ <li>&bdquo;Erzähl mir mehr darüber.&ldquo; - Öffnet den Redefluss</li>
+ <li>&bdquo;Was meinst du genau?&ldquo; - Konkretisiert vage Aussagen</li>
+ <li><strong>Die 5-Warum-Methode:</strong> Jede Antwort mit &bdquo;Warum?&ldquo; vertiefen, bis du die Wurzel erreichst</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- PHASE 4: Lösungsvalidierung -->
+ <div class="phase-section phase-loesung">
+ <div class="phase-header">
+ <div class="phase-label">Phase 4: Lösungsvalidierung</div>
+ <span class="phase-time">~5 Min.</span>
+ </div>
+ <div class="phase-body">
+ <div class="question-card">
+ <div class="q-number">Q11</div>
+ <div class="q-text">&bdquo;Es gäbe eine Lösung die <span class="placeholder">[Value Prop kurz beschreiben]</span> - wie interessant wäre das für dich auf einer Skala von 1 bis 10?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q12</div>
+ <div class="q-text">&bdquo;Was müsste die Lösung unbedingt können, damit du sie nutzt?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q13</div>
+ <div class="q-text">&bdquo;Was dürfte sie auf KEINEN Fall tun?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q14</div>
+ <div class="q-text">&bdquo;Was wärst du bereit, dafür zu zahlen? Pro Monat, pro Nutzung oder einmalig?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q15</div>
+ <div class="q-text">&bdquo;Wenn es das heute schon gäbe - würdest du dich anmelden?&ldquo;</div>
+ </div>
+
+ <div class="tb-box tb-box--warning">
+ <span class="tb-box-icon">&#9888;</span>
+ <div><strong>Achtung - Höflichkeits-Bias!</strong> Menschen sagen &bdquo;Ja&ldquo;, um nett zu sein. Besser: &bdquo;Wärst du bereit, dich <em>jetzt</em> auf unsere Warteliste zu setzen?&ldquo; - Je konkreter die Handlung, desto echter das Signal.</div>
+ </div>
+
+ <div class="phase-goal">
+ <strong>Commitment-Tests (vom schwächsten zum stärksten):</strong>
+ <ul>
+ <li>&bdquo;Klingt interessant&ldquo; = schwach (Höflichkeit)</li>
+ <li>E-Mail-Adresse hinterlassen = mittel</li>
+ <li>Auf Warteliste setzen = stark</li>
+ <li>Vorbestellung / Letter of Intent = sehr stark</li>
+ <li>Anzahlung leisten = stärkstes Signal</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- PHASE 5: Abschluss -->
+ <div class="phase-section phase-abschluss">
+ <div class="phase-header">
+ <div class="phase-label">Phase 5: Abschluss</div>
+ <span class="phase-time">~2 Min.</span>
+ </div>
+ <div class="phase-body">
+ <div class="question-card">
+ <div class="q-number">Q16</div>
+ <div class="q-text">&bdquo;Wer in deinem Umfeld hat ein ähnliches Problem? Könntest du mich vorstellen?&ldquo;</div>
+ </div>
+ <div class="question-card">
+ <div class="q-number">Q17</div>
+ <div class="q-text">&bdquo;Gibt es etwas, das ich nicht gefragt habe, aber das wichtig wäre?&ldquo;</div>
+ </div>
+
+ <div class="script-card">
+ <div class="script-text">
+ &bdquo;Vielen Dank für deine Zeit! Das hat uns wirklich weitergeholfen. Darf ich mich melden, wenn wir einen Prototyp haben?&ldquo;<br><br>
+ <span style="font-style: normal; font-weight: 600; color: #E63946;">&rarr; Kontaktdaten austauschen. Sofort danach: Notizen vervollständigen, solange alles frisch ist.</span>
+ </div>
+ </div>
+
+ <div class="tb-box tb-box--success">
+ <span class="tb-box-icon">&#128640;</span>
+ <div><strong>Referral-Trick:</strong> Q16 ist die wichtigste Abschlussfrage. Eine persönliche Empfehlung ist 10x wertvoller als Kaltakquise. Frag IMMER danach.</div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ <!-- TEIL 3: AUSWERTUNG -->
+ <div class="teil-header">
+ <span class="teil-number">Teil 3</span>
+ <h2>Auswertung</h2>
+ </div>
+ <div class="teil-body">
+
+ <!-- 3.1 Interview-Notizen-Template -->
+ <h3 class="section-heading">
+ <span class="section-number">1</span>
+ Interview-Notizen-Template
+ </h3>
+ <p>Fülle diese Tabelle nach jedem Interview aus. Sofort danach - nicht am nächsten Tag. Erinnerungen verblassen schnell.</p>
+
+ <div class="table-responsive">
+ <table class="eval-table">
+ <thead>
+ <tr>
+ <th>#</th>
+ <th>Datum</th>
+ <th>Name / Rolle</th>
+ <th>Top-Problem</th>
+ <th>Aktuelle Lösung</th>
+ <th>Zahlungs&shy;bereitschaft</th>
+ <th>Pain Level (1-10)</th>
+ <th>Notizen</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1</td>
+ <td>__.__.____</td>
+ <td>Name, Jobtitel</td>
+ <td>Was ist das #1 Problem?</td>
+ <td>Wie lösen sie es heute?</td>
+ <td>&euro; __ / Monat</td>
+ <td>__ / 10</td>
+ <td>Auffällige Zitate, Emotionen</td>
+ </tr>
+ <tr><td>2</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>3</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>4</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>5</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>6</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>7</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ <tr><td>8</td><td>__.__.____</td><td></td><td></td><td></td><td>&euro; __ / Monat</td><td>__ / 10</td><td></td></tr>
+ </tbody>
+ </table>
+ </div>
+
+ <!-- 3.2 Pattern-Recognition Matrix -->
+ <h3 class="section-heading">
+ <span class="section-number">2</span>
+ Pattern-Recognition Matrix
+ </h3>
+ <p>Nach 5+ Interviews ausfüllen. Hier trennst du Signal von Noise.</p>
+
+ <div class="pattern-block problems">
+ <div class="pattern-block-title">&#128269; Problem-Patterns</div>
+ <div class="check-item"><div class="checkbox"></div><div>Wird das Problem von &gt;80% der Befragten bestätigt?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Ist der durchschnittliche Schmerzlevel &gt;7/10?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Suchen die Befragten aktiv nach einer Lösung?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Geben sie bereits Geld für das Problem aus?</div></div>
+ </div>
+
+ <div class="pattern-block solutions">
+ <div class="pattern-block-title">&#9989; Lösungs-Patterns</div>
+ <div class="check-item"><div class="checkbox"></div><div>Gibt es Konsens über die &bdquo;Must-Have&ldquo;-Features?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Ist die Zahlungsbereitschaft realistisch (&gt;&euro;__/Monat)?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Würden &gt;50% sich sofort anmelden bzw. auf die Warteliste setzen?</div></div>
+ <div class="check-item"><div class="checkbox"></div><div>Haben &gt;30% dich an jemanden weiterempfohlen?</div></div>
+ </div>
+
+ <div class="pattern-block warnings">
+ <div class="pattern-block-title">&#9888; Warnsignale</div>
+ <div class="check-item"><span class="warn-icon">&#9888;&#65039;</span><div>&bdquo;Klingt cool&ldquo; ohne konkretes eigenes Problem</div></div>
+ <div class="check-item"><span class="warn-icon">&#9888;&#65039;</span><div>Begeisterung ohne Zahlungsbereitschaft</div></div>
+ <div class="check-item"><span class="warn-icon">&#9888;&#65039;</span><div>Jede:r will ein anderes Feature als &bdquo;Must-Have&ldquo;</div></div>
+ <div class="check-item"><span class="warn-icon">&#9888;&#65039;</span><div>Niemand sucht aktiv nach einer Lösung</div></div>
+ </div>
+
+ <!-- 3.3 Signal vs. Noise -->
+ <h3 class="section-heading">
+ <span class="section-number">3</span>
+ Signal vs. Noise
+ </h3>
+ <p>Nicht jede Aussage im Interview ist gleichviel wert. Hier die Einordnung:</p>
+
+ <div class="signal-grid">
+ <div class="signal-card strong">
+ <div class="signal-title">Starke Signale</div>
+ <ul>
+ <li>Haben bereits Geld für das Problem ausgegeben</li>
+ <li>Suchen aktiv nach einer Lösung</li>
+ <li>Können das Problem konkret und emotional beschreiben</li>
+ <li>Empfehlen dich ungefragt an andere weiter</li>
+ <li>Fragen &bdquo;Wann kann ich das haben?&ldquo;</li>
+ </ul>
+ </div>
+ <div class="signal-card weak">
+ <div class="signal-title">Schwache Signale</div>
+ <ul>
+ <li>&bdquo;Klingt interessant&ldquo;</li>
+ <li>&bdquo;Vielleicht würde ich das nutzen&ldquo;</li>
+ <li>&bdquo;Kann mir vorstellen, dass...&ldquo;</li>
+ <li>Allgemeines Nicken ohne Energie</li>
+ <li>Keine konkreten Beispiele aus der eigenen Erfahrung</li>
+ </ul>
+ </div>
+ <div class="signal-card red">
+ <div class="signal-title">Red Flags</div>
+ <ul>
+ <li>Nur hypothetische Probleme (&bdquo;Es könnte sein, dass...&ldquo;)</li>
+ <li>Kein eigenes Geld im Spiel</li>
+ <li>Verwechseln &bdquo;nett zu haben&ldquo; mit &bdquo;muss ich haben&ldquo;</li>
+ <li>Weichen bei Zahlungsfragen aus</li>
+ <li>Sagen zu allem &bdquo;Ja&ldquo; (Höflichkeits-Bias)</li>
+ </ul>
+ </div>
+ </div>
+
+ <!-- 3.4 Nächste Schritte -->
+ <h3 class="section-heading">
+ <span class="section-number">4</span>
+ Nächste Schritte: Pivot, Persevere oder Kill
+ </h3>
+ <p>Basierend auf deiner Pattern-Analyse - welche der drei Optionen trifft zu?</p>
+
+ <div class="decision-grid">
+ <div class="decision-card persevere">
+ <div class="decision-label">Persevere</div>
+ <div class="decision-desc">Problem bestätigt, klare Zahlungsbereitschaft, Feature-Konsens. Weiter zum MVP!</div>
+ </div>
+ <div class="decision-card pivot">
+ <div class="decision-label">Pivot</div>
+ <div class="decision-desc">Problem existiert, aber andere Zielgruppe / anderer Lösungsansatz nötig. Neue Hypothese formulieren.</div>
+ </div>
+ <div class="decision-card kill">
+ <div class="decision-label">Kill</div>
+ <div class="decision-desc">Kein echtes Problem, keine Zahlungsbereitschaft, kein Pattern. Nächste Idee.</div>
+ </div>
+ </div>
+
+ <div class="tb-box tb-box--tip">
+ <span class="tb-box-icon">&#128161;</span>
+ <div><strong>Reminder:</strong> &bdquo;Kill&ldquo; ist kein Versagen - es ist eine Erkenntnis. Du hast gerade Monate an Arbeit an einer Lösung gespart, die niemand braucht. Das ist ein Erfolg.</div>
+ </div>
+
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Brauchst du Unterstützung bei der Auswertung?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching analysieren wir gemeinsam deine Interview-Ergebnisse und entwickeln die nächsten Schritte - ob Pivot, Persevere oder neue Hypothese.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespräch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>

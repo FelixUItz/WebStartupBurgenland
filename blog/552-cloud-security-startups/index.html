@@ -1,0 +1,401 @@
+<!DOCTYPE html><html class="no-js" lang="de"> <head><title>Cloud-Security für Startups, So schützt du deine Daten in der Cloud - StartUp Burgenland Blog</title><meta charset="utf-8"><meta name="author" content="StartUp Burgenland"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Erfahre, wie du AWS, Google Cloud und Azure sicher konfigurierst. Cloud-Security-Grundlagen, IAM, Verschlüsselung und Compliance für Startups im Burgenland."><link rel="canonical" href="https://startupburgenland.vulpinecreations.com/blog/552-cloud-security-startups"><!-- Open Graph --><meta property="og:title" content="Cloud-Security für Startups, So schützt du deine Daten in der Cloud - StartUp Burgenland Blog"><meta property="og:description" content="Erfahre, wie du AWS, Google Cloud und Azure sicher konfigurierst. Cloud-Security-Grundlagen, IAM, Verschlüsselung und Compliance für Startups im Burgenland."><meta property="og:type" content="website"><meta property="og:locale" content="de_AT"><meta property="og:site_name" content="StartUp Burgenland"><link rel="icon" type="image/png" href="/images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="/css/vendors.min.css"><link rel="stylesheet" href="/css/icon.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud-Security für Startups, So schützt du deine Daten in der Cloud","description":"Erfahre, wie du AWS, Google Cloud und Azure sicher konfigurierst. Cloud-Security-Grundlagen, IAM, Verschlüsselung und Compliance für Startups im Burgenland.","datePublished":"2024-10-19T00:00:00.000Z","dateModified":"2024-10-19T00:00:00.000Z","url":"https://www.startup-burgenland.at/blog/552-cloud-security-startups","inLanguage":"de-AT","author":{"@type":"Person","name":"Felix Lenhard","jobTitle":"Programme Manager & Startup Coach","url":"https://felixlenhard.com","sameAs":["https://felixlenhard.com","https://vulpinecreations.com","https://www.linkedin.com/in/felixlenhard/","https://www.instagram.com/felixlenhard/"]},"publisher":{"@type":"Organization","name":"StartUp Burgenland","url":"https://www.startup-burgenland.at"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.startup-burgenland.at/blog/552-cloud-security-startups"}}</script><style>.skip-to-content{position:absolute;left:-9999px;top:0;z-index:9999;padding:12px 24px;background:var(--sb-red);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px}.skip-to-content:focus{left:0}.blog-listing{padding:80px 0}.blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px #0000000f;transition:transform.3s ease,box-shadow.3s ease;overflow:hidden;height:100%;position:relative}.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px #0000001f}.blog-card:focus-within{outline:3px solid var(--sb-red);outline-offset:2px}.blog-card-accent{height:4px;background:linear-gradient(90deg,var(--sb-red),var(--sb-orange));border-radius:12px 12px 0 0}.blog-card-body{padding:28px 28px 24px}.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--medium-gray);flex-wrap:wrap}.blog-card-meta-sep{display:none}.blog-card-meta-dot{color:#ccc;font-size:11px}.blog-tag{background:var(--sb-red);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}.blog-tag-subtle{display:inline-block;font-size:12px;font-weight:600;color:var(--sb-red);text-transform:uppercase;letter-spacing:.5px;text-decoration:none;transition:color.2s ease}.blog-tag-subtle:hover{color:var(--sb-orange)}.blog-card-title{font-size:1.25rem;font-weight:600;color:var(--sb-black);margin-bottom:12px;line-height:1.4}.blog-card-title a{color:inherit;text-decoration:none}.blog-card-title a:hover{color:var(--sb-red)}.blog-card-title a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-card-excerpt{font-size:.95rem;color:var(--medium-gray);line-height:1.6;margin-bottom:20px}.blog-card-link{font-weight:600;color:var(--sb-red);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:gap.3s ease}.blog-card-link:hover{gap:12px;color:var(--sb-orange)}.blog-card-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-content{max-width:800px;margin:0 auto;font-size:1.1rem;line-height:1.8}.blog-post-content h2{font-size:2rem;line-height:2.2rem;margin-top:50px;margin-bottom:20px;color:var(--sb-black)}.blog-post-content h3{font-size:1.5rem;line-height:1.8rem;margin-top:40px;margin-bottom:15px;color:var(--sb-black)}.blog-post-content p{margin-bottom:20px;color:#444;font-size:1.05rem}.blog-post-content ul,.blog-post-content ol{margin-bottom:20px;padding-left:25px}.blog-post-content li{margin-bottom:8px;color:#444}.blog-post-content blockquote{border-left:4px solid var(--sb-red);padding:20px 25px;margin:30px 0;background:#f8f8f8;border-radius:0 8px 8px 0;font-style:italic;color:#555}.blog-post-content img{max-width:100%;height:auto;border-radius:8px;margin:25px 0}.blog-post-content a{color:var(--sb-red);text-decoration:underline}.blog-post-content a:hover{color:var(--sb-orange)}.blog-post-content a:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}.blog-post-meta{display:flex;align-items:center;gap:20px;margin-bottom:40px;padding-bottom:25px;border-bottom:1px solid #eee;font-size:14px;color:var(--medium-gray)}.blog-back-link{display:inline-flex;align-items:center;gap:8px;color:var(--sb-red);font-weight:600;text-decoration:none;margin-bottom:30px;font-size:15px}.blog-back-link:hover{color:var(--sb-orange)}.blog-back-link:focus{outline:2px solid var(--sb-red);outline-offset:2px;border-radius:2px}@media(prefers-reduced-motion:reduce){.blog-card{transition:none}.blog-card:hover{transform:none}.blog-card-link{transition:none}}
+</style></head> <body data-mobile-nav-style="classic" class="background-position-center-top"> <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a> <header> <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed" aria-label="Hauptnavigation"> <div class="container-fluid"> <div class="col-auto col-lg-2 me-lg-0 me-auto"> <a class="navbar-brand" href="/index.html"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland - Zur Startseite" class="default-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo"> </a> </div> <div class="col-auto col-lg-8 menu-order position-static"> <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Navigation umschalten"> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> <span class="navbar-toggler-line"></span> </button> <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li> <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li> <li class="nav-item dropdown"> <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a> <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li> </ul> </li> <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li> <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li> <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li> <li class="nav-item"><a href="/presse.html" class="nav-link">Presse</a></li> <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li> <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li> </ul> </div> </div> <div class="col-auto col-lg-2 text-end"> <div class="header-icon"> <div class="header-button"> <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none"> <span> <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span> <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span> </span> </a> </div> </div> </div> </div> </nav> </header> <main id="main-content"> <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin" style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%);"> <div class="container"> <div class="row align-items-center justify-content-center extra-small-screen"> <div class="col-lg-8 text-center position-relative"> <div class="mb-15px"> <a href="/blog/kategorie/produkt-und-technologie/" class="blog-tag" style="text-decoration:none;"> produkt-und-technologie </a> </div> <h1 class="text-white fw-600 mb-15px ls-minus-2px">Cloud-Security für Startups, So schützt du deine Daten in der Cloud</h1> <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap" style="color: rgba(255,255,255,0.8); font-size: 14px;"> <span>Felix Lenhard</span> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <time datetime="2024-10-19">2. Jänner 2029</time> <span aria-hidden="true" style="width: 4px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block;"></span> <span>12 min</span> </div> </div> </div> </div> </section> <section class="pb-0"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <a href="/blog/" class="blog-back-link"> <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Zurück zum Blog
+</a> <article class="blog-post-content"> <h1 id="cloud-security-für-startups----so-schützt-du-deine-daten-in-der-cloud">Cloud-Security für Startups, So schützt du deine Daten in der Cloud</h1>
+<p>Fast jedes Startup nutzt die Cloud, ob AWS, Google Cloud, Azure oder kleinere Anbieter wie Hetzner und Exoscale. Die Cloud bietet unglaubliche Flexibilität und Skalierbarkeit, aber auch neue Sicherheitsrisiken. Denn in der Cloud bist du für die Sicherheit mitverantwortlich, und viele Startups unterschätzen das.</p>
+<p>Nach unserem Beitrag zur <a href="/blog/551-sichere-software-entwicklung">sicheren Software-Entwicklung</a> widmen wir uns jetzt der Infrastruktur. Denn der sicherste Code nützt nichts, wenn dein S3-Bucket öffentlich zugänglich ist.</p>
+<h2 id="das-shared-responsibility-model">Das Shared Responsibility Model</h2>
+<p>Das wichtigste Konzept in der Cloud-Security: Die Verantwortung wird geteilt.</p>
+<h3 id="was-der-cloud-anbieter-schützt">Was der Cloud-Anbieter schützt</h3>
+<ul>
+<li>Physische Sicherheit der Rechenzentren</li>
+<li>Hardware und Netzwerk-Infrastruktur</li>
+<li>Hypervisor und Host-Betriebssystem</li>
+<li>Verfügbarkeit der Cloud-Dienste</li>
+</ul>
+<h3 id="wofür-du-verantwortlich-bist">Wofür du verantwortlich bist</h3>
+<ul>
+<li>Konfiguration der Cloud-Dienste</li>
+<li>Zugriffsverwaltung (IAM)</li>
+<li>Daten-Verschlüsselung</li>
+<li>Netzwerk-Konfiguration (Security Groups, VPCs)</li>
+<li>Betriebssystem-Patches (bei IaaS)</li>
+<li>Anwendungs-Sicherheit</li>
+<li>Logging und Monitoring</li>
+</ul>
+<p><strong>Kurz gesagt</strong>: Der Anbieter schützt die Cloud. Du schützt, was IN der Cloud läuft.</p>
+<h2 id="die-häufigsten-cloud-security-fehler">Die häufigsten Cloud-Security-Fehler</h2>
+<h3 id="1-öffentlich-zugängliche-storage-buckets">1. Öffentlich zugängliche Storage-Buckets</h3>
+<p>Der Klassiker. Unzählige Datenlecks entstehen durch falsch konfigurierte S3-Buckets, Google Cloud Storage oder Azure Blob Storage.</p>
+<p><strong>Wie es passiert</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#6A737D">// FALSCH, Bucket oeffentlich</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF"> "Effect"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Allow"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF"> "Principal"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"*"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF"> "Action"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"s3:GetObject"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF"> "Resource"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"arn:aws:s3:::mein-bucket/*"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>Wie es richtig geht</strong>:</p>
+<ul>
+<li>Alle Buckets standardmässig privat</li>
+<li>Block Public Access auf Account-Ebene aktivieren (AWS)</li>
+<li>Zugriffsrechte explizit und minimal vergeben</li>
+<li>Regelmässig auf öffentliche Buckets prüfen</li>
+</ul>
+<h3 id="2-überprivilegierte-iam-rollen">2. Überprivilegierte IAM-Rollen</h3>
+<p>"Admin-Zugriff für alle, damit es schnell geht", der sichere Weg in die Katastrophe.</p>
+<h3 id="3-fehlende-verschlüsselung">3. Fehlende Verschlüsselung</h3>
+<p>Daten in der Cloud müssen verschlüsselt sein, sowohl bei der Übertragung als auch bei der Speicherung.</p>
+<h3 id="4-keine-multi-faktor-authentifizierung">4. Keine Multi-Faktor-Authentifizierung</h3>
+<p>Besonders für den Root-Account bzw. den Organisations-Admin ist MFA absolut unverzichtbar. Lies dazu auch unseren <a href="/blog/547-passwoerter-authentifizierung">Authentifizierung-Beitrag</a>.</p>
+<h3 id="5-verwaiste-ressourcen">5. Verwaiste Ressourcen</h3>
+<p>Alte Test-Server, vergessene Datenbanken, nicht mehr genutzte API-Keys, alles potenzielle Eintrittspunkte für Angreifer.</p>
+<h2 id="identity-and-access-management-iam-richtig-umsetzen">Identity and Access Management (IAM) richtig umsetzen</h2>
+<p>IAM ist das Herzstuck der Cloud-Security. Hier entscheidest du, wer was darf.</p>
+<h3 id="grundprinzipien">Grundprinzipien</h3>
+<p><strong>Least Privilege, Minimale Berechtigung</strong>:
+Jeder Nutzer und jeder Service bekommt nur die Rechte, die er tatsächlich braucht. Nicht mehr.</p>
+<p><strong>Keine Root-/Admin-Accounts für den Alltag</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># AWS: Root-Account nur fuer Account-Management nutzen</span></span>
+<span class="line"><span style="color:#6A737D"># Fuer den Alltag eigene IAM-User mit eingeschraenkten Rechten erstellen</span></span></code></pre>
+<p><strong>Rollen statt User für Services</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#6A737D">// AWS IAM Role fuer einen Lambda-Service</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF"> "Version"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"2012-10-17"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF"> "Statement"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF"> "Effect"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Allow"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF"> "Action"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#9ECBFF"> "dynamodb:GetItem"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF"> "dynamodb:PutItem"</span></span>
+<span class="line"><span style="color:#E1E4E8"> ],</span></span>
+<span class="line"><span style="color:#79B8FF"> "Resource"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"arn:aws:dynamodb:eu-central-1:*:table/meine-tabelle"</span></span>
+<span class="line"><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8"> ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="iam-best-practices">IAM Best Practices</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Massnahme</th><th>Priorität</th></tr></thead><tbody><tr><td>MFA für alle Nutzer</td><td>Kritisch</td></tr><tr><td>Root-Account sichern und nicht nutzen</td><td>Kritisch</td></tr><tr><td>Least Privilege durchsetzen</td><td>Hoch</td></tr><tr><td>Regelmässiger Access Review</td><td>Hoch</td></tr><tr><td>Service Accounts mit Rollen statt Keys</td><td>Hoch</td></tr><tr><td>Temporäre Credentials (STS) nutzen</td><td>Mittel</td></tr><tr><td>IAM Policies versionieren (Git)</td><td>Mittel</td></tr><tr><td>Cross-Account-Zugriffe minimieren</td><td>Mittel</td></tr></tbody></table>
+<h3 id="gruppen-statt-individuelle-berechtigungen">Gruppen statt individuelle Berechtigungen</h3>
+<p>Erstelle Gruppen für typische Rollen in deinem Startup:</p>
+<ul>
+<li><strong>Entwickler</strong>: Zugriff auf Staging-Umgebungen, Code-Repositories, Logs</li>
+<li><strong>DevOps</strong>: Zugriff auf Produktion, aber nur mit definierten Aktionen</li>
+<li><strong>Gründer/Admin</strong>: Erweiterter Zugriff, aber nicht Root</li>
+<li><strong>Buchhaltung</strong>: Nur Billing-Zugriff</li>
+<li><strong>Externe Partner</strong>: Stark eingeschränkter, zeitlich begrenzter Zugriff</li>
+</ul>
+<h2 id="netzwerk-sicherheit-in-der-cloud">Netzwerk-Sicherheit in der Cloud</h2>
+<h3 id="virtual-private-cloud-vpc">Virtual Private Cloud (VPC)</h3>
+<p>Deine Cloud-Ressourcen gehören in ein privates Netzwerk:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>VPC (10.0.0.0/16)</span></span>
+<span class="line"><span>├── Public Subnet (10.0.1.0/24)</span></span>
+<span class="line"><span>│ └── Load Balancer, NAT Gateway</span></span>
+<span class="line"><span>├── Private Subnet (10.0.2.0/24)</span></span>
+<span class="line"><span>│ └── Application Server</span></span>
+<span class="line"><span>└── Isolated Subnet (10.0.3.0/24)</span></span>
+<span class="line"><span> └── Datenbank</span></span></code></pre>
+<ul>
+<li><strong>Public Subnets</strong>: Nur für Komponenten, die direkt aus dem Internet erreichbar sein müssen</li>
+<li><strong>Private Subnets</strong>: Für Application Server, Zugriff nur über Load Balancer</li>
+<li><strong>Isolated Subnets</strong>: Für Datenbanken, kein direkter Internet-Zugang</li>
+</ul>
+<h3 id="security-groups-und-firewalls">Security Groups und Firewalls</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#6A737D">// Security Group fuer Web-Server</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF"> "Inbound"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8"> {</span><span style="color:#79B8FF">"Port"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">443</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Source"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"0.0.0.0/0"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"HTTPS"</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8"> {</span><span style="color:#79B8FF">"Port"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">80</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Source"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"0.0.0.0/0"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"HTTP (Redirect)"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8"> ],</span></span>
+<span class="line"><span style="color:#79B8FF"> "Outbound"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8"> {</span><span style="color:#79B8FF">"Port"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">443</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Source"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"0.0.0.0/0"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"HTTPS ausgehend"</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8"> {</span><span style="color:#79B8FF">"Port"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5432</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Source"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"10.0.3.0/24"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"Description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"PostgreSQL"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8"> ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>Regeln</strong>:</p>
+<ul>
+<li>Nur die absolut notwendigen Ports öffnen</li>
+<li>Eingehenden Verkehr maximal einschränken</li>
+<li>Kein SSH (Port 22) aus dem Internet, nutze AWS Systems Manager, Google IAP oder ein VPN</li>
+<li>Security Groups regelmässig aufräumen</li>
+</ul>
+<h3 id="vpn-und-zero-trust">VPN und Zero Trust</h3>
+<p>Für den Zugriff auf Cloud-Ressourcen:</p>
+<ul>
+<li><strong>WireGuard</strong>: Schnelles, modernes VPN (Open Source)</li>
+<li><strong>Tailscale</strong>: WireGuard-basiert, einfach einzurichten</li>
+<li><strong>AWS Client VPN</strong> / <strong>Google Cloud VPN</strong>: Native Lösungen</li>
+<li><strong>Zero Trust</strong>: BeyondCorp-Ansatz, jeder Zugriff wird verifiziert, egal ob intern oder extern</li>
+</ul>
+<h2 id="datenverschlüsselung-in-der-cloud">Datenverschlüsselung in der Cloud</h2>
+<h3 id="verschlüsselung-at-rest">Verschlüsselung at Rest</h3>
+<p>Alle Daten, die in der Cloud gespeichert sind, müssen verschlüsselt sein:</p>
+<ul>
+<li><strong>AWS</strong>: S3 Server-Side Encryption (SSE-S3 oder SSE-KMS), EBS-Verschlüsselung</li>
+<li><strong>Google Cloud</strong>: Standardmässig verschlüsselt, CMEK für eigene Schlüssel</li>
+<li><strong>Azure</strong>: Azure Storage Service Encryption, Azure Disk Encryption</li>
+</ul>
+<h3 id="verschlüsselung-in-transit">Verschlüsselung in Transit</h3>
+<ul>
+<li>TLS 1.2+ für alle Verbindungen (siehe <a href="/blog/548-https-ssl-sichere-webseiten">HTTPS-Beitrag</a>)</li>
+<li>VPN für interne Kommunikation</li>
+<li>Service Mesh (z.B. Istio) für mTLS zwischen Microservices</li>
+</ul>
+<h3 id="key-management">Key Management</h3>
+<ul>
+<li>Nutze den Key Management Service deines Cloud-Anbieters (AWS KMS, Google Cloud KMS, Azure Key Vault)</li>
+<li>Rotiere Schlüssel regelmässig (automatisiert)</li>
+<li>Definiere, wer Schlüssel erstellen, nutzen und löschen darf</li>
+<li>Aktiviere Key-Logging (wer hat wann welchen Schlüssel genutzt?)</li>
+</ul>
+<h2 id="logging-und-monitoring">Logging und Monitoring</h2>
+<p>Ohne Monitoring bist du blind. Du erkennst Angriffe nicht und kannst nicht reagieren.</p>
+<h3 id="was-du-loggen-solltest">Was du loggen solltest</h3>
+<ul>
+<li><strong>API-Aufrufe</strong>: AWS CloudTrail, Google Cloud Audit Logs, Azure Activity Log</li>
+<li><strong>Netzwerk-Verkehr</strong>: VPC Flow Logs</li>
+<li><strong>Zugriffe auf Daten</strong>: S3 Access Logs, Database Audit Logs</li>
+<li><strong>Authentifizierung</strong>: Login-Versuche, MFA-Events</li>
+<li><strong>Konfigurationsänderungen</strong>: AWS Config, Google Cloud Asset Inventory</li>
+</ul>
+<h3 id="alerting-einrichten">Alerting einrichten</h3>
+<p>Definiere Alerts für kritische Events:</p>
+<ul>
+<li>Root-Account Login</li>
+<li>IAM-Policy-Änderungen</li>
+<li>Security-Group-Änderungen</li>
+<li>Ungewöhnliche API-Aufrufe</li>
+<li>Fehlgeschlagene Login-Versuche (über Schwellenwert)</li>
+<li>Neue Regionen oder Dienste aktiviert</li>
+</ul>
+<h3 id="tools-für-cloud-monitoring">Tools für Cloud-Monitoring</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Tool</th><th>Typ</th><th>Kosten</th></tr></thead><tbody><tr><td>AWS CloudWatch</td><td>Native Monitoring</td><td>Pay-per-Use</td></tr><tr><td>Google Cloud Monitoring</td><td>Native Monitoring</td><td>Free Tier</td></tr><tr><td>Grafana</td><td>Dashboards</td><td>Open Source</td></tr><tr><td>Prometheus</td><td>Metriken</td><td>Open Source</td></tr><tr><td>Datadog</td><td>Full-Stack Monitoring</td><td>Ab 15 EUR/Host/Monat</td></tr></tbody></table>
+<p>Für ein Startup empfehle ich den Start mit den nativen Tools deines Cloud-Anbieters. Die sind im Free Tier oft ausreichend.</p>
+<h2 id="cloud-security-für-verschiedene-anbieter">Cloud-Security für verschiedene Anbieter</h2>
+<h3 id="aws-security-checkliste">AWS Security Checkliste</h3>
+<ol>
+<li>MFA für Root-Account aktivieren (Hardware-Key empfohlen)</li>
+<li>AWS Organizations mit Service Control Policies einrichten</li>
+<li>CloudTrail in allen Regionen aktivieren</li>
+<li>GuardDuty aktivieren (Bedrohungserkennung)</li>
+<li>S3 Block Public Access auf Account-Ebene aktivieren</li>
+<li>VPC mit privaten Subnets für alle Services</li>
+<li>AWS Config für Compliance-Monitoring</li>
+<li>IAM Access Analyzer nutzen</li>
+<li>Security Hub aktivieren</li>
+<li>Billing Alerts einrichten (Anomalie-Erkennung)</li>
+</ol>
+<h3 id="google-cloud-security-checkliste">Google Cloud Security Checkliste</h3>
+<ol>
+<li>Organisation erstellen und Folder-Struktur aufsetzen</li>
+<li>Cloud Identity für zentrales Nutzermanagement</li>
+<li>Audit Logs aktivieren</li>
+<li>VPC Service Controls für Datenexfiltrations-Schutz</li>
+<li>Security Command Center aktivieren</li>
+<li>Cloud Armor für DDoS-Schutz</li>
+<li>Identity-Aware Proxy für internen Zugriff</li>
+<li>Binary Authorization für Container</li>
+<li>Billing Budgets und Alerts konfigurieren</li>
+<li>Asset Inventory regelmässig prüfen</li>
+</ol>
+<h3 id="hetzner-cloud--exoscale-eu-alternativen">Hetzner Cloud / Exoscale (EU-Alternativen)</h3>
+<p>Für österreichische Startups, die bei europäischen Anbietern bleiben wollen:</p>
+<ul>
+<li><strong>Hetzner Cloud</strong>: Günstig, Rechenzentren in Deutschland und Finnland</li>
+<li><strong>Exoscale</strong>: Schweizer Anbieter, DSGVO-konform, Rechenzentren in Wien</li>
+<li><strong>IONOS</strong>: Deutsches Unternehmen, Cloud-Lösungen für KMUs</li>
+</ul>
+<p>Auch bei diesen Anbietern gelten die gleichen Grundprinzipien: IAM, VPC, Verschlüsselung, Monitoring.</p>
+<h2 id="compliance-und-datenschutz-in-der-cloud">Compliance und Datenschutz in der Cloud</h2>
+<h3 id="dsgvo-konform-in-der-cloud">DSGVO-konform in der Cloud</h3>
+<ul>
+<li><strong>Standortwahl</strong>: Nutze EU-Rechenzentren (AWS eu-central-1 Frankfurt, Google europe-west3 Frankfurt)</li>
+<li><strong>Auftragsverarbeitung</strong>: Vertrag zur Auftragsverarbeitung (AVV) mit dem Cloud-Anbieter abschliessen</li>
+<li><strong>Datentransfer</strong>: Kein unkontrollierter Transfer in Drittländer</li>
+<li><strong>Verschlüsselung</strong>: Pflicht für personenbezogene Daten</li>
+<li><strong>Löschkonzept</strong>: Wie löschst du Daten in der Cloud? Auch in Backups (siehe <a href="/blog/549-datensicherung-backup-strategien">Backup-Strategien</a>)</li>
+</ul>
+<h3 id="welche-region-wählen">Welche Region wählen?</h3>
+<p>Für österreichische Startups empfehle ich:</p>
+<ul>
+<li><strong>AWS</strong>: eu-central-1 (Frankfurt) oder eu-west-1 (Irland)</li>
+<li><strong>Google Cloud</strong>: europe-west3 (Frankfurt) oder europe-west1 (Belgien)</li>
+<li><strong>Azure</strong>: westeurope (Niederlande) oder germanywestcentral (Frankfurt)</li>
+<li><strong>Hetzner</strong>: Nürnberg oder Falkenstein</li>
+</ul>
+<h2 id="infrastructure-as-code-iac----sicherheit-durch-reproduzierbarkeit">Infrastructure as Code (IaC), Sicherheit durch Reproduzierbarkeit</h2>
+<p>Deine Cloud-Infrastruktur gehört in Code, nicht in manuelle Klick-Abenteuer:</p>
+<h3 id="terraform-beispiel">Terraform Beispiel</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="hcl"><code><span class="line"><span style="color:#6A737D"># Sicherer S3 Bucket</span></span>
+<span class="line"><span style="color:#B392F0">resource</span><span style="color:#79B8FF"> "aws_s3_bucket"</span><span style="color:#79B8FF"> "daten"</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> bucket</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "mein-startup-daten"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">resource</span><span style="color:#79B8FF"> "aws_s3_bucket_server_side_encryption_configuration"</span><span style="color:#79B8FF"> "daten"</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> bucket</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> aws_s3_bucket</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">daten</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">id</span></span>
+<span class="line"><span style="color:#B392F0"> rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0"> apply_server_side_encryption_by_default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> sse_algorithm</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "aws:kms"</span></span>
+<span class="line"><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">resource</span><span style="color:#79B8FF"> "aws_s3_bucket_public_access_block"</span><span style="color:#79B8FF"> "daten"</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> bucket</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> aws_s3_bucket</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">daten</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">id</span></span>
+<span class="line"><span style="color:#E1E4E8"> block_public_acls</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span></span>
+<span class="line"><span style="color:#E1E4E8"> block_public_policy</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span></span>
+<span class="line"><span style="color:#E1E4E8"> ignore_public_acls</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span></span>
+<span class="line"><span style="color:#E1E4E8"> restrict_public_buckets</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">resource</span><span style="color:#79B8FF"> "aws_s3_bucket_versioning"</span><span style="color:#79B8FF"> "daten"</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> bucket</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> aws_s3_bucket</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">daten</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">id</span></span>
+<span class="line"><span style="color:#B392F0"> versioning_configuration</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8"> status</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "Enabled"</span></span>
+<span class="line"><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="iac-security-scanning">IaC-Security-Scanning</h3>
+<p>Prüfe deine IaC-Konfigurationen auf Sicherheitsprobleme:</p>
+<ul>
+<li><strong>Checkov</strong>: Open Source, unterstützt Terraform, CloudFormation, Kubernetes</li>
+<li><strong>tfsec</strong>: Spezialisiert auf Terraform</li>
+<li><strong>Terrascan</strong>: Multi-Cloud IaC Scanner</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Checkov ausfuehren</span></span>
+<span class="line"><span style="color:#B392F0">checkov</span><span style="color:#79B8FF"> -d</span><span style="color:#9ECBFF"> /pfad/zu/terraform/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># tfsec ausfuehren</span></span>
+<span class="line"><span style="color:#B392F0">tfsec</span><span style="color:#9ECBFF"> /pfad/zu/terraform/</span></span></code></pre>
+<h2 id="kosten-sicherheits-balance">Kosten-Sicherheits-Balance</h2>
+<p>Cloud-Security muss nicht teuer sein. Hier eine Priorisierung für Startups:</p>
+<h3 id="kostenlos--im-free-tier">Kostenlos / Im Free Tier</h3>
+<ul>
+<li>IAM richtig konfigurieren</li>
+<li>MFA aktivieren</li>
+<li>S3 Block Public Access</li>
+<li>VPC einrichten</li>
+<li>CloudTrail / Audit Logs (begrenzt)</li>
+<li>Checkov / tfsec für IaC-Scanning</li>
+</ul>
+<h3 id="günstig-unter-50-eurmonat">Günstig (unter 50 EUR/Monat)</h3>
+<ul>
+<li>AWS GuardDuty: ca. 10-30 EUR/Monat für kleine Umgebungen</li>
+<li>VPC Flow Logs: abhängig vom Traffic</li>
+<li>AWS Config: ca. 2-5 EUR/Monat</li>
+<li>Tailscale VPN: kostenlos für bis zu 3 Nutzer</li>
+</ul>
+<h3 id="investition-50-200-eurmonat">Investition (50-200 EUR/Monat)</h3>
+<ul>
+<li>Dediziertes Monitoring (Datadog, etc.)</li>
+<li>Security Hub / Security Command Center</li>
+<li>WAF (Web Application Firewall)</li>
+<li>DDoS-Schutz (AWS Shield Advanced, allerdings deutlich teurer)</li>
+</ul>
+<h2 id="multi-cloud-und-vendor-lock-in">Multi-Cloud und Vendor Lock-in</h2>
+<p>Einige Startups nutzen mehrere Cloud-Anbieter. Das bringt Flexibilität, aber auch Komplexität:</p>
+<ul>
+<li><strong>Vorteil</strong>: Kein Single Point of Failure, keine Abhängigkeit</li>
+<li><strong>Nachteil</strong>: Komplexere Sicherheitskonfiguration, mehr Angriffsoberfläche</li>
+<li><strong>Empfehlung für Startups</strong>: Starte mit einem Anbieter, sichere ihn richtig ab. Multi-Cloud ist später immer noch möglich.</li>
+</ul>
+<h2 id="checkliste-cloud-security">Checkliste: Cloud-Security</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Shared Responsibility Model verstehen</li>
+<li class="task-list-item"><input type="checkbox" disabled> Root-/Admin-Account mit MFA und Hardware-Key sichern</li>
+<li class="task-list-item"><input type="checkbox" disabled> IAM nach Least-Privilege-Prinzip konfigurieren</li>
+<li class="task-list-item"><input type="checkbox" disabled> Gruppen und Rollen statt individuelle Berechtigungen</li>
+<li class="task-list-item"><input type="checkbox" disabled> VPC mit öffentlichen und privaten Subnets einrichten</li>
+<li class="task-list-item"><input type="checkbox" disabled> Security Groups minimal konfigurieren</li>
+<li class="task-list-item"><input type="checkbox" disabled> Alle Daten verschlüsseln (at Rest und in Transit)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Logging und Monitoring aktivieren (CloudTrail, Audit Logs)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Alerting für kritische Events einrichten</li>
+<li class="task-list-item"><input type="checkbox" disabled> Storage Buckets privat konfigurieren</li>
+<li class="task-list-item"><input type="checkbox" disabled> EU-Rechenzentren für DSGVO-Konformität nutzen</li>
+<li class="task-list-item"><input type="checkbox" disabled> Infrastructure as Code verwenden und scannen</li>
+<li class="task-list-item"><input type="checkbox" disabled> Regelmässiger Cloud-Security-Review (monatlich)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verwaiste Ressourcen aufräumen</li>
+</ul>
+
+<p>Cloud-Security ist kein einmaliges Projekt, sondern ein fortlaufender Prozess. Die gute Nachricht: Die wichtigsten Massnahmen sind kostenlos oder günstig. IAM richtig konfigurieren, MFA aktivieren, Buckets privat halten, Logs aktivieren, damit hast du schon 80% der Cloud-Security-Probleme gelöst.</p>
+<p>Nimm dir einen Nachmittag Zeit und geh die Checkliste oben durch. Dein Cloud-Account wird es dir danken.</p>
+<p>Im nächsten Beitrag geht es um ein Thema, das hoffentlich nie akut wird, aber vorbereitet sein muss: <a href="/blog/553-incident-response-plan">Incident Response Plan erstellen</a>.</p>
+<hr>
+<p><em>Dieser Beitrag ist Teil der Serie "Cybersecurity für Startups" auf dem Startup Burgenland Blog. Du baust gerade dein Startup auf und brauchst Unterstützung? <a href="https://www.startup-burgenland.at">Startup Burgenland</a> bietet dir Beratung, Förderungen und ein starkes Netzwerk, von der Idee bis zum Markteintritt. Melde dich bei uns und werde Teil der wachsenden Startup-Community im Burgenland!</em></p>
+<p><em>Dies ist Beitrag 7 von 10 der Serie "Cybersecurity für Startups" in der Kategorie Produkt und Technologie.</em></p>
+<p><strong>Über den Autor:</strong> Felix Lenhard ist Programme Manager & Startup Coach bei Startup Burgenland. 20 Jahre Erfahrung in Innovation Consulting, 100+ Startups gecoacht seit 2015, 12 Produkte bei VULPINE entwickelt und global vertrieben. Zuvor Managing Director beim 360 Innovation Lab und Innovation Manager bei RHI Magnesita.</p> </article> </div> </div> </div> </section> <section class="pt-50px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div class="border-top border-color-charcoal-grey pt-40px"> <div class="mb-25px d-flex flex-wrap gap-2 align-items-center"> <span class="fs-14 text-medium-gray fw-600 me-1">Tags:</span> <a href="/blog/tag/cloud-security/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> cloud-security </a><a href="/blog/tag/aws/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> aws </a><a href="/blog/tag/google-cloud/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> google-cloud </a><a href="/blog/tag/azure/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> azure </a><a href="/blog/tag/iam/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> iam </a><a href="/blog/tag/cybersecurity/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> cybersecurity </a><a href="/blog/tag/startup/" style="text-decoration:none; display:inline-block; padding:4px 14px; border-radius:20px; border:1px solid #e0e0e0; color:var(--sb-black); font-size:13px; font-weight:500; transition:all 0.2s ease;"> startup </a> </div> <div class="d-flex justify-content-between align-items-center flex-wrap gap-3"> <div> <span class="fs-14 text-medium-gray">Veröffentlicht am</span> <time datetime="2024-10-19" class="d-block fw-600 text-dark-gray">2. Jänner 2029</time> </div> <a href="/blog/" class="btn btn-medium btn-sb-red btn-rounded fw-600">
+Alle Beiträge <i class="fa-solid fa-arrow-right ms-10px" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </section> <section class="pt-0 pb-80px"> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-8"> <div style="background: linear-gradient(135deg, var(--sb-red) 0%, var(--sb-orange) 100%); border-radius: 16px; padding: 48px 32px; text-align: center;"> <h2 class="fw-600 text-white ls-minus-1px mb-15px" style="font-size: 1.5rem;">Erstgespräch vereinbaren</h2> <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Du überlegst zu gründen oder bist schon mittendrin? Schreib uns ein formloses E-Mail, wir melden uns innerhalb weniger Tage.</p> <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespräch Startup Burgenland" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--sb-red); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"> <i class="fa-solid fa-envelope" aria-hidden="true"></i> E-Mail schreiben
+</a> </div> </div> </div> </div> </section> </main> <footer class="p-0"> <div class="container"> <div class="row align-items-center mb-4 sm-mb-6"> <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px"> <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Bereit für den nächsten Schritt? <a href="/starten.html" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Jetzt starten!</a></h5> </div> <div class="col-md-2 col-sm-4 text-center text-sm-end"> <a href="/index.html" class="footer-logo d-inline-block"> <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland"> </a> </div> </div> <div class="row align-items-end mb-6 sm-mb-40px"> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p> </div> <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin"> <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span> <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p> </div> <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end"> <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a> </div> </div> </div> <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey"> <div class="container"> <div class="row align-items-center"> <div class="col-lg-7 text-center text-lg-start md-mb-10px"> </div> <div class="col-lg-5 text-center text-lg-end"> <span class="fs-15">&copy; 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span> </div> </div> </div> </div> </footer> <script type="text/javascript" src="/js/jquery.js"></script> <script type="text/javascript" src="/js/vendors.min.js"></script> <script type="text/javascript" src="/js/main.js"></script> <script type="module">document.querySelectorAll(".scroll-progress").forEach(function(e){e.remove()});</script> </body> </html>

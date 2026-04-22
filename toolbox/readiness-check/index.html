@@ -1,0 +1,1930 @@
+<!doctype html>
+<html class="no-js" lang="de">
+ <head>
+ <title>Readiness Assessment | StartUp Burgenland Toolbox</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="author" content="StartUp Burgenland">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <meta name="description" content="Finde heraus, wie bereit du für deine Gründung bist. 18 Fragen, 6 Kategorien, sofortige Ergebnisse mit Radar-Chart und personalisierten Empfehlungen.">
+ <link rel="canonical" href="https://startupburgenland.vulpinecreations.com/toolbox/readiness-check/">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://startupburgenland.vulpinecreations.com/toolbox/readiness-check/">
+ <meta property="og:title" content="Readiness Assessment | StartUp Burgenland Toolbox">
+ <meta property="og:description" content="Finde heraus, wie bereit du für deine Gründung bist. 18 Fragen, 6 Kategorien, sofortige Ergebnisse mit Radar-Chart und personalisierten Empfehlungen.">
+ <meta property="og:site_name" content="StartUp Burgenland">
+ <meta property="og:locale" content="de_AT">
+ <meta property="og:image" content="https://startupburgenland.vulpinecreations.com/images/hero-ueber-uns.webp">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Readiness Assessment | StartUp Burgenland Toolbox">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+ <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+ <link rel="stylesheet" href="/css/vendors.min.css"/>
+ <link rel="stylesheet" href="/css/icon.min.css"/>
+ <link rel="stylesheet" href="/css/local-fonts.css"/>
+ <link rel="stylesheet" href="/css/style.min.css"/>
+ <link rel="stylesheet" href="/css/responsive.min.css"/>
+ <link rel="stylesheet" href="/demos/startup-burgenland/startup-burgenland.css"/>
+ <link rel="stylesheet" href="/css/toolbox-tools.css"/>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <style>
+ /* ─── Readiness Assessment: Interactive Quiz Styles ─── */
+
+ /* Progress Bar (sticky below header during quiz) */
+.tool-content.ra-progress-container {
+ background: #fff;
+ padding: 12px 0;
+ border-bottom: 1px solid #E2E8F0;
+ position: sticky;
+ top: 0;
+ z-index: 99;
+ transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.ra-progress-container.hidden {
+ display: none;
+ }
+.tool-content.ra-progress-info {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 8px;
+ }
+.tool-content.ra-progress-label {
+ font-size: 13px;
+ font-weight: 600;
+ color: #1C1D1F;
+ }
+.tool-content.ra-progress-count {
+ font-size: 13px;
+ font-weight: 600;
+ color: #FF8C00;
+ }
+.tool-content.ra-progress-bar {
+ width: 100%;
+ height: 6px;
+ background: #E2E8F0;
+ border-radius: 3px;
+ overflow: hidden;
+ }
+.tool-content.ra-progress-fill {
+ height: 100%;
+ background: linear-gradient(90deg, #FF8C00, #FF8C00);
+ border-radius: 3px;
+ transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+ width: 0%;
+ }
+
+ /* Screens */
+.tool-content.ra-screen {
+ display: none;
+ animation: raFadeInUp 0.4s ease-out;
+ }
+.tool-content.ra-screen.active {
+ display: block;
+ }
+
+ @keyframes raFadeInUp {
+ from { opacity: 0; transform: translateY(20px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+ @keyframes raFadeIn {
+ from { opacity: 0; }
+ to { opacity: 1; }
+ }
+ @keyframes raScaleIn {
+ from { opacity: 0; transform: scale(0.9); }
+ to { opacity: 1; transform: scale(1); }
+ }
+ @keyframes raSlideInLeft {
+ from { opacity: 0; transform: translateX(-20px); }
+ to { opacity: 1; transform: translateX(0); }
+ }
+
+ /* Welcome Screen */
+.tool-content.ra-welcome-card {
+ background: #fff;
+ border-radius: 16px;
+ padding: 40px 32px;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ text-align: center;
+ max-width: 640px;
+ margin: 40px auto;
+ }
+.tool-content.ra-welcome-icon {
+ width: 72px;
+ height: 72px;
+ background: linear-gradient(135deg, #E63946, #FF8C00);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 24px;
+ font-size: 32px;
+ }
+.tool-content.ra-welcome-title {
+ font-size: 28px;
+ font-weight: 800;
+ color: #E63946;
+ margin-bottom: 12px;
+ line-height: 1.2;
+ }
+.tool-content.ra-welcome-description {
+ font-size: 16px;
+ color: #6B7280;
+ margin-bottom: 32px;
+ max-width: 480px;
+ margin-left: auto;
+ margin-right: auto;
+ line-height: 1.7;
+ }
+.tool-content.ra-welcome-features {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ margin-bottom: 32px;
+ }
+.tool-content.ra-welcome-feature {
+ text-align: center;
+ padding: 16px 8px;
+ background: #F8FAFC;
+ border-radius: 12px;
+ }
+.tool-content.ra-welcome-feature-icon {
+ font-size: 24px;
+ margin-bottom: 8px;
+ }
+.tool-content.ra-welcome-feature-label {
+ font-size: 12px;
+ font-weight: 600;
+ color: #1C1D1F;
+ line-height: 1.4;
+ }
+
+ /* Buttons */
+.tool-content.ra-btn-primary {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 16px 40px;
+ background: linear-gradient(135deg, #E63946, #FF8C00);
+ color: #fff;
+ border: none;
+ border-radius: 24px;
+ font-family: inherit;
+ font-size: 16px;
+ font-weight: 700;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+ }
+.tool-content.ra-btn-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+ }
+.tool-content.ra-btn-primary:active {
+ transform: translateY(0);
+ }
+.tool-content.ra-btn-accent {
+ background: linear-gradient(135deg, #FF8C00, #E07600);
+ box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+ }
+.tool-content.ra-btn-accent:hover {
+ box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+ }
+.tool-content.ra-btn-outline {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 12px 24px;
+ background: transparent;
+ color: #E63946;
+ border: 2px solid #E2E8F0;
+ border-radius: 24px;
+ font-family: inherit;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.ra-btn-outline:hover {
+ border-color: #FF8C00;
+ background: rgba(230, 57, 70, 0.05);
+ }
+
+ /* Question Screen */
+.tool-content.ra-question-card {
+ background: #fff;
+ border-radius: 16px;
+ padding: 36px 28px;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ max-width: 640px;
+ margin: 30px auto;
+ }
+.tool-content.ra-question-category {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ padding: 6px 14px;
+ background: #F8FAFC;
+ border: 1px solid #E2E8F0;
+ border-radius: 20px;
+ font-size: 12px;
+ font-weight: 600;
+ color: #FF8C00;
+ margin-bottom: 20px;
+ }
+.tool-content.ra-question-text {
+ font-size: 22px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-bottom: 28px;
+ line-height: 1.4;
+ }
+.tool-content.ra-answers-list {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ }
+.tool-content.ra-answer-option {
+ display: flex;
+ align-items: flex-start;
+ gap: 14px;
+ padding: 16px 18px;
+ background: #F8FAFC;
+ border: 2px solid #E2E8F0;
+ border-radius: 12px;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ text-align: left;
+ font-family: inherit;
+ width: 100%;
+ }
+.tool-content.ra-answer-option:hover {
+ border-color: #FF8C00;
+ background: rgba(230, 57, 70, 0.04);
+ transform: translateX(4px);
+ }
+.tool-content.ra-answer-option.selected {
+ border-color: #FF8C00;
+ background: rgba(230, 57, 70, 0.08);
+ box-shadow: 0 0 0 1px #FF8C00;
+ }
+.tool-content.ra-answer-indicator {
+ width: 28px;
+ height: 28px;
+ border-radius: 50%;
+ border: 2px solid #E2E8F0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ font-size: 12px;
+ font-weight: 700;
+ color: #6B7280;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ margin-top: 1px;
+ }
+.tool-content.ra-answer-option:hover.ra-answer-indicator {
+ border-color: #FF8C00;
+ color: #FF8C00;
+ }
+.tool-content.ra-answer-option.selected.ra-answer-indicator {
+ background: #FF8C00;
+ border-color: #FF8C00;
+ color: #fff;
+ }
+.tool-content.ra-answer-text {
+ font-size: 15px;
+ font-weight: 500;
+ color: #1C1D1F;
+ line-height: 1.5;
+ }
+.tool-content.ra-question-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 24px;
+ padding-top: 20px;
+ border-top: 1px solid #E2E8F0;
+ }
+.tool-content.ra-btn-back {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ padding: 10px 18px;
+ background: transparent;
+ color: #6B7280;
+ border: none;
+ border-radius: 8px;
+ font-family: inherit;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.ra-btn-back:hover {
+ color: #E63946;
+ background: #F8FAFC;
+ }
+.tool-content.ra-btn-back.invisible {
+ visibility: hidden;
+ }
+.tool-content.ra-keyboard-hint {
+ font-size: 12px;
+ color: #6B7280;
+ font-weight: 500;
+ }
+
+ /* Results Screen */
+.tool-content.ra-results-container {
+ max-width: 720px;
+ margin: 0 auto;
+ }
+.tool-content.ra-results-header {
+ text-align: center;
+ margin-bottom: 32px;
+ animation: raScaleIn 0.6s ease-out;
+ }
+.tool-content.ra-results-title {
+ font-size: 24px;
+ font-weight: 800;
+ color: #E63946;
+ margin-bottom: 8px;
+ }
+.tool-content.ra-results-subtitle {
+ font-size: 15px;
+ color: #6B7280;
+ }
+
+ /* Phase Badge */
+.tool-content.ra-phase-badge-container {
+ background: #fff;
+ border-radius: 16px;
+ padding: 32px;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ text-align: center;
+ margin-bottom: 24px;
+ animation: raScaleIn 0.6s ease-out 0.1s both;
+ }
+.tool-content.ra-phase-label {
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ color: #6B7280;
+ margin-bottom: 12px;
+ }
+.tool-content.ra-phase-name {
+ font-size: 36px;
+ font-weight: 800;
+ margin-bottom: 8px;
+ line-height: 1.2;
+ }
+.tool-content.ra-phase-name.phase-idee { color: #DC3545; }
+.tool-content.ra-phase-name.phase-validierung { color: #FF8C00; }
+.tool-content.ra-phase-name.phase-aufbau { color: #FF8C00; }
+.tool-content.ra-phase-name.phase-wachstum { color: #28A745; }
+.tool-content.ra-phase-score {
+ font-size: 18px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-bottom: 16px;
+ }
+.tool-content.ra-phase-score span {
+ color: #FF8C00;
+ }
+.tool-content.ra-phase-description {
+ font-size: 15px;
+ color: #6B7280;
+ line-height: 1.7;
+ max-width: 500px;
+ margin: 0 auto;
+ }
+
+ /* Score Breakdown */
+.tool-content.ra-score-breakdown {
+ background: #fff;
+ border-radius: 16px;
+ padding: 28px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ margin-bottom: 24px;
+ animation: raFadeInUp 0.5s ease-out 0.2s both;
+ }
+.tool-content.ra-section-title {
+ font-size: 18px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-bottom: 20px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+.tool-content.ra-category-score-row {
+ margin-bottom: 18px;
+ }
+.tool-content.ra-category-score-row:last-child {
+ margin-bottom: 0;
+ }
+.tool-content.ra-category-score-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 6px;
+ }
+.tool-content.ra-category-score-name {
+ font-size: 14px;
+ font-weight: 600;
+ color: #1C1D1F;
+ }
+.tool-content.ra-category-score-value {
+ font-size: 14px;
+ font-weight: 700;
+ color: #FF8C00;
+ }
+.tool-content.ra-category-bar {
+ width: 100%;
+ height: 8px;
+ background: #E2E8F0;
+ border-radius: 4px;
+ overflow: hidden;
+ }
+.tool-content.ra-category-bar-fill {
+ height: 100%;
+ border-radius: 4px;
+ transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+ width: 0%;
+ }
+.tool-content.ra-bar-low { background: #DC3545; }
+.tool-content.ra-bar-medium { background: #FF8C00; }
+.tool-content.ra-bar-high { background: #FF8C00; }
+.tool-content.ra-bar-excellent { background: #28A745; }
+
+ /* Radar Chart */
+.tool-content.ra-radar-chart-container {
+ background: #fff;
+ border-radius: 16px;
+ padding: 28px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ margin-bottom: 24px;
+ animation: raFadeInUp 0.5s ease-out 0.3s both;
+ }
+.tool-content.ra-chart-wrapper {
+ position: relative;
+ max-width: 400px;
+ margin: 0 auto;
+ }
+
+ /* Recommendations */
+.tool-content.ra-recommendations {
+ background: #fff;
+ border-radius: 16px;
+ padding: 28px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ margin-bottom: 24px;
+ animation: raFadeInUp 0.5s ease-out 0.4s both;
+ }
+.tool-content.ra-recommendation-card {
+ display: flex;
+ gap: 14px;
+ padding: 16px;
+ background: #F8FAFC;
+ border-radius: 12px;
+ margin-bottom: 12px;
+ border-left: 4px solid #FF8C00;
+ animation: raSlideInLeft 0.4s ease-out both;
+ }
+.tool-content.ra-recommendation-card:last-child {
+ margin-bottom: 0;
+ }
+.tool-content.ra-recommendation-icon {
+ width: 40px;
+ height: 40px;
+ background: #fff;
+ border-radius: 8px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 20px;
+ flex-shrink: 0;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ }
+.tool-content.ra-recommendation-content {
+ flex: 1;
+ }
+.tool-content.ra-recommendation-title {
+ font-size: 15px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-bottom: 4px;
+ }
+.tool-content.ra-recommendation-text {
+ font-size: 13px;
+ color: #6B7280;
+ line-height: 1.6;
+ margin-bottom: 8px;
+ }
+.tool-content.ra-recommendation-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 4px;
+ font-size: 13px;
+ font-weight: 600;
+ color: #FF8C00;
+ text-decoration: none;
+ transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.ra-recommendation-link:hover {
+ color: #E63946;
+ }
+
+ /* Results CTA Section */
+.tool-content.ra-cta-section {
+ background: linear-gradient(135deg, #E63946, #FF8C00);
+ border-radius: 16px;
+ padding: 36px 28px;
+ text-align: center;
+ color: #fff;
+ margin-bottom: 24px;
+ animation: raFadeInUp 0.5s ease-out 0.5s both;
+ }
+.tool-content.ra-cta-title {
+ font-size: 22px;
+ font-weight: 800;
+ margin-bottom: 8px;
+ color: #fff;
+ }
+.tool-content.ra-cta-text {
+ font-size: 15px;
+ opacity: 0.9;
+ margin-bottom: 24px;
+ line-height: 1.6;
+ color: #fff;
+ }
+.tool-content.ra-cta-buttons {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ align-items: center;
+ }
+.tool-content.ra-btn-cta-primary {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 16px 36px;
+ background: #FF8C00;
+ color: #fff;
+ border: none;
+ border-radius: 24px;
+ font-family: inherit;
+ font-size: 16px;
+ font-weight: 700;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ text-decoration: none;
+ box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+ }
+.tool-content.ra-btn-cta-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(255, 140, 0, 0.5);
+ color: #fff;
+ }
+.tool-content.ra-btn-cta-secondary {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 14px 28px;
+ background: rgba(255,255,255,0.15);
+ color: #fff;
+ border: 2px solid rgba(255,255,255,0.3);
+ border-radius: 24px;
+ font-family: inherit;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.tool-content.ra-btn-cta-secondary:hover {
+ background: rgba(255,255,255,0.25);
+ border-color: rgba(255,255,255,0.5);
+ }
+
+ /* Restart Button */
+.tool-content.ra-restart-section {
+ text-align: center;
+ margin-bottom: 32px;
+ animation: raFadeIn 0.5s ease-out 0.6s both;
+ }
+
+ /* Modal */
+.ra-modal-overlay {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.5);
+ z-index: 200;
+ align-items: center;
+ justify-content: center;
+ padding: 24px;
+ animation: raFadeIn 0.2s ease-out;
+ }
+.ra-modal-overlay.active {
+ display: flex;
+ }
+.ra-modal {
+ background: #fff;
+ border-radius: 16px;
+ padding: 36px 28px;
+ max-width: 480px;
+ width: 100%;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+ animation: raScaleIn 0.3s ease-out;
+ position: relative;
+ }
+.ra-modal-close {
+ position: absolute;
+ top: 16px;
+ right: 16px;
+ width: 32px;
+ height: 32px;
+ background: #F8FAFC;
+ border: none;
+ border-radius: 50%;
+ font-size: 18px;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #6B7280;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.ra-modal-close:hover {
+ background: #E2E8F0;
+ color: #1C1D1F;
+ }
+.ra-modal-title {
+ font-size: 22px;
+ font-weight: 800;
+ color: #E63946;
+ margin-bottom: 8px;
+ text-align: center;
+ }
+.ra-modal-description {
+ font-size: 14px;
+ color: #6B7280;
+ margin-bottom: 24px;
+ text-align: center;
+ line-height: 1.6;
+ }
+.ra-modal-features {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ margin-bottom: 24px;
+ }
+.ra-modal-feature {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 14px;
+ color: #1C1D1F;
+ }
+.ra-modal-feature-check {
+ width: 20px;
+ height: 20px;
+ background: rgba(40, 167, 69, 0.1);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 12px;
+ color: #28A745;
+ flex-shrink: 0;
+ }
+.ra-form-group {
+ margin-bottom: 16px;
+ }
+.ra-form-label {
+ display: block;
+ font-size: 13px;
+ font-weight: 600;
+ color: #1C1D1F;
+ margin-bottom: 6px;
+ }
+.ra-form-input {
+ width: 100%;
+ padding: 12px 16px;
+ border: 2px solid #E2E8F0;
+ border-radius: 8px;
+ font-family: inherit;
+ font-size: 15px;
+ color: #1C1D1F;
+ transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ background: #fff;
+ }
+.ra-form-input:focus {
+ outline: none;
+ border-color: #FF8C00;
+ }
+.ra-form-input::placeholder {
+ color: #6B7280;
+ }
+.ra-form-checkbox-label {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ font-size: 12px;
+ color: #6B7280;
+ cursor: pointer;
+ line-height: 1.5;
+ margin-bottom: 20px;
+ }
+.ra-form-checkbox-label input[type="checkbox"] {
+ margin-top: 2px;
+ flex-shrink: 0;
+ width: 16px;
+ height: 16px;
+ accent-color: #FF8C00;
+ }
+.ra-modal-success {
+ text-align: center;
+ padding: 20px 0;
+ }
+.ra-modal-success-icon {
+ width: 64px;
+ height: 64px;
+ background: rgba(40, 167, 69, 0.1);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 32px;
+ margin: 0 auto 16px;
+ }
+.ra-modal-success-title {
+ font-size: 20px;
+ font-weight: 700;
+ color: #1C1D1F;
+ margin-bottom: 8px;
+ }
+.ra-modal-success-text {
+ font-size: 14px;
+ color: #6B7280;
+ line-height: 1.6;
+ }
+
+ /* Responsive */
+ @media (max-width: 640px) {
+.tool-content.ra-welcome-card {
+ padding: 28px 20px;
+ margin: 20px auto;
+ }
+.tool-content.ra-welcome-title {
+ font-size: 24px;
+ }
+.tool-content.ra-welcome-description {
+ font-size: 15px;
+ }
+.tool-content.ra-welcome-features {
+ grid-template-columns: repeat(3, 1fr);
+ gap: 10px;
+ }
+.tool-content.ra-welcome-feature {
+ padding: 12px 6px;
+ }
+.tool-content.ra-welcome-feature-label {
+ font-size: 11px;
+ }
+.tool-content.ra-question-card {
+ padding: 24px 18px;
+ margin: 20px auto;
+ }
+.tool-content.ra-question-text {
+ font-size: 19px;
+ margin-bottom: 24px;
+ }
+.tool-content.ra-answer-option {
+ padding: 14px 14px;
+ }
+.tool-content.ra-answer-text {
+ font-size: 14px;
+ }
+.tool-content.ra-phase-name {
+ font-size: 28px;
+ }
+.tool-content.ra-phase-badge-container,
+.tool-content.ra-score-breakdown,
+.tool-content.ra-radar-chart-container,
+.tool-content.ra-recommendations,
+.tool-content.ra-cta-section {
+ padding: 24px 18px;
+ }
+.tool-content.ra-keyboard-hint {
+ display: none;
+ }
+.ra-modal {
+ padding: 28px 20px;
+ }
+ }
+ @media (max-width: 380px) {
+.tool-content.ra-welcome-features {
+ grid-template-columns: 1fr;
+ gap: 8px;
+ }
+.tool-content.ra-welcome-feature {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ text-align: left;
+ padding: 10px 14px;
+ }
+.tool-content.ra-welcome-feature-icon {
+ margin-bottom: 0;
+ }
+ }
+ /* Print */
+ @media print {
+.tool-content.ra-question-card,
+.tool-content.ra-phase-badge-container,
+.tool-content.ra-score-breakdown,
+.tool-content.ra-radar-chart-container,
+.tool-content.ra-recommendations {
+ break-inside: avoid;
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ }
+ }
+ </style>
+ </head>
+ <body data-mobile-nav-style="classic" class="background-position-center-top">
+ <a class="skip-navigation" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.background='#dc3545';this.style.color='#fff';this.style.padding='10px 20px';this.style.borderRadius='4px';this.style.textDecoration='none';this.style.fontWeight='700';this.style.fontSize='16px';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Zum Inhalt springen</a>
+
+ <!-- start header -->
+ <header>
+ <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed">
+ <div class="container-fluid">
+ <div class="col-auto col-lg-2 me-lg-0 me-auto">
+ <a class="navbar-brand" href="/index.html">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="default-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="alt-logo">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland" class="mobile-logo">
+ </a>
+ </div>
+ <div class="col-auto col-lg-8 menu-order position-static">
+ <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ <span class="navbar-toggler-line"></span>
+ </button>
+ <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+ <ul class="navbar-nav">
+ <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+ <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+ <li class="nav-item dropdown">
+ <a href="/wie-wir-arbeiten.html" class="nav-link">Wie wir arbeiten</a>
+ <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownWie" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdownWie">
+ <li><a href="/incubator.html" class="dropdown-item">1:1 Coaching</a></li>
+ 
+ </ul>
+ </li>
+ <li class="nav-item"><a href="/erfolgsgeschichten.html" class="nav-link">Erfolgsgeschichten</a></li>
+ <li class="nav-item"><a href="/team.html" class="nav-link">Team</a></li>
+ <li class="nav-item"><a href="/foerderungen.html" class="nav-link">Förderungen</a></li>
+ <li class="nav-item"><a href="/toolbox/" class="nav-link">Toolbox</a></li>
+ <li class="nav-item"><a href="/pitchiq.html" class="nav-link">PitchIQ</a></li>
+ <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-auto col-lg-2 text-end">
+ <div class="header-icon">
+ <div class="header-button">
+ <a href="/starten.html" class="btn btn-rounded btn-sb-red btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Jetzt starten">Jetzt starten</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- end header -->
+ <main id="main-content">
+
+ <!-- start hero -->
+ <section class="page-title-extra-large cover-background top-space-margin md-top-space-margin bg-gradient-sb">
+ <div class="container">
+ <div class="row align-items-center justify-content-center extra-small-screen">
+ <div class="col-12 text-center position-relative">
+ <h1 class="text-white fw-600 mb-0 ls-minus-2px">Readiness Assessment</h1>
+ <p class="text-white opacity-8 fs-20 mt-20px mb-0">Finde heraus, wie bereit du f&uuml;r deine Gr&uuml;ndung bist - 18 Fragen, 6 Kategorien, sofortige Ergebnisse</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end hero -->
+
+ <!-- breadcrumb -->
+ <div class="tb-breadcrumb-bar">
+ <div class="container">
+ <a href="/toolbox/">Toolbox</a>
+ <span class="separator">/</span>
+ <a href="/toolbox/idee/">Phase 1: Idee</a>
+ <span class="separator">/</span>
+ <span class="current">Readiness Assessment</span>
+ </div>
+ </div>
+
+ <!-- tool content -->
+ <section class="tool-content">
+ <div class="container" style="max-width: 900px;">
+
+ <!-- Progress Bar -->
+ <div class="ra-progress-container hidden" id="progressContainer">
+ <div class="ra-progress-info">
+ <span class="ra-progress-label" id="progressCategory">Kategorie</span>
+ <span class="ra-progress-count" id="progressCount">1 / 18</span>
+ </div>
+ <div class="ra-progress-bar">
+ <div class="ra-progress-fill" id="progressFill"></div>
+ </div>
+ </div>
+
+ <div id="appContainer">
+
+ <!-- Welcome Screen -->
+ <div class="ra-screen active" id="welcomeScreen">
+ <div class="ra-welcome-card">
+ <div class="ra-welcome-icon">
+ <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+ </div>
+ <h2 class="ra-welcome-title">Wie bereit bist du<br>f&uuml;r deine Gr&uuml;ndung?</h2>
+ <p class="ra-welcome-description">
+ Finde in 5 Minuten heraus, wo du stehst. 18 Fragen aus 6 Bereichen zeigen dir deine St&auml;rken, Schw&auml;chen und den n&auml;chsten Schritt.
+ </p>
+ <div class="ra-welcome-features">
+ <div class="ra-welcome-feature">
+ <div class="ra-welcome-feature-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E63946" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+ </div>
+ <div class="ra-welcome-feature-label">~5 Minuten</div>
+ </div>
+ <div class="ra-welcome-feature">
+ <div class="ra-welcome-feature-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E63946" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+ </div>
+ <div class="ra-welcome-feature-label">18 Fragen</div>
+ </div>
+ <div class="ra-welcome-feature">
+ <div class="ra-welcome-feature-icon">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E63946" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ </div>
+ <div class="ra-welcome-feature-label">Sofort-Ergebnis</div>
+ </div>
+ </div>
+ <button class="ra-btn-primary" onclick="startQuiz()">
+ Jetzt starten
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+ </button>
+ </div>
+ </div>
+
+ <!-- Question Screen -->
+ <div class="ra-screen" id="questionScreen">
+ <div class="ra-question-card">
+ <div class="ra-question-category" id="questionCategory"></div>
+ <h2 class="ra-question-text" id="questionText"></h2>
+ <div class="ra-answers-list" id="answersList"></div>
+ <div class="ra-question-nav">
+ <button class="ra-btn-back" id="backButton" onclick="goBack()">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+ Zur&uuml;ck
+ </button>
+ <span class="ra-keyboard-hint">Taste 1-4 zum Antworten</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Results Screen -->
+ <div class="ra-screen" id="resultsScreen">
+ <div class="ra-results-container">
+ <div class="ra-results-header">
+ <h2 class="ra-results-title">Dein Ergebnis</h2>
+ <p class="ra-results-subtitle">Basierend auf deinen 18 Antworten</p>
+ </div>
+
+ <div class="ra-phase-badge-container" id="phaseBadge"></div>
+
+ <div class="ra-score-breakdown" id="scoreBreakdown">
+ <h3 class="ra-section-title">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+ Ergebnis nach Kategorie
+ </h3>
+ <div id="categoryBars"></div>
+ </div>
+
+ <div class="ra-radar-chart-container">
+ <h3 class="ra-section-title">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><line x1="22" y1="8.5" x2="15" y2="12"/><line x1="2" y1="8.5" x2="9" y2="12"/></svg>
+ Dein Readiness-Profil
+ </h3>
+ <div class="ra-chart-wrapper">
+ <canvas id="radarChart"></canvas>
+ </div>
+ </div>
+
+ <div class="ra-recommendations" id="recommendations">
+ <h3 class="ra-section-title">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+ Deine n&auml;chsten Schritte
+ </h3>
+ <div id="recommendationsList"></div>
+ </div>
+
+ <div class="ra-cta-section">
+ <h3 class="ra-cta-title">Bereit f&uuml;r den n&auml;chsten Schritt?</h3>
+ <p class="ra-cta-text">
+ Wir begleiten Gr&uuml;nder:innen von der Idee bis zum Scale-up.<br>
+ Individuelles 1:1 Coaching, flexibler Einstieg, kein Batch.
+ </p>
+ <div class="ra-cta-buttons">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at?subject=Erstgespr%C3%A4ch%20Startup%20Readiness%20Check" class="ra-btn-cta-primary">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2.9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ Kostenloses Erstgespr&auml;ch buchen
+ </a>
+ <button class="ra-btn-cta-secondary" onclick="openEmailModal()">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+ Detaillierten Report per E-Mail erhalten
+ </button>
+ </div>
+ </div>
+
+ <div class="ra-restart-section">
+ <button class="ra-btn-outline" onclick="restartQuiz()">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+ Nochmal starten
+ </button>
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ </div>
+ </section>
+ <!-- end tool content -->
+
+ <!-- CTA section -->
+ <section class="tb-cta-section">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-7 text-center">
+ <h2 class="text-white fw-600 ls-minus-2px mb-15px">Bereit f&uuml;r den n&auml;chsten Schritt?</h2>
+ <p class="text-white opacity-8 fs-17 mb-30px">Im 1:1-Coaching analysieren wir gemeinsam deine Ergebnisse und entwickeln einen individuellen Fahrplan - von der Idee bis zum Scale-up.</p>
+ <a href="/starten.html" class="btn btn-rounded btn-white btn-medium btn-switch-text btn-box-shadow text-transform-none">
+ <span>
+ <span class="btn-double-text" data-text="Erstgespräch vereinbaren">Erstgespr&auml;ch vereinbaren</span>
+ <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+ </span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- end CTA section -->
+
+ </main>
+
+ <!-- Email Modal -->
+ <div class="ra-modal-overlay" id="emailModal">
+ <div class="ra-modal">
+ <button class="ra-modal-close" onclick="closeEmailModal()">&times;</button>
+ <div id="emailModalContent">
+ <div class="ra-modal-title">Detaillierten Report erhalten</div>
+ <p class="ra-modal-description">
+ Wir senden dir eine ausf&uuml;hrliche Analyse deiner Ergebnisse mit konkreten Handlungsempfehlungen.
+ </p>
+ <div class="ra-modal-features">
+ <div class="ra-modal-feature">
+ <div class="ra-modal-feature-check">&#10003;</div>
+ <span>Pers&ouml;nliches Readiness-Profil als PDF</span>
+ </div>
+ <div class="ra-modal-feature">
+ <div class="ra-modal-feature-check">&#10003;</div>
+ <span>Detaillierte Empfehlungen pro Kategorie</span>
+ </div>
+ <div class="ra-modal-feature">
+ <div class="ra-modal-feature-check">&#10003;</div>
+ <span>Passende Ressourcen und Templates</span>
+ </div>
+ <div class="ra-modal-feature">
+ <div class="ra-modal-feature-check">&#10003;</div>
+ <span>Einladung zum kostenlosen Erstgespr&auml;ch</span>
+ </div>
+ </div>
+ <form onsubmit="submitEmail(event)">
+ <div class="ra-form-group">
+ <label class="ra-form-label" for="emailName">Name</label>
+ <input type="text" id="emailName" class="ra-form-input" placeholder="Dein Vorname" required>
+ </div>
+ <div class="ra-form-group">
+ <label class="ra-form-label" for="emailAddress">E-Mail-Adresse</label>
+ <input type="email" id="emailAddress" class="ra-form-input" placeholder="deine@email.at" required>
+ </div>
+ <div class="ra-form-group">
+ <label class="ra-form-label" for="emailStartup">Startup-Name (optional)</label>
+ <input type="text" id="emailStartup" class="ra-form-input" placeholder="Name deines Startups">
+ </div>
+ <label class="ra-form-checkbox-label">
+ <input type="checkbox" required>
+ <span>Ich stimme zu, dass StartUp Burgenland meine Daten zum Versand des Reports und f&uuml;r gelegentliche Updates zu Gr&uuml;ndungsthemen nutzen darf. Kein Spam. Jederzeit abmeldbar. <a href="https://startupburgenland.at/datenschutz" target="_blank" style="color: #FF8C00;">Datenschutz</a></span>
+ </label>
+ <button type="submit" class="ra-btn-primary ra-btn-accent" style="width: 100%;">
+ Report anfordern
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+ </button>
+ </form>
+ </div>
+ <div id="emailSuccessContent" style="display: none;">
+ <div class="ra-modal-success">
+ <div class="ra-modal-success-icon">&#10003;</div>
+ <h3 class="ra-modal-success-title">Report ist unterwegs!</h3>
+ <p class="ra-modal-success-text">
+ Wir haben deinen Report an die angegebene E-Mail-Adresse gesendet. Schau auch im Spam-Ordner nach. Bei Fragen melde dich jederzeit bei uns.
+ </p>
+ <br>
+ <button class="ra-btn-outline" onclick="closeEmailModal()">Schlie&szlig;en</button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- start footer -->
+ <footer class="p-0">
+ <div class="container">
+ <div class="row align-items-center mb-4 sm-mb-6">
+ <div class="col-md-10 col-sm-8 text-center text-sm-start xs-mb-25px">
+ <h5 class="mb-0 text-dark-gray fw-400 ls-minus-1px">Noch Fragen? <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-decoration-line-bottom-medium fw-600 text-sb-red text-sb-red-hover">Kontaktiere uns!</a></h5>
+ </div>
+ <div class="col-md-2 col-sm-4 text-center text-sm-end">
+ <a href="/index.html" class="footer-logo d-inline-block">
+ <img src="/images/startup-burgenland-logo.svg" alt="StartUp Burgenland">
+ </a>
+ </div>
+ </div>
+ <div class="row align-items-end mb-6 sm-mb-40px">
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">StartUp Burgenland</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Eine Initiative der Wirtschaftsagentur Burgenland</p>
+ </div>
+ <div class="col-lg-4 col-sm-6 text-center text-sm-start xs-mb-25px last-paragraph-no-margin">
+ <span class="d-block text-dark-gray ls-minus-05px mb-5px fw-600">Adresse</span>
+ <p class="w-80 lg-w-100 text-medium-gray fs-15 lh-28">Marktstraße 3, 7000 Eisenstadt, Burgenland, Österreich</p>
+ </div>
+ <div class="col-md-4 col-sm-12 last-paragraph-no-margin ms-auto text-center text-sm-end">
+ <a href="mailto:startup@wirtschaftsagentur-burgenland.at" class="text-dark-gray text-dark-gray-hover fw-600 text-decoration-line-bottom">startup@wirtschaftsagentur-burgenland.at</a>
+ </div>
+ </div>
+ </div>
+ <div class="footer-bottom pt-25px pb-25px border-top border-color-charcoal-grey">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+ 
+ </div>
+ <div class="col-lg-5 text-center text-lg-end">
+ <span class="fs-15">© 2026 StartUp Burgenland | <a href="/impressum.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Impressum</a> | <a href="/datenschutz.html" class="text-decoration-line-bottom text-dark-gray text-dark-gray-hover">Datenschutz</a></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <!-- end footer -->
+
+ <script type="text/javascript" src="/js/jquery.js"></script>
+ <script type="text/javascript" src="/js/vendors.min.js"></script>
+ <script type="text/javascript" src="/js/main.js"></script>
+ <script>document.querySelectorAll(".scroll-progress").forEach(function(el){el.remove();});</script>
+<script>
+ // ─── Quiz Data ───────────────────────────────────────────────────────
+ var categories = [
+ { id: 'idee', name: 'Idee & Problem', icon: '&#128161;' },
+ { id: 'produkt', name: 'Produkt & MVP', icon: '&#128736;' },
+ { id: 'kunden', name: 'Kund:innen & Markt', icon: '&#127919;' },
+ { id: 'team', name: 'Team', icon: '&#128101;' },
+ { id: 'finanzen', name: 'Finanzen & Fundraising', icon: '&#128176;' },
+ { id: 'legal', name: 'Legal & Struktur', icon: '&#128220;' }
+ ];
+
+ var questions = [
+ // Kategorie 1: Idee & Problem
+ {
+ category: 0,
+ text: 'Wie gut verstehst du das Problem, das du l\u00f6sen willst?',
+ answers: [
+ { text: 'Ich habe eine vage Idee, aber noch keine Recherche gemacht', score: 0 },
+ { text: 'Ich habe online recherchiert und kenne das Problem theoretisch', score: 1 },
+ { text: 'Ich habe mit 5+ potenziellen Kund:innen gesprochen', score: 2 },
+ { text: 'Ich habe 10+ Interviews gef\u00fchrt und klare Problem-Patterns identifiziert', score: 3 }
+ ]
+ },
+ {
+ category: 0,
+ text: 'Gibt es bestehende L\u00f6sungen f\u00fcr das Problem?',
+ answers: [
+ { text: 'Ich wei\u00df nicht, ob es Alternativen gibt', score: 0 },
+ { text: 'Es gibt L\u00f6sungen, aber ich kenne sie nicht im Detail', score: 1 },
+ { text: 'Ich kenne die Wettbewerber und wei\u00df, was sie gut/schlecht machen', score: 2 },
+ { text: 'Ich habe eine klare Differenzierung und kann sie in einem Satz erkl\u00e4ren', score: 3 }
+ ]
+ },
+ {
+ category: 0,
+ text: 'Wie gro\u00df ist der Markt f\u00fcr deine L\u00f6sung?',
+ answers: [
+ { text: 'Keine Ahnung', score: 0 },
+ { text: 'Ich habe eine ungef\u00e4hre Vorstellung', score: 1 },
+ { text: 'Ich habe TAM/SAM/SOM recherchiert und kann Zahlen nennen', score: 2 },
+ { text: 'Ich habe eine datenbasierte Marktanalyse mit Quellen', score: 3 }
+ ]
+ },
+ // Kategorie 2: Produkt & MVP
+ {
+ category: 1,
+ text: 'Wie weit ist dein Produkt/Service?',
+ answers: [
+ { text: 'Nur eine Idee im Kopf', score: 0 },
+ { text: 'Skizzen, Wireframes oder ein Konzept', score: 1 },
+ { text: 'Ein funktionierender Prototyp/MVP', score: 2 },
+ { text: 'Ein Produkt, das Kund:innen bereits nutzen', score: 3 }
+ ]
+ },
+ {
+ category: 1,
+ text: 'Hast du Feedback von echten Nutzer:innen?',
+ answers: [
+ { text: 'Noch kein Feedback eingeholt', score: 0 },
+ { text: 'Feedback von Freunden/Familie', score: 1 },
+ { text: 'Feedback von 5+ Personen aus der Zielgruppe', score: 2 },
+ { text: 'Regelm\u00e4\u00dfiges Feedback mit messbaren Verbesserungen', score: 3 }
+ ]
+ },
+ {
+ category: 1,
+ text: 'Wie definierst du Erfolg f\u00fcr dein Produkt?',
+ answers: [
+ { text: 'Noch keine konkreten Metriken definiert', score: 0 },
+ { text: 'Ich habe eine vage Vorstellung (z.B. \u201eviele Nutzer\u201c)', score: 1 },
+ { text: 'Ich habe 3\u20135 KPIs definiert, die ich tracken will', score: 2 },
+ { text: 'Ich messe aktiv KPIs und treffe Entscheidungen basierend darauf', score: 3 }
+ ]
+ },
+ // Kategorie 3: Kund:innen & Markt
+ {
+ category: 2,
+ text: 'Wer ist dein ideale:r Kund:in?',
+ answers: [
+ { text: 'Alle k\u00f6nnten Kund:innen sein', score: 0 },
+ { text: 'Ich habe eine grobe Zielgruppe definiert', score: 1 },
+ { text: 'Ich habe einen detaillierten Kunden-Avatar mit Demographics und Psychographics', score: 2 },
+ { text: 'Ich habe zahlende Kund:innen und kenne deren Profil genau', score: 3 }
+ ]
+ },
+ {
+ category: 2,
+ text: 'Hast du bereits Umsatz oder verbindliche Zusagen?',
+ answers: [
+ { text: 'Nein, noch keine Gespr\u00e4che mit Kund:innen', score: 0 },
+ { text: 'Interesse bekundet, aber keine Zusagen', score: 1 },
+ { text: 'LOIs, Vorbestellungen oder Pilotprojekte vereinbart', score: 2 },
+ { text: 'Regelm\u00e4\u00dfiger Umsatz von zahlenden Kund:innen', score: 3 }
+ ]
+ },
+ {
+ category: 2,
+ text: 'Wie erreichst du deine Kund:innen?',
+ answers: [
+ { text: 'Noch keine Vertriebsstrategie', score: 0 },
+ { text: 'Ich habe Ideen, aber noch nichts getestet', score: 1 },
+ { text: 'Ich teste 2\u20133 Kan\u00e4le und sammle erste Daten', score: 2 },
+ { text: 'Ich habe funktionierende Kan\u00e4le mit messbarem CAC', score: 3 }
+ ]
+ },
+ // Kategorie 4: Team
+ {
+ category: 3,
+ text: 'Wie sieht dein Team aus?',
+ answers: [
+ { text: 'Ich bin allein und habe noch keine Mitgr\u00fcnder:innen gesucht', score: 0 },
+ { text: 'Ich suche aktiv nach Mitgr\u00fcnder:innen', score: 1 },
+ { text: 'Ich habe 1\u20132 Mitgr\u00fcnder:innen mit komplement\u00e4ren Skills', score: 2 },
+ { text: 'Wir sind ein eingespieltes Team mit klaren Rollen und Track Record', score: 3 }
+ ]
+ },
+ {
+ category: 3,
+ text: 'Wie viel Zeit investierst du in dein Startup?',
+ answers: [
+ { text: 'Gelegentlich, neben meinem Hauptjob', score: 0 },
+ { text: 'Regelm\u00e4\u00dfig 10\u201320 Stunden/Woche neben dem Job', score: 1 },
+ { text: '20\u201340 Stunden/Woche, plane bald Vollzeit', score: 2 },
+ { text: 'Vollzeit, 100% committed', score: 3 }
+ ]
+ },
+ {
+ category: 3,
+ text: 'Hast du Zugang zu Expert:innen und Mentor:innen?',
+ answers: [
+ { text: 'Nein, kein Netzwerk in der Startup-Szene', score: 0 },
+ { text: 'Ein paar Kontakte, aber kein strukturiertes Mentoring', score: 1 },
+ { text: '1\u20132 Mentor:innen, die mich regelm\u00e4\u00dfig beraten', score: 2 },
+ { text: 'Beirat/Advisory Board und starkes Netzwerk in der Branche', score: 3 }
+ ]
+ },
+ // Kategorie 5: Finanzen & Fundraising
+ {
+ category: 4,
+ text: 'Wie finanzierst du dein Startup aktuell?',
+ answers: [
+ { text: 'Noch keine Gedanken \u00fcber Finanzierung gemacht', score: 0 },
+ { text: 'Bootstrapping mit Ersparnissen', score: 1 },
+ { text: 'Erste F\u00f6rderungen beantragt oder erhalten (aws, FFG, etc.)', score: 2 },
+ { text: 'Externe Finanzierung erhalten (Angels, VC, Grants)', score: 3 }
+ ]
+ },
+ {
+ category: 4,
+ text: 'Hast du einen Finanzplan?',
+ answers: [
+ { text: 'Nein, keine Zahlen', score: 0 },
+ { text: 'Grobe Kostensch\u00e4tzung im Kopf', score: 1 },
+ { text: 'Ein einfaches Financial Model (12 Monate)', score: 2 },
+ { text: 'Detaillierter 3\u20135-Jahres-Finanzplan mit Szenarien', score: 3 }
+ ]
+ },
+ {
+ category: 4,
+ text: 'Wie viel Runway hast du?',
+ answers: [
+ { text: 'Was ist Runway?', score: 0 },
+ { text: 'Weniger als 3 Monate', score: 1 },
+ { text: '6\u201312 Monate', score: 2 },
+ { text: 'Mehr als 12 Monate gesichert', score: 3 }
+ ]
+ },
+ // Kategorie 6: Legal & Struktur
+ {
+ category: 5,
+ text: 'Hast du eine Rechtsform gew\u00e4hlt?',
+ answers: [
+ { text: 'Noch nicht dar\u00fcber nachgedacht', score: 0 },
+ { text: 'Ich informiere mich gerade \u00fcber Optionen', score: 1 },
+ { text: 'Ich habe mich entschieden (z.B. FlexCo, GmbH)', score: 2 },
+ { text: 'Firma ist gegr\u00fcndet und im Firmenbuch eingetragen', score: 3 }
+ ]
+ },
+ {
+ category: 5,
+ text: 'Wie steht es um IP und rechtliche Absicherung?',
+ answers: [
+ { text: 'Noch gar nicht damit besch\u00e4ftigt', score: 0 },
+ { text: 'Ich wei\u00df, dass ich mich darum k\u00fcmmern muss', score: 1 },
+ { text: 'Domain, Marke, NDAs sind gesichert', score: 2 },
+ { text: 'Umfassender IP-Schutz, Gesellschaftervertrag, DSGVO-konform', score: 3 }
+ ]
+ },
+ {
+ category: 5,
+ text: 'Hast du ein Pitch Deck?',
+ answers: [
+ { text: 'Nein', score: 0 },
+ { text: 'Eine grobe Pr\u00e4sentation mit den wichtigsten Punkten', score: 1 },
+ { text: 'Ein professionelles 12-Slide Deck', score: 2 },
+ { text: 'Ein poliertes Deck, das bereits bei Investor:innen war', score: 3 }
+ ]
+ }
+ ];
+
+ // Phase definitions
+ var phases = [
+ {
+ name: 'Ideenphase',
+ cssClass: 'phase-idee',
+ min: 0,
+ max: 13,
+ description: 'Du bist ganz am Anfang \u2013 und das ist v\u00f6llig okay. Jetzt geht es darum, deine Idee zu validieren: Raus aus dem Kopf, rein in Gespr\u00e4che mit echten Menschen. Sprich mit potenziellen Kund:innen, bevor du irgendetwas baust.'
+ },
+ {
+ name: 'Validierungsphase',
+ cssClass: 'phase-validierung',
+ min: 14,
+ max: 27,
+ description: 'Du hast die ersten Schritte gemacht. Jetzt geht es um Product-Market Fit: Baue ein MVP, teste es mit echten Nutzer:innen und finde heraus, ob Menschen bereit sind, daf\u00fcr zu zahlen.'
+ },
+ {
+ name: 'Aufbauphase',
+ cssClass: 'phase-aufbau',
+ min: 28,
+ max: 40,
+ description: 'Solide Basis! Du hast validiert und bist auf dem Weg zum Markt. Fokussiere dich jetzt auf Go-to-Market, baue skalierbare Prozesse auf und sichere deine Finanzierung f\u00fcr die n\u00e4chsten 12\u201318 Monate.'
+ },
+ {
+ name: 'Wachstumsphase',
+ cssClass: 'phase-wachstum',
+ min: 41,
+ max: 54,
+ description: 'Beeindruckend \u2013 du bist weit! Jetzt geht es um Skalierung: Team ausbauen, Prozesse automatisieren, neue M\u00e4rkte erschlie\u00dfen. Denke \u00fcber Folgefinanzierung und internationale Expansion nach.'
+ }
+ ];
+
+ // Recommendation templates based on category weakness
+ var recommendationTemplates = [
+ {
+ category: 'Idee & Problem',
+ icon: '&#128161;',
+ title: 'Starte mit Customer Discovery Interviews',
+ text: 'Sprich mit mindestens 10 potenziellen Kund:innen, bevor du weiter an deiner L\u00f6sung arbeitest. Finde heraus, ob das Problem wirklich existiert und wie gro\u00df der Leidensdruck ist.',
+ linkText: 'Interview Script Template \u2192',
+ linkHref: '/toolbox/interview-script/'
+ },
+ {
+ category: 'Produkt & MVP',
+ icon: '&#128736;',
+ title: 'Baue ein MVP und teste es',
+ text: 'Du brauchst kein perfektes Produkt \u2013 du brauchst ein Minimum Viable Product, das du mit echten Nutzer:innen testen kannst. Starte klein und iteriere schnell.',
+ linkText: 'Canvas Templates \u2192',
+ linkHref: '/toolbox/business-model-canvas/'
+ },
+ {
+ category: 'Kund:innen & Markt',
+ icon: '&#127919;',
+ title: 'Definiere deinen Kunden-Avatar',
+ text: 'Wer genau ist dein:e ideale:r Kund:in? Definiere Demographics, Psychographics, Probleme und Kaufverhalten. Je sp\u00e4ter du das machst, desto teurer wird es.',
+ linkText: 'Metrics Cheat Sheet \u2192',
+ linkHref: '/toolbox/metrics-cheatsheet/'
+ },
+ {
+ category: 'Team',
+ icon: '&#128101;',
+ title: 'Suche aktiv nach Mitgr\u00fcnder:innen',
+ text: 'Ein starkes, komplement\u00e4res Team ist einer der wichtigsten Erfolgsfaktoren. Nutze Events, Co-Working Spaces und das Startup-Burgenland-Netzwerk, um passende Mitgr\u00fcnder:innen zu finden.',
+ linkText: null,
+ linkHref: null
+ },
+ {
+ category: 'Finanzen & Fundraising',
+ icon: '&#128176;',
+ title: 'Erstelle einen Finanzplan',
+ text: 'Ohne klare Zahlen kannst du weder F\u00f6rderungen beantragen noch Investor:innen \u00fcberzeugen. Starte mit einem einfachen 12-Monats-Plan und berechne deinen Runway.',
+ linkText: 'Financial Model + Runway Calculator \u2192',
+ linkHref: '/toolbox/financial-model/'
+ },
+ {
+ category: 'Legal & Struktur',
+ icon: '&#128220;',
+ title: 'W\u00e4hle deine Rechtsform und sichere dich ab',
+ text: 'FlexCo, GmbH, Einzelunternehmen? Kl\u00e4re die Basics: Rechtsform, Gesellschaftervertrag, IP-Schutz und DSGVO. Das spart sp\u00e4ter viel \u00c4rger und Geld.',
+ linkText: 'Legal Cheat Sheet + DSGVO Checklist \u2192',
+ linkHref: '/toolbox/legal-cheatsheet/'
+ }
+ ];
+
+ // ─── State ───────────────────────────────────────────────────────────
+ var currentQuestion = 0;
+ var answers = new Array(questions.length).fill(null);
+ var radarChartInstance = null;
+
+ // ─── Navigation ──────────────────────────────────────────────────────
+ function showScreen(screenId) {
+ document.querySelectorAll('.ra-screen').forEach(function(s) { s.classList.remove('active'); });
+ document.getElementById(screenId).classList.add('active');
+
+ var progressContainer = document.getElementById('progressContainer');
+ if (screenId === 'questionScreen') {
+ progressContainer.classList.remove('hidden');
+ } else {
+ progressContainer.classList.add('hidden');
+ }
+
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+ }
+
+ function startQuiz() {
+ currentQuestion = 0;
+ answers = new Array(questions.length).fill(null);
+ showScreen('questionScreen');
+ renderQuestion();
+ }
+
+ function restartQuiz() {
+ currentQuestion = 0;
+ answers = new Array(questions.length).fill(null);
+ if (radarChartInstance) {
+ radarChartInstance.destroy();
+ radarChartInstance = null;
+ }
+ showScreen('welcomeScreen');
+ }
+
+ // ─── Question Rendering ──────────────────────────────────────────────
+ function renderQuestion() {
+ var q = questions[currentQuestion];
+ var cat = categories[q.category];
+
+ // Update progress
+ var progress = ((currentQuestion) / questions.length) * 100;
+ document.getElementById('progressFill').style.width = progress + '%';
+ document.getElementById('progressCount').textContent = (currentQuestion + 1) + ' / ' + questions.length;
+ document.getElementById('progressCategory').textContent = cat.name;
+
+ // Update category badge
+ document.getElementById('questionCategory').innerHTML = cat.icon + ' ' + cat.name;
+
+ // Update question text
+ document.getElementById('questionText').textContent = q.text;
+
+ // Update answers
+ var answersList = document.getElementById('answersList');
+ answersList.innerHTML = '';
+ q.answers.forEach(function(answer, index) {
+ var btn = document.createElement('button');
+ btn.className = 'ra-answer-option';
+ if (answers[currentQuestion] === index) {
+ btn.classList.add('selected');
+ }
+ btn.innerHTML =
+ '<div class="ra-answer-indicator">' + String.fromCharCode(65 + index) + '</div>' +
+ '<div class="ra-answer-text">' + answer.text + '</div>';
+ btn.addEventListener('click', function() {
+ selectAnswer(index);
+ });
+ answersList.appendChild(btn);
+ });
+
+ // Update back button
+ var backButton = document.getElementById('backButton');
+ if (currentQuestion === 0) {
+ backButton.classList.add('invisible');
+ } else {
+ backButton.classList.remove('invisible');
+ }
+
+ // Re-trigger animation
+ var card = document.querySelector('.ra-question-card');
+ card.style.animation = 'none';
+ card.offsetHeight; // trigger reflow
+ card.style.animation = 'raFadeInUp 0.4s ease-out';
+ }
+
+ function selectAnswer(index) {
+ answers[currentQuestion] = index;
+
+ // Visual feedback
+ var options = document.querySelectorAll('.ra-answer-option');
+ options.forEach(function(opt, i) {
+ opt.classList.remove('selected');
+ if (i === index) {
+ opt.classList.add('selected');
+ }
+ });
+
+ // Auto-advance after brief delay
+ setTimeout(function() {
+ if (currentQuestion < questions.length - 1) {
+ currentQuestion++;
+ renderQuestion();
+ } else {
+ showResults();
+ }
+ }, 300);
+ }
+
+ function goBack() {
+ if (currentQuestion > 0) {
+ currentQuestion--;
+ renderQuestion();
+ }
+ }
+
+ // ─── Keyboard Navigation ─────────────────────────────────────────────
+ document.addEventListener('keydown', function(e) {
+ var questionScreen = document.getElementById('questionScreen');
+ if (!questionScreen.classList.contains('active')) return;
+
+ var key = e.key;
+ if (key === '1' || key === 'a' || key === 'A') {
+ selectAnswer(0);
+ } else if (key === '2' || key === 'b' || key === 'B') {
+ selectAnswer(1);
+ } else if (key === '3' || key === 'c' || key === 'C') {
+ selectAnswer(2);
+ } else if (key === '4' || key === 'd' || key === 'D') {
+ selectAnswer(3);
+ } else if (key === 'Backspace' || key === 'ArrowLeft') {
+ e.preventDefault();
+ goBack();
+ }
+ });
+
+ // ─── Results ─────────────────────────────────────────────────────────
+ function calculateScores() {
+ var categoryScores = [];
+ for (var i = 0; i < categories.length; i++) {
+ categoryScores.push(0);
+ }
+
+ var totalScore = 0;
+ for (var i = 0; i < questions.length; i++) {
+ var q = questions[i];
+ var selectedIndex = answers[i];
+ if (selectedIndex!== null) {
+ var score = q.answers[selectedIndex].score;
+ categoryScores[q.category] += score;
+ totalScore += score;
+ }
+ }
+
+ return { total: totalScore, categories: categoryScores };
+ }
+
+ function getPhase(totalScore) {
+ for (var i = phases.length - 1; i >= 0; i--) {
+ if (totalScore >= phases[i].min) {
+ return phases[i];
+ }
+ }
+ return phases[0];
+ }
+
+ function showResults() {
+ // Update progress to 100%
+ document.getElementById('progressFill').style.width = '100%';
+
+ var scores = calculateScores();
+ var phase = getPhase(scores.total);
+
+ showScreen('resultsScreen');
+
+ // Phase Badge
+ var phaseBadge = document.getElementById('phaseBadge');
+ phaseBadge.innerHTML =
+ '<div class="ra-phase-label">Deine aktuelle Phase</div>' +
+ '<div class="ra-phase-name ' + phase.cssClass + '">' + phase.name + '</div>' +
+ '<div class="ra-phase-score"><span>' + scores.total + '</span> / 54 Punkte</div>' +
+ '<p class="ra-phase-description">' + phase.description + '</p>';
+
+ // Category Bars
+ var categoryBars = document.getElementById('categoryBars');
+ categoryBars.innerHTML = '';
+ for (var i = 0; i < categories.length; i++) {
+ var cat = categories[i];
+ var catScore = scores.categories[i];
+ var maxScore = 9;
+ var percent = Math.round((catScore / maxScore) * 100);
+ var barClass;
+ if (percent <= 33) barClass = 'ra-bar-low';
+ else if (percent <= 55) barClass = 'ra-bar-medium';
+ else if (percent <= 77) barClass = 'ra-bar-high';
+ else barClass = 'ra-bar-excellent';
+
+ var row = document.createElement('div');
+ row.className = 'ra-category-score-row';
+ row.innerHTML =
+ '<div class="ra-category-score-header">' +
+ '<span class="ra-category-score-name">' + cat.icon + ' ' + cat.name + '</span>' +
+ '<span class="ra-category-score-value">' + catScore + ' / ' + maxScore + '</span>' +
+ '</div>' +
+ '<div class="ra-category-bar">' +
+ '<div class="ra-category-bar-fill ' + barClass + '" data-width="' + percent + '"></div>' +
+ '</div>';
+ categoryBars.appendChild(row);
+ }
+
+ // Animate bars after a short delay
+ setTimeout(function() {
+ var bars = document.querySelectorAll('.ra-category-bar-fill');
+ bars.forEach(function(bar) {
+ bar.style.width = bar.getAttribute('data-width') + '%';
+ });
+ }, 300);
+
+ // Radar Chart
+ renderRadarChart(scores.categories);
+
+ // Recommendations (based on weakest categories)
+ renderRecommendations(scores.categories);
+ }
+
+ function renderRadarChart(categoryScores) {
+ var ctx = document.getElementById('radarChart').getContext('2d');
+
+ if (radarChartInstance) {
+ radarChartInstance.destroy();
+ }
+
+ var labels = categories.map(function(c) { return c.name; });
+ var data = categoryScores.map(function(s) { return s; });
+
+ radarChartInstance = new Chart(ctx, {
+ type: 'radar',
+ data: {
+ labels: labels,
+ datasets: [{
+ label: 'Dein Score',
+ data: data,
+ fill: true,
+ backgroundColor: 'rgba(230, 57, 70, 0.15)',
+ borderColor: 'rgba(230, 57, 70, 0.8)',
+ borderWidth: 2.5,
+ pointBackgroundColor: '#FF8C00',
+ pointBorderColor: '#FFFFFF',
+ pointBorderWidth: 2,
+ pointRadius: 5,
+ pointHoverRadius: 7
+ }]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: true,
+ plugins: {
+ legend: {
+ display: false
+ },
+ tooltip: {
+ backgroundColor: '#E63946',
+ titleFont: { size: 13, weight: '600' },
+ bodyFont: { size: 12 },
+ padding: 10,
+ cornerRadius: 8,
+ callbacks: {
+ label: function(context) {
+ return context.parsed.r + ' / 9 Punkte';
+ }
+ }
+ }
+ },
+ scales: {
+ r: {
+ min: 0,
+ max: 9,
+ beginAtZero: true,
+ ticks: {
+ stepSize: 3,
+ font: { size: 10 },
+ color: '#6B7280',
+ backdropColor: 'transparent'
+ },
+ grid: {
+ color: 'rgba(226, 232, 240, 0.8)'
+ },
+ angleLines: {
+ color: 'rgba(226, 232, 240, 0.8)'
+ },
+ pointLabels: {
+ font: { size: 11, weight: '600' },
+ color: '#1C1D1F',
+ padding: 12
+ }
+ }
+ },
+ animation: {
+ duration: 1200,
+ easing: 'easeOutQuart'
+ }
+ }
+ });
+ }
+
+ function renderRecommendations(categoryScores) {
+ var recommendationsList = document.getElementById('recommendationsList');
+ recommendationsList.innerHTML = '';
+
+ // Create array of {index, score} and sort by score ascending
+ var indexed = categoryScores.map(function(score, index) {
+ return { index: index, score: score };
+ });
+ indexed.sort(function(a, b) { return a.score - b.score; });
+
+ // Show recommendations for categories scoring below 6 (out of 9), up to 4 max
+ var count = 0;
+ for (var i = 0; i < indexed.length && count < 4; i++) {
+ if (indexed[i].score < 6) {
+ var rec = recommendationTemplates[indexed[i].index];
+ var card = document.createElement('div');
+ card.className = 'ra-recommendation-card';
+ card.style.animationDelay = (0.4 + count * 0.1) + 's';
+
+ var linkHtml = '';
+ if (rec.linkText && rec.linkHref) {
+ linkHtml = '<a href="' + rec.linkHref + '" class="ra-recommendation-link">' + rec.linkText + '</a>';
+ }
+
+ card.innerHTML =
+ '<div class="ra-recommendation-icon">' + rec.icon + '</div>' +
+ '<div class="ra-recommendation-content">' +
+ '<div class="ra-recommendation-title">' + rec.title + '</div>' +
+ '<p class="ra-recommendation-text">' + rec.text + '</p>' +
+ linkHtml +
+ '</div>';
+
+ recommendationsList.appendChild(card);
+ count++;
+ }
+ }
+
+ // If no weak categories, show congratulations
+ if (count === 0) {
+ var card = document.createElement('div');
+ card.className = 'ra-recommendation-card';
+ card.style.borderLeftColor = '#28A745';
+ card.innerHTML =
+ '<div class="ra-recommendation-icon">&#127942;</div>' +
+ '<div class="ra-recommendation-content">' +
+ '<div class="ra-recommendation-title">Starke Basis in allen Bereichen!</div>' +
+ '<p class="ra-recommendation-text">Du bist in allen Kategorien gut aufgestellt. Jetzt geht es darum, zu skalieren und die n\u00e4chste Wachstumsstufe zu erreichen. Ein pers\u00f6nliches Coaching kann dir helfen, den Fokus zu sch\u00e4rfen.</p>' +
+ '</div>';
+ recommendationsList.appendChild(card);
+ }
+ }
+
+ // ─── Email Modal ─────────────────────────────────────────────────────
+ function openEmailModal() {
+ document.getElementById('emailModalContent').style.display = 'block';
+ document.getElementById('emailSuccessContent').style.display = 'none';
+ document.getElementById('emailModal').classList.add('active');
+ document.body.style.overflow = 'hidden';
+ }
+
+ function closeEmailModal() {
+ document.getElementById('emailModal').classList.remove('active');
+ document.body.style.overflow = '';
+ }
+
+ function submitEmail(e) {
+ e.preventDefault();
+
+ var name = document.getElementById('emailName').value;
+ var email = document.getElementById('emailAddress').value;
+ var startup = document.getElementById('emailStartup').value;
+
+ // In production, this would send data to a backend/API
+ // For now, we show a success message
+ console.log('Report angefordert:', {
+ name: name,
+ email: email,
+ startup: startup,
+ scores: calculateScores(),
+ phase: getPhase(calculateScores().total).name
+ });
+
+ document.getElementById('emailModalContent').style.display = 'none';
+ document.getElementById('emailSuccessContent').style.display = 'block';
+ }
+
+ // Close modal on overlay click
+ document.getElementById('emailModal').addEventListener('click', function(e) {
+ if (e.target === this) {
+ closeEmailModal();
+ }
+ });
+
+ // Close modal on Escape key
+ document.addEventListener('keydown', function(e) {
+ if (e.key === 'Escape') {
+ closeEmailModal();
+ }
+ });
+</script>
+ <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C1D1F;color:#e0e0e0;padding:16px 24px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-family:inherit;font-size:14px;">
+ <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+ <p style="margin:0;flex:1;min-width:250px;">Diese Website verwendet Cookies, um deine Erfahrung zu verbessern. <a href="/datenschutz.html" style="color:#dc3545;text-decoration:underline;">Mehr erfahren</a></p>
+ <div style="display:flex;gap:10px;flex-shrink:0;">
+ <button onclick="declineCookies()" style="background:transparent;border:1px solid #666;color:#ccc;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Ablehnen</button>
+ <button onclick="acceptCookies()" style="background:#dc3545;border:none;color:#fff;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;">Akzeptieren</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ if(!localStorage.getItem('cookieConsent')){
+ document.getElementById('cookieConsent').style.display='block';
+ }
+})();
+function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookieConsent').style.display='none';}
+</script>
+
+</body>
+</html>
