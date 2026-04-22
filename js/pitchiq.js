@@ -539,7 +539,7 @@
 
   // ── State ───────────────────────────────────────────────
   var state = {
-    screen: 'EMAIL_GATE',       // EMAIL_GATE | CATEGORIES | QUESTION_FLOW
+    screen: 'CATEGORIES',       // CATEGORIES | QUESTION_FLOW
     questionPhase: 'QUESTION',  // QUESTION | BAD | GOOD | TIMER | EVAL | RESULT
     currentQuestion: null,
     currentCategory: null,
@@ -1084,11 +1084,7 @@
     loadProgress();
     loadUser();
 
-    if (state.user) {
-      state.screen = 'CATEGORIES';
-    } else {
-      state.screen = 'EMAIL_GATE';
-    }
+    state.screen = 'CATEGORIES';
 
     pushState(state.screen);
     render();
