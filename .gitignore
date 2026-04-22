@@ -1,5 +1,0 @@
-.DS_Store
-*.bak*
-*.hidden
-node_modules/
-.env
